@@ -1,4 +1,4 @@
-# Handbook of Derivations of Rings and Algebras
+# Encyclopaedia of Derivations
 
 Author: Abderrahim Adrabi, Mohammed V University in Rabat.
 Current version: **v0.19**. 462 pages, 20 chapters, 452 cited works.

@@ -1,0 +1,28 @@
+% What each system in this chapter keeps, drawn from the introduction's own
+% list: a near-ring drops one distributive law, a semiring drops additive
+% inverses, a Gamma-ring replaces one product by a family, a lattice keeps only
+% the order, and a BCI, MV or subtraction algebra keeps only a difference.
+\begin{tikzpicture}[font=\small, node distance=6mm and 10mm]
+  \node[draw, rounded corners, fill=hbblue!12, align=center, inner sep=3pt]
+    (ring) {Ring\\$+,-,\cdot$ with both distributivities};
+  \node[draw, rounded corners, fill=hbblue!6, align=center, inner sep=3pt,
+        below left=8mm and -4mm of ring] (nr) {Near-ring\\one distributivity dropped};
+  \node[draw, rounded corners, fill=hbblue!6, align=center, inner sep=3pt,
+        below=8mm of ring] (sr) {Semiring\\additive inverses dropped};
+  \node[draw, rounded corners, fill=hbblue!6, align=center, inner sep=3pt,
+        below right=8mm and -4mm of ring] (gr) {$\Gamma$-ring\\one product becomes a family};
+  \node[draw, rounded corners, fill=hbgold!12, align=center, inner sep=3pt,
+        below=26mm of ring] (lat) {Lattice, residuated lattice\\only the order kept};
+  \node[draw, rounded corners, fill=hbgold!12, align=center, inner sep=3pt,
+        right=6mm of lat] (bci) {BCI, MV, subtraction algebra\\only a difference kept};
+  % which axiom each system gives up, named on the edge
+  \draw[hbarrow] (ring) -- node[left, font=\scriptsize, align=right]
+    {drops\\$x(y+z)=xy+xz$} (nr);
+  \draw[hbarrow] (ring) -- node[right, font=\scriptsize]
+    {drops $-x$} (sr);
+  \draw[hbarrow] (ring) -- node[right, font=\scriptsize, align=left]
+    {drops one\\product} (gr);
+  \draw[hbarrow] (sr) -- node[left, font=\scriptsize, align=right]
+    {drops\\addition} (lat);
+  \draw[hbarrow] (lat) -- (bci);
+\end{tikzpicture}

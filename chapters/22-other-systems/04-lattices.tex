@@ -1,0 +1,146 @@
+% STATUS: rewritten 2026-11-05; every claim is cited.
+\section{Lattices and residuated lattices}\label{sec:other-systems:lattices}
+
+Here lattices stand further from a ring than any system above.
+A lattice has only an order and two idempotent operations
+\cite[p.~309]{XinLiLu2008}.
+So a product rule in the old sense has no product to use
+\cite[p.~309]{XinLiLu2008}.
+For the way in, look to topology:
+the
+derived set of a subset is a map on a Boolean algebra
+\cite[p.~365]{Goldberg1975}.
+
+\begin{definition}[{\cite[p.~365]{Goldberg1975}}]\label{def:other:goldberg-derivation}
+Let $R$ be a Boolean algebra. A map $A \mapsto A^{d}$ of $R$ into itself
+is a \emph{$d$-operator} if, for all $A, B \in R$,
+\textup{(I$_d$)} $(A \cup B)^{d} = A^{d} \cup B^{d}$,
+\textup{(II$_d$)} $A^{dd} \subseteq A^{d}$,
+\textup{(III$_d$)} $0^{d} = 0$, and
+\textup{(IV$_d$)} $1^{d} = 1$.
+A map satisfying \textup{(I$_d$)}--\textup{(III$_d$)} is a
+\emph{$\delta$-operator}. A Boolean algebra with a $d$-operator (or a
+$\delta$-operator) is called a Boolean algebra with a $d$-derivation (or a
+$\delta$-derivation).
+\end{definition}
+
+The names come from topology. Kuratowski introduced the operator, and if
+$R$ is the algebra of all parts of a space without isolated
+points, then $A^{d}$ is the derived set of $A$
+\cite[p.~365]{Goldberg1975}.
+
+Xin, Li and Lu brought the idea back to lattices in 2008: their
+definition reads like the product rule, but it is a rule for the meet
+\cite[Definition~3.1, p.~309]{XinLiLu2008}.
+
+\begin{definition}[{\cite[Definition~3.1, p.~309]{XinLiLu2008}}]\label{def:other:lattice-derivation}
+Let $L$ be a lattice. A function $d \colon L \to L$ is a \emph{derivation}
+on $L$ if
+\[
+d(x \wedge y) = (dx \wedge y) \vee (x \wedge dy)
+\qquad (x, y \in L).
+\]
+A derivation $d$ on $L$ is \emph{isotone} if $x \le y$ implies $dx \le dy$,
+\emph{monomorphic} if it is one-to-one, and \emph{epic} if it is onto
+\cite[Definition~3.7, p.~310]{XinLiLu2008}.
+\end{definition}
+
+Every derivation on a lattice is decreasing: $dx \le x$ for all $x$
+\cite[Proposition~3.6, p.~310]{XinLiLu2008}. The identity is then forced
+by any of the usual extra conditions
+\cite[Theorem~3.17, p.~312]{XinLiLu2008}.
+
+\begin{theorem}[{\cite[Theorem~3.17, p.~312]{XinLiLu2008}}]\label{thm:other:xin-317}
+Let $d$ be a derivation on a lattice $L$. Then the following are
+equivalent: \textup{(1)} $d$ is the identity derivation; \textup{(2)}
+$d(x \vee y) = (x \vee dy) \wedge (dx \vee y)$ for all $x, y \in L$;
+\textup{(3)} $d$ is a monomorphic derivation; \textup{(4)} $d$ is an epic
+derivation.
+\end{theorem}
+
+Isotone derivations mark out modular and distributive lattices
+\cite[Theorem~3.19, p.~313]{XinLiLu2008}.
+
+\begin{theorem}[{\cite[Theorem~3.19, p.~313]{XinLiLu2008}}]\label{thm:other:xin-319}
+Let $L$ be a modular lattice and $d$ a derivation on $L$. Then the
+following are equivalent: \textup{(1)} $d$ is isotone; \textup{(2)}
+$d(x \wedge y) = dx \wedge dy$ for all $x, y \in L$; \textup{(3)}
+$dx = x$ implies $d(x \vee y) = dx \vee dy$.
+\end{theorem}
+
+The next theorem gives the corresponding criterion for a distributive lattice.
+
+\begin{theorem}[{\cite[Theorem~3.21, p.~313]{XinLiLu2008}}]\label{thm:other:xin-321}
+Let $L$ be a distributive lattice and $d$ a derivation on $L$. Then the
+following are equivalent: \textup{(1)} $d$ is isotone; \textup{(2)}
+$d(x \wedge y) = dx \wedge dy$ for all $x, y \in L$; \textup{(3)}
+$d(x \vee y) = dx \vee dy$ for all $x, y \in L$.
+\end{theorem}
+
+{\c{C}}even and {\"O}zt{\"u}rk replaced the second argument by a second
+map and opened a wider family of maps (Section~\ref{sec:other-systems:subtraction-algebras} of this
+volume returns to them).
+
+\begin{definition}[{\cite[Definition~8, p.~702]{CevenOzturk2008}}]\label{def:other:f-derivation}
+Let $L$ be a lattice. A function $d \colon L \to L$ is an
+\emph{$f$-derivation} on $L$ if there is a function $f \colon L \to L$
+such that
+\[
+d(x \wedge y) = \bigl(d(x) \wedge f(y)\bigr) \vee \bigl(f(x) \wedge d(y)\bigr)
+\qquad (x, y \in L).
+\]
+If $f$ is the identity function, then $d$ is a derivation on $L$
+\cite[p.~702]{CevenOzturk2008}.
+\end{definition}
+
+The next proposition records two bounds that every $f$-derivation obeys.
+
+\begin{proposition}[{\cite[Proposition~1, pp.~703--704]{CevenOzturk2008}}]\label{prop:other:ceven-prop1}
+Let $L$ be a lattice and $d$ an $f$-derivation on $L$. Then, for all
+$x, y \in L$, \textup{(a)} $dx \le fx$, and \textup{(b)}
+$dx \wedge dy \le d(x \wedge y) \le dx \vee dy$.
+\end{proposition}
+
+A residuated lattice carries a product and its residuum, so it has room
+for a multiplicative rule.
+
+\begin{definition}[{\cite[Definition~2.1, p.~99]{HeXinZhan2016}}]\label{def:other:residuated-lattice}
+A \emph{residuated lattice} is an algebra
+$(L, \wedge, \vee, \cdot, \to, 0, 1)$ of type $(2, 2, 2, 2, 0, 0)$
+equipped with an order $\le$ such that \textup{(1)}
+$(L, \wedge, \vee, 0, 1)$ is a bounded lattice relative to $\le$,
+\textup{(2)} $(L, \cdot, 1)$ is a commutative monoid, and \textup{(3)}
+$x \cdot y \le z$ if and only if $x \le y \to z$ for all $x, y, z \in L$.
+\end{definition}
+
+The next definition states the multiplicative derivations on a residuated lattice.
+
+\begin{definition}[{\cite[Definition~3.1, p.~100]{HeXinZhan2016}}]\label{def:other:multiplicative-derivation}
+Let $(L, \wedge, \vee, \cdot, \to, 0, 1)$ be a residuated lattice. A map
+$d \colon L \to L$ is a \emph{multiplicative derivation} on $L$ if
+\[
+d(x \cdot y) = (d(x) \cdot y) \vee (x \cdot d(y))
+\qquad (x, y \in L).
+\]
+\end{definition}
+
+The next definition introduces the ideal derivations.
+
+\begin{definition}[{\cite[Definition~3.6, p.~101]{HeXinZhan2016}}]\label{def:other:ideal-derivation}
+A derivation $d$ on a residuated lattice $L$ is \emph{isotone} if
+$x \le y$ implies $d(x) \le d(y)$, \emph{contractive} if $d(x) \le x$ for
+all $x \in L$, and an \emph{ideal derivation} if it is both.
+\end{definition}
+
+The next theorem describes the ideal derivations that are idempotent.
+
+\begin{theorem}[{\cite[Theorem~3.10, p.~102]{HeXinZhan2016}}]\label{thm:other:he-xin-zhan}
+Let $(L, \wedge, \vee, \cdot, \to, 0, 1)$ be a residuated lattice and $d$
+a derivation on $L$. Then the following are equivalent: \textup{(1)} $d$
+is an ideal derivation on $L$ and $d^{2} = d$; \textup{(2)} $d$ satisfies
+$d(x) \to d(y) = d(x) \to y$ for all $x, y \in L$.
+\end{theorem}
+
+The next section moves to the algebras of logic, where the same rule
+appears on a BCI, a BCK or an MV-algebra
+\cite[p.~167]{JunXin2004}.

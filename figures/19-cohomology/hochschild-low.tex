@@ -1,0 +1,6 @@
+\begin{tikzpicture}[font=\small]
+  \node (M) at (0,0) {$M$}; \node (C1) at (4,0) {$\operatorname{Hom}(A,M)$}; \node (C2) at (8.5,0) {$\operatorname{Hom}(A\otimes A,M)$};
+  \draw[hbarrow] (M) -- node[above] {$\delta$} node[below,font=\footnotesize] {$u\mapsto(a\mapsto au-ua)$} (C1);
+  \draw[hbarrow] (C1) -- node[above] {$\delta$} (C2);
+  \node[below=10mm of C1,font=\footnotesize,align=center] {$\ker\delta$ = derivations, $\ \operatorname{im}\delta$ = inner derivations\\[2pt] $H^{1}(A,M)=\operatorname{Der}(A,M)/\operatorname{Inn}(A,M)$};
+\end{tikzpicture}

@@ -1,0 +1,51 @@
+% STATUS: written 2026-11-05 (Lee 2015 read in full; excerpts in excerpts/.
+% Beidar--Bresar--Chebotar--Makar-Limanov are named through Lee 2015.)
+\section{Applications to derivation problems}\label{sec:functional-identities:applications-to-derivations}
+
+The general theory of
+Sections~\ref{sec:functional-identities:fi-theory}
+and~\ref{sec:functional-identities:d-free} exists largely to settle
+derivation questions, and its first clean application is to Jordan
+$\sigma$-derivations. Lee used the functional identity method to prove
+a two-variable identity that carries the weight of every later argument in
+his paper \cite[Section~2, p.~221]{LeeTK2015JordanFI}.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~221]{LeeTK2015JordanFI}}]\label{thm:fi:lee21}
+Let $R$ be a non-commutative prime ring and let $f\colon R\times R\to
+Q_{mr}(R)$ be a bi-additive map. Suppose that $f(x,y)[x,y]=0$ for all
+$x,y$ in $R$. Then $f=0$.
+\end{theorem}
+
+Here $Q_{mr}(R)$ is the maximal right ring of quotients of $R$
+\cite[p.~221]{LeeTK2015JordanFI}. Theorem~\ref{thm:fi:lee21} turns any
+bi-additive expression annihilated by the commutator into zero
+\cite[p.~221]{LeeTK2015JordanFI}. This is exactly the step needed to
+promote Jordan-type laws to derivation laws
+\cite[p.~221]{LeeTK2015JordanFI}.
+
+\begin{theorem}[{\cite[Theorem~2.2, p.~221]{LeeTK2015JordanFI}}]\label{thm:fi:lee22}
+Let $R$ be a non-commutative prime ring with an endomorphism $\sigma$.
+Then every Jordan $\sigma$-derivation $\delta$ of $R$ satisfying
+$\delta(xyx)=\delta(x)yx+\sigma(x)\delta(y)x+\sigma(xy)\delta(x)$ is a
+$\sigma$-derivation.
+\end{theorem}
+
+The proof uses Theorem~\ref{thm:fi:lee21}: after linearization the defect
+$\delta(xy)-\delta(x)y-\sigma(x)\delta(y)$ is a bi-additive map whose
+product with $[x,y]$ vanishes, so it is zero
+\cite[p.~221]{LeeTK2015JordanFI}. When the characteristic is not $2$ the
+extra identity holds automatically, so every Jordan $\sigma$-derivation of
+a noncommutative prime ring with $\operatorname{char}R\ne 2$ is a
+$\sigma$-derivation \cite[Corollary~2.3, p.~221]{LeeTK2015JordanFI}. This
+generalizes the earlier characterization of Jordan derivations to the
+$\sigma$-derivation context \cite[p.~221]{LeeTK2015JordanFI}.
+
+When $\sigma$ is not injective the conclusion strengthens: every Jordan
+$\sigma$-derivation is X-inner, meaning $\delta(x)=ax-\sigma(x)a$ for a
+fixed $a$ in $Q_{mr}(R)$ \cite[Theorem~2.4, p.~221]{LeeTK2015JordanFI}.
+A Jordan-type law on a prime ring becomes an ordinary derivation law once
+it is passed through the functional identity Theorem~\ref{thm:fi:lee21}
+\cite[p.~221]{LeeTK2015JordanFI}. The $d$-free method of
+Section~\ref{sec:functional-identities:d-free} is what lets this happen on
+rings where no bare commuting-map argument reaches
+\cite[p.~x]{BresarMartindaleChebotar2007FI}.

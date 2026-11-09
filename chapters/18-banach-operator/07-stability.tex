@@ -1,0 +1,146 @@
+% STATUS: written 2026-11-05 (Hyers 1941 and Miura-Hirasawa-Takahasi 2006
+% read in full; excerpts in excerpts/Hyers1941Stability.txt and
+% excerpts/MiuraHirasawaTakahasi2006.txt).
+% Additions of 2026-11-07 from Roh--Jung--Chang 2009 (pp. 1975--1986) and
+% Konig--Milman 2014 (pp. 405--407).
+% Sources: Hyers1941Stability, MiuraHirasawaTakahasi2006,
+% RohJungChang2009Triple, KonigMilman2014Derivation.
+\section{Approximate derivations and the stability of functional equations}\label{sec:banach-operator:stability}
+
+Section~\ref{sec:banach-operator:commutator-ranges} studied exact
+derivations. This section asks whether a map that satisfies the equations
+only approximately is near a map that satisfies them exactly
+\cite[p.~222]{Hyers1941Stability}. Ulam posed the question at the
+University of Wisconsin \cite[p.~222]{Hyers1941Stability}. Let $E$ and
+$E'$ be Banach spaces and $\delta$ a positive number; a transformation
+$f$ of $E$ into $E'$ with $\|f(x+y)-f(x)-f(y)\|<\delta$ for all $x,y$ in
+$E$ is called \emph{$\delta$-linear}. Must it stay within a fixed
+distance of a linear one \cite[p.~222]{Hyers1941Stability}? Hyers proved
+that one always exists in 1941 \cite[Theorem~1, p.~223]{Hyers1941Stability}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~223]{Hyers1941Stability}}]\label{thm:banach:hyers}
+Let $E$ and $E'$ be Banach spaces and let $f(x)$ be a $\delta$-linear
+transformation of $E$ into $E'$. Then the limit
+$l(x)=\lim_{n\to\infty}f(2^nx)/2^n$ exists for each $x$ in $E$, $l(x)$ is
+a linear transformation, and the inequality $\|f(x)-l(x)\|\le\delta$ is
+true for all $x$ in $E$. Moreover $l(x)$ is the only linear transformation
+satisfying this inequality.
+\end{theorem}
+
+Hyers added a continuity observation
+\cite[Theorem~2, p.~224]{Hyers1941Stability}.
+
+\begin{theorem}[{\cite[Theorem~2, p.~224]{Hyers1941Stability}}]\label{thm:banach:hyerscont}
+If under the hypotheses of Theorem~\ref{thm:banach:hyers} we suppose that
+$f(x)$ is continuous at a single point $y$ of $E$, then $l(x)$ is
+continuous everywhere in $E$.
+\end{theorem}
+
+Theorem~\ref{thm:banach:hyers} is called the Hyers--Ulam stability of the
+additive Cauchy equation \cite[p.~524]{MiuraHirasawaTakahasi2006}. Later
+writers widened the control function, and Miura, Hirasawa and Takahasi
+brought the idea to ring derivations
+\cite[p.~524]{MiuraHirasawaTakahasi2006}.
+
+\begin{definition}[{\cite[p.~524]{MiuraHirasawaTakahasi2006}}]\label{def:banach:approxder}
+Let $A$ be a Banach algebra, $p\ge 0$ and $\varepsilon\ge 0$. A mapping
+$f:A\to A$ is an \emph{approximate ring derivation} if
+$\|f(a+b)-f(a)-f(b)\|\le\varepsilon(\|a\|^p+\|b\|^p)$ for all $a,b$ in
+$A$, and $\|f(ab)-af(b)-f(a)b\|\le\varepsilon\|a\|^p\|b\|^p$ for all
+$a,b$ in $A$.
+\end{definition}
+
+The history of such control functions runs through Rassias, with error
+$\varepsilon(\|x\|^p+\|y\|^p)$ for $0\le p<1$, and Gajda, who settled
+$1<p$ and gave an example that stability fails at $p=1$; Bourgin proved
+the superstability of ring homomorphisms, where the map is exactly a
+homomorphism \cite[pp.~524--526]{MiuraHirasawaTakahasi2006}. For
+derivations on general algebras, an approximate derivation need not be an
+exact one. On $C(X)$ over a compact Hausdorff space $X$ without isolated
+points, the map $f(a)(x)=a(x)\log|a(x)|$ satisfies the derivation identity
+\cite[pp.~523--524]{MiuraHirasawaTakahasi2006}. It is a slight
+modification of an example of Semrl whose idea is due to
+Johnson, and it differs from every additive map by an unbounded term
+\cite[pp.~523--524]{MiuraHirasawaTakahasi2006}. Superstability holds once
+the algebra has no zero divisor from either side
+\cite[Theorem~1, p.~526]{MiuraHirasawaTakahasi2006}. A Banach algebra is
+\emph{without order} if no nonzero $x_0$ and $y_0$ satisfy
+$x_0A=Ay_0=\{0\}$; semisimple commutative Banach algebras and Banach
+algebras with approximate identities are without order
+\cite[p.~526]{MiuraHirasawaTakahasi2006}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~526]{MiuraHirasawaTakahasi2006}}]\label{thm:banach:superstable}
+Suppose $A$ is a Banach algebra without order. If $f:A\to A$ is a mapping
+satisfying the two inequalities of
+Definition~\ref{def:banach:approxder} for some $\varepsilon\ge 0$ and
+$p\ge 0$, $p\ne 1$, then $f$ is a ring derivation.
+\end{theorem}
+
+Theorem~\ref{thm:banach:superstable} answers a question raised by
+Watanabe \cite[p.~526]{MiuraHirasawaTakahasi2006}. On functions it has a zero
+consequence \cite[Corollary~3, p.~526]{MiuraHirasawaTakahasi2006}.
+
+\begin{corollary}[{\cite[Corollary~3, p.~526]{MiuraHirasawaTakahasi2006}}]\label{cor:banach:superzero}
+Suppose $A$ is a semisimple commutative Banach algebra with the maximal
+ideal space $M_A$ without isolated points. If $f:A\to A$ satisfies the two
+inequalities of Definition~\ref{def:banach:approxder} for some
+$\varepsilon\ge 0$, $p\ge 0$, $p\ne 1$, then $f$ is identically zero.
+\end{corollary}
+
+Corollary~\ref{cor:banach:superzero} is the approximate form of the
+Singer--Wermer theorem of
+Section~\ref{sec:banach-operator:singer-wermer}: where the exact theory
+gives only the zero derivation, the approximate theory gives only the zero
+map. The chapter closed as it opened, on commutative Banach algebras
+\cite[Corollary~3, p.~526]{MiuraHirasawaTakahasi2006}.
+
+The same question was carried to higher derivations and to the Jordan triple
+product \cite[p.~1975]{RohJungChang2009Triple}.
+Roh, Jung and Chang control a sequence of maps by an inequality for the
+Jordan triple product $xyx$
+\cite[p.~1976]{RohJungChang2009Triple}. The rule reads
+$f_n(xyx)=\sum_{i+j+k=n}f_i(x)f_j(y)f_k(x)$.
+
+\begin{theorem}[{\cite[Theorem~2.6, p.~1984]{RohJungChang2009Triple}}]\label{thm:banach:roh-triple-radical}
+Let $A$ be a commutative semiprime Banach algebra. Suppose that a sequence
+$F=\{f_0,f_1,\dots,f_m\}$ of continuous operators on $A$, with $f_0$ the
+identity, satisfies the inequalities of the paper for the Jordan triple rule.
+Then $F$ maps $A$ into its radical.
+\end{theorem}
+
+On a commutative semisimple algebra the same hypotheses force the map to be
+zero \cite[Corollary~2.8, p.~1986]{RohJungChang2009Triple}. This is the
+higher-order form of Corollary~\ref{cor:banach:superzero}
+\cite[p.~1986]{RohJungChang2009Triple}.
+
+Continuity also enters the stability question directly
+\cite[p.~405]{KonigMilman2014Derivation}. K\"onig and Milman
+ask which operators on $C^k(\mathbb{R})$ satisfy the Leibniz rule up to a
+small error term, and the answer is a rigidity theorem
+\cite[p.~405]{KonigMilman2014Derivation}. The error term is a function $B$ of
+the derivatives of order below $k$ only
+\cite[p.~407]{KonigMilman2014Derivation}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~407]{KonigMilman2014Derivation}}]\label{thm:banach:konig-milman}
+Let $k$ be a positive integer, $T\colon C^k(\mathbb{R})\to C(\mathbb{R})$ an
+operator, and $B$ a function such that
+$T(fg)=Tf\cdot g+f\cdot Tg+B(x,f,\dots,f^{(k-1)},g,\dots,g^{(k-1)})$ for all
+$f,g$ and all $x$. Suppose that $T$ annihilates every polynomial of degree at
+most $k-1$. Then $T$ is a multiple of the $k$-th derivative, $Tf=d\,f^{(k)}$
+for a continuous function $d$, and $B$ is the corresponding sum from the
+$k$-th order Leibniz rule.
+\end{theorem}
+
+The theorem is a stability result for the $k$-th derivative
+\cite[p.~407]{KonigMilman2014Derivation}. For $k=2$ on $\mathbb{R}^n$ the same authors describe the Laplacian by a
+similar equation \cite[p.~405]{KonigMilman2014Derivation}. Two further requirements enter there: the operator is unchanged under maps
+that preserve the inner product, and it kills the polynomials of lower order
+\cite[p.~405]{KonigMilman2014Derivation}.
+
+Two later works measure how far a derivation can reach. Kumar and Wirth use
+derivations as the tool for coarse rigidity of von Neumann algebras
+\cite[Abstract, p.~1]{KumarWirth2026}. Lupini compares the length a derivation
+needs with the length an automorphism needs on a unital $C^{*}$-algebra
+\cite[Abstract, p.~1]{Lupini2026Length}. Park, in the same setting, treats
+permuting triderivations together with the permuting trihomomorphisms they
+extend \cite[Abstract, p.~1]{Park2020Trideriv}.

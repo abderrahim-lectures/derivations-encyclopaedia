@@ -1,0 +1,7 @@
+\begin{tikzpicture}[font=\small]
+  \draw[-{Stealth}] (-3,0) -- (3,0) node[right] {eigenvalue of $\operatorname{ad} h$};
+  \foreach \x/\l in {-2/f,0/h,2/e} {\fill[hbblue] (\x,0) circle (2pt); \node[above=3pt] at (\x,0) {$\l$}; \node[below=3pt] at (\x,0) {$\x$};}
+  \draw[hbarrow,bend left=40] (-2,0.4) to node[above,font=\footnotesize] {$\operatorname{ad}e$} (0,0.4);
+  \draw[hbarrow,bend left=40] (0,0.4) to node[above,font=\footnotesize] {$\operatorname{ad}e$} (2,0.4);
+  \node[below=9mm,font=\footnotesize,align=center] at (0,0) {$\mathfrak{sl}_2$: $[h,e]=2e$, $[h,f]=-2f$, $[e,f]=h$;\\ in characteristic $0$ every derivation is $\operatorname{ad}$ of an element};
+\end{tikzpicture}

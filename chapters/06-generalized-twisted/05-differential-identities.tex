@@ -1,0 +1,92 @@
+% STATUS: written 2026-11-04 (Chuang--Lee--Liu--Tsai 2010 and Chuang 2017 read in full)
+% Sources read in full: Chuang, Lee, Liu and Tsai 2010 (pp. 157--178); Chuang 2017 (pp. 2837--2847).
+% The classical theory (Kharchenko 1978) is recalled in Section~\ref{sec:prime-semiprime:kharchenko}; this section reports the generalized and skew versions only.
+\section{Generalized and skew differential identities}\label{sec:generalized-twisted:differential-identities}
+
+A differential identity is an expression involving unknowns, ring elements and
+derivations as unary operations \cite[p.~155]{Kharchenko1978}. Kharchenko built
+the theory of these identities for prime rings, and
+Section~\ref{sec:prime-semiprime:kharchenko} reports it. The present section
+reports two later extensions \cite[p.~2838]{Chuang2017Auto}. The first has
+derivations that act through the twist of a generalized derivation
+\cite[p.~885]{DeFilippisFosner2012}. The second has a twist that is a skew
+derivation of the Ore extension type \cite[p.~2838]{Chuang2017Auto}.
+
+The first step is to translate an identity about a derivation into an identity
+about an Ore extension \cite[p.~172]{ChuangLee2010Higher}. The translation rests
+on the commutator formula for the variable $x$
+\cite[p.~172]{ChuangLee2010Higher}.
+
+\begin{remark}[{\cite[p.~172]{ChuangLee2010Higher}}]\label{rem:gen:identity-translate}
+In $Q[x;\delta]$ the derivation acts as the commutator with $x$. One has
+$\delta(r)=[x,r]$ and, in general, % claim-ok: identity displayed from the cited page
+\begin{equation*}
+\delta^{i}(r)=\sum_{s=0}^{i}(-1)^{s}\binom{i}{s}x^{i-s}r\,x^{s}.
+\end{equation*}
+A differential identity $\sum_{ij}a_{ij}\delta^{i}(r)b_{ij}=0$ for all $r\in R$
+is thereby an equality $\sum_{i}f_{i}(x)\,r\,g_{i}(x)=0$ with $f_{i},g_{i}\in
+Q[x;\delta]$.
+\end{remark}
+
+The translation turns a question about the values of derivations into a
+question about an Ore extension \cite[p.~172]{ChuangLee2010Higher}. The answer
+is then a linear independence statement
+\cite[Theorem~11, p.~172]{ChuangLee2010Higher}.
+
+\begin{theorem}[{\cite[Theorem~11, p.~172]{ChuangLee2010Higher}}]\label{thm:gen:identity-independence}
+For $f_{i},g_{i}\in Q[x;\delta]$, one has $\sum_{i=1}^{n}f_{i}\,r\,g_{i}=0$ for
+all $r\in R$ if and only if $\sum_{i=1}^{n}f_{i}\otimes g_{i}=0$ in
+$Q[x;\delta]\otimes_{C_{S}(R)}Q[x;\delta]$.
+\end{theorem}
+
+The theorem is the single-derivation case of a general statement about
+$(R,R)$-bimodule endomorphisms \cite[p.~164]{ChuangLee2010Higher}. Chuang, Lee,
+Liu and Tsai prove it through these endomorphisms
+\cite[Theorem~3, p.~165]{ChuangLee2010Higher}. Every
+$(R,R)$-bimodule endomorphism of the Ore extension is a series in the divided
+powers (Theorem~\ref{thm:gen:ore-endomorphism}).
+
+The sources also state the structural consequence that the same authors draw
+for the module of the extension \cite[p.~169]{ChuangLee2010Higher}.
+
+\begin{theorem}[{\cite[Corollary~5, p.~169]{ChuangLee2010Higher}}]\label{thm:gen:ore-quasi-injective}
+The $(R,R)$-bimodule $S=Q[X;D]$ is quasi-injective in the sense that any
+$(R,R)$-bimodule map from an $(R,R)$-bisubmodule into $S$ can be extended to an
+$(R,R)$-bimodule endomorphism of $S$.
+\end{theorem}
+
+The skew case starts one step earlier, at the definition of the identity
+itself \cite[p.~2838]{Chuang2017Auto}. The twist $\sigma$ acts on the
+coefficients, and the Ore extension of
+Definition~\ref{def:gen:ore-extension} carries both maps.
+
+The two maps are not independent when one of them is inner
+\cite[p.~2841]{Chuang2017Auto}. This is the mechanism by which a skew identity
+reduces to an ordinary one \cite[p.~2841]{Chuang2017Auto}.
+
+\begin{remark}[{\cite[p.~2841]{Chuang2017Auto}}]\label{rem:gen:skew-reduce}
+Let $\delta$ be a $\sigma$-derivation with $\sigma=I_{u}$ for a unit $u$ of
+$R$. Then $d:=u^{-1}\delta$ is an ordinary derivation, and $R[t;d]$ is
+isomorphic to $R[t;\sigma,\delta]$ by the $R$-fixing map $t\mapsto u^{-1}t$. If
+$\delta$ is the inner $\sigma$-derivation defined by $a$, so that
+$\delta(r)=ar-\sigma(r)a$, then $(t-a)r=\sigma(r)(t-a)$, and
+$R[t;\sigma,\delta]$ is isomorphic to the Ore extension of automorphism type
+$R[t;\sigma]$ by $t\mapsto t+a$.
+\end{remark}
+
+The reduction shows where the twisted identities are genuinely new
+\cite[p.~2838]{Chuang2017Auto}. Some skew derivations are inner, and the
+reduction above removes their twist
+\cite[p.~2841]{Chuang2017Auto}. Some are of automorphism type, and a
+change of variable removes the other part. In the remaining case the skew
+derivation keeps a twist \cite[p.~2841]{Chuang2017Auto}. No change of
+variable removes it; its identities are identities of the twisted polynomial
+ring \cite[p.~2841]{Chuang2017Auto}.
+
+The two sections of this chapter meet at the same phenomenon
+\cite[p.~172]{ChuangLee2010Higher}. The Ore extension is the coefficient
+ring of the identity, and the identities of
+Theorem~\ref{thm:gen:identity-independence} are the identities of that ring.
+Section~\ref{sec:generalized-twisted:semi-left-reverse} turns to the weaker
+product rules, where the identity is not a twist of the Leibniz rule but a
+different rule altogether.

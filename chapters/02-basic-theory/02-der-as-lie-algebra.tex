@@ -1,0 +1,76 @@
+% STATUS: rewritten 2026-10-08
+% Sources read in full: Jacobson 1937 (pp. 206--207), Posner 1957 (pp. 1093--1094), Humphreys 1972 (Section 1.3, p. 4), Kharchenko 1991 (pp. 7--8, 11), Freudenburg 2017 (p. 2), Bavula 2017 (arXiv version, p. 1).
+\section[$\mathrm{Der}(A)$ as a Lie algebra and as a module][Derivations as a Lie algebra]{$\mathrm{Der}(A)$ as a Lie algebra and as a module}\label{sec:basic-theory:der-as-lie-algebra}
+
+Section~\ref{sec:basic-theory:definitions} gave the Leibniz formula, which handles one derivation at a time. We ask now whether the product of two derivations is again a derivation. Jacobson
+checks this by a direct computation: sums, differences and scalar multiples of
+derivations are derivations, but the product $D_1D_2$ is not in general
+\cite[p.~207]{Jacobson1937}.
+
+The reason is visible in the computation \cite[p.~207]{Jacobson1937}. The product $D_1D_2$ gives the two
+expected terms and two extra terms:
+\[
+D_1D_2(xy) = D_1D_2(x)\,y + x\,D_1D_2(y) + D_1(x)\,D_2(y) + D_2(x)\,D_1(y).
+\]
+The extra terms are the last two \cite[formula~(5), p.~207]{Jacobson1937}. They
+are the same for $D_1D_2$ and $D_2D_1$, so they cancel in the commutator
+$[D_1,D_2] = D_1D_2 - D_2D_1$.
+
+Humphreys records this for any algebra over a field \cite[\S1.3, p.~4]{Humphreys1972}. The commutator of two
+derivations is a derivation, and the ordinary product need not be
+\cite[\S1.3, p.~4]{Humphreys1972}. We turn to prime rings, which Posner defined \cite[p.~1093]{Posner1957}. A ring $R$ is \emph{prime} if $xRy = 0$ implies $x = 0$ or $y = 0$. Let $R$ be prime of characteristic not $2$. If the
+product $d_1d_2$ of two derivations is a derivation, then $d_1$ or $d_2$ is
+zero \cite[Theorem~1, p.~1094]{Posner1957}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~207]{Jacobson1937}}]\label{thm:basic:jacobson-lie}
+The derivations of an algebra $A$ over a field $k$ form a restricted Lie
+algebra of linear transformations of $A$.
+\end{theorem}
+
+The word \emph{restricted} has a meaning in characteristic $p$. A restricted
+Lie algebra of linear maps is closed under addition, scalar multiplication, the
+commutator and the $p$-th power \cite[p.~207]{Jacobson1937}. The formula for
+$D^p$ of Section~\ref{sec:basic-theory:definitions} makes this work. Jacobson calls the Lie algebra of
+derivations the \emph{derivation algebra} of $A$. We write it $\mathrm{Der}(A)$.
+
+Theorem~\ref{thm:basic:jacobson-lie} does not use all the structure of this Lie algebra. Kharchenko studies it for a ring $R$ with centre $Z(R)$ \cite[p.~7]{Kharchenko1991}. The set $\mathrm{Der}(R)$ is a Lie ring and a module over $Z(R)$ \cite[p.~7]{Kharchenko1991}. It is not an algebra over $Z(R)$, because
+the bracket is not linear in the centre. Instead one has the identity
+$[zD,E] = z[D,E] - E(z)\,D$ for $z \in Z(R)$. Kharchenko writes it with maps
+on the right \cite[identity~(1), p.~7]{Kharchenko1991}.
+
+This identity shows what is missing. Thus the bracket of $zD$ and $E$ has a second term, the derivative of $z$ along $E$. So the centre takes part in the structure. Every derivation maps $Z(R)$ into itself \cite[p.~8]{Kharchenko1991}. Restriction therefore
+gives a map of Lie rings from $\mathrm{Der}(R)$ to $\mathrm{Der}(Z(R))$
+\cite[p.~8]{Kharchenko1991}. Kharchenko calls a Lie ring with these two
+features a \emph{differential Lie algebra} over the centre
+\cite[Definition~1.2.3, p.~8]{Kharchenko1991}.
+
+In a commutative ring the picture is simpler. % claim-ok: our own comparison of the two settings; the facts follow with citations
+Freudenburg lists the facts we need for a commutative ring $B$ \cite[p.~2]{Freudenburg2017}. The map $bD$ is a derivation for $b \in B$ and $D \in \mathrm{Der}(B)$, and so is the bracket $[D,E]$ \cite[(C.6), p.~2]{Freudenburg2017}. The group of automorphisms acts on $\mathrm{Der}(B)$ by conjugation,
+$\alpha \cdot D = \alpha D \alpha^{-1}$ \cite[(C.5), (C.6), p.~2]{Freudenburg2017}.
+Kharchenko gives the same action for any ring: if $g$ is an automorphism, then
+$g^{-1} D g$ is again a derivation \cite[\S1.2.6, p.~11]{Kharchenko1991}.
+
+We take polynomial rings as the first example.
+
+\begin{example}[{\cite[p.~1]{Bavula2017}}]\label{ex:basic:polynomials}
+Let $K$ be a field of characteristic zero and $P_n=K[x_1,\dots,x_n]$. The Lie
+algebra of $K$-derivations of $P_n$ is
+\[
+D_n=\mathrm{Der}_K(P_n)=\bigoplus_{i=1}^{n}P_n\,\partial_i ,
+\]
+with the bracket $[\partial,\delta]=\partial\delta-\delta\partial$.
+\end{example}
+
+For $n = 1$ the elements of $D_1$ are the maps $f \mapsto g\,df/dx$.
+
+We now see that this Lie algebra remembers the ring it comes from. Bavula proves that every automorphism of $\mathrm{Der}_k(P_n)$ comes from an automorphism of $P_n$ \cite[Theorem~1.1, p.~1]{Bavula2017}.
+
+\begin{theorem}[{\cite[Theorem~1.1, p.~1]{Bavula2017}}]\label{thm:basic:bavula}
+Let $K$ be a field of characteristic zero and $P_n = K[x_1,\dots,x_n]$. The map
+$\sigma \mapsto (\partial \mapsto \sigma\partial\sigma^{-1})$ is an
+isomorphism from the group $\mathrm{Aut}_K(P_n)$ of automorphisms of the
+algebra $P_n$ onto the group $\mathrm{Aut}_{\mathrm{Lie}}(\mathrm{Der}_K(P_n))$
+of automorphisms of the Lie algebra of derivations.
+\end{theorem}
+
+Some derivations are of a special kind: they come from a fixed element of the algebra, or of a larger one, and Hochschild named them in 1942 \cite[Definition~3.2, p.~689]{Hochschild1942}. Section~\ref{sec:basic-theory:inner-outer} turns to them.

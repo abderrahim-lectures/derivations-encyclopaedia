@@ -1,0 +1,86 @@
+% STATUS: rewritten 2026-10-08
+% Sources read in full: Ihara 2012 (p. 192), Jacobson 1937 (p. 206, footnote), Hochschild 1942 (pp. 677--678), Humphreys 1972 (Section 2.3 and Lemma B of Section 4.2), Kharchenko 1991 (p. 11), Freudenburg 2017 (p. 12, Section 2.10 on p. 66, Principle 1 on p. 21, Principle 10 on p. 25, Proposition 2.57 on p. 67).
+\section{Derivations and automorphisms: the exponential and one-parameter groups}\label{sec:basic-theory:exponential}
+
+Section~\ref{sec:basic-theory:inner-outer} ended with a link between derivations
+and automorphisms. We follow it in general. Hochschild opens his paper of 1942
+with the idea: a derivation is ``the infinitesimal operation corresponding to an
+automorphism'' \cite[p.~677]{Hochschild1942}. His example is the ring of real
+polynomials with $D = d/dx$. The operator $T_t = \exp(tD)$ sends $P(x)$ to
+$P(x+t)$, and the maps $T_t$ form a one-parameter group of automorphisms
+\cite[p.~677]{Hochschild1942}. Jacobson had given the same example in a
+footnote of 1937, with $t = 1$ \cite[p.~206]{Jacobson1937}.
+
+Hochschild then makes the idea exact \cite[p.~678]{Hochschild1942}. Let $A$ be an algebra of finite dimension over the real numbers. Its automorphisms form a Lie group inside the group of invertible linear maps, and its derivations form the corresponding Lie algebra \cite[p.~678]{Hochschild1942}. He proves that the tangent at the identity of a one-parameter group of automorphisms is a derivation \cite[p.~678]{Hochschild1942}. He also proves the converse: for each derivation $D$ the maps $\exp(tD)$ are automorphisms \cite[p.~678]{Hochschild1942}.
+
+We note that the converse needs the exponential series to make sense. A
+derivation $D$ is \emph{nilpotent} if some power of it is zero \cite[\S2.3, p.~8]{Humphreys1972}. In characteristic
+$0$ the series is then finite, so it makes sense. Humphreys proves that the
+exponential of a nilpotent derivation of a Lie algebra is an automorphism of that
+algebra \cite[\S2.3, pp.~8--9]{Humphreys1972}. His proof uses the Leibniz
+formula of Section~\ref{sec:basic-theory:definitions}. He also shows that conjugation by any automorphism carries such an automorphism to another one of the same kind \cite[\S2.3, p.~9]{Humphreys1972}.
+
+Freudenburg extends the statement to commutative rings \cite[p.~12]{Freudenburg2017}. Let $B$ be a
+commutative ring that contains $\mathbb{Q}$. A derivation $D$ of $B$ is
+\emph{locally nilpotent} if for each $b \in B$ some power $D^n b$ is zero. For
+such $D$ he defines $\exp D(f) = \sum_{i \ge 0} D^if/i!$
+\cite[Section~1.1.9, p.~12]{Freudenburg2017}.
+
+\begin{proposition}[{\cite[Principle~10, p.~25]{Freudenburg2017}}]\label{prop:basic:exp}
+Let $D$ be a locally nilpotent derivation of a commutative $k$-domain $B$,
+where $k$ is a field of characteristic zero. Then $\exp D$ is an automorphism of
+$B$. If $E$ is locally nilpotent and $[D,E] = 0$, then $D+E$ is locally
+nilpotent and $\exp(D+E) = \exp D \circ \exp E$.
+\end{proposition}
+
+We also have a converse for commutative rings. An automorphism is \emph{exponential} if it equals
+$\exp D$ for a locally nilpotent $D$ \cite[Section~2.10, p.~66]{Freudenburg2017}. Let $f$ be a ring homomorphism of $B$ and
+set $E = f - I$. Then $f$ is exponential exactly when $E$ is a locally nilpotent
+$f$-derivation, and in that case $f = \exp D$ with $D = \log(I+E)$
+\cite[Proposition~2.57, p.~67]{Freudenburg2017}.
+
+Kharchenko records how automorphisms act on derivations \cite[p.~11]{Kharchenko1991}. If $g$ is an
+automorphism, then $g^{-1}Dg$ is again a derivation \cite[p.~11]{Kharchenko1991}.
+Freudenburg adds that this action preserves locally nilpotent derivations
+\cite[Principle~1(d), p.~21]{Freudenburg2017}. So the exponential map is
+compatible with conjugation, and the group of automorphisms acts on both sides
+of the correspondence.
+
+Humphreys adds a tool for finite dimensional algebras over an algebraically
+closed field of characteristic $0$ \cite[\S4.2, Lemma~B]{Humphreys1972}. The semisimple part and the nilpotent part
+of a derivation, taken as a linear map, are again derivations
+\cite[\S4.2, Lemma~B]{Humphreys1972}. So each derivation splits into a part
+that has an exponential of nilpotent type and a part that is diagonal.
+
+\begin{example}[{\cite[\S2.3, p.~9]{Humphreys1972}}]\label{ex:basic:sl2}
+Let $F$ be a field of characteristic $0$ and let $L=\mathfrak{sl}(2,F)$, with the
+standard basis $x,y,h$. Put
+\[
+\sigma=\exp\operatorname{ad}x\cdot\exp\operatorname{ad}(-y)\cdot\exp\operatorname{ad}x .
+\]
+Then $\sigma$ is an automorphism of $L$ with $\sigma(x)=-y$, $\sigma(y)=-x$ and
+$\sigma(h)=-h$. In particular $\sigma$ has order $2$.
+\end{example}
+
+Ihara states the same link for a noncommutative algebra
+\cite[p.~192]{Ihara2012}. Let $k$ be a field of characteristic zero and let
+$\hat R=k\langle\langle a,b\rangle\rangle$ be the algebra of formal power
+series in two noncommuting variables. The exponential and the logarithm give a
+bijection between the Lie algebra of nilpotent derivations of $\hat R$ and the
+group of unipotent automorphisms of $\hat R$ \cite[p.~192]{Ihara2012}. The
+algebra $\hat R$ is generated freely by $a$ and $b$, so a derivation of $\hat R$
+is determined by its values on $a$ and $b$ \cite[p.~192]{Ihara2012}.
+
+\begin{example}[{\cite[p.~192]{Ihara2012}}]\label{ex:basic:ihara}
+Let $\lambda,\alpha,\beta,\gamma,\delta\in k$. For $n\ge 1$ let $D_n$ be the
+derivation of $\hat R=k\langle\langle a,b\rangle\rangle$ with
+\[
+D_n(a)=\lambda a^{n+1},\qquad
+D_n(b)=\alpha a^{n+1}+\beta a^{n}b+\gamma ba^{n}+\delta ba^{n-1}b .
+\]
+The derivations $D_n$ do not commute with each other in general. The Lie algebra
+that they generate has the defining equations of the classical Witt algebra
+\cite[p.~192]{Ihara2012}.
+\end{example}
+
+We look next at the elements that a derivation sends to zero. Section~\ref{sec:basic-theory:constants-kernels} turns to them.

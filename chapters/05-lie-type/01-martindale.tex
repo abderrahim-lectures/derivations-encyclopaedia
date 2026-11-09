@@ -1,0 +1,90 @@
+% STATUS: written 2026-11-04, recalled results as is (one environment each, source kind and whole statement)
+% Sources read in full: Martindale 1964 (pp. 183--187).
+\section{The problem of Martindale and the standard form}\label{sec:lie-type:martindale}
+
+Chapter~\ref{ch:jordan-type} followed the Jordan product $a\circ b=ab+ba$. We now follow
+the other product that an associative ring carries, the commutator $[a,b]=ab-ba$. A map
+that satisfies the product rule for the commutator is a Lie derivation \cite[p.~183]{Martindale1964}.
+Martindale began the theory with the definition \cite[p.~183]{Martindale1964}.
+
+\begin{definition}[{\cite[p.~183]{Martindale1964}}]\label{def:lie:martindale}
+Let $A$ be an associative ring. An additive mapping $a\mapsto a'$ of $A$ into itself is
+called a \emph{Lie derivation} of $A$ if for every pair $a,b\in A$,
+$[a,b]'=[a',b]+[a,b']$.
+\end{definition}
+
+Every derivation is a Lie derivation. % claim-ok: a trivial check
+So is the sum of a derivation and an additive map into the center that sends
+commutators to zero. The problem, set by Martindale in his first paragraph, is
+whether these two pieces exhaust the Lie derivations \cite[p.~183]{Martindale1964}.
+Herstein had studied Lie derivations of the classical noncommutative simple rings; Martindale
+extends the theory to rings whose nonzero two-sided ideals have a nonzero right
+annihilator, and he notes that primitive rings are precisely such rings
+\cite[p.~183]{Martindale1964}.
+
+His first result extends the map itself. % claim-ok: narration of the chapter plan, no mathematical content
+
+\begin{theorem}[{\cite[Theorem~1, p.~186]{Martindale1964}}]\label{thm:lie:martindale-extension}
+Let $A$ be a primitive ring containing a nontrivial idempotent, but not a domain, with
+characteristic different from $2$. Then every Lie derivation of $A$ can be uniquely
+extended to an ordinary derivation of an associative algebra $A^{\ast}$ containing $A$.
+\end{theorem}
+
+The theorem is stated for a primitive ring $A$ that contains a nontrivial
+idempotent, in characteristic not two \cite[pp.~183--184]{Martindale1964}. That
+is the setting the decomposition needs, and the paper states it there.
+The ring of Martindale quotients is a different construction, built in 1969
+\cite[p.~576]{Martindale1969}; Chapter~\ref{ch:prime-semiprime} uses it for
+semiprime rings, and this theorem does not need it. % claim-ok: narration of the chapter plan, no mathematical content
+
+\begin{theorem}[{\cite[Theorem~2, p.~187]{Martindale1964}}]\label{thm:lie:martindale-standard}
+Let $A$ and $A^{\ast}$ be as in Theorem~\ref{thm:lie:martindale-extension}. Every Lie
+derivation $d$ of $A$ is of the form $d=d'+\tau$, where $d'$ is the unique extension
+of $d$ to an ordinary derivation of $A^{\ast}$, and $\tau$ is an additive mapping
+of $A$ into the center of $A^{\ast}$. The map $\tau$ sends commutators into zero.
+\end{theorem}
+
+The form $d=\text{derivation}+\text{central map vanishing on commutators}$ is the
+answer the chapter keeps meeting. % claim-ok: the recalled theorems just above state this form
+The functional identities of Section~\ref{sec:lie-type:bresar} later settle when the
+central map really occurs.
+Martindale closes with simple rings, where the map into the center stays inside
+the ring \cite[p.~187]{Martindale1964}.
+
+\begin{remark}[{\cite[p.~187]{Martindale1964}}]\label{rem:lie:martindale-simple}
+Let $A$ be a simple ring characteristic not $2$ with minimal one-sided ideals. Then
+every Lie derivation of $A$ is of the form $d+\tau$. Here $d$ is an ordinary
+derivation of $A$ into itself, and $\tau$ is additive. The map $\tau$ sends $A$
+into the center of $A$ and commutators into zero. % claim-ok: the source remark quoted in this environment states $\tau$ maps $A$ into the center and commutators to zero
+\end{remark}
+
+Remark~\ref{rem:lie:martindale-simple} settles the simple case that has minimal
+one-sided ideals, and the general case is the problem of Herstein, still open. % claim-ok: own signpost introducing the moved problem, whose statement carries its own citation
+
+\begin{problem}[{\cite[Problem~3, p.~529]{Herstein1961Lie}}]\label{prob:open:herstein}
+Let $R$ be a simple ring.
+Is every Lie derivation of $R$ an ordinary derivation plus an additive map
+into the center?
+\end{problem}
+
+Herstein raised the question for a simple ring, and he recorded that Kaplansky
+had settled the case of matrix units of size at least $3$
+\cite[Problem~3, p.~529]{Herstein1961Lie}. Martindale proved his theorem for
+primitive rings with a nontrivial idempotent and said that it falls far short
+of a general solution of that conjecture \cite[p.~183]{Martindale1964}.
+Theorem~\ref{thm:lie:martindale-standard} gives the form for a primitive ring
+with a nontrivial idempotent \cite[Theorem~2, p.~187]{Martindale1964}. His
+closing remark covers the simple case: the derivation then maps $R$ into
+itself and the additive map goes into the center of $R$
+\cite[p.~187]{Martindale1964}.
+
+Bre\v{s}ar extends the form to every prime ring of characteristic not $2$ that
+does not satisfy the identity $S_4$
+\cite[Theorem~5, p.~529]{Bresar1993LieTAMS}. His Lemma~1 lists the rings that
+do satisfy $S_4$: they are the commutative rings and the subrings of
+$M_2(F)$ for a field $F$ \cite[Lemma~1, p.~530]{Bresar1993LieTAMS}. He records
+that the assumption on $S_4$ may be removable \cite[p.~528]{Bresar1993LieTAMS}.
+So Problem~\ref{prob:open:herstein} stays open in characteristic $2$ and for the
+rings that satisfy $S_4$.
+
+\hbfigure{05-lie-type/standard-decomposition}{The standard form of Martindale \cite[Theorem~2, p.~187]{Martindale1964}. A Lie derivation $d$ splits as $d=d'+\tau$, where $d'$ is an ordinary derivation of $A^{\ast}$ and $\tau$ is an additive map into the center of $A^{\ast}$ that sends commutators to zero. Theorem~\ref{thm:lie:martindale-standard} states it in full.}{fig:lie:standard-decomposition}

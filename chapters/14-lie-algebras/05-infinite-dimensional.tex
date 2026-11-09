@@ -1,0 +1,164 @@
+% STATUS: written 2026-11-05 (sources of the section read in full: Kac 1983 Chapters 1 and 7, pp. 9--11 and 73--75)
+% Additions of 2026-11-06 from Chen--Luo--Xu 2026 (pp. 1--2) and Chen--Guo 2026 (pp. 1, 9).
+% Additions of 2026-11-07 from Fa 2013 (pp. 1--2), Tang 2016 (pp. 9--10) and
+% Fan, Su and Xu 2016 (pp. 4, 11).
+% Sources read in full: Kac 1983 (Chapters 1 and 7, pp. 9--11 and 73--75);
+% Chen, Luo and Xu 2026 (pp. 1--2); Chen and Guo 2026 (pp. 1, 9); Fa 2013
+% (pp. 1--4, 18); Tang 2016 (pp. 1--2, 9--12); Fan, Su and Xu 2016 (pp. 1--2,
+% 4, 11).
+\section{Infinite-dimensional Lie algebras}\label{sec:lie-algebras:infinite-dimensional}
+
+Section~\ref{sec:lie-algebras:vector-fields} described derivations of
+vector-field Lie algebras.  The center of gravity now shifts to the
+\emph{Kac--Moody} algebras \cite[pp.~1--2]{Kac1983}.  In the affine
+case one of these algebras is a central extension of a loop algebra
+with one derivation added \cite[pp.~74--75]{Kac1983}.
+
+Kac builds a Kac--Moody algebra $\mathfrak{g}(A)$ from a generalized
+Cartan matrix $A$ and derives its root space decomposition
+\cite[pp.~1--11]{Kac1983}.  The first derivation result appears as one
+of the exercises of Chapter~1 \cite[Exercise~1.9, p.~11]{Kac1983}.
+
+\begin{proposition}[{\cite[Exercise~1.9, p.~11]{Kac1983}}]\label{prop:lie:kac-ex19}
+Let $\mathfrak{g}$ be a Lie algebra, $\mathfrak{h}\subset\mathfrak{g}$ a
+finite-dimensional diagonalizable subalgebra, and
+$\mathfrak{g}=\bigoplus_{\alpha\in Q}\mathfrak{g}_{\alpha}$ the root space
+decomposition such that $\mathfrak{g}_{0}=\mathfrak{h}$.  Then
+$\operatorname{der}\mathfrak{g}=(\operatorname{der}\mathfrak{g})_{0}+\operatorname{ad}\mathfrak{g}$,
+where $(\operatorname{der}\mathfrak{g})_{0}$ consists of endomorphisms
+preserving the root space decomposition.
+\end{proposition}
+
+The deduction in the hint of Kac is to add an inner derivation so that the
+image of $\mathfrak{h}$ stays in $\mathfrak{h}$ \cite[p.~11]{Kac1983}.
+The next exercise applies Proposition~\ref{prop:lie:kac-ex19} to
+Kac--Moody algebras \cite[Exercise~1.10, p.~11]{Kac1983}.
+
+\begin{proposition}[{\cite[Exercise~1.10, p.~11]{Kac1983}}]\label{prop:lie:kac-ex110}
+All derivations of the Lie algebra $\mathfrak{g}(A)/\mathfrak{c}$ are
+inner, provided that the generalized Cartan matrix $A$ has no zero rows.
+\end{proposition}
+
+Here $\mathfrak{c}$ is the centre of $\mathfrak{g}(A)$.  The hypothesis on
+$A$ rules out the rows whose quotient would carry a large centre
+\cite[Exercise~1.10, p.~11]{Kac1983}.
+
+For the affine case Kac constructs the algebra as a semi-direct product
+with a derivation.  Let $\mathfrak{g}$ be a simple finite-dimensional Lie
+algebra over $\mathbb{C}$, and let
+$L(\mathfrak{g})=\mathbb{C}[t,t^{-1}]\otimes\mathfrak{g}$ be its loop
+algebra \cite[p.~74]{Kac1983}.  Kac shows that
+$d_{s}\colon t^{s+1}\frac{d}{dt}$ extends to a derivation of the central
+extension of $L(\mathfrak{g})$ \cite[Proposition~7.3, p.~74]{Kac1983}, and
+uses the case $s=0$ to define the affine algebra:
+
+\begin{theorem}[{\cite[\S 7.2, pp.~74--75]{Kac1983}}]\label{thm:lie:kac-affine}
+Let $\mathfrak{g}$ be a simple finite-dimensional Lie algebra over
+$\mathbb{C}$ and $\tilde{L}(\mathfrak{g})$ the one-dimensional central
+extension of $L(\mathfrak{g})$ by the cocycle
+$\psi(a,b)=\operatorname{Res}\big(\frac{da}{dt}|b\big)_{t}$.  Let
+$\hat{L}(\mathfrak{g})$ be the Lie algebra
+$\mathbb{C}[t,t^{-1}]\otimes\mathfrak{g}+\mathbb{C}c+\mathbb{C}d$
+with bracket
+\[
+[t^{k}\!\otimes\!x+\lambda c+\mu d,\;t^{k_{1}}\!\otimes\!y+\lambda_{1}c+\mu_{1}d]
+=(t^{k+k_{1}}\!\otimes\![x,y]+\mu k_{1}t^{k_{1}}\!\otimes\!y-\mu_{1}k t^{k}\!\otimes\!x)
++k\delta_{k,-k_{1}}(x\mid y)c.
+\]
+Then $\hat{L}(\mathfrak{g})$ is an affine Kac--Moody algebra associated
+to the affine matrix $A$ of type $X^{(1)}$.
+\end{theorem}
+
+The derivation $d=-t\frac{d}{dt}$ is, by construction, an outer one
+\cite[p.~74]{Kac1983}: it measures the $t$-degree of loop elements.
+Kac shows that
+$d_{s}|_{L(\mathfrak{g})}=-t^{s+1}\frac{d}{dt}$ and $d_{s}(c)=0$ defines
+a Lie algebra derivation of $\hat{L}(\mathfrak{g})$ for every integer
+$s$ \cite[Proposition~7.3, p.~74]{Kac1983}.
+
+Together Proposition~\ref{prop:lie:kac-ex110} and
+Theorem~\ref{thm:lie:kac-affine} sum up the affine picture: every
+derivation of $\mathfrak{g}(A)/\mathfrak{c}$ is inner, while the loop
+extension to $\hat{L}(\mathfrak{g})$ is built by adding one outer
+degree derivation $d$.  This matches the pattern of
+Section~\ref{sec:lie-algebras:vector-fields}: outer derivations of
+infinite-dimensional Lie algebras carry the grading, and inner ones
+recover the bracket.
+
+The same two questions, which maps are derivations and when they are inner,
+were later asked without linearity. A 2-local derivation of a Lie algebra
+matches its value at any two points by one derivation
+\cite[p.~1]{ChenLuoXu2026}. Chen, Luo and Xu classify them on a reductive
+Lie algebra, with values in a module \cite[p.~1]{ChenLuoXu2026}.
+
+\begin{theorem}[{\cite[Corollary~1.3, p.~2]{ChenLuoXu2026}}]\label{thm:lie:two-local-reductive}
+Let $F$ be an algebraically closed field of characteristic zero, let
+$\mathfrak{g}=\mathfrak{s}\oplus\mathfrak{z}$ be a finite-dimensional
+reductive Lie algebra over $F$, and let $V$ be a finite-dimensional
+$\mathfrak{g}$-module. Then every 2-local derivation of $\mathfrak{g}$
+into $V$ is a derivation if and only if $\dim\mathfrak{z}\leq 1$ or
+$V^{\mathfrak{g}}=0$.
+\end{theorem}
+
+So the exceptional 2-local derivations appear exactly when the centre is at
+least two-dimensional and the module has an invariant vector
+\cite[p.~2]{ChenLuoXu2026}. In that case the nonlinear homogeneous maps give
+all of them \cite[p.~2]{ChenLuoXu2026}. For a semisimple Lie algebra the
+centre is zero, so the condition holds and every 2-local derivation is a
+derivation \cite[p.~1]{ChenLuoXu2026}. That special case is due to Ayupov,
+Kudaybergenov and Rakhimov, as the paper records
+\cite[p.~1]{ChenLuoXu2026}. The same question on
+the infinite-dimensional Block-type Lie algebra has the answer that every
+2-local derivation is a derivation \cite[Theorem~3.6, p.~9]{ChenGuo2026}.
+
+The superconformal algebras give a second family with a complete answer. The
+twisted $N=2$ superconformal algebra has a basis of Virasoro modes $L_n$, a
+family of modes $T_r$, a family of odd modes $G_p$ and a central element $c$
+\cite[p.~1]{Fa2013N2}. Fa computes its derivation algebra and its automorphism
+group \cite[p.~2]{Fa2013N2}.
+
+\begin{theorem}[{\cite[Theorem~1.1, p.~2]{Fa2013N2}}]\label{thm:lie:n2-superconformal}
+For the twisted $N=2$ superconformal algebra $L$, every derivation is inner:
+$\operatorname{Der}(L)=\operatorname{ad}(L)$.
+\end{theorem}
+
+The group of inner automorphisms is isomorphic to $\mathbb{C}^{*}$, and the full
+automorphism group is $\mathbb{C}^{*}\rtimes\mathbb{Z}_4$
+\cite[Theorem~1.5 and Corollary~1.6, p.~4]{Fa2013N2}. For the generalized
+twisted algebra the answer has one more summand, and the derivation algebra is
+$\operatorname{ad}(L[\mathrm{s}\Gamma])\oplus\operatorname{Hom}_{\mathbb{Z}}(\Gamma,F)$
+\cite[Theorem~4.1, p.~18]{Fa2013N2}.
+
+The Schrödinger--Virasoro algebra carries a biderivation that is neither inner
+nor skew-symmetric. Let $\mathrm{SV}(\varepsilon)$ be the Schrödinger--Virasoro
+algebra with its parameter $\varepsilon$ \cite[p.~1]{Tang2016Schrodinger}. A
+biderivation of a Lie algebra is a bilinear map that is a derivation in each
+argument \cite[p.~2]{Tang2016Schrodinger}. Tang computes all of them.
+
+\begin{theorem}[{\cite[Theorem~3.6, p.~9]{Tang2016Schrodinger}}]\label{thm:lie:schrodinger-biderivation}
+A bilinear map $f$ is a biderivation of $\mathrm{SV}(\varepsilon)$ if and only if
+there are $\lambda\in\mathbb{C}$ and a finite set $\Omega$ of complex numbers
+with $f(x,y)=\lambda[x,y]+\chi_{\Omega}(x,y)$ for all $x,y\in\mathrm{SV}(\varepsilon)$,
+where $\chi_{\Omega}$ is the map of Definition~3.5 of the same paper.
+\end{theorem}
+
+The map $\chi_{\Omega}$ is a sum of terms indexed by the finite set $\Omega$,
+and it need not be skew-symmetric \cite[p.~9]{Tang2016Schrodinger}. Every
+skew-symmetric biderivation of $\mathrm{SV}(\varepsilon)$ is inner, however
+\cite[Corollary~3.7, p.~10]{Tang2016Schrodinger}. The biderivations also
+classify the commutative post-Lie structures on the same algebra
+\cite[Theorem~4.3, p.~12]{Tang2016Schrodinger}.
+
+The deformed version of the same algebra behaves the same way. Fan, Su and
+Xu compute the skew-symmetric biderivations of the deformed
+Schrödinger--Virasoro algebras, which contain the twisted and the original
+algebras \cite[p.~1]{FanSuXu2016}. They obtain the form of each linear commuting
+map as a consequence \cite[Theorem~4.3, p.~11]{FanSuXu2016}. For some values of
+the deformation parameter the algebra has non-inner biderivations and
+non-standard commuting maps \cite[p.~1]{FanSuXu2016}.
+
+We close the chapter here.  The affine case of
+Theorem~\ref{thm:lie:kac-affine} already displays the full picture:
+the grading forces the outer derivations, and the inner ones give the
+rest, as in Sections~\ref{sec:lie-algebras:simple}
+and~\ref{sec:lie-algebras:vector-fields}.

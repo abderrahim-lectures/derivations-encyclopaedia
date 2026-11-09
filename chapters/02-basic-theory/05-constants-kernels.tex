@@ -1,0 +1,75 @@
+% STATUS: rewritten 2026-10-08
+% Sources read in full: Grzeszczuk 1993 (p. 1857), Ferreira 2002 (p. 177), Chen 2011 (p. 1365), Ritt 1950 (p. 1), Freudenburg 2017 (pp. 2, 13, 21--22), Posner 1957 (p. 1093), Kharchenko 1991 (Introduction).
+\section{Constants, kernels and images}\label{sec:basic-theory:constants-kernels}
+
+We look now at what a derivation leaves fixed. We note an analogy: an automorphism has fixed elements, and a derivation has a matching set. Ritt called the elements with
+zero derivative \emph{constants} \cite[p.~1]{Ritt1950}. The name fits the
+derivative of a function, whose constants are the functions with zero slope.
+Freudenburg calls the same set the \emph{kernel} of $D$ and writes it
+$\ker D$ \cite[p.~2]{Freudenburg2017}.
+
+We start with a commutative ring $B$. The kernel is a subring,
+and it contains the rational numbers when $B$ does
+\cite[(C.3), (C.4), p.~2]{Freudenburg2017}. Put $A = \ker D$. Then
+$D(ab) = aD(b)$ for $a \in A$ and $b \in B$, so $D$ is an $A$-module
+endomorphism of $B$ \cite[Proposition~1.6(a), p.~13]{Freudenburg2017}.
+
+We turn to locally nilpotent derivations. Let $D$ be a locally
+nilpotent derivation of a commutative domain $B$ over a field $k$ of
+characteristic $0$. Freudenburg proves that $\ker D$ is closed under factors:
+if $fg \in \ker D$ with $f, g \neq 0$, then $f, g \in \ker D$. He also proves that
+$k \subseteq \ker D$ and that a nonzero $D$ has a local slice
+\cite[Principle~1, p.~21]{Freudenburg2017}. A local slice is an element $r$ with
+$Dr \neq 0$ and $D^2r = 0$ \cite[p.~3]{Freudenburg2017}. A
+field has no nonzero locally nilpotent derivation
+\cite[Corollary~1.22, p.~22]{Freudenburg2017}.
+
+We turn now to noncommutative rings, which need other tools. A ring $R$ is prime if $xRy = 0$ forces
+$x = 0$ or $y = 0$. Posner shows that in a prime ring, if $aD(x) = 0$ for all
+$x$, then $a = 0$ or $D = 0$ \cite[Lemma~1, p.~1093]{Posner1957}. This lemma
+starts Chapter~\ref{ch:prime-semiprime}.
+
+Grzeszczuk studies the constants of a nilpotent derivation of a semiprime ring
+\cite[p.~1857]{Grzeszczuk1993}.
+
+\begin{theorem}[{\cite[p.~1857]{Grzeszczuk1993}}]\label{thm:basic:grzeszczuk}
+Let $d$ be a nilpotent derivation of a semiprime ring $R$. Then the subring of
+constants $\{x\in R \mid d(x)=0\}$ is non-nilpotent.
+\end{theorem}
+
+Ferreira recalls that the constants of any Lie algebra of homogeneous
+derivations of a free associative algebra form a free subalgebra
+\cite[p.~177]{Ferreira2002}. The next example, due to Bergman, has a derivation
+that is not homogeneous \cite[p.~177]{Ferreira2002}.
+
+\begin{example}[{\cite[p.~177]{Ferreira2002}}]\label{ex:basic:bergman}
+Let $k$ be a field and let $R=k\langle x,y,z\rangle$ be the free associative
+algebra of rank $3$. Let $d$ be the $k$-derivation of $R$ with
+\[
+d(x)=xyx+x,\qquad d(y)=yxy-y,\qquad d(z)=x .
+\]
+Bergman gave this derivation as an example whose subalgebra of constants is not
+free. Kharchenko indicates how to show that $\ker d$ is not a free subalgebra.
+\end{example}
+
+In prime characteristic, the constants of a derivation of a free associative
+algebra are free under some conditions on the derivation
+\cite[p.~177]{Ferreira2002}. For the partial derivatives of a free algebra,
+the constants form a free subalgebra \cite[p.~177]{Ferreira2002}.
+
+An automorphism has a similar set, made of the elements that it fixes
+\cite[p.~1365]{Chen2011}. Chen calls this set the kernel of $\sigma-1$
+\cite[p.~1365]{Chen2011}.
+
+In a prime ring, one can ask when the kernel of one map lies in the kernel of
+another \cite[p.~1365]{Chen2011}. Bre\v{s}ar answered this for algebraic derivations in characteristic
+$0$ \cite[p.~1365]{Chen2011}. Chuang, Lee and Wong answered it in characteristic
+$p>0$ \cite[p.~1365]{Chen2011}. Chen answers it for automorphisms
+\cite[Theorem~1.1, p.~1366]{Chen2011}.
+
+We end with the role of constants in structure theory. Kharchenko traces how studies of fixed rings of finite groups of automorphisms led to Galois correspondence theorems for semiprime rings \cite[Introduction]{Kharchenko1991}. They cover both groups of automorphisms and Lie algebras of derivations.
+
+We have studied the derivations of a given algebra. Section~\ref{sec:basic-theory:extension}
+asks a different question: when does a derivation of a small algebra extend to a
+larger one? Chapter~\ref{ch:commutative} returns to the kernel for locally
+nilpotent derivations.

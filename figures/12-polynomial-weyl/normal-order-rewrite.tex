@@ -1,0 +1,21 @@
+% The Weyl algebra relation of Definition 2.1 (Dixmier 1968, p. 209), written
+% out for one pair: [p,q]=1 is qp = pq-1. The ordered products p^i q^j form a
+% basis (Dixmier 1968, p. 210), so a word is brought to that order by moving
+% each q past the p's. Drawn as one rewrite: the word qp above, its ordered
+% form pq with the scalar term below.
+\begin{tikzpicture}[font=\small]
+  % the word as written, above
+  \node[hbnode,text width=8mm,minimum height=8mm,align=center] (qw) at (0,0) {$q$};
+  \node[hbnode,text width=8mm,minimum height=8mm,align=center] (pw) at (14mm,0) {$p$};
+  \node[font=\footnotesize,anchor=east] at (-4mm,0) {word};
+  % the ordered word and the scalar it gained, below
+  \node[hbnode,text width=8mm,minimum height=8mm,align=center] (po) at (0,-19mm) {$p$};
+  \node[hbnode,text width=8mm,minimum height=8mm,align=center] (qo) at (14mm,-19mm) {$q$};
+  \node[font=\small] at (23mm,-19mm) {$-$};
+  \node[hbkey,text width=8mm,minimum height=8mm,align=center] (one) at (30mm,-19mm) {$1$};
+  \node[font=\footnotesize,anchor=east,align=right] at (-4mm,-19mm) {ordered\\product};
+  % the rewrite, with the two letters shown swapping places
+  \draw[hbarrow] (7mm,-3.5mm) -- node[right,font=\footnotesize] {$qp=pq-1$} (7mm,-15mm);
+  \node[font=\footnotesize,anchor=north,align=center,text width=74mm] at (14mm,-24mm)
+    {moving a $q$ past a $p$ turns $qp$ into $pq$ and adds the scalar $-1$};
+\end{tikzpicture}

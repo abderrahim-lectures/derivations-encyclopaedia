@@ -1,0 +1,74 @@
+% STATUS: rewritten 2026-11-05; every claim is cited.
+\section{Gamma-rings}\label{sec:other-systems:gamma-rings}
+
+Recall that a near-ring keeps only one distributive law.
+A $\Gamma$-ring goes further: it replaces the product by a family of
+products \cite[p.~2]{DeyPaulRakhimov2012}. There is one product for each
+element of a set $\Gamma$ \cite[p.~2]{DeyPaulRakhimov2012}. Nobusawa
+introduced the
+notion in 1964; Dey, Paul and Rakhimov state it in the current form
+\cite[p.~2]{DeyPaulRakhimov2012}.
+
+\begin{definition}[{\cite[p.~2]{DeyPaulRakhimov2012}}]\label{def:other:gamma-ring}
+Let $M$ and $\Gamma$ be additive abelian groups. Then $M$ is a
+\emph{$\Gamma$-ring} if there is a mapping
+$M \times \Gamma \times M \to M$, written $(a, \alpha, b) \mapsto a\,\alpha\,b$,
+such that for all $a, b, c \in M$ and $\alpha, \beta \in \Gamma$:
+\textup{(i)} $a\,\alpha\,b \in M$; \textup{(ii)}
+$(a+b)\,\alpha\,c = a\,\alpha\,c + b\,\alpha\,c$,
+$a\,(\alpha+\beta)\,b = a\,\alpha\,b + a\,\beta\,b$,
+$a\,\alpha\,(b+c) = a\,\alpha\,b + a\,\alpha\,c$, and
+$(a\,\alpha\,b)\,\beta\,c = a\,\alpha\,(b\,\beta\,c)$.
+\end{definition}
+
+The next definition states the derivations on these rings.
+
+\begin{definition}[{\cite[pp.~2--3]{DeyPaulRakhimov2012}}]\label{def:other:gamma-derivation}
+Let $M$ be a $\Gamma$-ring. An additive mapping $D \colon M \to M$ is a
+\emph{derivation} of $M$ if
+\[
+D(x\,\alpha\,y) = D(x)\,\alpha\,y + x\,\alpha\,D(y)
+\qquad (x, y \in M,\ \alpha \in \Gamma).
+\]
+It is a \emph{Jordan derivation} if
+$D(x\,\alpha\,x) = D(x)\,\alpha\,x + x\,\alpha\,D(x)$ for all $x \in M$
+and $\alpha \in \Gamma$.
+\end{definition}
+
+The next definition allows a second derivation on one side.
+
+\begin{definition}[{\cite[p.~3]{DeyPaulRakhimov2012}}]\label{def:other:gamma-generalized}
+An additive mapping $D \colon M \to M$ is a \emph{generalized derivation}
+of $M$ if there is a derivation $d$ of $M$ such that
+\[
+D(x\,\alpha\,y) = D(x)\,\alpha\,y + x\,\alpha\,d(y)
+\qquad (x, y \in M,\ \alpha \in \Gamma).
+\]
+It is a \emph{Jordan generalized derivation} if
+$D(x\,\alpha\,x) = D(x)\,\alpha\,x + x\,\alpha\,d(x)$ for all $x \in M$
+and $\alpha \in \Gamma$.
+\end{definition}
+
+The main theorem of Dey, Paul and Rakhimov says that every Jordan
+generalized derivation is generalized, under a restriction on $M$
+\cite[Abstract, p.~1]{DeyPaulRakhimov2012}. The
+restriction is the assumption
+\begin{equation}\label{eq:other:star}
+a\,\alpha\,b\,\beta\,c = a\,\beta\,b\,\alpha\,c
+\qquad (a, b, c \in M,\ \alpha, \beta \in \Gamma),
+\end{equation}
+which the authors impose on the $\Gamma$-ring $M$
+\cite[pp.~1--2]{DeyPaulRakhimov2012}.
+
+\begin{theorem}[{\cite[Abstract, p.~1]{DeyPaulRakhimov2012}}]\label{thm:other:gamma-main}
+Let $M$ be a $2$-torsion-free semiprime $\Gamma$-ring satisfying
+\eqref{eq:other:star}. Let $D \colon M \to M$ be an additive mapping such
+that, for some derivation $d$ of $M$,
+$D(x\,\alpha\,x) = D(x)\,\alpha\,x + x\,\alpha\,d(x)$ for all $x \in M$
+and $\alpha \in \Gamma$. Then $D$ is a generalized derivation of $M$.
+\end{theorem}
+
+The theorem lifts the same statement for rings, due to Hvala, to the
+$\Gamma$ setting \cite[p.~1]{DeyPaulRakhimov2012}. The next section moves
+to semirings, where a different obstacle appears: addition has no
+negatives at all \cite[p.~625]{AhmedDudek2021}.

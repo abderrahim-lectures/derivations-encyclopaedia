@@ -1,0 +1,165 @@
+% STATUS: written 2026-11-05 (Bennis and Fahid 2017, Boudine and Zerra 2024 read in full)
+% STATUS: extended 2026-11-06 (Barajas and Duarte 2026 read in full)
+% Sources read in full: Bennis and Fahid 2017 (pp. 1--22, sections 2 to 4);
+% Boudine and Zerra 2024 (pp. 459--472, sections 2 and 3); Barajas and Duarte 2026 (pp. 1--2, 6, 13, 15).
+% Origins: the trivial extension A x M and its centre, Bennis and Fahid 2017 (p. 4);
+% the form of a derivation (Lemma 3.1, p. 8) and the innerness criterion (Theorem 3.12, p. 14);
+% the (d1, s1, s2) form over a ring and the prime-ring theorems, Boudine and Zerra 2024
+% (Theorem 2.1 p. 461, Theorem 2.3 p. 463, Theorem 3.5 p. 467, Proposition 3.6 p. 468).
+\section{Trivial extensions}\label{sec:path-incidence:trivial-extension}
+
+The triangular algebra of Chapter~\ref{ch:matrix-triangular} is a trivial extension
+\cite[p.~5]{BennisFahid2017}. A trivial extension puts a ring and a bimodule together
+with one rule for the product \cite[p.~4]{BennisFahid2017}. The triangular algebra
+is the special case where the module has the form $M=eSf$
+\cite[p.~5]{BennisFahid2017}. This section gives the derivations of the
+construction and the test for innerness.
+
+Let $A$ be a ring and $M$ an $A$-bimodule. The product of two pairs keeps the first
+coordinate and adds a crossed term to the second \cite[p.~4]{BennisFahid2017}.
+
+\begin{definition}[{\cite[p.~4]{BennisFahid2017}}]\label{def:trivial:extension}
+Let $A$ be a unital $R$-algebra and $M$ a unital $A$-bimodule. The direct product
+$A\times M$, with pairwise addition and the product
+\begin{equation*}
+(a,m)(b,n)=(ab,\ an+mb)\qquad(a,b\in A,\ m,n\in M),
+\end{equation*}
+is a unital algebra, called the \emph{trivial extension} of $A$ by $M$ and written
+$A\ltimes M$.
+\end{definition}
+
+Every linear map on the extension splits into four parts
+\cite[p.~8]{BennisFahid2017}. Two parts act on $A$ and $M$ separately, and two carry
+$M$ to $A$ and $A$ to $M$ \cite[p.~8]{BennisFahid2017}.
+
+\begin{lemma}[{\cite[Lemma~3.1, p.~8]{BennisFahid2017}}]\label{lem:trivial:form}
+Every linear map $D\colon A\ltimes M\to A\ltimes M$ has the form
+\begin{equation*}
+D(a,m)=(D_{A}(a)+T(m),\ D_{M}(a)+S(m))\qquad(a\in A,\ m\in M)
+\end{equation*}
+for some linear maps $D_{A}\colon A\to A$, $D_{M}\colon A\to M$, $T\colon M\to A$ and
+$S\colon M\to M$. We write $D=(D_{A}+T,D_{M}+S)$.
+Moreover, $D$ is a derivation if and only if $D_{A}$ and $D_{M}$ are derivations,
+$T\in E(M)$ and $S$ is a module generalized $D_{A}$-derivation.
+\end{lemma}
+
+The notion of $E(M)$ in Lemma~\ref{lem:trivial:form} needs its own definition
+\cite[p.~7]{BennisFahid2017}. It is the set of bimodule maps whose sum over two
+arguments vanishes \cite[p.~7]{BennisFahid2017}. A module generalized derivation
+satisfies the product rule on both sides, with the same derivation $d$ of $A$ on each
+side \cite[p.~7]{BennisFahid2017}.
+
+\begin{definition}[{\cite[p.~7]{BennisFahid2017}}]\label{def:trivial:egeneral}
+Let $E(M)$ be the $R$-submodule of $\mathrm{Hom}_{A-A}(M,A)$ consisting of all
+bimodule homomorphisms $f$ such that $f(m)n+mf(n)=0$ for all $m,n\in M$. A linear
+map $S\colon M\to M$ is a \emph{module generalized $d$-derivation} for some
+$d\in\mathrm{Der}(A)$ if
+\begin{equation*}
+S(am)=aS(m)+d(a)m,\qquad S(ma)=S(m)a+md(a)
+\end{equation*}
+for all $m\in M$ and $a\in A$.
+\end{definition}
+
+Innerness of the whole map is decided by its four parts
+\cite[p.~14]{BennisFahid2017}. One part must vanish, and the two parts on the module
+must be inner \cite[p.~14]{BennisFahid2017}.
+
+\begin{theorem}[{\cite[Theorem~3.12, p.~14]{BennisFahid2017}}]\label{thm:trivial:inner}
+Consider a derivation $D\colon A\ltimes M\to A\ltimes M$ of the form
+$D=(D_{A}+T,D_{M}+S)$, where $D_{A}$, $T$, $D_{M}$ and $S$ are as in
+Lemma~\ref{lem:trivial:form}. Then the following assertions hold.
+\begin{enumerate}[label=(\arabic*)]
+\item If $D$ is inner, then $T=0$ and both $S$ and $D_{M}$ are inner.
+\item The converse holds if $\mathrm{l.Ann}_{A}(M)\cap\mathrm{r.Ann}_{A}(M)=0$.
+\end{enumerate}
+\end{theorem}
+
+When the module is the ring itself, the criterion takes an exact form
+\cite[p.~14]{BennisFahid2017}. The two module parts then agree \cite[p.~14]{BennisFahid2017}.
+
+\begin{corollary}[{\cite[Corollary~3.13, p.~14]{BennisFahid2017}}]\label{cor:trivial:self}
+Assume $M=A$ and consider a derivation $D\colon A\ltimes M\to A\ltimes M$ of the
+form $D=(D_{A}+T,D_{M}+S)$ with the parts as in Lemma~\ref{lem:trivial:form}. Then
+$D$ is inner if and only if $T=0$, $D_{M}$ is inner, $S=D_{A}$ and $S$ is inner.
+Precisely, the inner derivations on $A\ltimes A$ are only of the form
+$(d_{1},d_{0}+d_{1})$, where $d_{0}$ and $d_{1}$ are inner derivations on $A$.
+\end{corollary}
+
+Boudine and Zerra give the same description over a general ring with two
+projections \cite[p.~461]{BoudineZerra2024}. Write $d=(d_{1},d_{2})$ for the two
+components, and write $s_{1}(m)=d_{2}((0,m))$ and $s_{2}(r)=d_{2}((r,0))$
+\cite[p.~461]{BoudineZerra2024}. Their conditions are the three product rules of
+Bennis and Fahid, written out.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~461]{BoudineZerra2024}}]\label{thm:trivial:components}
+With the notation above, the map $d$ is a derivation on $R\propto M$ if and only if
+the following statements hold:
+\begin{enumerate}[label=(\arabic*)]
+\item $d_{1}$ is a $(\pi_{1},\pi_{1})$-derivation;
+\item $s_{2}$ is a derivation;
+\item $s_{1}(rm)=r\,s_{1}(m)+d_{1}(r,0)m$ and $s_{1}(mr)=s_{1}(m)r+m\,d_{1}(r,0)$
+for every $r\in R$ and $m\in M$.
+\end{enumerate}
+\end{theorem}
+
+Their innerness test lists four conditions, one for each part
+\cite[p.~463]{BoudineZerra2024}. The list matches Corollary~\ref{cor:trivial:self} in
+the case $M=R$.
+
+\begin{theorem}[{\cite[Theorem~2.3, p.~463]{BoudineZerra2024}}]\label{thm:trivial:inner-ring}
+With the notation above, the derivation $d$ is the inner derivation on
+$R\propto M$ induced by $(r,m)\in R\propto M$ if and only if the following
+statements hold:
+\begin{enumerate}[label=(\arabic*)]
+\item $d_{1}\circ i_{2}=0$;
+\item $d_{1}\circ i_{1}$ is the inner derivation on $R$ induced by $r$;
+\item $s_{1}$ is the inner derivation on $M$ induced by $r$;
+\item $s_{2}$ is the inner derivation on $R$ into $M$ induced by $m$.
+\end{enumerate}
+\end{theorem}
+
+Over a prime ring the classical theorems of Herstein, Posner and Bell carry over to
+the extension \cite[p.~467]{BoudineZerra2024}. The first one kills the part of the
+derivation that stays on $R$ \cite[p.~467]{BoudineZerra2024}.
+
+\begin{theorem}[{\cite[Theorem~3.5, p.~467]{BoudineZerra2024}}]\label{thm:trivial:herstein}
+Let $R$ be a noncommutative prime ring with $\mathrm{char}(R)\neq 2$, $M$ an
+$R$-bimodule, and $d$ a derivation on $R\propto M$. If
+$d((r,m))d((r',m'))=d((r',m'))d((r,m))$ for every $(r,m),(r',m')\in R\propto M$,
+then $d_{1}\circ i_{1}=0$ and $s_{1}\in\mathrm{End}_{R}(M)$. Furthermore, for every
+$m,m'\in M$, $[s_{2}(m),d_{1}((0,m'))]=[d_{1}((0,m)),s_{2}(m')]$.
+\end{theorem}
+
+The centralizing form gives the corresponding statement for the theorem of Posner
+\cite[p.~468]{BoudineZerra2024}.
+
+\begin{proposition}[{\cite[Proposition~3.6, p.~468]{BoudineZerra2024}}]\label{prop:trivial:posner}
+Let $R$ be a noncommutative prime ring, $M$ an $R$-bimodule such that
+$Z_{M}(R)=M$, and $d$ a derivation on $R\propto M$. Then $d$ is centralizing if and
+only if, for every $(r,m)\in R\propto M$, the following statements hold:
+\begin{enumerate}[label=(\arabic*)]
+\item $d_{1}\circ i_{1}=0$;
+\item $d_{1}((0,m))r-rd_{1}((0,m))\in Z_{R}(R)$.
+\end{enumerate}
+\end{proposition}
+
+By Theorem~\ref{thm:trivial:components}, the extension keeps the derivations of its
+first factor and adds a crossed part. That pattern returns once more with a graph in
+place of the module, and Section~\ref{sec:path-incidence:leavitt} gives the graph
+case.
+
+The construction repeats for a finite family of modules, and the derivations
+become a sequence of maps \cite[p.~2]{BarajasDuarte2026}. Anderson, Bennis,
+Fahid and Shaiea defined the $n$-trivial extension of a ring by modules
+$M_1,\dots,M_n$ \cite[p.~2]{BarajasDuarte2026}. Barajas and Duarte ask for the
+maps that stand to it as derivations stand to the one-module case
+\cite[p.~2]{BarajasDuarte2026}. When all the modules are the same algebra, the
+answer is the Hasse--Schmidt sequence of
+Section~\ref{sec:higher-multi:hasse-schmidt} \cite[p.~2]{BarajasDuarte2026}.
+For different algebras they define a multi Hasse--Schmidt derivation, a sequence
+of additive maps whose Leibniz rule carries the maps $\varphi_{ij}$ between the
+modules \cite[Definition~3.1, p.~6]{BarajasDuarte2026}. The $n$-trivial
+extension is then a quotient of a polynomial ring, exactly as the one-module
+extension is the ring of dual numbers \cite[Theorem~4.2, p.~13]{BarajasDuarte2026}.
+The multi Hasse--Schmidt derivations with first term the identity correspond to
+the algebra maps into that quotient \cite[Corollary~4.3, p.~15]{BarajasDuarte2026}.

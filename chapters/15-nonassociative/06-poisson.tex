@@ -1,0 +1,100 @@
+% STATUS: rewritten 2026-11-05
+% STATUS: extended 2026-11-07 (Abramov and Sovetnikov 2025 read at the
+% introduction, Definition 2.1 and Theorem 4)
+% Sources read in full: Li 2018 (definitions and divergence, p. 657; Theorem 2.1,
+% pp. 658--659); Abramov and Sovetnikov 2025 (pp. 487--489, 495).
+\section{Poisson algebras}\label{sec:nonassociative:poisson}
+
+The $\delta$-derivations of the previous section relax the product rule by a
+scalar. % claim-ok: own summary of the previous section
+A Poisson algebra instead carries two products, and a derivation must
+respect both \cite[p.~657]{AlbertiArestiLi2018Poisson}.
+
+\begin{definition}[{\cite[p.~657]{AlbertiArestiLi2018Poisson}}]
+\label{def:nonassociative:poisson}
+A vector space $B$ over a field $k$ is a \emph{Poisson algebra} if $B$
+carries two bilinear operations, a multiplication $x\cdot y$ and a bracket
+$\{x,y\}$, such that $B$ is a commutative associative algebra under the
+multiplication, $B$ is a Lie algebra under the bracket, and
+\[
+\{x\cdot y,z\}\;=\;x\cdot\{y,z\}+\{x,z\}\cdot y
+\qquad\text{for all }x,y,z\in B.
+\]
+\end{definition}
+
+The last identity says that the map $x\mapsto\{x,z\}$, for a fixed $z$,
+is a derivation of the associative product. % claim-ok: own restatement of the Leibniz rule above
+The parallel requirement defines the derivations of
+the structure. % claim-ok: own linking sentence
+
+\begin{definition}[{\cite[p.~657]{AlbertiArestiLi2018Poisson}}]
+\label{def:nonassociative:poisson-derivation}
+Let $B$ be a Poisson algebra. A linear map $D$ on $B$ is a \emph{Poisson
+derivation} if
+\[
+D(xy)\;=\;D(x)y+xD(y)
+\quad\text{and}\quad
+D(\{x,y\})\;=\;\{D(x),y\}+\{x,D(y)\}
+\qquad\text{for all }x,y\in B.
+\]
+\end{definition}
+
+The basic example is built on a polynomial algebra. % claim-ok: own linking sentence
+
+\begin{example}[{\cite[p.~657]{AlbertiArestiLi2018Poisson}}]
+\label{ex:nonassociative:symplectic}
+The \emph{symplectic Poisson algebra} $S_n$ is the polynomial algebra
+$k[x_1,y_1,\dots,x_n,y_n]$ with the bracket given by
+\[
+\{x_i,y_j\}=\delta_{ij},\qquad \{x_i,x_j\}=0,\qquad \{y_i,y_j\}=0,
+\]
+where $\delta_{ij}$ is the Kronecker symbol and $1\le i,j\le n$.
+\end{example}
+
+A derivation $D$ of a polynomial algebra in $n$ generators can be written
+as $D=\sum_{i=1}^{n}D(x_i)\,\partial/\partial x_i$
+\cite[p.~657]{AlbertiArestiLi2018Poisson}. Li denotes by
+\[
+D^{\ast}\;=\;\sum_{i=1}^{n}\frac{\partial}{\partial x_i}D(x_i)
+\]
+the \emph{divergence} of $D$ \cite[p.~658]{AlbertiArestiLi2018Poisson}.
+% notion-ok: divergence as named at \cite[p.~658]{AlbertiArestiLi2018Poisson}
+For a
+Poisson derivation of the symplectic algebra the divergence vanishes, and
+more holds.
+
+\begin{theorem}[{\cite[Theorem~2.1, pp.~658--659]{AlbertiArestiLi2018Poisson}}]
+\label{thm:nonassociative:poisson-inner}
+If $D$ is a derivation of the symplectic Poisson algebra
+$S_n=k[x_1,y_1,\dots,x_n,y_n]$, then $D^{\ast}=0$ and there exists
+$f\in S_n$ such that $D=\operatorname{ad}_f$, that is, $D(g)=\{f,g\}$ for
+any $g\in S_n$.
+\end{theorem}
+
+Every Poisson derivation of $S_n$ is therefore inner. A transposed Poisson
+algebra trades the Leibniz rule of the bracket for a factor one half. Let $P$
+carry a commutative associative product and a Lie bracket such that
+$2x\cdot[y,z]=[x\cdot y,z]+[y,x\cdot z]$ for all $x,y,z$
+\cite[equation~(12), p.~489]{AbramovSovetnikov2025}. A transposed Poisson
+superalgebra carries the graded form of the same identity
+\cite[Definition~2.1, p.~490]{AbramovSovetnikov2025}. Abramov and Sovetnikov use
+an even derivation to build new structures from it
+\cite[p.~487]{AbramovSovetnikov2025}.
+
+\begin{theorem}[{\cite[Theorem~4, p.~495]{AbramovSovetnikov2025}}]\label{thm:nonassociative:transposed-poisson-3lie}
+Let $(P,\cdot,[\,,\,])$ be a transposed Poisson superalgebra and let $D$ be its
+even derivation. Define
+$[x,y,z]=D(x)\cdot[y,z]+(-1)^{|x||yz|}D(y)\cdot[z,x]+(-1)^{|xy||z|}D(z)\cdot[x,y]$.
+Then $(P,[\,,\,,\,])$ is a 3-Lie superalgebra.
+\end{theorem}
+
+So an even derivation of a transposed Poisson superalgebra produces a ternary
+bracket that satisfies the Filippov--Jacobi identity
+\cite[p.~495]{AbramovSovetnikov2025}. The paper also shows that the even
+derivations of such an algebra form a Jordan algebra. The odd ones close on the
+same bracket exactly when the derivation squares to zero
+\cite[Theorem~2, p.~492]{AbramovSovetnikov2025}.
+
+The next section keeps
+the Lie product and twists the Jacobi identity by an algebra endomorphism:
+Hom-Lie algebras and Lie conformal algebras. % claim-ok: own linking sentence to Section 7

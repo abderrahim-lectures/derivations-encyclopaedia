@@ -1,0 +1,114 @@
+% STATUS: rewritten 2026-11-05; every claim is cited.
+\section{Near-rings and prime near-rings with derivation}\label{sec:other-systems:near-rings}
+
+The previous section listed the systems of this chapter, and the first of
+them is the near-ring \cite[p.~31]{BellMason1987}. A ring has two
+distributive laws; a near-ring keeps only one
+\cite[p.~31]{BellMason1987}. The product rule of a derivation still makes
+sense, but the proofs from prime rings that use the missing law break
+\cite[p.~31]{BellMason1987}. Bell and Mason asked in 1987
+what survives \cite[p.~31]{BellMason1987}. Their setting follows.
+
+\begin{definition}[{\cite[p.~31]{BellMason1987}}]\label{def:other:near-ring-derivation}
+Let $N$ be a zero-symmetric left near-ring with multiplicative center $Z$.
+A \emph{derivation} on $N$ is an additive endomorphism $D$ of $(N, +)$
+satisfying the product rule $D(xy) = x\,D(y) + D(x)\,y$ for all $x, y \in N$.
+An element $x \in N$ with $D(x) = 0$ is called a \emph{constant}. The
+derivation $D$ is \emph{commuting} if $[x, D(x)] = 0$ for all $x \in N$.
+\end{definition}
+
+The commutativity theorems below need the near-ring analogue of a prime
+ring \cite[p.~31]{BellMason1987}.
+
+\begin{definition}[{\cite[p.~31]{BellMason1987}}]\label{def:other:prime-near-ring}
+The near-ring $N$ is \emph{prime} if $a\,N\,b = \{0\}$ implies $a = 0$ or
+$b = 0$ for all $a, b \in N$.
+\end{definition}
+
+Bell and Mason note that this condition implies the usual definition of a
+prime near-ring \cite[p.~31]{BellMason1987}.
+
+The first surprise is that the product rule alone gives a weak form of the
+missing distributive law.
+
+\begin{lemma}[{\cite[Lemma~1, p.~32]{BellMason1987}}]\label{lem:other:partial-distributive}
+Let $D$ be a derivation on a near-ring $N$. Then $N$ satisfies the partial
+distributive law
+\[
+\bigl(a\,D(b) + D(a)\,b\bigr)\,c = a\,D(b)\,c + D(a)\,b\,c
+\qquad (a, b, c \in N).
+\]
+\end{lemma}
+
+Bell and Mason proved the first commutativity theorem for a near-ring with
+a derivation \cite[Theorem~1, p.~32]{BellMason1987}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~32]{BellMason1987}}]\label{thm:other:bell-mason-1}
+Let $N$ have no nonzero divisors of zero. If $N$ admits a nontrivial
+commuting derivation $D$, then $(N, +)$ is abelian.
+\end{theorem}
+
+They then moved to prime near-rings, where the analogue of the first
+Posner theorem on rings holds \cite[Theorem~2, p.~33]{BellMason1987}.
+
+\begin{theorem}[{\cite[Theorem~2, p.~33]{BellMason1987}}]\label{thm:other:bell-mason-2}
+If a prime near-ring $N$ admits a nontrivial derivation $D$ for which
+$D(N) \subseteq Z$, then $(N, +)$ is abelian. Moreover, if $N$ is
+$2$-torsion-free, then $N$ is a commutative ring.
+\end{theorem}
+
+The same conclusion follows when the derivations commute with each other
+\cite[Theorem~3, p.~33]{BellMason1987}.
+
+\begin{theorem}[{\cite[Theorem~3, p.~33]{BellMason1987}}]\label{thm:other:bell-mason-3}
+Let $N$ be a prime near-ring admitting a nontrivial derivation $D$ such
+that $[D(x), D(y)] = 0$ for all $x, y \in N$. Then $(N, +)$ is abelian.
+If $N$ is $2$-torsion-free as well, then $N$ is a commutative ring.
+\end{theorem}
+
+Bell continued alone in 1997 \cite[p.~191]{Bell1997II}. His condition now
+holds only on a subset \cite[p.~191]{Bell1997II}. He called a nonempty
+subset $U$ of $N$ a semigroup
+right ideal if $U N \subseteq U$, a semigroup left ideal if $N U \subseteq U$,
+and a semigroup ideal if both hold \cite[p.~191]{Bell1997II}.
+
+\begin{proposition}[{\cite[Abstract, p.~191]{Bell1997II}}]\label{prop:other:bell-ii}
+Let $N$ be a $3$-prime zero-symmetric left near-ring, and let $d$ be a
+nonzero derivation on $N$. Let $U$ be a nonzero subset of $N$. Then $N$ is
+a commutative ring if one of the following holds: \textup{(a)} $U$ is a
+semigroup right or left ideal of $N$ and $d(U)$ is multiplicatively
+central; \textup{(b)} $U$ is a semigroup ideal of $N$, $d^{2} \neq 0$ and
+$[d(U), d(U)] = \{0\}$.
+\end{proposition}
+
+Arga\c{c} asked in 1997 when a derivation on a near-ring is a homomorphism
+on a subset \cite[p.~737]{Argac1997}. For rings, Bell and Kappe had shown
+that such a derivation
+vanishes \cite[p.~737]{Argac1997}. The same holds for near-rings
+\cite[p.~737]{Argac1997}.
+
+\begin{theorem}[{\cite[Theorem, p.~737]{Argac1997}}]\label{thm:other:argac}
+Let $N$ be a semiprime right near-ring, and let $d$ be a derivation on $N$.
+Let $A$ be a subset of $N$ such that $0 \in A$ and $A N \subseteq A$. If $d$
+acts as a homomorphism on $A$ or as an anti-homomorphism on $A$, then
+$d(A) = \{0\}$.
+\end{theorem}
+
+In a near-ring the prime ideals behind these theorems come in four
+strengths, listed by Groenewald in 1991
+\cite[Definition~1, p.~2669]{Groenewald1991}.
+
+\begin{definition}[{\cite[Definition~1, p.~2669]{Groenewald1991}}]\label{def:other:prime-ideals}
+Let $N$ be a near-ring and $P$ an ideal of $N$. Then $P$ is
+\emph{$0$-prime} if $A B \subseteq P$ implies $A \subseteq P$ or
+$B \subseteq P$ for all ideals $A, B$ of $N$; \emph{$1$-prime} if the same
+holds for all left ideals $A, B$; \emph{$2$-prime} if the same holds for
+all $N$-subgroups $A, B$; and \emph{$3$-prime} if $a N b \subseteq P$
+implies $a \in P$ or $b \in P$ for all $a, b \in N$. The near-ring $N$ is
+\emph{$\nu$-prime} ($\nu = 0, 1, 2, 3$) if the zero ideal is $\nu$-prime.
+\end{definition}
+
+The $3$-prime near-rings are the ones named 3-prime in the 1997 paper of
+Bell above \cite[p.~191]{Bell1997II}. The next section moves to
+$\Gamma$-rings, where the product itself becomes a family
+\cite[p.~2]{DeyPaulRakhimov2012}.

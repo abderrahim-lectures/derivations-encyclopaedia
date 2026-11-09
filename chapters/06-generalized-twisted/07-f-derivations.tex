@@ -1,0 +1,144 @@
+% STATUS: written 2026-10-21, recalled results as is (one environment each, source kind and whole statement)
+% Sources read: Ceven and Ozturk 2008 (pp. 701--704), Bland 2006 (pp. 379--380), Benkovic 2014 (Section 1).
+\section{$f$-derivations: three meanings of $f$ in rings, modules and triangular algebras}\label{sec:generalized-twisted:f-derivations}
+
+The previous sections twisted the product rule with a ring map. Here a second map $f$
+enters the rule, and the same name, $f$-derivation, is used for three different
+objects. We recall each one from the paper that defines it. In the first, $f$ is a
+function on a lattice. In the second, $f$ is a linear map between modules. In the
+third, $f$ is a polynomial.
+
+We start with lattices. Xin, Li and Lu introduced the notion of a derivation on a
+lattice \cite[p.~701]{CevenOzturk2008}. Çeven and Öztürk recall their definition.
+
+\begin{definition}[{\cite[Definition~6, p.~702]{CevenOzturk2008}}]\label{def:f:lattice-derivation}
+A function $d:L\to L$ on a lattice $L$ is called a derivation on $L$ if it satisfies
+the following condition
+$d(x\wedge y)=(dx\wedge y)\vee(x\wedge dy)$.
+\end{definition}
+
+Çeven and Öztürk introduce the $f$-derivation as an extension of this notion
+\cite[p.~701]{CevenOzturk2008}. Zhan and Liu had earlier introduced left-right
+$f$-derivations of BCI-algebras \cite[p.~701]{CevenOzturk2008}.
+
+\begin{definition}[{\cite[Definition~8, p.~702]{CevenOzturk2008}}]\label{def:f:lattice}
+Let $L$ be a lattice. A function $d:L\to L$ is called an $f$-derivation on $L$ if there
+exists a function $f:L\to L$ such that
+\[ d(x\wedge y)=(d(x)\wedge f(y))\vee(f(x)\wedge d(y)) \tag{2.1} \]
+for all $x,y\in L$.
+\end{definition}
+
+They note that $d$ is a derivation when $f$ is the identity function
+\cite[p.~702]{CevenOzturk2008}. They also note that $d$ can be an $f$-derivation only
+when a function $f$ satisfying (2.1) exists \cite[p.~702]{CevenOzturk2008}. The first
+consequences of the definition are as follows.
+
+\begin{proposition}[{\cite[Proposition~1, p.~703]{CevenOzturk2008}}]\label{prop:f:lattice-first}
+Let $L$ be a lattice and $d$ be an $f$-derivation on $L$. Then the following identities
+hold for all $x,y\in L$.
+\begin{enumerate}
+\item[a)] $dx\le fx$,
+\item[b)] $dx\wedge dy\le d(x\wedge y)\le dx\vee dy$,
+\item[c)] $d(x\wedge y)\le fx\vee fy$,
+\item[d)] If $L$ has a least element $0$, then $f0=0$ implies $d0=0$.
+\end{enumerate}
+\end{proposition}
+
+Part a) comes from $dx=d(x\wedge x)=dx\wedge fx$ \cite[p.~703]{CevenOzturk2008}. The same
+paper shows that distributive and modular lattices can be characterized by
+$f$-derivations under some conditions \cite[p.~701]{CevenOzturk2008}.
+
+We turn to modules. Bland works with an associative ring $R$ with identity and unitary
+right $R$-modules \cite[p.~379]{Bland2006}. Here $f$ is a linear map between modules.
+
+\begin{definition}[{\cite[p.~379]{Bland2006}}]\label{def:f:module}
+An additive mapping $\delta:R\to R$ is a derivation on $R$ if
+$\delta(ab)=\delta(a)b+a\delta(b)$ for all $a,b\in R$. If $\delta$ is a derivation on
+$R$ and $f:M\to N$ is an $R$-linear mapping, then an additive mapping $d:M\to N$ is a
+$(\delta,f)$-derivation if $d(xa)=d(x)a+f(x)\delta(a)$ for all $x\in M$ and all
+$a\in R$.
+\end{definition}
+
+Bland fixes $\delta$ and then calls a $(\delta,f)$-derivation simply an $f$-derivation
+\cite[p.~379]{Bland2006}. If $f:M\to M$, then $d:M\to M$ is an $f$-derivation on $M$,
+and if $f=\mathrm{id}_M$, then $d$ is a derivation on $M$ \cite[p.~379]{Bland2006}.
+He remarks that $f$-derivations always exist, since $f=0$ makes $d$ an $R$-linear
+mapping \cite[p.~379]{Bland2006}. His main result extends an $f$-derivation
+$d:M\to N$ uniquely to an $f_\tau$-derivation $d_\tau:Q_\tau(M)\to Q_\tau(N)$ when
+$\tau$ is a differential torsion theory \cite[p.~380]{Bland2006}.
+
+Finally we meet triangular algebras. Benkovič lets $A$ be an algebra over a commutative
+unital ring $R$ and $M$ an $A$-bimodule \cite[Section~1]{Benkovic2014}. The map $f$ is
+now a polynomial, and the product rule becomes a rule on $f$.
+
+\begin{definition}[{\cite[Section~1, (1.1) and (1.2)]{Benkovic2014}}]\label{def:f:polynomial}
+Let
+\[ f(x_1,x_2,\dots,x_n)=\sum_{\pi\in S_n}\alpha_\pi x_{\pi(1)}x_{\pi(2)}\cdots x_{\pi(n)},
+\quad \alpha_\pi\in R, \tag{1.1} \]
+be a fixed nonzero multilinear polynomial in noncommuting indeterminates $x_i$ over
+$R$, where $S_n$ denotes the symmetric group of order $n$. An $R$-linear map
+$d:A\to M$ satisfying
+\[ d(f(x_1,\dots,x_n))=\sum_{i=1}^{n}f(x_1,\dots,x_{i-1},d(x_i),x_{i+1},\dots,x_n) \tag{1.2} \]
+for all $x_1,\dots,x_n\in A$ is called an $f$-derivation.
+\end{definition}
+
+Benkovič observes that every derivation is an $f$-derivation for $f(x_1,x_2)=x_1x_2$.
+Every Jordan derivation is one for $f(x_1,x_2)=x_1\circ x_2=x_1x_2+x_2x_1$, and every
+Lie derivation is one for $f(x_1,x_2)=[x_1,x_2]=x_1x_2-x_2x_1$
+\cite[Section~1]{Benkovic2014}. In the same way, a Jordan triple derivation is an
+$f$-derivation for $f(x_1,x_2,x_3)=x_1x_2x_3+x_3x_2x_1$, and a Lie triple derivation is
+one for $f(x_1,x_2,x_3)=[[x_1,x_2],x_3]$ \cite[Section~1]{Benkovic2014}. So the
+Jordan-type and Lie-type maps of Chapters~\ref{ch:jordan-type} and~\ref{ch:lie-type}
+are special cases of this one definition.
+
+He writes $\alpha=\sum_{\pi\in S_n}\alpha_\pi$ for the sum of the coefficients of $f$.
+An element $r\in R$ is $M$-regular if $rm=0$ with $m\in M$ implies $m=0$
+\cite[Section~1]{Benkovic2014}. A triangular algebra is a unital algebra with a
+nontrivial idempotent $e$ such that $A=eAe+eAf+fAf$, where $f=1-e$ and the bimodule
+$eAf$ is faithful on both sides \cite[Section~1]{Benkovic2014}.
+
+\begin{theorem}[{\cite[Theorem~1.1]{Benkovic2014}}]\label{thm:f:triangular}
+Let $A$ be a triangular algebra and let $d:A\to A$ be an $f$-derivation, where
+$f\in R\langle x_1,x_2,\dots\rangle$ is a multilinear polynomial of degree $n\ge2$
+with $\alpha\ne0$. If $A$ is $(n-1)$-torsion free and $\alpha$ is $A$-regular, then $d$
+is a derivation.
+\end{theorem}
+
+For $\alpha=0$ the question stays open. Benkovič asks when such a map has the standard
+form $d=\delta+\gamma$, with $\delta$ a derivation and $\gamma$ a linear map into the
+center that vanishes on $f(A,\dots,A)$ \cite[Problem~1.2]{Benkovic2014}. He points to
+functional identities as the usual tool for prime rings
+\cite[Section~1]{Benkovic2014}; Chapter~\ref{ch:functional-identities} treats them.
+
+The remaining case is open, and this section states it as a problem. % claim-ok: own signpost introducing the moved problem, which carries its own citation
+
+\begin{problem}[{\cite[Problem~1.2]{Benkovic2014}}]\label{prob:open:fderiv}
+Let $A$ be a triangular algebra over a commutative ring $R$, and let $d\colon
+A\to A$ be an $f$-derivation for a multilinear polynomial $f$ of degree $n\ge2$
+whose coefficients sum to $0$.
+Under which conditions on $A$ and $f$ is $d$ of the standard form
+$d=\delta+\gamma$, where $\delta$ is a derivation and $\gamma$ is a linear map
+into the center of $A$ that vanishes on $f(A,\dots,A)$?
+\end{problem}
+
+Benkovi\v{c} proves the statement for the case where the sum of coefficients is
+not zero \cite[Theorem~1.1]{Benkovic2014} and states the remaining case as
+Problem~1.2 \cite[Problem~1.2]{Benkovic2014}. Chapter~\ref{ch:matrix-triangular}
+reads the triangular side in Section~\ref{sec:matrix-triangular:triangular}.
+
+The three definitions share the name and one idea: a map $d$ follows the product rule
+with some other map $f$ in the second slot. They differ in what $f$ is, so a result
+about one cannot be used for another. We keep the three names apart in the chapters
+that follow. Lattices continue in Chapter~\ref{ch:other-systems}, and triangular
+algebras in Chapter~\ref{ch:matrix-triangular}.
+
+Yanti and Wijayanti add the Jordan condition to the $(\delta,f)$-derivation
+and characterize the maps that satisfy it
+\cite[Abstract, p.~1]{YantiWijayanti2025}.
+
+The same idea has a two-variable form. Bahmani, Bennis, Ebrahimi Vishki and
+Fahid define an $f$-biderivation by replacing the derivation in the biderivation
+identity with $f$, show that every such map is a Jordan biderivation under their
+conditions, and prove that every Jordan biderivation of a unital algebra with an
+idempotent is a sum of a biderivation, an antibiderivation and an extremal
+biderivation \cite[Theorem~2.7]{BahmaniBennisEbrahimiFahid2021Bideriv}.

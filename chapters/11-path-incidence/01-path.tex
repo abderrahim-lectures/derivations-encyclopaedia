@@ -1,0 +1,176 @@
+% STATUS: written 2026-11-05 (Guo and Li 2014, Li and Wei 2018, Ortega 2006 read in full)
+% Sources read in full: Guo and Li 2014 (pp. 545--572); Li and Wei 2018 (pp. 79--92, sections 2 to 4);
+% Ortega 2006 (section 1, pp. 225--232).
+% Origins: path algebra and the characterization of its derivations, Guo and Li 2014
+% (definition p. 547, Theorem 2.3 p. 548, Theorem 3.2 p. 554, canonical basis Theorem 3.4 p. 555);
+% quiver with relations and one-point extension, Li and Wei 2018 (pp. 81--83, Theorem 3.4 p. 85);
+% presentation of an incidence algebra as a path algebra with relations, Ortega 2006 (p. 232).
+\section{Path algebras of quivers}\label{sec:path-incidence:path}
+
+The triangular algebra of Chapter~\ref{ch:matrix-triangular} is a path algebra.
+Take a quiver that is a line of arrows, and the algebra of its paths is the algebra
+of upper triangular matrices \cite[Example~2.1, p.~82]{LiWei2018}. A quiver keeps
+the order of the matrix algebra and allows branching \cite[p.~81]{LiWei2018}. This
+section gives the
+derivations of a path algebra, first for a plain quiver and then for a quiver with
+relations.
+
+A quiver is a directed graph with a set of vertices and a set of arrows between them
+\cite[p.~547]{GuoLi2014}. Its paths form a basis of an algebra. The product of two
+paths is their composition when the head of the first is the tail of the second, and
+zero otherwise \cite[p.~547]{GuoLi2014}.
+
+\begin{definition}[{\cite[p.~547]{GuoLi2014}}]\label{def:path:algebra}
+Let $\Gamma=(V,E,t,h)$ be a quiver with vertex set $V$, arrow set $E$, and maps
+$t,h\colon E\to V$ giving the tail and the head of an arrow. Let $P$ be the set of
+paths, a path being a sequence of arrows in which the head of each arrow is the tail
+of the next. The \emph{path algebra} is
+\begin{equation*}
+k\Gamma=\bigoplus_{p\in P}kp,\qquad
+p\cdot q=\delta_{h(p),t(q)}\,pq,
+\end{equation*}
+where $\delta_{h(p),t(q)}$ is the delta function and $pq=0$ when $h(p)\neq t(q)$.
+\end{definition}
+
+Guo and Li characterize the derivations of $k\Gamma$ by conditions on the
+coefficients \cite[p.~548]{GuoLi2014}. Write $D(p)=\sum_{q\in P}c^{p}_{q}q$ for a
+linear operator $D$, with $c^{p}_{q}\in k$ \cite[p.~548]{GuoLi2014}. Call two paths
+$p$ and $q$ parallel, written $p\parallel q$, when they have the same tail and the
+same head \cite[p.~548]{GuoLi2014}. A path is acyclic when its head differs from its
+tail, and $P_{A}$ denotes the set of acyclic paths \cite[p.~548]{GuoLi2014}.
+
+\begin{theorem}[{\cite[Theorem~2.3, pp.~548--549]{GuoLi2014}}]\label{thm:path:derivation}
+Let $\Gamma$ be a quiver and $D\colon k\Gamma\to k\Gamma$ a linear operator. Then
+$D$ is a derivation if and only if it satisfies the following conditions.
+\begin{enumerate}[label=(\alph*)]
+\item For $v\in V$,
+\begin{equation*}
+D(v)=\sum_{q\in P_{A},\,t(q)=v}c^{v}_{q}q+\sum_{q\in P_{A},\,h(q)=v}c^{v}_{q}q
+=\sum_{q\in P_{A},\,t(q)=v\ \text{or}\ h(q)=v}c^{v}_{q}q .
+\end{equation*}
+\item For $p\in P\setminus V$,
+\begin{equation*}
+D(p)=\sum_{q\in P_{A},\,h(q)=t(p)}c^{t(p)}_{q}qp
++\sum_{q\parallel p}c^{p}_{q}q
++\sum_{q\in P_{A},\,t(q)=h(p)}c^{h(p)}_{q}pq,
+\end{equation*}
+where the coefficients obey two rules.
+\begin{enumerate}[label=(\roman*)]
+\item For every $q\in P_{A}$, $c^{h(q)}_{q}+c^{t(q)}_{q}=0$.
+\item For every $p=p_{1}p_{2}$ with $p_{1},p_{2}\in P\setminus V$ and every
+$q\parallel p$,
+\begin{equation*}
+c^{p}_{q}=c^{p_{1}p_{2}}_{q}=
+\begin{cases}
+c^{p_{1}}_{qp_{1}}+c^{p_{2}}_{q_{2}},
+  & p_{2}\le_{h}q\text{ with }q=q_{1}p_{2}\text{ and }p_{1}\le_{t}q\text{ with }q=p_{1}q_{2},\\
+c^{p_{1}}_{q_{1}},
+  & p_{2}\le_{h}q\text{ with }q=q_{1}p_{2}\text{ and }q_{1}\not\le_{t}p_{1},\\
+c^{p_{2}}_{q_{2}},
+  & p_{1}\le_{t}q\text{ with }q=p_{1}q_{2}\text{ and }q_{2}\not\le_{h}p_{2},\\
+0, & p_{2}\not\le_{h}q\text{ and }p_{1}\not\le_{t}q,
+\end{cases}
+\end{equation*}
+where $p\le_{t}q$ means that $q=pr$ and $p\le_{h}q$ means that $q=rp$ for some
+path $r$.
+\end{enumerate}
+\end{enumerate}
+\end{theorem}
+
+The conditions of Theorem~\ref{thm:path:derivation} come in two families. One family
+fixes the value on a vertex by values on acyclic paths at that vertex
+\cite[p.~549]{GuoLi2014}. The other fixes the value on a longer path by the values
+on its head, its tail and its parallel paths \cite[p.~549]{GuoLi2014}. A derivation
+is therefore built from one arrow to a parallel path
+\cite[pp.~553--554]{GuoLi2014}.
+
+Fix an arrow $r\in E$ and a path $s$ parallel to $r$. Guo and Li define an operator
+$D_{r,s}$ by $D_{r,s}(p)=0$ for $\ell(p)=0$, where $\ell$ is the length, and on a path
+$p=p_{1}\tilde p$ by
+\begin{equation*}
+D_{r,s}(p)=
+\begin{cases}
+s\tilde p+p_{1}D_{r,s}(\tilde p), & p_{1}=r,\\
+p_{1}D_{r,s}(\tilde p), & p_{1}\neq r,
+\end{cases}
+\end{equation*}
+\cite[pp.~553--554]{GuoLi2014}. This operator is a derivation
+\cite[p.~554]{GuoLi2014}.
+
+\begin{theorem}[{\cite[Theorem~3.2, p.~554]{GuoLi2014}}]\label{thm:path:drs}
+For $r\in E$ and $s\parallel r$, the linear operator
+$D_{r,s}\colon k\Gamma\to k\Gamma$ defined as above is a derivation.
+\end{theorem}
+
+A quiver without arrows has no derivation but zero \cite[p.~554]{GuoLi2014}, so the
+condition on the quiver cannot be dropped.
+
+\begin{corollary}[{\cite[Corollary~3.3, p.~554]{GuoLi2014}}]\label{cor:path:existence}
+There is a nonzero derivation on the path algebra $k\Gamma$ of a quiver $\Gamma$ if
+and only if $\Gamma$ is a non-trivial quiver, that is, $\Gamma$ has at least one
+arrow. Equivalently, $\mathrm{Der}(k\Gamma)$ is a non-zero Lie algebra if and only
+if $\Gamma$ is a non-trivial quiver.
+\end{corollary}
+
+Inside the Lie algebra of derivations, the operators of Theorem~\ref{thm:path:drs}
+and the inner derivations form a basis. For a path $s$, write $D_{s}(q)=sq-qs$ for
+the inner derivation with respect to $s$ \cite[p.~555]{GuoLi2014}.
+
+\begin{theorem}[{\cite[Theorem~3.4, p.~555]{GuoLi2014}}]\label{thm:path:basis}
+Let $\Gamma$ be a quiver. A basis of the Lie algebra $\mathrm{Der}(k\Gamma)$ is
+given by the set
+\begin{equation*}
+\mathcal B:=\mathcal B_{1}\cup\mathcal B_{2},\qquad
+\mathcal B_{1}:=\{D_{s}\mid s\in P_{A}\},\quad
+\mathcal B_{2}:=\{D_{r,s}\mid r\in E,\ s\parallel r\}.
+\end{equation*}
+Thus $\mathrm{Der}(k\Gamma)=D_{1}\oplus D_{2}$, where $D_{i}$ is the $k$-linear
+space with basis $\mathcal B_{i}$ for $i=1,2$.
+\end{theorem}
+
+A relation on a quiver is a linear combination of parallel paths
+\cite[p.~81]{LiWei2018}. With a set $\rho$ of relations, the algebra
+$K(\Gamma,\rho)=K\Gamma/\langle\rho\rangle$ is a quiver with relations
+\cite[p.~81]{LiWei2018}. Every basic finite-dimensional algebra over an
+algebraically closed field has this form \cite[p.~81]{LiWei2018}.
+
+For a quiver without oriented cycles, Li and Wei remove a source, and the algebra
+becomes a triangular algebra over the part that remains
+\cite[p.~83]{LiWei2018}. Repeating the step reaches the field, and the step is
+called a one-point extension \cite[p.~83]{LiWei2018}. The step carries a statement
+about the field to every finite-dimensional path algebra without oriented cycles
+\cite[p.~85]{LiWei2018}.
+
+\begin{theorem}[{\cite[Theorem~3.4, p.~85]{LiWei2018}}]\label{thm:path:jordan}
+Let $K$ be a field with $\mathrm{Char}\,K\neq 2$ and $\Lambda=K(\Gamma,\rho)$ a
+finite-dimensional path algebra over $K$ of the quiver $(\Gamma,\rho)$ with
+relations. Then every Jordan derivation on $\Lambda$ is a derivation.
+\end{theorem}
+
+The theorem carries over to one step of that construction
+\cite[p.~86]{LiWei2018}.
+
+\begin{corollary}[{\cite[Corollary~3.6, p.~86]{LiWei2018}}]\label{cor:path:one-point}
+Let $K$ be a field and $A$ a finite-dimensional $K$-algebra with every Jordan
+derivation being a derivation. Let $\Lambda$ be a one-point extension of $A$ by the
+bimodule $_{A}M_{K}$. Then every Jordan derivation of $\Lambda$ is a derivation.
+\end{corollary}
+
+A local derivation of a path algebra turns out to need no such freedom. Adrabi,
+Bennis and Fahid prove that every local derivation of a path algebra is a
+derivation, and the same for local generalized derivations
+\cite[Theorem~3, p.~391]{AdrabiBennisFahid2023Local}. Their theorem settles the
+Kadison question of Section~\ref{sec:local-characterizations:local} for this
+whole family at once. The Lie generalized derivations of a bound quiver algebra
+are treated in \cite[p.~1950]{AdrabiBennisFahid2021Lie}, and the generalized
+$\sigma$-derivations of that setting have a categorical description in
+\cite[p.~4754]{AdrabiBennisFahid2023Categorical}.
+
+Ortega presents the incidence algebra of a poset as a path algebra with relations
+\cite[p.~232]{Ortega2006}. Take the poset as the vertex set and put one arrow from $v$ to $w$ when $v<w$ and no
+element lies between them \cite[p.~232]{Ortega2006}. The path algebra modulo the
+differences of parallel paths is the incidence algebra of the poset
+\cite[p.~232]{Ortega2006}. The ideal of
+differences vanishes exactly when the poset is a tree, and then the incidence algebra
+is hereditary \cite[p.~232]{Ortega2006}. Incidence algebras deserve their own
+treatment, and Section~\ref{sec:path-incidence:incidence} gives it.

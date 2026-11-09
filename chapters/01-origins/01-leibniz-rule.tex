@@ -1,0 +1,86 @@
+% STATUS: written 2026-11-06 (English gate clean; sources read in full as recorded below).
+% Sources read in full: Leibniz 1684 (Acta Eruditorum, October 1684, 467--473; scan archive.org s1id13206500, rules of the calculus on p. 467 checked in the OCR text), Jacobson 1937 (Amer. J. Math. 59, 205--220; the definition (2c) on p. 206).
+\section[The Leibniz rule: Leibniz 1684][The Leibniz rule]{The Leibniz rule: Leibniz 1684}\label{sec:origins:leibniz-rule}
+
+Every derivation in this book satisfies the same identity:
+\[
+  D(xy) = D(x)\,y + x\,D(y).
+\]
+This rule first appears in print in a paper of Leibniz of October
+1684~\cite{Leibniz1684}. The paper is written in Latin. It is the paper that
+introduced the differential calculus.
+
+Why did Leibniz need such a rule? The title of the paper names the problem. Leibniz wants a method for maxima,
+minima and tangents \translated{which is not stopped by fractions or by
+irrational quantities}{quae nec fractas nec irrationales quantitates
+moratur}{Latin}. The
+methods of his time first removed all square roots from an equation. Leibniz
+describes this work as follows:
+\begin{originalquote}{Latin}{calculo praestare sublatis irrationalibus, taediosissimae et aliquando insuperabilis operae}
+to carry out by calculation after removing the irrationals, a most tedious
+and sometimes insuperable labour
+\end{originalquote}
+\noindent\cite[p.~472]{Leibniz1684}. His answer is a set of rules. Each rule
+acts on one symbol of a formula at a time. So a square root or a fraction
+needs no preparation. He tests the rules on the law of refraction, which he
+finds as a minimum. Then he remarks~\cite[p.~472]{Leibniz1684}:
+\begin{originalquote}{Latin}{Cum alii doctissimi Viri multis ambagibus venati sint, quae hujus calculi peritus tribus lineis imposterum praestabit.}
+Whereas other most learned men have hunted with many detours for what one
+skilled in this calculus will henceforth achieve in three lines.
+\end{originalquote}
+\noindent The product rule is one of these rules. It gives the differential of
+a product from the differentials of its factors. Nothing has to be expanded.
+
+To define his differences, Leibniz draws a curve above a horizontal axis. A point $X$ on the axis has
+abscissa $x$, and the curve has height $v$ above it. The tangent to the curve
+at that point meets the axis at a point $B$. The segment $BX$ is called the
+\emph{subtangent} \cite[p.~467]{Leibniz1684}. Leibniz chooses any segment $dx$. Then he defines $dv$ by
+the proportion
+\[
+  dv : dx = v : BX .
+\]
+He calls $dv$ the \emph{differentia}, that is, the difference of $v$ \cite[p.~467]{Leibniz1684}.
+Figure~\ref{fig:origins:subtangent} shows the construction.
+
+\hbfigure{01-origins/leibniz-subtangent}{The construction of Leibniz \cite[p.~467]{Leibniz1684}. The tangent at $V$ meets the axis at $B$, and $BX$ is the subtangent. The difference $dv$ satisfies $dv : dx = v : BX$.}{fig:origins:subtangent}
+
+With this construction, Leibniz states his rules. The first two rules say that constants have zero difference and that $d$ is
+linear: \translated{Let $a$ be a given constant quantity; then $da$ will be
+equal to $0$, and $d\,ax$ will be equal to $a\,dx$}{Sit $a$ quantitas data
+constans, erit $da$ aequalis $0$, \& $d\,ax$ erit aequ.\ $a\,dx$}{Latin}. The
+difference of a sum is the sum of the differences. The third rule is the
+product rule: \translated{Multiplication: $d\,xv$ equals $x\,dv +
+v\,dx$}{Multiplicatio, $d\,xv$ aequ.\ $x\,dv + v\,dx$}{Latin}%
+~\cite[p.~467]{Leibniz1684}. The quotient rule follows on the same page.
+Figure~\ref{fig:origins:product-area} gives the usual picture of the product
+rule.
+
+\hbfigure{01-origins/product-rule-area}{The product rule read as area. When $x$ and $v$ grow by $dx$ and $dv$, the rectangle $xv$ grows by $x\,dv + v\,dx$. The small corner $dx\,dv$ is of higher order.}{fig:origins:product-area}
+
+Three features of this passage return in every later definition. First, the
+rules are stated for symbols, and no limit appears. Leibniz says that $dx$ is
+treated in the calculus like $y$ and $dy$, or like any other letter with its
+differential~\cite[p.~467]{Leibniz1684}.
+
+Second, constants are exactly the quantities that $d$ sends to zero. Dedekind
+and Weber stress the same property two centuries later
+(Section~\ref{sec:origins:function-fields}). Third, the product rule is the
+only rule that links $d$ to multiplication. So a linear map with this rule
+behaves like a derivative in every computation made of sums and products.
+
+Today the third feature is the definition itself. Let $k$ be a commutative ring and $A$ a $k$-algebra. A \emph{derivation} of
+$A$ is a $k$-linear map $D\colon A \to A$ with $D(xy) = D(x)y + xD(y)$ for all
+$x, y \in A$ \cite[p.~206]{Jacobson1937}. If $A$ has a unit, then $D(1) = D(1\cdot 1) = 2D(1)$, so
+$D(1) = 0$. By linearity, $D$ vanishes on the image of $k$. Induction on the
+product rule gives the general Leibniz formula:
+\[
+  D^n(xy) = \sum_{i=0}^{n} \binom{n}{i} D^i(x)\, D^{n-i}(y).
+\]
+Jacobson uses this formula in 1937. It shows that in characteristic $p$ the
+$p$-th power of a derivation is again a derivation
+(Section~\ref{sec:origins:lie-theory}). Chapter~\ref{ch:basic-theory}
+develops the definition and its first consequences.
+
+For two centuries after Leibniz, the product rule stayed a rule of analysis.
+It entered algebra through the theory of algebraic functions, as the next
+section shows.

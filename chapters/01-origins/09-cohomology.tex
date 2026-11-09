@@ -1,0 +1,80 @@
+% STATUS: written 2026-11-06 (English gate clean; sources read in full as recorded below).
+% Sources read in full: Hochschild 1945 (Ann. of Math. 46, 58--67), Hochschild 1942 (Amer. J. Math. 64, 677--694).
+\section[Derivations as one-cocycles: Hochschild 1945][Derivations as one-cocycles]{Derivations as one-cocycles: Hochschild 1945}\label{sec:origins:cohomology}
+
+We now come to the end of the story. In 1945 Hochschild placed derivations inside a cohomology theory. His paper
+is \emph{On the cohomology groups of an associative
+algebra}~\cite{Hochschild1945}.
+
+Hochschild states his aim at once. The paper is
+``concerned primarily with the connections between the structure of an
+algebra and the vanishing of its cohomology groups''~\cite[p.~58]{Hochschild1945}.
+His model is a pair of results on Lie algebras, the lemmas of Whitehead. The
+first lemma is about derivations of a semisimple Lie algebra into a module.
+Hochschild looks for the same kind of result for associative algebras. He
+finds the answer in the separable algebras. These are exactly the algebras
+on which every derivation is inner. He also notes a second link. The
+two-dimensional groups describe the extensions of $A$. These are the
+algebras that have $A$ as a homomorphic image~\cite[p.~58]{Hochschild1945}.
+
+His definitions are as follows. Let $A$ be an associative algebra over a field.
+Let $M$ be an $A$-bimodule, that is, a two-sided module. An $m$-cochain is a
+linear map from the $m$-fold tensor power of $A$ into
+$M$~\cite[\S 1, p.~59]{Hochschild1945}. Hochschild defines a coboundary
+operator $\delta$. It sends $m$-cochains to
+$(m+1)$-cochains~\cite[\S 2, Definition~2.1, p.~59]{Hochschild1945}. He
+credits the coboundary to an unpublished definition of Eilenberg and
+Mac~Lane. He notes that dimensions one and two had appeared before. They
+appear in the first and second lemmas of
+Whitehead~\cite[p.~58]{Hochschild1945}.
+
+In the lowest dimensions the definitions are short. A $0$-cochain is an
+element $u \in M$, and
+\[
+(\delta u)(a) = a\cdot u - u\cdot a .
+\]
+For a $1$-cochain $f$,
+\[
+(\delta f)(a_1, a_2) = a_1 \cdot f(a_2) - f(a_1 a_2) + f(a_1)\cdot a_2
+\]
+\cite[p.~60]{Hochschild1945}. A cochain $f$ is a cocycle if $\delta f = 0$.
+It is a coboundary if $f = \delta g$ for some cochain $g$. The
+$m$-dimensional cohomology group $H^m(A,M)$ is the group of $m$-cocycles
+modulo the coboundaries~\cite[p.~60, Definitions~2.2, 2.3]{Hochschild1945}.
+
+In modern language, a $1$-cocycle is a linear map
+$f\colon A \to M$ with $f(a_1a_2) = a_1 f(a_2) + f(a_1) a_2$. So a
+$1$-cocycle is a derivation of $A$ into $M$. A $1$-coboundary is a map
+$a \mapsto a u - u a$. So a $1$-coboundary is an inner derivation. Hence
+$H^1(A,M)$ is the group of derivations modulo the inner ones.
+
+With these definitions, Hochschild reaches his main results. He says that the theory is ``in a sense''
+``degenerate''. For every $M$ there is another $A$-bimodule, written $(A:M)$.
+For $m \ge 2$ it gives
+$H^m(A,M) \cong H^{m-1}(A, (A:M))$~\cite[Theorem~3.1, p.~60]{Hochschild1945}.
+So the groups of dimension one already determine all the others. In other
+words, derivations control the whole theory.
+
+\begin{theorem}[{\cite[p.~58 and \S 4]{Hochschild1945}}]\label{thm:origins:hochschild-separable}
+An algebra is separable if and only if all its cohomology groups vanish.
+Equivalently, it is separable if and only if every derivation of it into
+every two-sided module is inner.
+\end{theorem}
+
+This theorem extends an earlier result of Hochschild himself. The earlier
+result needed a non-modular ground field. A footnote places it in
+Theorems~3.2 and~3.4 of his paper on semisimple algebras and generalized
+derivations~\cite[p.~58, footnote~3]{Hochschild1945}.
+
+That earlier paper begins with this sentence: ``Roughly speaking, a derivation of an algebra is
+the infinitesimal operation corresponding to an
+automorphism''~\cite[p.~677]{Hochschild1942}. The definition there is the one
+of Jacobson from 1937. The first example is $\exp(tD)$, which acts on
+polynomials as a one-parameter group of automorphisms.
+
+So the lines of this chapter meet here. Leibniz gave the product rule.
+Dedekind, Weber and Steinitz used it inside fields. Born, Jordan, Dirac, Ore
+and Jacobson carried it to noncommutative algebras. On the side of groups, the
+same objects are the crossed homomorphisms of
+Section~\ref{sec:origins:crossed-homomorphisms}. In the work of Hochschild
+all of these become one notion. The rest of the book starts from here.

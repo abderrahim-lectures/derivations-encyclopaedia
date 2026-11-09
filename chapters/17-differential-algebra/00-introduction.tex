@@ -1,0 +1,58 @@
+% Chapter introduction: why the topic arose, who first asked, what it answers.
+% STATUS: written 2026-11-05
+% Sources read in full: Raudenbush 1934 (Trans. AMS 36, 361--368);
+% Kolchin 1948 (Ann. of Math. 49, 1--42); Wood 1973 (Proc. AMS 40,
+% 577--584); Hubbard-Lundell 2011; Cassidy-Singer 2007; Hardouin-Singer
+% 2008; Mikhalev-Pankrat'ev 1989; Wu 1987 (1989); Pillay-Ziegler 2003.
+
+Chapter~\ref{ch:origins} ended with the school of Ritt. Ritt opened the
+algebraic study of differential equations in the 1920s. He asked the
+question Galois had asked for polynomial equations: given a differential
+equation, what abstract object controls its symmetries and its solvability
+in closed form. This chapter reports the two answers his school and the
+next generations gave.
+
+Section~\ref{sec:differential-algebra:ritt-kolchin} tells the first part,
+the Ritt--Kolchin theory of differential ideals. Ritt proved that every
+differential algebraic variety is a finite union of irreducible ones.
+Raudenbush rebuilt the theory as an ideal theory of perfect differential
+ideals, and proved that any such ideal is an intersection of primes
+\cite[p.~365]{Raudenbush1934}. Later authors made the method of Ritt
+constructive with characteristic sets. Section~4 of
+\cite{HubbardLundell2011} develops the modern textbook picture.
+That section also states the axioms of Kolchin for a differential field
+(Section~\ref{sec:differential-algebra:differential-equations}). It then
+reports the reading of an input--output system as a differential field
+extension (Section~\ref{sec:differential-algebra:control}).
+
+Section~\ref{sec:differential-algebra:differential-galois} tells the second
+part, the Picard--Vessiot theory of 1948. Kolchin attached an algebraic
+matric group to a homogeneous linear differential equation over a
+differential field. He proved that the intermediate differential fields of
+the Picard--Vessiot extension correspond bijectively to the Zariski-closed
+subgroups of this group \cite[p.~32]{Kolchin1948PicardVessiot}. The
+example of the figure below already displays the mechanism. The same theory
+runs with an iterative derivation in place of a derivation. Michel and
+Srinivasan extend it to a central simple algebra over a field of positive
+characteristic \cite[Theorem~2.2, p.~3]{MichelSrinivasan2026}.
+
+Section~\ref{sec:differential-algebra:model-theory} reports the
+model-theory side. Robinson and Blum had axiomatized the differentially
+closed fields of characteristic zero. Wood proved in 1973 that the theory
+of differential fields of positive characteristic also has a model
+completion, and that this theory eliminates quantifiers
+\cite[p.~582]{Wood1973ModelTheory}. A later section of this chapter reports a
+different kind of model theory: the automorphism of a difference field
+replaces the derivation, and the same algebraic argument returns
+\cite[p.~579]{PillayZiegler2003}. Alongside it, Section~\ref{sec:differential-algebra:transcendence}
+states the Ax--Schanuel inequality for the exponential differential equation
+on an algebraic variety \cite[Theorem~2.2, p.~6]{Aslanyan2018}.
+
+Section~\ref{sec:differential-algebra:difference} develops that difference
+side. Replacing the derivation by an automorphism gives the difference
+algebra of Ritt and Cohn and the $\sigma\partial$-theory of Hardouin and
+Singer. It runs in parallel to the differential theory
+\cite[p.~912]{MikhalevPankratev1989}. The two theories meet in a single
+Galois correspondence \cite[Theorem~2.6, p.~6]{HardouinSinger2008}.
+
+\hbfigure{17-differential-algebra/picard-vessiot}{The simplest Picard--Vessiot extension: adjoining a solution of $y'=y$ to $\mathbb{C}(x)$. Its differential Galois group is the multiplicative group.}{fig:diff:pv}

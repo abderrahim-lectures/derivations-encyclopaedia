@@ -1,0 +1,262 @@
+% STATUS: written 2026-11-05 (Suh 1969 pp. 255--258 read in full; Nowicki 1983
+% pp. 281--297 read at the introduction, Definition 2.2, Theorem 3.7 and
+% Corollary 4.4; Coelho--Milies 1993 pp. 263--267 read in full; Jondrup 1995
+% pp. 205--218 read at the introduction and Theorem 2; Alizadeh 2009 pp. 574--578
+% read in full.)
+% STATUS: extended 2026-11-06 (Ghosh and Prakash 2018 read in full)
+% STATUS: extended 2026-11-07 (Xu and Zhang 2010, Huang--Li--Qian 2018,
+% Ayupov--Arzikulov 2013 and Ou--Wang--Yao 2007 read in full)
+% Sources: Ghosh and Prakash 2018 (pp. 1--5, 8); Xu and Zhang 2010
+% (pp. 753--759); Huang, Li and Qian 2018 (pp. 1--4); Ayupov and Arzikulov
+% 2013 (pp. 1--2, 8); Ou, Wang and Yao 2007 (pp. 378--381).
+\section{Full matrix algebras}\label{sec:matrix-triangular:matrix}
+
+The chapter opens where the literature of the chapter opens, with an algebra that is built
+from matrices and whose structure was determined by elementary entry-by-entry
+work \cite[p.~255]{Suh1969}. Suh takes a finite-dimensional Lie algebra $L$ over a field of
+characteristic not $2$, with an associative symmetric bilinear form $(a,b)$ and
+the property $[a[bc]]=(a,c)b-(a,b)c$ \cite[p.~255]{Suh1969}. The set of $2\times2$
+vector matrices
+\[
+\begin{pmatrix} \alpha & a \\ b & \beta\end{pmatrix},
+\qquad \alpha,\beta\in\Phi,\ a,b\in L,
+\]
+with the multiplication displayed on the first page of the paper, is a flexible
+algebra over $\Phi$ \cite[p.~255]{Suh1969}. Suh asks which alternative algebras
+arise this way and answers completely \cite[p.~255]{Suh1969}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~257]{Suh1969}}]\label{thm:matrix:suh}
+Let $L$ be a finite dimensional Lie algebra over a field $\Phi$ of
+characteristic not $2$, equipped with an associative symmetric bilinear form
+$(a,b)$ and having the property $[a[bc]]=(a,c)b-(a,b)c$. If $(a,b)$ is
+nondegenerate, then the algebra $\mathfrak{A}$ built from $L$ is the split
+Cayley algebra or a quaternion algebra.
+\end{theorem}
+
+Suh adds that a nondegenerate form forces $L$ to be simple of dimension three
+or one \cite[Corollary, p.~257]{Suh1969}. For a form that is degenerate the
+algebra splits as the direct sum of its radical and a subalgebra that is
+quaternion or two-dimensional separable \cite[p.~255]{Suh1969}. The lesson
+carries over to the derivation question: a matrix shape turns one problem about
+a large algebra into several problems about its entries \cite[p.~255]{Suh1969}.
+
+The same entry-by-entry method settles derivations of matrix rings
+\cite[p.~263]{CoelhoMilies1993}. Take a ring
+$R$ with identity and the ring $T_n(R)$ of upper triangular $n\times n$ matrices
+over $R$ \cite[p.~263]{CoelhoMilies1993}. Coelho and Milies describe every
+derivation of $T_n(R)$ under that one hypothesis
+\cite[p.~263]{CoelhoMilies1993}.
+
+\begin{theorem}[{\cite[p.~263]{CoelhoMilies1993}}]\label{thm:matrix:coelho}
+Let $R$ be a ring with unity and let $d\colon T_n(R)\to T_n(R)$ be a
+derivation. Then there exists a derivation $\delta\colon R\to R$ and a matrix
+$A\in T_n(R)$ such that $d=\overline{\delta}+d_A$.
+\end{theorem}
+
+Here $\overline{\delta}$ sends $(x_{ij})$ to $(\delta(x_{ij}))$, and $d_A$ is
+the inner derivation $X\mapsto AX-XA$ \cite[p.~263]{CoelhoMilies1993}. The
+authors compute $A$ from the values of $d$ on the matrix units and then recover
+$\delta$ from $d$, so the description is effective
+\cite[p.~264]{CoelhoMilies1993}.
+
+\begin{proposition}[{\cite[p.~266]{CoelhoMilies1993}}]\label{prop:matrix:coelho-unique}
+Let $d\colon T_n(R)\to T_n(R)$ be a derivation, and let $A,\delta$ be as in
+Theorem~\ref{thm:matrix:coelho}. If $A'\in T_n(R)$ and
+$\delta'\colon R\to R$ are such that $d=d_{A'}+\overline{\delta'}$, then there
+exists an element $a\in R$ such that $\delta'=\delta-\delta_a$ and
+$A'=A+aI$.
+\end{proposition}
+
+Jøndrup re-proves the same description for $M_n(A)$ and $T_n(A)$ with a short
+induction, and adds the corresponding automorphism theorems
+\cite[p.~205]{Jondrup1995}.
+
+\begin{theorem}[{\cite[Theorem~2, p.~209]{Jondrup1995}}]\label{thm:matrix:jondrup}
+Let $A$ be a $C$-algebra. Every $C$-derivation of $\operatorname{Mat}_n(A)$ or
+$T_n(A)$ is the sum of an inner derivation and a derivation induced from a
+$C$-derivation of $A$.
+\end{theorem}
+
+The proof reduces to the case where the derivation vanishes on $e_{11}$ and on
+every element of $f\operatorname{Mat}_n(A)f$, and shows that such a derivation is
+inner \cite[p.~209]{Jondrup1995}. The reduction uses only the idempotents
+$e_{ii}$, so no hypothesis on $A$ beyond the $C$-algebra structure is needed.
+
+Nowicki asks a finer question \cite[p.~281]{Nowicki1983}. Fix a reflexive and transitive relation $\rho$ on
+$\{1,\dots,n\}$ and let $P$ be the set of matrices in $M_n(R)$ whose $(i,j)$
+entry vanishes whenever $(i,j)\notin\rho$ \cite[p.~281]{Nowicki1983}. This $P$
+is a subring of $M_n(R)$, called a special subring
+\cite[p.~281]{Nowicki1983}. An $R$-derivation is a derivation of $P$ that
+vanishes on the scalar matrices \cite[p.~284]{Nowicki1983}. Nowicki describes
+all of them \cite[p.~287]{Nowicki1983}.
+
+\begin{theorem}[{\cite[Theorem~3.7, p.~287]{Nowicki1983}}]\label{thm:matrix:nowicki}
+Let $P$ be a special subring of $M_n(R)$ with the relation $\rho$. Every
+derivation $d$ of $P$ has a unique representation
+$d=[A,-]+\Delta_f+\Theta_\delta$, where $A$ is a matrix in $P$ with
+$A_{pp}=0$ for $p=1,\dots,n$, $\delta=\{\delta_t\colon t\in T_\rho\}$ is a set of
+derivations of $R$, and $f\colon\rho\to R$ is a quasi-trivial transitive
+mapping.
+\end{theorem}
+
+The three pieces have different jobs \cite[p.~287]{Nowicki1983}. The commutator
+$[A,-]$ is inner \cite[p.~287]{Nowicki1983}. The term $\Delta_f$ moves each entry
+by the value of the transitive mapping $f$ \cite[p.~287]{Nowicki1983}. The term
+$\Theta_\delta$ applies a derivation of $R$ to the entries, one derivation for
+each equivalence class of $\rho$ \cite[p.~287]{Nowicki1983}. The question of
+when every derivation is inner then becomes a question about $\rho$
+\cite[p.~289]{Nowicki1983}.
+
+\begin{corollary}[{\cite[Corollary~4.4, p.~289]{Nowicki1983}}]\label{cor:matrix:nowicki-inner}
+The following conditions are equivalent: every $R$-derivation of $P$ is inner,
+and the relation $\rho$ is regular over $Z(R)$.
+\end{corollary}
+
+Regularity of $\rho$ over an abelian group $G$ means that every transitive
+mapping from $\rho$ to $G$ is trivial \cite[Definition~2.2, p.~283]{Nowicki1983}.
+For a relation that is not regular the term $\Delta_f$ survives, and a proper
+derivation exists \cite[p.~289]{Nowicki1983}. The special subrings therefore
+separate the inner derivations from the outer ones by a property of the index
+relation alone \cite[p.~289]{Nowicki1983}.
+
+The last question for full matrix algebras is the Jordan one
+\cite[p.~574]{Alizadeh2009}. Jacobson and
+Rickart showed that a full matrix ring over a $2$-torsion free unital ring has
+no proper Jordan derivation, through their theorems on Jordan homomorphisms
+\cite[p.~574]{Alizadeh2009}. Alizadeh gives a direct proof for matrices over a
+ring, with values in a bimodule.
+
+\begin{theorem}[{\cite[Theorem~3.1, p.~575]{Alizadeh2009}}]\label{thm:matrix:alizadeh}
+Let $A$ be a unital associative ring and $M$ a $2$-torsion free $A$-bimodule.
+Every Jordan derivation from $M_n(A)$ into $M_n(M)$ is a derivation.
+\end{theorem}
+
+The proof writes $D$ as a family of maps $D_{ijkl}(a)=[D(a\otimes E_{ij})]_{kl}$
+from $A$ to $M$ and checks the Jordan law on each family
+\cite[p.~575]{Alizadeh2009}. Alizadeh uses no Jordan homomorphism, which is why his proof
+extends the classical result to values in a module \cite[p.~575]{Alizadeh2009}.
+
+The torsion hypothesis can be dropped for the full matrix algebra over a
+commutative ring \cite[p.~2]{GhoshPrakash2018}. Ghosh and Prakash prove the
+Jordan statement without it, and add the inner form of the derivations
+\cite[Theorem~3.2, p.~8]{GhoshPrakash2018}.
+
+\begin{theorem}[{\cite[Theorem~3.1, p.~5]{GhoshPrakash2018}}]\label{thm:matrix:ghosh-jordan}
+Let $C$ be a commutative ring with unity and $M_n(C)$ the full matrix algebra
+over $C$, with $n\geq2$. Then every Jordan derivation of $M_n(C)$ into itself
+is a derivation.
+\end{theorem}
+
+The same two authors then turn from the Jordan law to the derivations
+themselves \cite[p.~5]{GhoshPrakash2018}.
+
+\begin{theorem}[{\cite[Theorem~3.2, p.~8]{GhoshPrakash2018}}]\label{thm:matrix:ghosh-inner}
+Let $C$ be a commutative ring with unity and $M_n(C)$ the algebra of all
+$n\times n$ matrices over $C$, with $n\geq2$. Then every derivation of $M_n(C)$
+is an inner derivation.
+\end{theorem}
+
+The upper triangular matrix algebra over the same ring behaves in the same way
+\cite[Theorem~2.1 and Theorem~2.2, pp.~3 and~5]{GhoshPrakash2018}. The proof of
+the Jordan statement writes the image of a matrix unit in the matrix units and
+compares coefficients \cite[pp.~5--8]{GhoshPrakash2018}.
+
+A ladder matrix keeps the block shape of an upper triangular matrix and opens
+some of the blocks on the diagonal \cite[p.~1]{GhimireHuang2015}. Fix a
+field of characteristic not $2$ and a ladder $L$ whose blocks dominate the
+diagonal \cite[Definition~2.2, p.~2]{GhimireHuang2015}. The matrices that
+live on $L$ form a Lie algebra under the commutator
+\cite[p.~1]{GhimireHuang2015}. Ghimire and Huang describe its derivations
+as a direct sum of two ideals \cite[Theorem~3.1, p.~7]{GhimireHuang2015}.
+The first ideal consists of the adjoint action of the block upper triangular
+matrices \cite[p.~7]{GhimireHuang2015}. The second consists of the linear maps from $M_L/[M_L,M_L]$ to the
+centre \cite[p.~7]{GhimireHuang2015}. In the simplest case every
+derivation is an adjoint action plus a sum of traces of the diagonal blocks
+\cite[p.~7]{GhimireHuang2015}. When the characteristic is not $2$ or $3$
+and the ladder is strongly dominant, every derivation of the commutator algebra
+extends to the whole algebra \cite[Theorem~5.3 and Corollary~5.4, p.~18]{GhimireHuang2015}.
+So the entry-by-entry method of this section reaches a family of Lie algebras
+as well \cite[p.~1]{GhimireHuang2015}.
+
+The strictly upper triangular matrices form a nilpotent Lie algebra, and its
+derivations have a complete description with no hypothesis on the ring
+\cite[p.~378]{OuWangYao2007}. Let $R$ be a commutative ring with identity and
+let $N(n,R)$ be the Lie algebra of strictly upper triangular $n\times n$
+matrices over $R$ \cite[p.~378]{OuWangYao2007}. Ou, Wang and Yao build five
+families of derivations: the inner ones, the diagonal ones, the central ones,
+and two families of extremal ones \cite[pp.~379--380]{OuWangYao2007}. The
+diagonal family uses a diagonal matrix, and the central family uses a vector
+of $n-3$ ring elements \cite[pp.~379--380]{OuWangYao2007}.
+
+\begin{theorem}[{\cite[Theorem~3.2, pp.~380--381]{OuWangYao2007}}]\label{thm:matrix:strict-upper}
+Let $R$ be a commutative ring with identity and let $n>2$.
+\begin{enumerate}
+\item If $n\geq4$, every derivation $\varphi$ of $N(n,R)$ is uniquely
+\[
+\varphi=\operatorname{ad}x+\eta_y+\mu_c+\rho^{(12)}_{r,s}+\rho^{(n-1,n)}_{p,q},
+\]
+where $x\in N(n,R)$, $y\in D(n,R)$, $c\in R^{n-3}$ and $r,s,p,q\in R$ satisfy
+$2r=2p=0$.
+\item If $n=3$, every derivation $\varphi$ of $N(n,R)$ is uniquely
+$\varphi=\operatorname{ad}x+\eta_y+\theta^{(12)}_r+\theta^{(23)}_s$ with
+$x\in N(n,R)$, $y\in D(n,R)$ and $r,s\in R$.
+\end{enumerate}
+\end{theorem}
+
+Here $\eta_y$ is the adjoint action of a diagonal matrix
+\cite[p.~379]{OuWangYao2007}. The maps $\rho$ and $\theta$ are the extremal
+derivations, and they exist only in the dimensions shown
+\cite[pp.~379--380]{OuWangYao2007}.
+
+A left derivation changes the Leibniz rule in a different direction. An additive
+map $\mu$ from a ring $R$ into a left $R$-module $V$ is a module left derivation
+when $\mu(xy)=x\mu(y)+y\mu(x)$ \cite[p.~753]{XuZhang2010Left}. A module Jordan
+left derivation satisfies the weaker law $\mu(x^{2})=2x\mu(x)$
+\cite[p.~754]{XuZhang2010Left}. Xu and Zhang settle both questions for full
+matrix rings \cite[pp.~755--757]{XuZhang2010Left}.
+
+\begin{proposition}[{\cite[Proposition~2.1, p.~755]{XuZhang2010Left}}]\label{prop:matrix:left-zero}
+For $n\geq2$, a module left derivation $\mu\colon M_n(R)\to M_n(V)$ must be
+zero.
+\end{proposition}
+
+The Jordan law gives a nonzero answer on the same ring, and the trace controls
+it.
+
+\begin{theorem}[{\cite[Theorem~2.6, pp.~756--757]{XuZhang2010Left}}]\label{thm:matrix:jordan-left}
+For $n\geq2$, a map $\mu\colon M_n(R)\to M_n(V)$ is a module Jordan left
+derivation if and only if there are strong module Jordan left derivations
+$\mu_{ij}\colon R\to V$ with $\mu(A)=(\mu_{ij}(\operatorname{tr}A))$ for every
+$A\in M_n(R)$. In particular, the only such map is zero when $V$ is $2$-torsion
+free.
+\end{theorem}
+
+A module Jordan left derivation is strong when $\mu(x^{2})=2\mu(x)=0$ for every
+$x$ \cite[p.~754]{XuZhang2010Left}. So the trace gives the argument of each
+entry map, and the entries only distribute the values
+\cite[pp.~756--757]{XuZhang2010Left}.
+
+The question also has a nonlinear form. A 2-local derivation matches its value at
+any two points by one derivation, and it need not be additive
+\cite[p.~1]{AyupovArzikulov2013}. Ayupov and Arzikulov take inner witnesses on
+a matrix ring over a commutative ring
+\cite[Theorem~2.1, p.~2]{AyupovArzikulov2013}.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~2]{AyupovArzikulov2013}}]\label{thm:matrix:two-local-inner}
+Let $\Re$ be a commutative associative ring with identity and let $M_n(\Re)$ be
+the matrix ring of $n\times n$ matrices over $\Re$, with $n>1$. Then every inner
+2-local derivation on $M_n(\Re)$ is an inner derivation.
+\end{theorem}
+
+The paper also shows that every derivation of an associative ring extends to a
+derivation of its matrix ring \cite[p.~1]{AyupovArzikulov2013}.
+
+Full matrix algebras are the case where the two algebras of a triangular algebra
+coincide in size and the bimodule fills the whole off-diagonal block
+\cite[p.~119]{Cheung2001}. Section~\ref{sec:matrix-triangular:triangular}
+keeps the block shape and sets part of it to zero.
+
+Ghimire and Huang compute the derivations of the Lie algebra of dominant upper
+triangular ladder matrices.
+That family sits between the strictly upper triangular and the full matrix
+algebra \cite[Abstract, p.~1]{GhimireHuang2015}.

@@ -1,0 +1,158 @@
+% Encyclopaedia of Derivation-like Maps: book style.
+% The one place for layout, fonts, headings, theorem styles and notation.
+% Loaded by derivations-encyclopaedia.tex and by every single-chapter build
+% (tools/scripts/encyclopaedia/build-chapter.sh), so a chapter looks the same alone
+% and in the book.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{style/encyclopaedia}[2026/10/01 v0.2 Encyclopaedia of Derivation-like Maps]
+
+% ---- encoding and fonts ----------------------------------------------------
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
+\RequirePackage[final]{microtype}
+
+% ---- page layout (memoir) --------------------------------------------------
+% B5-like trim, 170 x 240 mm, a common size for mathematics encyclopaedias.
+\setstocksize{240mm}{170mm}
+\settrimmedsize{\stockheight}{\stockwidth}{*}
+\settypeblocksize{190mm}{125mm}{*}
+\setlrmargins{*}{*}{1.3}
+\setulmargins{24mm}{*}{*}
+\setheadfoot{\onelineskip}{2\onelineskip}
+\setheaderspaces{*}{2\onelineskip}{*}
+\checkandfixthelayout
+
+% ---- chapter, section and page styles --------------------------------------
+\chapterstyle{madsen}
+\setsecheadstyle{\Large\bfseries\raggedright}
+\setsubsecheadstyle{\large\bfseries\raggedright}
+\makepagestyle{encyclopaedia}
+\makeevenhead{encyclopaedia}{\small\thepage}{}{\small\itshape\leftmark}
+\makeoddhead{encyclopaedia}{\small\itshape\rightmark}{}{\small\thepage}
+\makeheadrule{encyclopaedia}{\textwidth}{0.3pt}
+\makepsmarks{encyclopaedia}{%
+  \createmark{chapter}{left}{shownumber}{\chaptername\ }{.\ }
+  \createmark{section}{right}{shownumber}{}{.\ }}
+\pagestyle{encyclopaedia}
+\aliaspagestyle{chapter}{plain}
+\setsecnumdepth{subsection}
+\maxtocdepth{section}
+
+% ---- mathematics -----------------------------------------------------------
+\RequirePackage{amsmath,amssymb,mathtools}
+\RequirePackage{amsthm}
+
+% ---- tables, figures, colour -----------------------------------------------
+\RequirePackage{booktabs,longtable}
+\RequirePackage{graphicx}
+\graphicspath{{figures/}}
+\RequirePackage{xcolor}
+\definecolor{hbblue}{RGB}{31,58,96}
+\definecolor{hbgold}{RGB}{176,141,62}
+% Cover palette: warm paper, deep indigo ink, one terracotta accent.
+\definecolor{covercream}{RGB}{247,243,234}
+\definecolor{coverindigo}{RGB}{28,42,74}
+\definecolor{coveraccent}{RGB}{196,92,44}
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,cd,decorations.pathreplacing,shapes.geometric,fit,matrix}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.18}
+% Concept figures live in figures/NN-slug/<name>.tex, one tikzpicture each,
+% and are placed with \hbfigure{NN-slug/<name>}{<caption>}{<label>}.
+\tikzset{
+  hbnode/.style={draw=hbblue, rounded corners=2pt, fill=hbblue!6, inner sep=4pt,
+    align=center, font=\small},
+  hbkey/.style={hbnode, fill=hbgold!20, draw=hbgold!80!black},
+  hbarrow/.style={-{Stealth[length=2mm]}, thick, hbblue},
+  hbimplies/.style={-{Implies}, double, double distance=1.2pt, hbblue},
+}
+% [H]: the figure stays exactly where it is written, next to its text.
+\RequirePackage{float}
+\newcommand{\hbfigure}[3]{%
+  \begin{figure}[H]\centering\input{figures/#1}\caption{#2}\label{#3}\end{figure}}
+
+% ---- index -----------------------------------------------------------------
+\RequirePackage{imakeidx}
+\makeindex[intoc,columns=2,title=Index]
+
+% ---- bibliography ----------------------------------------------------------
+% Grouped by year, alphabetical within a year. Every entry is cited as
+% [YEAR-n]: the label and the sort key come from build/bib-labels.tex,
+% written by tools/scripts/encyclopaedia/bib-labels.sh before each build.
+% All authors are printed (no "et al.").
+\RequirePackage[backend=biber, style=numeric, sorting=nyt,
+  maxnames=999, minnames=999, giveninits=false]{biblatex}
+\addbibresource{bib/encyclopaedia.bib}
+\InputIfFileExists{build/bib-labels.tex}{}{%
+  \PackageWarning{encyclopaedia}{build/bib-labels.tex missing: run bib-labels.sh}}
+\AtEveryBibitem{\clearlist{language}}
+\DeclareFieldFormat{shorthandwidth}{\mkbibbrackets{#1}}
+\renewbibmacro*{cite}{\printtext[bibhyperref]{\printfield{shorthand}}}
+\defbibenvironment{bibliography}
+  {\list{\printfield[shorthandwidth]{shorthand}}
+     {\setlength{\labelwidth}{\shorthandwidth}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \addtolength{\leftmargin}{\labelsep}}%
+   \renewcommand*{\makelabel}[1]{##1\hss}}
+  {\endlist}
+  {\item}
+
+% ---- links (last) ----------------------------------------------------------
+\RequirePackage[hidelinks,bookmarksnumbered]{hyperref}
+\RequirePackage[capitalise]{cleveref}
+
+% ---- theorem styles --------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% ---- notation (only here) --------------------------------------------------
+\newcommand{\Der}{\operatorname{Der}}
+\newcommand{\Inn}{\operatorname{Inn}}
+\newcommand{\JDer}{\operatorname{JDer}}
+\newcommand{\LDer}{\operatorname{LDer}}
+\newcommand{\HH}{\operatorname{HH}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\End}{\operatorname{End}}
+
+% ---- encyclopaedia metadata (used by the cover, title and imprint) --------------
+\newcommand{\hbtitle}{Encyclopaedia of Derivation-like Maps}
+% The cover prints the title as two lines; this is the second of them.
+% Keeping it beside \hbtitle means a rename is one edit, not three.
+\newcommand{\hbwordone}{Encyclopaedia}
+\newcommand{\hbtitleshort}{of Derivation-like Maps}
+\newcommand{\hbsubtitle}{Origins and Development, with Applications and Worked Examples}
+\newcommand{\hbauthor}{Abderrahim Adrabi}
+\newcommand{\hbaffil}{Faculty of Sciences and Faculty of Educational Sciences,\\
+  Mohammed V University in Rabat, Morocco}
+\newcommand{\hbversion}{v0.18}
+\newcommand{\hbedition}{Living edition, updated monthly}
+
+% ---- translations (owner rule, 2026-10-02: state every translation) --------
+% Owner rule, 2026-10-03: the original comes first, quoted, then the
+% translation.
+% \translated{<our English>}{<original wording>}{<language>}
+%   inline: ``original'' (Language; our translation: ``English'').
+% \begin{originalquote}{<language>}{<original paragraph>} <our English> \end{originalquote}
+%   display: the original paragraph quoted in italics, then our translation.
+% Every paraphrase of a source not in English carries at least one
+% originalquote or \translated with the sentence it rests on.
+\newcommand{\translated}[3]{``\emph{#2}'' (#3; our translation: ``#1'')}
+\newenvironment{originalquote}[2]
+  {\begin{quote}\small``\emph{#2}''\par\smallskip\noindent Our translation
+   from #1: ``\ignorespaces}
+  {\unskip''\end{quote}}
+% \translatedtitle{<language>} after a citation of a work whose title the text
+% gives in English although the work is in another language.
+\newcommand{\translatedtitle}[1]{\footnote{Title translated from #1.}}

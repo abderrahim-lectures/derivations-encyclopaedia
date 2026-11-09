@@ -1,0 +1,191 @@
+% STATUS: written 2026-11-05 (Ayupov--Kudaybergenov 2012, Ayupov--Arzikulov 2014
+% and Ayupov--Kudaybergenov 2015 read in full; excerpts in excerpts/. Semrl 1997
+% could not be downloaded; the book names it through Ayupov--Kudaybergenov 2012 p. 15
+% and Ayupov--Arzikulov 2014 p. 9, which both recall the notion and its origin.)
+% STATUS: extended 2026-11-06 (Ayupov--Kudaybergenov 2014 matrix algebras; Huang--Li--Qian 2018;
+% Ayupov, Kudaybergenov, Nurjanov and Alauatdinov 2011; Chen--Luo--Xu 2026; Chen--Guo 2026 read in full)
+\section{2-local derivations: \v{S}emrl and after}\label{sec:local-characterizations:two-local}
+
+Section~\ref{sec:local-characterizations:local} asked for a witness at one
+point at a time, and Proposition~\ref{prop:local:thmA} replaced it with one
+derivation. \v{S}emrl asks for a witness only at each pair of points
+\cite[p.~15]{AyupovKudaybergenov2012}. The witness of a pair may still
+change from pair to pair in Definition~\ref{def:local:twolocal}.
+
+\begin{definition}[{\cite[p.~15]{AyupovKudaybergenov2012}}]\label{def:local:twolocal}
+Let $A$ be an algebra. A map $\Delta\colon A\to A$, not linear in general,
+is a \emph{2-local derivation} when for every $x,y\in A$ there is a
+derivation $D_{x,y}\colon A\to A$ such that $\Delta(x)=D_{x,y}(x)$ and
+$\Delta(y)=D_{x,y}(y)$.
+\end{definition}
+
+\v{S}emrl introduced the notion in 1997 and described the 2-local
+derivations and 2-local automorphisms of $B(H)$ for an infinite dimensional
+separable Hilbert space $H$ \cite[p.~15]{AyupovKudaybergenov2012}. Kim and
+Kim treated the finite dimensional matrix algebra, and Lin and Wong the
+matrix algebras over finite dimensional division rings
+\cite[p.~15]{AyupovKudaybergenov2012}. A 2-local derivation of
+Definition~\ref{def:local:twolocal} need not be a derivation at all. Zhang
+and Li built a 2-local derivation on the upper triangular
+complex $2\times 2$ matrices that is not a derivation
+\cite[p.~15]{AyupovKudaybergenov2012}.
+
+Ayupov and Kudaybergenov drop the separability in
+Theorem~\ref{thm:local:twolocBH}. Their proof goes through
+the ideal $F(H)$ of finite rank operators and its trace
+\cite[p.~16]{AyupovKudaybergenov2012}.
+
+\begin{theorem}[{\cite[Theorem~2.3, p.~16]{AyupovKudaybergenov2012}}]\label{thm:local:twolocBH}
+Let $H$ be an arbitrary Hilbert space, and let $B(H)$ be the algebra of all
+bounded linear operators on $H$. Then every 2-local derivation
+$\Delta\colon B(H)\to B(H)$ is a derivation.
+\end{theorem}
+
+Their companion result says every 2-local automorphism of $B(H)$ is an
+automorphism \cite[Theorem~2.4, p.~17]{AyupovKudaybergenov2012}. Ayupov and
+Kudaybergenov then move the question from $B(H)$ to a general von Neumann
+algebra \cite[p.~9]{AyupovArzikulov2014}. Ayupov and Kudaybergenov settled
+the type I algebras and, with Nurjanov and Alauatdinov, the finite ones;
+Ayupov and Arzikulov gave a short proof for the semi-finite case
+\cite[p.~9]{AyupovArzikulov2014}.
+
+\begin{theorem}[{\cite[p.~9]{AyupovArzikulov2014}}]\label{thm:local:twolocsemifinite}
+Every 2-local derivation on a semi-finite von Neumann algebra is a
+derivation.
+\end{theorem}
+
+The type I case has a proof of its own, through the decomposition of the
+algebra into summands of type $I_n$ \cite[p.~1]{AyupovArzikulov2011TwoLocal}. The
+authors first settle the algebra $C(X)\otimes M_n(\mathbb{C})$ of matrix-valued
+continuous functions \cite[Theorem~1, p.~3]{AyupovArzikulov2011TwoLocal}. The
+summand of type $I_n$ is isomorphic to such an algebra for a hyperstonean
+compact space $X$ \cite[p.~7]{AyupovArzikulov2011TwoLocal}. Then every 2-local
+derivation of a von Neumann algebra of type I is a derivation
+\cite[Theorem~5, p.~7]{AyupovArzikulov2011TwoLocal}.
+
+The purely infinite piece needs a new tool in
+Theorem~\ref{thm:local:twolocvN}. Ayupov and Kudaybergenov
+use the analogue of the Gleason theorem for signed measures on the
+projection lattice of a von Neumann algebra
+\cite[p.~1]{AyupovKudaybergenov2015}.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~2]{AyupovKudaybergenov2015}}]\label{thm:local:twolocvN}
+Let $M$ be an arbitrary von Neumann algebra. Then any 2-local derivation
+$\Delta\colon M\to M$ is a derivation.
+\end{theorem}
+
+On a von Neumann algebra every derivation is inner, so the pair condition
+of Definition~\ref{def:local:twolocal} reads $\Delta(x)=ax-xa$ and
+$\Delta(y)=ay-ya$ for one element $a$
+\cite[p.~2]{AyupovKudaybergenov2015}.
+
+A Banach algebra beyond the von Neumann setting calls for another tool, the
+socle and its trace \cite[pp.~322--323]{HuangLi2021}. Huang and Li prove the same
+conclusion from an ideal-theoretic hypothesis on the socle
+\cite[Theorem~3.6, p.~325]{HuangLi2021}.
+
+\begin{theorem}[{\cite[Theorem~3.6, p.~325]{HuangLi2021}}]\label{thm:local:huang-li}
+Let $A$ be a semisimple Banach algebra. If $\operatorname{soc}(A)$ is an essential
+ideal of $A$, then every 2-local derivation $\Delta\colon A\to A$ is a derivation.
+\end{theorem}
+
+Two applications follow at once
+\cite[Theorem~4.1 and Theorem~4.5, pp.~326 and~328]{HuangLi2021}.
+A standard operator algebra is a subalgebra of $B(X)$ that contains every
+finite-rank operator, and it is semisimple and prime \cite[p.~326]{HuangLi2021}.
+
+\begin{theorem}[{\cite[Theorem~4.1, p.~326]{HuangLi2021}}]\label{cor:local:huang-li}
+Let $A$ be a semisimple and prime Banach algebra. If
+$\operatorname{soc}(A)\neq\{0\}$, then every 2-local derivation
+$\Delta\colon A\to A$ is a derivation.
+\end{theorem}
+
+Every standard operator algebra meets those hypotheses, so its 2-local
+derivations are derivations \cite[Corollary~4.2, p.~326]{HuangLi2021}. A modular
+annihilator Banach algebra is one whose socle has zero right and left
+annihilator, and it gives the second application \cite[p.~328]{HuangLi2021}.
+
+\begin{theorem}[{\cite[Theorem~4.5, p.~328]{HuangLi2021}}]\label{thm:local:huang-li-modular}
+Let $A$ be a semisimple modular annihilator Banach algebra. Then every 2-local
+derivation $\Delta\colon A\to A$ is a derivation.
+\end{theorem}
+
+Matrix algebras over a semiprime Banach algebra carry the same conclusion from
+the inner derivation property \cite[p.~2]{AyupovKudaybergenov2014Matrix}. Take
+a unital semiprime Banach algebra $A$ in which every derivation is inner, and
+let $M_{2^n}(A)$ be the algebra of $2^n\times 2^n$ matrices over $A$ with
+$n\geq2$ \cite[Theorem~2.1, p.~2]{AyupovKudaybergenov2014Matrix}. Every 2-local
+derivation of that matrix algebra is a derivation
+\cite[Theorem~2.1, p.~2]{AyupovKudaybergenov2014Matrix}. Every AW*-algebra is
+semiprime and has the inner derivation property, so every 2-local derivation of
+an AW*-algebra is a derivation
+\cite[Theorem~3.1, p.~11]{AyupovKudaybergenov2014Matrix}.
+
+Matrix algebras over a commutative algebra give the same answer for a different
+reason \cite[p.~9]{HuangLiQian2018Matrix}. Here $A$ is a unital commutative
+algebra over $\mathbb{C}$ that commutes with the bimodule, and every 2-local
+derivation from $M_n(A)$ to $M_n(A)$ is a derivation
+\cite[Theorem~3.6, p.~10]{HuangLiQian2018Matrix}. The paper also describes
+every derivation of $M_n(A)$ into $M_n(M)$ as an inner part plus a part induced
+by a derivation of $A$ \cite[Theorem~2.1, p.~4]{HuangLiQian2018Matrix}.
+
+The finite von Neumann algebra case has a second route, through the Arens
+algebra \cite[Theorem~3.4, p.~11]{AyupovKudaybergenovNurjanovAlauatdinov2011}.
+Every 2-local derivation of a finite von Neumann algebra is an inner derivation
+\cite[Theorem~3.4, p.~11]{AyupovKudaybergenovNurjanovAlauatdinov2011}. Every
+2-local derivation of the Arens algebra of a von Neumann algebra with a
+faithful normal semi-finite trace is a derivation
+\cite[Theorem~3.2, p.~9]{AyupovKudaybergenovNurjanovAlauatdinov2011}.
+
+For Lie algebras the question has a module-valued form
+\cite[p.~1]{ChenLuoXu2026}. Let $\mathfrak{g}=\mathfrak{s}\oplus
+\mathfrak{z}$ be a finite-dimensional reductive Lie algebra over an
+algebraically closed field of characteristic zero, and let $V$ be a
+finite-dimensional $\mathfrak{g}$-module
+\cite[p.~1]{ChenLuoXu2026}. Every 2-local derivation of
+$\mathfrak{g}$ into $V$ is a derivation exactly when $\dim\mathfrak{z}\leq1$ or
+$V^{\mathfrak{g}}=0$ \cite[Corollary~1.3, p.~2]{ChenLuoXu2026}. The
+exceptional maps in the remaining case are the homogeneous ones
+\cite[Theorem~1.2, p.~2]{ChenLuoXu2026}. On the infinite-dimensional
+Block-type Lie algebra the answer is positive again: every 2-local derivation is
+a derivation \cite[Theorem~3.6, p.~9]{ChenGuo2026}.
+
+The picture of
+Section~\ref{sec:local-characterizations:local} and of this one now
+sits at two levels.
+Local and 2-local maps agree on $B(H)$ and on von
+Neumann algebras by Theorems~\ref{thm:local:twolocBH}
+and~\ref{thm:local:twolocvN}. They part on the triangular matrices, where
+the example of Zhang and Li lives \cite[p.~15]{AyupovKudaybergenov2012}.
+
+The problem for a general infinite-dimensional Lie algebra is open, and this
+section states it. % claim-ok: own signpost introducing the moved problem, which carries its own citation
+
+\begin{problem}[{\cite[p.~1]{AyupovYusupov2020}}]\label{prob:open:twolocal}
+Let $L$ be an infinite-dimensional Lie algebra over a field of characteristic
+$0$.
+Is every 2-local derivation of $L$ a derivation?
+\end{problem}
+
+Ayupov and Yusupov answer the question for the Witt algebra and for the
+positive Witt algebra \cite[Theorem~4.1, p.~4; Theorem~4.4, p.~6]{AyupovYusupov2020}.
+They also build a thin Lie algebra whose 2-local derivations include a map that
+is not a derivation \cite[Theorem~4.8, p.~8]{AyupovYusupov2020}. So the answer
+depends on the algebra. Chapter~\ref{ch:lie-algebras} reads Lie algebras in
+Section~\ref{sec:lie-algebras:infinite-dimensional}.
+
+Arzikulov and Shodiev treat local and 2-local $\frac12$-derivations of the
+$n$-dimensional complex filiform Leibniz algebra
+\cite[Abstract, p.~1]{ArzikulovShodiev2026}.
+
+A weaker condition tests the witness through one functional at a time. A map
+$\Delta$ is a \emph{weak 2-local derivation} \cite[p.~382]{CabelloPeralta2017Weak}
+when for every $x$, $y$ and every bounded functional $\varphi$ there is a
+derivation $T$ with $\varphi\Delta(x)=\varphi T(x)$ and
+$\varphi\Delta(y)=\varphi T(y)$. The derivation may depend on the two
+points and on the functional, so the condition is weaker than 2-locality.
+Cabello and Peralta prove that every weak 2-local derivation on $B(H)$ is a
+linear derivation, and that on a finite-dimensional $C^{\ast}$-algebra every
+weak 2-local derivation is a linear derivation
+\cite[Theorems~1.1 and~1.2, p.~383]{CabelloPeralta2017Weak}. The weakening
+produces no new map on these algebras.

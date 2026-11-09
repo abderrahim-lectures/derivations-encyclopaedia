@@ -1,0 +1,138 @@
+% STATUS: written 2026-11-05 (Han Deguang 1993 read in full; excerpts in
+% excerpts/Han1993Nest.txt).
+% Additions of 2026-11-06 from Zhang--Wei 2017 (pp. 1, 6) and of 2026-11-07
+% from Semrl 1991 (pp. 234--236) and Liu--Hou 2025 (p. 81).
+% Sources: HanDeguang1993Nest, Christensen1977Nest, JohnsonSinclair1968,
+% ZhangWei2017, Semrl1991Additive, LiuHou2025Lie.
+\section{Derivations on operator spaces and nest algebras}\label{sec:banach-operator:operator-derivations}
+
+Section~\ref{sec:banach-operator:unbounded} closed with an answer on one
+simple $C^*$-algebra. This section looks at subalgebras of the algebra of
+all bounded operators on a Hilbert space, and the key family is built from
+a chain of projections. The vocabulary is taken from the paper of Han Deguang
+\cite[p.~1165]{HanDeguang1993Nest}.
+
+\begin{definition}[{\cite[p.~1165]{HanDeguang1993Nest}}]\label{def:banach:nest}
+A \emph{nest} $N$ is a complete totally ordered family of selfadjoint
+projections on a Hilbert space $H$ that contains $0$ and $I$. The algebra
+$\operatorname{alg}N=\{T\in L(H):P^{\perp}TP=0\text{ for all }P\in N\}$ is
+called the \emph{nest algebra} with respect to the nest $N$.
+\end{definition}
+
+The next definition states the derivations on a subalgebra of the bounded operators.
+
+\begin{definition}[{\cite[p.~1165]{HanDeguang1993Nest}}]\label{def:banach:additiveder}
+For a subalgebra $W$ of $L(H)$, an additive (linear) map
+$D:W\rightarrow L(H)$ is said to be an \emph{additive} (\emph{linear})
+\emph{derivation} if $D(AB)=AD(B)+D(A)B$ holds for all $A,B$ in $W$. The
+map $D$ is said to be \emph{inner} if there exists an operator $T$ in
+$L(H)$ such that $D(A)=AT-TA$ holds for all $A$ in $W$.
+\end{definition}
+
+The linear case was settled by Christensen in 1977: if $W$ is a nest
+algebra on $H$, then every linear derivation from $W$ into $L(H)$ is inner
+\cite[p.~1165]{HanDeguang1993Nest}. On the full algebra $L(H)$ the additive case follows from
+Section~\ref{sec:banach-operator:automatic-continuity}. The Johnson and
+Sinclair idempotent theorem, Theorem~\ref{thm:banach:js}, implies that
+every additive derivation from $L(H)$ into $L(H)$ is inner, provided that
+$H$ is infinite dimensional \cite[p.~1165]{HanDeguang1993Nest}.
+
+Finite dimensions spoil the additive story: if $\dim H<\infty$, then there
+exist additive derivations of the nest algebra which are not inner
+\cite[p.~1165]{HanDeguang1993Nest}. the theorem of Han closes the infinite
+dimensional case \cite[Theorem~2.5, p.~1168]{HanDeguang1993Nest}.
+
+\begin{theorem}[{\cite[Theorem~2.5, p.~1168]{HanDeguang1993Nest}}]\label{thm:banach:nestinner}
+Let $N$ be a nest acting on an infinite-dimensional Hilbert space $H$.
+Then every additive derivation from $\operatorname{alg}N$ into $L(H)$ is
+inner.
+\end{theorem}
+
+Theorem~\ref{thm:banach:nestinner} extends a relative result for linear
+derivations of nest algebras \cite[p.~1165]{HanDeguang1993Nest}. It also
+carries over to certain bimodules
+\cite[Corollary~2.6, p.~1169]{HanDeguang1993Nest}.
+
+\begin{corollary}[{\cite[Corollary~2.6, p.~1169]{HanDeguang1993Nest}}]\label{cor:banach:nestbimodule}
+Let $N$ be a nest acting on an infinite-dimensional Hilbert space and
+$X'$ an ultraweakly closed bimodule of $W$ which contains the nest
+algebra. Then every additive derivation from $X'$ into $X$ is inner.
+\end{corollary}
+
+The same nest algebras carry a wider class of maps that act like derivations
+on commutators. Take $n$ elements $x_{1},\dots,x_{n}$ of an algebra and form
+the $(n-1)$-th commutator $p_{n}(x_{1},\dots,x_{n})$
+\cite[p.~1]{ZhangWei2017}. A \emph{Lie $n$-derivation} is a linear map $L$
+that satisfies
+\[
+L(p_{n}(A_{1},\dots,A_{n}))=\sum_{k=1}^{n}p_{n}(A_{1},\dots,L(A_{k}),\dots,A_{n})
+\]
+for all $A_{1},\dots,A_{n}$ \cite[p.~1]{ZhangWei2017}. Zhang and Wei describe
+every such map on a nest algebra
+\cite[Theorem~3.1, p.~6]{ZhangWei2017}.
+
+\begin{theorem}[{\cite[Theorem~3.1, p.~6]{ZhangWei2017}}]\label{thm:banach:lie-type-nest}
+Let $X$ be a Banach space, let $N$ be a nontrivial nest on $X$, and let
+$\operatorname{Alg}N$ be its nest algebra. Then every Lie-type derivation
+$L\colon\operatorname{Alg}N\to B(X)$ has the standard form: there are a
+derivation $D\colon\operatorname{Alg}N\to B(X)$ and a linear map
+$H\colon\operatorname{Alg}N\to\mathbb{C}I$ that vanishes on every
+$(n-1)$-th commutator, with $L=D+H$. If $L$ is continuous, then $D$ and $H$
+are continuous as well.
+\end{theorem}
+
+So the Lie-type maps add only a scalar functional to the derivations of the
+previous theorems. On the Banach space, the scalar part is what makes the
+difference from the Hilbert space case
+\cite[p.~6]{ZhangWei2017}.
+
+Two later papers widen the question of Han in the same direction
+\cite[pp.~234, 81]{Semrl1991Additive,LiuHou2025Lie}. \v{S}emrl drops
+linearity and keeps additivity, on a standard operator algebra
+\cite[p.~234]{Semrl1991Additive}. He reduced every such map to one additive
+derivation of the base field \cite[p.~235]{Semrl1991Additive}.
+
+\begin{theorem}[{\cite[Theorem~2.3, p.~236]{Semrl1991Additive}}]\label{thm:banach:semrl-additive}
+Let $X$ be an infinite-dimensional Hilbert space. Then every additive
+derivation $D\colon B(X)\to B(X)$ has the form $D(A)=AT-TA$ for some operator
+$T$ in $B(X)$.
+\end{theorem}
+
+The finite-dimensional case has a second term
+\cite[Theorem~2.2, p.~236]{Semrl1991Additive}. On the $n\times n$ matrices
+over $F$, a map is an additive derivation if and only if it has two parts
+\cite[Theorem~2.2, p.~236]{Semrl1991Additive}. The first is the inner
+derivation by a matrix $(b_{ij})$ \cite[Theorem~2.2, p.~236]{Semrl1991Additive}. The second is the action of an additive
+derivation $f$ of $F$ on each matrix entry
+\cite[Theorem~2.2, p.~236]{Semrl1991Additive}. Such an $f$ exists for a
+transcendental extension, so finite dimensions carry additive derivations that
+are not inner \cite[p.~235]{Semrl1991Additive}.
+
+Liu and Hou relax the rule instead of the linearity
+\cite[p.~81]{LiuHou2025Lie}. They ask for
+$\varphi([A,B])=[\varphi(A),B]+[A,\varphi(B)]$ only on those pairs whose
+product equals a fixed operator $F$ \cite[p.~81]{LiuHou2025Lie}.
+
+\begin{theorem}[{\cite[Theorem~2.2, p.~81]{LiuHou2025Lie}}]\label{thm:banach:liu-hou}
+Let $X$ be a Banach space of dimension greater than $2$. Let $F$ be an
+operator for which there is a nontrivial idempotent $P$ with $F=PF$. Suppose
+that the linear map $\varphi\colon B(X)\to B(X)$ satisfies
+$\varphi([A,B])=[\varphi(A),B]+[A,\varphi(B)]$ whenever $AB=F$. Then there are
+an operator $T$ and a linear map $\gamma\colon B(X)\to\mathbb{C}I$ that
+vanishes on each commutator $[A,B]$ with $AB=F$, such that
+$\varphi(A)=AT-TA+\gamma(A)$ for all $A$.
+\end{theorem}
+
+With $F=0$ the theorem returns the Lie derivable maps at zero, and with $F$ a
+nontrivial idempotent it returns the maps derivable at an idempotent
+\cite[Remark~2.4, p.~81]{LiuHou2025Lie}. When the range of $F$ is the whole
+space and complemented, $F$ is a Lie all-derivable point of $B(X)$
+\cite[Corollary~2.3, p.~81]{LiuHou2025Lie}.
+
+Inner derivations $A\mapsto AT-TA$ are commutator maps, and
+Section~\ref{sec:banach-operator:commutator-ranges} studies what such a
+map can and cannot produce.
+
+Park builds a Lie bracket on the space of derivation-derivations of a Banach
+algebra, so that the derivations themselves form a Lie algebra in a second way
+\cite[Abstract, p.~1]{Park2019LieBracket}.

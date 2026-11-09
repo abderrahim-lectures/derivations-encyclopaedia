@@ -1,0 +1,169 @@
+% STATUS: written 2026-11-04 (Herstein 1957, Bergen 1983, Chuang 1990, Bresar-Vukman 1990, Goldmann-Semrl 1996 read in full)
+% STATUS: extended 2026-11-06 (Brox 2020 read in full from the library PDF)
+% Sources read in full: Herstein 1957 (pp. 1104--1110); Bergen 1983 (pp. 267--270); Chuang 1990 (pp. 867--869); Bresar--Vukman 1990 (pp. 7--16); Goldmann--Semrl 1996 (pp. 189--197); Brox 2020 (pp. 1--4).
+% The 2007 semiprime generalization (Samman--Alyamani) is cited from the
+% 2015 recall of it; the local copy was a substituted scan, deleted and logged.
+\section{Semiderivations, left derivations, reverse and multiplicative derivations}\label{sec:generalized-twisted:semi-left-reverse}
+
+The rule of Section~\ref{sec:generalized-twisted:differential-identities}
+twisted the derivation and kept the derivation value. The four maps collected
+here change the rule itself \cite[p.~267]{Bergen1983}. Each is specified by a
+formula that follows the Leibniz rule, and by the place where the formula
+fails \cite[p.~1105]{Herstein1957}.
+
+The first is the most general \cite[p.~267]{Bergen1983}. In 1983 Bergen needed
+maps that behave like derivations in a polynomial-identity question
+\cite[p.~267]{Bergen1983}.
+
+\begin{definition}[{\cite[p.~267]{Bergen1983}}]\label{def:gen:semiderivation}
+Let $R$ be an associative ring. An additive mapping $f\colon R\to R$ is a
+\emph{semiderivation} of $R$ if there exists a function $g\colon R\to R$ such
+that, for all $x,y\in R$,
+\begin{equation*}
+f(xy)=f(x)g(y)+x\,f(y)=f(x)\,y+g(x)f(y),
+\qquad
+f(g(x))=g(f(x)).
+\end{equation*}
+\end{definition}
+
+The two usual cases recover two familiar examples
+\cite[p.~867]{Chuang1990Semi}. If $g$ is the identity map, a semiderivation is
+an ordinary derivation \cite[p.~867]{Chuang1990Semi}. If $g$ is any ring
+endomorphism, the map $f(x)=x-g(x)$ is a semiderivation
+\cite[p.~867]{Chuang1990Semi}.
+
+On a prime ring there is nothing else \cite[p.~867]{Chuang1990Semi}. Chuang
+proves this structure theorem in 1990, and Bre\v{s}ar proves the same
+dichotomy in the same issue \cite[p.~859]{Bresar1990Semi}.
+
+\begin{theorem}[{\cite[p.~867]{Chuang1990Semi}}]\label{thm:gen:semi-structure}
+Let $f$ be a semiderivation of a prime ring $R$ associated with the
+endomorphism $g\colon R\to R$. Then either one of the following two cases
+holds.
+\begin{enumerate}[label=(\arabic*)]
+\item There exists an element $\lambda$ in the extended centroid of $R$ such
+that $f(x)=\lambda\bigl(x-g(x)\bigr)$ for all $x\in R$.
+\item The map $g$ is the identity and $f$ is an ordinary derivation of $R$.
+\end{enumerate}
+\end{theorem}
+
+The next two maps sit closer to the Leibniz rule
+\cite[p.~7]{BresarVukman1990Left}. A \emph{left derivation} of a ring $R$ into
+a left $R$-module $X$ swaps the two factors of the rule.
+
+\begin{definition}[{\cite[p.~7]{BresarVukman1990Left}}]\label{def:gen:left-derivation}
+Let $R$ be a ring and $X$ a left $R$-module. An additive mapping
+$D\colon R\to X$ is a \emph{left derivation} if
+$D(ab)=a\,D(b)+b\,D(a)$ for all $a,b\in R$. It is a \emph{Jordan left
+derivation} if $D(a^{2})=2a\,D(a)$ for all $a\in R$.
+\end{definition}
+
+A Jordan left derivation is again a strong hypothesis
+\cite[p.~8]{BresarVukman1990Left}. Bre\v{s}ar and Vukman show that over
+torsion-controlled modules it already forces the base ring to commute
+\cite[p.~8]{BresarVukman1990Left}.
+
+\begin{theorem}[{\cite[Theorem~1.2, p.~8]{BresarVukman1990Left}}]\label{thm:gen:left-main}
+Let $R$ be a ring and $X$ be a 2-torsionfree and 3-torsionfree left
+$R$-module. Suppose that $aRx=0$ with $a\in R$, $x\in X$ implies that either
+$a=0$ or $x=0$. If there exists a nonzero Jordan left derivation $D\colon
+R\to X$, then $R$ is commutative.
+\end{theorem}
+
+The next corollary specializes it to a prime ring.
+
+\begin{corollary}[{\cite[Corollary~1.3, p.~13]{BresarVukman1990Left}}]\label{cor:gen:left-prime}
+Let $R$ be a prime ring of characteristic different from $2$ and $3$. If $R$
+admits a nonzero Jordan left derivation $D\colon R\to R$, then $R$ is
+commutative.
+\end{corollary}
+
+Reversing the two sides of the rule instead of the two factors gives the
+oldest of the four notions \cite[p.~1105]{Herstein1957}. Herstein names it
+in 1957, inside the paper that settles Jordan derivations on prime rings.
+
+\begin{definition}[{\cite[p.~1105]{Herstein1957}}]\label{def:gen:reverse-derivation}
+Let $R$ be a ring. An additive mapping $D\colon R\to R$ is a \emph{reverse
+derivation} if $D(xy)=D(y)\,x+y\,D(x)$ for all $x,y\in R$.
+\end{definition}
+
+Every reverse derivation is a Jordan derivation
+\cite[p.~1105]{Herstein1957}. On a prime ring such a map collapses the
+whole theory to the commutative case \cite[p.~1106]{Herstein1957}.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~1106]{Herstein1957}}]\label{thm:gen:reverse-collapse}
+Let $A$ be a prime ring and suppose that $D$ is a nonzero reverse derivation
+of $A$. Then $A$ is a commutative integral domain and $D$ is an ordinary
+derivation of $A$.
+\end{theorem}
+
+The semiprime generalization is the one step the literature reports as already
+settled \cite[p.~200]{AboubakrGonzalez2015}. Aboubakr and Gonz\'{a}lez record
+the statement made by Samman and Alyamani in 2007: on a semiprime ring a
+reverse derivation is a derivation of the ring into its center
+\cite[p.~200]{AboubakrGonzalez2015}.
+
+The reverse rule has a generalized form of its own. An additive map $F$ is an
+\emph{$l$-generalized reverse derivation} \cite[p.~199]{AboubakrGonzalez2015}
+when $F(xy)=F(y)x+yd(x)$ for a fixed reverse derivation $d$, and an
+\emph{$r$-generalized reverse derivation} \cite[p.~199]{AboubakrGonzalez2015}
+when $F(xy)=d(y)x+yF(x)$. The two are not the
+same condition, and Aboubakr and Gonz\'{a}lez separate them: on a $2$-torsion
+free semiprime ring they coincide with each other and with the ordinary
+generalized derivations \cite[pp.~204--205]{AboubakrGonzalez2015}. Either one,
+associated with a nonzero reverse derivation, forces a nonzero central ideal
+\cite[Corollary~3.3]{AboubakrGonzalez2015}. That is the same conclusion the
+sentence above records for a plain reverse derivation, reached from the weaker
+hypothesis.
+
+The fourth map removes an axiom rather than the rule
+\cite[p.~190]{GoldmannSemrl1996}. One asks only that the Leibniz identity
+holds, with no additivity and no linearity \cite[p.~190]{GoldmannSemrl1996}.
+
+\begin{definition}[{\cite[p.~190]{GoldmannSemrl1996}}]\label{def:gen:multiplicative-derivation}
+Let $\mathcal{A}$ be an algebra. A \emph{multiplicative derivation} of
+$\mathcal{A}$ is a mapping $d\colon\mathcal{A}\to\mathcal{A}$ satisfying
+$d(ab)=a\,d(b)+d(a)\,b$ for all $a,b\in\mathcal{A}$; neither additivity nor
+continuity is assumed.
+\end{definition}
+
+On a function algebra the linear derivations all vanish
+\cite[p.~190]{GoldmannSemrl1996}. The multiplicative derivations, however,
+survive, and they are described by a pointwise formula with a logarithm
+\cite[p.~191]{GoldmannSemrl1996}.
+
+\begin{theorem}[{\cite[Theorem~2, p.~191]{GoldmannSemrl1996}}]\label{thm:gen:mult-cx}
+Let $X$ be a completely regular Hausdorff space satisfying the first axiom of
+countability, and assume that $X$ has no isolated points. Let
+$d\colon C(X)\to C(X)$ be a multiplicative derivation of the algebra $C(X)$
+of continuous real-valued functions on $X$. Then there exists a continuous
+function $a\colon X\to\mathbb{R}$ such that, for all $f\in C(X)$ and all
+$x\in X$,
+\begin{equation*}
+d(f)(x)=
+\begin{cases}
+a(x)\,f(x)\log|f(x)| & \text{if }f(x)\neq 0,\\
+0 & \text{if }f(x)=0.
+\end{cases}
+\end{equation*}
+\end{theorem}
+
+The same paper records the companion question of Martindale, taken up by Daif
+in 1991 \cite[p.~615]{Daif1991}. Daif shows that on a ring with an idempotent
+satisfying his three conditions, every multiplicative derivation is additive
+\cite[p.~615]{Daif1991}.
+
+A multiplicative skew derivation asks for additivity on a prime ring, and Brox
+shows that the answer is negative in a sharp form
+\cite[p.~3]{Brox2020TwoSided}. A multiplicative generalized skew derivation, as
+Ashraf and Mozumder defined it, satisfies two identities at once
+\cite[p.~2]{Brox2020TwoSided}. Brox proves that each such map on a prime ring is
+either multiplicative generalized or generalized skew
+\cite[Theorem~2.2, pp.~3--4]{Brox2020TwoSided}. One identity is therefore enough
+for a genuinely new class \cite[p.~1]{Brox2020TwoSided}.
+
+The four maps show that the derivation rule is more rigid than its
+generalizations suggest \cite[p.~867]{Chuang1990Semi}. Relax the rule and the
+prime ring collapses to the commutative case, the ring becomes commutative, or
+the map is described by a closed formula
+\cite[pp.~1106, 191]{Herstein1957}.

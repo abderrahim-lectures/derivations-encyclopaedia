@@ -1,0 +1,141 @@
+% STATUS: written 2026-11-05 (Lin 1971, Williams 1971 and Dash 1975 read
+% in full; excerpts in excerpts/LinCS1971.txt, excerpts/Williams1971Range.txt,
+% excerpts/Dash1975BHP.txt).
+% Additions of 2026-11-07 from Molnar 1994 (pp. 691--694) and
+% Bouhafsi--Ech-chad--Zouaki 2022 (pp. 149--152).
+% Sources: LinCS1971Kleinecke, WilliamsJP1971Range, Dash1975BHP,
+% Molnar1994Range, BouhafsiEchChadZouaki2022.
+\section{Ranges of derivations and commutators}\label{sec:banach-operator:commutator-ranges}
+
+Section~\ref{sec:banach-operator:operator-derivations} ended with inner
+derivations, the maps $X\mapsto AX-XA$. This section asks what such a
+commutator map produces. The first answer is the Kleinecke--Shirokov
+theorem as Lin states it \cite[p.~529]{LinCS1971Kleinecke}. Take bounded
+linear operators $P$ and $Q$ on a Hilbert space, $T=PQ-QP$; if $T$ commutes
+with $P$, then the spectrum of $T$ is $\{0\}$
+\cite[p.~529]{LinCS1971Kleinecke}. Lin relaxed the commutation of $T$
+with $P$ to a compact error \cite[Theorem~1, p.~529]{LinCS1971Kleinecke}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~529]{LinCS1971Kleinecke}}]\label{thm:banach:linriesz}
+If $P$ and $Q$ are bounded linear operators on a Banach space $X$,
+$T=PQ-QP$, and $T$ almost commutes with $P$, that is, $PT-TP$ is a compact
+operator, then $T$ is a Riesz operator. In particular, if $X$ is a Hilbert
+space, then there exists a compact normal operator $S$ such that $T-S$ is
+a quasinilpotent operator.
+\end{theorem}
+
+The proof of Theorem~\ref{thm:banach:linriesz} passes to the Calkin
+quotient $B(X)/K(X)$ and applies the Leibniz formula to the induced
+bounded derivation \cite[p.~529]{LinCS1971Kleinecke}. The same paper gives
+the Wintner--Wielandt--Halmos statement on scalars moved by compact
+operators.
+
+\begin{theorem}[{\cite[Theorem~2, p.~530]{LinCS1971Kleinecke}}]\label{thm:banach:wwh}
+If $b$ is a nonzero scalar and $S$ is a compact operator on a Banach space
+$X$, then $b+S$ is not a commutator.
+\end{theorem}
+
+With $S$ the zero operator, Theorem~\ref{thm:banach:wwh} is precisely the
+Wintner--Wielandt theorem: the only scalar commutator is $0$
+\cite[p.~530]{LinCS1971Kleinecke}. On the algebra $B(H)$ of bounded
+operators on a complex separable infinite-dimensional Hilbert space, every
+derivation is inner, $\delta=\delta_A$ with $\delta_A(X)=AX-XA$
+\cite[p.~273]{WilliamsJP1971Range}. Williams studied the range
+$R(\delta_A)$ of this map, starting from products of two derivations
+\cite[Theorem~1, pp.~273--274]{WilliamsJP1971Range}.
+
+\begin{theorem}[{\cite[Theorem~1, pp.~273--274]{WilliamsJP1971Range}}]\label{thm:banach:product}
+Let $A,B\in B(H)$. Then $\delta_A\delta_B$ is a derivation if and only if
+$A$ or $B$ is a scalar multiple of the identity operator.
+\end{theorem}
+
+Two corollaries of Theorem~\ref{thm:banach:product} pin down how small the
+commutant of the range is.
+
+\begin{corollary}[{\cite[Corollaries~1 and 2, p.~275]{WilliamsJP1971Range}}]\label{cor:banach:rangecommutant}
+If $A\in B(H)$ is not a scalar multiple of the identity, then the
+commutant of $R(\delta_A)$ is the scalars, $R(\delta_A)'=\mathbb{C}$. If
+$A$ and $B$ are not scalar multiples of the identity, then
+$R(\delta_A)\cap R(\delta_B)$ is nonzero.
+\end{corollary}
+
+The second half of Corollary~\ref{cor:banach:rangecommutant} was proposed
+by Joel Anderson \cite[p.~275]{WilliamsJP1971Range}. Density
+is more delicate: Stampfli showed that $R(\delta_A)$ is never norm dense
+\cite[p.~275]{WilliamsJP1971Range}, and weak density has an exact answer.
+
+\begin{theorem}[{\cite[Theorem~2, p.~275]{WilliamsJP1971Range}}]\label{thm:banach:weakdense}
+Let $A\in B(H)$. Then the range of $\delta_A$ is dense in the weak
+operator topology if and only if the commutant $\{A\}'$ of $A$ does not
+contain a nonzero operator of finite rank.
+\end{theorem}
+
+Many familiar operators do lie in the range
+\cite[p.~495]{Dash1975BHP}. The proof is the Brown--Halmos--Pearcy lemma
+as corrected by Dash \cite[p.~495]{Dash1975BHP}.
+
+\begin{lemma}[{\cite[p.~495]{Dash1975BHP}}]\label{lem:banach:bhp}
+If the matrix $(a_{ij})$, $i,j=0,1,\dots$ of an operator $A$ on $H$ with
+respect to an orthonormal basis $\{x_0,x_1,\dots\}$ is such that
+$a_{ij}=0$ whenever $i+j$ is an even integer, then $A$ is a commutator.
+\end{lemma}
+
+For Lemma~\ref{lem:banach:bhp}, with $D$ the diagonal operator with
+diagonal $\{(-1)^n\}$, one has $DAD=-A$, hence $A=(-\tfrac12 DA)D -
+D(-\tfrac12 DA)$ \cite[p.~495]{Dash1975BHP}. It follows that every
+weighted unilateral shift and weighted bilateral shift is a commutator,
+and analogous results hold with operator weights
+\cite[p.~495]{Dash1975BHP}.
+
+Moln\'ar studied the same range question for Jordan $*$-derivations instead
+of derivations \cite[p.~691]{Molnar1994Range}. On $B(H)$ each of those maps has
+the form $J_A(T)=TA-AT^*$ for a fixed operator $A$, and $R_A$ denotes its range
+\cite[p.~692]{Molnar1994Range}. The spectrum of the generating operator decides
+both questions about the range \cite[p.~692]{Molnar1994Range}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~692]{Molnar1994Range}}]\label{thm:banach:molnar-selfadjoint}
+Let $A$ in $B(H)$ be a normal operator. Then the following statements are
+equivalent: the closure of $R_A$ is self-adjoint; $R_A$ itself is self-adjoint;
+the spectrum of $A$ lies in $\mathbb{R}\cup i\mathbb{R}$.
+\end{theorem}
+
+The next theorem treats the case of a self-adjoint operator.
+
+\begin{theorem}[{\cite[Theorem~2, p.~693]{Molnar1994Range}}]\label{thm:banach:molnar-closed}
+Let $A$ in $B(H)$ be self-adjoint. Then $R_A$ is closed in the operator norm
+topology if and only if $0$ is not a limit point of the spectrum of $A$.
+\end{theorem}
+
+Moln\'ar adds that Theorem~\ref{thm:banach:molnar-closed} fails for a normal
+operator that is not self-adjoint, with the bilateral shift as the example
+\cite[Remark~2, p.~694]{Molnar1994Range}. He leaves the normal case open
+\cite[p.~694]{Molnar1994Range}.
+
+The commutator can also be read with two different operators at its ends
+\cite[p.~145]{BouhafsiEchChadZouaki2022}. For the generalized commutator
+$X\mapsto AX-XB$ the range carries a symmetry of its own.
+
+\begin{definition}[{\cite[Definition~3.2, p.~149]{BouhafsiEchChadZouaki2022}}]\label{def:banach:p-symmetric-pair}
+Let $A,B$ in $L(H)$ and let $J$ be a two-sided ideal of $L(H)$. The pair
+$(A,B)$ has the \emph{Fuglede--Putnam property} $(FP)_J$ when $AT=TB$ with $T$
+in $J$ implies $A^*T=TB^*$. The pair $(A,B)$ is \emph{$P$-symmetric} when
+$\overline{R(\delta_{A,B})}^{W^*}=\overline{R(\delta_{A^*,B^*})}^{W^*}$,
+where $\delta_{A,B}(X)=AX-XB$.
+\end{definition}
+
+Bouhafsi, Ech-chad and Zouaki describe the $P$-symmetric pairs through that
+property \cite[p.~149]{BouhafsiEchChadZouaki2022}.
+
+\begin{theorem}[{\cite[Theorem~3.4, p.~149]{BouhafsiEchChadZouaki2022}}]\label{thm:banach:p-symmetric-pair}
+Let $A,B$ in $L(H)$. Then the pair $(A,B)$ is $P$-symmetric if and only if
+$(A,B)$ has $(FP)_{C_1(H)}$ and $(B,A)$ has $(FP)_{C_1(H)}$.
+\end{theorem}
+
+Two $P$-symmetric operators whose spectra do not meet form a $P$-symmetric pair
+\cite[Theorem~3.7, p.~151]{BouhafsiEchChadZouaki2022}. The paper also shows that a rationally cyclic operator that restricts a
+normal operator is $D$-symmetric. That means its range equals the range of
+its adjoint \cite[Theorem~3.12, p.~152]{BouhafsiEchChadZouaki2022}.
+
+Section~\ref{sec:banach-operator:stability}
+changes the question once more: it asks whether a map that almost
+satisfies the derivation identity is near an exact derivation.

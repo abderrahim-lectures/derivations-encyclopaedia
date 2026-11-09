@@ -1,0 +1,182 @@
+% STATUS: written 2026-11-05 (Lopatkin 2019 read in full)
+% Sources read in full: Lopatkin 2019 (pp. 59--89, sections 1 to 3).
+% Origins: the Leavitt path algebra and its relations, Lopatkin 2019 (Definition 1.1, p. 61);
+% the matrix and Laurent examples (Examples 1.2 and 1.3, p. 61); the basis
+% (Theorem 1.6, p. 63); the form of a derivation (Theorem 2.1, p. 63); its
+% generating set (Corollary 2.1, p. 64); the generators of the outer derivations
+% (Theorem 3.2, p. 78); the dimension (Corollary 3.8, p. 79).
+\section{Leavitt path algebras}\label{sec:path-incidence:leavitt}
+
+The trivial extension of Section~\ref{sec:path-incidence:trivial-extension} adds one
+crossed term to an algebra. The Leavitt path algebra of this section adds a reverse
+edge for every arrow, and the presentation lists the reverse edges as new generators
+\cite[p.~61]{Lopatkin2019}. Lopatkin describes every derivation of it on a row-finite
+graph \cite[p.~59]{Lopatkin2019}. This section gives his description, the generating
+set, and the dimension of the outer derivations.
+
+A row-finite graph has finitely many edges with each source
+\cite[p.~60]{Lopatkin2019}. The algebra has a vertex for each point of the graph, an
+edge for each arrow, and a reverse edge for each arrow \cite[p.~61]{Lopatkin2019}.
+Four sets of relations present it, the last of which splits a vertex among the edges
+that leave it \cite[p.~61]{Lopatkin2019}.
+
+\begin{definition}[{\cite[Definition~1.1, p.~61]{Lopatkin2019}}]\label{def:leavitt:algebra}
+Let $K$ be a commutative ring and $\Gamma=(V,E)$ a row-finite graph. The
+\emph{Leavitt path algebra} $L_{K}(\Gamma)$ of $\Gamma$ with coefficients in $K$ is
+the $K$-algebra presented by the generators $\{v,\ v\in V\}$ and
+$\{e,e^{*}\colon e\in E\}$ and the relations:
+\begin{enumerate}[label=(\arabic*)]
+\item $vu=\delta_{v,u}v$ for all $v,u\in V$;
+\item $s(e)e=er(e)=e$ and $r(e)e^{*}=e^{*}s(e)=e^{*}$ for all $e\in E$;
+\item $e^{*}f=\delta_{e,f}r(e)$ for all $e,f\in E$;
+\item $v=\sum_{s(e)=v}ee^{*}$ for an arbitrary vertex $v\in V\setminus\{\text{sinks}\}$.
+\end{enumerate}
+\end{definition}
+
+Two familiar algebras appear as examples \cite[p.~61]{Lopatkin2019}. A line of $n$
+vertices gives the full matrix algebra \cite[p.~61]{Lopatkin2019}. A single loop
+gives the Laurent polynomial algebra \cite[p.~61]{Lopatkin2019}.
+
+\begin{example}[{\cite[Example~1.2, p.~61]{Lopatkin2019}}]\label{ex:leavitt:matrix}
+Let $A_{n}$ denote the graph
+\begin{equation*}
+\bullet_{v_{1}}\xrightarrow{e_{1}}\bullet_{v_{2}}\xrightarrow{e_{2}}\cdots
+\xrightarrow{e_{n-1}}\bullet_{v_{n}} .
+\end{equation*}
+Then $L_{K}(A_{n})\cong M_{n}(K)$, the full $n\times n$ matrix algebra. The
+isomorphism sends $v_{i}$ to $E_{i,i}$, $e_{i}$ to $E_{i,i+1}$ and $e^{*}_{i}$ to
+$E_{i+1,i}$ for $1\le i\le n-1$.
+\end{example}
+
+The second example has one vertex and one loop, and there the reverse edge acts as
+the inverse variable \cite[p.~61]{Lopatkin2019}.
+
+\begin{example}[{\cite[Example~1.3, p.~61]{Lopatkin2019}}]\label{ex:leavitt:laurent}
+Let $R_{1}$ denote the graph with one vertex $v$ and one loop $e$. Then
+$L_{K}(R_{1})\cong K[t,t^{-1}]$, the Laurent polynomial algebra. The isomorphism is
+$v\mapsto 1$, $e\mapsto t$ and $e^{*}\mapsto t^{-1}$.
+\end{example}
+
+The algebra has a basis in normal form \cite[p.~63]{Lopatkin2019}. A word in the
+basis is a path, a reverse path, or a pair of paths of equal length that end at the
+same vertex \cite[p.~63]{Lopatkin2019}. The last pair must not both end in the same
+special edge \cite[p.~63]{Lopatkin2019}.
+
+\begin{theorem}[{\cite[Theorem~1.6, p.~63]{Lopatkin2019}}]\label{thm:leavitt:basis}
+Let $\Gamma$ be a row-finite graph and $K$ a commutative ring. Then the following
+elements form a $K$-basis $\mathcal B$ of the Leavitt path algebra $L(\Gamma)$:
+(1) the set of all vertices $V$; (2) the set of all paths $P$; (3) the set
+$P^{*}=\{p^{*}\colon p\in P\}$; (4) a set $M$ of words of the form $wh^{*}$, where
+$w=w_{0}\cdots w_{z}\in P$ and $h^{*}=[h_{0}\cdots h_{z}]^{*}=h^{*}_{z}\cdots h^{*}_{0}\in P^{*}$
+are paths that end at the same vertex $r(w)=r(h)$, with the condition that the edges
+$w_{z}$ and $h_{z}$ are either distinct or equal but not special.
+\end{theorem}
+
+Every derivation is fixed by its values on the generators
+\cite[pp.~63--64]{Lopatkin2019}. Those values are sums over the basis, and the
+coefficients satisfy three linear relations \cite[pp.~63--64]{Lopatkin2019}.
+
+\begin{theorem}[{\cite[Theorem~2.1, pp.~63--64]{Lopatkin2019}}]\label{thm:leavitt:form}
+Let $\Gamma$ be a row-finite graph and $K$ a commutative ring. Every derivation $D$
+of the Leavitt path algebra $L_{K}(\Gamma)$ can be described as follows:
+\begin{equation*}
+D(v)=\sum_{wh^{*}\in\mathcal B}F_{wh^{*}}(v)\cdot\mathrm{ad}_{wh^{*}}(v),
+\end{equation*}
+\begin{equation*}
+D(e)=\sum_{wh^{*}\in\mathcal B}F_{wh^{*}}(s(e))\mathrm{ad}_{wh^{*}}(e)
++\sum_{\substack{wh^{*}\in\mathcal B\\ s(w)=s(e),\ s(h)=r(e)}}F_{wh^{*}}(e)wh^{*},
+\end{equation*}
+\begin{equation*}
+D(e^{*})=\sum_{wh^{*}\in\mathcal B}F_{wh^{*}}(s(e))\mathrm{ad}_{wh^{*}}(e^{*})
++\sum_{\substack{wh^{*}\in\mathcal B\\ s(w)=r(e),\ s(h)=s(e)}}F_{wh^{*}}(e^{*})wh^{*},
+\end{equation*}
+for every $v\in V$ and $e\in E$. Further, almost all coefficients are zero, and they
+satisfy the relations
+\begin{equation*}
+F_{p}(e^{*})+F_{pf\!f^{*}}(e^{*})+F_{epf}(f)=0,\qquad epf\neq 0,
+\end{equation*}
+\begin{equation*}
+F_{[f\!pe]^{*}}(e^{*})+F_{p^{*}}(f)+F_{e[pe]^{*}}(f)=0,\qquad f\!pe\neq 0,
+\end{equation*}
+\begin{equation*}
+F_{w[fh]^{*}}(e^{*})+F_{ewh^{*}}(f)=0,\qquad w[fh]^{*}=pf\!f^{*},\ ewh=e[pe]^{*},
+\end{equation*}
+where $p,w,h\in P\cup V$ and $e,f\in E$ with $s(e)=s(f)$.
+\end{theorem}
+
+The derivations of Theorem~\ref{thm:leavitt:form} are generated by four families
+\cite[p.~64]{Lopatkin2019}. Each family is attached to a path or a pair of paths
+\cite[p.~64]{Lopatkin2019}.
+
+\begin{corollary}[{\cite[Corollary~2.1, p.~64]{Lopatkin2019}}]\label{cor:leavitt:generators}
+The $K$-module $\mathrm{Der}(L_{K}(\Gamma))$ is generated by the following set of
+derivations:
+\begin{enumerate}[label=(\arabic*)]
+\item $\bigcup_{pq^{*}\in\mathcal B}\{\mathrm{ad}_{pq^{*}}\}$;
+\item $\bigcup_{wh^{*}\in M,\ e\in E,\ s(w)=s(h)}\{D_{wh^{*}},D_{ee^{*}}\}$, where
+$D_{wh^{*}}(h_{0})=w[h/h_{0}]^{*}$, $D_{wh^{*}}(w_{0}^{*})=-[w/w_{0}]h^{*}$, and
+$D_{wh^{*}}=0$ otherwise;
+\item $\bigcup_{c\in P,\ s(c)=r(c)}\{D_{c}\}$, where $D_{c}(e)=ce$ for $e\in E$,
+$D_{c}(c_{0}^{*})=-[c/c_{0}]^{*}$, and $D_{c}=0$ otherwise;
+\item $\bigcup_{c\in P,\ s(c)=r(c)}\{D_{c^{*}}\}$, where $D_{c^{*}}(e^{*})=-[ce]^{*}$
+for $e\in E$, $D_{c^{*}}(c_{0}^{*})=[c/c_{0}]^{*}$, and $D_{c^{*}}=0$ otherwise.
+\end{enumerate}
+\end{corollary}
+
+Modulo the inner derivations, the same families generate the outer derivations, with
+explicit relations among them \cite[p.~78]{Lopatkin2019}. The relations record when a
+generator dies or splits \cite[p.~78]{Lopatkin2019}.
+
+\begin{theorem}[{\cite[Theorem~3.2, p.~78]{Lopatkin2019}}]\label{thm:leavitt:outer}
+Let $\Gamma=(V,E)$ be a row-finite graph and $L_{K}(\Gamma)$ the Leavitt path
+algebra over a commutative ring $K$. The $K$-module $HH^{1}(L_{K}(\Gamma))$ of outer
+derivations of $L_{K}(\Gamma)$ can be presented by the following sets of generators:
+\begin{enumerate}[label=(\arabic*)]
+\item $\bigcup_{wh^{*}\in M,\ e\in E,\ s(w)=s(h)}\{D_{wh^{*}},D_{ee^{*}}\}$, where
+$D_{ee^{*}}(e)=e$, $D_{ee^{*}}(e^{*})=-e^{*}$, and $D_{ee^{*}}=0$ otherwise, and
+$D_{wh^{*}}(h_{0})=w[h/h_{0}]^{*}$, $D_{wh^{*}}(w_{0}^{*})=-[w/w_{0}]h^{*}$, and
+$D_{wh^{*}}=0$ otherwise;
+\item $\bigcup_{c\in P,\ s(c)=r(c)}\{D_{c}\}$, where $D_{c}(e)=ce$ for every $e\in E$,
+$D_{c}(c_{0}^{*})=-[c/c_{0}]^{*}$, and $D_{c}=0$ otherwise;
+\item $\bigcup_{c\in P,\ s(c)=r(c)}\{D_{c^{*}}\}$, where $D_{c^{*}}(e^{*})=-[ce]^{*}$
+for every $e\in E$, $D_{c^{*}}(c_{0}^{*})=[c/c_{0}]^{*}$, and $D_{c^{*}}=0$ otherwise;
+\end{enumerate}
+and the following sets of relations among those generators:
+\begin{enumerate}[label=(\arabic*)]
+\item $D_{wh^{*}}=0$ whenever $|\{p\in P\colon r(p)=s(w)\}|<\infty$;
+\item $D_{wh^{*}}=\sum_{e\in E}D_{ew[eh]^{*}}$ whenever
+$|\{e\in E\colon r(e)=s(w)\}|<\infty$;
+\item if the edge $e$ is special, $s(e)=r(e)$,
+$\mathrm{supp}_{e}(s(e))\cap\mathrm{supp}_{e}(r(e))=\varnothing$, and both supports
+are finite, then
+\begin{equation*}
+D_{ee^{*}}=\alpha\!\!\sum_{\substack{f,g\in E\setminus\vartheta(V)\\ r(g)\in\mathrm{supp}_{e}(s(e)),\ s(f)\in\mathrm{supp}_{e}(s(e))}}\!\!(D_{gg^{*}}-D_{f\!f^{*}})
++\beta\!\!\sum_{\substack{f,g\in E\setminus\vartheta(V)\\ r(g)\in\mathrm{supp}_{e}(r(e)),\ s(f)\in\mathrm{supp}_{e}(r(e))}}\!\!(D_{gg^{*}}-D_{f\!f^{*}}),
+\end{equation*}
+with $\alpha,\beta\in K$ and $\alpha-\beta=1$;
+\item $D_{c}=D_{\zeta^{k}c}-\sum_{e\in E}D_{\zeta^{k}cee^{*}}$ whenever
+$\delta_{c_{0},\vartheta}\cdots\delta_{c_{k-1},\vartheta}=0$,
+$\delta_{c_{k},\vartheta}=1$ and $|\{p\in P\colon r(p)=s(c_{0}),\ p_{z}=c_{k}\}|<\infty$.
+\end{enumerate}
+\end{theorem}
+
+Over a field the dimension of the space of outer derivations has two possible values
+\cite[p.~79]{Lopatkin2019}. It is infinite exactly when the graph has an infinite
+path \cite[p.~79]{Lopatkin2019}.
+
+\begin{corollary}[{\cite[Corollary~3.8, p.~79]{Lopatkin2019}}]\label{cor:leavitt:dimension}
+Let $K$ be a field. For the vector space $HH^{1}(L_{K}(\Gamma))$ of outer
+derivations of the Leavitt path algebra $L_{K}(\Gamma)$ we have
+\begin{equation*}
+\dim HH^{1}(L_{K}(\Gamma))=
+\begin{cases}
+\infty, & \text{if there exists a path in }\Gamma\text{ with infinite length},\\
+0, & \text{otherwise}.
+\end{cases}
+\end{equation*}
+\end{corollary}
+
+By Corollary~\ref{cor:leavitt:dimension}, a Leavitt path algebra carries as many
+outer derivations as its graph has infinite paths. The record of the chapter is in
+Sections~\ref{sec:path-incidence:path} to this one, and
+Chapter~\ref{ch:polynomial-weyl} turns to algebras built from a polynomial ring.

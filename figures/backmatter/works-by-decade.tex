@@ -1,0 +1,21 @@
+% Works per decade, from atlas-census.py. Two bars are labelled because they
+% carry the argument: the 1680s entry is Leibniz, and the 2010s is the peak.
+\begin{tikzpicture}[font=\footnotesize, x=0.52cm, y=0.055cm]
+  \draw[->] (0,0) -- (16.4,0) node[right] {decade};
+  \draw[->] (0,0) -- (0,125) node[above] {works};
+  \foreach \y in {0,25,50,75,100} {
+    \draw[gray!40] (0,\y) -- (16,\y);
+    \node[left] at (0,\y) {\y};
+  }
+  % one bar per decade, in order, height from the census
+  \foreach \i/\d/\v in {1/1680/1, 2/1880/1, 3/1890/1, 4/1910/2, 5/1920/3,
+                        6/1930/5, 7/1940/6, 8/1950/7, 9/1960/13, 10/1970/27,
+                        11/1980/26, 12/1990/50, 13/2000/59, 14/2010/114,
+                        15/2020/105} {
+    \fill[hbblue!70] (\i-0.32,0) rectangle (\i+0.32,\v);
+    \node[below, rotate=45, anchor=east, font=\scriptsize] at (\i,-2) {\d};
+  }
+  \node[above, font=\scriptsize] at (1,1) {Leibniz};
+  \node[above, font=\scriptsize] at (14,114) {114};
+  \node[above, font=\scriptsize] at (15,105) {105};
+\end{tikzpicture}

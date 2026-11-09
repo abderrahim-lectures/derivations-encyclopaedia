@@ -1,0 +1,21 @@
+% The collection accumulated, from atlas-census.py. The curve is flat for two
+% centuries and then steep: half of everything was read in the last fifteen years.
+\begin{tikzpicture}[font=\footnotesize, x=0.52cm, y=0.032cm]
+  \draw[->] (0,0) -- (16.4,0) node[right] {decade};
+  \draw[->] (0,0) -- (0,440) node[above] {works to date};
+  \foreach \y in {0,100,200,300,400} {
+    \draw[gray!40] (0,\y) -- (16,\y);
+    \node[left] at (0,\y) {\y};
+  }
+  \draw[hbgold, very thick] plot coordinates {
+    (1,1) (2,2) (3,3) (4,5) (5,8) (6,13) (7,19) (8,26) (9,39) (10,66)
+    (11,92) (12,142) (13,201) (14,315) (15,420)
+  };
+  \foreach \i/\d/\v in {1/1680/1, 5/1920/8, 10/1970/66, 12/1990/142, 15/2020/420} {
+    \fill[hbblue] (\i,\v) circle (2.2pt);
+    \node[below right, font=\scriptsize] at (\i,\v) {\d};
+  }
+  % the halfway mark, which is what makes the shape arguable
+  \draw[gray, dashed] (0,210) -- (16,210);
+  \node[right, font=\scriptsize, gray] at (0.2,220) {half the collection};
+\end{tikzpicture}

@@ -1,0 +1,296 @@
+% STATUS: written 2026-11-05 (Freudenburg 2017, Drensky--Makar-Limanov 2009,
+% Drensky--Gupta 2005, Baltazar 2016, Mendes--Pan 2017, Rewri--Kour 2025,
+% Moulin Ollagnier--Nowicki 2011 and Bedratyuk 2005 read in full at the cited pages),
+% with additions of 2026-11-06 from Mishra--Mondal--Shukla 2026 (pp. 5, 11, 14).
+% Sources: Freudenburg2017, DrenskyMakarLimanov2009, DrenskyGupta2005,
+% Baltazar2016, MendesPan2017, RewriKour2025, MoulinOllagnierNowicki2011,
+% Bedratyuk2005Casimir, MishraMondalShukla2026Monomial, Li2015DarbouxMonomial,
+% MishraMondalShukla2025Simple.
+% Origins: the named families are defined from Freudenburg 2017 and the papers
+% that carry them; Weitzenbock 1932 and Shamsuddin 1977 could not be downloaded
+% and are cited through the recent sources that quote them (recorded below).
+\section{Derivations of polynomial algebras}\label{sec:polynomial-weyl:polynomial}
+
+The chapter returns to the polynomial ring, the first home of the
+derivative. the fourteenth problem of Hilbert asked whether certain rings of
+invariants are finitely generated, and the Jacobian conjecture asked
+whether a polynomial map with a unit Jacobian determinant is invertible
+\cite[p.~xii]{Freudenburg2017}. Derivations answer on both fronts, and
+the answers organize the section: kernels, the named families, and the
+kernel theorems.
+
+The named families live on $k[x_{1},\dots,x_{n}]$ with $k$ a field of
+characteristic zero. Section~\ref{sec:basic-theory:exponential} met the
+locally nilpotent derivation in general; Freudenburg makes it concrete on
+polynomial rings \cite[p.~76]{Freudenburg2017}. Recall: a derivation $D$
+is locally nilpotent when every element is killed by a high enough power
+of $D$ \cite[p.~21]{Freudenburg2017}. % claim-ok: recall of the source page of Definition def:basic-nilpotent, Freudenburg 2017 principle 2 region
+
+\begin{definition}[{\cite[p.~76]{Freudenburg2017}}]\label{def:pw:triangular}
+Let $B=k[x_{1},\dots,x_{n}]$ and $D\in\mathrm{Der}_{k}(B)$. The derivation
+$D$ is a \emph{triangular derivation} of $B$ if $D(x_{1})\in k$ and
+$D(x_{i})\in k[x_{1},\dots,x_{i-1}]$ for $i=2,\dots,n$. The derivation $D$
+is a \emph{monomial derivation} if each image $D(x_{i})$ is a monomial in
+$x_{1},\dots,x_{n}$. The derivation $D$ is an \emph{elementary derivation}
+if for some $j$ with $1\leq j\leq n$, $D(x_{i})=0$ for $1\leq i\leq j$ and
+$D(x_{i})\in k[x_{1},\dots,x_{j}]$ for $j+1\leq i\leq n$.
+\end{definition}
+
+Triangularity depends on the choice of coordinates, and every triangular,
+elementary or nice derivation of $k[x_{1},\dots,x_{n}]$ is locally
+nilpotent \cite[p.~76]{Freudenburg2017}. Every elementary derivation is
+both triangular and nice \cite[p.~76]{Freudenburg2017}. In one direction
+the converse holds after a permutation of the variables, as
+Proposition~\ref{prop:pw:monomial-triangular} states
+\cite[p.~76]{Freudenburg2017}.
+
+\begin{proposition}[{\cite[Proposition~3.4, p.~76]{Freudenburg2017}}]\label{prop:pw:monomial-triangular}
+For the polynomial ring $B=k[x_{1},\dots,x_{n}]$, every locally nilpotent
+monomial derivation of $B$ is triangular relative to some ordering of
+$x_{1},\dots,x_{n}$.
+\end{proposition}
+
+Monomial derivations have a second home: the body of constants.
+Definition~\ref{def:pw:triangular} states them through the images of
+single variables, and Moulin Ollagnier and Nowicki study them for their
+rings of constants \cite[p.~3138]{MoulinOllagnierNowicki2011}. Their
+setting adds the field of rational constants, and a classical example of
+the family sits inside it \cite[p.~3139]{MoulinOllagnierNowicki2011}.
+
+\begin{example}[{\cite[p.~3139]{MoulinOllagnierNowicki2011}}]\label{ex:pw:jouanolou}
+The \emph{Jouanolou derivation} with integer parameters $n\geq 2$ and
+$s\geq 1$ is the derivation $J(n,s)$ of $k[x_{1},\dots,x_{n}]$ given by
+$d(x_{1})=x_{2}^{s}$, $d(x_{2})=x_{3}^{s}$, \dots, $d(x_{n-1})=x_{n}^{s}$
+and $d(x_{n})=x_{1}^{s}$. Jouanolou proved in 1979 that $J(3,s)$ has no
+nontrivial Darboux polynomial for every $s\geq 2$
+\cite[p.~3139]{MoulinOllagnierNowicki2011}.
+\end{example}
+
+Li carries the question of Darboux polynomials to a monomial derivation of
+four variables \cite[p.~1]{Li2015DarbouxMonomial}. A polynomial $F$ is a
+Darboux polynomial of $d$ when $d(F)=\Lambda F$ for some polynomial
+$\Lambda$ \cite[p.~1]{Li2015DarbouxMonomial}. For a normal monomial
+derivation with $\det(\beta_{ij}-I)\neq 0$, the absence of Darboux
+polynomials is the same as a trivial field of constants
+\cite[p.~2]{Li2015DarbouxMonomial}. Li treats the case where that
+determinant vanishes, for the derivation
+$d(x)=t^{2}$, $d(y)=zt$, $d(z)=y^{2}$, $d(t)=xy$
+\cite[p.~2]{Li2015DarbouxMonomial}.
+
+\begin{theorem}[{\cite[Theorem~2.3, p.~3]{Li2015DarbouxMonomial}}]\label{thm:pw:darboux-fours}
+Let $d$ be the monomial derivation of $k[x,y,z,t]$ with $d(x)=t^{2}$,
+$d(y)=zt$, $d(z)=y^{2}$ and $d(t)=xy$. Then $d$ has no Darboux polynomial
+if and only if its field of constants is trivial.
+\end{theorem}
+
+So the equivalence survives the vanishing of the determinant, for this one
+case. The proof restricts a possible Darboux polynomial to its homogeneous
+parts and finds a contradiction from the degrees
+\cite[p.~3]{Li2015DarbouxMonomial}.
+
+The nicest monomial way into the kernel is linear. A derivation of
+$k[x_{1},\dots,x_{n}]$ is linear when it maps the variables into their own
+linear span \cite[p.~394]{DrenskyGupta2005}, and a Weitzenb\"ock
+derivation is the linear locally nilpotent case. Weitzenb\"ock studied it
+in 1932, and the name comes with his theorem
+\cite[p.~41]{DrenskyMakarLimanov2009}. His paper could not be downloaded
+for this book; the definition and the theorem are quoted here from Drensky
+and Makar-Limanov.
+
+\begin{definition}[{\cite[p.~41]{DrenskyMakarLimanov2009}}]\label{def:pw:weitzenbock}
+A derivation $\Delta$ of the polynomial algebra $K[Z]=K[z_{1},\dots,z_{m}]$
+over a field $K$ of characteristic zero is a \emph{Weitzenb\"ock
+derivation} if it is linear and locally nilpotent, that is, $\Delta$ is a
+nilpotent linear operator on the vector space
+$Kz_{1}\oplus\cdots\oplus Kz_{m}$ extended to a derivation of $K[Z]$.
+\end{definition}
+
+The next theorem is the finiteness result of Weitzenb\"ock.
+
+\begin{theorem}[{\cite[Weitzenb\"ock 1932, p.~42]{DrenskyMakarLimanov2009}}]\label{thm:pw:weitzenbock}
+If $\Delta$ is a Weitzenb\"ock derivation of $K[Z]$, then the algebra of
+constants $K[Z]^{\Delta}$ is a finitely generated algebra.
+\end{theorem}
+
+A Weitzenb\"ock derivation is determined up to a change of basis by its
+Jordan normal form, whose cells are upper triangular with zero diagonal
+\cite[p.~42]{DrenskyMakarLimanov2009}. For two-by-two cells only, Nowicki
+made a conjecture on the generators of the kernel, and Drensky and
+Makar-Limanov proved it \cite[pp.~42--45]{DrenskyMakarLimanov2009}.
+
+\begin{theorem}[{\cite[Theorem~3, p.~44]{DrenskyMakarLimanov2009}}]\label{thm:pw:nowicki}
+Let $X=\{x_{1},\dots,x_{n}\}$, $Y=\{y_{1},\dots,y_{n}\}$, $n\geq 1$, and
+let $\Delta$ be the Weitzenb\"ock derivation of $K[X,Y]$ defined by
+$\Delta=\sum_{i=1}^{n} x_{i}\,\partial/\partial y_{i}$. The algebra of
+constants $K[X,Y]^{\Delta}$ is generated by $x_{i}$, $i=1,\dots,n$, and
+$u_{ij}=x_{i}y_{j}-x_{j}y_{i}$, $1\leq i<j\leq n$.
+\end{theorem}
+
+The generators of such a kernel can also be built one at a time. Bedratyuk
+copies the Casimir elements of a Lie algebra over to a derivation
+\cite[p.~2]{Bedratyuk2005Casimir}. For a derivation $D$ of $k[X]$ he takes
+two dual $D$-modules $U$ and $U^{*}$, with bases $u_{i}$ and $u^{*}_{i}$, and
+forms the element $\Delta(U,U^{*})=\sum_{i}u_{i}u^{*}_{i}$
+\cite[Definition~2.4, p.~2]{Bedratyuk2005Casimir}. That element lies in the
+kernel of $D$ \cite[Theorem~2.2, p.~2]{Bedratyuk2005Casimir}.
+
+\begin{theorem}[{\cite[Theorem~2.2, p.~2]{Bedratyuk2005Casimir}}]\label{thm:pw:casimir-in-kernel}
+Let $D$ be a derivation of $k[X]$ and let $U$ and $U^{*}$ be two dual
+$D$-modules in $k[X]$. Then the Casimir element $\Delta(U,U^{*})$ belongs to
+the kernel $k[X]^{D}$.
+\end{theorem}
+
+For a linear derivation the converse holds, and every homogeneous element of
+the kernel is such an element
+\cite[Theorem~2.3, pp.~2--3]{Bedratyuk2005Casimir}. The Weitzenb\"ock
+derivation of Definition~\ref{def:pw:weitzenbock} is linear, so its kernel is
+generated by Casimir elements \cite[pp.~3--4]{Bedratyuk2005Casimir}. That
+gives an algorithm, and Bedratyuk runs it to list the kernel for at most six
+variables \cite[p.~1]{Bedratyuk2005Casimir}.
+
+The kernel theorems of Weitzenb\"ock and Nowicki describe the constants of
+a linear derivation. Nonlinear families raise a second question: which
+derivations of $k[x,y]$ generate no invariant ideals at all
+\cite[p.~2031]{Baltazar2016}? A derivation $d$ of a ring is simple when
+the only $d$-stable ideals are $0$ and the ring itself
+\cite[p.~2031]{Baltazar2016}; Shamsuddin built such derivations in 1977,
+as recalled through Lequain in
+Section~\ref{sec:polynomial-weyl:ore-differential}.
+
+\begin{definition}[{\cite[p.~2033]{Baltazar2016}}]\label{def:pw:shamsuddin}
+A derivation $d$ of $k[x,y]$ is a \emph{Shamsuddin derivation} if it has
+the form
+\begin{equation*}
+d=\partial_{x}+(a(x)\,y+b(x))\,\partial_{y},
+\end{equation*}
+where $a(x),b(x)\in k[x]$.
+\end{definition}
+
+Among all derivations of $k[x,y]$, the simple ones turn out to be lonely:
+Mendes and Pan prove that no nontrivial automorphism of $k[x,y]$ commutes
+with them. Write $\mathrm{Aut}(D)$ for the subgroup of
+$\mathrm{Aut}_{K}(K[x,y])$ whose elements commute with $D$; this is the
+\emph{isotropy group} of $D$ \cite[p.~2]{MendesPan2017}. Their theorem
+reads as follows \cite[p.~2]{MendesPan2017}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~2]{MendesPan2017}}]\label{thm:pw:isotropy-simple}
+Let $K$ be an algebraically closed field of characteristic zero and let
+$D$ be a simple derivation of $K[x,y]$. Then the isotropy group
+$\mathrm{Aut}(D)$ of $D$ in $\mathrm{Aut}_{K}(K[x,y])$ is trivial.
+\end{theorem}
+
+For Shamsuddin derivations the converse holds under a hypothesis, as the
+companion theorem states \cite[p.~2]{MendesPan2017}.
+
+\begin{theorem}[{\cite[Theorem~2, p.~2]{MendesPan2017}}]\label{thm:pw:shams-simple}
+Let $D$ be a Shamsuddin derivation $D=\partial_{x}+(ay+b)\partial_{y}$ of
+$K[x,y]$ with $a\neq 0$. Then $D$ is simple if and only if
+$\mathrm{Aut}(D)=\{\mathrm{id}\}$.
+\end{theorem}
+
+A third named family comes from ecology \cite[p.~2]{RewriKour2025}. It
+looks quadratic rather than linear, and it models the predator and prey
+populations through a system of differential equations
+\cite[p.~2]{RewriKour2025}.
+
+\begin{definition}[{\cite[(1), p.~2]{RewriKour2025}}]\label{def:pw:lotka-volterra}
+Let $K$ be a field of characteristic zero, $n\geq 3$, and let the indices
+of the variables $x_{1},\dots,x_{n}$ of $K[X]=K[x_{1},\dots,x_{n}]$ be
+regarded as elements of $\mathbb{Z}_{n}$. A $K$-derivation
+$d\colon K[X]\to K[X]$ of the form
+\begin{equation*}
+d(x_{i})=x_{i}\,(x_{i-1}-C_{i}\,x_{i+1})
+\end{equation*}
+where $C_{i}\in K$ for all $i\in\mathbb{Z}_{n}$, is a
+\emph{Lotka--Volterra derivation}.
+\end{definition}
+
+Lotka--Volterra derivations are not simple \cite[p.~2]{RewriKour2025}, so
+Theorem~\ref{thm:pw:isotropy-simple} does not speak for them. Rewri and
+Kour compute their isotropy groups directly
+\cite[pp.~21--23]{RewriKour2025}.
+
+\begin{theorem}[{\cite[Theorem~4.1, p.~21]{RewriKour2025}}]\label{thm:pw:lv-finite}
+Let $d$ be the Lotka--Volterra derivation of $K[X]$ as in
+Definition~\ref{def:pw:lotka-volterra}. If $C_{i}\in K^{*}$ for all $i$,
+then the isotropy group of $d$ is finite.
+\end{theorem}
+
+When all the coefficients agree and lie in $\{\pm1\}$, the group is dihedral.
+
+\begin{corollary}[{\cite[Corollary~4.3, p.~23]{RewriKour2025}}]\label{cor:pw:lv-dihedral}
+Let $d$ be the Lotka--Volterra derivation of $K[X]$ as in
+Definition~\ref{def:pw:lotka-volterra}. If $C_{1}=\dots=C_{n}$ and
+$C_{1}\in\{\pm 1\}$, then the isotropy group of $d$ is isomorphic to the
+dihedral group of order $2n$.
+\end{corollary}
+
+The monomial family of Definition~\ref{def:pw:triangular} also has a known
+isotropy group. Mishra, Mondal and Shukla treat a monomial derivation whose
+exponent matrix has nonzero determinant
+\cite[Theorem~3.1, p.~5]{MishraMondalShukla2026Monomial}. Such an
+automorphism acts on the variables one at a time, up to a diagonal change
+\cite[Theorem~3.1, p.~5]{MishraMondalShukla2026Monomial}.
+
+\begin{theorem}[{\cite[Theorem~3.1, p.~5]{MishraMondalShukla2026Monomial}}]\label{thm:pw:monomial-isotropy}
+Let $k$ be a field of characteristic zero and let $d$ be the monomial
+derivation of $k[x_{1},\dots,x_{n}]$ with $d(x_{i})=\alpha_{i}x_{1}^{\beta_{i1}}\cdots x_{n}^{\beta_{in}}$
+for $\alpha_{i}\in k^{*}$ and non-negative integers $\beta_{ij}$. Put
+$A=(\beta_{ij}-\delta_{ij})$ and suppose that $\beta_{ii}\geq 1$ for all
+$i$, that $\det A\neq 0$, and that the field of rational constants of $d$ is
+$k$. Let $\rho\in\operatorname{Aut}(k[X])$. Then $\rho$ commutes with $d$ if
+and only if there are a permutation $\sigma$ and constants $c_{1},\dots,c_{n}\in k^{*}$
+with $\rho(x_{i})=c_{i}x_{\sigma(i)}$, $P_{\sigma}A=AP_{\sigma}$ and
+$\prod_{t}c_{t}^{a_{ti}}=\alpha_{\sigma(i)}/\alpha_{i}$ for all $i$.
+\end{theorem}
+
+For the Jouanolou-type derivation $J=\sum_{i}x_{i}^{r}\partial_{x_{\sigma(i)}}$
+the commuting automorphisms are again monomial
+\cite[Theorem~4.2, p.~11]{MishraMondalShukla2026Monomial}. Each one is fixed
+by a permutation that commutes with $\sigma$ and by constants that satisfy
+$\lambda_{\sigma(i)}=\lambda_{i}^{r}$ \cite[Theorem~4.2, p.~11]{MishraMondalShukla2026Monomial}.
+The full group is then a semidirect product written out cycle by cycle
+\cite[Theorem~4.6, p.~14]{MishraMondalShukla2026Monomial}.
+
+A simple derivation that takes no unit value has a small group too.
+Mishra, Mondal and Shukla extend a non-invertible simple derivation of an
+initial block of variables to more variables
+\cite[p.~1]{MishraMondalShukla2025Simple}. Under their conditions the
+commuting group of the extension lies in the translations
+\cite[Theorem~2.4, p.~5]{MishraMondalShukla2025Simple}.
+
+\begin{theorem}[{\cite[Theorem~2.4, p.~5]{MishraMondalShukla2025Simple}}]\label{thm:pw:noninvertible-simple}
+Let $i,n$ be positive integers with $i\geq 2$ and $n>i$. Let $d_{i}$ be a
+simple derivation of $k[x_{1},\dots,x_{i}]$ that satisfies the three
+conditions of the cited theorem, and let $d_{n}$ extend it to
+$k[x_{1},\dots,x_{n}]$ with $d_{n}(x_{j})\in k[x_{j-1}]\setminus k$ for
+$i+1\leq j\leq n$. Then the commuting group of $d_{n}$ is
+$\{(x_{1},\dots,x_{n-1},x_{n}+c)\mid c\in k\}$.
+\end{theorem}
+
+So the isotropy group is as small as it can be, a one-parameter group of
+translations \cite[p.~1]{MishraMondalShukla2025Simple}. This continues the
+pattern of Theorem~\ref{thm:pw:isotropy-simple}: simplicity leaves almost no
+symmetry.
+
+The named families of the section return again in the geometry of
+polynomial maps. Rentschler classified the planar case in 1968: every
+nonzero locally nilpotent derivation of $k[x,y]$ is conjugate, by a tame
+automorphism, to a triangular one \cite[Theorem~4.1, p.~113]{Freudenburg2017}.
+
+\begin{theorem}[{\cite[Theorem~4.1, p.~113]{Freudenburg2017}}]\label{thm:pw:rentschler}
+Let $k[x,y]=k^{[2]}$ and let $D\in\mathrm{LND}(k[x,y])$ be nonzero. There
+exists $p(x)\in k[x]$ and a tame automorphism $\alpha\in\mathrm{GA}_{2}(k)$
+such that $\alpha D\alpha^{-1}=p(x)\,\partial_{y}$.
+\end{theorem}
+
+the theorem of Rentschler also gives the theorem of Jung on planar automorphisms as
+a corollary \cite[p.~113]{Freudenburg2017}. The Jacobian conjecture closes
+the section: it asks whether a polynomial endomorphism $F$ of
+$\mathbb{A}^{n}_{k}$ with $\det J(F)$ a nonzero constant is an automorphism
+\cite[p.~1]{BelovKanelKontsevich2007}. The conjecture has a formulation in
+derivations: if the Jacobian derivation $\Delta_{f}$ of
+$f=(f_{1},\dots,f_{n-1})$ has a slice $s$, then $k[f_{1},\dots,f_{n-1},s]$
+is the whole polynomial ring \cite[p.~81]{Freudenburg2017}. The section
+that follows moves the same question to the Weyl algebra, where it is the
+Dixmier conjecture \cite[p.~241]{Dixmier1968}.

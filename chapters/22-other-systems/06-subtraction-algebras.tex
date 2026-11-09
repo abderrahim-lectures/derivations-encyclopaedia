@@ -1,0 +1,88 @@
+% STATUS: rewritten 2026-11-05; every claim is cited.
+\section{Subtraction algebras}\label{sec:other-systems:subtraction-algebras}
+
+Here the last section kept only an implication.
+Schein went one step further and kept only a difference
+\cite[p.~509]{OzturkCeven2009}. He studied systems of functions closed
+under
+composition and set difference \cite[p.~509]{OzturkCeven2009}.
+He called the second part by itself a
+subtraction algebra \cite[p.~509]{OzturkCeven2009}.
+Its axioms are three short identities
+\cite[p.~510]{OzturkCeven2009}.
+
+\begin{definition}[{\cite[p.~510]{OzturkCeven2009}}]\label{def:other:subtraction-algebra}
+An algebra $(X, -)$ with a single binary operation $-$ is a
+\emph{subtraction algebra} if, for all $x, y, z \in X$,
+\textup{(S1)} $x - (y - x) = x$,
+\textup{(S2)} $x - (x - y) = y - (y - x)$, and
+\textup{(S3)} $(x - y) - z = (x - z) - y$.
+The subtraction determines an order on $X$ by $a \le b$ if and only if
+$a - b = 0$, where $0 = a - a$ does not depend on the choice of $a$. The
+ordered set $(X, \le)$ is then a semi-Boolean algebra: a meet semilattice
+with zero $0$ in which every interval $[0, a]$ is a Boolean algebra, with
+$a \wedge b = a - (a - b)$ \cite[p.~510]{OzturkCeven2009}.
+\end{definition}
+
+{\"O}zt{\"u}rk and {\c{C}}even worked on a wider class. For $a, b \in X$
+write $G(a, b) = \{x \in X : x - a \le b\}$. The algebra $X$ is a
+\emph{complicated subtraction algebra} (a \emph{c-subtraction algebra})
+when every $G(a, b)$ has a greatest element
+\cite[Definition~2.3, p.~511]{OzturkCeven2009}. This greatest element is written
+$a + b$ \cite[Definition~2.3, p.~511]{OzturkCeven2009}. It is the least
+upper bound of $a$ and $b$
+\cite[Definition~2.3, p.~511]{OzturkCeven2009}. Their derivation uses the
+meet and this addition.
+
+\begin{definition}[{\cite[Definition~3.1, p.~511]{OzturkCeven2009}}]\label{def:other:subtraction-derivation}
+Let $X$ be a c-subtraction algebra. A function $d \colon X \to X$ is a
+\emph{derivation} on $X$ if
+\[
+d(x \wedge y) = (dx \wedge y) + (x \wedge dy)
+\qquad (x, y \in X).
+\]
+\end{definition}
+
+As on a lattice, every derivation is decreasing: $dx \le x$ for all $x$
+\cite[Proposition~3.4, p.~512]{OzturkCeven2009}. The two-sided bound of
+Xin, Li and Lu has an exact analogue
+\cite[Theorem~3.6, p.~512]{OzturkCeven2009}.
+
+\begin{theorem}[{\cite[Theorem~3.6, p.~512]{OzturkCeven2009}}]\label{thm:other:ozturk-ceven-36}
+Let $X$ be a c-subtraction algebra and $d$ a derivation on $X$. Then
+\[
+dx \wedge dy \le d(x \wedge y) \le dx + dy
+\qquad (x, y \in X).
+\]
+\end{theorem}
+
+The identity criterion of lattices also carries over
+\cite[Theorem~3.10, p.~513]{OzturkCeven2009}.
+
+\begin{theorem}[{\cite[Theorem~3.10, p.~513]{OzturkCeven2009}}]\label{thm:other:ozturk-ceven-310}
+Let $X$ be a c-subtraction algebra and $d$ a derivation on $X$. Then the
+following are equivalent: \textup{(i)} $d$ is the identity derivation;
+\textup{(ii)} $d(x + y) = (dx + y) \wedge (x + dy)$ for all $x, y \in X$;
+\textup{(iii)} $d$ is one-to-one; \textup{(iv)} $d$ is onto.
+\end{theorem}
+
+The same paper defines the first generalized derivation on a subtraction
+algebra \cite[Definition~3.11, p.~513]{OzturkCeven2009}.
+
+\begin{definition}[{\cite[Definition~3.11, p.~513]{OzturkCeven2009}}]\label{def:other:subtraction-generalized}
+Let $X$ be a c-subtraction algebra and $d \colon X \to X$ a derivation.
+A function $D \colon X \to X$ is a \emph{generalized derivation
+determined by $d$} if
+\[
+D(x \wedge y) = Dx \wedge y + x \wedge dy
+\qquad (x, y \in X).
+\]
+\end{definition}
+
+So this last family completes the list of systems in the title of the
+chapter. The open questions they leave are collected
+in Appendix~\ref{app:questions}.
+
+Arzanesh, Shirazi and Hosseini carry the notion of a generalized shift to any
+algebra that has derivations, and read the shift through them
+\cite[Abstract, p.~1]{ArzaneshShiraziHosseini2021}.

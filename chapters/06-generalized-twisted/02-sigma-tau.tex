@@ -1,0 +1,312 @@
+% STATUS: written 2026-11-04 (Chou and Liu 2009, De Filippis and Fosner 2012, Huang 2018 read in full)
+% STATUS: extended 2026-11-06 (Chaudhuri 2020, Manju and Sharma 2026 (both papers) and Pandey and Pandey 2023 read in full from the library PDFs)
+% STATUS: extended 2026-11-07 (Chang 2008, Guven 2013, Argac and Albas 2002
+% and Dhara, Ali and Das 2016 read in full from the library PDFs)
+% Sources read in full: Chou and Liu 2009 (pp. 259--270); De Filippis and Fosner 2012 (pp. 885--898); Huang 2018 (pp. 891--898); Chaudhuri 2020 (pp. 2--3, 6--7); Manju and Sharma 2026 Twisted (pp. 3, 9, 11); Manju and Sharma 2026 Number Rings (pp. 4, 12, 17, 24--26); Pandey and Pandey 2023 (pp. 2--4, 18);
+% Chang 2008 (pp. 1641--1650); Guven 2013 (pp. 1--7 of the online-first PDF);
+% Argac and Albas 2002 (pp. 977--984); Dhara, Ali and Das 2016 (pp. 1--10);
+% Dhara 2019 (pp. 1--14 of the online-first PDF); Dhara 2019 Ferrara (pp. 1--14
+% of the accepted PDF).
+\section{$(\sigma,\tau)$-derivations and skew derivations}\label{sec:generalized-twisted:sigma-tau}
+
+The generalized derivations of Definition~\ref{def:gen:giderivation} keep
+the right side of the product rule intact. The next line of maps weakens
+both sides at once, turning one factor by an endomorphism
+\cite[p.~892]{Huang2018}.
+
+\begin{definition}[{\cite[p.~892]{Huang2018}}]\label{def:gen:alphabeta}
+Let $R$ be a ring and let $\alpha$ and $\beta$ be endomorphisms of $R$. An
+additive mapping $d\colon R\to R$ is said to be an
+\emph{$(\alpha,\beta)$-derivation} if $d(xy)=d(x)\alpha(y)+\beta(x)d(y)$
+holds for all $x,y\in R$.
+\end{definition}
+
+The ordinary derivations are the case $\alpha=\beta=1_{R}$, and the skew
+derivations of the theory of rings of quotients are the case $\beta=1_{R}$
+with $\alpha$ an automorphism \cite[p.~260]{ChouLiu2009}.
+
+\begin{definition}[{\cite[p.~260]{ChouLiu2009}}]\label{def:gen:sigma}
+Let $\sigma$ be an automorphism of $R$. A \emph{$\sigma$-derivation}
+$\delta\colon R\to R$ is a mapping satisfying $\delta(r+s)=\delta(r)+\delta(s)$
+and $\delta(rs)=\sigma(r)\delta(s)+\delta(r)s$ for all $r,s\in R$. For
+brevity, $\sigma$-derivations are generally called \emph{skew derivations}.
+\end{definition}
+
+Some authors twist the left factor instead, and the two conventions agree
+after the names of the two maps are exchanged.
+
+\begin{definition}[{\cite[p.~885]{DeFilippisFosner2012}}]\label{def:gen:alpha}
+Let $\alpha$ be an automorphism of a ring $R$. An additive mapping
+$D\colon R\to R$ is called an \emph{$\alpha$-derivation} (or a skew
+derivation) on $R$ if $D(xy)=D(x)y+\alpha(x)D(y)$ for all $x,y\in R$. In
+this case $\alpha$ is called the associated automorphism of $D$.
+\end{definition}
+
+The simplest $\sigma$-derivation is the map $\sigma-1_{R}$, and
+$1_{R}$-derivations are ordinary derivations; the concept generalizes both
+derivations and automorphisms \cite[p.~260]{ChouLiu2009}. An element $b$ of
+the right Martindale quotient ring gives the \emph{inner} $\alpha$-derivation
+$D(x)=bx-\alpha(x)b$ \cite[p.~885]{DeFilippisFosner2012}. Generalized
+derivations and skew derivations are two natural generalizations of the same
+notion, and they meet in the expected way \cite[p.~892]{Huang2018}.
+
+\begin{definition}[{\cite[p.~892]{Huang2018}}]\label{def:gen:alphabeta-gen}
+Let $R$ be a ring and let $\alpha$ and $\beta$ be endomorphisms of $R$. An
+additive mapping $F\colon R\to R$ is called a \emph{generalized
+$(\alpha,\beta)$-derivation} on $R$ if there exists an
+$(\alpha,\beta)$-derivation $d\colon R\to R$ such that
+$F(xy)=F(x)\alpha(y)+\beta(x)d(y)$ holds for all $x,y\in R$.
+\end{definition}
+
+A classical theorem re-enters through a twisted version, since Chou and Liu
+extended the Engel theorem of Lanski from derivations to $\sigma$-derivations
+\cite[p.~260]{ChouLiu2009}.
+
+\begin{theorem}[{\cite[Theorem~1.1, p.~260]{ChouLiu2009}}]\label{thm:gen:chouliu-engel}
+Let $R$ be a prime ring and $L$ a noncommutative Lie ideal of $R$. Suppose
+that $\delta$ is a nonzero $\sigma$-derivation of $R$ such that
+$[\delta(x),x]_{k}=0$ for all $x\in L$, where $k$ is a fixed positive
+integer. Then $\operatorname{char}R=2$ and $R\subseteq M_{2}(F)$ for some
+field $F$.
+\end{theorem}
+
+A power identity in one variable forces a skew derivation to be ordinary,
+unless the ring satisfies a small standard identity
+\cite[p.~886]{DeFilippisFosner2012}.
+\begin{theorem}[{\cite[Theorem~1.2, p.~886]{DeFilippisFosner2012}}]\label{thm:gen:defilippis-fosner}
+Let $m,n,r$ be nonzero fixed positive integers, $R$ a $2$-torsion free prime
+ring, $L$ a non-central Lie ideal of $R$, and $D\colon R\to R$ a skew
+derivation of $R$. If
+\[
+E(x)=D(x^{m+n+r})-D(x^{m})x^{n+r}-x^{m}D(x^{n})x^{r}-x^{m+n}D(x^{r})
+\]
+vanishes for all $x\in L$, then $D$ is a usual derivation of $R$ or $R$
+satisfies $s_{4}(x_{1},\dots,x_{4})$, the standard identity of degree $4$.
+\end{theorem}
+
+The theorem of Herstein on nilpotent values has a twisted form in that paper
+\cite[p.~893]{Huang2018}. Chang worked with right generalized
+$\beta$-derivations \cite[p.~893]{Huang2018}. Take a prime ring $R$ with a
+noncommutative Lie ideal $L$, and a right generalized $\beta$-derivation $f$ of
+$R$. If $f(x)^{n}=0$ for all $x\in L$, where $n$ is a fixed positive integer,
+then $f=0$ \cite[p.~893]{Huang2018}. The commutativity theorems
+of Section~\ref{sec:generalized-twisted:generalized} also survive in a
+nilpotent form \cite[pp.~893--894]{Huang2018}.
+
+\begin{theorem}[{\cite[Theorem~2.4, p.~893]{Huang2018}}]\label{thm:gen:huang-semiprime}
+Let $R$ be a semiprime ring and $n$ a fixed positive integer. If $R$ admits
+a generalized derivation $F$ associated with a nonzero derivation $d$ such
+that $(F(x\circ y)-F(x)\circ y)^{n}=0$ for all $x,y\in R$, then $R$ is
+commutative.
+\end{theorem}
+
+The anti-commutator can be replaced by the commutator, with the same
+conclusion \cite[p.~894]{Huang2018}.
+
+\begin{theorem}[{\cite[Theorem~2.5, p.~894]{Huang2018}}]\label{thm:gen:huang-semiprime-comm}
+Let $R$ be a semiprime ring and $n$ a fixed positive integer. If $R$ admits
+a generalized derivation $F$ associated with a nonzero derivation $d$ such
+that $(F([x,y])-[F(x),y])^{n}=0$ for all $x,y\in R$, then $R$ is
+commutative.
+\end{theorem}
+
+Dhara, Ali and Das put an Engel condition on a generalized derivation itself
+\cite[p.~1]{DharaAliDas2016}. They allow the exponents in the repeated commutator
+to differ, one for the value of $F$ and one for each following argument
+\cite[p.~1]{DharaAliDas2016}.
+
+\begin{theorem}[{\cite[Theorem~1.1, p.~2]{DharaAliDas2016}}]\label{thm:gen:dhara-engel-lie}
+Let $R$ be a prime ring with Utumi quotient ring $U$, let $F$ be a nonzero
+generalized derivation of $R$, and let $L$ be a noncentral Lie ideal of $R$.
+Suppose that $[F(u^{n_{1}}),u^{n_{2}},\dots,u^{n_{k}}]=0$ for all $u\in L$, where
+$n_{1},n_{2},\dots,n_{k}\ge 1$ are fixed integers. Then $F(x)=\alpha x$ for some
+$\alpha\in C$ and all $x\in R$, or $R$ satisfies the standard identity $s_{4}$.
+\end{theorem}
+
+On the whole ring the second alternative disappears, and the map is a scalar
+multiple of the identity \cite[Theorem~1.2, p.~2]{DharaAliDas2016}. The same paper
+applies the result to continuous generalized derivations on Banach algebras
+\cite[p.~2]{DharaAliDas2016}.
+
+Chang had asked the Engel question for the twisted map itself
+\cite[p.~1641]{Chang2008}. A right generalized $\beta$-derivation is an additive
+map $f$ with $f(xy)=f(x)y+\beta(x)\delta(y)$ for a $\beta$-derivation $\delta$,
+where $\beta$ is an automorphism \cite[p.~1641]{Chang2008}. She requires that a
+fixed element $a$ sends the iterated commutator of $f(x)$ with $x$ to zero
+\cite[p.~1641]{Chang2008}.
+
+\begin{theorem}[{\cite[Main Theorem, p.~1642]{Chang2008}}]\label{thm:gen:chang-engel}
+Let $R$ be a noncommutative prime ring and $a\in R$. Suppose that $f$ is a right
+generalized $\beta$-derivation of $R$ such that $a[f(x),x]_{k}=0$ for all $x\in R$,
+where $k$ is a fixed positive integer. Then $a=0$, or there exists $s$ in the
+extended centroid $C$ such that $f(x)=sx$ for all $x\in R$, except when $R$ is the
+ring of $2\times2$ matrices over the field with two elements.
+\end{theorem}
+
+The result extends an earlier one for a $\beta$-derivation
+\cite[p.~1641]{Chang2008}. The exception is genuine, and the proof separates the
+X-inner and X-outer cases for the automorphism \cite[p.~1647]{Chang2008}.
+
+G\"uven put a generalized $(\sigma,\tau)$-derivation on a pair of ideals and
+compared its bracket with the twisted bracket
+\cite[p.~1]{Guven2013}. Two ideals enter, and the twisted commutator is
+$[x,y]_{\alpha,\beta}=x\beta(y)-\alpha(y)x$
+\cite[p.~1]{Guven2013}. The main case is an identity between the values of the
+map and the twisted bracket itself.
+
+\begin{theorem}[{\cite[Theorem~4, p.~7]{Guven2013}}]\label{thm:gen:guven-bracket}
+Let $R$ be a prime ring and let $h\colon R\to R$ be a generalized
+$(1,\tau)$-derivation associated with a nonzero $(\lambda,\gamma)$-derivation $d$.
+Let $I$ and $J$ be nonzero ideals of $R$. If $h(x,y)_{\alpha,\beta}=(x,y)_{\alpha,\mu}$
+for all $x\in I$ and $y\in J$, or the same with a minus sign, then $R$ is
+commutative.
+\end{theorem}
+
+The author proves the companion statement for $h[x,y]_{\alpha,\beta}$ in place of
+$h(x,y)_{\alpha,\beta}$, again with both signs
+\cite[p.~1]{Guven2013}. The paper also contains a set of lemmas that move a
+centralizer of a twisted commutator from an ideal to the whole ring
+\cite[Theorem~1, p.~3]{Guven2013}.
+
+The twist of Definition~\ref{def:gen:alphabeta} takes one more parameter, and
+Bera, Dhara and Kar state it as follows \cite[p.~888]{BeraDharaKar2023}.
+
+\begin{definition}[{\cite[p.~888]{BeraDharaKar2023}}]\label{def:gen:b-generalized-skew}
+Let $R$ be a prime ring, $b\in Q_{r}$ and $\alpha$ an automorphism of $R$. A
+linear map $F\colon R\to Q_{r}$ is called a \emph{$b$-generalized skew
+derivation} of $R$ if there is a skew derivation $d$ of $R$ such that
+$F(xy)=F(x)y+b\alpha(x)d(y)$ holds for all $x,y\in R$.
+\end{definition}
+
+Here $Q_{r}$ is the right Martindale quotient ring of $R$
+\cite[p.~888]{BeraDharaKar2023}. The map $x\mapsto ax+b\alpha(x)c$ is such a
+derivation, and the authors call it inner \cite[p.~888]{BeraDharaKar2023}.
+Their main theorem decides an identity in two such maps on the values of a
+multilinear polynomial \cite[Theorem~1.1, p.~889]{BeraDharaKar2023}.
+
+\begin{theorem}[{\cite[Theorem~1.1, p.~889]{BeraDharaKar2023}}]\label{thm:gen:bera-dhara-kar}
+Let $R$ be a prime ring of characteristic different from $2$, $Z(R)$ its centre,
+$Q_{r}$ its right Martindale quotient ring, $C$ its extended centroid,
+$f(x_{1},\dots,x_{n})$ a non-central multilinear polynomial over $C$, $b\in Q_{r}$
+and $F,G$ two $b$-generalized skew derivations of $R$. If there is
+$a\in R\setminus Z(R)$ such that
+\[
+[a,F(f(r_{1},\dots,r_{n}))f(r_{1},\dots,r_{n})]
+=f(r_{1},\dots,r_{n})G\left(f(r_{1},\dots,r_{n})\right)
+\]
+for all $r_{1},\dots,r_{n}\in R$, then $f(x_{1},\dots,x_{n})^{2}$ is central
+valued on $R$, and there are $p,q\in Q_{r}$ with $F(x)=px$ and $G(x)=xq$ for all
+$x\in R$, where $[a,p]=q$.
+\end{theorem}
+
+So both maps of that identity are one-sided multiplications. The case $G=0$
+leaves one map, and the authors record it as Corollary~1.2
+\cite[Corollary~1.2, p.~889]{BeraDharaKar2023}.
+
+Dhara had proved the one-map case earlier, for a single generalized skew
+derivation \cite[p.~1]{Dhara2019Quaest}. His conclusion is the same pair of
+alternatives.
+
+\begin{theorem}[{\cite[Theorem~1.1, p.~3]{Dhara2019Quaest}}]\label{thm:gen:dhara-skew-poly}
+Let $R$ be a noncommutative prime ring of characteristic different from $2$, with
+extended centroid $C$, and let $f(X_{1},\dots,X_{n})$ be a multilinear polynomial
+over $C$ that is not central valued on $R$. Suppose that $F$ is a generalized skew
+derivation of $R$ and that $a\in R\setminus C$ satisfies
+$[a,[F(f(r)),f(r)]]\in Z(R)$ for all $r\in R^{n}$. Then $F(x)=\lambda x$ for some
+$\lambda\in C$ and all $x\in R$, or $F(x)=bx+xb+\lambda x$ for some $b$ in the right
+Martindale quotient ring and $f^{2}$ is central valued on $R$.
+\end{theorem}
+
+Dhara reads the second alternative as a centralizing condition on the set of
+commutators of the values \cite[Corollary~1.2, p.~3]{Dhara2019Quaest}. He needs
+that set to be nonzero, and then its centralizer is the center of the ring
+\cite[Corollary~1.2, p.~3]{Dhara2019Quaest}.
+
+A third paper of his puts the centralizing condition on a Lie
+ideal, where the two alternatives collapse to two explicit forms of the map
+\cite[p.~1]{Dhara2019Ferrara}. The characteristic here is not $2$ or $3$.
+
+\begin{theorem}[{\cite[Theorem~1.1, p.~2]{Dhara2019Ferrara}}]\label{thm:gen:dhara-skew-lie}
+Let $R$ be a prime ring of characteristic different from $2$ and $3$, with right
+Martindale quotient ring $Q_{r}$ and extended centroid $C$, let $F$ be a nonzero
+generalized skew derivation of $R$, and let $L$ be a noncentral Lie ideal of $R$.
+If $[[F(u),u],F(u)]\in Z(R)$ for all $u\in L$, then $F(x)=\lambda x$ for some
+$\lambda\in C$ and all $x\in R$, or $R$ satisfies the standard identity $s_{4}$ and
+$F(x)=ax+xa+\lambda x$ for some $a\in Q_{r}$ and $\lambda\in C$.
+\end{theorem}
+
+Dhara shows by example that neither the hypothesis that the ring is prime nor
+the exclusion of characteristic $3$ can be dropped \cite[p.~1]{Dhara2019Ferrara}.
+
+The same class carries a Jordan-type identity in two maps, and Pandey and Pandey
+settle it \cite[p.~3]{PandeyPandey2023bGeneralized}. Their two maps share one
+automorphism and act on the values of a noncentral multilinear polynomial
+\cite[Theorem~6, pp.~3--4]{PandeyPandey2023bGeneralized}. The theorem lists five
+possible forms for the pair \cite[Theorem~6, pp.~3--4]{PandeyPandey2023bGeneralized}.
+One form makes the polynomial central valued on the ring, and the others reduce
+the maps to one-sided multiplications or to a skew derivation
+\cite[Theorem~6, pp.~3--4]{PandeyPandey2023bGeneralized}. A single map that acts
+as a $2$-Jordan multiplier takes three forms, recorded as Corollary~21
+\cite[Corollary~21, p.~18]{PandeyPandey2023bGeneralized}.
+
+Over a commutative ring the class has a universal object, in the way the module
+of differentials serves ordinary derivations \cite[p.~3]{Chaudhuri2020SigmaTau}.
+Chaudhuri allows two different endomorphisms and a target bimodule
+\cite[p.~2]{Chaudhuri2020SigmaTau}. Her theorem factors every
+$(\sigma,\tau)$-derivation through one universal map
+\cite[Theorem~3.1, p.~3]{Chaudhuri2020SigmaTau}. The factorization is left linear
+when $\tau$ is invertible and right linear when only $\sigma$ is
+\cite[Theorem~3.1, p.~3]{Chaudhuri2020SigmaTau}. Over the ring of integers of a
+quadratic field the class has a complete description
+\cite[Theorem~4.2, pp.~6--7]{Chaudhuri2020SigmaTau}. Every $\mathbb{Z}$-linear
+map with $D(1)=0$ is a $(\sigma,\tau)$-derivation there, and a condition on the
+value at $\sqrt{d}$ decides whether it is inner
+\cite[Theorem~4.2, pp.~6--7]{Chaudhuri2020SigmaTau}.
+
+Number rings make the count of these maps explicit
+\cite[p.~9]{ManjuSharma2026Twisted}. For an integral extension $B=A[\theta]$ the
+$(\sigma,\tau)$-derivations are the $A$-linear maps with $D(1)=0$ that satisfy
+$n-1$ linear equations, one for each power of $\theta$
+\cite[Theorem~3.2, p.~9]{ManjuSharma2026Twisted}. Over a cyclotomic field with
+two different field automorphisms the resulting space has rank $\varphi(n)$
+\cite[Corollary~3.5, p.~11]{ManjuSharma2026Twisted}. The same authors count the
+maps on the rings of integers. For the $p$-th cyclotomic ring the module has rank
+$p-1$ \cite[Corollary~3.9, p.~17]{ManjuSharma2026NumberRings}. For the
+bi-quadratic ring $\mathbb{Z}[\sqrt{m},\sqrt{n}]$ it has rank $4$
+\cite[Corollary~3.19, p.~24]{ManjuSharma2026NumberRings}. On that ring they give a
+criterion for a map to be inner \cite[Theorem~3.22, p.~25]{ManjuSharma2026NumberRings}.
+They also show that non-inner ones exist
+\cite[Corollary~3.24, p.~26]{ManjuSharma2026NumberRings}.
+
+Arga\c{c} and Alba\c{s} gave the notion a form in the language of categories, for a map into a
+bimodule rather than into the ring \cite[p.~977]{ArgacAlbas2002}. A generalized
+$(\sigma,\tau)$-derivation there is a pair $(f,w)$ with
+$f(xy)=f(x)\tau(y)+\sigma(x)f(y)+\sigma(x)w\tau(y)$
+\cite[(2.6), p.~978]{ArgacAlbas2002}. The pair is inner when
+$f(x)=m\tau(x)+\sigma(x)n$ and $w=-m-n$
+\cite[(2.9), p.~978]{ArgacAlbas2002}.
+
+\begin{theorem}[{\cite[Theorem~3.1, p.~979]{ArgacAlbas2002}}]\label{thm:gen:argac-exact}
+Let $M$ be an $A/k$-bimodule. Suppose that $Am=0$ with $m\in M$ forces $m=0$, and
+that $\sigma\colon A\to A$ is surjective. Then the following sequence of
+$k$-modules is exact and splitting:
+\begin{equation*}
+0\longrightarrow M\longrightarrow \mathrm{gDer}^{(\sigma,\tau)}_{k}(A,M)
+\longrightarrow \mathrm{Der}^{(\sigma,\tau)}_{k}(A,M)\longrightarrow 0 .
+\end{equation*}
+\end{theorem}
+
+The middle term is the module of generalized $(\sigma,\tau)$-derivations, and the
+map from $M$ sends $m$ to the pair $(m_{l}\tau,-m)$
+\cite[Theorem~3.1, p.~979]{ArgacAlbas2002}. The authors prove the same for the
+Jordan and the Lie versions \cite[Theorems~4.1 and~4.2, pp.~981--982]{ArgacAlbas2002}.
+They also give examples of a generalized Jordan $(\sigma,\tau)$-derivation that is
+not a generalized $(\sigma,\tau)$-derivation, so the two classes stay apart in
+general \cite[Examples~4.1 and~4.3, pp.~982--983]{ArgacAlbas2002}.
+
+The two branches of the chapter now separate. % claim-ok: chapter road-map, the plan of the book
+Generalized derivations ask what the weakening does to commutativity and
+dependence theorems; the $(\alpha,\beta)$ line asks which maps absorb a twist
+by an endomorphism. % claim-ok: chapter road-map, the plan of the book
+The next section follows a special case of the twist, the $\sigma$-derivations
+built from an endomorphism alone. % claim-ok: chapter road-map, the plan of the book

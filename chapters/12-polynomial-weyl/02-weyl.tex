@@ -1,0 +1,84 @@
+% STATUS: written 2026-11-05 (Dixmier 1968 pp. 209--211 and 241--242 read;
+% Belov-Kanel--Kontsevich 2007 pp. 1--2 read).
+\section{The Weyl algebra and the problems of Dixmier}\label{sec:polynomial-weyl:weyl}
+
+Section~\ref{sec:polynomial-weyl:polynomial} closed with the Jacobian
+conjecture. This section follows it into the noncommutative world: the
+polynomial ring becomes the algebra of Definition~\ref{def:pw:weyl} below. % claim-ok: narration of the section plan, the definition carries the citation
+The conjecture becomes the first problem of Dixmier \cite[p.~241]{Dixmier1968}.
+Dixmier named the algebra in 1968, after a suggestion of Segal
+\cite[p.~209]{Dixmier1968}.
+
+\begin{definition}[{\cite[p.~209]{Dixmier1968}}]\label{def:pw:weyl}
+Let $k$ be a commutative field of characteristic $0$ and $n\geq1$ an
+integer. The \emph{$n$-th Weyl algebra} $A_{n}(k)$, or $A_{n}$, is the
+unital associative $k$-algebra with $2n$ generators
+$p_{1},q_{1},\dots,p_{n},q_{n}$ and the relations
+\[
+[p_{i},q_{i}]=1,\qquad [p_{i},p_{j}]=[q_{i},q_{j}]=[p_{i},q_{j}]=0
+\quad(i\neq j),
+\]
+and $A_{0}(k)=k$.
+\end{definition}
+
+The ordered products $p_{1}^{i_{1}}\cdots p_{n}^{i_{n}}q_{1}^{j_{1}}\cdots
+q_{n}^{j_{n}}$ form a basis of $A_{n}$ over $k$, and $A_{n}$ is a simple
+domain with center $k$, left and right Noetherian
+\cite[p.~210]{Dixmier1968}. The algebra is a model of the derivative:
+$A_{n}$ is the algebra of polynomial differential operators on affine
+$n$-space, with $q_{i}$ acting as multiplication by $x_{i}$ and $p_{i}$ as
+$\partial/\partial x_{i}$ \cite[p.~1]{BelovKanelKontsevich2007}. The
+derivations of the algebra are all inner \cite[p.~210]{Dixmier1968}.
+
+\begin{proposition}[{\cite[p.~210]{Dixmier1968}}]\label{prop:pw:weyl-inner}
+Every derivation of the Weyl algebra $A_{n}$ is inner.
+\end{proposition}
+
+The automorphisms are harder: the exponential of the locally nilpotent
+derivation $\operatorname{ad}(\lambda q^{n+1})$ gives a well-defined
+automorphism of $A_{1}$ \cite[p.~210]{Dixmier1968}. Dixmier posed six
+problems at the end of the paper \cite[p.~241]{Dixmier1968}, and the
+first is still open.
+
+\begin{remark}[{\cite[Probl\`eme 11.1, p.~241]{Dixmier1968}}]
+\label{rem:pw:dixmier-problem}
+Dixmier asked whether every endomorphism of $A_{1}$ is an automorphism:
+if $P$ and $Q$ in $A_{1}$ satisfy $[P,Q]=1$, do they generate $A_{1}$?
+The question in rank $n$ is now called the Dixmier conjecture
+\cite[p.~1]{BelovKanelKontsevich2007}.
+\end{remark}
+
+Belov-Kanel and Kontsevich tied the conjecture back to the polynomial
+thread of Section~\ref{sec:polynomial-weyl:polynomial}. Their theorem
+makes the two conjectures one question \cite[p.~2]{BelovKanelKontsevich2007}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~2]{BelovKanelKontsevich2007}}]
+\label{thm:pw:bkk}
+The Jacobian conjecture in dimension $2n$ implies the Dixmier conjecture
+in rank $n$. In particular the stable conjectures $JC_{\infty}$ and
+$DC_{\infty}$ are equivalent.
+\end{theorem}
+
+The implication $DC_{n}\Rightarrow JC_{n}$ was already known
+\cite[p.~1]{BelovKanelKontsevich2007}. Theorem~\ref{thm:pw:bkk} is the
+reverse, so the two threads of the chapter close on the same question. % claim-ok: Theorem 1 of the cited source states the equivalence
+
+The conjecture is open, and this section states it as a problem. % claim-ok: own signpost introducing the moved problem, which carries its own citation
+
+\begin{problem}[{\cite[p.~1]{BelovKanelKontsevich2007}}]\label{prob:open:dixmier}
+Let $A_{n,k}$ be the $n$-th Weyl algebra over a field $k$ of characteristic $0$.
+Is every algebra endomorphism of $A_{n,k}$ an automorphism?
+\end{problem}
+
+Bavula notes that the Dixmier conjecture has been open since 1968 for every
+$n\ge1$ \cite[pp.~1--2]{Bavula2017}. Belov-Kanel and Kontsevich prove that the
+Jacobian conjecture in dimension $2n$ implies the Dixmier conjecture in
+dimension $n$, so the two stable forms are equivalent
+\cite[Theorem~1, p.~3]{BelovKanelKontsevich2007}.
+
+The next section builds the same algebra operator by operator, as the
+differential operators of the polynomial ring itself
+\cite[Theorem~6.2, p.~4]{Hazewinkel2013}.
+% claim-ok: own signpost to the next section, moved after the problem
+
+\hbfigure{12-polynomial-weyl/normal-order-rewrite}{The relation $[p,q]=1$ of Definition~\ref{def:pw:weyl} \cite[p.~209]{Dixmier1968}, written out for one pair as $qp=pq-1$. The ordered products $p^{i}q^{j}$ form a basis \cite[p.~210]{Dixmier1968}, so a word is brought to that order by moving each $q$ past the copies of $p$, and every crossing adds the scalar $-1$.}{fig:weyl:normal-order}

@@ -1,0 +1,70 @@
+% STATUS: written 2026-11-06 (English gate clean; sources read in full as recorded below).
+% Sources read in full for the cited passages: Johnson 1969 (pp. 92--93), Graf 2022 (p. 115).
+\section{Kähler differentials and the universal derivation}\label{sec:commutative:kahler}
+
+Let all rings here be commutative with identity. We look now for the single
+derivation that carries all the others, as the introduction promised
+\cite[p.~93]{Johnson1969Kahler}.
+
+This section recalls that construction. It also fixes the notation used in
+the rest of the chapter, so that one symbol serves for one object throughout.
+
+Let $A$ be a ring and $B$ an $A$-algebra. Johnson constructs the module of
+Kähler differentials from the multiplication map of $B$
+\cite[p.~93]{Johnson1969Kahler}. Let $\mu\colon B\otimes_A B \to B$ be the
+$A$-algebra map with $\mu(b\otimes b') = bb'$. Let $I$ be its kernel.
+
+The quotient $I/I^2$ is a module over $B = (B\otimes_A B)/I$. There is an
+$A$-derivation of $B$ into that module, given by
+\[
+  b \longmapsto (b\otimes 1 - 1\otimes b) + I^2
+\]
+\cite[p.~93]{Johnson1969Kahler}. So the kernel of the multiplication already
+carries a derivation, and the derivation measures the failure of the two
+factors to commute. The next definition names both
+objects~\cite[p.~93]{Johnson1969Kahler}.
+
+\begin{definition}[{\cite[p.~93]{Johnson1969Kahler}}]\label{def:comm:kahler}
+Let $A$ be a ring and $B$ an $A$-algebra. With $I$ the kernel of the
+multiplication $\mu\colon B\otimes_A B\to B$, the \emph{module of Kähler
+differentials} of $B$ over $A$ is the $B$-module
+$\Omega_{B/A} = I/I^2$. The \emph{universal derivation} is the $A$-linear map
+$d_{B/A}\colon B \to \Omega_{B/A}$ given by
+$d_{B/A}(b) = (b\otimes 1 - 1\otimes b) + I^2$.
+\end{definition}
+
+The name \emph{universal derivation} comes from a universal property that
+Johnson states. Every derivation into a $B$-module factors through
+$d_{B/A}$~\cite[p.~92]{Johnson1969Kahler}. The factor is unique
+\cite[p.~92]{Johnson1969Kahler}. The next theorem records that property in
+full~\cite[p.~92]{Johnson1969Kahler}.
+
+It is the form the rest of this chapter uses, since every other derivation is
+read through it.
+
+\begin{theorem}[{\cite[p.~92]{Johnson1969Kahler}}]\label{thm:comm:universal}
+Let $A$ be a ring and $B$ an $A$-algebra. Let $M$ be a $B$-module and let
+$D\colon B\to M$ be an $A$-derivation. Then there is a unique $B$-linear map
+$\varphi\colon \Omega_{B/A} \to M$ with $D = \varphi\circ d_{B/A}$.
+\end{theorem}
+
+Take $M = B$ in Theorem~\ref{thm:comm:universal}. This identifies the
+derivations of $B$ with the dual of $\Omega_{B/A}$
+\cite[p.~92]{Johnson1969Kahler}. Composition with $d_{B/A}$ maps
+$\operatorname{Hom}_B(\Omega_{B/A}, B)$ bijectively to
+$\operatorname{Der}_A(B)$~\cite[p.~92]{Johnson1969Kahler}.
+
+So questions about the derivations of a commutative algebra are questions
+about one module~\cite[p.~92]{Johnson1969Kahler}. When
+$\operatorname{Der}_A(B)$ is free, one asks whether the geometry of $B$ is
+smooth~\cite[p.~270]{BiswasGurjarKolte2014}. That is the Zariski--Lipman
+problem of Section~\ref{sec:commutative:zariski-lipman}.
+
+Graf takes the same duality as the definition of the tangent sheaf
+\cite[p.~115]{Graf2022LZPosChar}. The tangent sheaf of a variety $X$ is the
+dual of the sheaf of Kähler differentials
+\cite[p.~115]{Graf2022LZPosChar}.
+
+Section~\ref{sec:commutative:zariski-lipman} starts from this duality. It asks
+what one learns about the singularities when the module of derivations is
+free~\cite[p.~270]{BiswasGurjarKolte2014}.

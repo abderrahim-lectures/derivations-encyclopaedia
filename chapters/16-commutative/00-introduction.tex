@@ -1,0 +1,115 @@
+% Chapter introduction: why the topic arose, who first asked, what it answers.
+% STATUS: written 2026-11-06 (English gate clean; sources read in full as recorded below).
+% Summarises Sections 1--6 of this chapter; every claim is cited in its section.
+
+The first chapters of this book treated a derivation as an operator on any
+ring. When the ring is commutative, two new facts appear.
+
+The first fact is that the derivations of a commutative algebra $A$ into an
+$A$-module $M$ are themselves an $A$-module. The second fact is that they are
+all shadows of one universal derivation. That is the map $d$ from $A$ to the
+module of Kähler differentials of $A$
+(Figure~\ref{fig:comm:kahler}).
+
+The module of Kähler differentials makes calculus inside algebraic geometry.
+Later authors asked how much of the geometry of $A$ the derivations alone can
+see. This chapter tells that story in five steps. It answers one question in
+each step: which geometric facts about a commutative algebra are encoded in
+its derivations?
+
+\hbfigure{16-commutative/kahler-universal}{The universal derivation $d\colon A\to\Omega_{A/k}$: every derivation into an $A$-module factors through it.}{fig:comm:kahler}
+
+The first step is the definition itself.
+Section~\ref{sec:commutative:kahler} recalls the module of Kähler
+differentials. It explains that derivations out of $A$ and linear maps out of
+$\Omega_{A/k}$ are the same thing. Johnson states this universal property
+again in 1969 \cite[p.~92]{Johnson1969Kahler}. This gives the first
+cohomological reading of derivations of a commutative algebra.
+
+The second step is a regularity question. If the module of derivations of a
+local ring is free, must the ring be regular? Lipman raised the question in
+1965, guided by a remark of Zariski. He proved that freeness forces
+normality.
+
+Section~\ref{sec:commutative:zariski-lipman} states the Zariski--Lipman
+conjecture as it is quoted today \cite[Conjecture~1.1,
+p.~270]{BiswasGurjarKolte2014}. It reports the cases that are settled: graded
+domains, hypersurfaces, complete intersections, and most surfaces. It also
+reports the counterexample of Lipman in prime characteristic
+\cite[p.~116]{Graf2022LZPosChar}. There the module of derivations of a
+singular surface is free. A second question about a singularity is
+qualitative, and it asks for a grading with no derivation of negative
+degree. Wahl made the conjecture that one always exists
+\cite[Conjecture, p.~2]{GrangerSchulze2014Negative}. Granger and Schulze
+prove it for complete intersections of order at least three, and
+they give counterexamples above embedding dimension five
+\cite[Theorems~1.1 and 1.3, p.~2]{GrangerSchulze2014Negative}.
+
+The third step restricts to a special class. A derivation $D$ is locally
+nilpotent when each element is killed by some power of $D$
+\cite[p.~354]{DaigleFreudenburg1998UFD}. On a polynomial ring over a field of
+characteristic zero, these derivations are exactly the infinitesimal
+generators of algebraic actions of the additive
+group~\cite[p.~354]{DaigleFreudenburg1998UFD}.
+
+Section~\ref{sec:commutative:locally-nilpotent} asks when a combination of two
+commuting locally nilpotent derivations is again locally nilpotent
+\cite[Theorem, p.~47]{FerreroLequainNowicki1992}. It then recalls the
+description of Rentschler for the locally nilpotent derivations of the plane
+\cite[pp.~356--357]{DaigleFreudenburg1998UFD}. It ends with the Makar-Limanov
+invariant. Makar-Limanov used this invariant to prove that the Russell cubic
+threefold is not affine space \cite[p.~66]{VanEssenKurodaKoenig2021}. Figure
+~\ref{fig:comm:lnd} places the locally nilpotent case in the plane.
+
+\hbfigure{16-commutative/lnd-flow}{The locally nilpotent derivation $D=\partial_x + x\,\partial_y$ of $k[x,y]$ as a vector field. Its exponential is the polynomial automorphism $(x,y)\mapsto(x+t,\,y+tx+t^2/2)$, whose orbits are the parabolas shown.}{fig:comm:lnd}
+
+The section also reports two recent lines. The invariant is the tool of the
+cancellation problem, and a 2025 survey follows that use in commutative
+algebras, noncommutative algebras and skew extensions
+\cite[pp.~1--3]{VenegasVenegas2025Cancellation}. In dimension two the
+invariant gives a dichotomy, and the affine plane is cancellative
+\cite[Theorems~2.2--2.3, p.~7]{VenegasVenegas2025Cancellation}. Separately,
+Cid and Veloso compute the automorphisms that commute with a locally finite
+derivation of the plane \cite[p.~1]{CidVeloso2026Isotropy}. Every nonzero
+such derivation has a nontrivial commuting group
+\cite[Proposition~3.1, p.~3]{CidVeloso2026Isotropy}. Chitayat, Daigle and
+Regeta show that a solvable Lie algebra of locally finite derivations is
+weakly locally finite \cite[Corollary~4, p.~2]{ChitayatDaigleRegeta2026}.
+On a module over the algebra, the kernel of a locally nilpotent module
+derivation is finitely generated in dimension at most three
+\cite[Corollary~4.7, p.~10]{Tanaka2010ModuleDerivations}. A locally
+nilpotent Lie algebra of derivations of an integral domain has a series of
+ideals with abelian quotients, one for each unit of rank
+\cite[Theorem~1, p.~5]{PetravchukShevchykSysak2017}.
+
+The fourth step is the Jacobian conjecture. Keller asked in 1939 whether a
+polynomial map with a nowhere-vanishing Jacobian determinant must be
+invertible. The question is still open. It has striking forms in the language
+of derivations.
+
+Section~\ref{sec:commutative:jacobian} reports two of them. The first is a
+criterion in terms of derivations of the plane with zero divergence
+\cite[Example~5.2.14, pp.~130--131]{VanEssenKurodaKoenig2021}. The second is a
+formulation inside the Lie algebra of formal vector fields
+\cite[Proposition~1, p.~211]{HauserMuller1998}. The section also records the
+equivalence of the Jacobian, Dixmier and Poisson conjectures
+\cite[Theorem~4.4.1, p.~101]{VanEssenKurodaKoenig2021}. Chapter~12 of this
+book develops the polynomial side of the story.
+
+The fifth step leaves algebra for differential geometry. On a smooth manifold
+$M$, a derivation of the ring $C^\infty(M)$ is the same thing as a smooth
+vector field. Section~\ref{sec:commutative:vector-fields-geometry} recalls the
+definition of a vector field as a derivation
+\cite[p.~122]{Nestruev2020}. It then proves that the Lie algebra of vector
+fields with compact support determines the manifold itself
+\cite[Theorem~3, p.~471]{ShanksPursell1954}. Here the dictionary of the
+chapter closes. Commutative algebra and geometry describe the same object in
+two languages.
+
+Section~\ref{sec:commutative:geometry} carries the dictionary one step
+further. It recalls the definition of a tangent vector at a point as a
+derivation of the smooth functions at that point
+\cite[p.~70]{MajumdarBhattacharyya2023}. The coordinate derivations then form
+a basis of the tangent space there
+\cite[equation (2.19), p.~70]{MajumdarBhattacharyya2023}, and a vector field
+is a smooth choice of one such derivation at every point.

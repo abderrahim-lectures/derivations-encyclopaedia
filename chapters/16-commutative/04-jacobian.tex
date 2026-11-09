@@ -1,0 +1,136 @@
+% STATUS: written 2026-11-06 (English gate clean; sources read in full as recorded below).
+% Sources read in full for the cited passages: van den Essen-Kuroda-Koenig 2021 (pp. 91, 101, 104, 129--131), Hauser-Mueller 1998 (p. 211).
+\section{The Jacobian conjecture}\label{sec:commutative:jacobian}
+
+Section~\ref{sec:commutative:locally-nilpotent} ended with open problems of
+polynomial rings. The most famous of them is the Jacobian
+conjecture~\cite[p.~91]{VanEssenKurodaKoenig2021}. The story of derivations
+meets it directly~\cite[p.~91]{VanEssenKurodaKoenig2021}.
+
+Call a polynomial map $F\colon k^n \to k^n$ a \emph{Keller map} when
+$\det JF = 1$ \cite[p.~106]{VanEssenKurodaKoenig2021}. The conjecture asks
+whether every Keller map is invertible
+\cite[p.~106]{VanEssenKurodaKoenig2021}.
+
+The conjecture has many equivalent forms, several of which speak the language
+of this book \cite[p.~91]{VanEssenKurodaKoenig2021}. Van den Essen, Kuroda and
+Koenig open their chapter on the new results with the words ``there are
+various equivalent formulations of the Jacobian Conjecture''
+\cite[p.~91]{VanEssenKurodaKoenig2021}.
+
+This section recalls three of them that involve
+derivations~\cite[p.~91]{VanEssenKurodaKoenig2021}. Each one turns the
+statement about polynomial maps into a statement about one derivation, or one
+Lie algebra of derivations~\cite[p.~91]{VanEssenKurodaKoenig2021}.
+
+The first lives on the plane
+\cite[Example~5.2.14, pp.~130--131]{VanEssenKurodaKoenig2021}. The divergence of a derivation is the object of study
+here~\cite[p.~130]{VanEssenKurodaKoenig2021}. For a $k$-derivation
+$D = a\,\partial_x + b\,\partial_y$ of $k[x, y]$, the \emph{divergence} of $D$
+is $\operatorname{div} D = \partial_x a + \partial_y b$
+\cite[p.~130]{VanEssenKurodaKoenig2021}.
+
+A \emph{Mathieu-Zhao space}, or MZ-space, is a subspace whose radical and
+strong radical coincide \cite[Definition~5.2.1, p.~123]{VanEssenKurodaKoenig2021}.
+Here the reader only needs one property from the proof of
+Example~\ref{prop:comm:jc-div}, stated next. An MZ-space that contains $1$ is
+the whole ring \cite[Example~5.2.11, pp.~129--130]{VanEssenKurodaKoenig2021}.
+
+\begin{proposition}[{\cite[Example~5.2.14, pp.~130--131]{VanEssenKurodaKoenig2021}}]\label{prop:comm:jc-div}
+The following two conditions are equivalent.
+\begin{enumerate}
+\item For every $k$-derivation $D$ of $k[x,y]$ such that $1$ lies in the
+image of $D$ and $\operatorname{div} D = 0$, the image of $D$ is an
+MZ-space of $k[x,y]$.
+\item The two-dimensional Jacobian conjecture is true.
+\end{enumerate}
+\end{proposition}
+
+The proof recalled in the source builds a derivation from the map itself
+\cite[pp.~130--131]{VanEssenKurodaKoenig2021}. For $F = (f, g)$ with
+$\det JF = 1$ it sets
+\[
+  D = g_y\,\partial_x - g_x\,\partial_y .
+\]
+It notes that $\operatorname{div} D = 0$ and $1 = \det JF = Df$
+\cite[pp.~130--131]{VanEssenKurodaKoenig2021}.
+
+It then shows that $D$ is locally nilpotent with kernel $k[g]$
+\cite[pp.~130--131]{VanEssenKurodaKoenig2021}. So a Keller map in two
+variables is invertible exactly when the image of this derivation is a Mathieu
+space of the ring~\cite[pp.~130--131]{VanEssenKurodaKoenig2021}.
+
+The second formulation uses a Lie algebra of the kind developed in
+Section~\ref{sec:commutative:vector-fields-geometry}
+\cite[p.~211]{HauserMuller1998}. Let $K$ be an algebraically closed field of
+characteristic zero. A polynomial vector field has the form
+\[
+  \sum_i a_i\,\partial_{x_i}, \qquad a_i \in K[x_1,\dots,x_n].
+\]
+Let $\mathcal{P}$ be the Lie algebra of these fields
+\cite[p.~211]{HauserMuller1998}. Let $\mathcal{D}$ be the Lie algebra of formal
+vector fields, whose coefficients are formal power
+series~\cite[p.~211]{HauserMuller1998}.
+
+\begin{proposition}[{\cite[Proposition~1, p.~211]{HauserMuller1998}}]\label{prop:comm:hm}
+The following statements are equivalent.
+\begin{enumerate}
+\item Every endomorphism $\varphi$ of $K[x_1,\dots,x_n]$ with invertible
+Jacobian matrix is an automorphism.
+\item Every injective endomorphism of $\mathcal{P}$ is an automorphism.
+\item Every automorphism $\Phi$ of $\mathcal{D}$ with
+$\Phi(\mathcal{P}) \subset \mathcal{P}$ satisfies
+$\Phi(\mathcal{P}) = \mathcal{P}$.
+\end{enumerate}
+\end{proposition}
+
+Hauser and Müller credit the equivalence of the first two statements to
+Kulikov~\cite[p.~211]{HauserMuller1998}. Thus the Jacobian conjecture becomes a
+property of one infinite-dimensional Lie algebra of
+derivations~\cite[Proposition~1, p.~211]{HauserMuller1998}.
+
+The polynomial vector fields must be
+preserved~\cite[Proposition~1, p.~211]{HauserMuller1998}. They are preserved
+under the automorphisms of the formal ones that map them into
+themselves~\cite[Proposition~1, p.~211]{HauserMuller1998}.
+
+The third formulation links the conjecture to two other great open
+problems~\cite[Theorem~4.4.1, p.~101]{VanEssenKurodaKoenig2021}. The Dixmier
+conjecture asks whether every endomorphism of a Weyl algebra is an
+automorphism~\cite[Theorem~4.4.1, p.~101]{VanEssenKurodaKoenig2021}. The
+Poisson conjecture makes the same demand of the Poisson
+algebra~\cite[Theorem~4.4.1, p.~101]{VanEssenKurodaKoenig2021}.
+
+\begin{theorem}[{\cite[Theorem~4.4.1, p.~101]{VanEssenKurodaKoenig2021}}]\label{thm:comm:dc-jc-p}
+For each $n \ge 1$ one has the implications
+$\mathrm{DC}(n,\mathbb{C}) \Rightarrow \mathrm{JC}(n,\mathbb{C})$,
+$\mathrm{JC}(2n,\mathbb{C}) \Rightarrow \mathrm{P}(n,\mathbb{C})$ and
+$\mathrm{P}(n,\mathbb{C}) \Rightarrow \mathrm{DC}(n,\mathbb{C})$; that is,
+the Dixmier, Jacobian, and Poisson conjectures are equivalent.
+\end{theorem}
+
+The implication from the Dixmier conjecture to the Jacobian conjecture was
+classical \cite[p.~91]{VanEssenKurodaKoenig2021}. Tsuchimoto proved the
+converse in 2005, and Belov-Kanel and Kontsevich gave an independent proof
+\cite[p.~91]{VanEssenKurodaKoenig2021}.
+
+The conjecture of this section is open, and this section states it in the form
+the book uses. % claim-ok: own signpost introducing the moved problem, which carries its own citation
+
+\begin{problem}[{\cite[p.~81]{Freudenburg2017}}]\label{prob:open:jc}
+Let $F\colon k^n\to k^n$ be a polynomial map over a field $k$ of characteristic
+$0$ whose Jacobian determinant is a nonzero constant.
+Is $F$ then an automorphism?
+\end{problem}
+
+Freudenburg records the problem in the language of derivations
+\cite[p.~81]{Freudenburg2017}. A jacobian derivation of $k[x_1,\dots,x_{n-1}]$
+has a slice exactly when it is locally nilpotent and its kernel is a polynomial
+ring in $n-1$ variables \cite[p.~81]{Freudenburg2017}. The problem is open for
+every $n\ge2$ \cite[pp.~1--2]{BelovKanelKontsevich2007}.
+
+Theorem~\ref{thm:comm:dc-jc-p} also ties the Jacobian story to the Weyl
+algebra, and Chapter~12 of this book develops that side.
+Section~\ref{sec:polynomial-weyl:weyl} states the Dixmier problem.
+Section~\ref{sec:commutative:vector-fields-geometry} follows the derivations
+of $k[x_1,\dots,x_n]$ to their smooth limit, the vector fields on a manifold.

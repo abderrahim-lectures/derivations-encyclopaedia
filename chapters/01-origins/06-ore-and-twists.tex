@@ -1,0 +1,60 @@
+% STATUS: written 2026-11-06 (English gate clean; sources read in full as recorded below).
+% Sources read in full: Ore 1933 (Ann. of Math. 34, 480--508).
+\section[Skew polynomials and twisted derivations: Ore 1933][Skew polynomials and twisted derivations]{Skew polynomials and twisted derivations: Ore 1933}\label{sec:origins:ore-and-twists}
+
+The next step came from polynomials. In the paper \emph{Theory of non-commutative polynomials}~\cite{Ore1933}, Ore
+builds one theory for polynomials over a field $K$. The field may be
+commutative or not. There is only one condition. The degree of a product must
+be the sum of the degrees of the factors. Ore says that this one theory
+contains ``not only the equations studied in non-commutative algebras but
+also most of the linear operational equations of analysis as, for instance,
+linear differential and difference equations''~\cite[p.~480]{Ore1933}.
+
+He notes that the theory could also come from the work of Noether and
+Schmeidler. They studied modules over rings of differential and difference
+expressions. Ore instead builds the theory directly from the
+polynomials~\cite[p.~480]{Ore1933}.
+
+How should such polynomials multiply? The degree condition fixes the shape of the multiplication. It is enough to
+define $x\cdot a$ for $a \in K$. The condition leaves only one possibility.
+
+\begin{definition}[{\cite[p.~481, (3)]{Ore1933}}]\label{def:origins:ore}
+For $a \in K$,
+\[
+x\cdot a = \bar a\, x + a',
+\]
+where $\bar a$ and $a'$ are elements of $K$. Ore calls $\bar a$ the
+\emph{conjugate} and $a'$ the \emph{derivative} of $a$.
+\end{definition}
+
+The laws of associativity and distributivity give four rules:
+\[
+\overline{a+b} = \bar a + \bar b,\quad \overline{ab} = \bar a\,\bar b,\qquad
+(a+b)' = a' + b',\quad (ab)' = \bar a\, b' + a' b
+\]
+\cite[p.~482, (4)--(5)]{Ore1933}. So the conjugation is an endomorphism of
+$K$. The derivative satisfies a product rule twisted by the conjugation.
+
+In modern language, put $\sigma(a) = \bar a$. Then $a \mapsto a'$ is a $\sigma$-derivation. The
+ring that Ore built is the skew polynomial ring $K[x;\sigma,\delta]$. It is
+the subject of Chapter~\ref{ch:generalized-twisted}.
+
+Ore had three special cases in mind, and he lists them~\cite[p.~482]{Ore1933}.
+\begin{itemize}
+\item Suppose $x$ commutes with the coefficients. Then $\bar a = a$ and
+  $a' = 0$. This is the usual polynomial ring.
+\item Linear differential equations: here $K$ is commutative and
+  $\bar a = a$. So $(ab)' = ab' + a'b$, and ``the derivative has the ordinary
+  properties of a derivative''. Ore remarks that this makes it ``possible to
+  introduce the notion of a derivative into non-commutative fields''.
+\item Difference equations: here $a' = 0$, while $\bar a$ is usually
+  different from~$a$.
+\end{itemize}
+
+So in 1933 one definition covered three things. It covered the usual
+derivations of a field, derivations of a skew field, and the shift operators
+of difference equations. The idea of a derivation twisted by an endomorphism
+starts here.
+
+Ore studied one derivation at a time. Four years later, Jacobson looked at
+all the derivations of an algebra together.

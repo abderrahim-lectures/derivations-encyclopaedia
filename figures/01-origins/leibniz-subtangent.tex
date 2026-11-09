@@ -1,0 +1,20 @@
+% Leibniz 1684: the difference dv is to dx as v is to the subtangent BX.
+% Curve v = x^2/4 + 1/2; point X at x = 3, v = 2.75, slope 1.5, B at x = 7/6.
+\begin{tikzpicture}[scale=1.15,font=\small]
+  \draw[-{Stealth}] (-0.2,0) -- (5.2,0) node[below] {$x$};
+  \draw[-{Stealth}] (0,-0.2) -- (0,4.4);
+  \draw[thick,hbblue,domain=0:4.2,samples=60] plot (\x,{\x*\x/4+0.5}) node[right] {$V$};
+  \coordinate (V) at (3,2.75); \coordinate (X) at (3,0); \coordinate (B) at ({7/6},0);
+  \draw[hbgold!80!black,thick] ($(B)!-0.15!(V)$) -- ($(B)!1.35!(V)$);
+  \draw[dashed] (V) -- (X);
+  \fill (V) circle (1.3pt) node[above left] {$V$};
+  \fill (B) circle (1.3pt) node[below] {$B$};
+  \node[below] at (X) {$X$};
+  \draw[decorate,decoration={brace,mirror,amplitude=4pt}] ($(B)+(0,-0.45)$) -- ($(X)+(0,-0.45)$)
+    node[midway,below=4pt] {subtangent $BX$};
+  \node[right] at (3,1.35) {$v$};
+  \draw[thick] (V) -- (4,2.75) node[midway,below] {$dx$};
+  \draw[thick,red!70!black] (4,2.75) -- (4,4.25) node[midway,right] {$dv$};
+  \node[align=left,anchor=west,font=\footnotesize] at (4.4,1.2)
+    {$\dfrac{dv}{dx} = \dfrac{v}{BX}$};
+\end{tikzpicture}

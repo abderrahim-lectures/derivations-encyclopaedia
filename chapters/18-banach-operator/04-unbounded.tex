@@ -1,0 +1,116 @@
+% STATUS: written 2026-11-05 (Sakai 1976 read in full, Takai 1981 first
+% pages, Sakai 1991 preliminaries and contents; excerpts in
+% excerpts/Sakai1976OneParameter.txt, excerpts/Takai1981.txt,
+% excerpts/Sakai1991Dynamical.txt).
+% Additions of 2026-11-06 from Ismert 2018 (pp. 1, 3, 7--8) and 2026-11-07
+% from Niknam 1983 (pp. 181--183).
+% Sources: Sakai1976OneParameter, Takai1981SakaiProblem, Sakai1991Dynamical,
+% Ismert2018Kernel, Niknam1983Closable.
+\section{Unbounded derivations and dynamics}\label{sec:banach-operator:unbounded}
+
+Section~\ref{sec:banach-operator:automatic-continuity} closed with
+continuity for free: an everywhere defined derivation of a $C^*$-algebra
+is bounded and weakly inner. Mathematical physics forces a wider notion:
+the derivations of quantum dynamics are defined as infinitesimal
+generators of one-parameter subgroups of $*$-automorphisms, and they are
+unbounded \cite[p.~427]{Sakai1976OneParameter}. The basic example already
+sets the pattern \cite[pp.~427--428]{Sakai1976OneParameter}.
+
+\begin{example}[{\cite[pp.~427--428]{Sakai1976OneParameter}}]\label{ex:banach:ddt}
+Let $A=C_0(-\infty,\infty)$ be the $C^*$-algebra of all continuous
+functions on $(-\infty,\infty)$ vanishing at infinity. The only bounded
+derivation of $A$ is the identically zero mapping. On the other hand, the
+differential operator $d/dt$ corresponding to the one-parameter subgroup
+of translation operators is an unbounded derivation of $A$. It cannot be
+approximated by the zero mapping in any reasonable sense.
+\end{example}
+
+The generator behind Example~\ref{ex:banach:ddt} has a general
+definition \cite[p.~428]{Sakai1976OneParameter}.
+
+\begin{definition}[{\cite[p.~428]{Sakai1976OneParameter}}]\label{def:banach:generator}
+Let $\rho(t)$, $-\infty<t<\infty$, be a strongly continuous one-parameter
+subgroup of $*$-automorphisms on a $C^*$-algebra $A$. The strong
+derivative of $\rho(t)$ at $t=0$ is a closed, densely defined linear
+operator $\delta$ called the \emph{infinitesimal generator} of the
+one-parameter subgroup:
+$\delta(a)=\lim_{t\to 0}(\rho(t)(a)-a)/t$, and the domain $D(\delta)$
+consists of all elements $a$ for which this limit exists.
+\end{definition}
+
+An element $a$ is \emph{analytic} if the map $t\mapsto\rho(t)(a)$ is
+analytic, and the analytic elements form a dense linear subset of $A$
+\cite[p.~428]{Sakai1976OneParameter}. Innerness survives in a restricted
+form on the uniformly hyperfinite algebras
+\cite[Theorem~2, p.~435]{Sakai1976OneParameter}.
+
+\begin{theorem}[{\cite[Theorem~2, p.~435]{Sakai1976OneParameter}}]\label{thm:banach:uhf}
+Let $A$ be a uniformly hyperfinite $C^*$-algebra and let $\delta$ be a
+derivation in $A$ whose domain $D(\delta)$ is a dense $*$-subalgebra of
+$A$. Suppose that $D(\delta)$ contains a finite type I-subfactor $F$;
+then there is an element $d$ in $A$ such that $\delta(a)=[d,a]$ for all
+$a$ in $F$.
+\end{theorem}
+
+The whole theory became the book of Sakai on operator algebras in dynamical
+systems, devoted to unbounded derivations in $C^*$-algebras
+\cite{Sakai1991Dynamical}. The book also fixes the vocabulary used across
+this chapter \cite[p.~2]{Sakai1991Dynamical}. A $C^*$-algebra is a \emph{$W^*$-algebra} if it is a dual
+space as a Banach space. The $W^*$-algebras are exactly the von
+Neumann algebras \cite[p.~2]{Sakai1991Dynamical}.
+
+One question stayed open \cite[p.~202]{Takai1981SakaiProblem}. As a
+quantization of spaces, Sakai asked
+whether one can find a simple $C^*$-algebra $A$ and a non approximately
+bounded pregenerator $\delta_0$ of $A$. Every $*$-derivation
+with the same domain should then be a scalar multiple of $\delta_0$ plus an
+approximately bounded $*$-derivation \cite[p.~202]{Takai1981SakaiProblem}.
+Takai answered a two dimensional form of it on the irrational rotation
+algebra $A_\theta$. There are two non approximately bounded
+pregenerators $\delta_1,\delta_2$ with the same domain. Each
+$*$-derivation of $A_\theta$ with that domain is a combination
+$k\delta_1+l\delta_2$ plus an approximately bounded $*$-derivation
+\cite[p.~202]{Takai1981SakaiProblem}.
+
+Ismert studies the kernel of an unbounded derivation
+\cite[p.~1]{Ismert2018Kernel}. A derivation $\delta$ has kernel
+stabilization when $\ker\delta^{n}=\ker\delta$ for every $n$
+\cite[p.~1]{Ismert2018Kernel}. She works with the weakly defined derivation
+$\delta_{w}$ of $B(H)$ that commutes with a self-adjoint operator $D$
+\cite[p.~1]{Ismert2018Kernel}. Its domain consists of the operators that
+map the domain of $D$ into itself \cite[p.~3]{Ismert2018Kernel}.
+
+\begin{theorem}[{\cite[Theorem~3.5, p.~7]{Ismert2018Kernel}}]\label{thm:banach:kernel-stabilization}
+Let $D$ be a self-adjoint operator on a Hilbert space $H$. Then for every
+$n\geq 1$ one has $\ker(\delta_{w}^{D})^{n}=\ker\delta_{w}^{D}$.
+\end{theorem}
+
+The proof compares the kernel with the commutant of $D$
+\cite[p.~7]{Ismert2018Kernel}. Two consequences follow
+\cite[p.~7]{Ismert2018Kernel}. The $*$-derivations of Bratteli and Robinson
+have kernel stabilization \cite[p.~8]{Ismert2018Kernel}. Also, a pair of
+operators that satisfies the Heisenberg commutation relation cannot both be
+bounded \cite[p.~8]{Ismert2018Kernel}.
+
+For a simple $C^*$-algebra Niknam connects two of the notions above, the
+separating space and the range, through the question of when a derivation can be closed
+\cite[p.~181]{Niknam1983Closable}. He takes a derivation $\delta$ defined on a
+dense $*$-subalgebra of the algebra, and calls the set of limits of
+$\delta(a_n)$ along sequences $a_n\to0$ its separating space. The derivation
+is closable exactly when that space is the zero subspace
+\cite[p.~181]{Niknam1983Closable}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~181]{Niknam1983Closable}}]\label{thm:banach:niknam-closable}
+Let $A$ be a simple $C^*$-algebra and let $\delta$ be a derivation of $A$. Then
+$\delta$ is closable if the range of $\delta$ is not dense in $A$.
+\end{theorem}
+
+The proof shows that the separating space is a closed two-sided ideal, hence
+either $\{0\}$ or all of $A$, and the density assumption rules out the second
+case \cite[p.~182]{Niknam1983Closable}. A $*$-derivation is closable as soon as
+one of the two sets $\{a\pm\delta(a)\}$ is not dense
+\cite[Corollary~2, p.~182]{Niknam1983Closable}. On a fixed domain, a second $*$-derivation is closed exactly when it is
+bounded relative to the first \cite[Theorem~3, p.~182]{Niknam1983Closable}.
+
+The next section returns to bounded
+maps on subalgebras of $B(H)$. % claim-ok: link sentence to Section 5, no external fact

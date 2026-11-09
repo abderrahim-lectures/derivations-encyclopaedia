@@ -1,0 +1,78 @@
+% Chapter introduction: why the topic arose, who first asked, what it answers.
+% STATUS: written 2026-11-06 (English gate clean; sources read in full as recorded below).
+% Summarises Sections 1--10 of this chapter; every claim is cited in its section.
+
+A derivation of an algebra $A$ is a linear map $D\colon A \to A$ with
+\[
+  D(xy) = D(x)\,y + x\,D(y).
+\]
+The definition is short, but it came late. The product rule is as old as the
+calculus. For two and a half centuries it was only a property of the
+derivative of a function. It became a definition only in the 1920s and 1930s.
+Then a derivation became a map on an abstract algebra, fixed by this one
+identity.
+
+This chapter tells how that happened. The story has three parts, and
+Figure~\ref{fig:origins:timeline} places its sources in time. We use modern
+notation throughout. $A$ is an algebra, $M$ a bimodule, $K$ and $k$ are fields,
+and $G$ is a group. Maps are written on the left. When a source uses other
+notation, we say so once.
+
+\hbfigure{01-origins/timeline}{The sources of Chapter~1 in order of publication.}{fig:origins:timeline}
+
+The first part stays with commutative rings and fields. It starts in 1684,
+when Leibniz states the product rule for his differences
+(Section~\ref{sec:origins:leibniz-rule}). Two centuries later, Dedekind and
+Weber need a derivative of algebraic functions without any limits. In 1882
+they define it by algebra alone, and in 1897 Hilbert writes the different of
+an algebraic number as a derivative (Section~\ref{sec:origins:function-fields}).
+
+In characteristic $p$ there is a new difficulty. A nonzero polynomial can
+have zero derivative; for example, $x^p$ does
+\cite[\S 9, p.~213]{Steinitz1910}. Steinitz
+meets this in 1910. Later it leads Jacobson to a Galois theory in which
+derivations take the place of automorphisms
+(Section~\ref{sec:origins:fields-and-separability}). It also leads Hasse and
+Schmidt to higher derivations (Section~\ref{sec:origins:higher-derivations}).
+Meanwhile Ritt and his students study fields with a derivation. For them such
+a field is the natural setting for differential equations
+(Section~\ref{sec:origins:differential-algebra}).
+
+The second part leaves commutativity behind. In 1925 Born and Jordan keep the
+product rule for matrices. In the same year Dirac shows that every such
+operation on quantum variables is a commutator
+(Section~\ref{sec:origins:physics}). In 1933 Ore builds polynomials over a
+skew field. He finds a product rule twisted by an endomorphism
+(Section~\ref{sec:origins:ore-and-twists}). In 1937 Jacobson studies the
+derivations of any algebra. He shows that they form a Lie algebra, and in
+characteristic $p$ a restricted one (Section~\ref{sec:origins:lie-theory}).
+
+The third part shows how these lines meet. Since Hilbert, number theorists
+had studied maps called crossed homomorphisms. They come from groups that act
+on fields (Section~\ref{sec:origins:crossed-homomorphisms}). In 1945
+Hochschild puts the derivations of an algebra into a cohomology theory.
+Derivations are the one-cocycles, and inner derivations are the coboundaries
+(Section~\ref{sec:origins:cohomology}). After this step the derivation is a
+central object of modern algebra.
+
+Along the way, three facts appear again and again. They are also the first
+questions of the rest of the book.
+
+The first fact concerns constants. A derivation is fixed by one identity, and
+its kernel is the set of constants. This kernel carries information about the
+algebra. Automorphisms have fixed points in the same way. Dedekind, Weber,
+Steinitz and Jacobson all use this link
+(Sections~\ref{sec:origins:function-fields}
+and~\ref{sec:origins:fields-and-separability}).
+
+The second fact concerns brackets. The commutator of two derivations is again
+a derivation. So the derivations of any algebra form a Lie algebra. Dirac
+meets this fact in physics, and Jacobson makes it the base of a theory
+(Sections~\ref{sec:origins:physics} and~\ref{sec:origins:lie-theory}).
+
+The third fact concerns inner derivations. For every element $a$, the map
+$x \mapsto ax - xa$ is a derivation. When does every derivation have this
+form? Dirac asked this for matrices. Hochschild answered it in general with
+the group $H^1$ (Sections~\ref{sec:origins:crossed-homomorphisms}
+and~\ref{sec:origins:cohomology}). The question runs through every later
+chapter.

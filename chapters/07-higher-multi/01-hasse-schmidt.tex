@@ -1,0 +1,317 @@
+% STATUS: written 2026-11-06 (Ferrero-Haetinger 2002, Narvaez Macarro 2009,
+% Hasse-Schmidt 1937 and Nakai 1970 read in full)
+% Additions of 2026-11-07 moved from chapter 20: Narvaez Macarro 2020
+% (Introduction, Definition 2.1.1 p. 15, pp. 1--2) read in full.
+% STATUS: extended 2026-11-06 (Hosseini and Rehman 2019, Nagamine 2019 read in full from the library PDFs)
+% STATUS: extended 2026-11-07 (Tirado Hernandez 2021 read in full from the
+% library PDF; Barajas and Duarte 2026 read in full while adding chapter 11's
+% trivial-extension section)
+% Sources read in full: Ferrero--Haetinger 2002 (pp. 2321--2333); Narvaez Macarro 2009 (pp. 2979--3014, section 1.1);
+% Hasse--Schmidt 1937, J. Reine Angew. Math. 177, pp. 215--237 (the Zusatz bei der
+% Korrektur, pp. 223--237, holds the ring-theoretic definition, p. 224, and Satze 1
+% and 2, p. 226); Nakai 1970, Osaka J. Math. 7, pp. 1--27 (definition p. 1,
+% Theorem 2 p. 3, Proposition 5 p. 4).
+% Tirado Hernandez 2021: the PDF has no printed journal page numbers, so
+% citations give the page of the PDF. Read 2026-11-07: the definition of
+% integrability (p. 1) and Proposition 2.1 (p. 4).
+% Ashraf and Ansari 2021, Moafian 2017 and Ashraf and Jabeen 2018 read in full
+% 2026-11-07: the definitions of a Lie higher derivation, the properness
+% question, and the splitting theorems for triangular and generalized matrix
+% algebras.
+% Origins: the definition is quoted from Ferrero--Haetinger 2002 (p. 2323, after Jacobson,
+% Basic Algebra II, Exercise 4, p. 532), the two rules of the sequence are recalled
+% from Hasse--Schmidt 1937 first-hand (p. 224), and the single-map notion from
+% Nakai 1970 first-hand (p. 1). Nakai attributes that notion to Osborn, Math. Ann.
+% 170 (1967), 221--244; Osborn's paper is not in this book's collection, so it is
+% named here through Nakai's attribution and not quoted.
+\section{Higher derivations and Hasse--Schmidt sequences}\label{sec:higher-multi:hasse-schmidt}
+
+Every generalization in Chapter~\ref{ch:generalized-twisted} changed one
+map. The generalization of this chapter replaces one map by a sequence
+\cite[p.~2323]{FerreroHaetinger2002}. The first component of the sequence is
+the identity, and the next is a derivation
+\cite[p.~2323]{FerreroHaetinger2002}. The product rule of the whole sequence
+collects
+the terms $D_i(x)D_j(y)$ along the \emph{antidiagonal} $i+j=n$, the terms
+whose two indices sum to $n$ \cite[p.~2323]{FerreroHaetinger2002}.
+
+\begin{definition}[{\cite[p.~2323]{FerreroHaetinger2002}}]\label{def:higher:hd}
+Let $T$ be a ring. A family of additive mappings
+$D=(d_i)_{i\in\mathbb{N}}$ of $T$ is a \emph{higher derivation} of $T$ if
+$d_0=\mathrm{id}_T$ and, for every $n\in\mathbb{N}$,
+\begin{equation*}
+d_n(ab)=\sum_{i=0}^{n} d_i(a)\,d_{n-i}(b)
+\qquad\text{for all }a,b\in T.
+\end{equation*}
+\end{definition}
+
+The definition reaches the literature as an exercise
+\cite[p.~2323]{FerreroHaetinger2002}. Ferrero and Haetinger record it with
+page 532, Exercise 4 of the book \emph{Basic Algebra~II} by Jacobson
+\cite[p.~2323]{FerreroHaetinger2002}.
+
+Hasse and Schmidt gave the same sequence for algebraic function fields of one
+variable in 1937 \cite[pp.~215--223]{HasseSchmidt1937}. Their paper states the
+two rules of the sequence for an arbitrary integral domain
+\cite[pp.~223--224]{HasseSchmidt1937}. The authors set a domain $I$ of
+characteristic $p$ and a larger domain $I^{*}$ containing the derivatives
+\cite[p.~224]{HasseSchmidt1937}. They assign to each $y\in I$ a function
+$y^{(\nu)}\in I^{*}$ for every natural number $\nu$
+\cite[p.~224]{HasseSchmidt1937}. The assignment is a \emph{differentiation}
+when it satisfies the two rules below \cite[p.~224]{HasseSchmidt1937}.
+
+\begin{definition}[{\cite[p.~224]{HasseSchmidt1937}}]\label{def:higher:hsrules}
+Let $I\subseteq I^{*}$ be integral domains of characteristic $p$, and let
+$y\mapsto y^{(\nu)}$ assign to each $y\in I$ and each $\nu\in\mathbb{N}$ an
+element $y^{(\nu)}\in I^{*}$. The assignment is a \emph{differentiation} of
+$I$ when it satisfies the sum rule
+\[
+(y+z)^{(\nu)}=y^{(\nu)}+z^{(\nu)}
+\]
+and the modified product rule
+\[
+(yz)^{(\nu)}=y^{(\nu)}z+y^{(\nu-1)}z'+\cdots+y'z^{(\nu-1)}+yz^{(\nu)}
+\]
+for all $y,z\in I$ and all $\nu$. The element $y^{(\nu)}$ is the
+\emph{$\nu$-th derivative} of $y$.
+\end{definition}
+
+A function whose derivatives all vanish from some order on is a
+\emph{differentiation constant} of that order, and the absolute constants are
+those whose derivatives all vanish \cite[p.~224]{HasseSchmidt1937}. The authors
+note that the constants of at least a given order form a subdomain of $I$, and
+that when $I$ is a field they form a subfield
+\cite[p.~224]{HasseSchmidt1937}.
+
+The 1937 paper then identifies a sequence with a single map into a ring of
+power series \cite[p.~225]{HasseSchmidt1937}. Over $I^{*}$ it forms the domain
+$T^{*}=I^{*}\{u\}$ of all power series in $u$, and assigns to each $y\in I$
+the series $Y_{u}=y+y'u+y''u^{2}+\cdots$ \cite[p.~225]{HasseSchmidt1937}. The
+authors call $Y_{u}$ the general Taylor expansion of $y$
+\cite[p.~225]{HasseSchmidt1937}. They prove that the assigned series form a
+subdomain on which the assignment is an isomorphism
+\cite[Satz~1, p.~226]{HasseSchmidt1937}. They prove the converse too
+\cite[Satz~2, p.~226]{HasseSchmidt1937}. Take an isomorphism of $I$ onto a
+subdomain of $T^{*}$ that carries each $y$ to a series with first term $y$.
+Reading the coefficients as derivatives gives a differentiation
+\cite[Satz~2, p.~226]{HasseSchmidt1937}.
+
+Nakai took up the single map rather than the sequence in 1970
+\cite[p.~1]{Nakai1970}. He works over commutative rings $k$ and $A$ with $A$ a
+$k$-algebra, and he attributes the notion to Osborn
+\cite[p.~1]{Nakai1970}. His $q$-th order derivation keeps the product rule on
+$(q+1)$ arguments, and his Theorem~2 turns that rule into an identity of
+commutators \cite[Theorem~2, p.~3]{Nakai1970}. The link between the two
+notions is his Proposition~5: the $q$-th component of a higher derivation is a
+$q$-th order derivation \cite[Proposition~5, p.~4]{Nakai1970}. A $q$-th order
+derivation need not be a component of a higher derivation, and Nakai leaves
+that question open \cite[p.~1]{Nakai1970}.
+
+The model is the iterated derivative of a single derivation
+\cite[p.~2322]{FerreroHaetinger2002}. If $d$ is a derivation of a rational
+algebra, the sequence $d_i=d^{i}/i!$ is a higher derivation of $R$
+\cite[p.~2322]{FerreroHaetinger2002}.
+
+The name Hasse--Schmidt marks a second presentation of the same notion
+\cite[p.~2983]{NarvaezMacarro2009}. Narváez Macarro states it for algebras,
+with the 1937 paper as his reference for the definition
+\cite[§1.1, reference~7]{NarvaezMacarro2009}.
+
+\begin{definition}[{\cite[§1.1, p.~2983]{NarvaezMacarro2009}}]\label{def:higher:hs}
+Let $k$ be a commutative ring, $f\colon k\to A$ and $g\colon A\to B$ ring
+homomorphisms, and $m\geq 1$ an integer or $m=\infty$. A
+\emph{Hasse--Schmidt derivation} over $k$ of length $m$ from $A$ to $B$ is a
+sequence $D=(D_0,D_1,\dots,D_m)$ or $D=(D_0,D_1,\dots)$ of $k$-linear
+maps $D_i\colon A\to B$ with
+\begin{equation*}
+D_0=g,\qquad D_i(xy)=\sum_{r+s=i}D_r(x)\,D_s(y)
+\qquad\text{for all }x,y\in A\text{ and all }i.
+\end{equation*}
+When $A=B$ and $g=\mathrm{id}_A$ one says that $D$ is a Hasse--Schmidt
+derivation of $A$ over $k$.
+\end{definition}
+
+Such a sequence is the same data as one algebra map into a truncated
+polynomial ring \cite[p.~2984]{NarvaezMacarro2009}. With
+$B_m=B[t]/(t^{m+1})$, the sequence $D$ is determined by the $k$-algebra
+homomorphism $\Phi\colon A\to B_m$ given by
+$\Phi(x)=\sum_{i=0}^{m} D_i(x)\,t^i$ \cite[p.~2984]{NarvaezMacarro2009}.
+
+Over a semiprime ring a higher derivation extends to the Martindale ring of
+quotients in a unique way \cite[p.~2323]{FerreroHaetinger2002}.
+
+\begin{proposition}[{\cite[Proposition~1.1, p.~2323]{FerreroHaetinger2002}}]\label{prop:higher:extend}
+Let $R$ be a semiprime ring and $D=(d_i)_{i\in\mathbb{N}}$ a higher
+derivation of $R$. Then there exists a unique higher derivation
+$D^{*}=(d^{*}_i)_{i\in\mathbb{N}}$ of $Q$ such that
+$d^{*}_n|_R=d_n$ for every $n\in\mathbb{N}$.
+\end{proposition}
+
+The theory of the sequence starts when the terms satisfy a linear relation
+\cite[p.~2323]{FerreroHaetinger2002}. A family $D$ satisfies an $S$-linear
+relation on $T$ when there exist $a_0,a_1,\dots,a_n\neq 0$ in $S$ with
+$\sum_{i=0}^{n} a_i d_i(x)=0$ for all $x\in T$; the minimal $n$ is the
+length of $D$. For a single derivation $d$ of a rational algebra the
+relation is the algebraicity of $d$, that is, the existence of a polynomial
+relation among its powers \cite[p.~2322]{FerreroHaetinger2002}. On a prime
+ring the relation is rigid, as Corollary~\ref{cor:higher:prime} shows
+\cite[p.~2325]{FerreroHaetinger2002}.
+
+\begin{corollary}[{\cite[Corollary~1.4, p.~2325]{FerreroHaetinger2002}}]\label{cor:higher:prime}
+Assume that $R$ is a prime ring and $D=(d_i)_{i\in\mathbb{N}}$ a higher
+derivation of $R$ that satisfies an $R$-linear relation of minimal length
+$n$ on $R$. Then there exist $q_0=1,q_1,\dots,q_{n-1}\in Q$ such that
+$\sum_{i=1}^{n} q_{n-i} d_i=0$. In particular, $D$ satisfies a monic
+$Q$-linear relation of length $n$ on $R$. Moreover, $d_1=d_{q_1}$ and
+\begin{equation*}
+d_m(x)=d_{q_m}(x)-\sum_{i=1}^{m-1} q_i\,d_{m-i}(x)
+\qquad\text{for all }x\in R\text{ and }2\leq m\leq n.
+\end{equation*}
+\end{corollary}
+
+The main result compares the possible relations
+\cite[pp.~2327--2328]{FerreroHaetinger2002}. It says the ring of
+coefficients of the relation does not matter, as
+Theorem~\ref{thm:higher:relations} states
+\cite[p.~2327]{FerreroHaetinger2002}.
+
+\begin{theorem}[{\cite[Theorem~1.8, pp.~2327--2328]{FerreroHaetinger2002}}]\label{thm:higher:relations}
+Assume that $R$ is a semiprime ring and $D$ a higher derivation of $R$.
+Then the following conditions are equivalent:
+\begin{enumerate}[label=(\roman*)]
+\item $D$ satisfies an $R$-linear relation on $R$;
+\item $D$ satisfies a $Q$-linear relation on $R$;
+\item $D^{*}$ satisfies a $Q$-linear relation on $Q$;
+\item $D^{*}$ satisfies an $R$-linear relation on $Q$.
+\end{enumerate}
+Moreover, when one of these conditions holds, the minimal lengths of the
+relations are all the same.
+\end{theorem}
+
+A higher derivation is therefore a derivation whose values are measured in
+steps, as Definition~\ref{def:higher:hd} displays. Later sections of this
+chapter multiply the map in a second direction, two derivation arguments at
+once in Section~\ref{sec:higher-multi:biderivations} and three in
+Section~\ref{sec:higher-multi:tri-generalized}.
+
+\section{Coding theory: Hasse--Schmidt derivations in positive characteristic}\label{sec:higher-multi:coding}
+
+Error-correcting codes are built over finite fields, where the classical
+derivative no longer records enough information, and Hasse--Schmidt
+derivations replace it \cite[Introduction]{NarvaezMacarro2020}. Narv\'aez
+Macarro states the multivariate form
+\cite[Definition~2.1.1, p.~15]{NarvaezMacarro2020}.
+
+\begin{definition}[{\cite[Definition~2.1.1, p.~15]{NarvaezMacarro2020}}]\label{def:higher:hasse-schmidt-variate}
+Let $k$ be a commutative ring, $A$ a commutative $k$-algebra, $\mathbf{s}=\{s_1,\dots,s_p\}$
+a set of variables and $\Delta\subset\mathbb{N}^p$ a non-empty co-ideal. A
+\emph{$(p,\Delta)$-variate Hasse--Schmidt derivation} of $A$ over $k$ is a
+family $D=(D_\alpha)_{\alpha\in\Delta}$ of $k$-linear maps $D_\alpha\colon A\to A$
+satisfying
+\[
+D_0=\mathrm{Id}_A,\qquad D_\alpha(xy)=\sum_{\beta+\gamma=\alpha}D_\beta(x)D_\gamma(y)
+\quad\text{for every }x,y\in A\text{ and every }\alpha\in\Delta.
+\]
+For $p=1$ and $\Delta=\{q\in\mathbb{N}\mid q\leq m\}$, $D$ is a
+\emph{Hasse--Schmidt derivation of length $m$}, also called a higher derivation.
+\end{definition}
+
+The first component $D_1$ is a $k$-derivation of $A$ in the sense of
+Chapter~\ref{ch:basic-theory}. Every $D_i$ for $i\geq 1$ is a $k$-linear
+differential operator of order $\leq i$ vanishing on $1$
+\cite[p.~1]{NarvaezMacarro2020}. In characteristic $0$, every $k$-derivation
+$\delta$ of $A$ appears as the $1$-component of a Hasse--Schmidt derivation of
+infinite length, namely the exponential $e^{t\delta}=\sum_{\alpha\geq0}
+\frac{\delta^\alpha}{\alpha!}t^\alpha$ \cite[p.~2]{NarvaezMacarro2020}. In
+positive characteristic this exponential collapses when the derivation reaches
+order $p$, and the higher derivations are the surviving notion \cite[p.~2]{NarvaezMacarro2020}.
+
+\hbfigure{07-higher-multi/hasse-schmidt-collapse}{Why the exponential $e^{t\delta}=\sum_{\alpha\ge0}\delta^{\alpha}t^{\alpha}/\alpha!$ survives in characteristic $0$ and collapses in characteristic $p$ \cite[p.~2]{NarvaezMacarro2020}. The coefficients $1/\alpha!$ exist for every $\alpha$ in characteristic $0$. In characteristic $p$ the factorial $p!$ is a multiple of $p$, so $1/p!$ does not exist and the series stops at $\alpha=p$; the higher derivations are the notion that survives.}{fig:higher:collapse}
+The rule can be weakened by a pair of maps, one for each side, and the sequence
+keeps its shape \cite[Definition~2.1, p.~3]{HosseiniRehman2019Higher}. Hosseini
+and Rehman call a sequence a higher
+$\{g_n,h_n\}$-derivation when each term splits the product according to two
+sequences $\{g_n\}$ and $\{h_n\}$ \cite[Definition~2.1, p.~3]{HosseiniRehman2019Higher}.
+They express every such sequence by a sequence of $\{G,H\}$-derivations
+\cite[Theorem~2.4, p.~7]{HosseiniRehman2019Higher}. A Jordan higher
+$\{g_n,h_n\}$-derivation on a semiprime algebra is then a higher
+$\{g_n,h_n\}$-derivation \cite[Corollary~2.6, p.~12]{HosseiniRehman2019Higher}.
+The result extends the semiprime theorem of Brešar for the one-term
+$\{g,h\}$-derivation \cite[p.~1]{HosseiniRehman2019Higher}.
+
+The same sequence has a Jacobian form in positive characteristic
+\cite[p.~1]{Nagamine2019HigherJacobian}. Nagamine defines the higher derivation of
+Jacobian type by a tuple $F=(f_1,\dots,f_{n-1})$ of polynomials
+\cite[Definition~2.4, p.~3]{Nagamine2019HigherJacobian}. The tuple gives a sequence
+of $R$-linear maps, and the sequence is a higher derivation exactly when the
+tuple extends to a coordinate system
+\cite[Definition~2.4, p.~3]{Nagamine2019HigherJacobian}. An $(n-1)$-tuple of
+polynomials is extendable in this sense exactly when the higher derivation
+exists and has a slice \cite[Theorem~2.8, p.~5]{Nagamine2019HigherJacobian}. For the
+polynomial ring in two variables over a field of positive characteristic, the
+same construction describes the variables \cite[Theorem~3.1, p.~6]{Nagamine2019HigherJacobian}.
+
+A single derivation need not be the first component of a sequence, and the
+question of which ones are is the question of integrability
+\cite[p.~1]{Tirado2021}. A $k$-derivation $\delta$ of $A$ is \emph{$m$-integrable}
+when there is a Hasse--Schmidt derivation $D$ of length $m$ with $D_{1}=\delta$
+\cite[p.~1]{Tirado2021}. The set of $m$-integrable derivations is a module inside
+the module of derivations, written $\mathrm{IDer}_{k}(A;m)$
+\cite[p.~1]{Tirado2021}. In characteristic zero, or when $A$ is smooth over $k$,
+every derivation is integrable \cite[p.~1]{Tirado2021}. In positive characteristic
+these modules carry more information than the module of all derivations
+\cite[p.~1]{Tirado2021}. Tirado Hern\'andez computes them for the plane curve
+$x^{n}=y^{q}$, in each of several cases of the exponents
+\cite[Proposition~2.1, p.~4]{Tirado2021}.
+
+Barajas and Duarte tie the sequence to the trivial extension of a ring by a module
+\cite[p.~2]{BarajasDuarte2026}. A derivation from $A$ into $M$ is the same data as a
+ring homomorphism from $A$ into the trivial extension $A\ltimes M$ that the
+projection takes back to the identity \cite[p.~2]{BarajasDuarte2026}. Anderson,
+Bennis, Fahid and Shaiea had replaced the one module by $n$ modules
+\cite[p.~2]{BarajasDuarte2026}. Barajas and Duarte replace the derivation by a
+sequence of maps with the same property, and call it a multi Hasse--Schmidt
+derivation \cite[Definition~3.1, p.~6]{BarajasDuarte2026}.
+
+\begin{proposition}[{\cite[Proposition~3.5, p.~7]{BarajasDuarte2026}}]\label{prop:higher:multi-hs}
+Let $A,B_{1},\dots,B_{n}$ be $k$-algebras, let $g_{i}\colon A\to B_{i}$ be $k$-algebra
+homomorphisms, and give each $B_{i}$ the $A$-module structure induced by $g_{i}$.
+Then the multi Hasse--Schmidt derivations of $A$ in $B_{1},\dots,B_{n}$ correspond
+bijectively to the $k$-algebra homomorphisms from $A$ into the $n$-trivial
+extension $A\ltimes_{n}B_{1}\ltimes\cdots\ltimes B_{n}$ whose components all agree
+with the $g_{i}$.
+\end{proposition}
+
+When all the algebras $B_{i}$ are the same, the multi Hasse--Schmidt derivations
+are the Hasse--Schmidt derivations of Definition~\ref{def:higher:hs}
+\cite[p.~2]{BarajasDuarte2026}. For $n=1$ the correspondence is the classical one
+between derivations and trivial extensions \cite[p.~2]{BarajasDuarte2026}.
+
+The sequence has a Lie version. A Lie higher derivation of an algebra $A$ is a
+sequence $L=(L_{n})$ of linear maps with $L_{0}$ the identity and
+$L_{n}([x,y])=\sum_{i+j=n}[L_{i}(x),L_{j}(y)]$ for all $x,y$
+\cite[p.~1]{AshrafAnsari2021}. The first term is then a Lie derivation
+\cite[p.~1]{AshrafAnsari2021}. The authors ask when such a sequence is proper, that
+is, when it is a higher derivation plus a sequence of central maps that vanish on
+commutators \cite[p.~1]{AshrafAnsari2021}.
+
+\begin{theorem}[{\cite[Theorem~3.1, p.~6]{AshrafAnsari2021}}]\label{thm:higher:lie-higher-triangular}
+Let $A=\mathrm{Tri}(A,M,B)$ be a triangular algebra and $L=(L_{n})$ a Lie higher
+derivation of $A$. Then there is a triangular algebra $A_{0}$ containing $A$ with
+the same identity such that $L_{n}=\Delta_{n}+\chi_{n}$ for every $n$, where
+$(\Delta_{n})$ is a higher derivation of $A$ into $A_{0}$ and each $\chi_{n}$ is a
+linear map of $A$ into the center of $A_{0}$ that vanishes on every commutator.
+\end{theorem}
+
+Moafian proved the corresponding structure theorem for a generalized matrix
+algebra, and he states conditions under which the sequence is proper
+\cite[Theorem~4.4, p.~12]{Moafian2017}. Ashraf and Jabeen carry the same splitting
+to a nonlinear generalized Lie triple higher derivation
+\cite[p.~1]{AshrafJabeen2018}. There each component is the sum of an additive
+generalized higher derivation and a nonlinear map that vanishes on all Lie triple
+products \cite[Theorem~3.1, p.~5]{AshrafJabeen2018}.
+
+Over a domain of positive characteristic the higher derivations of Jacobian
+type carry the same information as the Jacobian matrix. Nagamine gives a
+necessary and sufficient condition for an $(n-1)$-tuple of such derivations on
+$R[x_1,\dots,x_n]$ \cite[Abstract, p.~1]{Nagamine2019HigherJacobian}.

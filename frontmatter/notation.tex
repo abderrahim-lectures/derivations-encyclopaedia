@@ -1,0 +1,84 @@
+\chapter*{Notation and conventions}
+\addcontentsline{toc}{chapter}{Notation and conventions}
+% STATUS: written 2026-11-06 (records the notations the chapters actually use;
+% each symbol is defined in its chapter, and this list is the index to them.
+% Operators come from style/encyclopaedia.sty; no new notation is introduced here.)
+\label{page:notation}
+
+The book keeps one notation throughout.
+A symbol is defined where it first appears, and the chapters reuse it without
+giving it a second meaning.
+This page lists the symbols a reader meets most often, so that a chapter can be
+opened at any point.
+
+\section*{Rings and algebras}
+
+$R$ and $A$ are a ring and an algebra; the book says which when the distinction
+matters. $\mathbb{F}$ is a field, and $k$ is a field when the work is
+geometric. $\operatorname{char}R$ is the characteristic of $R$, and $Z(R)$ is
+its centre.
+An algebra is associative and unital unless a chapter says otherwise;
+Chapter~\ref{ch:nonassociative} drops associativity and says so at each step.
+
+$M_n(R)$ is the ring of $n\times n$ matrices over $R$.
+A triangular algebra is written $A=\operatorname{Tri}(A_1,A_2,M)$ with $M$ the
+bimodule between the two parts.
+$R[x]$ and $R[x_1,\dots,x_n]$ are polynomial rings, and $k(x)$ is the field of
+fractions when $k$ is a domain.
+
+\section*{Derivations and their relatives}
+
+$\operatorname{Der}(A)$ is the set of derivations of $A$, an additive group and
+a Lie algebra under the commutator.
+$\operatorname{Inn}(A)$ is the set of inner derivations, those of the form
+$x\mapsto[\,a,x\,]$, so that
+$\operatorname{HH}^{1}(A,A)\cong\operatorname{Der}(A)/\operatorname{Inn}(A)$ for
+the classes where that identification holds.
+
+$\operatorname{JDer}(A)$ and $\operatorname{LDer}(A)$ are the Jordan and the Lie
+derivations. $\operatorname{ad}_a$ is the inner derivation $x\mapsto[a,x]$.
+A derivation is \emph{locally nilpotent} when some power of it kills each
+element, and the set of these is written $\operatorname{LND}(A)$. % ours: notation-page term, defined in Chapter 16
+
+$\operatorname{HH}^{\bullet}(A,M)$ is the Hochschild cohomology of $A$ with
+coefficients in the bimodule $M$, and $\operatorname{HH}^{\bullet}(A)$ is the
+case $M=A$.
+Low degrees are written out where they are used: the first cohomology group is
+the derivations modulo the inner ones.
+
+\section*{Maps and products}
+
+$[x,y]=xy-yx$ is the commutator and $x\circ y=xy+yx$ is the anti-commutator.
+A map is \emph{additive} when it respects addition, with no linearity assumed
+over a ring; the book states linearity separately wherever a theorem needs it. % ours: notation-page convention
+
+For maps with a parameter, $\sigma$ and $\tau$ are endomorphisms of the algebra,
+and $\alpha$, $\beta$ are scalars or endomorphisms as the chapter says.
+A $\sigma$-derivation satisfies $d(xy)=d(x)y+\sigma(x)d(y)$, and the book gives
+the defining identity for each twisted kind at the point where it is named.
+
+\section*{Continuity and operators}
+
+For a Banach algebra, $\lVert\cdot\rVert$ is the norm, and a derivation is
+\emph{bounded} when it is bounded as a linear map. % ours: notation-page term, defined in Chapter 18
+The book asks, for each class, whether continuity has to be assumed or comes for
+free; the question is fixed in
+Section~\ref{sec:basic-theory:question-families} and answered by class in the
+chapters.
+
+$\mathcal{B}(H)$ is the algebra of bounded operators on a Hilbert space $H$, and
+$\mathcal{K}(H)$ is the ideal of compact operators.
+A von Neumann algebra is written $M$.
+
+\section*{Conventions}
+
+A theorem recalled from a source carries the source in its header, with the page
+or the numbered item.
+A result proved in this book is marked as one of its own.
+A citation after a sentence gives the page on which the cited source says what
+the sentence attributes to it.
+
+The book uses British spelling in the text and keeps the spelling of a quoted
+title.
+Section and theorem numbers are stable within an edition; a later edition may
+add a section at the end of a chapter, which leaves earlier numbers alone.

@@ -1,0 +1,81 @@
+% STATUS: written 2026-11-05, recalled results as is (one environment each, source kind and whole statement)
+% Sources read in full: Davydov 2013 (pp. 567--582).
+\section{Twisted derivations of Hopf algebras}\label{sec:group-hopf:hopf}
+
+The group ring of Section~\ref{sec:group-hopf:group-algebras} is cocommutative:
+every group element $g$ satisfies $\Delta(g)=g\otimes g$. In a bialgebra $H$ a
+derivation $d\colon H\to H$ deals only with the product, and the element
+$\Delta(d(x))$ need not equal $(I\otimes d+d\otimes I)(\Delta(x))$: Davydov lets the
+difference be the commutator $[\varphi,\Delta(x)]$ for a tensor $\varphi$
+\cite[p.~572]{Davydov2013}. He calls a pair $(d,\varphi)$ a twisted derivation
+\cite[p.~572]{Davydov2013}.
+
+\begin{definition}[{\cite[p.~572]{Davydov2013}}]\label{def:group-hopf:twisted}
+A \emph{twisted derivation} of a bialgebra $H$ is a pair $(d,\varphi)$, where
+$d\colon H\to H$ is an algebra derivation and $\varphi$ is an element of
+$H\otimes H$, such that
+\begin{align*}
+(I\otimes d+d\otimes I)(\Delta(x))-\Delta(d(x))&=[\varphi,\Delta(x)] \quad
+\text{for all } x\in H,\\
+1\otimes\varphi+(I\otimes\Delta)(\varphi)&=\varphi\otimes1+(\Delta\otimes I)(\varphi),\\
+\varepsilon d&=0,\\
+(\varepsilon\otimes I)(\varphi)&=(I\otimes\varepsilon)(\varphi)=0.
+\end{align*}
+The set of twisted derivations of $H$ is denoted by $\operatorname{Dert}_w(H)$.
+\end{definition}
+
+Twisted derivations appear as infinitesimal symmetries of the category of
+representations \cite[p.~567]{Davydov2013}. They are the infinitesimal versions
+of the twisted automorphisms of the bialgebra \cite[p.~567]{Davydov2013}. They
+also form a Lie algebra, the tangent algebra of the group of twisted
+automorphisms \cite[p.~567]{Davydov2013}. There is a gauge action
+\cite[pp.~567--568]{Davydov2013}: an element $a\in H$ sends $(d,\varphi)$ to
+$(d+[a,-],\,\varphi+a\otimes1+1\otimes a-\Delta(a))$. The quotient of
+$\operatorname{Dert}_w(H)$ by this action is the Lie algebra of outer twisted
+derivations $\operatorname{OutDert}_w(H)$ \cite[pp.~567--568]{Davydov2013}.
+For a universal enveloping algebra the computation is complete over a field of
+characteristic zero.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~578]{Davydov2013}}]\label{thm:group-hopf:davydov-ug}
+Let $\mathfrak{g}$ be a Lie algebra over a field of characteristic zero. Then the Lie
+algebra of outer twisted derivations of $U(\mathfrak{g})$ has a form:
+\[
+\operatorname{OutDert}_w(U(\mathfrak{g}))\simeq\operatorname{OutDer}(\mathfrak{g})
+\ltimes(\Lambda^{2}\mathfrak{g})^{\mathfrak{g}},
+\]
+where the crossed product is taken with respect to the natural action of
+$\operatorname{OutDer}(\mathfrak{g})$ on the Abelian Lie algebra
+$(\Lambda^{2}\mathfrak{g})^{\mathfrak{g}}$.
+\end{theorem}
+
+The proof gauges $\varphi$ to a skew-symmetric tensor and then uses
+cocommutativity \cite[pp.~577--578]{Davydov2013}. In the first equation of
+Definition~\ref{def:group-hopf:twisted} one side is symmetric and the other is
+skew-symmetric, so both vanish. The twisted derivation then separates into a
+bialgebra derivation and an invariant twist \cite[pp.~577--578]{Davydov2013}.
+His second example is small and not cocommutative: the four-dimensional
+Hopf algebra \cite[p.~580]{Davydov2013}.
+
+\begin{example}[{\cite[p.~580]{Davydov2013}}]\label{ex:group-hopf:h4}
+the Hopf algebra $H_4$ is the algebra
+\[
+H_4=k\langle g,x\mid g^{2}=1,\ x^{2}=0,\ gx+xg=0\rangle.
+\]
+It is a Hopf algebra with the comultiplication $\Delta(g)=g\otimes g$,
+$\Delta(x)=1\otimes x+x\otimes g$, the counit $\varepsilon(g)=1$, $\varepsilon(x)=0$,
+and the antipode $S(g)=g$, $S(x)=gx$.
+\end{example}
+
+On this Hopf algebra the twisted derivations form a Lie algebra.
+
+\begin{theorem}[{\cite[Theorem~2.14, p.~580]{Davydov2013}}]\label{thm:group-hopf:h4}
+The algebra $\operatorname{OutDert}_w(H_4)$ of twisted derivations of the Hopf
+algebra is a two-dimensional non-Abelian Lie algebra.
+\end{theorem}
+
+The two generators are the bialgebra derivation $d$ with $d(g)=0$ and $d(x)=x$, and
+the invariant infinitesimal twist $\psi=x\otimes gx$; their bracket is
+$[(d,0),(0,\psi)]=(0,2\psi)$ \cite[p.~580]{Davydov2013}. So a
+non-cocommutative coproduct ties the algebra derivations and the twists together.
+Section~\ref{sec:group-hopf:quantum} follows the same idea into a quantum group,
+where the derivation is asked to respect the left and right shifts of the group.

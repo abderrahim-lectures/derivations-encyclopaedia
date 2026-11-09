@@ -1,0 +1,144 @@
+% STATUS: written 2026-11-05 (Wang 2016 read in full; Liu-Liu 2021 abstract read)
+% STATUS: extended 2026-11-06 (Guan and Zhang 2024, Di Bartolo and La Rosa 2026, Di Bartolo, Di Fatta and La Rosa 2025 (both papers) read in full)
+% STATUS: extended 2026-11-07 (Cheraghpour and Jafari 2024 read in full from the
+% library PDF)
+% Sources: Wang 2016 read in full (pp. 1952-1959). Liu-Liu 2021: only the abstract and the
+% references extract from the local copy (see excerpts/Liu2021_jordanbid.txt). Bresar 1995 is
+% atlas-pending P0005 (local copy image-only); the generalized-biderivation notion is quoted
+% through Yazarli 2017 (p. 490, attribution) and through the Wang 2016 triangular-ring theory
+% that builds on Bresar-Martindale-Miers 1993 via the notion of an inner biderivation.
+% Guan and Zhang 2024 (pp. 1--4, 13); Di Bartolo and La Rosa 2026 (pp. 1--5); Di Bartolo, Di Fatta
+% and La Rosa 2025 Leibniz (pp. 1, 6--8, 10); the same authors 2025 Super (pp. 1--2, 5, 10);
+% Cheraghpour and Jafari 2024 (pp. 1--10 of the arXiv version).
+\section{Tri-derivations, generalized biderivations and Jordan biderivations}\label{sec:higher-multi:tri-generalized}
+
+Sections~\ref{sec:higher-multi:biderivations}
+to~\ref{sec:higher-multi:symmetric-maps} studied a biderivation in prime and
+semiprime rings. Brešar extends the notion to a generalized biderivation and
+develops its properties \cite[reference~5]{Bresar1995GBid}. This section looks
+at what a biderivation can be on a structured ring
+\cite[p.~1952]{Wang2016Bideriv}.
+
+Two special forms carry the theory \cite[p.~1952]{Wang2016Bideriv}.
+
+\begin{definition}[{\cite[p.~1952]{Wang2016Bideriv}}]\label{def:higher:inner-extremal}
+Let $R$ be a noncommutative ring. A biderivation $\phi\colon R\times R\to R$
+is \emph{inner} when $\phi(x,y)=\lambda[x,y]$ for all $x,y\in R$, where
+$\lambda\in Z(R)$. A biderivation $\phi\colon R\times R\to R$ is
+\emph{extremal} when $\phi(x,y)=[x,[y,a]]$ for all $x,y\in R$, where $a\in R$
+with $a\notin Z(R)$ and $[[R,R],a]=0$.
+\end{definition}
+
+On a triangular ring every biderivation is built from these two
+\cite[p.~1955]{Wang2016Bideriv}. A unital ring $R$ with a nontrivial
+idempotent $e$ is \emph{triangular} when $f=1-e$, $eRf$ is a faithful
+$(eRe,fRf)$-bimodule and $fRe=0$ \cite[p.~1953]{Wang2016Bideriv}.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~1955]{Wang2016Bideriv}}]\label{thm:higher:triangularbid}
+Let $R$ be a triangular ring. If the following conditions hold:
+\begin{enumerate}
+\item $C(fQ_{ml}(R)f,fRf)=C(R)f$,
+\item either $eRC(R)e$ or $fRC(R)f$ does not contain nonzero central ideals,
+\end{enumerate}
+then every biderivation on $R$ is a sum of an extremal biderivation and an
+inner biderivation.
+\end{theorem}
+
+Upper triangular matrices over a unital ring meet the two conditions for rank
+at least three \cite[p.~1956]{Wang2016Bideriv}.
+
+\begin{corollary}[{\cite[Corollary~2.1, p.~1956]{Wang2016Bideriv}}]\label{cor:higher:uppertri}
+Let $S$ be a unital ring and let $T_n(S)$ be the ring of all $n\times n$ upper
+triangular matrices over $S$ (where $n\geq 3$). Then every biderivation of
+$T_n(S)$ is the sum of an extremal biderivation and an inner biderivation.
+\end{corollary}
+
+The triangular ring is the right home for the Jordan question
+\cite[p.~1417]{Liu2021JordanBid}. Liu and Liu show that, under some mild
+conditions, every Jordan biderivation of a triangular ring is a biderivation,
+and apply it to some upper triangular matrix rings
+\cite[p.~1417]{Liu2021JordanBid}. The full statement sits in their section~2
+but the local copy of the paper does not extract its body; only the abstract
+is quoted \cite[p.~1417]{Liu2021JordanBid}.
+
+The same two families describe the biderivations of an incidence algebra
+\cite[p.~3]{GuanZhang2024}. Guan and Zhang take a commutative ring with unity
+and a locally finite poset \cite[p.~2]{GuanZhang2024}. Their inner and extremal
+biderivations have the forms of Definition~\ref{def:higher:inner-extremal}
+\cite[p.~3]{GuanZhang2024}. The decomposition holds once each maximal chain has
+at least three elements \cite[Theorem~4.10, p.~13]{GuanZhang2024}. When every
+maximal chain is infinite, the extremal part disappears and every additive
+biderivation is a sum of inner ones \cite[p.~1]{GuanZhang2024}. So the incidence
+algebra keeps the pattern of the triangular ring, with the shape of the
+poset in place of the shape of the matrix \cite[p.~1]{GuanZhang2024}.
+
+For a Lie algebra the space of biderivations carries a Lie bracket of its own
+\cite[p.~1]{DiBartoloLaRosa2026}. Di Bartolo and La Rosa call a bilinear
+map $B$ a biderivation when it is a derivation in each argument
+\cite[Definition~2.1, p.~2]{DiBartoloLaRosa2026}. They also call $B$ a
+right biderivation when only the first argument obeys the rule, with no
+linearity asked of the second \cite[Definition~3.1, p.~3]{DiBartoloLaRosa2026}.
+The right biderivations form a Lie algebra under a bracket built from the
+derivations at each point \cite[Theorem~3.5, p.~4]{DiBartoloLaRosa2026}.
+The left biderivations form one as well
+\cite[Theorem~3.6, p.~4]{DiBartoloLaRosa2026}. For a complete
+finite-dimensional Lie algebra the right space is a tensor product of functions
+with the algebra itself \cite[Corollary~3.8, p.~5]{DiBartoloLaRosa2026}.
+The classical biderivations are the maps that are derivations in both
+arguments, and they form the first cohomology group with coefficients in the
+algebra \cite[p.~1]{DiBartoloLaRosa2026}.
+
+The same questions are asked for Leibniz algebras
+\cite[p.~1]{DiBartoloDiFattaLaRosa2025Leibniz}. Two definitions of a complete
+Leibniz algebra appear in the literature, and the authors treat both
+\cite[Definitions~2.6 and~2.7, p.~6]{DiBartoloDiFattaLaRosa2025Leibniz}. On such
+an algebra every biderivation splits into a commutator with a linear map plus a
+biderivation with values in the Leibniz kernel
+\cite[Theorem~3.1, p.~7]{DiBartoloDiFattaLaRosa2025Leibniz}. For a symmetric or
+a skew-symmetric biderivation the first term lands in the kernel as well
+\cite[Proposition~4.1, p.~10]{DiBartoloDiFattaLaRosa2025Leibniz}.
+
+Lie superalgebras need a definition that makes the bracket itself a
+superbiderivation, and the authors give one
+\cite[Definition~2.6, p.~5]{DiBartoloDiFattaLaRosa2025Super}. On a complete Lie
+superalgebra every superbiderivation is a bracket with a linear map of the same
+degree \cite[Theorem~3.6, p.~10]{DiBartoloDiFattaLaRosa2025Super}. The authors
+compare their definition with the earlier ones and record where the two
+disagree \cite[pp.~1--2]{DiBartoloDiFattaLaRosa2025Super}.
+
+A trivial extension is the triangular matrix ring of a special shape, and
+Cheraghpour and Jafari describe its Jordan super-biderivations
+\cite[p.~1]{CheraghpourJafari2024}. They show that such a map is a Jordan
+biderivation of the base ring together with two biadditive pieces, and they record
+the two identities the pieces satisfy
+\cite[Theorem~2.6, p.~9]{CheraghpourJafari2024}.
+
+\begin{theorem}[{\cite[Theorem~2.6, p.~9]{CheraghpourJafari2024}}]\label{thm:higher:jordan-super-bid}
+Let $B$ be a Jordan super-biderivation of the trivial extension $T(R,M)$ of a ring
+$R$ by a bimodule $M$. Then there are a Jordan biderivation $\delta$ of $R$, a
+biadditive map $\beta\colon R\times M\to M$ that is a Jordan derivation in the
+first coordinate with
+$\beta(r,m\circ r')=\beta(r,m)\circ r'+m\circ\delta(r,r')$, a biadditive map
+$\eta\colon M\times R\to M$ that is a Jordan derivation in the second coordinate
+with $\eta(m\circ r',r)=\eta(m,r)\circ r'+m\circ\delta(r',r)$, and a biadditive map
+$f\colon M\times M\to R$ that is a bimodule Jordan homomorphism in each coordinate,
+such that
+\[
+B\bigl((r,m),(r',m')\bigr)=\bigl(\delta(r,r')+f(m,m'),\;\beta(r,m')+\eta(m,r')\bigr)
+\]
+for all $r,r'\in R$ and $m,m'\in M$.
+\end{theorem}
+
+So a Jordan super-biderivation of a trivial extension is a Jordan biderivation
+\cite[p.~1]{CheraghpourJafari2024}. The same holds for an upper triangular matrix
+ring under their conditions \cite[p.~1]{CheraghpourJafari2024}.
+
+The chapter ends where it began, through Brešar, Martindale and Miers
+\cite[p.~1952]{Wang2016Bideriv}. A biderivation of a noncommutative prime
+ring is inner, so it has the form $\lambda[x,y]$
+\cite[p.~1952]{Wang2016Bideriv}. On a triangular ring it is the sum of an
+extremal and an inner piece \cite[p.~1956]{Wang2016Bideriv}. On the ring
+$T_n(S)$ over a unital ring $S$ the sum holds for $n\geq 3$
+\cite[p.~1956]{Wang2016Bideriv}. Liu and Liu add that a Jordan
+biderivation of such a ring is a biderivation
+\cite[p.~1417]{Liu2021JordanBid}.

@@ -1,0 +1,61 @@
+% STATUS: written 2026-11-05 (Hazewinkel 2013 pp. 4--5 and the
+% bibliographical notes read; Sweedler 1980 p. 29 read on the scanned page).
+\section{Rings of differential operators}\label{sec:polynomial-weyl:differential-operators}
+
+Section~\ref{sec:polynomial-weyl:weyl} gave the Weyl algebra by
+generators and relations. This section builds the same algebra by
+operators. The order of an operator counts how many commutators kill it,
+and the recursive characterization of Grothendieck makes that count a
+definition \cite[Theorem~6.2, p.~4]{Hazewinkel2013}. The characterization
+is the affine case of EGA IV, propositions 16.8.8 and 16.8.9
+\cite[p.~5]{Hazewinkel2013}.
+
+\begin{theorem}[{\cite[Theorem~6.2, p.~4]{Hazewinkel2013}}]
+\label{thm:pw:diffop-order}
+Let $D$ be a $k$-module endomorphism of the commutative $k$-algebra $A$.
+Then $D$ is a differential operator of order $\leq n$ if and only if for
+every $(n+1)$-tuple of elements $x_{0},x_{1},\dots,x_{n}\in A$ the
+iterated commutator
+\[
+\operatorname{ad}(x_{0})\operatorname{ad}(x_{1})\cdots
+\operatorname{ad}(x_{n})D \;=\; 0 .
+\]
+\end{theorem}
+
+The differential operators of a commutative algebra form an algebra under
+composition: the product of an operator of order $\leq n$ and an operator
+of order $\leq n'$ has order $\leq n+n'$
+\cite[6.4, p.~5]{Hazewinkel2013}. The filtered algebra they form is
+denoted $\operatorname{Diff}(A)$ \cite[6.4, p.~5]{Hazewinkel2013}. On
+$\mathbb{Q}[X,Y]$ this is exactly the na\"ive algebra of finite sums of
+the monomial operators $f_{i,j}\partial_{X}^{i}\partial_{Y}^{j}$; on
+$\mathbb{Z}[X,Y]$ it is larger, since the divided powers
+$\frac{1}{i!}\partial_{X}^{i}$ enter \cite[6.4, p.~5]{Hazewinkel2013}.
+
+Sweedler carried the same commutator rule to noncommutative algebras and
+named the right derivation \cite[p.~29]{Sweedler1980}.
+
+\begin{remark}[{\cite[p.~29]{Sweedler1980}}]\label{rem:pw:sweedler-right}
+A \emph{right derivation} is a linear map $d\colon A\to N$ with
+$d(ab)=d(a)b+d(b)a$. Right differential operators of order $n$ are defined
+inductively: $D^{0}_{A}(M,N)=\operatorname{Hom}_{A}(M,N)$, and
+$D^{n}_{A}(M,N)$ is the set of $f\in\operatorname{Hom}(M,N)$ with
+$[f,a]\in D^{n-1}_{A}(M,N)$ for all $a\in A$, where
+$[f,a](m)=f(ma)-f(m)a$ \cite[p.~29]{Sweedler1980}.
+\end{remark}
+
+The module of order-one operators splits into the multiplications and the
+right derivations \cite[p.~29]{Sweedler1980}, which places the right
+derivation beside the derivation of
+Section~\ref{sec:basic-theory:definitions} in the family tree of
+Section~\ref{sec:basic-theory:family-tree}. % claim-ok: the two cited sections carry the definitions; this sentence only names their placement
+
+The polynomial case closes the circle: the algebra of polynomial
+differential operators on affine $n$-space is the Weyl algebra $A_{n}$ of
+Definition~\ref{def:pw:weyl} \cite[p.~1]{BelovKanelKontsevich2007}. The
+generators of the last section are the multiplications and the partial
+derivatives of this one. % claim-ok: the two cited items state both sides of the identification
+On the Weyl algebra every derivation is inner by
+Proposition~\ref{prop:pw:weyl-inner}. The next section varies the ground
+ring instead of the operators, and builds polynomials over a derivation
+itself \cite[p.~480]{Ore1933}.

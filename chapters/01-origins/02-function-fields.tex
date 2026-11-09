@@ -1,0 +1,96 @@
+% STATUS: written 2026-11-06 (English gate clean; sources read in full as recorded below).
+% Sources read in full: Dedekind--Weber 1882 (J. reine angew. Math. 92, 181--290; scan archive.org journalfrdierei42crelgoog, Sections 11 and 23 and the plan on p. 183 checked in the OCR text; Section 23, headed "Die Differentialquotienten", opens on p. 259), Hilbert 1897 (Jahresber. DMV 4, Section 3 checked against the page image, p. 179, where the Differente is defined), Hecke 1923 (Section 36, OCR text).
+% Not yet read: Hensel--Landsberg 1902; Kronecker 1882 (Grundzuege, same volume 92, pp. 1--122).
+\section[Differentiation in number and function fields: Dedekind, Weber, Hensel, Hilbert][Number and function fields]{Differentiation in number and function fields: Dedekind, Weber, Hensel, Hilbert}\label{sec:origins:function-fields}
+
+The derivative of a polynomial did algebraic work long before derivations
+were defined on rings. It did this work in two places. The first place is
+the theory of algebraic functions of one variable. The second place is the
+arithmetic of number fields.
+
+Riemann defined differentials on a Riemann surface by analysis. Dedekind and
+Weber wanted the same objects without any use of continuity. In number
+fields, the derivative of a defining polynomial gives a number called the
+\emph{different}~\cite[\S 3, p.~179]{Hilbert1897}. It is defined through the derivative.
+
+Dedekind and Weber gave an answer in 1882. Their memoir is \emph{Theorie der algebraischen Functionen einer
+Ver\"anderlichen}~\cite{DedekindWeber1882}. It is written in German. It
+builds the theory of Riemann surfaces again, from the arithmetic of ideals. The
+introduction states the plan: \translated{A formal definition of the
+differential quotient based on this then leads to the genus and to a
+completely general, elegant representation of the differentials of the first
+kind}{Eine darauf gegr\"undete formale Definition des Differentialquotienten
+f\"uhrt sodann zu der Geschlechtszahl und zu einer ganz allgemeinen,
+eleganten Darstellung der Differentiale erster Gattung}{German}%
+~\cite[p.~183]{DedekindWeber1882}. The same page adds a remark. Up to the
+Riemann--Roch theorem, continuity and power series play no role.
+
+The definition is in Section~23, \emph{Die Differentialquotienten}
+\cite[\S 23, p.~259]{DedekindWeber1882}. We
+follow it in our translation. Let $\Omega$ be the field of algebraic
+functions. Let $\alpha$ and $\beta$ be elements of $\Omega$. Assume that
+$\beta$ is not constant. The two elements satisfy an irreducible equation
+$F(\alpha,\beta) = 0$. Dedekind and Weber show that $\Omega$ contains a
+function $(d\alpha/d\beta)$. At almost every point, its value is the limit of
+the difference quotient. A footnote gives a purely algebraic formula:
+\[
+  \Bigl(\frac{d\alpha}{d\beta}\Bigr) = -\,\frac{F'(\beta)}{F'(\alpha)}.
+\]
+Here $F'(\alpha)$ and $F'(\beta)$ are the two partial derivatives of~$F$.
+With this formula they prove the chain rule:
+\[
+  \frac{d\alpha}{d\beta} = \frac{d\alpha}{d\gamma}\,\frac{d\gamma}{d\beta}
+\]
+\cite[\S 23, pp.~259--260]{DedekindWeber1882}. Next they give every element
+$\alpha$ a differential $d\alpha$. It satisfies $d\alpha =
+(d\alpha/d\beta)\, d\beta$. They note that \translated{the differentials of the
+constants, and only these, are to be set equal to zero}{Die Differentiale der
+Constanten, und nur diese sind Null zu setzen}{German}. Finally, take any
+rational relation $F(\alpha,\beta,\gamma,\ldots) = 0$. From it they derive
+$F'(\alpha)\,d\alpha + F'(\beta)\,d\beta + F'(\gamma)\,d\gamma + \cdots = 0$%
+~\cite[\S 23, p.~261]{DedekindWeber1882}.
+
+In modern language, the construction reads as follows. Fix a nonconstant element $z$. Then the map $\alpha \mapsto d\alpha/dz$ is a
+derivation of $\Omega$. Its kernel is exactly the field of constants. The map
+$\alpha \mapsto d\alpha$ is an early form of the universal derivation
+(Section~\ref{sec:commutative:kahler}). Dedekind and Weber did not use these
+words. They needed a derivative defined by algebra alone. With it, they
+reached the genus and the differentials of the first kind without analysis.
+
+On the side of arithmetic, the derivative appears in the \emph{Zahlbericht} of Hilbert~\cite{Hilbert1897}. It is written in German.
+Let $\alpha$ be an algebraic number. Let $\alpha', \ldots, \alpha^{(m-1)}$ be
+its conjugates. Hilbert calls the product
+\[
+  \delta(\alpha) = (\alpha-\alpha')(\alpha-\alpha'')\cdots(\alpha-\alpha^{(m-1)})
+\]
+the \emph{different} of~$\alpha$. He notes that it is again a number of the
+field. Indeed, put $f(x) = (x-\alpha)(x-\alpha')\cdots(x-\alpha^{(m-1)})$.
+Then
+\[
+  \delta(\alpha) = \Bigl[\frac{df(x)}{dx}\Bigr]_{x=\alpha}
+\]
+\cite[\S 3, p.~179]{Hilbert1897}. So the different is the derivative of the
+polynomial at $\alpha$. The discriminant of $\alpha$ is the product of the
+squared differences of the conjugates~\cite[\S 3, p.~179]{Hilbert1897}.
+
+Twenty-six years later, Hecke links the different of a number to the different of the field. He does
+this in his lectures~\cite{Hecke1923}, which are written in German. We follow
+them in our translation. He calls the ideal of Satz~101
+\translated{the different or the fundamental ideal of the field}{die
+Differente oder das Grundideal des K\"orpers}{German} (Satz~103). Let
+$\vartheta$ be an integral generator of the field. Let $F$ be its defining
+polynomial. Then $F'(\vartheta)$ is the different of $\vartheta$. Hecke
+proves the following. Let $\alpha$ be a number such that $\alpha$ times the
+different is integral. Then $\alpha = \Phi(\vartheta)/F'(\vartheta)$ for
+some $\Phi(\vartheta)$ in the ring generated by
+$\vartheta$~\cite[\S 36, pp.~133--134]{Hecke1923}.
+
+Looking back, the two lines have much in common. Both use the derivative as an operation of polynomial algebra. No limit
+is involved. Both lines also tie the derivative to the branching of an
+extension. Dedekind and Weber call the ideal of multiple prime factors the
+\translated{branching ideal}{Verzweigungsideal}{German}%
+~\cite[\S 11, p.~226]{DedekindWeber1882}. They relate it to the differential
+quotients in Section~23. The different of Hilbert is the derivative of the
+defining polynomial. The next step is to treat the derivative as an abstract
+operation on a field, with no polynomial behind it. This is the subject of
+Section~\ref{sec:origins:fields-and-separability}.

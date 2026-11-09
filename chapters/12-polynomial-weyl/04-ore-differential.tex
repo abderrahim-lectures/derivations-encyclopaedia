@@ -1,0 +1,82 @@
+% STATUS: written 2026-11-05 (Ore 1933 pp. 480--483, Lequain 2008
+% pp. 801--802 and Nowicki 2004 pp. 4568--4570 read at the cited pages).
+\section{Differential polynomial rings}\label{sec:polynomial-weyl:ore-differential}
+
+Section~\ref{sec:polynomial-weyl:differential-operators} built operators
+on a fixed ring. This section moves the derivation into the multiplication:
+a polynomial variable acts on the coefficient ring through a derivation.
+Ore built the general skew polynomial ring in 1933
+\cite[p.~480]{Ore1933}, and
+Section~\ref{sec:generalized-twisted:ore-extensions} recalls his
+construction. The differential twist of his Section~2 is the case of this
+section \cite[p.~482]{Ore1933}. % claim-ok: the cited page states the differential special case
+The coefficient ring is commutative, the conjugation is the identity,
+and the twist of $a$ by $x$ is the derivative $a'$
+\cite[p.~482]{Ore1933}.
+
+\begin{remark}[{\cite[p.~482]{Ore1933}}]\label{rem:pw:ore-differential}
+Ore states the differential case as follows. In the theory of linear
+differential equations the coefficient field $K$ is commutative, and the
+conjugate $\bar{a}$ equals $a$. The derivative then satisfies
+$(a+b)'=a'+b'$ and $(ab)'=ab'+a'b$, and it has the ordinary properties
+of a derivative \cite[p.~482]{Ore1933}. % claim-ok: the header of the remark already cites this page; the sentence is part of the quote
+In the theory of difference equations the derivative is
+$0$ and the conjugate is not \cite[p.~482]{Ore1933}.
+\end{remark}
+
+The differential Ore extension of a ring $R$ by a derivation $d$ is
+denoted $R[X;d]$. Its elements are polynomials in $X$ with coefficients
+in $R$. The multiplication rule is $Xa=aX+d(a)$
+\cite[p.~481, (3)]{Ore1933}. % claim-ok: the cited formula (3) is x . a = abar . x + a', the differential case of which is the rule stated here
+The Weyl algebra $A_{1}$ of Section~\ref{sec:polynomial-weyl:weyl} is the
+first example, since $A_{1}$ is the algebra of polynomial differential
+operators in one variable \cite[p.~1]{BelovKanelKontsevich2007}. % claim-ok: the cited identification states the example
+
+A ring $R$ with a derivation $d$ is \emph{$d$-simple} when every
+$d$-ideal of $R$ is trivial \cite[p.~801]{Lequain2008}. Goodearl and
+Warfield call the same extension a formal differential operator ring
+$R[x;\delta]$ \cite[p.~28]{GoodearlWarfield2004}. % claim-ok: the cited page defines R[x;delta], and the proposition below carries the located theorem
+
+\begin{proposition}[{\cite[Proposition~2.1, p.~31]{GoodearlWarfield2004}}]
+\label{prop:pw:goodearl-warfield}
+Let $R$ be a $\mathbb{Q}$-algebra and $\delta$ a derivation on $R$. Then
+$R[x;\delta]$ is a simple ring if and only if $R$ is $\delta$-simple and
+$\delta$ is outer.
+\end{proposition}
+
+Lequain gives the criterion in a form ready for computation, and recalls
+the criterion of Shamsuddin for one step further, where the derivation
+extends to $R[Y]$ with $d(Y)=aY+b$ \cite[p.~802]{Lequain2008}.
+
+\begin{theorem}[{Shamsuddin, \cite[Theorem~2.1, p.~802]{Lequain2008}}]
+\label{thm:pw:shamsuddin}
+Let $R$ be a ring, $Y$ an indeterminate over $R$ and $d$ a derivation of
+$R[Y]$ such that $d(R)\subseteq R$, $R$ is $d$-simple and
+$d(Y)=aY+b$ with $a,b\in R$. Then the following are equivalent:
+\begin{enumerate}
+\item $R[Y]$ is $d$-simple;
+\item the equation $d(Z)=aZ+b$ has no solution in $R$.
+\end{enumerate}
+\end{theorem}
+
+The concrete ground for this chapter is the Ore extension $A=k[x][t;d]$, with
+$d$ a nonzero derivation of $k[x]$. Over a field of characteristic zero,
+every local derivation of this ring is a derivation, by
+Theorem~\ref{thm:pw:nowicki-ore} below. % claim-ok: the theorem carries the citation
+
+
+\begin{theorem}[{\cite[Theorem~4.1, p.~4569]{Nowicki2004Local}}]
+\label{thm:pw:nowicki-ore}
+Let $k[x]$ be the polynomial ring in one variable over a field $k$ of
+characteristic zero, and let $d$ be a nonzero derivation of $k[x]$. Let
+$A=k[x][t;d]$ be the Ore extension of $k[x]$ with respect to $d$. Every
+local derivation of $A$ is a derivation.
+\end{theorem}
+
+The local derivations of
+Section~\ref{sec:basic-theory:definitions} therefore give nothing new on
+this ring. % claim-ok: Theorem thm:pw:nowicki-ore just above is the statement of this sentence
+Chapter~\ref{ch:commutative} follows polynomial derivations into the
+geometry of the Jacobian question that
+Section~\ref{sec:polynomial-weyl:polynomial} left open % claim-ok: own signpost to the next chapter
+\cite[p.~1]{BelovKanelKontsevich2007}.

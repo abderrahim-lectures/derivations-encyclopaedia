@@ -1,0 +1,131 @@
+% STATUS: written 2026-10-12
+% Sources read in full: Posner 1957 (pp. 1093--1100), Mathieu 1992 (pp. 601--602), Lanski 1988 (pp. 275--280: the introduction, the statements of the main theorems and the preliminaries).
+\section{The theorems of Posner}\label{sec:prime-semiprime:posner}
+
+This section tells the story of the paper behind two results used earlier.
+Chapter~\ref{ch:basic-theory} used it for the constants and kernels of a
+derivation, in Section~\ref{sec:basic-theory:constants-kernels}, and again for
+the Lie algebra structure on the derivations, in
+Section~\ref{sec:basic-theory:der-as-lie-algebra} \cite{Posner1957}.
+
+The paper proves two theorems about derivations of prime rings
+\cite[p.~1093]{Posner1957}. The first one answers a natural question: when is
+the product of two derivations again a derivation
+\cite[p.~1093]{Posner1957}? In a prime ring of
+characteristic not~$2$, this happens only when one of the two derivations is
+zero \cite[p.~1093]{Posner1957}.
+
+The second theorem gives a test for commutativity. Take a prime ring with a
+nonzero derivation $d$. Suppose that $ad(a)-d(a)a$ is central for every $a$.
+Then the ring is commutative \cite[p.~1093]{Posner1957}.
+
+We define the setting as Posner does \cite[p.~1093]{Posner1957}. A ring $R$ is
+\emph{prime} when $xay=0$ for all $a\in R$ forces $x=0$ or $y=0$. Posner calls
+Lemma~1 known: if $d$ is a derivation of a prime ring and $ad(x)=0$ for all $x$,
+then $a=0$ or $d=0$ \cite[Lemma~1, p.~1093]{Posner1957}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~1094]{Posner1957}}]\label{thm:prime:posner-one}
+Let $R$ be a prime ring of characteristic not~$2$, and let $d_1$ and $d_2$ be
+derivations of $R$ such that the composition $d_1d_2$ is also a derivation.
+Then at least one of $d_1$ and $d_2$ is zero.
+\end{theorem}
+
+Posner proves this by expanding $d_1d_2(ab)$ in two ways, which gives $d_2(a)d_1(b)+d_1(a)d_2(b)=0$ for all $a$ and $b$ \cite[p.~1094]{Posner1957}. Lemma~1 then finishes the argument \cite[p.~1094]{Posner1957}.
+
+We state the second theorem next.
+
+\begin{theorem}[{\cite[Theorem~2, p.~1097]{Posner1957}}]\label{thm:prime:posner-two}
+Let $R$ be a prime ring and let $d$ be a derivation of $R$ such that
+$ad(a)-d(a)a$ is in the center of $R$ for every $a\in R$. If $d$ is not the
+zero derivation, then $R$ is commutative.
+\end{theorem}
+
+The proof of this theorem takes several pages \cite[pp.~1094--1100]{Posner1957}.
+Posner first treats the case $ad(a)-d(a)a=0$, where the ring is commutative or
+$d$ is zero \cite[Lemma~3, pp.~1094--1095]{Posner1957}. He then uses a remark
+of Kaplansky on the Lie ring of derivations
+\cite[Lemma~4, pp.~1096--1097]{Posner1957}. Section~\ref{sec:basic-theory:der-as-lie-algebra}
+introduced that Lie ring. The last pages treat characteristic $3$ and the other
+characteristics separately \cite[pp.~1097--1100]{Posner1957}.
+
+Mathieu says that the second theorem ``has been considered to lie somewhat
+deeper'' than the first \cite[p.~601]{Mathieu1992}. He adds that Awtar
+simplified its proof. He then derives it from the first theorem when the
+characteristic is not~$2$.
+
+His argument has three steps \cite[pp.~601--602]{Mathieu1992}. Applying the
+hypothesis to $a+b$ shows that $[a,\delta b]+[b,\delta a]$ is central. A short
+computation then gives $[a,\delta a]=0$. So the composition of $\delta$ with an
+inner derivation is a derivation, and Theorem~\ref{thm:prime:posner-one}
+applies.
+
+The same argument works on a nonzero ideal $I$ of $R$
+\cite[p.~601]{Mathieu1992}. It then proves the theorem for a derivation with
+$[a,\delta a]$ central only for $a$ in $I$ \cite[p.~601]{Mathieu1992}.
+
+We turn to characteristic $2$. Mathieu points to Ahmad for the second theorem
+\cite[pp.~601--602]{Mathieu1992}. For the first theorem, the version of Bergen
+gives an element $c$ of the extended centroid of $R$ with $\delta_b=c\,\delta$
+\cite[Remark~2, p.~602]{Mathieu1992}.
+Section~\ref{sec:prime-semiprime:quotient-rings} explains the extended centroid.
+
+Lanski says that the earlier arguments are ``generally ad hoc computations,
+often lengthy and clever'' \cite[p.~276]{Lanski1988}. He replaces them by the
+differential identities of Kharchenko, which
+Section~\ref{sec:prime-semiprime:kharchenko} describes.
+
+With this method he proves both theorems for a noncommutative Lie ideal $L$ of
+$R$ \cite[p.~276]{Lanski1988}. Let $d$ be a nonzero derivation with
+$x\,d(x)-d(x)\,x$ central for all $x\in L$. Then $R$ is commutative, or $R$ has
+characteristic $2$ and satisfies the standard identity of degree four.
+Let $d$ and $h$ be nonzero derivations such that $dh$ is a Lie derivation of
+$L$ into $R$. Then the characteristic is $2$. Either $R$ satisfies the
+standard identity of degree four, or $h=dc$ for some $c$ in the extended
+centroid \cite[p.~276]{Lanski1988}.
+
+The theorems above ask for a prime ring
+\cite[p.~1093]{Posner1957}. Almahdi, Mamouni and Tamekkante kept the
+derivation on an arbitrary ring and put the prime hypothesis into an ideal
+\cite[p.~188]{AlmahdiMamouniTamekkante2020}.
+
+\begin{theorem}[{\cite[Theorem~2.2, p.~189]{AlmahdiMamouniTamekkante2020}}]\label{thm:prime:almahdi-general}
+Let $R$ be a ring, $P$ a prime ideal of $R$, and $d$ a derivation of $R$. If
+$[[x,d(x)],y]\in P$ for all $x,y\in R$, then $d(R)\subseteq P$ or $R/P$ is
+commutative.
+\end{theorem}
+
+For a prime ring the zero ideal is prime, and
+Theorem~\ref{thm:prime:almahdi-general} then returns the second theorem of
+Posner \cite[p.~191]{AlmahdiMamouniTamekkante2020}. The semiprime case needs a
+different conclusion \cite[p.~192]{AlmahdiMamouniTamekkante2020}. Herstein asked
+whether every minimal prime ideal of a semiprime ring is invariant under every
+derivation, and Chuang and Lee showed that it need not be
+\cite[p.~192]{AlmahdiMamouniTamekkante2020}.
+
+\begin{corollary}[{\cite[Corollary~2.4, p.~192]{AlmahdiMamouniTamekkante2020}}]\label{cor:prime:almahdi-minprime}
+Let $R$ be a semiprime ring and $d$ a centralizing derivation of $R$. Then $R$
+has a minimal prime ideal $P$ such that $d(P)\subseteq P$.
+\end{corollary}
+
+So one invariant minimal prime ideal always exists. The same argument also tells
+where the values of the derivation lie
+\cite[p.~192]{AlmahdiMamouniTamekkante2020}.
+
+\begin{corollary}[{\cite[Corollary~2.5, p.~192]{AlmahdiMamouniTamekkante2020}}]\label{cor:prime:almahdi-values}
+Let $R$ be a semiprime ring and $d$ a centralizing derivation of $R$. Then
+$d(R)\subseteq Z(R)$.
+\end{corollary}
+
+On a semiprime ring the second theorem of Posner gives a central image, and the
+difference from commutativity matters
+\cite[p.~192]{AlmahdiMamouniTamekkante2020}. A semiprime ring can carry a
+centralizing derivation whose image is central and still not be commutative
+\cite[p.~192]{AlmahdiMamouniTamekkante2020}, and
+Corollary~\ref{cor:prime:almahdi-values} states exactly this case.
+
+Section~\ref{sec:prime-semiprime:herstein-school} continues with the
+commutativity theorems of Herstein and his school
+\cite[p.~192]{AlmahdiMamouniTamekkante2020}, where that question is pressed
+further.
+
+\hbfigure{03-prime-semiprime/posner-centralizing}{The second theorem of Posner \cite[Theorem~2, p.~1097]{Posner1957}. On a prime ring, a nonzero derivation $d$ with $a\,d(a)-d(a)\,a$ in the center for every $a$ forces the ring to be commutative. Theorem~\ref{thm:prime:posner-two} states it in full.}{fig:prime:posner-centralizing}

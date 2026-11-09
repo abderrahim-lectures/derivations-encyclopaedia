@@ -1,0 +1,295 @@
+% STATUS: written 2026-11-05 (Du--Wang 2012 pp. 2719--2726 read in full; Xiao--Wei
+% 2010 pp. 2178--2197 read at the introduction, Section 2, Lemma 3.1, Lemma 3.2,
+% Proposition 3.3, Proposition 3.5 and Theorem 3.6; Li--van Wyk--Wei
+% arXiv:1202.2527 pp. 1--14 read in full.)
+% STATUS: extended 2026-11-06 (Moafian 2017 read in full)
+% STATUS: extended 2026-11-07 (Jabeen 2019, Liu 2021, Liang--Wang--Wei 2026 and
+% Chen--Hou 2020 read in full)
+% Sources: Moafian 2017 (pp. 1--2, 8, 12); Jabeen 2019 (pp. 1--4, 12--13);
+% Liu 2021 (pp. 1--4); Liang, Wang and Wei 2026 (pp. 1--3, 25--26);
+% Chen and Hou 2020 (pp. 1--5).
+\section{Generalized matrix algebras}\label{sec:matrix-triangular:generalized-matrix}
+
+Section~\ref{sec:matrix-triangular:triangular} set one off-diagonal block to zero
+and kept a single bimodule \cite[p.~119]{Cheung2001}. The next step puts a bimodule
+in each off-diagonal position, and then the matrix product needs two extra maps
+which multiply the two bimodules into the diagonal algebras
+\cite[p.~2720]{DuWang2012}. The result is a generalized matrix algebra, and it
+contains both earlier shapes as special cases \cite[p.~2720]{DuWang2012}.
+
+\begin{definition}[{\cite[p.~2720]{DuWang2012}}]\label{def:generalized:algebra}
+Let $A$ and $B$ be unital algebras over a commutative ring $R$, let ${}_A M_B$ and
+${}_B N_A$ be bimodules, and let $\Phi_{MN}\colon M\otimes_B N\to A$ and
+$\Psi_{NM}\colon N\otimes_A M\to B$ be bimodule maps that satisfy the two
+compatibility diagrams of a Morita context \cite[pp.~2719--2720]{DuWang2012}. The set
+\[
+G=\begin{pmatrix} A & M\\ N & B\end{pmatrix}
+=\left\{\begin{pmatrix} a & m\\ n & b\end{pmatrix}:
+a\in A,\ m\in M,\ n\in N,\ b\in B\right\}
+\]
+with matrix-like addition and multiplication is called a generalized matrix
+algebra \cite[p.~2720]{DuWang2012}. We write $a\oplus b$ for the element with
+$m=n=0$ \cite[p.~2720]{DuWang2012}.
+\end{definition}
+
+Du and Wang assume that $M$ is faithful as an $(A,B)$-bimodule, and they record
+that $G$ is a triangular algebra when $N=0$ \cite[p.~2720]{DuWang2012}. The centre
+has the same shape as before, with one extra condition coming from $N$
+\cite[p.~2185]{XiaoWei2010}.
+
+\begin{proposition}[{\cite[Lemma~3.1, p.~2184]{XiaoWei2010}}]\label{prop:generalized:centre}
+The centre of $G$ is
+\[
+Z(G)=\left\{\begin{pmatrix} a & 0\\ 0 & b\end{pmatrix}:
+am=mb,\ na=bn\ \text{for every } m\in M,\ n\in N\right\}.
+\]
+\end{proposition}
+
+The two projections $\pi_A$ and $\pi_B$ read off $a$ and $b$, and $\pi_A(Z(G))$
+and $\pi_B(Z(G))$ are subalgebras of $Z(A)$ and $Z(B)$
+\cite[p.~2185]{XiaoWei2010}. Xiao and Wei show that a unique algebra isomorphism
+carries the first onto the second \cite[Lemma~3.2, p.~2185]{XiaoWei2010}. When $M$
+is faithful on both sides, the conditions $a\in Z(A)$ and $b\in Z(B)$ follow from
+the two commuting conditions, so they drop out of the formula
+\cite[p.~2185]{XiaoWei2010}.
+
+The Lie question has a local form on $G$, where the Lie condition is imposed only
+on pairs whose product is zero \cite[Theorem~1, pp.~2720--2721]{DuWang2012}. The
+conclusion has the usual shape: a derivation plus a map into the centre that
+vanishes on the commutators of such pairs \cite[p.~2721]{DuWang2012}.
+
+\begin{theorem}[{\cite[Theorem~1, pp.~2720--2721]{DuWang2012}}]\label{thm:generalized:lie-local}
+Let $G$ be a generalized matrix algebra. Suppose that $Z(A)=\pi_A(Z(G))$ and
+$Z(B)=\pi_B(Z(G))$, and that either $A$ or $B$ contains no nonzero central ideal.
+If an $R$-linear map $\delta$ of $G$ satisfies
+$\delta([x,y])=[\delta(x),y]+[x,\delta(y)]$ for all $x,y\in G$ with $xy=0$, then
+there is a derivation $d$ of $G$ and an $R$-linear map
+$\tau\colon G\to Z(G)$ that vanishes at those commutators, such that
+$\delta(x)=d(x)+\tau(x)$ for every $x\in G$.
+\end{theorem}
+
+Du and Wang replace the central-ideal condition by a hypothesis on the bimodule
+\cite[p.~2725]{DuWang2012}. In the proof of Theorem~2 they show that a
+noncommutative $A$ with such a bimodule has no nonzero central ideal, so the
+previous theorem applies \cite[p.~2725]{DuWang2012}. They call $M$ loyal when
+$aMb=0$ forces $a=0$ or $b=0$ \cite[p.~2725]{DuWang2012}.
+
+\begin{theorem}[{\cite[Theorem~2, p.~2725]{DuWang2012}}]\label{thm:generalized:lie-loyal}
+Let $G$ be a generalized matrix algebra. Suppose that $Z(A)=\pi_A(Z(G))$ and
+$Z(B)=\pi_B(Z(G))$, that $M$ is loyal as an $(A,B)$-bimodule, and that at least
+one of $A$ and $B$ is noncommutative. Then every $R$-linear map $\delta$ of $G$
+with $\delta([x,y])=[\delta(x),y]+[x,\delta(y)]$ on all pairs $x,y$ with $xy=0$
+has the form $\delta=d+\tau$ of Theorem~\ref{thm:generalized:lie-local}.
+\end{theorem}
+
+Full matrix algebras give the first corollary, and they need one lemma:
+$M_n(A)$ has no nonzero central ideal \cite[Lemma~1, p.~2726]{DuWang2012}.
+
+\begin{corollary}[{\cite[Corollary~1, p.~2726]{DuWang2012}}]\label{cor:generalized:full-matrix}
+Let $M_n(A)$ be a full matrix algebra with $n\ge 3$. If an $R$-linear map
+$\delta\colon M_n(A)\to M_n(A)$ satisfies
+$\delta([x,y])=[\delta(x),y]+[x,\delta(y)]$ for all $x,y$ with $xy=0$, then
+$\delta=d+\tau$, where $d$ is a derivation and $\tau$ is a map into $Z(A)I_n$
+that vanishes at those commutators.
+\end{corollary}
+
+The triple bracket asks for one more step, and Ashraf and Akhtar answer it on the
+same algebra \cite[p.~3651]{AshrafAkhtar2020}. A Lie triple derivation of $G$ is an
+$R$-linear map $L$ with $L([[x,y],z])=[[L(x),y],z]+[[x,L(y)],z]+[[x,y],L(z)]$ for
+all $x,y,z\in G$ \cite[p.~3651]{AshrafAkhtar2020}. Such a map is proper when it is a
+derivation plus a map into the centre that vanishes on second commutators
+\cite[p.~3651]{AshrafAkhtar2020}. Their Theorem~2.1 describes every Lie triple
+derivation of $G$ through eight component maps and their side conditions
+\cite[Theorem~2.1, pp.~3653--3654]{AshrafAkhtar2020}. The question of this section
+is whether such a map must be proper, and their Theorem~2.2 answers it in five
+conditions \cite[Theorem~2.2, p.~3657]{AshrafAkhtar2020}.
+
+\begin{theorem}[{\cite[Theorem~2.2, p.~3657]{AshrafAkhtar2020}}]\label{thm:generalized:triple-proper}
+Let $G$ be a generalized matrix algebra and $L$ a Lie triple derivation of $G$ of
+the form given in Theorem~2.1 of the same paper. Then $L$ is proper if and only if
+$B_{11}(B)\subseteq\pi_A(Z(G))$, $A_{22}(A)\subseteq\pi_B(Z(G))$,
+$B_{11}(nm)\oplus A_{22}(mn)\in Z(G)$, $D_{12}=0$ and $C_{21}=0$.
+\end{theorem}
+
+The hypothesis set shrinks in the triangular case, and the authors record that
+case as their Corollary~2.2, which is Theorem~4.3 of Li and Shen
+\cite[Corollary~2.2, p.~3659]{AshrafAkhtar2020}. They also exhibit a generalized
+matrix algebra that carries an improper Lie triple derivation which is not a Lie
+derivation \cite[Example~2.1, pp.~3658--3659]{AshrafAkhtar2020}.
+
+The commuting-map question runs on the same algebra and in the same order
+\cite[p.~2178]{XiaoWei2010}. Xiao and Wei first describe an arbitrary commuting
+map of $G$ \cite[Proposition~3.3, p.~2185]{XiaoWei2010}. The description has a
+fixed element of $G$ and eight linear maps, four into the centre of $A$ and four
+into the centre of $B$ \cite[p.~2185]{XiaoWei2010}. They then decide when such a
+map is proper \cite[Proposition~3.5, p.~2189]{XiaoWei2010}. A commuting map of $G$
+is proper when it has the form $X\mapsto XC+\xi(X)$ with $C\in Z(G)$ and $\xi$
+mapping $G$ into $Z(G)$ \cite[p.~2184]{XiaoWei2010}.
+
+\begin{theorem}[{\cite[Theorem~3.6, p.~2192]{XiaoWei2010}}]\label{thm:generalized:commuting}
+Let $\Theta$ be a commuting map of $G$. Then $\Theta$ is proper if the following
+three conditions hold:
+\begin{enumerate}
+\item $Z(B)=\pi_B(Z(G))$, or $A=[A,A]$;
+\item $Z(A)=\pi_A(Z(G))$, or $B=[B,B]$;
+\item there are $m_0\in M$ and $n_0\in N$ such that $Z(G)$ consists of the
+diagonal elements $a\oplus b$ with $am_0=m_0b$ and $n_0a=bn_0$.
+\end{enumerate}
+\end{theorem}
+
+The third condition asks one pair of elements to separate the central elements
+\cite[p.~2192]{XiaoWei2010}. It is the same kind of hypothesis as the one element
+$m_0$ in the triangular case of Section~\ref{sec:matrix-triangular:triangular}
+\cite[Theorem~2, p.~124]{Cheung2001}. Xiao and Wei check the three conditions on
+the standard examples: full matrix algebras, upper and lower triangular matrix
+algebras, triangular Banach algebras and nest algebras
+\cite[Section~2, pp.~2182--2184]{XiaoWei2010}.
+
+Jordan derivations of generalized matrix algebras split into two classes, and the
+pairings decide which class applies \cite[p.~13]{LiVanWykWei2012}. Li, van Wyk and
+Wei call a pairing nondegenerate when $\Phi_{MN}(m,N)\neq0$ for every nonzero
+$m$ and $\Phi_{MN}(M,n)\neq0$ for every nonzero $n$, and the same holds for
+$\Psi_{NM}$ \cite[Definition~3.7, p.~12]{LiVanWykWei2012}. For the first class
+they prove a vanishing theorem \cite[Proposition~3.10, p.~13]{LiVanWykWei2012}. Here an
+antiderivation is a map $\Theta$ with $\Theta(xy)=\Theta(y)x+y\Theta(x)$ for all
+$x,y$ \cite[p.~2]{LiVanWykWei2012}.
+
+\begin{proposition}[{\cite[Proposition~3.10, p.~13]{LiVanWykWei2012}}]\label{prop:generalized:no-antiderivation}
+Let $G$ be a generalized matrix algebra over the commutative ring $R$, and let
+$\Theta\colon G\to G$ be $R$-linear. If one of the pairings
+$\Phi_{MN}\colon M\otimes N\to A$ and $\Psi_{NM}\colon N\otimes M\to B$ is
+nondegenerate, then $\Theta$ is an antiderivation if and only if $\Theta=0$.
+\end{proposition}
+
+The second class has both pairings zero \cite[p.~13]{LiVanWykWei2012}. There every
+Jordan derivation separates into a derivation and an antiderivation
+\cite[p.~13]{LiVanWykWei2012}.
+
+\begin{theorem}[{\cite[Theorem~3.11, p.~13]{LiVanWykWei2012}}]\label{thm:generalized:jordan}
+Let $G$ be a $2$-torsion free generalized matrix algebra over a commutative ring
+$R$. If both pairings $\Phi_{MN}$ and $\Psi_{NM}$ are zero, then every Jordan
+derivation of $G$ is the sum of a derivation and an antiderivation.
+\end{theorem}
+
+Upper triangular matrices are the model case: $T_n(R)$ is a generalized matrix
+algebra with zero pairings, and on it the antiderivation part vanishes
+\cite[Example~3.13, p.~14]{LiVanWykWei2012}. So every Jordan derivation of
+$T_n(R)$ is a derivation \cite[Example~3.13, p.~14]{LiVanWykWei2012}. That is the
+theorem of Zhang and Yu for triangular algebras, recalled as
+Theorem~\ref{thm:jordan:zhang-yu} in
+Section~\ref{sec:jordan-type:jordan-on-algebras} \cite[p.~1]{ChengJing2007}.
+
+The Lie higher derivations of the same algebra ask for the same split one level
+up \cite[p.~8]{Moafian2017}. A Lie higher derivation is a sequence of
+linear maps, with the first term the identity, whose Leibniz rule holds for the
+commutator \cite[p.~1]{Moafian2017}. Such a sequence is proper when it
+is a higher derivation plus a sequence of centre-valued maps that vanish on
+commutators \cite[p.~1]{Moafian2017}. Moafian describes the proper
+sequences of a generalized matrix algebra by three conditions on two sequences
+of maps into the centres \cite[Theorem~3.1, p.~8]{Moafian2017}. On a
+weakly faithful algebra the property holds under two conditions
+\cite[Theorem~4.3, p.~12]{Moafian2017}. The centres of $G$ must
+project onto the centres of $A$ and of $B$. One of the two bimodules must be
+strongly faithful \cite[Theorem~4.3, p.~12]{Moafian2017}.
+
+The Lie triple law carries the same shape, and it also survives without
+linearity \cite[Theorem~2.1, p.~3]{Jabeen2019}. A multiplicative generalized Lie
+triple derivation is a map, not assumed additive, with
+$G_L([[a,b],c])=[[G_L(a),b],c]+[[a,L(b)],c]+[[a,b],L(c)]$ for an associated
+multiplicative Lie triple derivation $L$ \cite[p.~1]{Jabeen2019}.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~3]{Jabeen2019}}]\label{thm:generalized:multiplicative-triple}
+Let $G$ be a $2$-torsion free generalized matrix algebra such that
+\begin{enumerate}
+\item $Z(A)=\pi_A(Z(G))$ and $Z(B)=\pi_B(Z(G))$;
+\item $A$ or $B$ contains no nonzero central ideal;
+\item if $N\neq0$, then $mN=0=Nm$ for $m\in M$ forces $m=0$;
+\item if $M\neq0$, then $nM=0=Mn$ for $n\in N$ forces $n=0$.
+\end{enumerate}
+If $G_L\colon G\to G$ is a multiplicative generalized Lie triple derivation,
+then there is an additive generalized derivation $\delta$ of $G$ and a map
+$\phi\colon G\to Z(G)$ vanishing at $[[x_1,x_2],x_3]$ such that
+$G_L=\delta+\phi$.
+\end{theorem}
+
+The same conclusion holds for the multiplicative generalized Lie derivations,
+where $\phi$ vanishes at the commutators \cite[Corollary~3.1, p.~13]{Jabeen2019}.
+It also holds on a full matrix algebra of size at least three
+\cite[Corollary~3.2, p.~13]{Jabeen2019}.
+
+The local form of the Lie question asks only for a witness at each point. A
+linear map $\delta$ of $G$ is a local Lie derivation when for every $X$ there
+is a Lie derivation $\delta_X$ with $\delta(X)=\delta_X(X)$
+\cite[p.~2]{Liu2021LocalLie}. Liu shows that the local law forces the
+global one under three conditions \cite[Theorem~2.1, p.~3]{Liu2021LocalLie}.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~3]{Liu2021LocalLie}}]\label{thm:generalized:local-lie}
+Let $G$ be a generalized matrix algebra. Suppose that
+\begin{enumerate}
+\item $A=J(A)$ and $B=J(B)$, where $J$ is the subalgebra generated by the
+idempotents;
+\item $Z(A)=\pi_A(Z(G))$ and $Z(B)=\pi_B(Z(G))$;
+\item either $A$ or $B$ contains no nonzero central ideal.
+\end{enumerate}
+If $\delta$ is a local Lie derivation of $G$, then there are a derivation $d$ of
+$G$ and a linear map $h\colon G\to Z(G)$ vanishing on the commutators with
+$\delta(X)=d(X)+h(X)$ for every $X\in G$.
+\end{theorem}
+
+So every local Lie derivation of such an algebra is a Lie derivation
+\cite[p.~3]{Liu2021LocalLie}. The full matrix case follows from the same
+theorem \cite[Theorem~3.1, p.~18]{Liu2021LocalLie}.
+
+The multilinear form of the question has an answer in the same shape. An
+$n$-Lie derivation is an $n$-linear map that is a Lie derivation in each
+argument \cite[p.~1]{LiangWangWei2026}. Liang, Wang and Wei separate every such
+map into an extremal piece and a central-valued piece
+\cite[Theorem~4.1, p.~25]{LiangWangWei2026}.
+
+\begin{theorem}[{\cite[Theorem~4.1, p.~25]{LiangWangWei2026}}]\label{thm:generalized:n-lie}
+Let $G=\begin{pmatrix}A&M\\N&B\end{pmatrix}$ be a generalized matrix algebra
+over a commutative ring $R$ and let $\varphi\colon G\times\cdots\times G\to G$
+be an $n$-Lie derivation with $n\geq3$. Suppose that
+\begin{enumerate}
+\item $\pi_A(Z(G))=Z(A)$ and $\pi_B(Z(G))=Z(B)$;
+\item either $A$ or $B$ contains no nonzero central ideal;
+\item $\alpha a=0$ with $\alpha\in Z(G)$ and $0\neq a\in G$ forces $\alpha=0$;
+\item $MN=0=NM$ forces at least one of $A$ and $B$ to be noncommutative;
+\item every special pair of bimodule homomorphisms has the standard form.
+\end{enumerate}
+Then $\varphi=\kappa+\psi$, where
+$\kappa(x_1,\dots,x_n)=[x_1,[x_2,[\cdots,[x_n,X_0]\cdots]]]$ for all
+$x_i\in G$ and $\psi$ is an $n$-linear central-valued map that vanishes on
+commutators in each component.
+\end{theorem}
+
+The element $X_0$ is fixed by the values of $\varphi$ at the unit,
+$X_0=e\varphi(e,\dots,e)f+(-1)^{n}f\varphi(e,\dots,e)e$
+\cite[p.~2]{LiangWangWei2026}. A second theorem reaches the same conclusion from
+a condition on the bimodule instead of the commutativity of $A$ or $B$
+\cite[Theorem~4.3, p.~28]{LiangWangWei2026}.
+
+The three-block form asks one more question, and the multiplicative law has an
+answer there too \cite[Theorem~2.2, p.~5]{ChenHou2020}. A triangular $3$-matrix
+ring $T=T_3(R_i;M_{ij})$ has three diagonal rings and three bimodules, one for
+each pair \cite[p.~2]{ChenHou2020}. The hypothesis is that the three diagonal
+idempotents cut the centre correctly,
+$Q_iZ(T)Q_i=Z(T_i)$ for $i=1,2,3$ \cite[Theorem~2.2, p.~5]{ChenHou2020}.
+
+\begin{theorem}[{\cite[Theorem~2.2, p.~5]{ChenHou2020}}]\label{thm:generalized:three-matrix}
+Let $T=T_3(R_i;M_{ij})$ be a triangular $3$-matrix ring with
+$Q_iZ(T)Q_i=Z(T_i)$ for $i=1,2,3$. Then every multiplicative Lie derivation
+$\phi\colon T\to T$ has the form $\phi=\delta+\gamma$, where $\delta$ is a
+derivation of $T$ and $\gamma\colon T\to Z(T)$ is a central map with
+$\gamma([T,T])=0$.
+\end{theorem}
+
+The proof separates the three diagonal blocks and the three bimodules, as in the
+two-block case \cite[pp.~5--6]{ChenHou2020}. The theorem therefore carries the
+standard form from triangular algebras to triangular $3$-matrix rings
+\cite[p.~5]{ChenHou2020}.
+
+A nest algebra is the last and largest member of the family, because its two
+diagonal algebras are again nest algebras
+\cite[Proposition~19, p.~308]{Cheung2003}. The next section states the results
+which this description makes available \cite[p.~308]{Cheung2003}.

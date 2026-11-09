@@ -1,0 +1,73 @@
+% STATUS: written 2026-11-05 (sources of the section read in full: Jacobson 1937 pp. 206--215;
+% Humphreys 1972 pp. 14 and 23)
+% Sources: Jacobson1937, Humphreys1972.
+\section{The theorem of Jacobson and nilpotent Lie algebras}\label{sec:lie-algebras:jacobson}
+
+This section reports the two extremal answers.  Semisimple Lie algebras
+in characteristic zero have only inner derivations
+\cite[Theorem in \S 5.3, p.~23]{Humphreys1972}.  Nilpotent Lie algebras
+always have an outer one \cite[Exercise~10, p.~14]{Humphreys1972}.  The
+first answer starts with the Lie algebra formed by the derivations
+themselves \cite[Theorem~1, p.~206]{Jacobson1937}.
+
+\begin{theorem}[{\cite[Theorem~1, pp.~206--207]{Jacobson1937}}]\label{thm:lie:jacobson-der-lie}
+Let $\mathfrak{A}$ be an arbitrary algebra over a commutative field $F$,
+not necessarily associative or finite-dimensional.  Then the derivations of
+$\mathfrak{A}$ form a Lie algebra $\mathfrak{D}$ of linear transformations
+of $\mathfrak{A}$ under the commutator bracket; over a field of
+characteristic $p>0$ it is a restricted Lie algebra.
+\end{theorem}
+
+Jacobson called $\mathfrak{D}$ the \emph{derivation algebra} or
+\emph{d-algebra} of $\mathfrak{A}$ \cite[p.~207]{Jacobson1937}.  His paper
+then turned to associative algebras and asked how far derivations recover
+inner structure \cite[pp.~209--215]{Jacobson1937}.  For a normal simple
+algebra over its center his answer is the statement that owes his name.
+
+\begin{theorem}[{\cite[Theorem~8, p.~215]{Jacobson1937}}]\label{thm:lie:jacobson-normal-simple}
+Let $\mathfrak{A}$ be a finite-dimensional normal simple associative algebra
+over a field $F$.  Every derivation of $\mathfrak{A}$ is inner: there is
+$a\in\mathfrak{A}$ with $D(x)=[x,a]$ for every $x\in\mathfrak{A}$.
+\end{theorem}
+
+For Lie algebras the corresponding result is Theorem~5.3 of Humphreys,
+proved by the same Killing-form argument.
+
+\begin{theorem}[{\cite[Theorem in \S 5.3, p.~23]{Humphreys1972}}]\label{thm:lie:jacobson-humphreys}
+Let $L$ be a finite-dimensional semisimple Lie algebra over a field of
+characteristic zero.  Then every derivation of $L$ is inner, that is,
+$\operatorname{ad} L=\operatorname{Der} L$.
+\end{theorem}
+
+The proof rests on two observations \cite[p.~23]{Humphreys1972}.  The
+Killing form of a semisimple $L$ is nondegenerate.  Also
+$[\delta,\operatorname{ad} x]=\operatorname{ad}(\delta x)$ for every
+$x\in L$ and $\delta\in\operatorname{Der} L$, so $\operatorname{ad} L$ is
+an ideal of $\operatorname{Der} L$ \cite[p.~23]{Humphreys1972}.  Its
+complement under the Killing form is zero, because an ideal perpendicular
+to $\operatorname{ad} L$ kills $L$
+\cite[p.~23]{Humphreys1972}.
+
+Nilpotent Lie algebras sit at the opposite extreme
+\cite[Exercise~10, p.~14]{Humphreys1972}; the construction in
+\cite[p.~14]{Humphreys1972} is left as an exercise with a hint that
+already contains the argument.
+
+\begin{theorem}[{\cite[Exercise~10, p.~14]{Humphreys1972}}]\label{thm:lie:jacobson-nilpotent}
+Let $L$ be a finite-dimensional nilpotent Lie algebra over a field $F$.
+Then $L$ has an outer derivation.
+\end{theorem}
+
+Humphreys constructs the derivation explicitly
+\cite[p.~14]{Humphreys1972}.  Write $L=K\oplus Fx$ for an ideal $K$ of
+codimension one.  Pick $n$ with $C_L(K)\subset L^n$ but
+$C_L(K)\not\subset L^{n+1}$.  Take $z\in C_L(K)\setminus L^{n+1}$, and
+let $\delta$ be the map with $\delta(K)=0$ and $\delta(x)=z$.  Because $z$
+lies in $C_L(K)$ one checks that $\delta$ is a derivation, and because $z$
+was chosen outside $L^{n+1}$ the derivation is not inner.
+
+Together Theorem~\ref{thm:lie:jacobson-humphreys} and
+Theorem~\ref{thm:lie:jacobson-nilpotent} give the two answers the
+introduction promised.  Between them sits a question that drives
+Section~\ref{sec:lie-algebras:characteristically-nilpotent}: what happens
+when every derivation of $L$ is nilpotent as a linear transformation?

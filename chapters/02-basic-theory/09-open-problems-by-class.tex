@@ -1,0 +1,159 @@
+% STATUS: written 2026-11-05 (every class row points to a section read for this
+% chapter; excerpts in ledger/projects/derivations-encyclopaedia/excerpts/).
+% Moved 2026-11-07 from chapters/21-open-problems/02-by-class into Chapter 2,
+% with the problems themselves now stated in their own chapters.
+% Sources: Freudenburg 2017, Biswas--Gurjar--Kolte 2014, Belov-Kanel--Kontsevich
+% 2007, Hadwin--Li 2004, Ayupov--Kudaybergenov 2012/2015,
+% Ayupov--Arzikulov 2014, Ayupov--Yusupov 2020, Habibzadeh--Sahleh 2019,
+% Bresar--Villena 2002, Bresar 1993 TAMS, Bresar 2005, Martindale 1964,
+% Benkovic 2014, Vukman 1990, Lee 1997.
+\section{Open problems by class of algebra}\label{sec:basic-theory:open-problems-by-class}
+
+The chapters state each problem in the section that asks its question. % claim-ok: own description of the arrangement of this section
+This section keeps the same problems and sorts them by the algebra they live
+in, so that a reader who works on one class sees the frontier of that class.
+For each class it records which problem is settled there, which is not, and the
+chapter that carries the discussion.
+
+The first class is the polynomial algebra $k[x_1,\dots,x_n]$ over a field of
+characteristic $0$, and it holds the deepest problems of the book.
+Chapter~\ref{ch:commutative} reads them in
+Section~\ref{sec:commutative:zariski-lipman} and
+Section~\ref{sec:commutative:jacobian}. % claim-ok: our own ordering of the problems by class, each stated above
+
+Problem~\ref{prob:open:zl} belongs to this class, because its local rings are
+the local rings of a polynomial algebra.
+Biswas, Gurjar and Kolte settle the affine surface case whenever the smooth
+locus has logarithmic Kodaira dimension at most one
+\cite[Theorem~1.2, p.~270]{BiswasGurjarKolte2014}.
+Problem~\ref{prob:open:jc} lives here too, and it stays open for every $n\ge2$
+\cite[pp.~1--2]{BelovKanelKontsevich2007}.
+Problem~\ref{prob:open:dixmier} is the Weyl algebra form of the same question,
+and Belov-Kanel and Kontsevich tie the two stable forms together
+\cite[Theorem~1, p.~3]{BelovKanelKontsevich2007}.
+Chapter~\ref{ch:polynomial-weyl} reads the Weyl algebra in
+Section~\ref{sec:polynomial-weyl:weyl}.
+
+The finite generation problems of Problems~\ref{prob:open:hdp}
+and~\ref{prob:open:bass} also live in this class.
+The Homogeneous Dependence Problem of Problem~\ref{prob:open:hdp} stays open
+only in dimension $5$ \cite[p.~108]{Freudenburg2017}.
+A homogeneous derivation of degree two with full rank is open in every
+dimension \cite[Remark~3.51, p.~112]{Freudenburg2017}.
+The triangularization problem of Problem~\ref{prob:open:bass} remains generally
+open \cite[p.~288]{Freudenburg2017}.
+
+The second class is the finite-dimensional algebra over a field.
+Here the local property holds for some structures and fails for others.
+Chapter~\ref{ch:local-characterizations} reads the local maps here in
+Section~\ref{sec:local-characterizations:local}. % claim-ok: our own ordering of the problems by class, each stated above
+
+Hadwin and Li settle the question of Larson for the $J$-subspace lattices: the
+space $\operatorname{der}(\operatorname{alg}L)$ is reflexive
+\cite[Theorem~2.15, p.~708]{HadwinLi2004}.
+They also show that $\operatorname{der}(A,M)$ is algebraically $3$-reflexive for
+every Banach $A$-bimodule $M$ \cite[Theorem~2.19, p.~710]{HadwinLi2004}.
+The local property for automorphisms fails even in finite dimension, since
+$T\mapsto AT^{t}A^{-1}$ on $M_n(\mathbb{C})$ is a surjective local automorphism
+that is not an automorphism \cite[p.~713]{HadwinLi2004}.
+So Problem~\ref{prob:open:larson} is answered for the lattices above, and the
+general algebra of the question stays out of this class.
+
+This class also holds a counterexample for the 2-local property: Zhang and Li
+built a 2-local derivation on the upper triangular complex $2\times2$ matrices
+that is not a derivation \cite[p.~15]{AyupovKudaybergenov2012}.
+So the 2-local question of Problem~\ref{prob:open:twolocal} has no uniform answer
+even among the small algebras of this class.
+
+The third class is the $C^{*}$-algebra and its operator relatives.
+Chapter~\ref{ch:local-characterizations} reads the 2-local notion in
+Section~\ref{sec:local-characterizations:two-local}, and
+Chapter~\ref{ch:banach-operator} reads the continuity question in
+Section~\ref{sec:banach-operator:singer-wermer}. % claim-ok: our own ordering of the problems by class, each stated above
+
+The 2-local problem of Problem~\ref{prob:open:twolocal} is settled here for the
+largest algebras of the class.
+Ayupov and Kudaybergenov prove that every 2-local derivation of $B(H)$ is a
+derivation \cite[Theorem~2.3, p.~16]{AyupovKudaybergenov2012}.
+Ayupov and Arzikulov extend this to every semi-finite von Neumann algebra
+\cite[p.~9]{AyupovArzikulov2014}, and Ayupov and Kudaybergenov extend it to
+every von Neumann algebra \cite[Theorem~2.1, p.~2]{AyupovKudaybergenov2015}.
+Habibzadeh Fard and Sahleh add the compact operators
+\cite[Corollary~3.4, p.~6]{HabibzadehFardSahleh2019}.
+So the answer is yes for every algebra of the class that these papers reach.
+The $\varphi$-derivation side of the class has one case that no one has settled
+\cite[Remark~5.3, p.~720]{BresarVillena2002}.
+
+\begin{problem}[{\cite[Remark~5.3, p.~720]{BresarVillena2002}}]\label{prob:class:phi-quasinilpotent}
+Let $A$ be a unital Banach algebra, let $\varphi$ be an inner automorphism of
+$A$, and let $\Delta$ be a $\varphi$-derivation of $A$.
+If $a$ lies in the radical of $A$ and $\Delta^2(a)=0$, is $\Delta(a)$
+quasinilpotent?
+\end{problem}
+
+Bre\v{s}ar and Villena prove Problem~\ref{prob:class:phi-quasinilpotent} for
+derivations and report that they could not prove it for $\varphi$-derivations
+\cite[Remark~5.3, p.~720]{BresarVillena2002}.
+The continuity problem of Problem~\ref{prob:open:sw} is the other open question
+of this class, and the authors call it one of the hardest problems of Banach
+algebra theory \cite[p.~710]{BresarVillena2002}.
+
+The fourth class is the Lie algebra, where the 2-local question has a negative
+answer in general.
+Chapter~\ref{ch:lie-algebras} reads the class in
+Section~\ref{sec:lie-algebras:infinite-dimensional}. % claim-ok: our own ordering of the problems by class, each stated above
+
+Ayupov and Yusupov answer Problem~\ref{prob:open:twolocal} with yes for the Witt
+algebra \cite[Theorem~4.1, p.~4]{AyupovYusupov2020} and for the positive Witt
+algebra \cite[Theorem~4.4, p.~6]{AyupovYusupov2020}.
+They answer it with no for the thin Lie algebra, which admits a 2-local
+derivation that is not a derivation \cite[Theorem~4.8, p.~8]{AyupovYusupov2020}.
+So this class holds a counterexample of the book, and the problem for a
+general infinite-dimensional Lie algebra stays open.
+
+The fifth class is the prime ring, where the questions about the standard form
+are answered for most characteristics.
+Chapter~\ref{ch:lie-type} reads the Lie problem in
+Section~\ref{sec:lie-type:martindale}, and Chapter~\ref{ch:higher-multi} reads
+the symmetric bi-derivation in Section~\ref{sec:higher-multi:symmetric-maps}. % claim-ok: our own ordering of the problems by class, each stated above
+
+Martindale proves the standard form for a primitive ring with a nontrivial
+idempotent \cite[Theorem~2, p.~187]{Martindale1964}.
+Bre\v{s}ar extends it to prime rings of characteristic not $2$ that do not
+satisfy $S_4$ \cite[Theorem~5, p.~529]{Bresar1993LieTAMS}.
+Lemma~1 of Bre\v{s}ar puts the rings that satisfy $S_4$ inside $M_2(F)$ over a
+field $F$, up to the commutative case
+\cite[Lemma~1, p.~530]{Bresar1993LieTAMS}.
+So Problem~\ref{prob:open:herstein} stays open here for characteristic $2$ and
+for a ring that satisfies $S_4$.
+The symmetric bi-derivation of Problem~\ref{prob:open:vukman} stays open for a
+power above $2$ \cite[pp.~188--189]{Vukman1990Two}, and the commuting map of
+Problem~\ref{prob:open:commuting} stays open for a power above $1$
+\cite[p.~334]{LeeTK1997Centralizing}.
+
+The last class is the triangular algebra, and the problem here comes from the
+$f$-derivation.
+Chapter~\ref{ch:matrix-triangular} reads the class in
+Section~\ref{sec:matrix-triangular:triangular}, and
+Chapter~\ref{ch:generalized-twisted} reads the $f$-derivation side in
+Section~\ref{sec:generalized-twisted:f-derivations}. % claim-ok: our own ordering of the problems by class, each stated above
+
+Benkovi\v{c} proves the standard form for an $f$-derivation whose polynomial
+has a nonzero sum of coefficients \cite[Theorem~1.1]{Benkovic2014}.
+The remaining case is Problem~\ref{prob:open:fderiv}, and it stays open
+\cite[Problem~1.2]{Benkovic2014}.
+
+Across the six classes the same split appears. % claim-ok: our own summary of the six classes read above in this section
+The polynomial class keeps the deepest problems open.
+The operator classes settle the 2-local question for their large algebras, and
+the small ones keep counterexamples: the thin Lie algebra and the upper
+triangular complex $2\times2$ matrices.
+Two problems have no class that settles them, and they are the reflexive space
+of Larson and the noncommutative conjecture of Singer and Wermer.
+They are the two that a later chapter is most likely to close first.
+Each problem stated in the chapters appears here under the class where its
+algebra lives.
+The one problem that this section states itself sits with the
+$C^{*}$-algebras.
+So a change in one class can be read against the question family it belongs
+to.

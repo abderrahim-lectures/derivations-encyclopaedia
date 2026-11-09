@@ -1,0 +1,87 @@
+% STATUS: rewritten 2026-11-05
+% Sources read in full: McCrimmon 2004 (pp. 52, 57, 185, 360), Albert's
+% exceptionality and Zel'manov 1979 as quoted in McCrimmon (pp. 961--985).
+\section{Derivations of Jordan algebras}\label{sec:nonassociative:jordan-algebras}
+
+Chapter~\ref{ch:nonassociative} opens with Jordan algebras, the historical
+root of this chapter. Recall that a \emph{Jordan algebra}~\cite[Section~2.4, p.~57]{McCrimmon2004Taste} is a commutative
+nonassociative algebra $J$ over a field $k$ of characteristic $\neq 2$
+that satisfies the Jordan identity $(x\circ x)\circ(y\circ x) =
+((x\circ x)\circ y)\circ x$. Albert showed that
+$H_3(\mathbb{K})$ is a $27$-dimensional exceptional Jordan algebra
+\cite[p.~971]{McCrimmon2004Taste}. Zel'manov later proved that no
+other simple exceptional Jordan algebra exists, even in infinite
+dimensions \cite[p.~985]{McCrimmon2004Taste}.
+
+A \emph{derivation} of a Jordan algebra $J$ has the same defining
+property as in Chapter~\ref{ch:basic-theory}: a $k$-linear map
+$\delta\colon J\to J$ with $\delta(xy)=\delta(x)y+x\delta(y)$. For an
+associative algebra $A$ the inner derivations are the adjoint maps
+$\operatorname{ad}(x)$, $x\in A$, and they exhaust the derivations in
+nice cases. For a Jordan algebra a similar mechanism exists, but it
+needs two indices: the commutators of two multiplication operators.
+
+\begin{proposition}[{\cite[Problem~3.6~(3), p.~185]{McCrimmon2004Taste}}]
+\label{prop:nonassociative:jordan-inner}
+Let $J$ be a Jordan algebra over a ring in which $\tfrac{1}{2}$ exists,
+and write $L_x$ for left multiplication by $x$. For each pair $x,y\in J$
+the map
+\[
+D_{x,y}\;=\;4\,[L_x,L_y]\;=\;[V_x,V_y]
+\]
+is a derivation of $J$, where $[L_x,L_y]=L_xL_y-L_yL_x$ is the usual
+commutator of multiplication operators.
+\end{proposition}
+
+Question~3.1 of McCrimmon~3.1 records that the derivations
+$\mathrm{Der}(J)$ form a Lie algebra of endomorphisms under the bracket
+$[D,E]=DE-ED$, with the inner derivations as an ideal
+\cite[Question~3.1, p.~185]{McCrimmon2004Taste}. For special Jordan
+algebras $J\subseteq A^{+}$ derivations come from the associative side:
+any associative derivation of $A$ that leaves $J$ invariant is a Jordan
+derivation of $J$ \cite[Problem~3.6~(2), p.~185]{McCrimmon2004Taste}.
+
+The exceptional case gives the famous answer.
+
+\begin{theorem}[{\cite[Historical remarks, p.~52]{McCrimmon2004Taste}}]
+\label{thm:nonassociative:jordan-albert-F4}
+Let $\mathcal{A}=H_3(\mathbb{K})$ be the Albert algebra over an
+algebraically closed field of characteristic $0$, where $\mathbb{K}$
+is the Cayley algebra. Then $\mathrm{Der}(\mathcal{A})$ is a
+$52$-dimensional simple Lie algebra of type $F_4$, and
+$\mathrm{Aut}(\mathcal{A})$ is the exceptional simple group of type
+$F_4$.
+\end{theorem}
+
+McCrimmon records this as a discovery by Chevalley, Schafer, Freudenthal
+and others in the early 1950s, with $G_2$ playing the analogous role for
+the Cayley algebra itself \cite[p.~52]{McCrimmon2004Taste}. Zel'manov
+theorem says that there is no simple exceptional Jordan algebra other
+than the Albert algebras \cite[p.~985]{McCrimmon2004Taste}. Together
+with Theorem~\ref{thm:nonassociative:jordan-albert-F4} it singles out
+$F_4$ as the only derivation algebra of an exceptional simple Jordan
+algebra.
+
+We close with the Jordan-variant built from a symmetric bilinear form.
+
+\begin{example}[{\cite[Spin factor example, p.~360 and Problem~3.7~(1),
+p.~185]{McCrimmon2004Taste}}]
+\label{ex:nonassociative:jordan-spin}
+Let $M$ be a $k$-module with a symmetric bilinear form $\sigma$. The
+\emph{spin factor}
+$JSpin(M,\sigma) = k\,\mathbf{1}\,\dot{+}\,M$ carries the Jordan
+product
+\[
+(\alpha\,\mathbf{1}\,\dot{+}\,x)\bullet(\beta\,\mathbf{1}\,\dot{+}\,y)
+\;=\;\bigl(\alpha\beta+\sigma(x,y)\bigr)\,\mathbf{1}\;\dot{+}\;
+(\beta x+\alpha y).
+\]
+Its derivations $\delta$ satisfy $\delta(\mathbf{1})=0$ and
+$\sigma(\delta(x),x)=0$ for all $x\in M$; thus $\delta|_{M}$ is
+skew-symmetric for $\sigma$.
+\end{example}
+
+The Cayley algebra meets the Jordan side again in
+Section~\ref{sec:nonassociative:alternative}: it is an alternative
+algebra \cite[p.~148]{Baez2002Octonions}, and the next section studies
+its derivations.

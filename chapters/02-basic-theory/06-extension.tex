@@ -1,0 +1,59 @@
+% STATUS: written 2026-10-08
+% STATUS: extended 2026-11-06 (Chaudhuri 2020 read in full)
+% Sources read in full: Scheja and Storch 1978 (pp. 353--354, German), Kharchenko 1991 (Definition 1.1.1 on p. 2; Section 1.8, pp. 50--51; definitions in Section 1.4), Gupta, Kaur and Singh 2023 (Theorem 3.1); Chaudhuri 2020 (pp. 2--3, 6--7).
+\section{Extending derivations}\label{sec:basic-theory:extension}
+
+Section~\ref{sec:basic-theory:constants-kernels} studied the derivations of one
+algebra. We ask now when a derivation of a small algebra extends to a larger
+one. Scheja and Storch show where the question comes from, in the opening remark of their paper \translated{In algebraic and analytic geometry, extending derivations
+is an important tool}{In algebraischer und analytischer Geometrie ist das
+Fortsetzen von Derivationen ein wichtiges Hilfsmittel}{German}
+\cite[p.~353]{SchejaStorch1978}.
+
+We begin with uniqueness, which is easy. Let $A \to B$ be an extension of
+commutative rings. We note that two extensions of the same derivation of $A$
+differ by a derivation of $B$ that is zero on $A$. So an extension is unique if
+$B$ has no such nonzero derivation \cite[\S1, p.~354]{SchejaStorch1978}.
+
+We turn to existence. We start with a localization, where the quotient rule decides everything.
+
+\begin{proposition}[{\cite[\S1.2.4, p.~16]{Freudenburg2017}}]\label{prop:basic:localization}
+Let $B$ be a commutative domain over a field $k$ and let $S$ be a multiplicatively closed subset of $B$ that does not contain $0$. Every $k$-derivation $D$ of $B$ extends in a unique way to a derivation of the localization $S^{-1}B$, by the quotient rule.
+\end{proposition}
+
+We turn to other extensions, which are harder. Scheja and Storch recall a theorem of Seidenberg \cite[p.~353]{SchejaStorch1978}. Their summary says (our translation)
+that a derivation of a Noetherian domain containing the rational numbers extends
+to the normalization of the domain. They then study general extensions of rings.
+They use the classical different and discriminant of a ring extension \cite[p.~353]{SchejaStorch1978}. Chapter~\ref{ch:origins}
+tells how Dedekind and Hilbert defined the different
+(Section~\ref{sec:origins:function-fields}).
+
+We turn to the noncommutative case, which is cleaner. A ring is \emph{semiprime} if it has no
+nonzero nilpotent ideal~\cite[Definition~1.1.1, p.~2]{Kharchenko1991}. Take a derivation of a semiprime ring $R$ that is
+defined only on a large enough ideal. Kharchenko shows that it extends in a
+unique way to a larger ring of quotients of $R$
+\cite[Proposition~1.8.1, p.~50]{Kharchenko1991}. So we can work inside that ring
+from then on \cite[\S1.8.2, p.~51]{Kharchenko1991}.
+
+We take central simple algebras as a second case. Let $k$ be a field with a
+derivation, and let $A$ be a central simple algebra over $k$. Gupta, Kaur and
+Singh state a theorem of Amitsur in their survey
+\cite[Theorem~3.1]{GuptaKaurSingh2023}: the derivation of $k$ extends to $A$, and
+any two extensions differ by an inner derivation. So one extension fixes all the
+others up to inner derivations.
+
+A third case puts a twist on both sides of the extension. % claim-ok: section road-map, the plan of the book
+Over a commutative
+ring, a $(\sigma,\tau)$-derivation of an algebra into a bimodule satisfies
+$D(ab)=D(a)\tau(b)+\sigma(a)D(b)$, with the twists fixed endomorphisms of the
+algebra \cite[p.~2]{Chaudhuri2020SigmaTau}. Chaudhuri shows that every such map
+factors through one universal map, and which of the two twists is invertible
+decides the shape of that map
+\cite[Theorem~3.1, p.~3]{Chaudhuri2020SigmaTau}. Over the ring of integers of a
+quadratic field the class is then described completely
+\cite[Theorem~4.2, pp.~6--7]{Chaudhuri2020SigmaTau}.
+Section~\ref{sec:generalized-twisted:sigma-tau} returns to these maps.
+
+We have now seen the derivations of one algebra and their extensions.
+Section~\ref{sec:basic-theory:family-tree} steps back and names the close
+relatives of a derivation.

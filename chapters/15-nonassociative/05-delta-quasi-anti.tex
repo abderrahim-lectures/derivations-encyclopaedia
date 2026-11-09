@@ -1,0 +1,81 @@
+% STATUS: rewritten 2026-11-05
+% Sources read in full: Kaygorodov 2007 (Theorems 2.5, 4.4 and the centroid
+% remark in the introduction), Li 2018 (p. 657, Theorem 2.1, pp. 658--659).
+\section{$\delta$-derivations and related maps}\label{sec:nonassociative:delta-quasi-anti}
+
+Section~\ref{sec:nonassociative:alternative} introduced the
+$\delta$-derivation maps and the alternative and Malcev cases
+(Definition~\ref{def:nonassociative:delta-derivation}). Kaygorodov
+treats the Jordan algebras and superalgebras
+\cite{KacKaygorodov2007Delta}. For a simple finite-dimensional Jordan
+algebra there is exactly one non-trivial value of $\delta$.
+
+\begin{theorem}[{\cite[Theorem~2.5]{KacKaygorodov2007Delta}}]
+\label{thm:nonassociative:delta-jordan}
+Let $\varphi$ be a non-trivial $\delta$-derivation of a simple
+finite-dimensional Jordan algebra $A$ over an algebraically closed field
+$F$ of characteristic distinct from $2$. Then $\delta=\tfrac12$ and
+$\varphi(x)=\alpha x$ for some $\alpha\in F$.
+\end{theorem}
+
+Kaygorodov notes that, for Lie algebras, a $\tfrac12$-derivation is an
+element of the centroid of the algebra
+\cite[Introduction]{KacKaygorodov2007Delta}. The Jordan superalgebra
+case follows from the same classification method
+\cite[Theorem~4.4]{KacKaygorodov2007Delta}.
+
+\begin{theorem}[{\cite[Theorem~4.4]{KacKaygorodov2007Delta}}]
+\label{thm:nonassociative:delta-jordan-super}
+Let $A$ be a simple finite-dimensional Jordan superalgebra over an
+algebraically closed field of characteristic $0$, and let $\varphi$ be a
+non-trivial $\delta$-derivation of $A$. Then $\delta=\tfrac12$ and
+$\varphi(x)=\alpha x$ for some $\alpha\in F$ and all $x\in A$.
+\end{theorem}
+
+The two operations of the next class exchange the roles of
+multiplication and bracket in the Leibniz rule % claim-ok: own transition sentence, definitions cited below
+\cite[p.~657]{AlbertiArestiLi2018Poisson}.
+
+\begin{definition}[{\cite[p.~657]{AlbertiArestiLi2018Poisson}}]
+\label{def:nonassociative:delta-poisson}
+A \emph{Poisson algebra} is a vector space $B$ over a field $k$ with a
+commutative associative multiplication $x\cdot y$ and a Lie bracket
+$\{x,y\}$ satisfying
+\[
+\{x\cdot y,\,z\}\;=\;x\cdot\{y,z\}+\{x,z\}\cdot y,
+\qquad x,y,z\in B.
+\]
+\end{definition}
+
+The next definition states the derivations of a Poisson algebra.
+
+\begin{definition}[{\cite[p.~657]{AlbertiArestiLi2018Poisson}}]
+\label{def:nonassociative:delta-poisson-derivation}
+A \emph{Poisson derivation} of a Poisson algebra $B$ is a linear map
+$D$ on $B$ with $D(x\cdot y)=D(x)\cdot y+x\cdot D(y)$ and
+$D(\{x,y\})=\{D(x),y\}+\{x,D(y)\}$ for all $x,y\in B$.
+\end{definition}
+
+The next example is the symplectic Poisson algebra.
+
+\begin{example}[{\cite[p.~657]{AlbertiArestiLi2018Poisson}}]
+\label{ex:nonassociative:symplectic-poisson}
+The \emph{symplectic Poisson algebra} $S_n$ is the polynomial algebra
+$k[x_1,y_1,\dots,x_n,y_n]$ with the bracket determined by
+$\{x_i,y_j\}=\delta_{ij}$, $\{x_i,x_j\}=0$ and $\{y_i,y_j\}=0$.
+\end{example}
+
+On this algebra every derivation is inner.
+
+\begin{theorem}[{\cite[Theorem~2.1,
+pp.~658--659]{AlbertiArestiLi2018Poisson}}]
+\label{thm:nonassociative:symplectic-inner}
+Let $D$ be a derivation of the symplectic Poisson algebra
+$S_n=k[x_1,y_1,\dots,x_n,y_n]$. Then $D^{*}=0$, and there exists
+$f\in S_n$ such that $D=\operatorname{ad}_f$, that is,
+$D(g)=\{f,g\}$ for every $g\in S_n$. Here $D^{*}$ denotes the
+divergence of $D$ \cite[p.~657]{AlbertiArestiLi2018Poisson}.
+\end{theorem}
+
+Section~\ref{sec:nonassociative:poisson} develops the free side of the % claim-ok: own signpost to the next section
+same picture.

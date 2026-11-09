@@ -1,0 +1,76 @@
+% STATUS: written 2026-10-12
+% Sources read in full: Martindale 1969 (pp. 576--578, Sections 1 and 2), Kharchenko 1991 (Sections 1.4 and 1.5, pp. 19--25), Lanski 1988 (p. 277).
+\section{Martindale quotients and the extended centroid}\label{sec:prime-semiprime:quotient-rings}
+
+The theorems of Sections~\ref{sec:prime-semiprime:posner}
+and~\ref{sec:prime-semiprime:herstein-school} ended with an element $\lambda$
+of the extended centroid \cite[p.~577]{Martindale1969}, which is not in the ring.
+This section tells where that field comes from.
+
+Martindale built it in 1969 \cite{Martindale1969}. He wanted one proof for a theorem of Posner on prime
+rings with a polynomial identity and a theorem of Amitsur on primitive rings
+\cite[p.~576]{Martindale1969}. For this he constructs, for any prime ring $R$, a
+ring of quotients $Q$ whose center is a field \cite[p.~576]{Martindale1969}.
+
+The construction uses the nonzero two-sided ideals of $R$
+\cite[p.~576]{Martindale1969}. He takes all $R$-homomorphisms from such an ideal
+into $R$, and calls two of them equivalent if they agree on a nonzero ideal. The
+classes form a ring $Q$, and $R$ is a subring of $Q$ because $R$ is prime
+\cite[p.~577]{Martindale1969}.
+
+For each $q\in Q$ there is a nonzero ideal $U$ of $R$ with $qU\subseteq R$
+\cite[p.~577]{Martindale1969}. Further, $Q$ is a prime ring
+\cite[p.~577]{Martindale1969}.
+
+Martindale shows that the center $C$ of $Q$ is a field
+\cite[p.~577]{Martindale1969}. He calls it the \emph{extended centroid} of
+$R$, and he calls $S=RC$ the \emph{central closure} of $R$
+\cite[p.~577]{Martindale1969}.
+
+We state the tool that the previous sections used.
+
+\begin{theorem}[{\cite[Theorem~1, p.~577]{Martindale1969}}]\label{thm:prime:martindale-dependent}
+Let $R$ be a prime ring with extended centroid $C$ and central closure $S$.
+Let $a,b\in S$ be such that $axb=bxa$ for all $x\in R$. Then $a$ and $b$ are
+$C$-dependent.
+\end{theorem}
+
+Herstein uses this result of Martindale \cite[p.~510]{Herstein1979}, and so
+does Bre\v{s}ar \cite[p.~387]{Bresar1993}. Thus it produces the element $\lambda$ of
+the earlier theorems. Then an identity $axb=bxa$ forces $b=\lambda a$ with
+$\lambda$ in $C$.
+
+Kharchenko defines the Martindale ring of quotients of a semiprime ring
+\cite[Section~1.4, p.~19]{Kharchenko1991}.
+
+Let $F$ be the set of ideals of $R$ with zero annihilator. The classes of
+homomorphisms from ideals in $F$ into $R$ form the left Martindale ring of
+quotients $R_F$ \cite[1.4.8, p.~21]{Kharchenko1991}.
+
+\begin{theorem}[{\cite[Theorem~1.4.9, p.~22]{Kharchenko1991}}]\label{thm:prime:kharchenko-quotients}
+Let $R$ be a semiprime ring. The ring $R_F$ has the following properties.
+\begin{enumerate}
+\item For every $a\in R_F$ there is an ideal $I_a\in F$ with $I_aa\subseteq R$.
+\item If $a\in R_F$ and $Ia=0$ for some $I\in F$, then $a=0$.
+\item If $I\in F$ and $\varphi\colon I\to R$ is a homomorphism of left
+$R$-modules, then there is $r\in R_F$ with $\varphi(i)=ir$ for all $i\in I$.
+\end{enumerate}
+\end{theorem}
+
+Kharchenko calls the center of $R_F$ the \emph{generalized centroid} of $R$
+\cite[1.5.1, p.~24]{Kharchenko1991}. For a prime ring it is the extended
+centroid of Martindale. Lanski describes $Q$ in the same way, as classes of
+homomorphisms from ideals into $R$ \cite[p.~277]{Lanski1988}. He notes that the
+center $C$ of $Q$ is a field, and that $C$ is also the centralizer of $R$ in $Q$.
+
+The quotient ring matters for derivations because derivations pass to it.
+Section~\ref{sec:basic-theory:extension} recorded that a derivation of a
+semiprime ring that is defined on an ideal extends in a unique way to a ring of
+quotients \cite[Proposition~1.8.1, p.~50]{Kharchenko1991}. Lanski states the
+same for a prime ring: each derivation has a unique extension to $Q$
+\cite[p.~277]{Lanski1988}.
+
+So a derivation of $R$ can be studied inside $Q$, where the extended centroid
+$C$ is a field. The question that Section~\ref{sec:prime-semiprime:kharchenko}
+asks is which derivations are inner in $Q$, and what identities the values of
+a derivation can satisfy.

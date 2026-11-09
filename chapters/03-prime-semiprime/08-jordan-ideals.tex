@@ -1,0 +1,87 @@
+% STATUS: written 2026-10-12
+% STATUS: extended 2026-11-07 (Oukhtite and Mamouni 2015 read in full from the
+% library PDF)
+% Sources read in full: Bresar, Fosner and Fosner 2005 (pp. 1--2), Oukhtite 2011 (pp. 415--416), Oukhtite and Mamouni 2012 (pp. 341--342);
+% Oukhtite and Mamouni 2015 (pp. 1--11 of the accepted manuscript).
+\section{Jordan ideals and the Jordan structure of a prime ring}\label{sec:prime-semiprime:jordan-ideals}
+
+Section~\ref{sec:prime-semiprime:involution} met the symmetric elements, which
+form a Jordan subring. This section follows the Jordan side of the story. A ring
+$A$ becomes a Jordan algebra under the product $a\circ b=ab+ba$
+\cite[p.~1]{BresarFosnerFosner2005}.
+
+An additive subgroup $J$ of $R$ is a \emph{Jordan ideal} if $u\circ r\in J$ for
+all $u\in J$ and $r\in R$ \cite[p.~415]{Oukhtite2011}. The standard problem is to
+describe Jordan ideals in terms of ordinary ideals
+\cite[p.~1]{BresarFosnerFosner2005}. One asks for conditions under which every
+nonzero Jordan ideal is an ideal, or at least contains a nonzero ideal
+\cite[p.~1]{BresarFosnerFosner2005}. The problem has been studied for more
+than fifty years, and its basic results are due to Herstein
+\cite[p.~1]{BresarFosnerFosner2005}.
+
+Bre\v{s}ar, Fo\v{s}ner and Fo\v{s}ner give a short route to such results, based on
+an identity that links the Jordan product and the Lie product
+\cite[p.~1]{BresarFosnerFosner2005}.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~2]{BresarFosnerFosner2005}}]\label{thm:prime:bff-jordan}
+Let $A$ be an associative algebra over a commutative unital ring that contains
+$\tfrac12$, and let $J$ be a Jordan ideal of $A$. Then $J$ contains the set
+$\mathrm{Alg}([A,A])\,J$. In particular, $J$ contains the ideal
+$\mathrm{Id}([[A,A],A])\,J$.
+\end{theorem}
+
+We turn to derivations on a ring with involution. Such a ring is
+\emph{$*$-prime} if $aRb=aRb^*=0$ implies $a=0$ or $b=0$
+\cite[p.~415]{Oukhtite2011}.
+
+A prime ring with an involution is $*$-prime \cite[p.~415]{Oukhtite2011}. The
+converse fails \cite[p.~415]{Oukhtite2011}. For example, the ring
+$R\times R^{o}$ with the exchange involution is $*$-prime and not prime.
+
+Oukhtite extended the second theorem of Posner to Jordan ideals in such a ring
+\cite[p.~415]{Oukhtite2011}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~416]{Oukhtite2011}}]\label{thm:prime:oukhtite-jordan}
+Let $(R,*)$ be a $2$-torsion free ring with involution, let $J$ be a nonzero
+$*$-Jordan ideal of $R$, and let $d$ be a nonzero derivation that is centralizing
+on $J$. If $R$ is $*$-prime, then $R$ is commutative.
+\end{theorem}
+
+Oukhtite and Mamouni study derivations that satisfy other algebraic identities on
+Jordan ideals \cite[p.~341]{OukhtiteMamouni2012}. They extend several results for
+derivations of prime rings to Jordan ideals \cite[p.~341]{OukhtiteMamouni2012}.
+They also give an example that shows that the hypothesis that $R$ is $*$-prime
+cannot be dropped \cite[p.~341]{OukhtiteMamouni2012}.
+
+The same authors put a generalized derivation on a Jordan ideal and compare its
+values with the products of the ideal \cite[p.~1]{OukhtiteMamouni2015}. They work
+in a $2$-torsion free prime ring. The condition is that a difference of the form
+$F(xy)-xy$, $F(xy)-yx$, $F(x)F(y)-xy$ or $F(x)F(y)-yx$ be central for all $x$ and
+$y$ in the ideal \cite[p.~1]{OukhtiteMamouni2015}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~3]{OukhtiteMamouni2015}}]\label{thm:prime:oukhtite-genjordan}
+Let $R$ be a $2$-torsion free prime ring and $J$ a nonzero Jordan ideal of $R$. If
+$R$ admits a generalized derivation $F$ associated with a nonzero derivation $d$
+such that $F(xy)-xy\in Z(R)$ for all $x,y\in J$, then $R$ is commutative.
+\end{theorem}
+
+The other three conditions give the same conclusion
+\cite[Theorems~2 and~3, pp.~3--5]{OukhtiteMamouni2015}. Each proof first shows that
+the Jordan ideal meets the center, and then reduces the identity to one on the whole
+ring \cite[pp.~3--4]{OukhtiteMamouni2015}.
+
+A weaker condition allows the Jordan identity to fail by a central element. An
+additive map $\delta$ of $R$ into the right Martindale quotient ring is a
+\emph{weak Jordan derivation} \cite[p.~1]{Lin2020WeakJordan} when
+$\delta(x^{2})-x\delta(x)-\delta(x)x$ lies in the extended centroid for every
+$x\in R$. Lin proves that on a prime ring with $\dim_{C}RC>4$ such a map is a
+derivation when the characteristic is not two, and is a derivation plus a map
+into the centroid when the characteristic is two
+\cite[Theorem~1.2]{Lin2020WeakJordan}. So the relaxation buys exactly one
+centroid-valued summand.
+
+Theorems~\ref{thm:prime:posner-two}, \ref{thm:prime:herstein-commuting},
+\ref{thm:prime:herstein-involution} and~\ref{thm:prime:oukhtite-jordan} have
+a conclusion of one kind: the ring is commutative, or an order in a simple algebra
+of dimension four. Each application of such a result sits in the chapter that
+owns its notions.

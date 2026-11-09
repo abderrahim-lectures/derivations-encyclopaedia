@@ -1,0 +1,80 @@
+% STATUS: written 2026-11-06 (English gate clean; sources read in full as recorded below).
+% Sources read in full: Hilbert 1897 (Jahresber. DMV 4, Satz 90 in Section 54, p. 272, checked against the page image), Speiser 1919 (Math. Z. 5, 1--6; OCR text, formulas checked against the scan), Eilenberg--Mac Lane 1947 (Ann. of Math. 48, 51--78), Weibel 1994 (Definition 6.4.1 and Example 6.4.2 on p. 174, Theorem 6.4.5 on p. 175, Section 9.2), Weibel 1999 (History of Topology, 797--836).
+% To read before the next release: Brauer and Noether 1927, Noether 1934 (Zerfallende verschraenkte Produkte), Schreier 1926, Baer 1934. See ledger/manual-downloads.md and issue #534.
+\section[Crossed homomorphisms and principal derivations: Hilbert, Speiser, Brauer, Noether, Eilenberg, Mac~Lane][Crossed homomorphisms]{Crossed homomorphisms and principal derivations: Hilbert, Speiser, Brauer, Noether, Eilenberg, Mac~Lane}\label{sec:origins:crossed-homomorphisms}
+
+The identity $D(gh) = gD(h) + D(g)$ was studied long before derivations of
+algebras had a cohomology. It was studied for groups that act on fields.
+There it has the name \emph{crossed homomorphism} \cite[Definition, p.~516]{Weibel1994}. This section follows that
+line from Hilbert to the textbooks.
+
+The line starts with Theorem~90 of the \emph{Zahlbericht}~\cite{Hilbert1897}, written in German.
+It is about a field $K$ that is relatively cyclic over $k$. Let $S$ be a
+generator of its Galois group. Hilbert uses symbolic powers $A^{F(S)}$. He
+takes this notation from Kronecker. The theorem reads: \translated{Every
+integral or fractional number $A$ in $K$ whose relative norm with respect to
+$k$ is equal to $1$ becomes the symbolic $(1-S)$-th power of a certain
+integer $B$ of the field $K$}{Jede ganze oder gebrochene Zahl $A$ in $K$,
+deren Relativnorm in Bezug auf $k$ gleich $1$ ist, wird die symbolische
+$(1-S)$te Potenz einer gewissen ganzen Zahl $B$ des K\"orpers
+$K$}{German}~\cite[\S 54, Satz~90, p.~272]{Hilbert1897}.
+
+We now say this in present terms. A map on a cyclic group is fixed by its
+value $A$ on the generator. The map is a crossed homomorphism into
+$K^{\times}$ exactly when the norm of $A$ is $1$. The equation $A = B^{1-S}$
+says that the map is principal. The group of crossed homomorphisms is $H^1$
+of the group. Weibel calls this group as old as the other cohomology groups
+of low degree. Theorem~90 of Hilbert gives it for the Galois group of a
+cyclic extension~\cite[p.~806]{Weibel1999History}.
+
+In 1919 a more general case appears in a short paper of Speiser~\cite{Speiser1919}.
+The paper is written in German. It uses neither name. Let $K/k$ be a Galois
+extension with group $G$. Speiser gives each $S \in G$ an invertible matrix
+$M_S$ over $K$. He asks that these matrices compose by the law
+$M_S^{T} M_T = M_{ST}$. Here $M_S^{T}$ is the matrix obtained from $M_S$ by
+applying $T$ to its entries~\cite[p.~2]{Speiser1919}. In present terms this
+is a crossed homomorphism from $G$ into the group of invertible matrices over
+$K$. His first theorem says that it is principal:
+\begin{originalquote}{German}{Satz 1: Bilden die Matrizen $M_E, M_A, \ldots$ eine Gruppe nach der obigen Definition, so gibt es in $K$ eine Matrix $M$ derart, da\ss{} $M_S = (M^S)^{-1} M$ ist.}
+Theorem 1: If the matrices $M_E, M_A, \ldots$ form a group under the above
+definition, then there is a matrix $M$ in $K$ such that $M_S = (M^S)^{-1} M$.
+\end{originalquote}
+\noindent\cite[p.~2]{Speiser1919}. Speiser then obtains the theorem of
+Hilbert:
+\begin{originalquote}{German}{Ein Spezialfall dieses eben bewiesenen Satzes ist Satz 90 im Zahlenbericht von Hilbert}
+A special case of the theorem just proved is Theorem 90 in the Zahlbericht of
+Hilbert
+\end{originalquote}
+\noindent\cite[p.~3]{Speiser1919}. He cites it as Jahresbericht der Deutschen
+Mathematiker-Vereinigung~4 (1897), p.~272.
+
+Where does the name come from? It comes from algebras. Weibel writes that the name crossed
+homomorphism ``comes from its role in the study of crossed product
+algebras''~\cite[p.~806]{Weibel1999History}. There he cites Brauer and
+Noether 1927.
+
+We now move to 1947, two years after the paper of Hochschild. Let a group $\Pi$ act on an abelian group $G$. Eilenberg and Mac~Lane write
+the $1$-cocycle condition as $f(x_1x_2) = f(x_1) + x_1 f(x_2)$. They give the
+names that were already in use:
+\begin{quote}\small
+``Such functions are known in algebra as crossed homomorphisms.''
+\end{quote}
+\noindent\cite[\S 3]{EilenbergMacLane1947}. They call the $1$-coboundaries
+$f(x) = xg - g$ the principal homomorphisms. Then $H^1(\Pi,G)$ is the group of
+crossed homomorphisms modulo the principal
+homomorphisms~\cite[\S 3]{EilenbergMacLane1947}. So in 1947 these terms were
+already standard.
+
+Today one object has three names. The modern textbook joins the three sets of terms. Let $G$ be a group and $A$
+a left $G$-module. Weibel defines \emph{a derivation (or crossed
+homomorphism)} as a map $D\colon G \to A$ with $D(gh) = gD(h) + D(g)$ \cite[Definition~6.4.1, p.~174]{Weibel1994}. He
+calls the maps $D_a(g) = ga - a$ the \emph{principal derivations}. He proves
+$H^1(G;A) \cong \operatorname{Der}(G,A)/\operatorname{PDer}(G,A)$%
+~\cite[Definition~6.4.1, Example~6.4.2, Theorem~6.4.5]{Weibel1994}. The same
+book treats a ring $R$ and a bimodule $M$. There a derivation is also called a
+crossed homomorphism. The maps $r \mapsto rm - mr$ are the principal
+derivations~\cite[\S 9.2, p.~301]{Weibel1994}. So three names describe one
+object: \emph{principal derivation}, \emph{principal crossed homomorphism} and
+\emph{inner derivation}. They come from three traditions: groups, rings and
+algebras. Section~\ref{sec:origins:cohomology} gives the algebra side,
+Hochschild 1945.

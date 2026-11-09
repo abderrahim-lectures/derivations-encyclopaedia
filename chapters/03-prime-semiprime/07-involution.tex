@@ -1,0 +1,100 @@
+% STATUS: written 2026-10-12
+% STATUS: extended 2026-11-07 (Idrissi and Oukhtite 2019 read in full from the
+% library PDF)
+% Sources read in full: Herstein 1982 (pp. 356--357, the introduction and Theorem 1), Lanski 1977 (pp. 449--460), Lanski 1985 (p. 765, the abstract and introduction), Martindale and Miers 1986 (p. 14);
+% Idrissi and Oukhtite 2019 (pp. 1950001-1 to 1950001-11).
+\section{Rings with involution and *-derivations}\label{sec:prime-semiprime:involution}
+
+Section~\ref{sec:prime-semiprime:ideals-lie-ideals} ended with the skew elements
+of a ring with involution. An \emph{involution} is an anti-automorphism of period
+at most $2$ \cite[p.~14]{MartindaleMiers1986}. The symmetric elements $s^*=s$ form
+a Jordan subring, and the skew elements $k^*=-k$ form a Lie subring
+\cite[p.~14]{MartindaleMiers1986}. We ask what a derivation does on these sets.
+
+Herstein took the commuting condition of
+Section~\ref{sec:prime-semiprime:herstein-school} to this setting
+\cite[p.~356]{Herstein1982}. He asks that $d(s)d(t)=d(t)d(s)$ only for symmetric
+$s$ and $t$ \cite[p.~356]{Herstein1982}.
+
+The full result of the earlier section cannot hold here \cite[p.~356]{Herstein1982}.
+
+\begin{example}[{\cite[p.~356]{Herstein1982}}]\label{ex:prime:herstein-symplectic}
+Let $R$ be the ring of $2\times 2$ matrices over a field. For the symplectic
+involution, all symmetric elements are central, so the values of any derivation
+on symmetric elements commute. For the transpose, take
+\[
+d(x)=xe_{11}-e_{11}x .
+\]
+Then $d(x)d(y)=d(y)d(x)$ for symmetric $x$ and $y$.
+\end{example}
+
+So Herstein proves a weaker
+conclusion.
+
+\begin{theorem}[{\cite[Theorem~2, p.~366]{Herstein1982}}]\label{thm:prime:herstein-involution}
+Let $R$ be a prime ring with involution, of characteristic not $2$, and let
+$d\neq 0$ be a derivation of $R$ with $d(s)d(t)=d(t)d(s)$ for all symmetric $s$
+and $t$. Then $R$ is commutative, or $R$ is an order in a simple algebra of
+dimension four.
+\end{theorem}
+
+Lanski studied Lie ideals and derivations in rings with involution
+\cite[p.~449]{Lanski1977}.
+Let $L$ be a Lie ideal. Suppose that the commutator of an element with $L$ is
+central. Then the element or $L$ is central, unless the ring is an order in a
+simple algebra of dimension at most four \cite[p.~449]{Lanski1977}. This holds for
+the symmetric part or the skew part of $L$ \cite[p.~449]{Lanski1977}.
+
+Lanski applies this to derivations \cite[p.~449]{Lanski1977}. Suppose a
+derivation sends the symmetric or skew part of $L$ into the center. Then the same
+three cases occur \cite[p.~449]{Lanski1977}.
+
+\begin{theorem}[{\cite[Theorem~9, p.~459]{Lanski1977}}]\label{thm:prime:lanski-involution}
+Let $R$ be a prime ring of characteristic not $2$ with an involution, let $D$ be
+a derivation of $R$, and let $L$ be a Lie ideal with $L^*=L$ such that $D(L)$ lies
+in the skew elements or in the symmetric elements. Then $L\subseteq Z$, or
+$D(R)=0$, or $R$ satisfies the standard identity of degree four.
+\end{theorem}
+
+Section~\ref{sec:prime-semiprime:kharchenko} has a version with involution. Every
+generalized identity with derivations and the involution follows from the
+generalized identities with involution that $R$ satisfies
+\cite[p.~765]{Lanski1985}. This gives a general setting for the result of
+Herstein \cite[p.~765]{Lanski1985}.
+
+In characteristic zero, no outer derivation of $R$ acts algebraically on the
+symmetric elements \cite[p.~765]{Lanski1985}. Suppose the images of the
+symmetric elements under the derivations satisfy a polynomial relation. Then
+$R$ satisfies a generalized polynomial identity \cite[p.~765]{Lanski1985}.
+
+An involution is of the \emph{second kind} when its symmetric elements meet the
+center in a nonzero set \cite[p.~1950001-1]{Idrissi2019}. Idrissi and Oukhtite
+take the commuting condition of
+Section~\ref{sec:prime-semiprime:herstein-school} and put the commutator of an
+element with its image in place of the element itself
+\cite[p.~1950001-4]{Idrissi2019}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~1950001-4]{Idrissi2019}}]\label{thm:prime:idrissi-commutator}
+Let $(R,*)$ be a $2$-torsion free prime ring with an involution of the second kind,
+and let $F$ be a nonzero generalized derivation of $R$ associated with a derivation
+$d$. Then $R$ is commutative if and only if $F([x,x^{*}])\in Z(R)$ for all $x\in R$.
+\end{theorem}
+
+They argue the same way for the Jordan product, and again the ring has to commute
+\cite[p.~1950001-6]{Idrissi2019}.
+
+\begin{theorem}[{\cite[Theorem~2, p.~1950001-6]{Idrissi2019}}]\label{thm:prime:idrissi-jordan}
+Let $(R,*)$ be a $2$-torsion free prime ring with an involution of the second kind.
+If $R$ admits a nonzero generalized derivation $F$ associated with a derivation $d$,
+then $R$ is commutative if and only if $F(x\circ x^{*})\in Z(R)$ for all $x\in R$.
+\end{theorem}
+
+A corollary replaces the condition $F([x,x^{*}])\in Z(R)$ by
+$F([x,y])\pm[x,y]\in Z(R)$ for all $x$ and $y$, and adds that the three statements
+are equivalent \cite[Corollary~1, p.~1950001-5]{Idrissi2019}. The authors also note
+that an earlier result for a square closed Lie ideal fails here. When the ideal is
+the whole ring, that result would force the ring to be commutative
+\cite[p.~1950001-5]{Idrissi2019}.
+
+Section~\ref{sec:prime-semiprime:jordan-ideals} turns from Lie ideals to Jordan
+ideals.

@@ -1,0 +1,19 @@
+% A local derivation (Kadison 1990, p. 494): at each element a of the algebra
+% R the value alpha(a) equals delta_a(a) for some derivation delta_a, and that
+% derivation may change with a. Three points, three witnesses. The question
+% the section then answers is whether one derivation serves every point.
+\begin{tikzpicture}[font=\small]
+  \foreach \y/\i in {15mm/1, 0mm/2, -15mm/3} {
+    \node[hbnode,text width=12mm,align=center] (a\i) at (0,\y) {$a_{\i}$};
+    \node[hbkey,text width=17mm,align=center] (v\i) at (58mm,\y)
+      {$\alpha(a_{\i})$};
+    \draw[hbarrow] (a\i.east) -- node[above,font=\footnotesize]
+      {$\delta_{\i}$} (v\i.west);
+  }
+  \node[font=\footnotesize,anchor=south] at (0,22mm) {elements of $R$};
+  \node[font=\footnotesize,anchor=south] at (58mm,22mm) {values in $M$};
+  % the three witnesses are not one map: the question of the section
+  \node[font=\footnotesize,anchor=north,align=center,text width=72mm] at (29mm,-21mm)
+    {each $\delta_{\i}$ is a derivation of $R$ into $M$, and it need not be the
+     same for two points};
+\end{tikzpicture}

@@ -1,0 +1,118 @@
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+% STATUS: written 2026-11-06 (states the scope, the source rule and the living
+% edition rule; these are the book's own policies, fixed in CLAUDE.md and in the
+% ROADMAP, not external claims.)
+\label{page:preface}
+
+A derivation is the algebraic form of a derivative.
+Leibniz wrote the product rule in 1684, and three centuries later the same rule
+defines a map on any ring: an additive map $d$ with $d(xy)=d(x)y+xd(y)$.
+Every chapter of this book studies some version of that equation, either the
+equation itself or a weaker or stronger form of it.
+
+\section*{Why a encyclopaedia and not a survey}
+
+A survey selects and argues. A encyclopaedia tries to be complete in scope, so that a
+reader can find where a given question is treated and what is known about it.
+
+This book is exhaustive in scope, not in text.
+Every flavour of derivation, every class of ring and algebra where derivations
+act, and every line of development from Leibniz to this year has a place in the
+plan.
+The plan is fixed in advance and the text grows into it.
+
+\section*{The source rule}
+
+No fact, definition, example or application is stated before its source has been
+read in full from the page.
+A recalled theorem appears as a theorem-like environment with its located
+citation, keeping the kind and the wording of the source.
+Proofs and remarks of the book itself are marked as its own.
+
+This rule has a cost, and the cost is visible.
+A section whose sources are not yet obtained stays a marked planned
+stub, and the stub says which source it waits for.
+A reader who finds a stub knows that the coverage is planned there.
+The text is not yet written, which is a different thing from a section that was
+written and then cut.
+
+This edition has no such stub.
+Every section is written.
+Two sources could not be obtained at all.
+Their sections name the work and say so rather than quoting a theorem from it,
+and both are listed in the download record of this book.
+The policy stays in place for later editions, which is why it is stated here.
+
+\section*{Where the applications are}
+
+A derivation is a rule that obeys the Leibniz product rule. The rule itself
+goes back to Leibniz \cite{Leibniz1684}. The name was already familiar to
+Ritt when he built differential algebra on it \cite[p.~1]{Ritt1950}. The same
+rule appears again in nine fields beyond the differential calculus. The nine
+names are classical and quantum mechanics, differential geometry,
+differential algebra, coding, control, group analysis, model theory,
+algebraic topology and automatic differentiation. Each field is reported in
+the chapter that owns its notions.
+Each report names one field, cites the source that names the derivation it
+rests on, and reads the definition or theorem of that source. The reports do
+not narrate: they record.
+
+Physics was the first field that asked why a derivation arises. Dirac
+\cite{Dirac1925} translated noncommutative kinematics into the language of a
+Poisson bracket
+(Section~\ref{sec:basic-theory:physics}), and Kadison \cite{Kadison1966} later
+asked whether every derivation of an operator algebra comes from inside
+(Section~\ref{sec:banach-operator:kadison-sakai}). Geometry came next: a tangent vector
+at a point of a smooth manifold is a derivation of the smooth functions there
+(Section~\ref{sec:commutative:geometry}). Differential algebra began when Ritt
+and Kolchin axiomatized the symbol $d/dx$ as a derivation on a field, and the
+field-of-definition question for the Painlev\'e equations sits inside that
+axiomatization (Section~\ref{sec:differential-algebra:differential-equations}). In
+positive characteristic the ordinary product rule survives in the
+divided-power form of Hasse and Schmidt; the higher derivations are the
+algebraic backbone of Reed--Solomon and Goppa codes
+(Section~\ref{sec:higher-multi:coding}). Control theory discovered that an
+input--output system is a finitely generated differential field extension,
+with the input a differential transcendence basis
+(Section~\ref{sec:differential-algebra:control}). On a group the same rule is a
+derivation of the group ring, and Fox showed the free group carries one
+derivation per generator (Section~\ref{sec:group-hopf:harmonic-analysis}).
+Ax translated the conjecture of Schanuel about the complex exponential into a
+statement about a derivation on a differential field, and his 1971 theorem is
+the seed of the Ax--Schanuel inequalities
+(Section~\ref{sec:differential-algebra:transcendence}). Hochschild and cyclic
+homology compute derivations as the homology of a chain complex, and on a
+smooth commutative algebra the answer is the exterior algebra of K\"ahler
+differentials (Section~\ref{sec:cohomology:algebraic-topology}). A computer
+program that differentiates a function runs the chain rule and the Leibniz
+rule step by step under automatic differentiation
+(Section~\ref{sec:differential-algebra:automatic-differentiation}).
+
+\hbfigure{02-basic-theory/oscillator}{The harmonic oscillator. The derivation $f\mapsto\{f,H\}$ with $H=(p^2+q^2)/2$ is the vector field $(p,-q)$ on the phase plane; its flow is a rotation.}{fig:basic:oscillator}
+
+\section*{The living edition}
+
+The subject grows.
+Papers on derivations appear every month, and a printed encyclopaedia would be out of
+date before it reached a reader.
+This edition is therefore updated monthly: new work is added where it changes a
+statement, a table entry or an open problem.
+Appendix~\ref{app:atlas} reports what the edition has read, and the version
+number on the title page names the edition.
+
+\section*{How the book was made}
+
+The work of reading, checking and drafting was carried out with artificial
+intelligence under human direction.
+A person set the scope, fixed the questions and decided what the book would
+contain.
+Machine tools assisted the reading of each source, the extraction of its results
+and the drafting of each section.
+Every claim was then checked against the page it cites.
+The rules that govern this are stated in the repository of the book.
+The records of what was read are kept there too, so a reader can trace any
+statement to its source.
+
+The name on the title page is the person who directed the work and answers for
+it.

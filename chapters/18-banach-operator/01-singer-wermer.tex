@@ -1,0 +1,182 @@
+% STATUS: written 2026-11-05 (Singer-Wermer 1955 read in full; excerpts in
+% excerpts/SingerWermer1955.txt; Thomas 1988 recalled through
+% Miura-Hirasawa-Takahasi 2006, p. 523).
+% Additions of 2026-11-07 from Mathieu 1994 (pp. 238, 242--245) and
+% Eisaei--Moghimi 2024 (pp. 1--5).
+% Sources: SingerWermer1955, BresarVillena2002, Mathieu1994Image,
+% EisaeiMoghimi2024Theta.
+\section{Singer--Wermer and commutative Banach algebras}\label{sec:banach-operator:singer-wermer}
+
+The chapter opened with the observation of \v{S}ilov that the algebra of
+infinitely differentiable functions on an interval carries no Banach
+algebra norm \cite[p.~260]{SingerWermer1955}. Singer and Wermer took up
+the explanation of Kaplansky of this phenomenon and worked with the following
+objects \cite[p.~260]{SingerWermer1955}.
+
+\begin{definition}[{\cite[p.~260]{SingerWermer1955}}]\label{def:banach:derivation}
+A \emph{derivation} $D$ on an algebra is a transformation on the algebra
+such that $D(a+b)=D(a)+D(b)$, $D(\lambda a)=\lambda D(a)$ for any scalar
+$\lambda$, and $D(ab)=D(a)b+aD(b)$. A derivation on a Banach algebra is
+\emph{bounded} if $\sup_{\|a\|=1}\|D(a)\|<\infty$. The \emph{radical} of a
+commutative Banach algebra $A$ is the intersection of all maximal ideals
+$M$ in $A$ such that $A/M$ has a unit; if the radical reduces to the zero
+element, $A$ is called \emph{semisimple}.
+\end{definition}
+
+Their main theorem answers the conjecture of Kaplansky in the bounded case
+\cite[p.~260]{SingerWermer1955}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~260]{SingerWermer1955}}]\label{thm:banach:singerwermer}
+Let $A$ be a commutative Banach algebra and $D$ a bounded derivation on
+$A$. Then $D$ maps $A$ into its radical. In particular, if $A$ is
+semisimple, $D=0$.
+\end{theorem}
+
+The proof of Theorem~\ref{thm:banach:singerwermer} uses the exponential.
+For a multiplicative linear functional $f$ and a complex number $\lambda$,
+the map $a\mapsto f(e^{\lambda D}a)$ is again multiplicative. Gelfand
+bound on multiplicative functionals then forces $f(D(a))$ to vanish
+\cite[p.~260]{SingerWermer1955}. the result of \v{S}ilov is its first
+consequence \cite[p.~260]{SingerWermer1955}.
+
+\begin{corollary}[{\cite[Corollary~1.2, p.~262]{SingerWermer1955}}]\label{cor:banach:cinfty}
+Let $C^\infty$ denote the algebra of all infinitely differentiable
+complex-valued functions on an interval. Then there exists no norm under
+which $C^\infty$ is a Banach algebra.
+\end{corollary}
+
+For the proof, differentiation $f\mapsto f'$ would be a bounded derivation
+by the closed graph theorem, and $C^\infty$ is semisimple, so
+Theorem~\ref{thm:banach:singerwermer} would give $D=0$
+\cite[p.~262]{SingerWermer1955}. Singer and Wermer added two observations
+that fed the later commutator theory of
+Section~\ref{sec:banach-operator:commutator-ranges}. A bounded commutator
+$ab-ba$ inside a commutative Banach algebra is a generalized nilpotent
+\cite[p.~261]{SingerWermer1955}. the theorem of Putnam, that a commutator
+$C=AB-BA$ of bounded Hilbert space operators commuting with both $A$ and
+$B$ has spectrum $\{0\}$, follows from Theorem~\ref{thm:banach:singerwermer}
+\cite[p.~264]{SingerWermer1955}.
+
+Derivations into larger algebras behave differently, and the obstruction
+lives at one point of the maximal ideal space
+\cite[p.~262]{SingerWermer1955}.
+
+\begin{definition}[{\cite[p.~262]{SingerWermer1955}}]\label{def:banach:pointderivation}
+A \emph{bounded point derivation} of a commutative Banach algebra $A$ is a
+bounded linear functional $d_\varphi$ associated with a multiplicative
+linear functional $\varphi$ such that
+$d_\varphi(a_1a_2)=d_\varphi(a_1)\varphi(a_2)+\varphi(a_1)d_\varphi(a_2)$.
+\end{definition}
+
+The next theorem relates point derivations to derivations into a larger algebra.
+
+\begin{theorem}[{\cite[Theorem~2, p.~262]{SingerWermer1955}}]\label{thm:banach:pointder}
+If there exists a nonzero bounded point derivation $d_\varphi$ of $A$, then
+there exists a commutative extension $B$ of $A$ and a nonzero bounded
+derivation $D$ of $A$ into $B$. If $A$ is semisimple, $B$ can be taken to
+be semisimple. If $A\subseteq B$ and if $D$ is a nonzero bounded derivation
+of $A$ into $B$ but not into the radical of $B$, then there exists a
+nonzero bounded point derivation of $A$.
+\end{theorem}
+
+On a compact Hausdorff space the point derivation option disappears
+\cite[p.~264]{SingerWermer1955}.
+
+\begin{corollary}[{\cite[Corollary~2.2, p.~264]{SingerWermer1955}}]\label{cor:banach:CX}
+The algebra $C(X)$ of all continuous functions on a compact Hausdorff space
+$X$ has no nonzero derivations into any semisimple commutative extension
+$B$.
+\end{corollary}
+
+Singer and Wermer wrote that the boundedness hypothesis of
+Theorem~\ref{thm:banach:singerwermer} seemed superfluous
+\cite[p.~260]{SingerWermer1955}. The statement became the
+Singer--Wermer conjecture \cite[p.~523]{MiuraHirasawaTakahasi2006}.
+Thomas proved it in 1988: a
+linear derivation on a commutative Banach algebra maps into the radical
+even if it is discontinuous \cite[p.~523]{MiuraHirasawaTakahasi2006}. As a
+direct consequence, there are no nonzero linear derivations on a semisimple
+commutative Banach algebra, a fact that Johnson had proved earlier
+\cite[p.~523]{MiuraHirasawaTakahasi2006}. That consequence is the
+commutative end of the continuity story told in
+Section~\ref{sec:banach-operator:automatic-continuity}. In the
+noncommutative algebras of
+Section~\ref{sec:banach-operator:kadison-sakai}, Singer showed that a commutative
+$C^*$-algebra has only the zero derivation. Kaplansky proved every
+derivation of a type I von Neumann algebra inner
+\cite[p.~280]{Kadison1966}.
+
+The noncommutative form of the conjecture is open, and this section states it
+as a problem. % claim-ok: own signpost introducing the moved problem, which carries its own citation
+
+\begin{problem}[{\cite[p.~710]{BresarVillena2002}}]\label{prob:open:sw}
+Let $A$ be a Banach algebra and let $D$ be a derivation of $A$, with no
+continuity assumed.
+Does $D$ leave every primitive ideal of $A$ invariant?
+\end{problem}
+
+Bre\v{s}ar and Villena call this the noncommutative Singer--Wermer conjecture
+and describe it as one of the hardest open problems of Banach algebra theory
+\cite[p.~710]{BresarVillena2002}. They prove that it is equivalent to a
+statement about invertible values of a derivation
+\cite[Theorem~5.2, p.~719]{BresarVillena2002}. They also report that the second
+assertion of their Theorem~5.2 is known for derivations but not for
+$\varphi$-derivations \cite[Remark~5.3, p.~720]{BresarVillena2002}.
+
+Mathieu surveyed the state of the conjecture in 1994 and put it in two forms
+\cite[p.~238]{Mathieu1994Image}. A derivation is \emph{commuting} when
+$[a,\delta(a)]=0$ for every element $a$ \cite[p.~238]{Mathieu1994Image}. The
+conjecture then reads as follows: every derivation that is commuting modulo the
+radical is inner modulo the radical \cite[Conjecture~1, p.~238]{Mathieu1994Image}.
+The second form is a statement about the image of one element
+\cite[p.~242]{Mathieu1994Image}.
+
+\begin{conjecture}[{\cite[Conjecture~2, p.~242]{Mathieu1994Image}}]\label{conj:banach:unbounded-kleinecke}
+Let $\delta$ be a derivation on a Banach algebra $A$. For each $a$ in $A$,
+$[a,\delta(a)]=0$ implies that $\delta(a)$ is quasinilpotent.
+\end{conjecture}
+
+Mathieu calls Conjecture~\ref{conj:banach:unbounded-kleinecke} the unbounded
+Kleinecke--Shirokov theorem and proves that it follows from the
+conjecture on primitive ideals \cite[p.~242]{Mathieu1994Image}. Three results of that survey bound the image from the other side
+\cite[pp.~243--245]{Mathieu1994Image}. A derivation
+that maps into the centre maps into the radical
+\cite[Theorem~7, p.~243]{Mathieu1994Image}. No derivation of a unital Banach
+algebra reaches an invertible central value
+\cite[Theorem~8, p.~245]{Mathieu1994Image}. In particular, no derivation of a
+unital Banach algebra takes the value $1$
+\cite[Corollary~9, p.~245]{Mathieu1994Image}. Mathieu notes that the last
+statement was the key step in the proof of Thomas of the commutative conjecture
+\cite[p.~245]{Mathieu1994Image}.
+
+The conjecture also has a form for twisted product rules
+\cite[p.~1]{EisaeiMoghimi2024Theta}. Eisaei and Moghimi work with a
+weighted space of functions on the half-line, and with its dual
+\cite[p.~2]{EisaeiMoghimi2024Theta}. That dual is a Banach algebra under the
+first Arens product, and the paper writes it $L^\infty_0(w)^*$
+\cite[p.~2]{EisaeiMoghimi2024Theta}. They twist the rule by a homomorphism
+$\theta$ of that algebra. A linear map $D$ is a
+\emph{$\theta$-derivation} when $D(mn)=D(m)\theta(n)+\theta(m)D(n)$ for all
+$m,n$ \cite[p.~1]{EisaeiMoghimi2024Theta}. The radical of that algebra equals
+its right annihilator \cite[p.~3]{EisaeiMoghimi2024Theta}. For an isomorphism
+$\theta$ the range of $D$ lies in the radical
+\cite[Theorem~2.1, p.~4]{EisaeiMoghimi2024Theta}. If $\theta$ is also
+continuous, then $D$ is continuous exactly when its restriction to the right
+annihilator is continuous \cite[Proposition~2.3, p.~5]{EisaeiMoghimi2024Theta}.
+
+Eisaei, Mehdipour and Moghimi treat the one-sided rule in the same algebra
+\cite[p.~2]{EisaeiMehdipourMoghimi2024LeftTheta}. A linear map $\delta$ is a
+\emph{left $\theta$-derivation} when
+$\delta(st)=\theta(s)\delta(t)+\theta(t)\delta(s)$ for all $s,t$
+\cite[p.~2]{EisaeiMehdipourMoghimi2024LeftTheta}. Such a map is already a
+$\theta$-derivation, so the one-sided rule adds nothing in this algebra
+\cite[Theorem~2.2, p.~4]{EisaeiMehdipourMoghimi2024LeftTheta}. Continuity
+behaves as before: if a right identity $\nu$ satisfies $\|\theta(\nu)\|<1$,
+then the zero map is the only continuous left $\theta$-derivation
+\cite[Corollary~2.5, p.~6]{EisaeiMehdipourMoghimi2024LeftTheta}. When $\theta$ is injective, the range of
+$\delta$ lies in the radical exactly when $\delta=0$
+\cite[Theorem~2.7, p.~7]{EisaeiMehdipourMoghimi2024LeftTheta}.
+
+Russell treats the automorphisms and derivations of continuous trace
+$C^{*}$-algebras together, which is where the inner derivations of such an
+algebra are classified \cite[Abstract, p.~1]{Russell1980ContinuousTrace}.

@@ -1,0 +1,130 @@
+% STATUS: written 2026-11-05 (sources of the section read in full: Wilson 1976 pp. 418--465; Winter 1984 pp. 961--972)
+% STATUS: extended 2026-11-07 (Tang 2017 and Liu, Su and Zhang 2005 read in full)
+% Sources: Wilson1976, Winter1984; Tang 2017 (pp. 6--8); Liu, Su and Zhang
+% 2005 (pp. 1--2, 6--7).
+\section{Derivations of simple and semisimple Lie algebras}\label{sec:lie-algebras:simple}
+
+Section~\ref{sec:lie-algebras:characteristically-nilpotent} closed with
+the nilpotent side of the theory.  We now return to simple Lie algebras,
+this time over fields of positive characteristic, where the
+characteristic-zero answer ``all derivations are inner'' breaks down.
+
+The first work is to identify the simple modular Lie algebras that can
+carry outer derivations; the classification theorem of Wilson
+\cite[Theorem~1, pp.~418--419]{Wilson1976} reduces the candidates.
+
+\begin{theorem}[{\cite[Theorem~1, pp.~418--419]{Wilson1976}}]\label{thm:lie:simple-wilson-classification}
+Let $L$ be a finite-dimensional simple Lie algebra over an algebraically
+closed field $F$ of characteristic $p>3$.  Suppose $L$ contains a maximal
+subalgebra $L_{0}$ such that the pair $(L,L_{0})$ satisfies the following
+condition: either $\dim L/L_{0}=1$, or else there exists $Y$ in the image
+of the natural representation of $L_{0}$ on $L/L_{0}$ with
+$\operatorname{rank} Y=1$ and $(\operatorname{ad} Y)^{2}\neq 0$.  Then $L$
+is either classical of type $A$ or $C$, or is of generalized Cartan type.
+\end{theorem}
+
+The generalized Cartan type Lie algebras go back to Kostrikin and
+Shafarevich \cite[p.~418]{Wilson1976}: they are built from truncated
+polynomial rings and their derivations.  The classical algebras of
+Seligman and of Mills--Seligman sit inside this family with rank-one
+root spaces \cite[p.~962]{Winter1984}.  For all of them Winter computes
+the full derivation algebra
+\cite[Theorems~3.4 and 3.6, pp.~970--971]{Winter1984}.
+Winter works with a Lie algebra $L$ that is CAZ
+(\emph{classical--Albert--Zassenhaus}) \cite[p.~962]{Winter1984}.
+Its Cartan subalgebra $H$ splits, and
+each nonzero root space $L_{\alpha}$ is one-dimensional.
+Also $[L_{\alpha},L_{\beta}]=L_{\alpha+\beta}$ whenever the root sum is again
+a root \cite[p.~962]{Winter1984}.
+The irreducible components
+$R_{cl}$ of the root system are the classical ones; $R_{AZ}$ are the
+Albert--Zassenhaus ones, meaning additive subgroups of $k\alpha$ for some
+nonzero root $\alpha$ \cite[p.~962]{Winter1984}.
+
+\begin{theorem}[{\cite[Theorem~3.4, p.~970]{Winter1984}}]\label{thm:lie:simple-winter-splitting}
+Let $L$ be an extended Lie algebra with extended CAZ Cartan subalgebra
+$H$.  Then
+\[
+\operatorname{Der} L\;=\;T(H)\;+\;D(L,H)\;+\;\operatorname{ad} L,
+\]
+where $\dim T(H)=\operatorname{rank} R$ and
+$D(L,H)=D(L/L^{\infty},C_{H}(L^{\infty}))$.
+\end{theorem}
+
+Here $L^{\infty}=\bigcap_{i\geq 1}L^{i}$ is the intersection of the lower
+central series.
+$T(H)$ is a maximal torus of the Fitting zero component of
+$\operatorname{Der} L$ under $\operatorname{ad} H$.
+$D(L/L^{\infty},C_{H}(L^{\infty}))$ is the space of derivations of the
+quotient $L/L^{\infty}$ into the centraliser $C_{H}(L^{\infty})$
+\cite[p.~961]{Winter1984}.
+The toral piece $T(H)$ measures outer
+derivations coming from the dual space of the root system; the middle piece
+$D(L,H)$ captures central-valued ones
+\cite[Theorem~3.4, p.~970]{Winter1984}.
+
+For a CAZ Lie algebra in the strict sense ($L=L^{2}$ and center zero),
+the count of Winter is a formula in the geometry of the root system.
+
+\begin{theorem}[{\cite[Theorem~3.6, p.~971]{Winter1984}}]\label{thm:lie:simple-winter-dimension}
+Let $L$ be a CAZ Lie algebra with CAZ Cartan subalgebra $H$.  Then
+\[
+\dim\,\operatorname{Der} L/\operatorname{ad} L\;=\;a\;-\;b\;+\;\operatorname{rank} R_{AZ},
+\]
+where $a$ is the number of irreducible components of $R_{cl}$ of type
+$A_{r}$ with $p\mid r+1$, and $b$ is the number of irreducible components
+of $R_{cl}$.
+\end{theorem}
+
+The cases match the two families in Theorem~\ref{thm:lie:simple-wilson-classification}:
+classical components of type $A_r$ with $p \mid r+1$ contribute outer
+derivations, while the Albert--Zassenhaus ones contribute through the dual
+rank.
+the introduction of Winter records the consequence for classical Lie
+algebras.
+All derivations of a classical Lie algebra $L$ are inner if and
+only if $L$ has no component of type $A_{r}$ with $p\mid r+1$
+\cite[p.~961]{Winter1984}.
+
+The same innerness holds for the bilinear form of the question. A biderivation
+of a Lie algebra $L$ is a bilinear map that is a derivation in each argument
+\cite[Definition~1.1, p.~2]{Tang2017Biderivations}. The map $(x,y)\mapsto
+\lambda[x,y]$ is a biderivation for every scalar $\lambda$, and it is called
+inner \cite[p.~2]{Tang2017Biderivations}. Tang shows that on a simple complex Lie
+algebra no other map occurs, with no skew-symmetry assumed
+\cite[Theorem~2.4, p.~7]{Tang2017Biderivations}.
+
+\begin{theorem}[{\cite[Theorem~2.4, p.~7]{Tang2017Biderivations}}]\label{thm:lie:tang-biderivation}
+Let $L$ be a finite-dimensional complex simple Lie algebra. A bilinear map
+$f\colon L\times L\to L$ is a biderivation of $L$ if and only if it is inner,
+that is, $f(x,y)=\lambda[x,y]$ for some $\lambda\in\mathbb{C}$ and all
+$x,y\in L$.
+\end{theorem}
+
+The proof reduces both arguments to a common scalar on each root space
+\cite[pp.~6--7]{Tang2017Biderivations}. On the general linear Lie algebra the
+answer grows: a biderivation of $\mathfrak{gl}_n(\mathbb{C})$ is
+$\mu\operatorname{tr}(x)\operatorname{tr}(y)I_n+\lambda[x,y]$ for two complex
+numbers $\mu$ and $\lambda$ \cite[Theorem~3.2, p.~7]{Tang2017Biderivations}.
+
+Positive characteristic gives a second family in which the derivations are
+understood. Let $H$ be the finite-dimensional Hamiltonian superalgebra over a
+field of prime characteristic, and let $H_0$ be its even part
+\cite[p.~1]{LiuSuZhang2005}. Liu, Su and Zhang describe the derivations of
+$H_0$ into the even part $W_0$ of the generalized Witt superalgebra
+\cite[p.~1]{LiuSuZhang2005}. They introduce an ideal $N$ of $H_0$ and show that
+the derivations of $H_0$ are controlled by those of $N$
+\cite[Theorem~2.4, p.~6]{LiuSuZhang2005}. A set of generators of $N$ makes that
+reduction effective \cite[Theorem~2.7, p.~7]{LiuSuZhang2005}. Three series of
+exceptional derivations remain after the reduction
+\cite[p.~2]{LiuSuZhang2005}.
+
+The contrast with Theorem~\ref{thm:lie:jacobson-humphreys} could not be
+sharper.
+In characteristic zero a simple finite-dimensional Lie algebra
+has $\operatorname{Der} L=\operatorname{ad} L$; in characteristic $p>0$
+simple Lie algebras exhibit $\operatorname{Der} L$ strictly larger than
+$\operatorname{ad} L$ in ways tied to the root data.
+Section~\ref{sec:lie-algebras:vector-fields} lifts the same
+characteristic-zero-versus-outer tension to infinite-dimensional Lie
+algebras of vector fields.

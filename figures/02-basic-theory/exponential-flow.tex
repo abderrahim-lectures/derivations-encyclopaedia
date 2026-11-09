@@ -1,0 +1,10 @@
+% D = x d/dy - y d/dx: vector field (-y, x); exp(tD) is rotation by t.
+\begin{tikzpicture}[scale=1.1,font=\small]
+  \draw[-{Stealth}] (-2.3,0) -- (2.4,0) node[right] {$x$};
+  \draw[-{Stealth}] (0,-2.3) -- (0,2.4) node[above] {$y$};
+  \foreach \x in {-2,-1.5,...,2} \foreach \y in {-2,-1.5,...,2} {
+    \pgfmathsetmacro{\u}{-\y}\pgfmathsetmacro{\v}{\x}
+    \pgfmathsetmacro{\n}{max(sqrt(\u*\u+\v*\v),0.001)}
+    \draw[hbblue!55,-{Stealth[length=1.3mm]}] (\x,\y) -- ++({0.26*\u/\n},{0.26*\v/\n});}
+  \foreach \r in {0.75,1.5,2.1} \draw[hbgold!80!black,thick] (0,0) circle (\r);
+\end{tikzpicture}

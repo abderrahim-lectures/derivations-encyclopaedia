@@ -1,0 +1,286 @@
+\chapter{Question tables}\label{app:questions}
+% STATUS: written 2026-11-06 (every row names a problem stated with its located
+% citation in the section that asks its question; no new claim is made here. The
+% question families are the eight fixed in
+% Section~\ref{sec:basic-theory:question-families}.)
+%
+% For each question family and class of algebra, whether the answer is known,
+% false with a counterexample, or open, with the source.
+
+Section~\ref{sec:basic-theory:question-families} fixed eight questions that the
+book asks of every class of algebra.
+The chapters answer them one class at a time.
+This appendix collects the answers in one place, family by family.
+An answer is one of three: known, with the theorem that settles it; false, with
+a counterexample; or open, with the source that states it as a question.
+Each open row cites the problem number, and the problem is stated in full in
+the section that asks its question.
+
+% Freudenburg 2017 (pp. 81, 107--112, 281--293), Bavula 2017 (pp. 1--2),
+% Belov-Kanel--Kontsevich 2007 (pp. 1--2), Hadwin--Li 2004 (pp. 703--713),
+% Bresar--Villena 2002 (pp. 710--720), Martindale 1964 (pp. 183--187),
+% Ayupov--Yusupov 2020 (pp. 1--8). Excerpts in
+% ledger/projects/derivations-encyclopaedia/excerpts/.
+This chapter collects the questions that no chapter of the book could answer.
+Section~\ref{sec:basic-theory:question-families} fixed eight questions for the
+book to ask of every class of algebra. % claim-ok: our own description of the structure of the book
+It asked for one of three answers: known, false with a counterexample, or open.
+The open answers are collected here, so that a reader can see the frontier of
+the subject in one place.
+
+\hbfigure{22-open-problems/question-families}{The question families that organise the open problems.}{fig:open:families}
+
+Most of these problems have a named author, and the chapters met them one
+at a time.
+The Zariski--Lipman conjecture carries the names of Zariski and of Lipman, and
+Lipman proved that a free module of derivations forces the local ring to be
+normal \cite[p.~270]{BiswasGurjarKolte2014}.
+The Jacobian conjecture stands behind the theory of locally nilpotent
+derivations, and it can be stated in the language of derivations
+\cite[p.~81]{Freudenburg2017}.
+The conjecture of Dixmier has been open since 1968 for every dimension
+\cite[pp.~1--2]{Bavula2017}.
+Larson asks which algebras have a reflexive space of derivations
+\cite[p.~703]{HadwinLi2004}.
+\v{S}emrl introduced 2-local derivations in 1997 and asked when such a map is a
+derivation \cite[p.~1]{AyupovYusupov2020}.
+Singer and Wermer proved their radical theorem in 1955 and at the same time
+stated the conjecture that continuity is not needed
+\cite[p.~710]{BresarVillena2002}.
+Martindale studied the Lie derivations of a primitive ring in 1964 and said that
+his result falls far short of the conjecture of Herstein
+\cite[p.~183]{Martindale1964}.
+
+Each of those answers holds for the moment the source states it.
+A problem can move from open to known over decades.
+
+\begin{example}[{\cite[p.~710]{BresarVillena2002}}]\label{ex:appendix:three-answers}
+Singer and Wermer proved in 1955 that a continuous derivation on a commutative
+Banach algebra takes its values in the radical.
+At the same time they stated the conjecture that the continuity hypothesis is
+superfluous.
+Johnson proved that conjecture for semisimple algebras in 1969.
+Thomas settled it for every commutative Banach algebra more than thirty years
+later \cite[p.~710]{BresarVillena2002}.
+The noncommutative form of the same question is still open, and
+Problem~\ref{prob:open:sw} states it.
+\end{example}
+
+Each open problem is stated in the chapter that asks it, with the page where
+the literature makes it. % claim-ok: a statement about how the book is arranged
+This appendix gathers them instead of restating them: every row names the
+problem and the chapter that carries the discussion.
+A problem that a chapter settles for one class of algebras is recorded in
+Section~\ref{sec:basic-theory:open-problems-by-class} under that class.
+The list is a snapshot of the book as it now stands.
+
+The problems the chapters state, in the order that
+Section~\ref{sec:basic-theory:question-families} fixed: the
+Zariski--Lipman problem, the Jacobian and Dixmier problems, and the questions of
+polynomial rings about finite generation; then the question of Larson on reflexivity,
+the 2-local problem, the noncommutative Singer--Wermer conjecture, the Lie
+problem of Herstein, and the four problems the chapters of the book raise.
+Section~\ref{sec:basic-theory:open-problems-by-class} sorts the same list by
+where the algebra lives: polynomial algebras, finite-dimensional algebras,
+$C^{*}$-algebras, Lie algebras, prime rings and triangular algebras.
+For each class it records which problem is settled there and which is not.
+
+\section{Family 1: which kind implies which}
+
+The book records the implications between kinds of derivation-like map.
+Table~\ref{tab:q:implications} gives the ones the chapters settle.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Answers for the family ``which kind of derivation implies which''.}
+  \label{tab:q:implications}
+  \begin{tabular}{p{0.30\textwidth}p{0.26\textwidth}p{0.30\textwidth}}
+    \toprule
+    Class of algebra & Answer & Source \\
+    \midrule
+    Triangular algebra & $f$-derivations are not all determined; the
+      question of which $f$ admit only inner ones is open &
+      Problem~\ref{prob:open:fderiv} \\
+    Prime ring, characteristic not $2$ & symmetric bi-derivations: the
+      expected description fails without a further hypothesis & open,
+      Problem~\ref{prob:open:vukman} \\
+    Semiprime ring & additive maps with $[f(x),x]_n=0$: the commuting
+      case is settled, the general one is not & open,
+      Problem~\ref{prob:open:commuting} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Family 2: when two definitions are equivalent}
+
+Section~\ref{sec:basic-theory:family-tree} named the kinds that carry more than
+one definition in the literature.
+Where the definitions agree, a chapter says so and cites both sources; where
+they do not, the row below records it.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Answers for the family ``when are two definitions equivalent''.}
+  \label{tab:q:definitions}
+  \begin{tabular}{p{0.30\textwidth}p{0.26\textwidth}p{0.30\textwidth}}
+    \toprule
+    Class of algebra & Answer & Source \\
+    \midrule
+    Rings with an $f$ & three notions carry the name $f$-derivation; the
+      one used here is fixed by a defining identity & the census of
+      Section~\ref{sec:basic-theory:family-tree} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Family 3: is every derivation inner}
+
+This is the question of $H^1$, and the book answers it class by class.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Answers for the family ``is every derivation inner''.}
+  \label{tab:q:inner}
+  \begin{tabular}{p{0.30\textwidth}p{0.26\textwidth}p{0.30\textwidth}}
+    \toprule
+    Class of algebra & Answer & Source \\
+    \midrule
+    Central simple algebra & known: every derivation into a bimodule is
+      inner & Theorem~\ref{thm:basic:csa-inner} \\
+    Simple ring & Lie derivations: whether each is a derivation plus a map
+      into the centre is open & Problem~\ref{prob:open:herstein} \\
+    Local ring, characteristic $0$ & known for a free module of derivations;
+      the general case is the Zariski--Lipman conjecture & open,
+      Problem~\ref{prob:open:zl} \\
+    Projective surface & the logarithmic case is open &
+      Problem~\ref{prob:open:zl-projective} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Family 4: is every derivation continuous}
+
+Continuity is the question of this family, and it is settled for some classes
+and open for others.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Answers for the family ``is every derivation continuous''.}
+  \label{tab:q:continuity}
+  \begin{tabular}{p{0.30\textwidth}p{0.26\textwidth}p{0.30\textwidth}}
+    \toprule
+    Class of algebra & Answer & Source \\
+    \midrule
+    Banach algebra & whether a derivation with no continuity assumed leaves
+      every primitive ideal invariant is open & Problem~\ref{prob:open:sw} \\
+    Algebra of bounded operators & whether $\operatorname{der}(A)$ is
+      reflexive is open for general $A$ & Problem~\ref{prob:open:larson} \\
+    Lie algebra, characteristic $0$ & whether every 2-local derivation is a
+      derivation is open in infinite dimension &
+      Problem~\ref{prob:open:twolocal} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Family 5: does the algebra have to be commutative}
+
+the theorem of Posner and the functional identities answer this for prime rings.
+The noncommutative cases that remain open are collected here.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Answers for the family ``does the algebra have to be
+  commutative''.}
+  \label{tab:q:commutative}
+  \begin{tabular}{p{0.30\textwidth}p{0.26\textwidth}p{0.30\textwidth}}
+    \toprule
+    Class of algebra & Answer & Source \\
+    \midrule
+    Prime ring & known: a nonzero derivation $d$ with $ad(a)-d(a)a$ central
+      for every $a$ forces the ring to be commutative &
+      Theorem~\ref{thm:prime:posner-two} \\
+    $C^{*}$-algebra & Jordan derivations into a bimodule: the general case is
+      open & Problem~\ref{prob:open:jordan-cstar} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Family 6: can all derivations be described}
+
+A class whose derivations can be listed has a structure theorem.
+The classes where the list is still unknown carry the open rows.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Answers for the family ``can all derivations of the class be
+  described''.}
+  \label{tab:q:describe}
+  \begin{tabular}{p{0.30\textwidth}p{0.26\textwidth}p{0.30\textwidth}}
+    \toprule
+    Class of algebra & Answer & Source \\
+    \midrule
+    Polynomial ring & locally nilpotent derivations: the homogeneous case
+      with $D^2x_i=0$ is open beyond the known dimensions &
+      Problem~\ref{prob:open:hdp} \\
+    Weyl algebra & whether every endomorphism is an automorphism, the
+      Dixmier conjecture, is open since 1968 &
+      Problem~\ref{prob:open:dixmier} \\
+    Polynomial map, characteristic $0$ & the Jacobian conjecture is open &
+      Problem~\ref{prob:open:jc} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Family 7: does a derivation extend or lift}
+
+Section~\ref{sec:basic-theory:extension} fixed this question.
+The rows below record where the extension question is still open.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Answers for the family ``does a derivation extend or lift to a
+  larger algebra''.}
+  \label{tab:q:extension}
+  \begin{tabular}{p{0.30\textwidth}p{0.26\textwidth}p{0.30\textwidth}}
+    \toprule
+    Class of algebra & Answer & Source \\
+    \midrule
+    Unipotent group acting on affine space & whether the action can be
+      triangularized, the question of Bass, is open &
+      Problem~\ref{prob:open:bass} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Family 8: where does an expected implication fail}
+
+A counterexample answers this family.
+The counterexamples the book records are in the chapters named below, and the
+one open case is listed last.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Answers for the family ``where does an expected implication
+  fail''.}
+  \label{tab:q:counterexamples}
+  \begin{tabular}{p{0.30\textwidth}p{0.26\textwidth}p{0.30\textwidth}}
+    \toprule
+    Class of algebra & Answer & Source \\
+    \midrule
+    Prime ring, prime characteristic & false: the Zariski--Lipman
+      statement fails & Chapter~\ref{ch:commutative} \\
+    Simple Lie algebra, characteristic $0$ & false: outer derivations exist
+      where the characteristic-zero answer predicts none &
+      Chapter~\ref{ch:lie-algebras} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Reading the tables}
+
+Every row above names a chapter or a problem number, and each of those carries
+the located citation in its own place.
+No row is a summary of a summary: a reader who wants the statement turns to the
+chapter or the problem and finds it there, with its page.
+The tables are an index to those statements, and they are refreshed with each
+edition as the chapters change.

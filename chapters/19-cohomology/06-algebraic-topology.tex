@@ -1,0 +1,63 @@
+\section{Algebraic topology: Hochschild and cyclic homology}\label{sec:cohomology:algebraic-topology}
+
+The derivations of an algebra are one-cycles of a chain complex, the
+Hochschild complex of this chapter. The complex is itself a
+topological object: Hochschild homology is built from a simplicial object
+\cite[\S9.6]{Weibel1994},
+and the extra structure of its cyclic permutation defines a second homology,
+the cyclic homology of Connes. Weibel recalls the computation for a smooth
+commutative algebra, where the answer is algebraic geometry.
+
+The starting point is the shuffle product on the chains \cite[\S9.4.1]{Weibel1994}. For a commutative
+$k$-algebra $R$, the Hochschild chain complex $C(R\otimes R^{\otimes\ast})$
+is a graded-commutative differential graded $k$-algebra, and the Hochschild
+homology $H_*(R,R)$ is a graded-commutative $k$-algebra
+\cite[Proposition~9.4.2, p.~321]{Weibel1994}. Since $H_1(R,R)$ is isomorphic
+to the module $\Omega_{R/k}$ of K\"ahler differentials, the universal
+property of the exterior algebra extends the isomorphism to a graded
+$R$-algebra map $\psi\colon\Omega^*_{R/k}\to H_*(R,R)$
+\cite[Corollary~9.4.4, p.~322]{Weibel1994}. For a smooth algebra the map is
+an isomorphism, which is Theorem~\ref{thm:cohomology:hkr} above.
+
+The theorem is the Hochschild--Kostant--Rosenberg theorem \cite[9.4.7]{Weibel1994}. Hochschild
+homology in low degrees already has the geometric answer: for
+$R=k[x_1,\ldots,x_n]$ one computes $H_p(R,R)\cong
+\Lambda^p\Omega_{R/k}$ for every $p$
+\cite[Exercise~9.1.3, p.~304]{Weibel1994}.
+
+The cyclic refinement adds one operator \cite[\S9.8]{Weibel1994}. Weibel recalls the definition of
+Kassel.
+
+\begin{definition}[{\cite[Definition~9.8.1, p.~344]{Weibel1994}}]\label{def:cohomology:mixed-complex}
+A \emph{mixed complex} $(M,b,B)$ in an abelian category
+$\mathcal{A}$ is a graded object $(M_m\colon m\geq0)$ endowed with two
+families of morphisms $b\colon M_m\to M_{m-1}$ and $B\colon M_m\to M_{m+1}$
+such that $b^2=B^2=bB+Bb=0$. Thus a mixed complex is both a chain and a
+cochain complex.
+\end{definition}
+
+A cyclic object $A$, in particular the simplicial object
+$A_n=R\otimes R^{\otimes n}$ of a $k$-algebra $R$, gives rise to a mixed
+complex $(A,b,B)$ \cite[\S9.8, p.~345]{Weibel1994}. Here $b$ is the
+Hochschild differential and $B$ is Connes' operator. The \emph{cyclic
+homology} $HC_*(A)$ is the homology of the total complex of the bicomplex
+built from the pair, the double complex of Tsygan
+\cite[Definition~9.6.7, p.~334]{Weibel1994}. When $R$ is commutative and
+$\mathbb{Q}\subset R$, the projection $\varepsilon(r_0\otimes\cdots\otimes
+r_n)=r_0\,dr_1\wedge\cdots\wedge dr_n/n!$ is a morphism of mixed complexes
+from $R^{\otimes\ast+1}$ to the de Rham complex $(\Omega^*_{R/k},0,d)$
+\cite[9.8.12, p.~351]{Weibel1994}, and one has the following theorem.
+
+\begin{theorem}[{\cite[Theorem~9.8.13, p.~351]{Weibel1994}}]\label{thm:cohomology:cyclic-smooth-deRham}
+If $R$ is a smooth commutative algebra, essentially of finite type over a
+field $k$ of characteristic $0$, then $\varepsilon$ induces natural
+isomorphisms on Hochschild homology $HH_*$, cyclic homology $HC_*$ and
+periodic cyclic homology $HP_*$.
+\end{theorem}
+
+The target of the comparison is de Rham cohomology, the homology of the
+complex $(\Omega^*_{R/k},0,d)$ \cite[9.8.9, p.~350]{Weibel1994}. In
+characteristic zero, Lemma~9.6.10 of the same chapter computes cyclic
+homology as the homology of the quotient of the Hochschild complex by the
+cyclic action \cite[Lemma~9.6.10, p.~335]{Weibel1994}. The cyclic
+refinement is the topological reading of the same rule. % claim-ok: narration of the chapter plan, no mathematical content

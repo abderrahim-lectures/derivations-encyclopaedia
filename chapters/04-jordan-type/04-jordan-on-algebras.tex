@@ -1,0 +1,114 @@
+% STATUS: written 2026-10-21, recalled results as is (one environment each, source kind and whole statement)
+% STATUS: extended 2026-11-06 (Ghosh and Prakash 2018 and Vladeva 2018 read in full from the library PDFs)
+% Sources read in full: Cheng and Jing 2007 (arXiv, pp. 1--5), Bresar 2005 (pp. 411--425, Sections 4 and 5); Ghosh and Prakash 2018 (pp. 1--5, 8); Vladeva 2018 (pp. 1--5).
+\section{Jordan derivations of specific algebras}\label{sec:jordan-type:jordan-on-algebras}
+
+Section~\ref{sec:jordan-type:semiprime} gave conditions on a ring that force a Jordan derivation to be
+a derivation. Cheng and Jing study triangular algebras \cite[p.~1]{ChengJing2007}. Brešar surveys a construction of
+Benkovič for upper triangular matrices \cite[\S4.1, p.~418]{Bresar2005}. He also treats $C^{*}$-algebras
+\cite[Section~5, p.~421]{Bresar2005}.
+
+Let $A$ and $B$ be algebras over a commutative ring $R$ \cite[p.~2]{ChengJing2007}. Let $M$ be an
+$(A,B)$-bimodule that is faithful as a left $A$-module and as a right $B$-module
+\cite[p.~2]{ChengJing2007}. These data give the triangular algebra $T=\mathrm{Tri}(A,M,B)$, whose elements are the
+matrices $\begin{pmatrix}a&m\\0&b\end{pmatrix}$ \cite[p.~2]{ChengJing2007}.
+Zhang and Yu showed that every Jordan derivation of a triangular algebra is a derivation
+\cite[p.~1]{ChengJing2007}. Cheng and Jing state it as follows \cite[p.~1]{ChengJing2007}.
+
+\begin{theorem}[{\cite[Theorem~1.1, p.~1]{ChengJing2007}}]\label{thm:jordan:zhang-yu}
+Let $A,B$ be unital algebras over a $2$-torsion free commutative ring $R$, and $M$ be a unital
+$(A,B)$-bimodule that is faithful as a left $A$-module and also as a right $B$-module. Then every
+Jordan derivation from the triangular algebra $\mathrm{Tri}(A,M,B)$ into itself is a derivation.
+\end{theorem}
+
+The proof of Zhang and Yu needs both algebras to have a unit \cite[p.~1]{ChengJing2007}.
+Cheng and Jing do not require a unit in either algebra \cite[p.~1]{ChengJing2007}. They assume the following property of $A$ and $B$
+\cite[Section~2, p.~2]{ChengJing2007}: (P) if $a\in A$ (respectively $B$) and $xay+yax=0$ for all
+$x,y\in A$ (respectively $B$), then $a=0$.
+
+\begin{theorem}[{\cite[Theorem~2.10, p.~5]{ChengJing2007}}]\label{thm:jordan:cheng-jing}
+Let $A$ and $B$ be two algebras over a $2$-torsion free commutative ring $R$ with the property:
+(P) Suppose that $a\in A$ (respectively $B$). If $xay+yax=0$ holds for all $x,y\in A$ (respectively $B$),
+then $a=0$. Let $M$ be a faithful $(A,B)$-bimodule and $T$ be the triangular algebra
+$\mathrm{Tri}(A,M,B)$. Then every Jordan derivation $\delta$ on $T$ into itself is a derivation.
+\end{theorem}
+
+Cheng and Jing note that Theorem~\ref{thm:jordan:zhang-yu} is the special case where both
+algebras are unital \cite[Remark~2.11, p.~5]{ChengJing2007}. Their proof is a sequence of lemmas.
+The first shows that $\delta$ is a derivation on each of the three parts $T_{11}$, $T_{12}$ and $T_{22}$
+of $T$ \cite[pp.~4--5]{ChengJing2007}.
+
+Now let $F$ be a field with
+$\operatorname{char}(F)\neq2$, and let $T_n(F)$ be the algebra of upper triangular $n\times n$
+matrices over $F$ \cite[Section~4, p.~418]{Bresar2005}. Brešar describes a construction of
+Benkovič \cite[\S4.1, p.~418]{Bresar2005}. It produces maps $d$ with $d(xy)=d(y)x+yd(x)$ for all $x,y$, which are called
+antiderivations \cite[\S4.1, p.~418]{Bresar2005}. The construction gives a proper Jordan derivation
+on $T_n(F)$ into a bimodule \cite[\S4.1, p.~418]{Bresar2005}.
+
+\begin{example}[{\cite[Example~4.1, p.~418]{Bresar2005}}]\label{ex:jordan:benkovic-tn}
+Let $A=T_n(F)$, $n\geqslant2$. Then there exists an $A$-bimodule $M$ and a proper Jordan derivation
+(in fact, an antiderivation) $d\colon A\to M$ such that $d(ue)\neq d(u)e+ud(e)$ for some
+$u\in A^{(1)}$ and some idempotent $e\in A$.
+\end{example}
+
+Brešar adds that the main result of Benkovič says that every Jordan derivation from $T_n(F)$ into a
+$T_n(F)$-bimodule is the sum of a derivation and an antiderivation \cite[p.~419]{Bresar2005}. So
+Jordan derivations of $T_n(F)$ act as derivations on a large part of the algebra
+\cite[p.~419]{Bresar2005}.
+
+For operator algebras, Brešar poses a question: is every Jordan derivation from a
+$C^{*}$-algebra $A$ into a Banach $A$-bimodule a derivation \cite[Section~5, p.~421]{Bresar2005}?
+He calls it an intriguing open question \cite[Section~5, p.~421]{Bresar2005}. Johnson proved that a
+continuous Jordan derivation from a $C^{*}$-algebra into a Banach bimodule is a derivation
+\cite[p.~421]{Bresar2005}. For additive maps Brešar gives a definitive answer on the algebras he
+calls $\mathrm{CM}$-algebras \cite[p.~421]{Bresar2005}.
+
+\begin{theorem}[{\cite[Theorem~5.1, p.~422]{Bresar2005}}]\label{thm:jordan:bresar-cm}
+Let $A$ be a unital $\mathrm{CM}$-algebra. Then there exists a proper additive Jordan derivation
+from $A$ into some unital $A$-bimodule if and only if $A$ contains an ideal of codimension $1$.
+\end{theorem}
+
+Brešar derives the theorem of Johnson from Theorem~\ref{thm:jordan:bresar-cm}
+\cite[p.~422]{Bresar2005}. He also notes that the result of Johnson does not extend from
+$\mathrm{CM}$-algebras to semisimple Banach algebras, because a primitive Banach algebra can have
+$T_2(\mathbb{C})$ as a quotient \cite[p.~422]{Bresar2005}.
+
+The $C^{*}$-algebra question of this section is open, and this section states
+it as a problem. % claim-ok: own signpost introducing the moved problem, which carries its own citation
+
+\begin{problem}[{\cite[Section~5, p.~421]{Bresar2005}}]\label{prob:open:jordan-cstar}
+Let $A$ be a $C^{*}$-algebra and let $M$ be a Banach $A$-bimodule.
+Is every Jordan derivation from $A$ into $M$ a derivation?
+\end{problem}
+
+Bre\v{s}ar calls this an intriguing open question
+\cite[Section~5, p.~421]{Bresar2005}. Johnson had proved it for continuous
+Jordan derivations, and Bre\v{s}ar answers it for the algebras he calls
+$\mathrm{CM}$-algebras \cite[p.~421]{Bresar2005}. The statement of
+Theorem~\ref{thm:jordan:bresar-cm} is the answer on that class.
+Over a commutative ring with unity the torsion hypothesis can be dropped
+\cite[Theorem~2.1, p.~3]{GhoshPrakash2018}. Ghosh and Prakash prove that every
+Jordan derivation of the upper triangular matrix algebra $T_n(C)$ into itself is
+a derivation, with no condition on the ring
+\cite[Theorem~2.1, p.~3]{GhoshPrakash2018}. Their proof computes the image
+of each matrix unit and compares coefficients
+\cite[pp.~3--4]{GhoshPrakash2018}. The same method shows that every derivation of
+$T_n(C)$ is inner \cite[Theorem~2.2, p.~5]{GhoshPrakash2018}. For the 2-element
+field the result covers a ring that is not 2-torsion free
+\cite[Corollary~2.1, p.~4]{GhoshPrakash2018}. The full matrix algebra behaves in
+the same way \cite[Theorem~3.1, p.~5]{GhoshPrakash2018}. Every Jordan derivation
+of $M_n(C)$ into itself is a derivation, and every derivation of $M_n(C)$ is
+inner \cite[Theorem~3.2, p.~8]{GhoshPrakash2018}.
+
+The passage from rings to semirings keeps the triangular shape, and it weakens
+the conclusion. % claim-ok: transition to the semiring case, the plan of the book
+Every derivation of the upper triangular matrix semiring
+keeps all entries of a matrix except those of one principal dense submatrix,
+and it sets those entries to zero
+\cite[Theorem~1, p.~5]{Vladeva2018Semirings}. Vladeva works over an additively
+idempotent semiring, where the sum of two equal terms adds nothing
+\cite[Proposition~1, p.~3]{Vladeva2018Semirings}. In that setting the Jordan
+product of a matrix with a partial identity matrix equals the ordinary product,
+so the map $A\mapsto A\circ D_k$ is a derivation
+\cite[Proposition~1, p.~3]{Vladeva2018Semirings}. The paper counts the
+derivations that arise this way \cite[Theorem~1, p.~5]{Vladeva2018Semirings}.

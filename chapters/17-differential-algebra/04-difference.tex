@@ -1,0 +1,158 @@
+% STATUS: written 2026-11-05
+% Sources read in full: Mikhalev-Pankrat'ev 1989 (J. Soviet Math. 45,
+% 912--955, p. 912); Hardouin-Singer 2008 (arxiv version, Definitions
+% 2.1, 2.5, Theorem 2.6); Pillay-Ziegler 2003 (Selecta Math. 9,
+% 579--599, p. 579).
+\section{Difference and differential--difference algebra}\label{sec:differential-algebra:difference}
+
+So far this chapter has used one operator, the
+derivation~\cite[p.~912]{MikhalevPankratev1989}. A small change replaces the
+whole theory: use an automorphism $\sigma$ of the ring in place of the
+derivation~\cite[p.~912]{MikhalevPankratev1989}. Ritt named the resulting
+theory \emph{difference algebra}. The monograph of Cohn is its standard
+reference~\cite[p.~912]{MikhalevPankratev1989}. Pillay and Ziegler describe
+the change in geometric language, following
+Section~\ref{sec:differential-algebra:model-theory}. Difference algebraic
+geometry is the analogue of differential algebraic geometry ``when the
+derivation is replaced by an
+automorphism''~\cite[p.~579]{PillayZiegler2003}.
+
+The two theories run in parallel~\cite[p.~912]{MikhalevPankratev1989}. Each
+main result of differential algebra has a difference analogue, which appears a
+little later~\cite[p.~912]{MikhalevPankratev1989}. The table gives the
+dictionary of the two sides, as Mikhalev and Pankrat'ev set it
+out~\cite[p.~912]{MikhalevPankratev1989}.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{ll}
+\textbf{differential side} & \textbf{difference side} \\[2pt]
+derivation $\partial$ & automorphism $\sigma$. \\
+differential field & difference field. \\
+differential ideal & difference ideal. \\
+Ritt--Raudenbush basis & difference basis theorem. \\
+Picard--Vessiot extension & Hardouin--Singer ring. \\
+integration in finite terms & summation in finite terms.
+\end{tabular}
+\end{center}
+
+Mikhalev and Pankrat'ev warn that the dictionary is not a
+translation~\cite[p.~912]{MikhalevPankratev1989}. Their words are that ``all
+these results in difference algebra are essentially different from the
+corresponding results in differential
+algebra''~\cite[p.~912]{MikhalevPankratev1989}. A $\sigma$-ideal need not be
+radical when its differential analogue is, and $\sigma^{-1}$ plays a role the
+derivation has no analogue of~\cite[p.~912]{MikhalevPankratev1989}. This
+section reports the definitions and the Galois theorem on the difference side,
+as Hardouin and Singer state them~\cite[pp.~5--6]{HardouinSinger2008}.
+
+The clearest formulation uses both operators and lets them
+commute~\cite[Definition~2.1, p.~5]{HardouinSinger2008}.
+
+\begin{definition}[{\cite[Definition~2.1, p.~5]{HardouinSinger2008}}]\label{def:diffalg:sigma-delta-ring}
+A \emph{$\sigma\partial$-ring} is a commutative ring $R$ with unit
+together with an automorphism $\sigma$ and a derivation $\partial$
+satisfying $\sigma(\partial(r)) = \partial(\sigma(r))$ for all
+$r \in R$. A \emph{$\sigma\partial$-field} is a $\sigma\partial$-ring
+which is a field.
+\end{definition}
+
+The three basic examples already appear in the source
+\cite[Example~2.2, p.~5]{HardouinSinger2008}.
+
+\begin{example}[{\cite[Example~2.2, p.~5]{HardouinSinger2008}}]\label{ex:diffalg:sigma-delta-examples}
+The following are $\sigma\partial$-fields.
+\begin{enumerate}
+\item $\mathbb{C}(x)$ with $\sigma(x) = x+1$ and $\partial = d/dx$;
+\item $\mathbb{C}(x)$ with $\sigma(x) = qx$ ($q\in\mathbb{C}\setminus\{0\}$)
+  and $\partial = x\,d/dx$;
+\item $\mathbb{C}(x,t)$ with $\sigma(x) = x+1$, $\sigma(t)=t$ and
+  $\partial = \partial/\partial t$.
+\end{enumerate}
+\end{example}
+
+The equation of interest is the difference equation $\sigma(Y) = AY$, taken
+over a $\sigma\partial$-field $k$ with $A$ an invertible matrix over
+$k$~\cite[pp.~5--6]{HardouinSinger2008}. To it one attaches a
+$\sigma\partial$-\emph{Picard--Vessiot ring}. This is a ring containing $k$
+with no proper $\sigma\partial$-ideal~\cite[Definition~2.3, p.~5]{HardouinSinger2008}.
+The ring holds a fundamental solution
+matrix~\cite[Definition~2.3, p.~5]{HardouinSinger2008}. It is generated over
+$k$, as a
+$\partial$-ring, by the entries of that matrix and by the inverse of its
+determinant~\cite[Definition~2.3, p.~5]{HardouinSinger2008}. The
+$\sigma\partial$-Galois group is the group of its
+automorphisms~\cite[Definition~2.5, p.~6]{HardouinSinger2008}.
+
+\begin{definition}[{\cite[Definition~2.5, p.~6]{HardouinSinger2008}}]\label{def:diffalg:sigma-delta-galois-group}
+The \emph{$\sigma\partial$-Galois group} $\mathrm{Aut}_{\sigma\partial}(R/k)$
+of a $\sigma\partial$-Picard--Vessiot ring $R$ over a
+$\sigma\partial$-field $k$ is the group of all
+$\sigma\partial$-$k$-automorphisms of $R$.
+\end{definition}
+
+When $\partial$ vanishes identically, this is the Galois group of the
+difference equation alone, which is a linear algebraic
+group~\cite[pp.~5--6]{HardouinSinger2008}. When $\partial$ is present, the
+group carries an additional structure and lives among the linear differential
+algebraic groups~\cite[Theorem~2.6, p.~6]{HardouinSinger2008}. That is the
+content of the main theorem of Hardouin and
+Singer~\cite[Theorem~2.6, p.~6]{HardouinSinger2008}.
+
+\begin{theorem}[{\cite[Theorem~2.6, p.~6]{HardouinSinger2008}}]\label{thm:diffalg:sigma-delta-group}
+Let $k$ be a $\sigma\partial$-field whose fixed field $k^\sigma$ is a
+differentially closed field, and let $R = k\{Z, \det Z^{-1}\}_\partial$,
+$\sigma(Z) = AZ$, be a $\sigma\partial$-Picard--Vessiot extension of $k$.
+\begin{enumerate}
+\item The Galois group $\mathrm{Aut}_{\sigma\partial}(R/k)$ identifies
+  with the set of $k^\sigma$-points of a linear
+  $\partial$-differential algebraic group $G$ defined over $k^\sigma$.
+\item The ring $R$ is reduced and is the coordinate ring of a $G$-torsor
+  $V$ defined over $k$; the action of $G$ on $V$ induces the action of
+  $\mathrm{Aut}_{\sigma\partial}(R/k)$ on $R$.
+\end{enumerate}
+\end{theorem}
+
+So $\sigma$ and $\partial$ together give back exactly the two theories that
+they extend~\cite[pp.~5--6]{HardouinSinger2008}. Take $\sigma$ trivial, and
+Theorem~\ref{thm:diffalg:sigma-delta-group} reduces to the Picard--Vessiot
+Theorem~\ref{thm:diffalg:pv-fundamental}. Take $\partial$ trivial, and it
+returns the algebraic-group Galois theory of a pure difference
+equation~\cite[pp.~5--6]{HardouinSinger2008}.
+
+The pure difference side has a recent theorem of its own
+\cite[Theorem~1.2, p.~2]{WibmerBachmayr2025}. Wibmer and Bachmayr ask when
+every torsor for a linear difference algebraic group is trivial after a finite
+extension of the difference field~\cite[Theorem~1.2, p.~2]{WibmerBachmayr2025}.
+They answer with three equivalent conditions, and the third names the
+obstruction~\cite[Theorem~1.2, p.~2]{WibmerBachmayr2025}.
+
+\begin{theorem}[{\cite[Theorem~1.2, p.~2]{WibmerBachmayr2025}}]\label{thm:diffalg:trivializing-torsors}
+For an ordinary difference field $k$ of characteristic zero the following
+statements are equivalent.
+\begin{enumerate}
+\item For every linear difference algebraic group $G$ over $k$ and every
+$G$-torsor $X$, there is an integer $n \ge 1$ with $X(k^{[n]}) \neq \emptyset$.
+\item The direct limit of the first difference cohomology sets
+$H^1_{\sigma^n}(k, G_n)$ vanishes for every linear difference algebraic group
+$G$ over $k$.
+\item The field $k$ is algebraically closed, and the matrix equation
+$\sigma(Y) = AY$ and the one-relator equation
+$y^{\alpha_0}\sigma(y)^{\alpha_1}\cdots\sigma^m(y)^{\alpha_m} = a$ are each
+solvable in some $k^{[n]}$.
+\end{enumerate}
+\end{theorem}
+
+Wibmer and Bachmayr note what the theorem does not
+assume~\cite[p.~3]{WibmerBachmayr2025}. No condition is placed on the constants
+$k^\sigma$ of $k$~\cite[p.~3]{WibmerBachmayr2025}. The one-relator subgroups
+of the multiplicative group are, in their words, the only obstruction to the
+immediate difference analogue of the differential
+statement~\cite[p.~3]{WibmerBachmayr2025}.
+
+This is how the chapter ends: differential, model-theoretic, and difference
+algebra are three expressions of one algebraic method, applied to three kinds
+of operator~\cite[p.~912]{MikhalevPankratev1989}. The difference side also
+carries its own recent results, of which
+Theorem~\ref{thm:diffalg:trivializing-torsors} is one.

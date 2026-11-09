@@ -1,0 +1,148 @@
+% STATUS: written 2026-11-05 (Cheung 2001 pp. 117--127 read in full; Cheung 2003
+% pp. 299--310 read in full, Section 4.3 on pp. 308--309 in particular;
+% Christensen 1977 pp. 155--161 read in full; Forrest--Marcoux 1996 pp. 441--462
+% read at the introduction, Proposition 2.1, Proposition 2.2 and Theorem 2.8.)
+% STATUS: extended 2026-11-06 (Zhang and Wei 2017 read in full)
+% Sources: Zhang and Wei 2017 (pp. 1--3, 6).
+\section{Nest and reflexive algebras, the algebraic side}\label{sec:matrix-triangular:nest-algebraic}
+
+Section~\ref{sec:matrix-triangular:generalized-matrix} kept two diagonal algebras
+and put a bimodule in each off-diagonal block
+\cite[p.~2720]{DuWang2012}. A nest algebra has exactly that shape, with one
+diagonal algebra at the top and one at the bottom, so the theorems of the chapter
+apply to it \cite[Proposition~19, p.~308]{Cheung2003}.
+
+A nest $\mathcal{N}$ is a totally ordered set of closed subspaces of a Hilbert
+space $H$ \cite[p.~308]{Cheung2003}. It contains $\{0\}$ and $H$, and it is
+closed under intersections and closed linear spans \cite[p.~308]{Cheung2003}.
+The nest algebra of $\mathcal{N}$ consists of the bounded operators $T$ with
+$TN\subseteq N$ for every $N\in\mathcal{N}$ \cite[p.~308]{Cheung2003}. A nest
+algebra is a reflexive algebra with a commutative subspace lattice
+\cite[p.~156]{Christensen1977}. For an orthonormal basis the nest of finite
+initial spans gives the operators whose matrix is upper triangular
+\cite[p.~308]{Cheung2003}.
+
+\begin{proposition}[{\cite[Proposition~19, p.~308]{Cheung2003}}]\label{prop:nest:triangular}
+Let $N\in\mathcal{N}\setminus\{0,H\}$ and let $E$ be the projection of $H$
+onto $N$. Then $E\mathcal{N}E$ and $(1-E)\mathcal{N}(1-E)$ are nests,
+$\mathcal{T}(E\mathcal{N}E)=E\mathcal{T}(\mathcal{N})E$ and
+$\mathcal{T}((1-E)\mathcal{N}(1-E))=(1-E)\mathcal{T}(\mathcal{N})(1-E)$.
+Furthermore
+\[
+\mathcal{T}(\mathcal{N})=
+\begin{pmatrix}
+\mathcal{T}(E\mathcal{N}E) & E\mathcal{T}(\mathcal{N})(1-E)\\
+0 & \mathcal{T}((1-E)\mathcal{N}(1-E))
+\end{pmatrix}.
+\]
+\end{proposition}
+
+Both diagonal algebras are again nest algebras, so the same description applies to
+them \cite[p.~308]{Cheung2003}. The centre is one-dimensional, and this is what
+makes the Lie and commuting theorems of the chapter available
+\cite[Proposition~20, p.~309]{Cheung2003}.
+
+\begin{proposition}[{\cite[Proposition~20, p.~309]{Cheung2003}}]\label{prop:nest:centre}
+The centre of a nest algebra is $\mathbb{C}I$.
+\end{proposition}
+
+Every derivation of a nest algebra is inner
+\cite[Proposition~21, p.~309]{Cheung2003}. Christensen proved this earlier,
+together with a quantitative statement \cite[Theorem~3.9, p.~160]{Christensen1977}.
+He introduces the automorphism implementation property: an algebra has
+AIP$(r,s)$ when every automorphism within distance $r$ of the identity is
+implemented by an element $x$ with
+$\|I-x\|\le s\|\alpha-\mathrm{id}\|$ \cite[Definition~3.1, p.~158]{Christensen1977}.
+The next theorem turns that property into a vanishing statement for cohomology
+\cite[Theorem~3.2, p.~158]{Christensen1977}.
+
+\begin{theorem}[{\cite[Theorem~3.2, p.~158]{Christensen1977}}]\label{thm:nest:aip}
+Let $\mathcal{A}$ be a weakly closed unital algebra of operators on a Hilbert
+space $H$. If $\mathcal{A}$ has AIP$(r,s)$ for some pair of positive reals, then
+$H^1(\mathcal{A},\mathcal{A})=0$.
+\end{theorem}
+
+Christensen shows that every nest algebra has AIP$(1/24,26)$
+\cite[Corollary~3.10, p.~161]{Christensen1977}. With
+Theorem~\ref{thm:nest:aip} this gives the vanishing theorem for every ultraweakly
+closed algebra of operators containing it
+\cite[Corollary~3.11, p.~161]{Christensen1977}. He also proves that two cohomology
+groups of a reflexive algebra with a commutative lattice agree
+\cite[Proposition~3.4, p.~158]{Christensen1977}. Every derivation of such an
+algebra into a dual normal module is continuous
+\cite[Corollary~2.3, p.~157]{Christensen1977}.
+
+Cheung records the derivation theorem in the shape needed for the chapter, and
+then reads the Lie statement off it
+\cite[Proposition~21, p.~309]{Cheung2003}.
+
+\begin{proposition}[{\cite[Proposition~21, p.~309]{Cheung2003}}]\label{prop:nest:inner-derivation}
+Every derivation of a nest algebra is inner, that is, of the form
+$a\mapsto ax-xa$ for some fixed element $x$ of the nest algebra.
+\end{proposition}
+
+The Lie case follows from this proposition.
+
+\begin{corollary}[{\cite[Corollary~22, p.~309]{Cheung2003}}]\label{cor:nest:lie}
+Every Lie derivation of a nest algebra has the form $a\mapsto ax-xa+h(a)1$, where
+$x$ is a fixed element of the nest algebra and $h$ is a linear functional that
+annihilates the commutators.
+\end{corollary}
+
+The proof uses Theorem~\ref{thm:triangular:proper-lie} on the triangular form of
+Proposition~\ref{prop:nest:triangular}, because both diagonal algebras have centre
+$\mathbb{C}I$ \cite[p.~309]{Cheung2003}. A nest is continuous when every member is
+the intersection of the members strictly above it \cite[p.~309]{Cheung2003}. On
+the nest algebra of a continuous nest every element is a sum of two commutators,
+so the functional $h$ in Corollary~\ref{cor:nest:lie} can be absorbed
+\cite[p.~309]{Cheung2003}.
+
+\begin{corollary}[{\cite[Corollary~23, p.~309]{Cheung2003}}]\label{cor:nest:continuous}
+Every Lie derivation on the nest algebra of a continuous nest is an inner
+derivation.
+\end{corollary}
+
+Cheung adds two corollaries for triangular algebras whose top block is a nest
+algebra of a continuous nest \cite[Corollaries~24--25, p.~309]{Cheung2003}. In
+both, every Lie derivation of $\operatorname{Tri}(A,M,B)$ is proper
+\cite[p.~309]{Cheung2003}.
+
+The commuting-map question has the same answer
+\cite[Corollary~7, p.~126]{Cheung2001}. Cheung gives the algebraic form of
+Proposition~\ref{prop:nest:triangular} and the one-dimensional centre first
+\cite[Propositions~5--6, p.~126]{Cheung2001}, then applies his triangular theorem
+\cite[Corollary~1, p.~124]{Cheung2001}.
+
+\begin{corollary}[{\cite[Corollary~7, p.~126]{Cheung2001}}]\label{cor:nest:commuting}
+Every commuting map of a nest algebra has the form $a\mapsto ta+h(a)1$, where
+$t\in\mathbb{C}$ and $h$ is a linear functional.
+\end{corollary}
+
+For a continuous nest and a bimodule generated by one element the same form holds
+on the triangular algebra built from it \cite[Corollary~8, p.~127]{Cheung2001}. The Lie
+triple statement for nest algebras is the one recalled in
+Section~\ref{sec:lie-type:lie-on-algebras}
+\cite[Corollary~5.12, p.~163]{Benkovic2015}. On a nest algebra of a Banach space
+the Lie $n$-derivations have the standard form as well
+\cite[Theorem~3.1, p.~6]{ZhangWei2017Nest}. That theorem is stated in
+Section~\ref{sec:lie-type:lie-on-algebras} as
+Theorem~\ref{thm:lie:zhang-wei-nest} \cite[p.~6]{ZhangWei2017Nest}.
+
+The operator-algebra side of these results belongs to
+Chapter~\ref{ch:banach-operator}, where the continuity of derivations and the
+cohomology of nest algebras are treated with analytic tools
+\cite[Theorem~2.1, p.~156]{Christensen1977}. Banach algebras with the same
+triangular shape are a separate source of examples, and their derivations have an
+explicit description in operator terms
+\cite[Proposition~2.1, p.~443]{ForrestMarcoux1996}. Forrest and Marcoux describe
+a continuous derivation by two derivations of the corner algebras, an element of
+the bimodule and a linear map of the bimodule
+\cite[Proposition~2.1, p.~443]{ForrestMarcoux1996}. They then state which linear
+maps occur \cite[Proposition~2.2, p.~444]{ForrestMarcoux1996}, and prove a
+vanishing theorem under hypotheses on the two corner algebras
+\cite[Theorem~2.8, p.~448]{ForrestMarcoux1996}.
+
+We close here. The matrix, triangular, generalized matrix and nest algebras form
+one family \cite[p.~2720]{DuWang2012}. On each member the same three questions
+receive the same kind of answer: about derivations, about commuting maps and
+about Lie derivations \cite[Theorem~11, p.~307]{Cheung2003}.

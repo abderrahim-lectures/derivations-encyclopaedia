@@ -1,0 +1,129 @@
+% STATUS: written 2026-11-06 (English gate clean; sources read in full as recorded below).
+% Sources read in full for the cited passages: Nestruev 2020 (pp. 122--123), Shanks-Pursell 1954 (pp. 468--471).
+\section{Derivations as vector fields}\label{sec:commutative:vector-fields-geometry}
+
+Section~\ref{sec:commutative:jacobian} pushed the derivations of the
+polynomial ring toward their formal limit. This section makes a parallel move
+in geometry.
+
+Let $M$ be a smooth manifold and $C^\infty(M)$ its algebra of smooth real
+functions. A vector field on $M$ takes directional derivatives of
+functions~\cite[p.~122]{Nestruev2020}. So it acts as an operator on
+$C^\infty(M)$, and Nestruev takes this action as the
+definition~\cite[p.~122]{Nestruev2020}.
+
+\begin{definition}[{\cite[p.~122]{Nestruev2020}}]\label{def:comm:vf}
+Let $M$ be a smooth manifold. A \emph{smooth vector field} on $M$ is an
+$\mathbb{R}$-linear operator $X\colon C^\infty(M) \to C^\infty(M)$ that
+satisfies the Leibniz rule
+\[
+X(fg) = X(f)\,g + f\,X(g), \qquad f, g \in C^\infty(M).
+\]
+\end{definition}
+
+In the language of this book, this is a
+definition~\cite[p.~122]{Nestruev2020}: a smooth vector field is exactly a
+derivation of the $\mathbb{R}$-algebra $C^\infty(M)$.
+
+The classical direction is also true~\cite[p.~122]{Nestruev2020}. A family of
+tangent vectors $X_z$ gives the operator $X(f)(z) = X_z(f)$. Nestruev checks
+that this operator satisfies the Leibniz rule~\cite[p.~122]{Nestruev2020}.
+
+Vector fields are local operators~\cite[Section~9.40, p.~123]{Nestruev2020}.
+If $f$ and $g$ coincide on an open set, then so do $X(f)$ and
+$X(g)$~\cite[Section~9.40, p.~123]{Nestruev2020}. They can also be read as
+sections of the tangent bundle~\cite[p.~123]{Nestruev2020}. So the dictionary
+between vector fields and derivations is complete.
+
+The strongest evidence that the algebraic side controls the geometric side is
+a theorem of Shanks and Pursell from
+1954~\cite[p.~468]{ShanksPursell1954}. They state the aim of their paper on the
+first page~\cite[p.~468]{ShanksPursell1954}.
+
+They prove a statement about a smooth
+manifold~\cite[p.~468]{ShanksPursell1954}. The Lie algebra of all tangent
+vector fields on it, with compact supports, determines the
+manifold~\cite[p.~468]{ShanksPursell1954}. Two manifolds with isomorphic Lie
+algebras are diffeomorphic~\cite[p.~468]{ShanksPursell1954}.
+
+Their proof recovers the points of $M$ from the Lie
+algebra~\cite[p.~470]{ShanksPursell1954}. Shanks and Pursell describe each
+maximal ideal of this Lie algebra: it consists of the fields that vanish at
+one fixed point, together with all their
+derivatives~\cite[Theorem~1, p.~470]{ShanksPursell1954}.
+
+This gives a one-to-one correspondence between the points of $M$ and the
+maximal ideals~\cite[Theorem~2, p.~471]{ShanksPursell1954}. With the Stone
+topology on the set of ideals, the correspondence is a
+homeomorphism~\cite[Theorem~2, p.~471]{ShanksPursell1954}.
+
+Their main theorem closes the section, and it is stated for the Lie algebra of
+tangent vector fields with compact support
+\cite[Theorem~3, p.~471]{ShanksPursell1954}.
+
+\begin{theorem}[{\cite[Theorem~3, p.~471]{ShanksPursell1954}}]\label{thm:comm:sp}
+Let $X$ and $Y$ be smooth manifolds whose Lie algebras of tangent vector
+fields with compact support are isomorphic. Then the natural homeomorphism of
+$X$ onto $Y$ given by the correspondence of maximal ideals is infinitely
+differentiable.
+\end{theorem}
+
+In other words, the derivations of $C^\infty(M)$ determine the manifold up to
+diffeomorphism~\cite[Theorem~3, p.~471]{ShanksPursell1954}. That holds when the
+derivations are viewed only as a
+Lie algebra~\cite[Theorem~3, p.~471]{ShanksPursell1954}.
+
+So the opening question of this chapter is answered here in the strongest
+form~\cite[Theorem~3, p.~471]{ShanksPursell1954}. For the algebra of smooth
+functions, the derivations carry all the geometry.
+
+The same hope, stated as a conjecture for local rings of algebraic varieties,
+was the Zariski--Lipman problem of
+Section~\ref{sec:commutative:zariski-lipman}
+\cite[p.~270]{BiswasGurjarKolte2014}. That problem is still
+open~\cite[p.~270]{BiswasGurjarKolte2014}.
+
+\section{Geometry: tangent vectors and connections}\label{sec:commutative:geometry}
+
+The same rule appears in differential geometry, acting on the
+commutative algebra of smooth functions
+\cite[p.~70]{MajumdarBhattacharyya2023}. Majumdar and
+Bhattacharyya give the modern definition of a tangent vector at a point of a
+smooth manifold as a derivation at that point \cite{MajumdarBhattacharyya2023}.
+
+\begin{definition}[{\cite[p.~70]{MajumdarBhattacharyya2023}}]\label{def:comm:tangent-derivation}
+Let $M$ be a smooth manifold and let $p\in M$. Denote by $F(p)$ the space of control
+test functions at $p$. A tangent vector $X_p$ at $p$ is a real linear functional
+$X_p\colon F(p)\to\mathbb{R}$ satisfying, for all $a,b\in\mathbb{R}$ and all
+$f,g\in F(p)$,
+\[
+X_p(af+bg) = a X_p(f) + b X_p(g),\qquad
+X_p(fg) = X_p(f)\,g(p) + f(p)\,X_p(g).
+\]
+\end{definition}
+
+The second equation is the Leibniz product rule at $p$. So a tangent vector
+is a point derivation of the smooth function algebra at $p$, in the sense of
+this chapter. The notation of the book matches ours:
+\cite[equation (2.17), p.~70]{MajumdarBhattacharyya2023} writes the product rule
+as $X_p(fg)=(X_p f)g(p)+f(p)X_p g$.
+
+The set of all tangent vectors at a point forms a vector space $T_p(M)$, and
+the coordinate functions give its natural basis \cite[equation (2.19),
+p.~70]{MajumdarBhattacharyya2023}. Majumdar and Bhattacharyya construct
+the partial-derivation basis \cite[equation (2.19), p.~70]{MajumdarBhattacharyya2023}.
+
+\begin{definition}[{\cite[equation (2.19), p.~70]{MajumdarBhattacharyya2023}}]\label{def:comm:coordinate-basis}
+If $(x_1,\dots,x_n)$ is a local coordinate system in a neighbourhood of $p\in M$, the maps
+\[
+\left(\frac{\partial}{\partial x_i}\right)_p\colon f\longmapsto
+\frac{\partial f}{\partial x_i}(p),\qquad i=1,\dots,n,
+\]
+are tangent vectors at $p$ and they form a basis of $T_p(M)$.
+\end{definition}
+
+A vector field on $M$ is a smooth choice of one such derivation at every
+point % claim-ok: narration of the chapter plan, no mathematical content
+\cite[p.~70]{MajumdarBhattacharyya2023}. In the algebraic setting of
+this chapter, the derivations of the coordinate ring are the
+algebraic vector fields.

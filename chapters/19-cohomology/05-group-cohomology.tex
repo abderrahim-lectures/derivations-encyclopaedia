@@ -1,0 +1,44 @@
+% STATUS: written 2026-11-06 (English gate clean; sources read in full as recorded below).
+% Sources read in full: Weibel 1994 (section 6.4). Chapter 1.8 already carries Hilbert, Speiser, Eilenberg--Mac Lane.
+\section{Derivations of groups and the first cohomology of groups}\label{sec:cohomology:group-cohomology}
+
+Section~\ref{sec:origins:crossed-homomorphisms} traced the identity
+$D(gh) = gD(h) + D(g)$ from Hilbert through Speiser to Eilenberg and Mac Lane. This
+section states the modern theory, in which a crossed homomorphism is a derivation of
+a group. Section~\ref{sec:cohomology:first-cohomology} gave the ring half;
+this is the group half of the same story.
+
+\begin{definition}[{\cite[Definition 6.4.1, p.~174]{Weibel1994}}]\label{def:cohomology:group-derivation}
+A \emph{derivation} (or \emph{crossed homomorphism}) of a group $G$ in a left
+$G$-module $A$ is a set map $D \colon G \to A$ satisfying
+$D(gh) = gD(h) + D(g)$.
+\end{definition}
+
+The principal derivations are the image of the elements of
+$A$~\cite[Example~6.4.2, p.~174]{Weibel1994}.
+
+\begin{example}[{\cite[Example 6.4.2, p.~174]{Weibel1994}}]\label{ex:cohomology:principal}
+For $a \in A$, the map $D_a(g) = ga - a$ is a derivation; these $D_a$ are the
+principal derivations of $G$ in $A$.
+\end{example}
+
+The derivations are computed by the augmentation ideal $IG$ of the group
+ring~\cite[Lemma~6.4.4, p.~175]{Weibel1994}.
+
+\begin{lemma}[{\cite[Lemma 6.4.4, p.~175]{Weibel1994}}]\label{lem:cohomology:ig}
+The map $\varphi \mapsto D_\varphi$ is a natural isomorphism of abelian groups
+$\operatorname{Hom}_G(IG, A) \cong \operatorname{Der}(G, A)$.
+\end{lemma}
+
+Modulo the principal derivations, they give the first cohomology of the
+group~\cite[Theorem~6.4.5, p.~175]{Weibel1994}.
+
+\begin{theorem}[{\cite[Theorem 6.4.5, p.~175]{Weibel1994}}]\label{thm:cohomology:h1-group}
+$H^1(G; A) \cong \operatorname{Der}(G, A)/\operatorname{PDer}(G, A)$, where
+$\operatorname{PDer}$ denotes the principal derivations.
+\end{theorem}
+
+Theorem~\ref{thm:cohomology:h1-group} is the group analogue of
+Lemma~\ref{lem:cohomology:h1-der}. One object carries three names drawn from three
+traditions: the principal derivation of a group, the principal crossed homomorphism
+of Section~\ref{sec:origins:crossed-homomorphisms}, and the inner derivation of a ring.

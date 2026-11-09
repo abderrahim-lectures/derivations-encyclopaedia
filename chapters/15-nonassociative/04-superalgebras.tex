@@ -1,0 +1,165 @@
+% STATUS: rewritten 2026-11-05
+% STATUS: extended 2026-11-07 (Fosner and Fosner 2014, Pandey 2024 and
+% Di Bartolo, Di Fatta and La Rosa 2025 superbiderivations read in full)
+% Sources read in full: Musson 2012 (Definition of a Lie superalgebra, p. 1;
+% Lemma 1.1.2, pp. 2--3; Theorem 2.6.2, pp. 19--20), Kac 1977 (Theorem 1,
+% pp. 1385--1386); Chi--Zhang--Meng--Tang 2026 (Theorems 3.2, 3.5 and 4.2,
+% pp. 7, 12, 15; read 2026-11-06); Fosner and Fosner 2014 (pp. 303--306);
+% Pandey 2024 (pp. 1--2, 7--8); Di Bartolo, Di Fatta and La Rosa 2025
+% superbiderivations (pp. 1--2, 8--10).
+% Sources: Musson2012, Kac1977Classification, ChiZhangMengTang2026.
+\section{Lie and Jordan superalgebras}\label{sec:nonassociative:superalgebras}
+
+The Leibniz algebras of the previous section keep one product rule. % claim-ok: own summary of the Leibniz section, links to Musson below
+A superalgebra separates the even part from the odd part, and the
+product rule picks up a sign \cite[pp.~1--2]{Musson2012}.
+
+\begin{definition}[{\cite[pp.~1--2]{Musson2012}}]
+\label{def:nonassociative:superderivation}
+Let $A$ be a $\mathbb{Z}_2$-graded algebra over a field $K$ that need
+not be associative. A $K$-linear map $\partial\colon A\to A$ of degree
+$\alpha\in\mathbb{Z}_2$ is a \emph{left superderivation} if
+\[
+\partial(bc)\;=\;\partial(b)c+(-1)^{\alpha\bar{b}}\,b\,\partial(c)
+\qquad\text{for all }b,c\in A,
+\]
+where $\bar b$ is the degree of the homogeneous element $b$. A
+\emph{superderivation} is a left superderivation. A superderivation of
+degree $0$ is called \emph{even}, and one of degree $1$ is called
+\emph{odd}.
+\end{definition}
+
+The graded bracket of the next definition supplies the maps on which
+superderivations act. % claim-ok: own linking sentence
+
+\begin{definition}[{\cite[p.~1]{Musson2012}}]
+\label{def:nonassociative:lie-super}
+A \emph{Lie superalgebra} is a $\mathbb{Z}_2$-graded vector space
+$\mathfrak{g}=\mathfrak{g}_0\oplus\mathfrak{g}_1$ over $K$ with a
+bilinear map $[-,-]\colon\mathfrak{g}\times\mathfrak{g}\to\mathfrak{g}$
+that is graded skew-symmetric and satisfies the graded Jacobi identity.
+\end{definition}
+
+Musson proves the following equivalence \cite[Lemma~1.1.2,
+pp.~2--3]{Musson2012}.
+
+\begin{lemma}[{\cite[Lemma~1.1.2, pp.~2--3]{Musson2012}}]
+\label{lem:nonassociative:musson-jacobi}
+Let $A$ be a $\mathbb{Z}_2$-graded algebra whose product
+$(a,b)\mapsto [a,b]$ is graded skew-symmetric. The following conditions
+are equivalent.
+\begin{enumerate}
+\item $A$ satisfies the graded Jacobi identity.
+\item For every $a\in A$ the map $\operatorname{ad} a: b\mapsto [a,b]$
+is a left superderivation of degree $\bar a$.
+\item For every homogeneous $a\in A_{\alpha}$ the map
+$b\mapsto [b,a]$ is a right superderivation of degree $\alpha$.
+\end{enumerate}
+\end{lemma}
+
+Musson quotes the following theorem of Scheunert, where a nondegenerate
+Killing form stands in place of simplicity
+\cite[Theorem~2.6.2, pp.~19--20]{Musson2012}.
+
+\begin{theorem}[{\cite[Theorem~2.6.2, pp.~19--20]{Musson2012}}]
+\label{thm:nonassociative:super-inner}
+Let $\mathfrak{g}$ be a Lie superalgebra whose Killing form is
+nondegenerate. Then every superderivation of $\mathfrak{g}$ is inner,
+that is, of the form $\operatorname{ad} a$ for some $a\in\mathfrak{g}$.
+\end{theorem}
+
+Musson points out that the superalgebras with a nondegenerate Killing
+form behave like semisimple Lie algebras
+\cite[p.~20]{Musson2012}. Kac classified the simple finite-dimensional
+Lie superalgebras as follows \cite[Theorem~1,
+pp.~1385--1386]{Kac1977Classification}.
+
+\begin{theorem}[{\cite[Theorem~1,
+pp.~1385--1386]{Kac1977Classification}}]
+\label{thm:nonassociative:kac-classification}
+For a simple finite-dimensional Lie superalgebra over an algebraically
+closed field of characteristic $0$, all $\mathbb{Z}$-gradings are known
+explicitly: the list in \cite{Kac1977Classification} includes every
+$\mathbb{Z}$-grading (up to automorphism) of every such superalgebra.
+\end{theorem}
+
+A local superderivation matches its value at one point at a time.
+Chi, Zhang, Meng and Tang work over a field of characteristic not two with
+a finite-dimensional nilpotent Lie superalgebra
+\cite[p.~1]{ChiZhangMengTang2026}. A local superderivation is called pure
+when it is not a superderivation \cite[p.~1]{ChiZhangMengTang2026}.
+
+\begin{theorem}[{\cite[Theorems~3.2 and 3.5, pp.~7, 12]{ChiZhangMengTang2026}}]\label{thm:nonassociative:pure-local-super}
+Let $L$ be a finite-dimensional two-step nilpotent Lie superalgebra over a
+field of characteristic not two. Then $L$ admits a pure local
+superderivation and a pure local anti-superderivation.
+\end{theorem}
+
+So on the nilpotent side local maps are genuinely wider than global ones.
+The authors give sufficient conditions for the same failure at higher
+nilpotency index \cite[p.~1]{ChiZhangMengTang2026}. Every three-step
+nilpotent Lie superalgebra admits a pure local superderivation
+\cite[Theorem~4.2, p.~15]{ChiZhangMengTang2026}.
+
+A superderivation of a prime superalgebra obeys a polynomial identity only in
+three ways. A superderivation of a superalgebra keeps the grading, so it is a
+sum $D=D_0+D_1$ of an even and an odd part \cite[p.~304]{FosnerFosner2014}.
+Fošner and Fošner impose two commutator identities on each part.
+
+\begin{theorem}[{\cite[Theorem~1, p.~305]{FosnerFosner2014}}]\label{thm:nonassociative:fosner-super}
+Let $A$ be a prime associative superalgebra and let $D=D_0+D_1$ be a nonzero
+superderivation of $A$. Suppose that
+$D_i(x)[D_i(x),x]_s=0$ and $[D_i(x),x]_sD_i(x)=0$ for every homogeneous
+element $x$ and $i=0,1$. Then one of the following holds:
+\begin{enumerate}
+\item $A_1=0$ and $D(A_0)\subseteq Z(A)$;
+\item $D(A_0)=0$ and $A$ is commutative;
+\item $D^{2}=0$.
+\end{enumerate}
+\end{theorem}
+
+Here $[a,b]_s=ab-(-1)^{\bar a\bar b}ba$ is the super commutator
+\cite[p.~304]{FosnerFosner2014}. The paper proves the analogous statements for
+each degree separately, and the theorem is their union
+\cite[Propositions~1--2, pp.~305--306]{FosnerFosner2014}.
+
+The bilinear form of the question has its own definition for superalgebras. A
+super-biderivation is a bilinear map that is a superderivation in each argument,
+with the super sign carried through \cite[p.~2]{Pandey2024Superbiderivations}.
+On a perfect Hom-Lie superalgebra it satisfies the relation
+$\varphi(\omega,[\zeta,\xi])=(-1)^{|\varphi||\omega|}[\omega,\varphi(\zeta,\xi)]$
+\cite[Lemma~3.7, p.~7]{Pandey2024Superbiderivations}. On a centerless algebra it
+has the centroid form.
+
+\begin{theorem}[{\cite[Theorem~3.8, p.~7]{Pandey2024Superbiderivations}}]\label{thm:nonassociative:hom-lie-superbiderivation}
+Let $H$ be a centerless Hom-Lie superalgebra with $H=H'$. Then every
+super-biderivation $\varphi\colon H\times H\to H$ has the form
+$\varphi(\zeta,\xi)=\alpha^{-1}\delta([\zeta,\xi])$ for a map $\delta$ in the
+centroid of $H$.
+\end{theorem}
+
+So the Hom-Lie superalgebra case has the shape of the Lie algebra case in
+Theorem~\ref{thm:lie:tang-biderivation}, with the twist $\alpha^{-1}$ and a
+centroid element in place of a scalar
+\cite[Theorem~3.8, p.~7]{Pandey2024Superbiderivations}. A special
+super-biderivation of a perfect centerless algebra is zero
+\cite[Theorem~3.10, p.~9]{Pandey2024Superbiderivations}.
+
+The definition of a superbiderivation itself has more than one form in the
+literature. Di Bartolo, Di Fatta and La Rosa propose one that requires the
+bracket of the superalgebra to be a superbiderivation, a condition the earlier
+definitions do not meet \cite[p.~2]{DiBartoloDiFattaLaRosa2025Super}. Their two
+equivalent forms are Definitions~2.5 and~2.6
+\cite[Definitions~2.5--2.6, p.~5]{DiBartoloDiFattaLaRosa2025Super}. A nonzero bilinear map of odd
+degree cannot be a superbiderivation under both the new and the earlier
+definitions at once \cite[p.~7]{DiBartoloDiFattaLaRosa2025Super}. On a complete
+Lie superalgebra every superbiderivation has the standard shape
+\cite[Theorem~3.6, p.~10]{DiBartoloDiFattaLaRosa2025Super}.
+
+With the classification in place we return to a map that appears both in
+the alternative picture and in the Jordan superalgebra picture: the
+$\delta$-derivation of Section~\ref{sec:nonassociative:delta-quasi-anti}.
+
+Han proves that the derivations of a rational vertex operator algebra are
+inner, the vertex-algebra analogue of the same question for algebras
+\cite[Abstract, p.~1]{Han2026VOA}.

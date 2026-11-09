@@ -1,0 +1,110 @@
+% STATUS: rewritten 2026-10-08
+% Sources read in full: Hochschild 1942 (pp. 678--679, 688--689), Hochschild 1945 (Theorem 4.1), Weibel 1994 (Definition 6.4.1, Example 6.4.2, Lemma 9.2.1), Kharchenko 1991 (pp. 9--10), Humphreys 1972 (Section 5.3), Bresar, Hanselka, Klep and Volcic 2018 (Corollary 6.2), Baclawski 1972 (Theorem 2, p. 354), Benkart, Lopes and Ondrus 2015 (pp. 47--48).
+\section{Inner, principal and outer derivations; crossed homomorphisms}\label{sec:basic-theory:inner-outer}
+
+We ask now which derivations come from the algebra itself. Hochschild answers
+with a picture from automorphisms \cite[p.~678]{Hochschild1942}. Take an
+invertible element $c$. We call the map $a \mapsto cac^{-1}$ an inner automorphism.
+Let $c = \exp(ta_0)$, where $t$ is a parameter. Then the automorphism equals
+$a + t(a_0a - aa_0)$ plus a term that is small compared with $t$
+\cite[pp.~678--679]{Hochschild1942}. Its derivative at $t=0$ is the map
+$a \mapsto a_0a - aa_0$.
+
+\begin{definition}[{\cite[Definition~3.2, p.~689]{Hochschild1942}}]\label{def:basic:inner}
+Let $A$ be an associative algebra. The derivation $a \mapsto a_0a - aa_0$,
+for a fixed $a_0 \in A$, is an \emph{inner derivation} of $A$. For a Lie
+algebra $L$, the derivation $l \mapsto [l_0,l]$ is an inner derivation of $L$.
+\end{definition}
+
+The next example gives the inner derivations of a ring.
+
+\begin{example}[{\cite[Example~1.3]{GuptaKaurSingh2023}}]\label{ex:basic:inner}
+Let $R$ be a ring and $a\in R$. The map $\partial_a(x)=xa-ax$ is a derivation of
+$R$, the inner derivation with respect to $a$. It restricts to the zero
+derivation on the center of $R$. In particular, if $R$ is commutative, then
+$\partial_a$ is zero.
+\end{example}
+
+A derivation that is not inner is \emph{outer} \cite[pp.~9--10]{Kharchenko1991}. We state the exact facts for a
+ring $R$, following Kharchenko.
+
+The map $b \mapsto \mathrm{ad}\,b$ sends $R$ to $\mathrm{Der}(R)$ and respects
+the Lie bracket \cite[pp.~9--10]{Kharchenko1991}. Its kernel is the centre
+\cite[pp.~9--10]{Kharchenko1991}. The
+image is an ideal, because $[D,\mathrm{ad}\,b] = \mathrm{ad}\,D(b)$ for every
+derivation $D$. So the outer part is the quotient $\mathrm{Der}(R)/\mathrm{ad}\,R$.
+
+Humphreys recalls the same fact for a Lie algebra $L$
+\cite[\S5.3, p.~23]{Humphreys1972}. The set $\mathrm{ad}\,L$ is an ideal in
+$\mathrm{Der}\,L$, because $[\delta,\mathrm{ad}\,x]=\mathrm{ad}(\delta x)$
+\cite[\S5.3, p.~23]{Humphreys1972}.
+
+Gupta, Kaur and Singh give a derivation of a matrix algebra that comes from a
+derivation of the field \cite[Example~1.4]{GuptaKaurSingh2023}.
+
+\begin{example}[{\cite[Example~1.4]{GuptaKaurSingh2023}}]\label{ex:basic:matrices}
+Let $(k,d_k)$ be a differential field. The map $\delta_c$ on $M_m(k)$ defined by
+$\delta_c((a_{ij}))=(d_k(a_{ij}))$ is a derivation of $M_m(k)$, the
+coordinate-wise derivation.
+\end{example}
+
+The same object has other names, and Chapter~\ref{ch:origins} met them. Let a
+group $G$ act on an abelian group $A$. Weibel calls a map $D$ with
+$D(gh) = gD(h) + D(g)$ a derivation, or crossed homomorphism. The maps
+$D_a(g) = ga - a$ are the principal derivations
+\cite[Definition~6.4.1, Example~6.4.2]{Weibel1994}. For a ring $R$ and a
+bimodule $M$, the principal derivations are the maps $f_m(r) = rm - mr$. In both
+settings the group $H^1$ is the quotient of all derivations by the principal
+ones \cite[Lemma~9.2.1, p.~301]{Weibel1994}.
+
+So inner, principal and outer derivations are three words for one idea. The
+table shows how the terms match.
+
+\begin{center}
+\begin{tabular}{lll}
+Rings and algebras & Groups & Cohomology \\ \hline
+derivation & crossed homomorphism & $1$-cocycle \\
+inner derivation & principal derivation & coboundary \\
+outer derivation class & element of $H^1$ & cohomology class \\
+\end{tabular}
+\end{center}
+
+The table gives a second reading of our question. Asking whether every
+derivation is inner means asking whether $H^1$ is zero.
+
+Hochschild settled this for algebras over a field
+\cite[Theorem~4.1]{Hochschild1945}. His theorem says that an algebra is
+separable if and only if $H^1$ vanishes for every two-sided module. So an algebra
+is separable exactly when every derivation of it into every bimodule is inner.
+
+We begin with cases in which every derivation is inner. We take first a central
+simple algebra, such as the algebra of all $n \times n$ matrices over a field.
+Brešar, Hanselka, Klep and Volčič prove the following statement
+\cite[Corollary~6.2]{BresarHanselkaKlepVolcic2018}.
+
+\begin{theorem}[{\cite[Corollary~6.2]{BresarHanselkaKlepVolcic2018}}]\label{thm:basic:csa-inner}
+Every derivation from a central simple algebra $R$ into an arbitrary $R$-bimodule
+$M$ is inner.
+\end{theorem}
+
+In particular every derivation of a full matrix algebra over a field is inner. We take second a semisimple Lie algebra. Over an algebraically closed field of characteristic
+$0$, such as the complex numbers, every derivation of it is inner
+\cite[\S5.3, p.~23]{Humphreys1972}.
+
+Some derivations are not inner, and yet we can list them all. Baclawski does
+this for the incidence algebra of an ordered set \cite[p.~351]{Baclawski1972}.
+Each derivation is the sum of an inner derivation and a second kind, which comes
+from an additive function \cite[Theorem~2, p.~353]{Baclawski1972}. When the
+ordered set has a smallest or a largest element, every derivation is inner
+\cite[p.~354]{Baclawski1972}.
+
+We see next that the answer can also depend on the field. Consider the Weyl
+algebra of differential operators with polynomial coefficients
+\cite[p.~46]{BenkartLopesOndrus2015}. Over a field of characteristic $0$ all its
+derivations are inner \cite[p.~48]{BenkartLopesOndrus2015}. Over a field of
+prime characteristic some are not \cite[p.~48]{BenkartLopesOndrus2015}.
+
+We return to $H^1$ in Chapter~\ref{ch:cohomology}. So inner derivations are the
+derivatives of inner automorphisms.
+Section~\ref{sec:basic-theory:exponential} follows this link between
+derivations and automorphisms in general.

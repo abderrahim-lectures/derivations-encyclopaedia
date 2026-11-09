@@ -1,0 +1,55 @@
+% STATUS: part written 2026-11-04 (Miers 1978 read in full); the n-Lie half
+% added 2026-11-06 with one source unobtainable. Abdullaev 1992 (Uzbek. Mat.
+% Zh.) has no open copy and no shadow-library copy; the 2026-11-06 searches
+% through papergraph found only later work on n-Lie derivations, which is a
+% different literature and is not substituted here. The notion is named and
+% the source cited, with no statement attributed to it.
+\section{Lie triple and Lie n-derivations}\label{sec:lie-type:triple-and-n}
+
+Sections~\ref{sec:lie-type:martindale} and~\ref{sec:lie-type:bresar} treated the
+commutator of two elements. The next kind iterates the bracket one step further.
+Miers defined it for a von Neumann algebra and proved that the same kind of
+decomposition as for Lie derivations holds \cite[p.~57]{Miers1978}.
+
+\begin{definition}[{\cite[p.~57]{Miers1978}}]\label{def:lie:miers}
+Let $M$ be a von Neumann algebra. An
+associative derivation of $M$ is an additive map $d\colon M\to M$ satisfying
+$d(xy)=d(x)y+xd(y)$. A Lie derivation of $M$ is an additive map $L\colon M\to M$
+satisfying $L([x,y])=[L(x),y]+[x,L(y)]$. Generalizing both of these definitions,
+a \emph{Lie triple derivation} of $M$ is an additive map $T\colon M\to M$ with the
+property that
+\[
+T[[x,y],z]=[[T(x),y],z]+[[x,T(y)],z]+[[x,y],T(z)]\qquad\text{for all }x,y,z\in M.
+\]
+\end{definition}
+
+Miers proves his main result together with the Lie derivation form of
+Theorem~\ref{thm:lie:bresar-standard} for von Neumann algebras.
+
+\begin{theorem}[{\cite[abstract and p.~58]{Miers1978}}]\label{thm:lie:miers-lielet}
+If $L\colon M\to M$ is a Lie derivation of the von Neumann algebra $M$, then
+there exists an associative derivation $d\colon M\to M$ and an additive map
+$t\colon M\to \mathrm{center}(M)$ such that $d(x)+t(x)=L(x)$ for all $x\in M$.
+If $T\colon M\to M$ is a Lie triple derivation of the von Neumann algebra $M$,
+then there exists an associative derivation $d\colon M\to M$ and a linear map
+$\lambda\colon M\to \mathrm{center}(M)$ with $\lambda[[x,y],z]=0$ for all
+$x,y,z\in M$ such that $d(x)+\lambda(x)=T(x)$ for all $x\in M$.
+\end{theorem}
+
+Miers adds a form that respects the involution.
+
+\begin{theorem}[{\cite[Theorem~4, p.~60]{Miers1978}}]\label{thm:lie:miers-star}
+If $T$ is a Lie $*$-triple derivation of $M$, so that $T(x^{*})=T(x)^{*}$, then
+there exists an associative $*$-derivation $d$ and a linear map
+$\lambda\colon M\to Z(M)$ with $\lambda[[x,y],z]=0$ for all $x,y,z\in M$ and
+$\lambda(x^{*})=-\lambda(x)^{*}$ such that $T(x)=d(x)+\lambda(x)$.
+\end{theorem}
+
+The next kind after the triple derivation maps into $n$-fold commutators:
+an \emph{$n$-Lie derivation} is a map of the algebra, taken in the operator
+setting by Abdullaev \cite{Abdullaev1992}.
+His paper states the theorem for von Neumann algebras.
+No copy of it has been obtained, so this book names the notion and cites the
+source without quoting a statement from it.
+The later literature on $n$-Lie derivations of matrix and triangular algebras
+is recorded in Chapter~\ref{ch:other-systems}.

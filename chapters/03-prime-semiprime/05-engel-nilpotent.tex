@@ -1,0 +1,107 @@
+% STATUS: written 2026-10-12
+% STATUS: extended 2026-11-07 (Herstein 1982, power central values, read in full
+% from the library PDF)
+% Sources read in full: Giambruno and Herstein 1981 (pp. 199--202), Martindale and Miers 1983 (pp. 179--180), Lanski 1993 (pp. 731--732), Lanski 1992 (p. 1427), Herstein 1979 (p. 509);
+% Herstein 1982 (pp. 163--171).
+\section{Engel conditions, nilpotent and algebraic derivations}\label{sec:prime-semiprime:engel-nilpotent}
+
+Section~\ref{sec:prime-semiprime:kharchenko} reduced many problems to the case of
+an inner derivation. This section asks what a derivation does when its values are
+nilpotent, and when it satisfies an Engel condition.
+
+Giambruno and Herstein recall that, in a prime ring
+$R$, if $a\in R$ and $(ax-xa)^n=0$ for all $x\in R$ with $n$ fixed, then $a$ is
+central \cite[p.~199]{GiambrunoHerstein1981}. In other words, an inner derivation
+with nilpotent values is zero \cite[p.~199]{GiambrunoHerstein1981}.
+
+They ask whether this is special to inner derivations
+\cite[p.~199]{GiambrunoHerstein1981}. The question became a conjecture: a
+derivation $d$ of a prime ring with $d(x)^n=0$ for all $x$ is zero
+\cite[p.~199]{GiambrunoHerstein1981}. They prove the conjecture, and they prove
+it for semiprime rings \cite[p.~199]{GiambrunoHerstein1981}.
+
+\begin{theorem}[{\cite[p.~199]{GiambrunoHerstein1981}}]\label{thm:prime:giambruno-herstein}
+Let $R$ be a semiprime ring and let $d$ be a derivation of $R$ such that
+$d(x)^n=0$ for all $x\in R$, where $n>1$ is a fixed integer. Then $d=0$.
+\end{theorem}
+
+The proof is by induction on $n$ \cite[p.~200]{GiambrunoHerstein1981}. It uses a theorem of Levitzki \cite[p.~200]{GiambrunoHerstein1981}. A left ideal in which every element has $m$-th power zero,
+for a fixed $m$, is zero \cite[Remark~4, p.~200]{GiambrunoHerstein1981}.
+
+The key step shows that $d$ maps the left annihilator of an element into itself
+\cite[Lemma~1, p.~200]{GiambrunoHerstein1981}.
+
+We turn to a nilpotent derivation. For $d^2=0$, the theorem of Posner on
+compositions gives $d=0$ in a prime ring of characteristic not $2$
+\cite[p.~179]{MartindaleMiers1983}. Herstein notes that the same holds in a
+semiprime ring \cite[p.~509]{Herstein1979}.
+
+Herstein replaced the zero value by a central power, starting from the inner
+case. For an inner derivation $d(x)=ax-xa$ with $a$ not central, if $d(x)^{n}$ is
+central for all $x$, then $R$ is an order in a four-dimensional simple algebra
+\cite[p.~163]{Herstein1982Power}. He then extended this from inner derivations to
+arbitrary ones \cite[p.~163]{Herstein1982Power}.
+
+\begin{theorem}[{\cite[p.~163]{Herstein1982Power}}]\label{thm:prime:herstein-power}
+Let $R$ be a prime ring with center $Z$ and let $d\neq 0$ be a derivation of $R$
+such that $d(x)^{n}\in Z$ for all $x\in R$, for a fixed $n$. Then $R$ is
+commutative, or $R$ is an order in a four-dimensional simple algebra.
+\end{theorem}
+
+The proof reduces the ring to a simple one and then to a division ring, and it
+uses the result of Giambruno and Herstein when the center is zero
+\cite[p.~163]{Herstein1982Power}. Two lemmas on multilinear polynomials carry the
+reduction \cite[Lemmas~1 and~2, p.~163]{Herstein1982Power}. The critical case is a
+simple ring that has a zero-divisor; there Herstein shows that the ring is the ring
+of $2\times2$ matrices over a field \cite[Theorem~3, p.~169]{Herstein1982Power}. A
+field extension then puts the standard identity of degree four on the ring
+\cite[p.~170]{Herstein1982Power}.
+
+Martindale and Miers studied the powers of a derivation in general
+\cite[p.~179]{MartindaleMiers1983}. They ask when a power of an inner derivation is inner, and when the powers of two derivations commute. They
+describe the elements $a$ and $b$ of a prime ring with $(\operatorname{ad}a)^n=\operatorname{ad}b$,
+and the derivations $d$ and $\delta$ with $[d^n(x),\delta^n(y)]=0$ for all $x$ and
+$y$ \cite[p.~179]{MartindaleMiers1983}. They recall that, in a simple ring, if
+$(\operatorname{ad}a)^n=0$ then there is a scalar $\lambda$ with
+$(a-\lambda)^{[(n+1)/2]}=0$ \cite[p.~179]{MartindaleMiers1983}.
+
+We turn to the Engel condition, which replaces the power of a value by a repeated
+commutator. Put $[y,x]_1=yx-xy$ and $[y,x]_k=[[y,x]_{k-1},x]$.
+
+The theorem of Posner is the case that $[D(x),x]$ is central
+\cite[p.~731]{Lanski1993}. Vukman showed that $R$ is commutative if
+$[D(x),x]_2=0$ and the characteristic is not $2$ \cite[p.~731]{Lanski1993}.
+
+For the general condition Lanski used differential identities
+\cite[p.~731]{Lanski1993}. For an ideal the answer is complete.
+
+\begin{theorem}[{\cite[Theorem~1, p.~732]{Lanski1993}}]\label{thm:prime:lanski-engel}
+Let $R$ be a prime ring and let $D$ be a nonzero derivation of $R$. If $I$ is a
+nonzero ideal of $R$ and $[D(r),r]_k=0$ for all $r\in I$, with $k>0$ fixed, then
+$R$ is commutative.
+\end{theorem}
+
+The proof uses a dichotomy of Kharchenko: either $[y,x]_k$ is an identity of $R$
+or $D$ is inner for the ring of quotients \cite[p.~732]{Lanski1993}.
+
+The first case gives a polynomial identity, and the second case reduces to a
+matrix computation \cite[p.~732]{Lanski1993}.
+
+For a noncommutative Lie ideal the conclusion changes.
+
+\begin{theorem}[{\cite[Abstract, p.~731]{Lanski1993}}]\label{thm:prime:lanski-engel-lie}
+Let $R$ be a prime ring, $L$ a noncommutative Lie ideal of $R$, and $D$ a nonzero
+derivation of $R$. If $[D(x),x]_k=0$ for all $x\in L$, with $k$ fixed, then
+$\operatorname{char}R=2$ and $R$ embeds in the matrices $M_2(F)$ over a field $F$.
+\end{theorem}
+
+Lanski also studies derivations that are nilpotent on other sets of elements
+\cite[p.~1427]{Lanski1992}. The sets are Lie ideals, right ideals, and symmetric
+or skew elements \cite[p.~1427]{Lanski1992}.
+
+He shows that such a derivation is inner in the quotient ring
+\cite[p.~1427]{Lanski1992}. He also shows that it comes from a nilpotent element
+of about half the index \cite[p.~1427]{Lanski1992}.
+
+Section~\ref{sec:prime-semiprime:ideals-lie-ideals} asks which sets of elements
+of a ring can carry such conditions.

@@ -1,0 +1,289 @@
+% STATUS: written 2026-11-05 (Cheung 2001 pp. 117--127 read in full; Cheung 2003
+% pp. 299--310 read in full; Benkovic 2014 Section 1 and Theorem 1.1; Wang 2016
+% pp. 1952--1953 read for the triangular-ring form, already used in chapter 7.)
+% STATUS: extended 2026-11-06 (Vladeva 2018 read in full)
+% STATUS: extended 2026-11-07 (Cheng and Jing 2007, Ma and Ji 2007, Xiao 2012,
+% Benkovic 2011, Liang--Ren--Wei 2020 and Cheraghpour--Jafari 2024 read in full)
+% Sources: Vladeva 2018 (pp. 1--5); Cheng and Jing 2007 (pp. 1--5);
+% Ma and Ji 2007 (pp. 355--362); Xiao 2012 (pp. 1--7); Benkovic 2011
+% (pp. 1532--1541); Liang, Ren and Wei 2020 (pp. 1--8); Cheraghpour and
+% Jafari 2024 (pp. 1--6).
+\section{Triangular algebras}\label{sec:matrix-triangular:triangular}
+
+Section~\ref{sec:matrix-triangular:matrix} treated full matrix algebras, where the
+two algebras $A$ and $B$ of the block picture have the same size and the bimodule
+$M$ fills the whole off-diagonal block \cite[p.~119]{Cheung2001}. A triangular
+algebra keeps the block shape and sets one off-diagonal block to zero
+\cite[p.~119]{Cheung2001}. That is the smallest change which removes the symmetry
+that the matrix-unit arguments used \cite[p.~119]{Cheung2001}.
+
+\begin{definition}[{\cite[Definition~2, p.~119]{Cheung2001}}]\label{def:triangular:algebra}
+Let $A$ and $B$ be unital algebras over a commutative ring $R$, and let $M$ be an
+$(A,B)$-bimodule that is faithful as a left $A$-module and as a right
+$B$-module. The $R$-algebra
+\[
+\operatorname{Tri}(A,M,B)=\left\{\begin{pmatrix} a & m\\ 0 & b\end{pmatrix}:
+a\in A,\ m\in M,\ b\in B\right\}
+\]
+under the usual matrix addition and formal matrix multiplication is called a
+triangular algebra. We write $a\oplus b$ for the element with $m=0$.
+\end{definition}
+
+Cheung notes that the two natural projections $\pi_A$ and $\pi_B$, which read off
+$a$ and $b$, are the only maps needed to state the results
+\cite[Definition~3, p.~119]{Cheung2001}. Cheung gives the centre a short description, and
+that description carries the whole theory \cite[p.~119]{Cheung2001}.
+
+\begin{proposition}[{\cite[Proposition~3, p.~119]{Cheung2001}}]\label{prop:triangular:centre}
+The centre of $\Omega=\operatorname{Tri}(A,M,B)$ is
+\[
+Z(\Omega)=\{a\oplus b : a\in A,\ b\in B,\ am=mb\ \text{for every } m\in M\}.
+\]
+Moreover $\pi_A(Z(\Omega))\subseteq Z(A)$ and $\pi_B(Z(\Omega))\subseteq Z(B)$,
+and there is a unique algebra isomorphism $\tau$ from $\pi_A(Z(\Omega))$ to
+$\pi_B(Z(\Omega))$ such that $am=m\tau(a)$ for every $m\in M$.
+\end{proposition}
+
+The faithfulness of $M$ on both sides enters here. A central element $a\oplus b$
+forces $a\in Z(A)$ and $b\in Z(B)$, since $M$ separates $A$ from $B$
+\cite[p.~119]{Cheung2001}.
+
+Derivations of a triangular algebra split in an explicit way. Cheung records the
+split as a lemma, and the rest of the paper uses it
+\cite[Lemma~5, p.~303]{Cheung2003}.
+
+\begin{lemma}[{\cite[Lemma~5, p.~303]{Cheung2003}}]\label{lem:triangular:derivation}
+A derivation $\delta$ on $\Omega=\operatorname{Tri}(A,M,B)$ is of the form
+\[
+\delta\begin{pmatrix} a & m\\ 0 & b\end{pmatrix}
+=\begin{pmatrix} p_A(a) & an-nb+f(m)\\ 0 & p_B(b)\end{pmatrix},
+\]
+where $n\in M$ and
+\begin{enumerate}
+\item $p_A$ is a derivation on $A$ and $f(am)=p_A(a)m+af(m)$;
+\item $p_B$ is a derivation of $B$ and $f(mb)=mp_B(b)+f(m)b$.
+\end{enumerate}
+\end{lemma}
+
+The element $n$ gives the inner part of the derivation. The map $f$ is the part
+that acts on the bimodule \cite[p.~303]{Cheung2003}. Suppose $M$ is faithful on
+the left. Then the first condition alone forces $p_A$ to be a derivation, so the
+two conditions are not independent \cite[p.~303]{Cheung2003}.
+
+One more name is needed, for the maps that the derivation lemma does not cover
+\cite[p.~299]{Cheung2003}.
+
+\begin{definition}[{\cite[p.~299]{Cheung2003}}]\label{def:triangular:proper-lie}
+A proper Lie derivation is a Lie derivation of an associative algebra that can be
+written as the sum of a derivation and a linear map with image in the centre of the
+algebra. A Lie derivation that is not a proper Lie derivation is called an improper
+Lie derivation.
+\end{definition}
+
+Cheung first describes the shape of an arbitrary Lie derivation
+\cite[Proposition~4, p.~302]{Cheung2003}. The description has one element
+$n\in M$ and six linear maps \cite[Proposition~4, p.~302]{Cheung2003}. A map is
+proper exactly when two centre-valued maps $h_A$ and $h_B$ pass a test
+\cite[Theorem~6, p.~303]{Cheung2003}.
+
+The main theorem asks when every Lie derivation is proper. Its conditions
+involve only $A$ and $B$ \cite[Theorem~11, p.~307]{Cheung2003}. For an algebra
+$X$, let $W(X)$ be the smallest subalgebra that meets conditions (i) to (vii) of
+Proposition~10 of that paper \cite[Proposition~10, p.~305]{Cheung2003}.
+
+\begin{theorem}[{\cite[Theorem~11, p.~307]{Cheung2003}}]\label{thm:triangular:proper-lie}
+Every Lie derivation of $\Omega=\operatorname{Tri}(A,M,B)$ is proper if the
+following two conditions hold:
+\begin{enumerate}
+\item either $M$ is a faithful left $A$-module and $Z(B)=\pi_B(Z(\Omega))$; or $M$
+is a faithful left $A$-module and $A=W(A)$; or every Lie derivation of $A$ is
+proper and $A=W(A)$;
+\item either $M$ is a faithful right $B$-module and $Z(A)=\pi_A(Z(\Omega))$; or $M$
+is a faithful right $B$-module and $B=W(B)$; or every Lie derivation of $B$ is
+proper and $B=W(B)$.
+\end{enumerate}
+\end{theorem}
+
+Cheung gives three simple ways to meet $A=W(A)$. One is that $A$ is generated
+by commutators and idempotents. Another is that two elements of $A$ commute to
+an invertible element \cite[p.~307]{Cheung2003}. The upper triangular matrix
+algebra meets the first one, which gives the next corollary.
+
+\begin{corollary}[{\cite[Corollary~17, p.~308]{Cheung2003}}]\label{cor:triangular:upper-lie}
+Every Lie derivation of $T_n(R)$, the $n\times n$ upper triangular matrix algebra
+over $R$, has the form $a\mapsto ax-xa+h(a)1$, where $x\in T_n(R)$ is fixed and
+$h$ is a linear functional defined on the span of $\{E_{jj}:j=1,\dots,n\}$.
+\end{corollary}
+
+Over a semiring the upper triangular matrix algebra still has derivations
+\cite[p.~5]{Vladeva2018Semirings}. Take an additively idempotent semiring, where
+the sum of two equal terms adds nothing \cite[p.~2]{Vladeva2018Semirings}. Set
+one principal dense submatrix to zero and keep every other entry. That map is a
+derivation \cite[Theorem~1, p.~5]{Vladeva2018Semirings}. The partial identity
+matrices produce these maps, and the theorem counts them
+\cite[p.~5]{Vladeva2018Semirings}.
+
+The commuting-map question has a parallel answer on the same class of algebras
+\cite[Theorem~2, p.~124]{Cheung2001}. Cheung proves that every commuting map is
+proper under three conditions \cite[Theorem~2, p.~124]{Cheung2001}. Each centre
+must be the image of the centre of $\Omega$. One element $m_0\in M$ must
+separate the central elements \cite[Theorem~2, p.~124]{Cheung2001}. The proof
+first describes an arbitrary commuting map. Its data are two commuting maps, one
+on $A$ and one on $B$, and four maps into centres
+\cite[Proposition~4, p.~121]{Cheung2001}.
+
+The conditions are needed. A triangular algebra can carry an improper commuting
+map even when $A$ and $B$ are both commutative
+\cite[Example~1, p.~123]{Cheung2001}. That example is why the chapter keeps the
+commuting-map and the derivation theorems apart
+\cite[Example~1, p.~123]{Cheung2001}.
+
+The Jordan law holds on triangular algebras without the unital hypothesis. One
+condition on the two diagonal algebras is enough
+\cite[Theorem~2.10, p.~5]{ChengJing2007}. Cheng and Jing say that $A$ has
+property (P) when $xay+yax=0$ for all $x,y\in A$ forces $a=0$
+\cite[p.~2]{ChengJing2007}.
+
+\begin{theorem}[{\cite[Theorem~2.10, p.~5]{ChengJing2007}}]\label{thm:triangular:cheng-jing}
+Let $A$ and $B$ be two algebras over a $2$-torsion free commutative ring $R$,
+both with property (P), and let $M$ be a faithful $(A,B)$-bimodule. Then every
+Jordan derivation of $\operatorname{Tri}(A,M,B)$ into itself is a derivation.
+\end{theorem}
+
+Neither $A$ nor $B$ need have an identity, and the proof does not use the two
+idempotents $P$ and $Q$ of the block picture \cite[p.~1]{ChengJing2007}. The
+authors prove the three component statements separately: $\delta$ is a
+derivation on each of $T_{11}$, $T_{12}$ and $T_{22}$
+\cite[Lemmas~2.7--2.9, pp.~4--5]{ChengJing2007}.
+
+The same law reaches a bimodule when the map is generalized by its value at the
+identity \cite[Theorem~2.4, p.~362]{MaJi2007}. A generalized Jordan derivation
+$\Phi$ satisfies
+$\Phi(ab+ba)=\Phi(a)b+a\Phi(b)+\Phi(b)a+b\Phi(a)-a\Phi(I)b-b\Phi(I)a$
+\cite[p.~355]{MaJi2007}. A generalized derivation $\Psi$ satisfies
+$\Psi(ab)=\Psi(a)b+a\Psi(b)-a\Psi(I)b$ \cite[p.~355]{MaJi2007}.
+
+\begin{theorem}[{\cite[Theorem~2.4, p.~362]{MaJi2007}}]\label{thm:triangular:ma-ji}
+Let $\Phi$ be a generalized Jordan derivation from $T_n(R)$ into a
+$T_n(R)$-bimodule $M$. Then there are a unique generalized derivation $\Psi$ and
+an antiderivation $\Lambda$ from $T_n(R)$ to $M$, with
+$\Lambda(D_n(R))=0$, such that $\Phi=\Psi+\Lambda$.
+\end{theorem}
+
+Here $D_n(R)$ is the subalgebra of diagonal matrices
+\cite[p.~356]{MaJi2007}. The condition on $D_n(R)$ makes the factorization
+unique. Without it an antiderivation can appear twice
+\cite[p.~362]{MaJi2007}.
+
+The Jordan question also has a nonlinear form. A nonlinear Jordan derivation is
+a map that satisfies the Jordan law with no additivity assumed
+\cite[p.~1]{Xiao2012}. Xiao shows that on a triangular algebra the nonlinear law
+forces additivity and the derivation rule together
+\cite[Theorem~2.1, p.~2]{Xiao2012}.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~2]{Xiao2012}}]\label{thm:triangular:nonlinear-jordan}
+Let $T=\begin{pmatrix}A&M\\0&B\end{pmatrix}$ be a triangular algebra and let $d$
+be a nonlinear Jordan derivation of $T$. Then $d$ is an additive derivation.
+\end{theorem}
+
+The proof first finds the image of each corner. The image of $T_{12}$ lies in
+$T_{12}$, and the image of $T_{11}$ lies in $T_{11}+T_{12}$
+\cite[Lemmas~2.2--2.3, p.~2]{Xiao2012}. The nonlinear hypothesis then gives
+additivity, and the derivation rule follows \cite[pp.~2--7]{Xiao2012}. Take a
+nest algebra on an infinite dimensional Hilbert space. There every nonlinear
+Jordan derivation is inner. It is an additive derivation, and every derivation
+of a nest algebra is inner \cite[Proposition~2.11, p.~7]{Xiao2012}.
+
+Lie derivations of a triangular algebra carry a generalization of their own. A
+generalized Lie derivation $f$ comes with an associated linear map $d$ and
+satisfies $f([x,y])=[f(x),y]+[x,d(y)]$ \cite[p.~1535]{Benkovic2011GenLie}.
+Benkovic reduces the question to a condition on the single element $d(1)$
+\cite[p.~1539]{Benkovic2011GenLie}.
+
+\begin{theorem}[{\cite[Theorem~3.6, p.~1541]{Benkovic2011GenLie}}]\label{thm:triangular:generalized-lie}
+Let $\mathcal{A}=\operatorname{Tri}(A,M,B)$ be a triangular algebra and let
+$f\colon\mathcal{A}\to\mathcal{A}$ be a generalized Lie derivation with
+associated linear map $d$. Suppose that
+\begin{enumerate}
+\item $\pi_A(Z(\mathcal{A}))=Z(A)$ or $[B,B]=B$, and
+\item $\pi_B(Z(\mathcal{A}))=Z(B)$ or $[A,A]=A$.
+\end{enumerate}
+Then $f=\Delta+\tau$, where $\Delta$ is a generalized derivation of
+$\mathcal{A}$ and $\tau\colon\mathcal{A}\to Z(\mathcal{A})$ is a linear map
+that vanishes on all commutators of $\mathcal{A}$.
+\end{theorem}
+
+The two conditions let the theorem of Cheung on proper Lie derivations reach the Lie
+part \cite[p.~1541]{Benkovic2011GenLie}. Take a Hilbert space nest algebra. Its
+centre is one-dimensional. There every generalized Lie derivation is a
+generalized inner derivation plus a centre-valued linear map
+\cite[Corollary~3.8, p.~1542]{Benkovic2011GenLie}. The same paper settles the
+generalized Jordan question on a $2$-torsion free triangular algebra
+\cite[Theorem~4.2, p.~1542]{Benkovic2011GenLie}.
+
+The bilinear form of the question has the same shape. A biderivation of an
+algebra $A$ is a bilinear map that is a derivation in each argument
+\cite[p.~2]{LiangRenWei2020}. Its Lie form is a Lie derivation in each argument
+\cite[p.~2]{LiangRenWei2020}.
+
+\begin{theorem}[{\cite[Theorem~3.2, p.~7]{LiangRenWei2020}}]\label{thm:triangular:lie-biderivation}
+Let $T=\begin{pmatrix}A&M\\0&B\end{pmatrix}$ be a triangular algebra over a
+commutative ring $R$ and let $\varphi\colon T\times T\to T$ be a Lie
+biderivation. Suppose that
+\begin{enumerate}
+\item $\pi_A(Z(T))=Z(A)$ and $\pi_B(Z(T))=Z(B)$;
+\item at least one of $A$ and $B$ is noncommutative;
+\item every bimodule homomorphism $f\colon M\to M$ has the standard form;
+\item $\alpha a=0$ with $\alpha\in Z(A)$ and $0\neq a\in A$ forces $\alpha=0$.
+\end{enumerate}
+Then $\varphi(x,y)=\lambda_0[x,y]+[x,[y,\varphi(e,e)]]+\mu(x,y)$ for some
+$\lambda_0\in Z(T)$ and some central bilinear map $\mu$.
+\end{theorem}
+
+A bimodule homomorphism has the standard form when
+$f(m)=a_0m+mb_0$ for central $a_0$ and $b_0$
+\cite[equation~(3.3), p.~7]{LiangRenWei2020}. On a block upper triangular matrix
+algebra over a domain the sum reduces to one extremal biderivation plus one inner
+biderivation \cite[Corollary~3.8, p.~8]{LiangRenWei2020}.
+
+A superalgebra version of the triangular ring has the same block shape with a
+sign in the product \cite[p.~1]{CheraghpourJafari2024}. A Jordan superderivation
+of degree $0$ satisfies the Jordan law, and one of degree $1$ satisfies it with
+the super sign \cite[p.~2]{CheraghpourJafari2024}. The upper triangular matrix
+ring here is the trivial extension of $R\times S$ by the bimodule $M$
+\cite[p.~3]{CheraghpourJafari2024}.
+
+\begin{theorem}[{\cite[Theorem~2.3, pp.~4--6]{CheraghpourJafari2024}}]\label{thm:triangular:jordan-super}
+Let $d_0$ and $d_1$ be Jordan superderivations of degree $0$ and $1$ of the
+upper triangular matrix ring $T=\begin{pmatrix}R&M\\0&S\end{pmatrix}$, with $R$
+and $S$ $2$-torsion free. Then there are Jordan derivations $\delta_1$ of $R$
+and $\delta_2$ of $S$, an additive map $g$ on $M$ with
+$g(rm+ms)=rg(m)+\delta_1(r)m+g(m)s+m\delta_2(s)$, and an element $m^{*}\in M$
+such that
+\[
+d_0\begin{pmatrix}r&m\\0&s\end{pmatrix}
+=\begin{pmatrix}\delta_1(r)&g(m)\\0&\delta_2(s)\end{pmatrix},
+\qquad
+d_1\begin{pmatrix}r&m\\0&s\end{pmatrix}
+=\begin{pmatrix}0&rm^{*}-m^{*}s\\0&0\end{pmatrix}.
+\]
+\end{theorem}
+
+So the even part is a triangular Jordan derivation. The odd part is the inner
+superderivation of one element \cite[p.~6]{CheraghpourJafari2024}. The corollary
+is that every Jordan superderivation of the ring is a Jordan derivation
+\cite[p.~6]{CheraghpourJafari2024}.
+
+Two results come from other chapters and are not repeated here. The
+$f$-derivation theorem of Benkovič concerns triangular algebras. It says that an
+$f$-derivation is a derivation when the coefficients of $f$ have a nonzero sum
+that is regular \cite[Theorem~1.1]{Benkovic2014}, and it is stated as
+Theorem~\ref{thm:f:triangular}. The triangular-ring form is a unital ring with a
+nontrivial idempotent $e$ such that $f=1-e$ and $fRe=0$. It appears in
+Section~\ref{sec:higher-multi:tri-generalized} \cite[p.~1953]{Wang2016Bideriv}.
+
+Recall that a triangular algebra has two square blocks of possibly different sizes. The
+generalized matrix algebra of
+Section~\ref{sec:matrix-triangular:generalized-matrix} keeps both off-diagonal
+blocks, and the two bilinear maps that multiply them are what remains of the matrix
+product.

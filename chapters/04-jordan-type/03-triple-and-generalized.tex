@@ -1,0 +1,122 @@
+% STATUS: written 2026-10-21, recalled results as is (one environment each, source kind and whole statement)
+% STATUS: extended 2026-11-06 (Kawai, Guzzo and Ferreira 2025 read in full)
+% Sources read in full: Fosner and Ilisevic 2008 (pp. 415--427), Ferreira, Guzzo and Ferreira 2020 (arXiv version, pp. 1--3), Majeed and Ozel 2014 (pp. 1881--1883); Kawai, Guzzo and Ferreira 2025 (pp. 1, 5--10, 12).
+\section{Jordan triple, generalized Jordan and Jordan n-derivations}\label{sec:jordan-type:triple-and-generalized}
+
+Section~\ref{sec:jordan-type:semiprime} showed that a Jordan derivation on a $2$-torsion free
+semiprime ring is a derivation. Three families of maps change the rule $d(x^{2})=d(x)x+xd(x)$. Jordan triple derivations
+state a rule for $xyx$ \cite[p.~416]{FosnerIlisevic2008}. Generalized Jordan derivations use a
+second map \cite[p.~1]{FerreiraGuzzoFerreira2020}. The $(m,n)$-Jordan derivations of Vukman
+weight the two terms \cite[p.~1881]{MajeedOzel2014}. This section takes each family in turn.
+
+Fošner and Ilišević work with a ring $R$ and an $R$-bimodule $M$
+\cite[p.~416]{FosnerIlisevic2008}. They define the following maps.
+
+\begin{definition}[{\cite[Section~1, p.~416]{FosnerIlisevic2008}}]\label{def:jordan:triple-generalized}
+Let $R$ be a ring and let $M$ be an $R$-bimodule. A Jordan triple derivation $\delta\colon R\to M$
+is an additive mapping satisfying $\delta(xyx)=\delta(x)yx+x\delta(y)x+xy\delta(x)$ for all
+$x,y\in R$. An additive mapping $E\colon R\to M$ is called a generalized derivation if there
+exists a derivation $\delta\colon R\to M$ such that $E(xy)=E(x)y+x\delta(y)$ for all $x,y\in R$,
+and it is called a generalized Jordan derivation if there is a Jordan derivation
+$\delta\colon R\to M$ such that $E(x^{2})=E(x)x+x\delta(x)$ holds for all $x\in R$. An additive
+mapping $E\colon R\to M$ is called a generalized Jordan triple derivation if there exists a
+Jordan triple derivation $\delta\colon R\to M$ such that
+$E(xyx)=E(x)yx+x\delta(y)x+xy\delta(x)$ for all $x,y\in R$.
+\end{definition}
+
+Every derivation is a Jordan derivation, and every generalized derivation is a generalized Jordan
+derivation \cite[p.~416]{FosnerIlisevic2008}. Let the ring be $2$-torsion free. Then every Jordan
+derivation is a Jordan triple derivation \cite[p.~416]{FosnerIlisevic2008}. Also every generalized
+Jordan derivation is a generalized Jordan triple derivation with the same related map
+\cite[p.~416]{FosnerIlisevic2008}. For semiprime rings
+Fošner and Ilišević study a pair $(E,F)$ of additive maps \cite[p.~423]{FosnerIlisevic2008}.
+
+\begin{theorem}[{\cite[Theorem~4.1, p.~424]{FosnerIlisevic2008}}]\label{thm:jordan:fosner-ilisevic-pair}
+Let $R$ be a $2$-torsion free semiprime ring and let $E,F\colon R\to R$ be additive mappings.
+Then the following conditions are mutually equivalent:
+(a) for all $x,y\in R$, $E(xyx)=E(x)yx+xF(y)x+xyF(x)$ and $F(xyx)=F(x)yx+xF(y)x+xyF(x)$;
+(b) for all $x,y,z\in R$, $E(xyz)=E(x)yz+xF(y)z+xyF(z)$ and $F(xyz)=F(x)yz+xF(y)z+xyF(z)$;
+(c) for all $x,y\in R$, $E(xy)=E(x)y+xF(y)$ and $F(xy)=F(x)y+xF(y)$;
+(d) for all $x\in R$, $E(x^{2})=E(x)x+xF(x)$ and $F(x^{2})=F(x)x+xF(x)$.
+\end{theorem}
+
+A direct consequence is the answer for generalized Jordan triple derivations
+\cite[p.~424]{FosnerIlisevic2008}. It proves a conjecture posed in an earlier paper
+\cite[p.~424]{FosnerIlisevic2008}.
+
+\begin{corollary}[{\cite[Corollary~4.2, p.~424]{FosnerIlisevic2008}}]\label{cor:jordan:fosner-ilisevic-semiprime}
+Let $R$ be a $2$-torsion free semiprime ring. Then any generalized Jordan triple derivation on $R$
+is a generalized derivation.
+\end{corollary}
+
+Setting $F=0$ in Theorem~\ref{thm:jordan:fosner-ilisevic-pair} gives a statement about left
+centralizers, which are the maps $T$ with $T(xy)=T(x)y$ \cite[p.~424]{FosnerIlisevic2008}.
+
+\begin{corollary}[{\cite[Corollary~4.3, p.~424]{FosnerIlisevic2008}}]\label{cor:jordan:fosner-ilisevic-centralizer}
+Let $R$ be a $2$-torsion free semiprime ring and let $T\colon R\to R$ be an additive mapping.
+Then the following conditions are mutually equivalent:
+(a) $T(xyx)=T(x)yx$ $(x,y\in R)$;
+(b) $T(xyz)=T(x)yz$ $(x,y,z\in R)$;
+(c) $T(xy)=T(x)y$ $(x,y\in R)$;
+(d) $T(x^{2})=T(x)x$ $(x\in R)$.
+\end{corollary}
+
+Ferreira, Guzzo and Ferreira define a generalized Jordan derivation $\delta$ with a relating
+Jordan derivation $\tau$ \cite[p.~1]{FerreiraGuzzoFerreira2020}. Jing and Lu introduced this
+notion \cite[p.~2]{FerreiraGuzzoFerreira2020}. They stated the conjecture that every generalized Jordan
+derivation on a $2$-torsion free semiprime ring is a generalized derivation
+\cite[p.~2]{FerreiraGuzzoFerreira2020}. Ferreira, Guzzo and Ferreira prove it when the ring has a
+nontrivial idempotent with mild conditions \cite[p.~2]{FerreiraGuzzoFerreira2020}. The conditions
+follow the statement on the same page \cite[p.~2]{FerreiraGuzzoFerreira2020}.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~2]{FerreiraGuzzoFerreira2020}}]\label{thm:jordan:ferreira-guzzo}
+Let $R$ be a $2$-torsion free semiprime unity ring and $\delta$ be an additive generalized Jordan
+derivation from $R$ into itself. If there exist an idempotent $e$ so that $e\neq0$, $e\neq1$ in $R$,
+then $\delta$ is an additive generalized derivation.
+\end{theorem}
+
+The proof rests on the Peirce decomposition $R=R_{11}\oplus R_{12}\oplus R_{21}\oplus R_{22}$ with
+respect to $e$ \cite[p.~2]{FerreiraGuzzoFerreira2020}. It also rests on a lemma of Jing and Lu
+\cite[p.~3]{FerreiraGuzzoFerreira2020}.
+
+\begin{lemma}[{\cite[Lemma~2.1, p.~3]{FerreiraGuzzoFerreira2020}}]\label{lem:jordan:jing-lu}
+For all $a,b,c\in R$, the following statements hold:
+(i) $\delta(ab+ba)=\delta(a)b+a\tau(b)+\delta(b)a+b\tau(a)$;
+(ii) $\delta(aba)=\delta(a)ba+a\tau(b)a+ab\tau(a)$;
+(iii) $\delta(abc+cba)=\delta(a)bc+a\tau(b)c+ab\tau(c)+\delta(c)ba+c\tau(b)a+cb\tau(a)$.
+\end{lemma}
+
+Majeed and Özel recall that Vukman introduced the third family \cite[p.~1881]{MajeedOzel2014}. Let $m\geq1$ and $n\geq1$ be fixed integers
+with $m\neq n$, and let $A$ be an algebra \cite[p.~1881]{MajeedOzel2014}. A nonzero additive
+mapping $\delta\colon A\to A$ with $(m+n)\delta(x^{2})=2m\delta(x)x+2nx\delta(x)$ for all $x\in A$
+is called an $(m,n)$-Jordan derivation \cite[p.~1881]{MajeedOzel2014}.
+Their first lemma shows how such a
+map acts on idempotents.
+
+\begin{lemma}[{\cite[Lemma~2.1, p.~1882]{MajeedOzel2014}}]\label{lem:jordan:majeed-ozel}
+Let $A$ be a unital algebra. If $\delta$ is an $(m,n)$-Jordan derivation from $A$ into itself, then
+for each idempotent $P\in A$, $(m+n)\delta(P)=2m\delta(P)P+2nP\delta(P)$.
+\end{lemma}
+
+Majeed and Özel then work in algebras of operators that leave the members of a commutative
+subspace lattice invariant \cite[p.~1881]{MajeedOzel2014}.
+
+The additive form of each of these notions has a common setting in axial
+algebras \cite[p.~1]{KawaiGuzzoFerreira2025}. An axial algebra carries a
+distinguished set of idempotents whose products follow a fusion rule
+\cite[Definition~2.3, p.~5]{KawaiGuzzoFerreira2025}. A Jordan algebra with an
+idempotent is an example, and so is the Norton--Sakuma algebra of type $2A$
+\cite[Example~4.2, p.~8]{KawaiGuzzoFerreira2025}. Kawai, Guzzo and Ferreira
+measure how far a multiplicative map is from being additive by a nullifying
+function \cite[Definition~3.5, p.~6]{KawaiGuzzoFerreira2025}. This function is
+symmetric in its finitely many arguments, and it vanishes on a repeated sum
+exactly when it vanishes on the summands
+\cite[Definition~3.5, p.~6]{KawaiGuzzoFerreira2025}. The authors prove that it
+vanishes on a $J(\alpha)$-algebra under three conditions of Martindale type
+\cite[Theorem~4.1, p.~8]{KawaiGuzzoFerreira2025}. Then four kinds of map are
+additive. They are the $n$-multiplicative isomorphisms, the $n$-multiplicative
+derivations, the surjective elementary maps, and, when the characteristic is not
+$2$, the surjective Jordan elementary maps
+\cite[Corollary~4.1, p.~10]{KawaiGuzzoFerreira2025}. The same conclusion holds
+for $M(\alpha,\beta)$-axial algebras under five conditions
+\cite[Theorem~5.1, p.~12]{KawaiGuzzoFerreira2025}.

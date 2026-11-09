@@ -1,0 +1,104 @@
+% STATUS: written 2026-11-05 (source of the section read in full: Togo 1969 pp. 209--212)
+% STATUS: extended 2026-11-07 (Magnin 2009 read at the introduction and
+% Section 2; Wasserman 1998 read in full)
+% Source: Togo1969; Magnin 2009 (pp. 723--727); Wasserman 1998 (pp. 79--92).
+\section{Characteristically nilpotent Lie algebras}\label{sec:lie-algebras:characteristically-nilpotent}
+
+Section~\ref{sec:lie-algebras:jacobson} ended with two extremes:
+semisimple Lie algebras have only inner derivations
+(Theorem~\ref{thm:lie:jacobson-humphreys}), and nilpotent ones always have
+outer derivations (Theorem~\ref{thm:lie:jacobson-nilpotent}).  A stronger
+way for a Lie algebra to sit near the nilpotent pole is to require that
+every derivation be nilpotent as a linear map; Togo works with the
+following definition \cite[p.~209]{Togo1969}, attributed there to
+Dixmier--Lister and to Leger--Togo.
+
+\begin{definition}[{\cite[p.~209]{Togo1969}}]\label{def:lie:char-nilpotent}
+Let $L$ be a Lie algebra over a field $F$ and let
+$\mathcal{D}(L)=\operatorname{Der} L$ be its algebra of derivations.  Put
+$L^{(1)}=L\mathcal{D}(L)$, the $F$-subspace spanned by all $D(x)$ with
+$x\in L$ and $D\in\mathcal{D}(L)$, and inductively
+$L^{(n)}=L^{(n-1)}\mathcal{D}(L)$ for $n\geq 2$.  Then $L$ is called
+\emph{characteristically nilpotent} provided there exists an integer $k$
+such that $L^{(k)}=(0)$.
+\end{definition}
+
+Every characteristically nilpotent Lie algebra is nilpotent, since the inner
+derivations alone drive the lower central series to zero.  The converse is
+false: examples of nilpotent Lie algebras that admit a non-nilpotent
+derivation already appear in the papers of Leger and Togo
+\cite[p.~209]{Togo1969}.  Togo describes the class by a nilpotent
+characteristic ideal and its quotient
+\cite[Theorem, p.~210]{Togo1969}.
+
+\begin{theorem}[{\cite[Theorem, p.~210]{Togo1969}}]\label{thm:lie:togo-char-nilpotent}
+Let $A$ be a nonassociative algebra over a field $F$ and let $N$ be a
+nilpotent characteristic ideal of $A$ such that $N^{k}$ is an ideal of $A$
+for every $k\geq 2$.  Then $A$ is characteristically nilpotent if and only
+if $A/N^{n}$ is characteristically nilpotent for some integer $n$.
+\end{theorem}
+
+For Lie and alternative algebras the assumption on $N^{k}$ is automatic
+\cite[p.~211]{Togo1969}, so the statement specializes without it.
+
+\begin{corollary}[{\cite[Corollary, p.~211]{Togo1969}}]\label{cor:lie:togo-char-nilpotent-lie}
+Let $A$ be a Lie or alternative (associative) algebra over a field $F$
+and let $N$ be a nilpotent characteristic ideal of $A$.  Then $A$ is
+characteristically nilpotent if and only if $A/N^{n}$ is characteristically
+nilpotent for some integer $n$.
+\end{corollary}
+
+Togo closes the paper with a three-dimensional nonassociative algebra.
+It is characteristically nilpotent without being a Lie algebra
+\cite[p.~211]{Togo1969}.  The basis $x_1,x_2,x_3$ has $x_1x_2=x_3$ and
+all other products zero, so $A^{(2)}=(0)$
+\cite[p.~211]{Togo1969}.
+
+Derivations also serve as a construction tool. The
+method of adjoining a derivation turns a nilpotent Lie algebra
+$\mathfrak{g}$ and a nilpotent derivation $\delta$ of it into the semidirect
+product $\widetilde{\mathfrak{g}}_\delta=\mathbb{C}\delta\oplus\mathfrak{g}$,
+with $\mathbb{C}$ acting through $\delta$ \cite[p.~724]{Magnin2009}. Magnin
+applies the method to every complex nilpotent Lie algebra of dimension six
+\cite[p.~724]{Magnin2009}.
+
+The result is a new determination of all seven-dimensional complex nilpotent Lie
+algebras, with a cross table between the six- and seven-dimensional lists
+\cite[p.~724]{Magnin2009}. Among the seven-dimensional algebras the rank-zero
+family is exactly the characteristically nilpotent one
+\cite[p.~726]{Magnin2009}. The check corrected earlier lists, and the paper
+records the corrections \cite[p.~724]{Magnin2009}.
+
+Adjoining a derivation once is a special case of a general construction. A
+derivation of a subalgebra can always be extended to one of a larger algebra
+that contains it \cite[Corollary~5.2, p.~84]{Wasserman1998}. Wasserman builds the
+extension as an HNN extension of Lie algebras, in the pattern of group theory
+\cite[p.~79]{Wasserman1998}. Given a Lie algebra $L$, a subalgebra $A$ and a
+derivation $d\colon A\to L$, the extension $H$ is presented by adding one
+generator $t$ with the relations $[t,a]=d(a)$ for $a\in A$
+\cite[p.~83]{Wasserman1998}.
+
+\begin{theorem}[{\cite[Corollary~5.2, p.~84]{Wasserman1998}}]\label{thm:lie:hnn-embedding}
+Let $L$ be a Lie algebra over a field $k$, let $A$ be a subalgebra and let
+$d\colon A\to L$ be a derivation. Then $L$ is embedded in the HNN extension $H$
+defined by $L$, $A$ and $d$, and the map $\operatorname{ad}t$ extends $d$ to a
+derivation of $H$.
+\end{theorem}
+
+The proof gives a normal form for the elements of $H$ through a Lyndon basis
+\cite[Theorem~5.1, p.~84]{Wasserman1998}. The extension has two extreme cases.
+When $A=L$ it is the semidirect product with a one-dimensional Lie algebra
+acting through $d$. When $A=0$ it is the free product with a one-dimensional
+Lie algebra \cite[p.~83]{Wasserman1998}. The construction also
+embeds every Lie algebra of finite or countable dimension in one generated by two
+elements \cite[Theorem~7.2, p.~88]{Wasserman1998}.
+
+The contrast with Section~\ref{sec:lie-algebras:jacobson} is sharp.
+Theorem~\ref{thm:lie:jacobson-nilpotent} says a nilpotent Lie algebra
+always has an outer derivation.
+A characteristically nilpotent Lie
+algebra, by contrast, admits no semisimple derivation at all: its derivation
+algebra is nilpotent in the sense of the theorem of Engel.
+Section~\ref{sec:lie-algebras:simple} returns
+to the other pole, where positive characteristic gives simple Lie algebras
+an outer-derivation behavior with no counterpart in characteristic zero.

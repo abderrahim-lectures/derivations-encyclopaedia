@@ -1,0 +1,71 @@
+% STATUS: written 2026-11-05, recalled results as is (one environment each, source kind and whole statement)
+% Sources read in full: Woronowicz 1989 (pp. 125--170, Section 1), Losert 2008 (pp. 221--246, Sections 1--2 and the statements of the main results).
+\section{Crossed products and crossed homomorphisms}\label{sec:group-hopf:crossed-products}
+
+Section~\ref{sec:group-hopf:quantum} ended with quotients of the kernel of the
+multiplication map. The same tensor $1\otimes b-b\otimes 1$ has a group form, the
+difference $\mu-x\circ\mu$ of Definition~\ref{def:group-hopf:crossed-hom} below.
+When $G$ acts on the ground ring, the Leibniz rule restricted
+to group elements reads $D(xy)=D(x)y+xD(y)$, and the map $x\mapsto D(x)x^{-1}$ of
+Section~\ref{sec:group-hopf:group-algebras} becomes a crossed homomorphism. We
+first recall the cocycle that builds a crossed product.
+
+\begin{definition}[{\cite[second condition, p.~567]{Davydov2013}}]\label{def:group-hopf:cocycle}
+An element $\varphi$ of $H\otimes H$ satisfies the \emph{2-cocycle condition} for
+the comultiplication $\Delta$ of a bialgebra $H$ when
+\[
+1\otimes\varphi+(I\otimes\Delta)(\varphi)=\varphi\otimes1+(\Delta\otimes I)(\varphi).
+\]
+\end{definition}
+
+The cocycle condition is the second equation of a twisted derivation,
+Definition~\ref{def:group-hopf:twisted}; it says that the first components of
+$\varphi$ in a coassociative expansion agree. Its group version is older: Losert
+calls it a crossed homomorphism, with a left Banach $G$-module and measures in
+place of tensors \cite[p.~222]{Losert2008}.
+
+\begin{definition}[{\cite[p.~222]{Losert2008}}]\label{def:group-hopf:crossed-hom}
+Let $\Omega$ be a locally compact space and $G$ a discrete group acting on $\Omega$
+by homeomorphisms. A mapping $\Phi\colon G\to M(\Omega)$ (or more generally,
+$\Phi\colon G\to X$, where $X$ is a left Banach $G$-module) is called a
+\emph{crossed homomorphism} if $\Phi(xy)=\Phi(x)+x\circ\Phi(y)$ for all $x,y\in G$.
+The map $\Phi$ is called \emph{bounded} if $\sup_{x\in G}\|\Phi(x)\|<\infty$. For
+$\mu\in M(\Omega)$, the special example $\Phi_\mu(x)=\mu-x\circ\mu$ is called a
+\emph{principal crossed homomorphism}.
+\end{definition}
+
+In $\Phi_\mu=\mu-x\circ\mu$ the measure $\mu$ plays the role of the inducing
+element of an inner derivation, and Losert proves the converse for every group:
+Theorem~\ref{thm:group-hopf:losert} below makes every bounded crossed homomorphism
+principal. The derivation problem of Johnson asks whether every derivation
+$D\colon L^1(G)\to L^1(G)$ is inner, induced by a bounded measure
+\cite[p.~221]{Losert2008}. The question goes back to Williamson around 1965, and
+Johnson settled the discrete groups, the amenable groups and the connected groups
+\cite[p.~221]{Losert2008}. Losert proves the full statement through crossed
+homomorphisms \cite[p.~222]{Losert2008}.
+
+\begin{theorem}[{\cite[Theorem~1.1, p.~222]{Losert2008}}]\label{thm:group-hopf:losert}
+Let $\Omega$ be a locally compact space, $G$ a discrete group with a left action of
+$G$ on $\Omega$ by homeomorphisms. Then any bounded crossed homomorphism $\Phi$
+from $G$ to $M(\Omega)$ is principal. There exists $\mu\in M(\Omega)$ with
+$\|\mu\|\le 2\|\Phi\|$ such that $\Phi=\Phi_\mu$.
+\end{theorem}
+
+So a derivation $D\colon L^1(G)\to M(G)$, having values in $L^1(G)$ and being
+bounded, defines a bounded crossed homomorphism from $G$ to $M(G)$ for the
+conjugation action of $G$ on $G$; Theorem~\ref{thm:group-hopf:losert} makes it
+principal, and the inducing measure gives the inner derivation
+\cite[p.~222]{Losert2008}.
+
+\begin{corollary}[{\cite[Corollary~1.2, p.~222]{Losert2008}}]\label{cor:group-hopf:losert}
+Let $G$ denote a locally compact group. Then any derivation
+$D\colon L^1(G)\to M(G)$ is inner.
+\end{corollary}
+
+So the chapter closes where it began: a derivation of a group algebra is again the
+bracket with a single element, once the group and the norm allow it. From the
+integral group ring of a finite group to the measure algebra of a locally compact
+group, only three ways for a derivation to fail to be inner appeared. % claim-ok: synthesis of the cited results of this chapter; no new external fact
+So they are the free factors of Theorem~\ref{thm:group-hopf:spiegel-abelian}, the
+infinite sum of Example~\ref{ex:group-hopf:outer}, and the twists of
+Section~\ref{sec:group-hopf:hopf}.

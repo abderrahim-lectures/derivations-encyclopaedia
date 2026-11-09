@@ -1,0 +1,61 @@
+% STATUS: rewritten 2026-11-05; every claim is cited.
+\section{Semirings}\label{sec:other-systems:semirings}
+
+The $\Gamma$-rings of the previous section still had additive negatives,
+and a semiring drops them: proofs that use subtraction then break, and
+the methods change \cite[p.~624]{AhmedDudek2021}. Ahmed and Dudek
+describe the setting as follows
+\cite[p.~625]{AhmedDudek2021}.
+
+\begin{definition}[{\cite[p.~625]{AhmedDudek2021}}]\label{def:other:semiring}
+A \emph{semiring} $(S, +, \cdot)$ is a nonempty set $S$ with two binary
+operations $+$ and $\cdot$ such that $\cdot$ is left and right
+distributive over $+$, $(S, +)$ is a semigroup with neutral element $0$,
+and $(S, \cdot)$ is a semigroup with zero $0$, that is $0\,a = a\,0 = 0$
+for all $a \in S$. If $(S, \cdot)$ is commutative, the semiring $S$ is
+called \emph{commutative}.
+\end{definition}
+
+The next definition states the additively inverse semirings.
+
+\begin{definition}[{\cite[p.~625]{AhmedDudek2021}}]\label{def:other:ma-semiring}
+A semiring $S$ is \emph{additively inverse} if for every $a \in S$ there
+is a unique $a' \in S$ such that $a + a' + a = a$ and $a' + a + a' = a'$.
+An additively inverse semiring $S$ with commutative addition such that
+$a + a'$ lies in the center $Z(S)$ for every $a \in S$ is called an
+\emph{M A-semiring}.
+\end{definition}
+
+The next definition states the derivations on an additively inverse semiring.
+
+\begin{definition}[{\cite[p.~626]{AhmedDudek2021}}]\label{def:other:semiring-derivations}
+Let $S$ be an additively inverse semiring. An additive mapping
+$d \colon S \to S$ is a \emph{derivation} if
+$d(xy) = d(x)\,y + x\,d(y)$ for all $x, y \in S$, and a \emph{Jordan
+derivation} if $d(x^{2}) = d(x)\,x + x\,d(x)$ for all $x \in S$. It is a
+\emph{left derivation} if $f(xy) = x\,f(y) + y\,f(x)$, and a \emph{left
+Jordan derivation} if
+\[
+f(x^{2}) + 2\,x'\,f(x) = 0 \qquad (x \in S).
+\]
+\end{definition}
+
+Ahmed and Dudek classify the prime M A-semirings on which a nonzero
+left Jordan derivation exists: they are commutative
+\cite[pp.~624--631]{AhmedDudek2021}. Their main theorem is the analogue of
+the result of Bre\v{s}ar and Vukman on prime rings.
+
+\begin{theorem}[{\cite[Theorem~4.3, p.~631]{AhmedDudek2021}}]\label{thm:other:ahmed-dudek}
+If on a prime, $2$- and $3$-torsion free M A-semiring $S$ there exists a
+non-zero left Jordan derivation, then $S$ is commutative.
+\end{theorem}
+
+The proof replaces subtraction by the additive-inverse map $a \mapsto a'$
+and keeps the torsion conditions to make the commutator work
+\cite[pp.~631--632]{AhmedDudek2021}. The next section keeps the order but
+drops the product and moves to derivations on lattices
+\cite[Definition~3.1, p.~309]{XinLiLu2008}.
+
+Vladeva studies the Jordan derivations of the finite endomorphism semiring,
+where the additive structure is a semigroup rather than a group
+\cite[Abstract, p.~1]{Vladeva2017Endomorphism}.

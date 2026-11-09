@@ -1,0 +1,105 @@
+% STATUS: written 2026-11-06 (English gate clean; sources read in full as recorded below).
+% Sources read in full: Jacobson 1937 (Trans. AMS 42, 206--224).
+\section[Derivations and Lie algebras: Jacobson 1937 and the structure theory][Derivations and Lie algebras]{Derivations and Lie algebras: Jacobson 1937 and the structure theory}\label{sec:origins:lie-theory}
+
+The first systematic study of derivations of an abstract algebra is a paper
+of Jacobson from 1937~\cite{Jacobson1937}. Its first sentence states its
+purpose. It studies ``the algebraic properties of the set of operations
+mapping an algebra on itself and having the formal character of derivation
+in the field of analytic functions''~\cite[p.~206]{Jacobson1937}.
+
+Jacobson compares his results with the theory of automorphisms. He writes:
+``Some of the results obtained are analogous to well-known theorems on
+automorphisms of algebras''~\cite[p.~206]{Jacobson1937}. In analysis, a
+derivation is an automorphism taken at an infinitely small scale. His own
+footnote gives an example. On $k[x]$, the map $\exp D$ acts as
+$f(x) \mapsto f(x+1)$~\cite[p.~206]{Jacobson1937}.
+
+Jacobson asks two questions. What do the derivations of an abstract algebra
+look like? Which theorems on automorphisms also hold for derivations? He has
+no analysis to help him. There are no limits and no convergence, and the
+ground field is arbitrary.
+
+Two facts about derivations have no match for automorphisms. They drive the
+paper. First, derivations are closed under commutators, so they form a Lie
+algebra rather than a group. Second, in characteristic $p$ they are also
+closed under $p$-th powers.
+
+To answer these questions, Jacobson works with any algebra $A$ over a field $k$. The algebra need not be
+commutative. It need not be associative. It need not be finite dimensional.
+
+\begin{definition}[{\cite[p.~206]{Jacobson1937}}]\label{def:origins:jacobson}
+A \emph{derivation} of $A$ is a $k$-linear map $D\colon A \to A$ with
+\[
+D(xy) = D(x)\,y + x\,D(y) \qquad (x, y \in A).
+\]
+\end{definition}
+
+Jacobson wrote maps on the right, as $(xy)D = (xD)y + x(yD)$. This was usual
+in the algebra of his time. In this book we write maps on the left.
+
+The first properties follow at once from the product rule. The sum of two derivations is a derivation. A scalar multiple of a
+derivation is a derivation. The product $D_1D_2$ of two derivations is
+usually not a derivation. But the commutator $[D_1,D_2] = D_1D_2 - D_2D_1$ is
+a derivation~\cite[p.~207]{Jacobson1937}.
+
+Repeated use of the product rule gives the Leibniz formula:
+\[
+D^n(xy) = \sum_{i=0}^{n} \binom{n}{i} D^{i}(x)\, D^{n-i}(y).
+\]
+Now let the characteristic be $p$. Then the coefficients $\binom{p}{i}$ with
+$0 < i < p$ are zero. So $D^p$ is again a
+derivation~\cite[p.~207, (7)--(8)]{Jacobson1937}. This fact leads to a new
+notion. A \emph{restricted Lie algebra} is a space of linear maps with two
+properties. It is closed under commutators. In characteristic $p$, it is also
+closed under $p$-th powers.
+
+\begin{theorem}[{\cite[Theorem~1, p.~207]{Jacobson1937}}]\label{thm:origins:jacobson-restricted}
+The derivations of an algebra $A$ over $k$ form a restricted Lie algebra
+$\operatorname{Der}(A)$ of linear maps of~$A$.
+\end{theorem}
+
+Jacobson calls $\operatorname{Der}(A)$ the derivation algebra of $A$.
+
+Jacobson also returns to the comparison with automorphisms. The link is the
+exponential. In a footnote he takes the polynomial ring $k[x]$ over a field
+of characteristic $0$, with the usual derivative $D(f) = f'$. Then
+$\exp D = 1 + D + D^2/2! + \cdots$ is an automorphism, since
+$(\exp D)(f)(x) = f(x+1)$~\cite[p.~206, footnote]{Jacobson1937}.
+Section~\ref{sec:basic-theory:exponential} treats this link in general.
+
+The rest of the paper turns to associative algebras of finite order, mainly
+semisimple ones. Here Jacobson uses the known theory of algebras. He refers
+the reader to the book \emph{Algebren} of Deuring~\cite[p.~206]{Jacobson1937}.
+
+A recent line of work pairs an algebra with one chosen derivation and studies
+the pair. Das calls such a pair a \emph{LeibDer pair} when the algebra is a
+Leibniz algebra and the map is a derivation of
+it~\cite[\S 3, p.~4]{Das2021LeibDer}. With a skew-symmetric bracket the same
+construction gives a LieDer pair, so a LeibDer pair is the version without
+skew-symmetry~\cite[\S 3, p.~4]{Das2021LeibDer}.
+
+\begin{definition}[{\cite[\S 3, p.~4]{Das2021LeibDer}}]\label{def:origins:leibder}
+Let $\mathfrak{g}$ be a Leibniz algebra. A linear map
+$\varphi_{\mathfrak{g}}\colon \mathfrak{g} \to \mathfrak{g}$ is a
+\emph{derivation} on $\mathfrak{g}$ when
+\[
+  \varphi_{\mathfrak{g}}[x, y] = [\varphi_{\mathfrak{g}}(x), y]
+  + [x, \varphi_{\mathfrak{g}}(y)]
+\]
+for all $x, y \in \mathfrak{g}$. A \emph{LeibDer pair}
+$(\mathfrak{g}, \varphi_{\mathfrak{g}})$ is a Leibniz algebra together with
+one of its derivations.
+\end{definition}
+
+Das notes that the derivations in this sense are the one-cocycles of the
+cochain complex of the Leibniz algebra with coefficients in
+itself~\cite[\S 3, p.~4]{Das2021LeibDer}. From there the pair carries its own
+cohomology, and central extensions, deformations and the homotopy version are
+all read through it~\cite[p.~1]{Das2021LeibDer}. For a free Leibniz algebra on
+a space $V$, a linear map of $V$ extends to a derivation, and the resulting
+pair is the free one~\cite[Proposition~3.4, p.~5]{Das2021LeibDer}.
+
+The derivations of Jacobson map an algebra to itself. Derivations with values
+in a module have their own history. It began with groups that act on fields,
+long before 1937.

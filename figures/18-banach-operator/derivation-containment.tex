@@ -1,0 +1,31 @@
+% The derivation spaces of a C*-algebra A acting on a Hilbert space H. An
+% inner derivation x->ax-xa has its implementing element a in A, so it is
+% spatial (Sakai 1966, pp. 273--274; Kadison 1966, p. 281). Kadison proves
+% that every derivation of a C*-algebra on H is spatial (Theorem 4, p. 283),
+% and Sakai that every derivation of a von Neumann algebra is inner
+% (Theorem 1, p. 274; Kadison 1966, Theorem 15, p. 290). So the first
+% inclusion is an equality on a von Neumann algebra, the second an equality
+% for every C*-algebra on H.
+\begin{tikzpicture}[font=\small]
+  % the chain
+  \node[hbkey,text width=18mm,minimum height=9mm,align=center] (inn) at (0,0)
+    {inner};
+  \node[hbnode,text width=18mm,minimum height=9mm,align=center] (spat) at (36mm,0)
+    {spatial};
+  \node[hbnode,text width=22mm,minimum height=9mm,align=center] (der) at (78mm,0)
+    {all derivations};
+  \draw[hbimplies] (inn) -- (spat);
+  \draw[hbimplies] (spat) -- (der);
+  % what each space contains
+  \node[font=\footnotesize,anchor=north,align=center,text width=24mm] at (0,-6mm)
+    {$x\mapsto ax-xa$,\ $a\in A$};
+  \node[font=\footnotesize,anchor=north,align=center,text width=26mm] at (36mm,-6mm)
+    {$x\mapsto Bx-xB$,\ $B$ bounded};
+  \node[font=\footnotesize,anchor=north,align=center,text width=26mm] at (78mm,-6mm)
+    {$D(xy)=D(x)y+xD(y)$};
+  % where each inclusion closes
+  \node[font=\footnotesize,anchor=north,align=center,text width=30mm] at (18mm,-19mm)
+    {equality on a von Neumann algebra};
+  \node[font=\footnotesize,anchor=north,align=center,text width=32mm] at (57mm,-19mm)
+    {equality for a $C^*$-algebra on $H$};
+\end{tikzpicture}

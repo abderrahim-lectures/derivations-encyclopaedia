@@ -1,0 +1,95 @@
+% STATUS: written 2026-11-06 (English gate clean; sources read in full as recorded below).
+% Sources read in full: Born--Jordan 1925 (Z. Phys. 34, 858--888; Section 1 in the text layer), Dirac 1925 (Proc. R. Soc. Lond. A 109, 642--653; Section 3, pp. 645--647, checked against the page images).
+% Not yet read: Heisenberg 1925 (Z. Phys. 33, 879--893, papergraph row 179147, no open copy reached); stated here only as Born and Jordan describe it.
+\section[Derivations in quantum mechanics: Born, Jordan, Dirac 1925][Quantum mechanics]{Derivations in quantum mechanics: Born, Jordan, Dirac 1925}\label{sec:origins:physics}
+
+In 1925 physicists found two facts before the algebra researchers did. These
+facts organise much of this book. First, the product rule still makes sense
+on a noncommutative algebra, if the order of the factors is kept. Second, on
+the algebra of all matrices, every map with this rule is a commutator. Both
+facts came out of the new matrix mechanics.
+
+The first fact is in the paper \emph{Zur Quantenmechanik}~\cite{BornJordan1925}
+of Born and Jordan, written in German. In it, Born and Jordan turn the recent ideas of Heisenberg into a
+full theory. Their mathematical tool is the calculus of
+matrices~\cite[p.~858]{BornJordan1925}.
+
+Let the entries of two matrices $a$ and $b$ be functions of a parameter $t$.
+Take the derivative of each entry. This gives
+\[
+  \frac{d}{dt}(ab) = \dot a\, b + a\, \dot b .
+\]
+The same rule works for a product of $m$ factors. In each term, the factors
+stay in their original order~\cite[(11), (11$'$), p.~861]{BornJordan1925}.
+So the derivative with respect to $t$ keeps the product rule.
+
+Born and Jordan also use a second kind of derivative. It is the symbolic
+derivative $\partial y/\partial x_k$ of a matrix function with respect to
+one of its matrix variables. This derivative keeps neither the product rule
+nor the chain rule. They say so directly~\cite[\S 2, p.~862]{BornJordan1925}:
+\begin{originalquote}{German}{Zum Beispiel sind hier die Produktregel der Differentiation oder die Regel f\"ur die Differentiation einer Funktion von einer Funktion nicht mehr allgemein in G\"ultigkeit. Nur dann, wenn alle vorkommenden Matrizen miteinander vertauschbar sind, gelten f\"ur diese Differentiation alle Regeln der gew\"ohnlichen Analysis.}
+For example, the product rule of differentiation and the rule for
+differentiating a function of a function are here no longer valid in
+general. Only when all the matrices that occur commute with one another do
+all the rules of ordinary analysis hold for this differentiation.
+\end{originalquote}
+\noindent So on a noncommutative algebra, a derivative that acts on the whole algebra keeps the product rule.
+The derivative $d/dt$ is an example. A derivative with respect to one of the
+variables loses it.
+
+The second fact is due to Dirac, who asked the general question~\cite{Dirac1925}. Section~3 of his paper
+is called \emph{Quantum Differentiation}. There he looks for the most
+general operation $d/dv$ on quantum variables with two laws. In his words,
+``We shall now determine the form of the most general quantum operation
+$d/dv$ that satisfies the laws''
+\[
+  \frac{d}{dv}(x+y) = \frac{d}{dv}x + \frac{d}{dv}y,
+  \qquad
+  \frac{d}{dv}(xy) = \frac{d}{dv}x \cdot y + x \cdot \frac{d}{dv}y .
+\]
+He adds: ``Note that the order of $x$ and $y$ is preserved in the last
+equation''~\cite[\S 3, p.~645]{Dirac1925}.
+
+Quantum variables are matrices $x = (x(nm))$. Their rows and columns are
+indexed by the stationary states. By the first law, each entry of $dx/dv$
+is a linear combination of the entries of $x$:
+\[
+  dx/dv\,(nm) = \sum_{n'm'} a(nm;n'm')\,x(n'm').
+\]
+Dirac compares the entries on both sides of the second law, for all $x$ and
+$y$. Most coefficients must be zero. The rest come from a single matrix $a$.
+The result is
+\[
+  \frac{dx}{dv} = xa - ax .
+\]
+So every such operation is a commutator with a fixed matrix. Dirac states
+the result as follows:
+\begin{quote}\small
+``Thus the most general operation satisfying the laws I and II that one can
+perform upon a quantum variable is that of taking the difference of its
+Heisenberg products with some other quantum variable.''
+\end{quote}
+\noindent\cite[\S 3, pp.~646--647]{Dirac1925}.
+
+He notes that two such derivatives do not commute in general. He also notes a
+special case. Let $a$ be the diagonal matrix of frequencies. Then the
+operation becomes the ordinary derivative with respect to
+time~\cite[\S 3, p.~647]{Dirac1925}.
+
+In modern language, Dirac proved a theorem about matrix algebras. Let $A = M_n(\mathbb{C})$ be the algebra of complex $n \times n$ matrices. A
+linear map $D\colon A \to A$ with $D(xy) = D(x)y + xD(y)$ is a derivation.
+Dirac shows that $D(x) = xa - ax$ for some $a \in A$. In other words, every
+derivation of a full matrix algebra is inner. His computation proves this
+fact in coordinates.
+
+The same fact appears again later in the book, in two forms. One form is the
+vanishing of $H^1$ for separable algebras
+(Section~\ref{sec:origins:cohomology}). The other form is the theorem of
+Kadison and Sakai for von Neumann algebras (Chapter~\ref{ch:banach-operator}).
+
+Dirac also remarks that $d^2x/du\,dv \neq d^2x/dv\,du$. Behind this remark is
+the commutator of two derivations. It is again a derivation. Jacobson studies
+this bracket in Section~\ref{sec:origins:lie-theory}.
+
+Before Jacobson, the product rule moved from matrices to polynomials over
+skew fields. This was the work of Ore, which we follow next.

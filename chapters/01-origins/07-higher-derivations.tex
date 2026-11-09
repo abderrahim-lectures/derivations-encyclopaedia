@@ -1,0 +1,67 @@
+% STATUS: written 2026-11-06 (English gate clean; sources read in full as recorded below).
+% Sources read in full: Hasse--Schmidt 1937 (J. reine angew. Math. 177, 215--237; the four differentiation rules (1)--(4) on p. 218).
+% Not yet read: Hasse 1936 (Crelle 175); stated here only as Hasse and Schmidt describe it.
+\section[Higher derivations in characteristic $p$: Hasse and Schmidt 1937][Higher derivations]{Higher derivations in characteristic $p$: Hasse and Schmidt 1937}\label{sec:origins:higher-derivations}
+
+In characteristic $p$ the usual higher derivatives also lose information. For
+example, the $p$-th derivative of every polynomial is $0$. The theory of
+higher derivations began as an answer to this problem. It began in the study
+of algebraic function fields.
+
+The solution came from a letter. The paper of Hasse and Schmidt~\cite{HasseSchmidt1937}
+grew out of it, and it is written in German. We follow it in our translation. On 25 May 1936
+F.~K.~Schmidt wrote to Hasse. He was teaching the recent theory of higher
+differential quotients of Hasse. For his lectures, he had worked it out in a
+different form. He wanted to introduce the quotients globally (``im
+Gro\ss en'') from the start. He did not want to start from the power series
+at a point~\cite[p.~215]{HasseSchmidt1937}.
+
+Schmidt had assumed that his definition agreed with one given by
+Teichm\"uller. Then the paper of Teichm\"uller appeared. It showed Schmidt
+that the two definitions differ. Hasse published the result as a free and
+detailed version of the letter. In some points he changed the argument of
+Schmidt.
+
+We now turn to the construction itself. The setting is a separably generated algebraic function field $K$ of one
+variable. Its constant field $k$ is arbitrary. Let $x$ be a separating
+element of $K/k$, and let $y \in K$. Let $\xi$ be a copy of $x$ in an
+auxiliary field. The authors expand $y$ as a power series in powers of
+$\xi - x$. The coefficients lie in $K$~\cite[\S 2, p.~217]{HasseSchmidt1937}.
+
+\begin{definition}[{\cite[p.~217]{HasseSchmidt1937}}]\label{def:origins:hasse-schmidt}
+The \emph{differential quotient of order $\nu$} of $y$ with respect to $x$,
+written $\dfrac{d^\nu y}{dx^\nu}$, is the coefficient $y_\nu$ of
+$(\xi - x)^\nu$ in this expansion ($\nu = 0, 1, 2, \ldots$).
+\end{definition}
+
+The authors stress what these quotients are. They are \translated{not the
+exact equivalent of the differential quotients of analysis, but rather of
+the Taylor coefficients}{Die so definierten Differentialquotienten sind nicht
+das genaue \"Aquivalent zu den Differentialquotienten der Analysis, sondern
+vielmehr zu den Taylorkoeffizienten}{German}
+$\frac{1}{\nu!}\frac{d^\nu}{dx^\nu}$~\cite[p.~217]{HasseSchmidt1937}.
+
+This is the main point of the construction. The division by $\nu!$ is part
+of the definition. So the definition makes sense in characteristic~$p$.
+
+The quotients depend only on $x$ and $y$. They do not depend on the
+auxiliary choices. They satisfy four rules: a sum rule, a rule for
+constants, a product rule and a power
+rule~\cite[p.~218, (1)--(4)]{HasseSchmidt1937}. In the first order they give
+the derivatives already used in the arithmetic of~$K/k$.
+
+In modern language, the maps $D_\nu(y) = d^\nu y/dx^\nu$ form a \emph{higher derivation} of $K$
+over $k$~\cite[p.~218]{HasseSchmidt1937}. It is also called a \emph{Hasse--Schmidt derivation}~\cite[p.~218]{HasseSchmidt1937}. It is a
+sequence of $k$-linear maps $D_0 = \mathrm{id}, D_1, D_2, \ldots$ with
+\[
+D_\nu(yz) = \sum_{i+j=\nu} D_i(y)\, D_j(z) \qquad (\nu \ge 0).
+\]
+When $k$ contains the rational numbers, every derivation $D$ gives such a
+sequence: $D_\nu = D^\nu/\nu!$. In characteristic $p$ we cannot divide by
+$\nu!$. For this reason the maps $D_\nu$ must be given separately. The
+algebraic theory of higher derivations is the subject of
+Chapter~\ref{ch:higher-multi}.
+
+So far, derivations have served the theory of fields. In the same years, Ritt
+and his school made a field with a derivation an object of study in its own
+right.

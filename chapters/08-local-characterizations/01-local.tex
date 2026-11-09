@@ -1,0 +1,154 @@
+% STATUS: written 2026-11-05 (Kadison 1990 and Crist 1996 read in full)
+% STATUS: extended 2026-11-06 (Ayupov, Kudaybergenov, Nurjanov and Alauatdinov 2011; Hadwin, Li, Li and Ma 2013; Arzikulov, Khakimov and Qurbonov 2026; Hao and Chen 2026 read in full)
+% Sources read in full: Kadison 1990, J. Algebra 130, pp. 494--509; Crist 1996,
+% J. Funct. Anal. 135, pp. 76--92; Ayupov, Kudaybergenov, Nurjanov and Alauatdinov 2011 (pp. 1--2, 7);
+% Hadwin, Li, Li and Ma 2013 (pp. 1--3); Arzikulov, Khakimov and Qurbonov 2026 (pp. 1, 10--11, 15);
+% Hao and Chen 2026 (pp. 1, 2, 4, 7).
+% Excerpts in excerpts/Kadison1990_local.txt and excerpts/Crist1996_local.txt.
+% Larson--Sourour 1990 could not be downloaded and is recorded as atlas-pending P0006.
+\section{Local derivations: Kadison, Larson--Sourour}\label{sec:local-characterizations:local}
+
+Chapter~\ref{ch:generalized-twisted} changed the derivation itself: it
+twisted it, generalized it or gave it more arguments.
+This chapter changes the form of the map
+\emph{data}. Kadison names a linear map $\alpha$ of an algebra $R$ into an
+$R$-bimodule $M$ a \emph{local derivation} in this case~\cite[p.~494]{Kadison1990Local}. At each $A\in R$
+the value $\alpha(A)$ agrees with a true derivation $\delta_A$, whose choice
+may vary with $A$ \cite[p.~494]{Kadison1990Local}. His paper opens the
+study of such maps \cite[p.~494]{Kadison1990Local}.
+Bre\v{s}ar and \v{S}emrl give the same definition in their abstract, and they
+record that Kadison had already studied the question on von Neumann algebras
+\cite[p.~483]{BresarSemrl1993}.
+
+\begin{definition}[{\cite[p.~494]{Kadison1990Local}}]\label{def:local:local}
+Let $R$ be an associative algebra and $M$ an $R$-bimodule. A linear mapping
+$\alpha\colon R\to M$ is a \emph{local derivation} when for each $A\in R$
+there is a derivation $\delta_{A}\colon R\to M$ such that
+$\alpha(A)=\delta_{A}(A)$.
+\end{definition}
+
+The question is whether the varying witness can be replaced by one
+derivation of Definition~\ref{def:local:local}. the criterion of Kadison answers
+it for von Neumann algebras \cite[p.~494]{Kadison1990Local}. An $R$-bimodule $M$ is \emph{dual} when it
+is a dual space and the module actions are weak* continuous
+\cite[p.~494]{Kadison1990Local}.
+
+\begin{proposition}[{\cite[Theorem~A, pp.~495--496]{Kadison1990Local}}]\label{prop:local:thmA}
+Let $R$ be a von Neumann algebra and $M$ a dual $R$-bimodule. If
+$\delta\colon R\to M$ is a norm-continuous local derivation, then $\delta$
+is a derivation.
+\end{proposition}
+
+The proof is organized as five lemmas, and Lemma 4 asks for eleven
+sublemmas \cite[p.~496]{Kadison1990Local}. The paragraph after the theorem
+records the same reading of Proposition~\ref{prop:local:thmA}: under these
+conditions each local derivation is a derivation \cite[p.~496]{Kadison1990Local}.
+
+\begin{proposition}[{\cite[Theorem~B, p.~507]{Kadison1990Local}}]\label{prop:local:thmB}
+Let $R$ be a von Neumann algebra. If $\delta\colon R\to R$ is a
+norm-continuous linear mapping such that for each $A\in R$ there is a
+$T_{A}\in R$ with $\delta(A)=AT_{A}-T_{A}A$, then there is a $T\in R$
+with $\delta(A)=AT-TA$ for all $A\in R$.
+\end{proposition}
+
+Kadison reads Theorem B off Proposition~\ref{prop:local:thmA}. Every
+derivation of a von Neumann algebra into itself is inner, so the map is a
+local inner derivation and one inner derivation then serves all points
+\cite[p.~507]{Kadison1990Local}. The statement may surprise even when $R$
+is the full complex matrix algebra \cite[p.~494]{Kadison1990Local}.
+
+A Banach-space companion came in the same year, 1990
+\cite[p.~78]{Crist1996Local}. Larson and Sourour proved the same result for
+$B(X)$, the bounded operators on a Banach space $X$
+\cite[p.~78]{Crist1996Local}.
+Bre\v{s}ar then lowered the hypothesis of Proposition~\ref{prop:local:thmA}.
+A local derivation from a von Neumann algebra into a normed bimodule is
+still a derivation \cite[p.~78]{Crist1996Local}.
+
+Crist enlarges the stage from von Neumann algebras to operator algebras
+with a maximal abelian subalgebra \cite[p.~76]{Crist1996Local}. A CSL
+algebra is an operator algebra whose invariant subspaces form a commutative
+lattice \cite[p.~76]{Crist1996Local}.
+
+\begin{theorem}[{\cite[Theorem~2.7, p.~83]{Crist1996Local}}]\label{thm:local:csl}
+Let $\mathcal{A}$ be a finite dimensional CSL algebra. Then any local
+derivation $\varphi\colon\mathcal{A}\to\mathcal{A}$ must be a derivation.
+\end{theorem}
+
+The next theorem gives the same conclusion for inner local derivations.
+
+\begin{theorem}[{\cite[Theorem~2.8, p.~88]{Crist1996Local}}]\label{thm:local:cslinner}
+Let $\mathcal{A}$ be a finite dimensional CSL algebra. If
+$\varphi\colon\mathcal{A}\to\mathcal{A}$ is an inner local derivation, then
+$\varphi$ is an inner derivation.
+\end{theorem}
+
+In the language of the reflexivity program of Larson this says the derivations,
+and relatively the inner derivations, are reflexive spaces on these
+algebras \cite[pp.~78--79]{Crist1996Local}. The same conclusion passes to
+algebras that are direct limits of finite dimensional CSL algebras by
+$*$-extendable embeddings \cite[p.~78]{Crist1996Local}. One step is left
+behind by Theorem~\ref{thm:local:csl}. Finite dimensional CSL algebras can
+carry outer derivations, so the
+results of Kadison and of Larson and Sourour do not carry over verbatim
+\cite[p.~79]{Crist1996Local}.
+
+The question of Larson for a general algebra stays open, and this section
+states it. % claim-ok: own signpost introducing the moved problem, which carries its own citation
+
+\begin{problem}[{\cite[p.~703]{HadwinLi2004}}]\label{prob:open:larson}
+For which algebras $A$ is the space $\operatorname{der}(A)$ of bounded
+derivations of $A$ reflexive, that is, equal to its own reflexive closure in the
+bounded operators on $A$?
+\end{problem}
+
+Hadwin and Li answer the question for completely distributive commutative
+subspace lattices and for $J$-subspace lattices, where the space of bounded
+derivations is reflexive \cite[Theorem~2.15, p.~708]{HadwinLi2004}. They also
+show that $\operatorname{der}(A,M)$ is algebraically $3$-reflexive for every
+Banach $A$-bimodule $M$ \cite[Theorem~2.19, p.~710]{HadwinLi2004}. The local
+property for automorphisms fails even in finite dimension, since
+$T\mapsto AT^{t}A^{-1}$ on $M_n(\mathbb{C})$ is a surjective local automorphism
+that is not an automorphism \cite[p.~713]{HadwinLi2004}.
+The local condition also holds on algebras of measurable operators \cite[p.~1]{AyupovKudaybergenovNurjanovAlauatdinov2011}. Let $M$ be
+a von Neumann algebra with a faithful normal semi-finite trace $\tau$, and let
+$L^{\omega}(M,\tau)$ be the Arens algebra of all $\tau$-measurable operators
+affiliated with $M$ \cite[p.~1]{AyupovKudaybergenovNurjanovAlauatdinov2011}.
+Every local derivation of that algebra is a spatial derivation when $M$ is
+finite \cite[Theorem~2.4, p.~7]{AyupovKudaybergenovNurjanovAlauatdinov2011}.
+When $M$ is commutative the only local derivation of the Arens algebra is zero
+\cite[Corollary~2.5, p.~7]{AyupovKudaybergenovNurjanovAlauatdinov2011}.
+
+Hadwin, Li, Li and Ma answer a question of Kadison with a ring-theoretic
+argument \cite[p.~1]{HadwinLiLiMa2013}. They prove the following. Let the abelian summand
+of a von Neumann algebra $M$ be discrete. Then every local derivation of the
+algebra of measurable operators affiliated with $M$ is a derivation
+\cite[Theorem~1, pp.~2--3]{HadwinLiLiMa2013}. The proof passes through a lemma
+on rings that carry a system of matrix units
+\cite[Lemma~1, p.~1]{HadwinLiLiMa2013}.
+
+On the two five-dimensional naturally graded nilpotent associative algebras
+$\pi_2$ and $\pi_3$ the answer is negative \cite[p.~1]{ArzikulovKhakimovQurbonov2026}.
+The matrix form of a derivation and the matrix form of a local derivation are
+different on each algebra, so a local derivation need not be a derivation
+\cite[p.~1]{ArzikulovKhakimovQurbonov2026}. The authors write both forms out on
+$\pi_3$ \cite[Theorems~8 and~9, pp.~14--15]{ArzikulovKhakimovQurbonov2026}. The local
+derivations of each algebra form a vector space, and that space is closed under
+the commutator \cite[Theorems~10 and~11, p.~15]{ArzikulovKhakimovQurbonov2026}.
+The matrix form of a local derivation obeys the rules that the matrix form of a
+derivation obeys, and the authors list them
+\cite[Theorem~5, pp.~10--11]{ArzikulovKhakimovQurbonov2026}.
+
+The vector space of local derivations of an algebra is a Lie algebra under the
+commutator, with no hypothesis on the algebra
+\cite[Theorem~2.8, p.~4]{HaoChen2026Local}. Hao and Chen prove it for an
+arbitrary algebra over a field, and their argument covers every space of
+operators of one derivation type \cite[p.~4]{HaoChen2026Local}. The result
+settles half of a question of Ayupov, Elduque and Kudaybergenov
+\cite[p.~1]{HaoChen2026Local}. The other half concerns the local
+automorphisms, and it is settled in the same paper
+\cite[p.~1]{HaoChen2026Local}. The authors also prove that an algebra admits
+an invertible local derivation exactly when it admits an invertible derivation
+\cite[Theorem~2.18, p.~7]{HaoChen2026Local}.
+
+\hbfigure{08-local-characterizations/local-pointwise}{A local derivation \cite[p.~494]{Kadison1990Local}. At each element $a$ of the algebra $R$ the value $\alpha(a)$ equals $\delta_{a}(a)$ for some derivation $\delta_{a}$ of $R$, and the derivation may change with $a$. The question the section answers is when one derivation serves every point.}{fig:local:pointwise}

@@ -1,0 +1,75 @@
+% STATUS: written 2026-11-04, recalled results as is (one environment each, source kind and whole statement)
+% Sources read in full: Bresar 1993 TAMS (pp. 525--546).
+\section{The solution of Brešar through functional identities}\label{sec:lie-type:bresar}
+
+Section~\ref{sec:lie-type:martindale} gave the form of a Lie derivation on a primitive
+ring with a nontrivial idempotent. Brešar settled the question for all noncommutative
+prime rings with his functional identities \cite[p.~525]{Bresar1993LieTAMS}. He
+works in a noncommutative prime ring
+$R$ of characteristic not $2$ and not $3$ \cite[p.~525]{Bresar1993LieTAMS}. By $Q$
+he denotes the Martindale right ring of quotients of $R$, and by $C$ its center
+\cite[p.~525]{Bresar1993LieTAMS}. This is the maximal right ring of quotients of
+Chapter~\ref{ch:prime-semiprime}, and its center $C$ is the extended centroid. The
+pair $(Q)_{C}$, the central closure of $R$, measures the algebraic degree of $R$
+through the standard identities $S_{2n}$ \cite[p.~526]{Bresar1993LieTAMS}.
+
+The opening result is about commuting traces of biadditive mappings \cite[Theorem~1, p.~527]{Bresar1993LieTAMS}.
+% claim-ok: narration of the chapter plan, no mathematical content
+
+\begin{theorem}[{\cite[Theorem~1, p.~527]{Bresar1993LieTAMS}}]\label{thm:lie:bresar-commuting}
+Let $R$ be a prime ring of characteristic not $2$, and let $q\colon R\to R$ be a
+trace of a biadditive mapping. Suppose that $q$ is commuting. If $R$ does not
+satisfy $S_{4}$, then $q$ is of the form
+\[
+q(x)=\lambda x^{2}+\mu(x)x+\nu(x),\qquad x\in R,
+\]
+where $\lambda$ is an element in $C$, $\mu$ is an additive mapping of $R$ into $C$,
+and $\nu$ is a mapping of $R$ into $C$.
+\end{theorem}
+
+From the commuting trace Brešar passes to maps on the square.
+
+The trace idea carries to algebras where the prime-ring argument has no grip.
+For an $n$-linear map $q$ on an algebra $A$, the trace is
+$T_{q}(a)=q(a,\dots,a)$, and it is \emph{proper} when it has the form
+$T_{q}(a)=za^{n}+\mu_{1}(a)a^{n-1}+\cdots+\mu_{n}(a)$ with $z$ central and each
+$\mu_{i}$ a central-valued trace \cite[p.~2]{XiaoChenZhang2015Centralizing}.
+Xiao, Chen and Zhang prove that on a $2$-torsion free triangular algebra whose
+bimodule is loyal, every centralizing trace of a bilinear map is proper
+\cite[Theorem~3.4]{XiaoChenZhang2015Centralizing}. That is the triangular algebra
+form of the result Brešar proves for a prime ring. % claim-ok: narration of the chapter plan, no mathematical content
+
+\begin{theorem}[{\cite[Theorem~4, p.~529]{Bresar1993LieTAMS}}]\label{thm:lie:bresar-trace}
+Let $R$ be a prime ring of characteristic different from $2$ and $3$. Suppose that
+an additive mapping $d\colon R\to R$ satisfies
+\[
+[d(x^{2})-d(x)x-xd(x),\,x]=0,\qquad x\in R.
+\]
+If $R$ does not satisfy $S_{4}$, then $d$ is of the form
+\[
+d(x)=\gamma x+\delta(x)+\zeta(x),\qquad x\in R,
+\]
+where $\gamma$ is an element in $C$, $\delta$ is a derivation of $R$ into its
+central closure, and $\zeta$ is an additive mapping of $R$ into $C$.
+\end{theorem}
+
+Together these give the Lie derivation theorem of the paper. % claim-ok: narration of the chapter plan, no mathematical content
+
+\begin{theorem}[{\cite[Theorem~5, p.~529]{Bresar1993LieTAMS}}]\label{thm:lie:bresar-standard}
+Let $R$ be a prime ring of characteristic not $2$. Let $d$ be a Lie derivation of
+$R$. If $R$ does not satisfy $S_{4}$, then $d$ is of the form $\delta+\tau$, where
+$\delta$ is a derivation of $R$ into its central closure and $\tau$ is an additive
+mapping of $R$ into $C$ sending commutators to zero.
+\end{theorem}
+
+The question Martindale set for primitive rings is thereby settled for every prime
+ring of characteristic not $2$, with no idempotent hypothesis
+\cite[Theorem~5, p.~529]{Bresar1993LieTAMS}. Theorem~\ref{thm:lie:bresar-standard}
+even frees it from the characteristic-$3$ restriction of Theorem~\ref{thm:lie:bresar-trace}.
+The one assumption is that the ring does not satisfy the standard identity
+$S_{4}$ \cite[Theorem~5, p.~529]{Bresar1993LieTAMS}. % claim-ok: the S4 clause is the hypothesis quoted in the three recalled theorems
+Brešar records it as an open question whether that assumption can be removed
+\cite[p.~528]{Bresar1993LieTAMS}. His
+Lemma~1 names the exceptional class exactly: a prime ring satisfies $S_{4}$
+precisely when it is commutative or embeds in the $2\times2$ matrices over a
+field \cite[Lemma~1, p.~530]{Bresar1993LieTAMS}.

@@ -1,0 +1,212 @@
+% STATUS: written 2026-11-05 (Sakai 1960, Johnson-Sinclair 1968 and
+% Ringrose 1972 read in full; excerpts in excerpts/Sakai1960Kaplansky.txt,
+% excerpts/JohnsonSinclair1968.txt, excerpts/Ringrose1972Automatic.txt).
+% Additions of 2026-11-06 from Hosseini--Park 2023 (pp. 1--7), Hosseini 2025
+% (pp. 1, 5) and Shafieasl--Tavakkoli 2026 (pp. 1, 3--4).
+% Additions of 2026-11-07 from Bade--Curtis 1974 (pp. 372--379), Ali 2011
+% (pp. 209, 223--224), Hosseini--Peralta--Su 2025 (pp. 1, 5, 10) and
+% Eisaei--Mehdipour--Moghimi 2024 (pp. 1--7).
+% Sources: Sakai1960Kaplansky, JohnsonSinclair1968, Ringrose1972Automatic,
+% BadeCurtis1974, Ali2011GeneralizedLeft, HosseiniPark2023, Hosseini2025Strongly,
+% HosseiniPeraltaSu2025, EisaeiMehdipourMoghimi2024LeftTheta,
+% ShafieaslTavakkoli2026.
+\section{Automatic continuity}\label{sec:banach-operator:automatic-continuity}
+
+Section~\ref{sec:banach-operator:kadison-sakai} used one input at every
+step: a derivation of a $C^*$-algebra is continuous. Kaplansky had
+stated this as a conjecture, and Sakai proved it in 1960
+\cite[p.~31]{Sakai1960Kaplansky}.
+
+\begin{theorem}[{\cite[p.~31]{Sakai1960Kaplansky}}]\label{thm:banach:sakaicont}
+Any derivation of a $C^*$-algebra is automatically continuous.
+\end{theorem}
+
+The proof applies the closed graph theorem to the self-adjoint portion
+\cite[p.~31]{Sakai1960Kaplansky}. Johnson and Sinclair then widened the
+algebra but widened the map as well: they worked with derivations which
+are additive but not necessarily homogeneous
+\cite[p.~1067]{JohnsonSinclair1968}. For such a map there is an
+obstruction, and it is finite dimensional.
+
+\begin{theorem}[{\cite[Theorem~4.1, p.~1071]{JohnsonSinclair1968}}]\label{thm:banach:js}
+Let $A$ be a semi-simple Banach algebra over the reals or the complexes.
+Let $D$ be an additive derivation on $A$. Then $A$ contains a central
+idempotent $e$ such that $eA$ and $(1-e)A$ are closed under $D$, the
+restriction of $D$ to $(1-e)A$ is continuous, and $eA$ is finite
+dimensional.
+\end{theorem}
+
+The idempotent can vanish: examples built with Steinitz' theorem on
+algebraically closed field extensions give additive derivations of the
+complex numbers which are not real-linear
+\cite[p.~1072]{JohnsonSinclair1968}. For a linear derivation the finite
+dimensional part is continuous anyway, so linearity removes the exception.
+
+\begin{corollary}[{\cite[Remark~4.3, p.~1072]{JohnsonSinclair1968}}]\label{cor:banach:jslin}
+A linear derivation on a semi-simple Banach algebra over the reals or the
+complexes is continuous. If the algebra has no finite dimensional
+two-sided ideals, the same holds for every additive derivation.
+\end{corollary}
+
+Corollary~\ref{cor:banach:jslin} answers the wider problem of Kaplansky for
+linear maps \cite[p.~1067]{JohnsonSinclair1968}. Ringrose carried the
+question one step further, from the algebra to its modules
+\cite[p.~432]{Ringrose1972Automatic}. A \emph{Banach $A$-module} is a
+Banach space $M$ with bounded bilinear maps sending $(a,m)$ to $am$ and
+to $ma$, associative in each triple product
+\cite[p.~432]{Ringrose1972Automatic}.
+
+\begin{theorem}[{\cite[Theorem~2, p.~434]{Ringrose1972Automatic}}]\label{thm:banach:ringrosemodule}
+If $A$ is a $C^*$-algebra and $M$ is a Banach $A$-module, then every
+derivation of $A$ into $M$ is automatically norm continuous.
+\end{theorem}
+
+For a dual module there is also continuity in the weak topologies.
+
+\begin{theorem}[{\cite[Theorem~4, p.~435]{Ringrose1972Automatic}}]\label{thm:banach:ringrosedual}
+For a faithful representation of a $C^*$-algebra $A$ and a suitable dual
+normal $A$-module $M$, a derivation of $A$ into $M$ is continuous also
+relative to the ultraweak topology on $A$ and the weak* topology on $M$.
+\end{theorem}
+
+The theorems of this section say that boundedness comes for free on
+semisimple algebras \cite[Remark~4.3, p.~1072]{JohnsonSinclair1968}.
+
+Bade and Curtis asked a wider question in 1974, with the module left free:
+which semisimple algebras and which modules make every derivation
+bounded \cite[p.~373]{BadeCurtis1974}. Their answer separates the points at
+which continuity can fail. For a derivation $D$ of a Banach algebra into a
+Banach module they define a left and a right continuity ideal
+\cite[Definition~2.1, p.~374]{BadeCurtis1974}.
+
+\begin{definition}[{\cite[Definition~2.1, p.~374]{BadeCurtis1974}}]\label{def:banach:continuity-ideal}
+Let $A$ be a Banach algebra, $M$ a Banach $A$-module and $D\colon A\to M$ a
+derivation. Put $N(x)=\max(\|x\|,\|D(x)\|)$. Then $I_L$ is the set of $y$ in
+$A$ for which the map $x\mapsto N(yx)$ is continuous on $A$, and $I_R$ is the
+set of $y$ for which $x\mapsto N(xy)$ is continuous.
+\end{definition}
+
+Both sets are closed two-sided ideals
+\cite[Theorem~2.3, p.~375]{BadeCurtis1974}. Their size controls the derivation:
+the socle of a semisimple Banach algebra lies in $I_L\cap I_R$
+\cite[Theorem~2.7, pp.~378--379]{BadeCurtis1974}.
+
+\begin{corollary}[{\cite[Corollary~2.8, p.~379]{BadeCurtis1974}}]\label{cor:banach:bade-dense-socle}
+Let $A$ be a Banach algebra with dense socle. Then $I_L=I_R=A$. If in addition
+$A$ has a bounded left or right approximate identity, then every derivation of
+$A$ is bounded.
+\end{corollary}
+
+Corollary~\ref{cor:banach:bade-dense-socle} covers the compact operators,
+which have a bounded approximate identity, and also the trace-class and
+Hilbert--Schmidt operators, which have a dense socle but no bounded approximate
+identity \cite[p.~379]{BadeCurtis1974}. The general criterion counts
+sequences with $x_nx_m=0$ and reads as follows
+\cite[Corollary~2.6, p.~378]{BadeCurtis1974}.
+
+\begin{corollary}[{\cite[Corollary~2.6, p.~378]{BadeCurtis1974}}]\label{cor:banach:bade-general}
+Let $A$ be a semisimple Banach algebra. Suppose that every closed two-sided
+ideal of infinite codimension contains an infinite sequence $x_n$ with
+$x_nx_m=0$ for $n\neq m$ and $x_n^2\notin K$, and that every closed two-sided
+ideal of finite codimension has a bounded left or right approximate identity.
+Then every derivation of $A$ is bounded.
+\end{corollary}
+
+The same paper reports discontinuous derivations on algebras that fail these
+conditions \cite[p.~375]{BadeCurtis1974}. Take a Banach algebra $A$ whose
+square $A^2$ is not closed
+\cite[p.~375]{BadeCurtis1974}. Take a discontinuous linear functional $f$ on
+$A$ that vanishes on $A^2$. Take an $A$-module $M$ with an element
+$m_0\neq0$ killed by $A$ on both sides
+\cite[p.~375]{BadeCurtis1974}. Then $D(x)=f(x)m_0$ is a discontinuous
+derivation. On the Hilbert--Schmidt operators the square is the trace-class
+ideal, so those operators carry a discontinuous derivation
+\cite[p.~375]{BadeCurtis1974}.
+
+The continuity question for one-sided maps was settled the same way by Ali,
+for generalized left derivations \cite[p.~209]{Ali2011GeneralizedLeft}.
+
+\begin{theorem}[{\cite[Theorem~6.1, pp.~223--224]{Ali2011GeneralizedLeft}}]\label{thm:banach:ali-left}
+Let $A$ be a semisimple Banach algebra and let $G\colon A\to A$ be a
+generalized Jordan left derivation with associated Jordan left derivation
+$\delta$. Then $G$ is continuous.
+\end{theorem}
+
+The proof splits $G$ into the two pieces of its definition
+\cite[p.~223]{Ali2011GeneralizedLeft}. If $\delta$ is zero, then $G$ is a
+Jordan right multiplier and Lemma~2.9 of the paper makes it continuous
+\cite[p.~223]{Ali2011GeneralizedLeft}. If $\delta$ is nonzero, then $\delta$
+is a derivation and Lemma~2.3 of the paper makes it continuous
+\cite[p.~223]{Ali2011GeneralizedLeft}. The difference $G-\delta$ is then a right centralizer,
+which is continuous by the same lemma \cite[p.~223]{Ali2011GeneralizedLeft}.
+
+A further class is that of the strongly generalized derivations.
+Hosseini and Park call a linear map $D\colon A\to B$ a strongly generalized
+derivation of order $n$ when there are families of linear maps
+$E_{k},F_{k},G_{k},H_{k}$, $k=1,\dots,n$, with
+$D(ab)=\sum_{k=1}^{n}[E_{k}(a)F_{k}(b)+G_{k}(a)H_{k}(b)]$ for all $a,b$
+\cite[Definition~2.1, p.~3]{HosseiniPark2023}. For $n=1$ the map is an
+$(E,F,G,H)$-derivation \cite[p.~3]{HosseiniPark2023}. Every higher derivation
+is of this kind \cite[Example~2.3, p.~4]{HosseiniPark2023}.
+
+\begin{theorem}[{\cite[Theorem~2.7, p.~5]{HosseiniPark2023}}]\label{thm:banach:strongly-generalized}
+Let $A$ be a unital $C^*$-subalgebra of $B(H)$ and let $D\colon A\to B(H)$ be
+a $*$-$(E,F,G,H)$-derivation, so that $D,E,F,G,H$ are $*$-maps. Suppose that
+$E(I)=H(I)=I$, where $I$ is the identity map on $H$, that
+$H(a)D(I)E(b)=-E(a)D(I)H(b)$ for all $a,b\in A$, and that $E+H$ is
+$D$-continuous. Then $D$ is automatically continuous. The same holds with
+$F,G$ in place of $E,H$.
+\end{theorem}
+
+Hosseini proves the same continuity for Banach algebras and simple Banach
+algebras \cite[Theorems~2.11--2.12, p.~7]{HosseiniPark2023}. He later
+restricts the order to one and works into a Banach bimodule
+\cite[Theorem~2.1, p.~5]{Hosseini2025Strongly}. That theorem extends the
+earlier results on generalized derivations
+\cite[p.~1]{Hosseini2025Strongly}.
+
+Three uses of the term generalized derivation circulate in the literature, and
+Hosseini, Peralta and Su show that on a $C^*$-algebra they coincide
+\cite[p.~1]{HosseiniPeraltaSu2025}. The first type is a map $F$ with a
+derivation $d$ into the second dual $M^{**}$ satisfying $F(ab)=F(a)b+ad(b)$
+\cite[p.~1]{HosseiniPeraltaSu2025}. The second type is a map with an element
+$\xi$ of $M^{**}$ satisfying $F(ab)=F(a)b+aF(b)-a\xi b$
+\cite[p.~1]{HosseiniPeraltaSu2025}. The third type is a map with two arbitrary
+maps $G,H$ satisfying $F(ab)=G(a)b+aH(b)$
+\cite[p.~1]{HosseiniPeraltaSu2025}. The third type is the weakest and needs no
+linearity in the two auxiliary maps \cite[p.~2]{HosseiniPeraltaSu2025}.
+
+\begin{theorem}[{\cite[Theorem~2.8, p.~10]{HosseiniPeraltaSu2025}}]\label{thm:banach:three-types}
+Let $A$ be a $C^*$-algebra and $M$ a Banach $A$-bimodule. Let $F\colon A\to M$
+be a generalized derivation of the third type. Then $F$ is continuous.
+Consequently $F$ is also a generalized derivation of the second type.
+\end{theorem}
+
+The same paper treats a generalized Jordan derivation of the third type
+\cite[p.~5]{HosseiniPeraltaSu2025}. It is continuous on a $C^*$-algebra, and it is of the second type when the module
+is essential \cite[Theorem~3.1, p.~5]{HosseiniPeraltaSu2025}.
+
+Continuity also governs whether an inner derivation on a dense ideal extends.
+Let $A$ be a Banach algebra and $I$ a dense ideal of it
+\cite[p.~1]{ShafieaslTavakkoli2026}. Shafieasl and Tavakkoli ask whether
+every derivation $A\to I$ being inner forces every derivation $A\to A$ to be
+inner \cite[p.~1]{ShafieaslTavakkoli2026}. They answer no
+\cite[p.~1]{ShafieaslTavakkoli2026}. On a separable infinite-dimensional
+Hilbert space take $A=K(H)$, the compact operators, and $I=F(H)$, the
+finite-rank operators \cite[p.~3]{ShafieaslTavakkoli2026}.
+
+\begin{theorem}[{\cite[Theorem~4.1, p.~3]{ShafieaslTavakkoli2026}}]\label{thm:banach:dense-ideal}
+Let $H$ be a separable infinite-dimensional Hilbert space, $A=K(H)$ and
+$I=F(H)$. Then every derivation $D\colon K(H)\to F(H)$ is inner and
+implemented by an element of $F(H)$, while $K(H)$ admits outer derivations.
+\end{theorem}
+
+So the inner derivations into the small ideal do not reach the outer ones on
+the algebra. The same construction works for the Schatten $p$-classes
+\cite[Theorem~5.1, p.~4]{ShafieaslTavakkoli2026}. The authors check their
+main statements in the Lean proof assistant
+\cite[p.~1]{ShafieaslTavakkoli2026}.
+
+Chapter vocabulary of the next section is different:
+the derivations of quantum dynamics are densely defined and unbounded, as
+Section~\ref{sec:banach-operator:unbounded} reports.

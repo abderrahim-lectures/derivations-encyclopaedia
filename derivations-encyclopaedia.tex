@@ -1,0 +1,37 @@
+% Encyclopaedia of Derivation-like Maps.
+% Version: v0.18 (2026-11-08) — every cited work resolves to a file that opens or
+% says why it cannot; four defects the citation judge led to were corrected, and the
+% path-algebra derivations of Adrabi, Bennis and Fahid were added. v0.17 (2026-11-07) — the parts rebalanced: two parts that held a
+% single chapter are folded into their neighbours, and the seven-chapter part
+% is split at the natural boundary. No part now holds fewer than two.
+\documentclass[11pt,openright,twoside]{memoir}
+\usepackage{style/encyclopaedia}
+
+\begin{document}
+\frontmatter
+\input{book/cover}
+\input{book/half-title}
+\input{book/title-page}
+\input{book/imprint}
+\input{book/dedication}
+\input{book/contents}
+\input{frontmatter/index-of-kinds}
+\input{frontmatter/preface}
+\input{frontmatter/how-to-use}
+\input{frontmatter/notation}
+
+\mainmatter
+\input{chapters/index}
+
+% The appendices are their own part. Without this \part, LaTeX files them
+% under the last chapter part, so Appendix A appeared inside "Cohomology and
+% deformation" (owner, 2026-11-07).
+\part{Appendices}
+\appendix
+\input{backmatter/atlas}
+\input{backmatter/question-tables}
+
+\backmatter
+\input{backmatter/bibliography}
+\input{book/index}
+\end{document}

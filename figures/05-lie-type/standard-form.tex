@@ -1,0 +1,8 @@
+\begin{tikzpicture}[font=\small]
+  \node[hbkey] (L) at (0,0) {Lie derivation $L$\\ $L[x,y]=[L(x),y]+[x,L(y)]$};
+  \node[hbnode] (D) at (-2.6,-2) {derivation $D$};
+  \node[hbnode] (t) at (2.6,-2) {central map $\tau\colon R\to Z$,\\ $\tau[x,y]=0$};
+  \node at (0,-2) {\Large $+$};
+  \draw[hbarrow] (L) -- (D); \draw[hbarrow] (L) -- (t);
+  \node[font=\footnotesize] at (0,-3.2) {standard form: $L = D+\tau$};
+\end{tikzpicture}

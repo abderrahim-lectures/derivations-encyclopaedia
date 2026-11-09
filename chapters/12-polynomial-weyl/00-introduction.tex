@@ -1,0 +1,79 @@
+% Chapter introduction: why the topic arose, who first asked, what it answers.
+% STATUS: written 2026-11-05 (all four body sections sourced and gate-clean).
+% The introduction reports the four threads of the chapter and cites only the
+% sources that carry them (Freudenburg 2017, Drensky--Makar-Limanov 2009,
+% Baltazar 2016, Rewri--Kour 2025, Dixmier 1968, Belov-Kanel--Kontsevich 2007,
+% Hazewinkel 2013, Sweedler 1980, Nowicki 2004, Lequain 2008, Ore 1933).
+% The classical first sources are named through the papers that quote them.
+\emph{The derivative returns to its first home.} Chapter~\ref{ch:origins}
+opened the book with Leibniz and the derivative of a polynomial. This
+chapter comes back to that home and asks what the Leibniz rule becomes on
+the polynomial ring $k[x_{1},\dots,x_{n}]$ and on the noncommutative rings
+that imitate it. Four threads answer, each read from the papers that carry
+it.
+
+\hbfigure{12-polynomial-weyl/weyl-ladder}{The Weyl algebra acting on $k[x]$: multiplication by $x$ raises the degree; $\partial = d/dx$ lowers it, with $\partial(x^{n}) = n x^{n-1}$; and $\partial x - x\partial = 1$.}{fig:weyl:ladder}
+
+The first thread asks what a derivation of a polynomial ring can be
+\cite[p.~75]{Freudenburg2017}. the fourteenth problem of Hilbert and the
+Jacobian conjecture made the question urgent
+\cite[p.~xii]{Freudenburg2017}. Weitzenb\"ock gave the first answer in
+1932: for a linear locally nilpotent derivation the kernel is finitely
+generated \cite[p.~41]{DrenskyMakarLimanov2009}.
+Section~\ref{sec:polynomial-weyl:polynomial} defines the named families:
+locally nilpotent, triangular, elementary, monomial, Weitzenb\"ock
+\cite[p.~76]{Freudenburg2017}, Shamsuddin \cite[p.~2033]{Baltazar2016} and
+Lotka--Volterra \cite[p.~2]{RewriKour2025}. It then reads the kernel
+theorems. These are the Weitzenb\"ock theorem and the confirmed Nowicki
+conjecture \cite[Theorem~3, p.~44]{DrenskyMakarLimanov2009}. The section
+closes with the fixed-group theorems of Mendes and Pan
+\cite[Theorem~1, p.~2]{MendesPan2017} and of Rewri and Kour
+\cite[Theorem~4.1, p.~21]{RewriKour2025}. The automorphisms that commute
+with a derivation $d$ form the fixed group of $d$ there. Bedratyuk gives an
+algorithm for the kernel of a Weitzenb\"ock derivation, built from Casimir
+elements of the derivation \cite[p.~1]{Bedratyuk2005Casimir}.
+Mishra, Mondal and Shukla compute the fixed group of a monomial derivation
+whose exponent matrix is invertible \cite[Theorem~3.1,
+p.~5]{MishraMondalShukla2026Monomial}. On a simple derivation that takes no
+unit value, the fixed group reduces to the translations
+\cite[Theorem~2.4, p.~5]{MishraMondalShukla2025Simple}. A derivation of a
+polynomial ring is a first-order step of a Hasse--Schmidt system, and the
+four named families live on the polynomial ring as such steps. Locally
+nilpotent derivations are the nil case: each polynomial dies under some
+power of the derivation \cite[p.~3]{Freudenburg2017}. The general
+definitions live in
+Section~\ref{sec:higher-multi:hasse-schmidt} and
+Section~\ref{sec:basic-theory:definitions}.
+
+The second thread carries the derivative into a noncommutative algebra
+\cite[p.~209]{Dixmier1968}. Dixmier named the Weyl algebra in 1968, after
+a suggestion of Segal, and listed six problems at the end of his paper
+\cite[p.~241]{Dixmier1968}. Section~\ref{sec:polynomial-weyl:weyl} reads
+his definition, his structure theorem for $A_{n}$ and his first problem,
+now the Dixmier conjecture. Belov-Kanel and Kontsevich prove that this
+conjecture agrees, in a stable sense, with the Jacobian conjecture
+\cite[Theorem~1, p.~2]{BelovKanelKontsevich2007}; the two threads of the
+chapter close on the same question.
+
+The third thread counts the order of an operator
+\cite[p.~4]{Hazewinkel2013}. Grothendieck defined the differential
+operators of a commutative algebra by commuting them with multiplications;
+Section~\ref{sec:polynomial-weyl:differential-operators} recalls the
+recursive characterization as Hazewinkel states it
+\cite[Theorem~6.2, p.~4]{Hazewinkel2013}. Sweedler carried the same
+commutator to noncommutative algebras and named the right derivation
+\cite[p.~29]{Sweedler1980}, the first kind of the chapter with the right
+hand rule of Section~\ref{sec:basic-theory:definitions}.
+
+The fourth thread builds polynomials over a derivation
+\cite[p.~480]{Ore1933}.
+Section~\ref{sec:polynomial-weyl:ore-differential}
+takes the differential form $R[t;\delta]$ of the Ore extension of
+Section~\ref{sec:generalized-twisted:ore-extensions} to its concrete
+ground.
+The Weyl algebra is the first example, and the $d$-simple rings make
+$R[t;\delta]$ simple \cite[p.~801]{Lequain2008}.
+On $k[x][t;\delta]$ every local derivation is already a derivation
+\cite[Theorem~4.1, p.~4569]{Nowicki2004Local}.
+Chapter~\ref{ch:commutative}
+follows the derivations of polynomial rings into geometry.

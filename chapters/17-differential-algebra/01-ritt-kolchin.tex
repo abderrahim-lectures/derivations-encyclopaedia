@@ -1,0 +1,302 @@
+% STATUS: written 2026-11-05
+% Sources read in full: Raudenbush 1934 (Trans. AMS 36, 361--368,
+% Theorems 1, 4--8); Wu 1987/1989 (Bull. AMS 20, 175--184, zero
+% decomposition); Hubbard-Lundell 2011 (Amer. Math. Monthly 118,
+% 245--261, sec. 4).
+\section{The Ritt--Kolchin theory}\label{sec:differential-algebra:ritt-kolchin}
+
+Chapter~\ref{ch:origins} defined the differential field and the
+differential ideal with Raudenbush
+(Definition~\ref{def:origins:differential-field}). Ritt asked how far the
+ideal theory of these rings goes \cite[p.~361]{Raudenbush1934}.
+Raudenbush rebuilt the theory in 1934 to give the theorem of Ritt a
+clean proof \cite[p.~361]{Raudenbush1934}. He replaced the differential
+ideal by its radical inside
+the differential category: the perfect differential ideal
+\cite[p.~361]{Raudenbush1934}.
+
+A \emph{perfect} differential ideal is one that contains an element
+whenever it contains a positive power of it
+\cite[p.~362]{Raudenbush1934}. In the algebraic theory the perfect
+differential ideals are the radicals of differential ideals
+\cite[p.~362]{Raudenbush1934}. Raudenbush first shows that the perfect
+ideal determined by a set is the radical of the differential ideal it
+determines.
+
+\begin{theorem}[{\cite[Theorem~1, p.~363]{Raudenbush1934}}]\label{thm:diffalg:perfect-is-radical}
+Let $R$ be a differential ring of characteristic zero and let
+$\alpha$ be a set of its elements. If $t$ is any element of the perfect
+differential ideal $\{\alpha\}$ determined by $\alpha$, then some
+positive integral power of $t$ is in the differential ideal $[\alpha]$
+determined by $\alpha$.
+\end{theorem}
+
+The proof uses the product rule
+\cite[p.~363]{Raudenbush1934}. From $ab$ in the ideal, Raudenbush first
+shows every product $a_pb_q$ of a derivative of $a$ by a derivative of
+$b$ is in the ideal \cite[p.~363]{Raudenbush1934}. Multiplying the
+linear expressions of the two powers of $t$ against each other then
+places each term in the smaller ideal \cite[p.~363]{Raudenbush1934}.
+The same device gives the identity
+$\{\alpha, a\}\cap\{\alpha,b\} = \{\alpha, ab\}$ for any two elements of
+$R$ \cite[Theorem~2, p.~363]{Raudenbush1934}, and this identity drives
+the decomposition theory \cite[p.~365]{Raudenbush1934}.
+
+A perfect differential ideal $\pi$ is \emph{reducible} if it is the
+intersection of two perfect differential ideals that both contain it
+properly \cite[p.~365]{Raudenbush1934}. Otherwise it is
+\emph{irreducible} \cite[p.~365]{Raudenbush1934}. The relations between
+primality and irreducibility are the first structural facts
+\cite[p.~365]{Raudenbush1934}.
+
+\begin{theorem}[{\cite[Theorems~4 and~5, p.~365]{Raudenbush1934}}]\label{thm:diffalg:perfect-decomposition}
+Let $R$ be a differential ring with a basis theorem: every perfect
+differential ideal has a finite basis.
+
+\begin{enumerate}
+\item \emph{Irreducible implies prime}. A perfect differential ideal
+  which is irreducible is prime.
+\item \emph{Decomposition}. Any perfect differential ideal is the
+  intersection of a finite set of irreducible, hence prime, perfect
+  differential ideals.
+\end{enumerate}
+\end{theorem}
+
+The decomposition theorem follows by noetherian induction
+\cite[p.~365]{Raudenbush1934}. Suppose the claim fails; the failing
+ideal is reducible, one component still fails, and so on. An ascending
+chain of perfect differential ideals appears, and the basis theorem
+forbids it \cite[p.~365]{Raudenbush1934}. Uniqueness comes next: delete
+in turn each member of the finite set that contains a different member,
+and the remainder is determined by the ideal
+\cite[pp.~365--366]{Raudenbush1934}.
+
+\begin{theorem}[{\cite[Theorem~6, p.~365]{Raudenbush1934}}]\label{thm:diffalg:essential-uniqueness}
+If a perfect differential ideal is the intersection of each of two
+essential sets of prime perfect differential ideals, then the two sets
+have the same number of members and coincide after a suitable
+rearrangement.
+\end{theorem}
+
+All this applies to the differential ring that motivates the
+whole subject: the ring of forms (differential polynomials) in a finite
+set of indeterminates over a differential field
+\cite[p.~361]{Raudenbush1934}. Ritt had proved his basis theorem for
+this ring \cite[p.~361]{Raudenbush1934}. Raudenbush gives a second,
+shorter proof and remarks that its simplicity reflects the strength of
+the theory \cite[p.~362]{Raudenbush1934}.
+
+\begin{theorem}[{\cite[Theorem~7, pp.~366--367]{Raudenbush1934}}]\label{thm:diffalg:ritt-raudenbush-basis}
+Let $F$ be a differential field of characteristic zero. Then the
+differential ring of forms in a finite set of indeterminates over $F$ is
+a differential ring with a basis theorem.
+\end{theorem}
+
+With the basis theorem in hand, the preceding theorems give the
+intersection theorem on primes
+\cite[Theorems~5, 6 and~7, pp.~365--367]{Raudenbush1934}. Every perfect
+differential ideal of the ring of differential polynomials over a
+characteristic-zero differential field is a finite intersection of prime
+perfect differential ideals, unique up to rearrangement
+\cite[Theorems~5, 6 and~7, pp.~365--367]{Raudenbush1934}. Combined with
+Theorem~\ref{thm:diffalg:perfect-is-radical} this recovers the finite
+basis theorem of Ritt for differential polynomials, and the finite decomposition
+of differential algebraic varieties into irreducible components
+\cite[p.~361]{Raudenbush1934}.
+
+The method of Ritt himself is more explicit than the ideal theory,
+because it
+comes from elimination \cite[p.~176]{Wu1987RittConstructive}. For a finite system of differential polynomials he produces an
+\emph{ascending set}, a finite ordered list of differential polynomials
+of increasing class. He also produces a \emph{characteristic set} of the
+differential ideal of the system, whose remainder theory decides membership
+\cite[p.~176]{Wu1987RittConstructive}. Wu Wen-tsun rebuilt the whole
+theory constructively around this device
+\cite[pp.~175--184]{Wu1987RittConstructive}. His decomposition theorem
+makes the irreducible components computable
+\cite[p.~179]{Wu1987RittConstructive}. It is the computational form of the
+prime decomposition of a perfect differential ideal stated above this
+paragraph \cite[p.~179]{Wu1987RittConstructive}.
+
+\begin{theorem}[{\cite[p.~179]{Wu1987RittConstructive}}]\label{thm:diffalg:wu-zero-decomposition}
+Let $(\mathrm{DP})$ be a finite system of differential polynomials and
+$G$ a differential polynomial. There is a mechanical procedure which
+decides in a finite number of steps whether the zero set
+$\mathrm{Zero}(\mathrm{DP}/G)$ is empty, and in the non-empty case
+furnishes a decomposition
+\[
+\mathrm{Zero}(\mathrm{DP}/G) \;=\; \bigcup_i
+\mathrm{Zero}(\mathrm{ASC}_i / I_i, G_i)
+\]
+where each $(\mathrm{ASC}_i)$ is a d-irreducible ascending set, $I_i$ is
+the product of the initials of $(\mathrm{ASC}_i)$, and $G_i$ is reduced
+with respect to $(\mathrm{ASC}_i)$.
+\end{theorem}
+
+The characteristic-set method is the computational side of the
+Ritt--Kolchin theory \cite[pp.~175--184]{Wu1987RittConstructive}.
+Modern textbook treatments \cite[pp.~245--261]{HubbardLundell2011}
+develop exactly this interface between the abstract ideal theory and the
+explicit elimination \cite[pp.~245--250]{HubbardLundell2011}.
+Theorem~\ref{thm:diffalg:wu-zero-decomposition} is also what runs the
+mechanical theorem proving in differential geometry that Wu proposed
+\cite[pp.~175--184]{Wu1987RittConstructive}. The analogue on the Galois
+side of the chapter is the algebraic group computation of
+Section~\ref{sec:differential-algebra:differential-galois}.
+
+% Moved from chapters/20-applications/03-differential-equations.tex (sources read: Kolchin 1973, Ax 1971 via Aslanyan 2018).
+\section{Differential equations: fields with a derivation}\label{sec:differential-algebra:differential-equations}
+
+The algebra of smooth functions on a manifold from
+Section~\ref{sec:commutative:geometry} is a differential ring. Differential
+algebra takes a differential equation as data and studies its solutions by
+algebra, as Kolchin axiomatized it \cite{Kolchin1973}; Kolchin
+began the theory in \cite[\S I.1]{Kolchin1973}.
+
+\begin{definition}[{\cite[\S I.1, p.~58]{Kolchin1973}}]\label{def:diffalg:kolchin-diff-ring}
+Let $\mathfrak{R}$ be a ring. An operator $\delta$ on $\mathfrak{R}$ is a
+\emph{derivation operator} if $\delta(a+b)=\delta a+\delta b$ and
+$\delta(ab)=(\delta a)b+a\,\delta b$ for all $a,b\in\mathfrak{R}$. A
+\emph{differential ring} is a ring $\mathfrak{R}$ equipped with a finite set
+$\Delta$ of derivation operators on $\mathfrak{R}$ such that
+$\delta\delta'a=\delta'\delta a$ for every $a\in\mathfrak{R}$ and every
+$\delta,\delta'\in\Delta$. If $\mathfrak{R}$ is a field, it is a
+\emph{differential field}.
+\end{definition}
+
+Kolchin attaches to a differential ring the free commutative semigroup
+$\Theta$ generated by $\Delta$ \cite[\S I.1, p.~59]{Kolchin1973}. An element
+$\theta\in\Theta$ is a \emph{derivative operator}, and its \emph{order}
+$\mathrm{ord}\,\theta$ is the sum of the exponents
+\cite[\S I.1, p.~59]{Kolchin1973}. The objects of
+differential algebra are then the differential subrings, differential ideals
+and differential extensions, parallel to rings, ideals and field extensions
+\cite[\S I.1, p.~59]{Kolchin1973}.
+
+The differential equation itself becomes a statement about field extensions
+\cite{Ax1971}.
+Ax showed that the transcendence of a solution of the exponential differential
+equation is bounded by the underlying derivation \cite[Theorem~3]{Ax1971}.
+We recall his theorem from the account of Aslanyan \cite{Aslanyan2018}.
+
+\begin{theorem}[{\cite[Theorem~1.1, p.~1]{Aslanyan2018}}]\label{thm:diffalg:ax-schanuel}
+Let $K=(K;+,\cdot,D)$ be a differential field with field of constants $C$. If
+$(x_1,y_1),\ldots,(x_n,y_n)$ are non-constant solutions to the exponential
+differential equation $Dy=y\,Dx$, then
+\[
+\mathrm{td}_C\,C(\bar{x},\bar{y}) - \mathrm{l.\,dim}_{\mathbb{Q}}(\bar{x}/C) \geq 1,
+\]
+where $\mathrm{l.\,dim}_{\mathbb{Q}}(\bar{x}/C)$ is the dimension of the
+$\mathbb{Q}$-span of $x_1,\ldots,x_n$ in the quotient vector space $K/C$.
+\end{theorem}
+
+This is the Ax--Schanuel theorem, the differential analogue of the open
+conjecture of Schanuel in number theory; Ax \cite{Ax1971} proved it as an
+application of the differential algebra of Kolchin \cite{Kolchin1973}. The
+field of definition of a solution of a differential equation is read from the
+bound \cite[\S2]{Aslanyan2018}. Section~\ref{sec:differential-algebra:transcendence}
+comes back to it in the model-theoretic form the theorem of Ax started.
+
+% Moved from chapters/20-applications/05-control.tex (source read in full: Fliess 1989).
+\section{Control theory: differential fields and dynamic feedback}\label{sec:differential-algebra:control}
+
+The engineer who designs an automatic controller writes a dynamical system as
+$\dot x=f(x,u)$ with $u$ an input and $x$ a state \cite{Fliess1989}. Fliess observed in 1989 that
+the input--output behaviour of the system lives in a finitely generated
+extension of a differential field, in the sense of
+Section~\ref{sec:differential-algebra:differential-equations} \cite{Fliess1989}.
+
+\begin{definition}[{\cite[\S1.2, p.~228]{Fliess1989}}]\label{def:diffalg:fliess-systemic-field}
+A \emph{systemic field} $\mathcal{K}$ is a finitely generated differential
+extension of the base differential field $k$. There exists a finite tuple
+$w=(w_1,\ldots,w_s)$ of elements of $\mathcal{K}$ with
+$\mathcal{K}=k\langle w\rangle$, the differential field generated by $k$ and
+$w$. An \emph{input} (or \emph{control}, \emph{command}) is any set containing
+a differential transcendence basis of $\mathcal{K}/k$; if the set is itself
+such a basis, the input is \emph{independent}.
+\end{definition}
+
+There is thus a partition $w=(u,y)$, not necessarily unique, into an
+independent input $u$ and a remaining tuple $y$
+\cite[\S1.2, p.~228]{Fliess1989}. The input $u$ is a
+differential transcendence basis of $\mathcal{K}/k$, and the components of
+$y$ are differentially algebraic over $k\langle u\rangle$
+\cite[\S1.2, p.~228]{Fliess1989}. The state-space realisation question then
+asks for a writing of the extension with a finite non-differential
+transcendence basis \cite[\S1.2, p.~228]{Fliess1989}. Fliess shows that in general one cannot realise a
+nonlinear system globally in explicit first-order form
+\cite[Introduction, p.~227]{Fliess1989}.
+
+\begin{definition}[{\cite[\S1.3, p.~228]{Fliess1989}}]\label{def:diffalg:io-system}
+An \emph{input-output system} consists of an input $u=(w_1,\ldots,w_m)$ and an
+output $y=(y_1,\ldots,y_p)$ with components in a universal differential field,
+such that $y_1,\ldots,y_p$ are differentially algebraic over $k\langle u\rangle$.
+If $w_1,\ldots,w_m$ are differential indeterminates, the input is
+\emph{independent}.
+\end{definition}
+
+The framework applies to feedback synthesis, input-output inversion and
+realization, and Fliess uses it to define a feedback as a specialisation of
+differential fields \cite[Introduction, p.~227]{Fliess1989}.
+
+\section{Automatic differentiation: derivations in computer code}\label{sec:differential-algebra:automatic-differentiation}
+
+The topological refinement of Section~\ref{sec:cohomology:algebraic-topology}
+computed derivations as homology of a chain complex. The engineering reading
+of the same rule makes a computer program evaluate the derivative of the
+function it implements \cite[Introduction, p.~2]{YuanThomsonAnderson2020}.
+The method is automatic differentiation, and the program runs the chain rule
+and the Leibniz rule step by step \cite{YuanThomsonAnderson2020}.
+Yuan, Thomson and Anderson apply the method to the flight dynamics of a
+tilt-rotor aircraft \cite{YuanThomsonAnderson2020}, where automatic
+differentiation gives the stability derivatives.
+
+The authors define automatic differentiation (AD) as a set of techniques for
+evaluating numerically the derivative of a function implemented in a computer
+program \cite[Introduction, p.~2]{YuanThomsonAnderson2020}.
+
+\begin{definition}[{\cite[Introduction, p.~2]{YuanThomsonAnderson2020}}]\label{def:app:autodiff}
+\emph{Automatic differentiation} (AD) is a set of techniques for numerically
+evaluating the derivative of a function implemented within a computer
+program. The method is based on the chain rule as applied to the
+differentiation process.
+\end{definition}
+
+Every program decomposes into elementary operations
+\cite[\S II.B]{YuanThomsonAnderson2020}. An arithmetic operator or
+an intrinsic function applied to intermediate values is one elementary step
+\cite[\S II.B]{YuanThomsonAnderson2020}. A step $g=h(a,b)$ of the program
+differentiates by the chain rule as
+\[
+dg \;=\; \frac{\partial h}{\partial a}\,da \;+\; \frac{\partial h}{\partial b}\,db,
+\]
+\cite[equation (2)]{YuanThomsonAnderson2020}. Repeated use of the formula
+simplifies the differentiation to a series of algebraic operations, with
+derivative results coming from the elementary operations
+\cite[\S II.B]{YuanThomsonAnderson2020}. In the forward mode of \cite[\S II.B]{YuanThomsonAnderson2020},
+the propagation of the derivative of the state $\dot x_i$ with respect to an
+initial condition $x_j$ is evaluated. The operation of the forward mode is
+\[
+\frac{\partial \dot x_i}{\partial x_j}
+\;=\;
+\sum_{k=1}^{n}\frac{\partial \dot x_i}{\partial x_k}\,
+\frac{\partial x_k}{\partial x_j}
+\;+\;
+\sum_{l=1}^{m}\frac{\partial \dot x_i}{\partial u_l}\,
+\frac{\partial u_l}{\partial x_j},
+\]
+with $n=\dim(x)$ and $m=\dim(u)$ \cite[equation
+(3)]{YuanThomsonAnderson2020}.
+
+The derivative of the composed function is thus read from the Jacobian
+products, never from a difference quotient \cite[Introduction,
+p.~2]{YuanThomsonAnderson2020}. Numerical differentiation by
+finite differences would carry a truncation error and is avoided
+\cite[Introduction, p.~2]{YuanThomsonAnderson2020}. The Leibniz rule of a
+derivation on an algebra is one of the elementary operator identities that the
+overloaded algebra of AD satisfies \cite[\S II.B]{YuanThomsonAnderson2020}.
+The semantics of the overloaded arithmetic are those of the pair
+$(x,\dot x)$, the state and its derivative, as in \cite[\S II.B]{YuanThomsonAnderson2020}. The composition is a chain rule
+on the first-order jets of the elementary steps \cite[equations
+(2)--(3)]{YuanThomsonAnderson2020}.
+

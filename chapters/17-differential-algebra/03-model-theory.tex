@@ -1,0 +1,175 @@
+% STATUS: written 2026-11-05; last paragraph added 2026-11-06
+% Sources read in full: Wood 1973 (Proc. AMS 40, 577--584); Wood 1998
+% (MSRI volume, pp. 129--141); Chatzidakis, Hrushovski and Peterzil 2002
+% (Proc. London Math. Soc. (3) 85, 257--311, introduction and statement of
+% the trichotomy read; full text in the central library).
+\section{Differential fields in model theory}\label{sec:differential-algebra:model-theory}
+
+The abstract theories of
+Sections~\ref{sec:differential-algebra:ritt-kolchin}
+and~\ref{sec:differential-algebra:differential-galois} say what a
+differential field is and what its automorphisms can look like. They do
+not say that large enough differential fields exist. Existence is a
+model-theoretic fact \cite[pp.~129--132]{Wood1998DifferentiallyClosed}.
+Robinson and Blum proved it in
+characteristic zero \cite[pp.~129--132]{Wood1998DifferentiallyClosed}:
+the theory of differential fields has a model completion, the theory
+$\mathrm{DCF}$ of differentially closed fields. The axioms of Robinson
+say
+that any system of differential equations and inequations that has a
+solution in some extension already has one in the field
+\cite[p.~131]{Wood1998DifferentiallyClosed}. Wood states the equivalent
+reformulations that are used today
+\cite[pp.~129--134]{Wood1998DifferentiallyClosed}.
+
+\begin{definition}[{\cite[$\S$1, pp.~129--131]{Wood1998DifferentiallyClosed}}]\label{def:diffalg:dcf}
+A \emph{differentially closed field} is a differential field $K$ of
+characteristic zero such that every finite system of differential
+equations and inequations over $K$ which has a solution in some
+differential field extension of $K$ already has a solution in $K$.
+\end{definition}
+
+The theory $\mathrm{DCF}$ has the two model-theoretic properties that
+make the algebraic machine of
+Section~\ref{sec:differential-algebra:differential-galois} run
+\cite[pp.~129--134]{Wood1998DifferentiallyClosed}.
+
+\begin{theorem}[{\cite[Theorem~1.8, p.~132]{Wood1998DifferentiallyClosed}}]\label{thm:diffalg:dcf-complete-qe}
+The theory $\mathrm{DCF}$ of differentially closed fields is complete
+and admits elimination of quantifiers, hence is model complete.
+\end{theorem}
+
+Quantifier elimination gives the analogue of the Nullstellensatz of
+Hilbert
+\cite[pp.~129--132]{Wood1998DifferentiallyClosed}.
+
+\begin{corollary}[{\cite[Corollary~1.9, p.~132]{Wood1998DifferentiallyClosed}}]\label{cor:diffalg:diff-nullstellensatz}
+Let $S$ be a finite system of differential equations and inequations in
+$n$ differential indeterminates over a differentially closed field $K$.
+If $S$ has a solution in some differential field containing $K$, then
+$S$ has a solution in $K$.
+\end{corollary}
+
+Inside a differentially closed field, definability is just
+differential-algebraic definability
+\cite[pp.~132--134]{Wood1998DifferentiallyClosed}. The theory is stable
+in the strongest sense \cite[p.~134]{Wood1998DifferentiallyClosed}.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~134]{Wood1998DifferentiallyClosed}}]\label{thm:diffalg:dcf-omega-stable}
+The theory $\mathrm{DCF}$ of differentially closed fields is
+$\omega$-stable.
+\end{theorem}
+
+A further property concerns quotients
+\cite[pp.~133--134]{Wood1998DifferentiallyClosed}.
+
+\begin{theorem}[{\cite[Theorem~1.13, p.~133]{Wood1998DifferentiallyClosed}}]\label{thm:diffalg:dcf-ei}
+The theory $\mathrm{DCF}$ of differentially closed fields has
+elimination of imaginaries.
+\end{theorem}
+
+These four results make $\mathrm{DCF}$ a clean subject
+\cite[pp.~129--134]{Wood1998DifferentiallyClosed}. Every differential
+field embeds in a differentially closed one
+(Corollary~\ref{cor:diffalg:diff-nullstellensatz}). Every formula is a
+Boolean combination of differential equations
+(Theorem~\ref{thm:diffalg:dcf-complete-qe}). Definable sets are
+controlled by Morley rank
+(Theorem~\ref{thm:diffalg:dcf-omega-stable}), and quotients by definable
+equivalence relations stay inside the theory
+(Theorem~\ref{thm:diffalg:dcf-ei}).
+
+Characteristic $p$ changes the picture less than one might fear
+\cite[pp.~577--584]{Wood1973ModelTheory}. Wood builds the theory $T_p$
+of differential fields of characteristic $p$
+\cite[pp.~577--584]{Wood1973ModelTheory}. He shows that $T_p$ has no
+model completion itself
+\cite[p.~579]{Wood1973ModelTheory}, but it still has a model companion
+$T^*$ of differentially closed fields \cite[p.~582]{Wood1973ModelTheory}.
+The reason for the failure of a model completion is the failure of
+amalgamation \cite[Theorem~2, p.~579]{Wood1973ModelTheory}. A system of
+equations in one variable can be solvable over one extension and not over
+another
+\cite[pp.~579--580]{Wood1973ModelTheory}. The theory only sees
+differential properties
+\cite[pp.~579--580]{Wood1973ModelTheory}, so it does not see extensions
+that are not differentially perfect
+\cite[pp.~579--580]{Wood1973ModelTheory}.
+
+\begin{theorem}[{\cite[Theorems~8 and~9, p.~582]{Wood1973ModelTheory}}]\label{thm:diffalg:wood-charp}
+The theory $T^*$ of differentially closed fields of characteristic $p$
+is the model completion of the theory of differentially perfect
+differential fields of characteristic $p$, and is the model companion of
+the theory of all differential fields of characteristic $p$. The theory
+$T^*$ is complete.
+\end{theorem}
+
+The quantifier elimination survives as well
+\cite[Theorem~11, p.~583]{Wood1973ModelTheory}: every formula over a
+differentially perfect field is equivalent to one existential
+differential condition. But stability breaks: unlike the characteristic
+zero case of Theorem~\ref{thm:diffalg:dcf-omega-stable}, $T^*$ is not
+$\omega$-stable \cite[p.~577]{Wood1973ModelTheory}. Separably algebraic
+closure replaces algebraic closure for the constants and for the base
+field \cite[Theorem~10, p.~582]{Wood1973ModelTheory}.
+
+% The paragraph below states the result as the source's introduction gives it,
+% with the page of the introduction.
+The difference-field theory of Chatzidakis, Hrushovski and Peterzil answers the
+same question for an automorphism in place of a derivation.
+In a difference field the derivation is replaced by an endomorphism $\sigma$,
+and the theory of difference fields was developed in their earlier paper.
+That paper proved its deepest result, the trichotomy of Zil'ber, only in
+characteristic $0$ \cite[p.~257]{ChatzidakisHrushovskiPeterzil2002}.
+The 2002 paper gives a new proof of the trichotomy that holds in all
+characteristics \cite[p.~257]{ChatzidakisHrushovskiPeterzil2002}.
+It works with a sequence of reducts of the theory, each replacing
+$\sigma$ by $\sigma^{n}$, and passes to a limit structure that is a Zariski
+geometry \cite[p.~257]{ChatzidakisHrushovskiPeterzil2002}.
+The trichotomy is obtained for that limit structure and then inherited by the
+original theory \cite[p.~257]{ChatzidakisHrushovskiPeterzil2002}.
+
+% Moved from chapters/20-applications/07-transcendence.tex (source read in full: Aslanyan 2018).
+\section{Transcendence and model theory: Ax--Schanuel on a variety}\label{sec:differential-algebra:transcendence}
+
+The Ax--Schanuel theorem of Section~\ref{sec:differential-algebra:differential-equations}
+bounds the transcendence of solutions of the exponential differential equation.
+The derivation $D$ enters the statement only through the exponential
+differential equation $Dy=y\,Dx$; the conclusion is a transcendence
+inequality, the kind of statement the transcendence theorist wants
+\cite[\S2]{Aslanyan2018}.
+Ax \cite{Ax1971} gave the inequality a geometric reading, and Aslanyan
+explains how \cite[\S2, p.~5]{Aslanyan2018}. Write $G_a$ for the additive
+group of a field and $G_m$ for its multiplicative group, and set
+$G_n=G_a^n\times G_m^n$. An algebraic subgroup $H$ of $G_m^n$ has a tangent
+space $T_eH$ at the identity, which is an algebraic subgroup of $G_a^n$
+\cite[\S2, p.~6]{Aslanyan2018}.
+
+\begin{theorem}[{\cite[Theorem~2.2, p.~6]{Aslanyan2018}}]\label{thm:diffalg:ax-schanuel-geometric}
+Let $K=(K;+,\cdot,D)$ be a differential field with algebraically closed
+field of constants $C$, and let $V\subseteq G_n(K)$ be an algebraic variety
+defined over $C$ with $\dim(V)\leq n$. If $(\bar{x},\bar{y})\in V(K)$ and
+$Dy_i=y_i\,Dx_i$ for each $i$, then there is a proper algebraic subgroup $H$
+of $G_m^n$ such that $(\bar{x},\bar{y})$ lies in a $C$-coset of $TH$, that
+is, $\bar{y}\in\gamma H$ and $\bar{x}\in\gamma'+T_eH$ for some constant
+points $\gamma\in G_m^n(C)$ and $\gamma'\in G_a^n(C)$.
+\end{theorem}
+
+A variety of this kind with a point $(\bar{x},\bar{y})\in V(K)$ satisfying
+the exponential differential equation is said to have an \emph{exponential
+point}. The Ax--Schanuel theorem is thus a necessary condition for a variety
+to have one \cite[\S2, p.~6]{Aslanyan2018}. A compactness argument gives a
+uniform version. For a parametric family of varieties $V(\bar{c})$ over $C$
+there is a bound $N$; whenever $\dim V(\bar{c})\leq n$, the integers $m_i$
+of Theorem~\ref{thm:diffalg:ax-schanuel} may be taken with $|m_i|\leq N$
+\cite[\S2, p.~6]{Aslanyan2018}. The theory $T_{\mathrm{Exp}}$ of the
+exponential differential equation has an axiomatisation built from this
+uniform inequality and a list of elementary axioms
+\cite[\S2, pp.~6--7]{Aslanyan2018}.
+
+The inequality hence divides the possibility space for solutions. A variety
+meeting the graph of the exponential map in too small a dimension does so
+inside an algebraic subgroup \cite[Theorem~2.2]{Aslanyan2018}.
+
+Section~\ref{sec:differential-algebra:difference} returns to the
+algebraic side and replaces the derivation by an automorphism.

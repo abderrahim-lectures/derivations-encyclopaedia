@@ -1,0 +1,11 @@
+% On C[0,2pi] with the sup norm, ||sin(nx)|| = 1 but ||(sin(nx))'|| = n: d/dx is unbounded.
+\begin{tikzpicture}
+\begin{axis}[width=10cm,height=5cm,xmin=0,xmax=6.2832,ymin=-4.5,ymax=4.5,axis lines=middle,
+  xtick={3.1416,6.2832},xticklabels={$\pi$,$2\pi$},ytick={-4,-1,1,4},
+  legend style={font=\footnotesize,at={(0.5,-0.08)},anchor=north,legend columns=2,draw=none}]
+  \addplot[hbblue,thick,domain=0:6.2832,samples=200] {sin(deg(4*x))};
+  \addlegendentry{$\sin 4x$, norm $1$\quad}
+  \addplot[hbgold!80!black,thick,domain=0:6.2832,samples=200] {4*cos(deg(4*x))};
+  \addlegendentry{$4\cos 4x$, norm $4$}
+\end{axis}
+\end{tikzpicture}

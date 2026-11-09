@@ -1,0 +1,247 @@
+% STATUS: written 2026-11-05, recalled results as is (one environment each, source kind and whole statement)
+% Sources read in full: Spiegel 1994 (pp. 2955--2959), Ferrero, Giambruno and Polcino Milies 1995 (pp. 434--437).
+% Additions of 2026-11-07 moved from chapter 20: Fox 1953 (pp. 549--550) read in full.
+% Additions of 2026-11-06 from Arutyunov--Zhiltsov 2023 (pp. 1, 8),
+% Arutyunov--Naianzin 2023 (pp. 1--2) and Antrobus--Briggs--Rubio y Degrassi 2026 (pp. 1--3).
+% Sources: Spiegel1994, FerreroGiambrunoPolcinoMilies1995, ManjuSharma2026,
+% ArutyunovZhiltsov2023, ArutyunovNaianzin2023, AntrobusBriggsRubioDegrassi2026.
+\section{Group algebras and group rings}\label{sec:group-hopf:group-algebras}
+
+Group rings join a group to a ring, and the elements of the group now act on the
+product rule. % claim-ok: motif of this section, stated in the section plan; no external fact
+The group ring $RG$ of a group $G$ over a commutative ring $R$ with
+$1$ is the free $R$-module on $G$, with the product extended from $G$
+\cite[p.~2956]{Spiegel1994}. Write $D$ for a derivation of $RG$. On a group
+element the Leibniz rule reads $D(xy)=D(x)y+xD(y)$, so the values of $D$ on $G$
+decide its values on whole of $RG$ by Lemma~\ref{lem:group-hopf:spiegel-extension}.
+
+\begin{lemma}[{\cite[Lemma~1, p.~2956]{Spiegel1994}}]\label{lem:group-hopf:spiegel-extension}
+Let $R$ be a commutative ring with $1$, $G$ a group, and $D\colon G\to RG$ a map with
+$D(xy)=D(x)y+xD(y)$ for all $x,y\in G$. Then $D$ extends to a derivation of $RG$.
+\end{lemma}
+
+Spiegel proves the extension formula by linearity: write an element of $RG$ as a
+finite sum $\sum r_g g$ and send it to $\sum r_g D(g)$ \cite[p.~2956]{Spiegel1994}.
+He then asks which derivations of the integral group ring $\mathbb{Z}G$ occur, first
+for a finite group \cite[p.~2955]{Spiegel1994}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~2956]{Spiegel1994}}]\label{thm:group-hopf:spiegel}
+Let $\mathbb{Z}G$ be the integral group ring of the finite group $G$. Every
+derivation of $\mathbb{Z}G$ is inner.
+\end{theorem}
+
+The proof extends a derivation $D$ of $\mathbb{Z}G$ to the rational group algebra
+$\mathbb{Q}G$ by Lemma~\ref{lem:group-hopf:spiegel-extension}. The theorem of
+Maschke makes $\mathbb{Q}G$ semisimple \cite[p.~2956]{Spiegel1994}. On each simple component
+the derivation is linear over the centre, so a consequence of the Noether--Skolem
+theorem makes it inner \cite[pp.~2956--2957]{Spiegel1994}. Spiegel then clears
+the fractions \cite[pp.~2957--2958]{Spiegel1994}: $D= D_f$ with $f\in\mathbb{Q}G$
+and $D(h)\in\mathbb{Z}G$ for $h\in G$ give $(r_g-r_{h^{-1}gh})\in\mathbb{Z}$.
+The fractional parts of the coefficients of $f$ form a central element, so $f$
+may be taken inside $\mathbb{Z}G$ \cite[pp.~2957--2958]{Spiegel1994}. For an
+abelian group $G$ there is more to say: $L(x)=D(x)x^{-1}$ is a homomorphism from
+$G$ to the additive group of $\mathbb{Z}G$ \cite[p.~2958]{Spiegel1994}. The
+image $L(G)$ is free abelian \cite[p.~2958]{Spiegel1994}. Take a basis of $L(G)$
+and choose one element of $G$ above each basis element; these elements and
+$\ker L$ give the direct product \cite[p.~2958]{Spiegel1994}.
+
+\begin{theorem}[{\cite[Theorem~2, pp.~2958--2959]{Spiegel1994}}]\label{thm:group-hopf:spiegel-abelian}
+Let $G$ be an abelian group.
+\begin{enumerate}
+\item If $D$ is a derivation of $\mathbb{Z}G$, there exist subgroups $A,B$ of $G$,
+with $A$ a free abelian group having a basis $\{a_i\mid i\in I\}$, and a linearly
+independent set $\{y_i\mid i\in I\}$ of the additive group of $\mathbb{Z}G$ such
+that $G$ is the direct product of $A$ and $B$, and if $g\in G$ with $g=ab$, $a\in A$,
+$b\in B$ and $a=a_{i_1}^{e_1}\cdots a_{i_n}^{e_n}$, then
+$D(g)=(e_1 y_{i_1}+\cdots+e_n y_{i_n})g$.
+\item Conversely, if $G$ is the direct product of groups $A,B$ with $A$ a free
+abelian group with basis $\{a_i\mid i\in I\}$, and $\{y_i\mid i\in I\}$ is a set of
+linearly independent elements of the additive group of $\mathbb{Z}G$, then the
+mapping $D\colon G\to\mathbb{Z}G$ given by
+$D(g)=(e_1 y_{i_1}+\cdots+e_n y_{i_n})g$ extends to a derivation of $\mathbb{Z}G$.
+Here $g=ab$, $a\in A$, $b\in B$ and $a=a_{i_1}^{e_1}\cdots a_{i_n}^{e_n}$.
+\end{enumerate}
+\end{theorem}
+
+So a derivation of $\mathbb{Z}G$ for $G$ abelian is a choice of a free factor of $G$
+and of a free family in $\mathbb{Z}G$. Torsion-free factors give outer derivations
+\cite[Theorem~2, pp.~2958--2959]{Spiegel1994}.
+
+So the story now moves from $\mathbb{Z}$ to a semiprime coefficient ring. Ferrero,
+Giambruno and Polcino Milies take a ring with unity $R$ and call a derivation
+$d\colon RG\to RG$ an $R$-derivation when $d(R)=0$ \cite[p.~434]{FerreroGiambrunoPolcinoMilies1995}.
+They also record a decomposition \cite[p.~434]{FerreroGiambrunoPolcinoMilies1995}:
+a derivation $d$ of $RG$ with $d(R)\subseteq R$ writes as $d=d_1+d_2$. Here $d_1$
+is a derivation of $R$ extended by $d_1(G)=0$, and $d_2$ is an $R$-derivation of
+$RG$. Their main theorem puts a finiteness condition on the centre.
+
+\begin{theorem}[{\cite[Theorem~1.1, p.~434]{FerreroGiambrunoPolcinoMilies1995}}]\label{thm:group-hopf:fgp}
+Let $R$ be a semiprime ring and $G$ a torsion group such that $[G:Z(G)]<\infty$,
+where $Z(G)$ denotes the center of $G$. Suppose that either $\operatorname{char}R=0$
+or for every characteristic $p$ of $R$, $p$ does not divide $o(g)$, for all $g\in G$.
+Then every $R$-derivation of $RG$ is inner.
+\end{theorem}
+
+The proof first treats a finite group $G$
+\cite[pp.~434--436]{FerreroGiambrunoPolcinoMilies1995}. The ring $R$ embeds into
+a direct sum of algebraically closed fields, where the theorem of Maschke applies
+\cite[p.~435]{FerreroGiambrunoPolcinoMilies1995}. The general case reduces to a
+finite subgroup generated by the supports of the values of $d$
+\cite[pp.~434--436]{FerreroGiambrunoPolcinoMilies1995}. Section~3 of the paper
+shows the hypothesis on $G$ is needed.
+
+\begin{example}[{\cite[\S3, p.~437]{FerreroGiambrunoPolcinoMilies1995}}]\label{ex:group-hopf:outer}
+Let $H$ be a finite non-abelian $p$-group and let $G=\bigoplus_i H_i$ be the direct
+sum of infinitely many copies of $H$. Then $G$ is a locally finite nilpotent group.
+Let $F$ be any field, and choose a non-central element $x_i$ of $H_i$ for each $i$.
+The map $d\colon FG\to FG$ with $d(a)=\sum_{i\ge1}[x_i,a]$ is a derivation of $FG$:
+on $FG_n$ it is the inner derivation induced by $x_1+\cdots+x_n$. It is not an inner
+derivation of $FG$, since $d(H_i)\neq0$ for all indices $i$.
+\end{example}
+
+So an infinite group can carry a derivation that is inner on every finitely
+generated subgroup but outer on the whole group.
+
+Manju and Sharma count the inner derivations over any field, and they read the
+count from the class sums \cite[p.~5]{ManjuSharma2026}. The class sums
+form a basis of the centre of $FG$ \cite[p.~5]{ManjuSharma2026}. The proof
+extends that basis to a basis of $FG$
+\cite[p.~5]{ManjuSharma2026}. The inner derivations indexed by the added
+elements then form a basis of the inner ones \cite[p.~5]{ManjuSharma2026}.
+
+\begin{theorem}[{\cite[Theorem~2.15, p.~5]{ManjuSharma2026}}]\label{thm:group-hopf:manju-sharma-dim}
+Let $F$ be an arbitrary field of any characteristic and $G$ a finite group of
+order $n$ having $r$ conjugacy classes. Then the dimension of the space of inner
+derivations of $FG$ is $n-r$. If $C_1,\dots,C_r$ are the distinct conjugacy
+classes of $G$ with representatives $x_1,\dots,x_r$ respectively and $s$ is a
+positive integer such that $|C_i|=1$ for all $i\in\{1,\dots,s\}$ and $|C_i|\ge2$
+for all $i\in\{s+1,\dots,r\}$, then the set
+$B_0=\{d_g\mid g\in\bigcup_{i=s+1}^{r}(C_i\setminus\{x_i\})\}$ is an $F$-basis of
+the space of inner derivations of $FG$.
+\end{theorem}
+
+Here $d_g$ is the inner derivation $d_g(\alpha)=\alpha g-g\alpha$
+\cite[Definition~2.2, p.~3]{ManjuSharma2026}. So the count of
+Theorem~\ref{thm:group-hopf:manju-sharma-dim} is fixed by the class number
+alone, for every finite group \cite[p.~5]{ManjuSharma2026}. The paper then works
+the count out
+for three families and asks when every derivation is inner
+\cite[Corollary~3.6, p.~10]{ManjuSharma2026}. The dihedral group is
+$D_{2n}=\langle a,b\mid a^n=1,\ b^2=1,\ (ab)^2=1\rangle$ of order $2n$, with
+$n\ge3$ \cite[p.~6]{ManjuSharma2026}.
+
+\begin{corollary}[{\cite[Corollary~3.6, p.~10]{ManjuSharma2026}}]\label{cor:group-hopf:manju-sharma-dihedral}
+Let $F$ be an algebraic extension of a prime field and $p$ an odd rational
+prime.
+\begin{enumerate}
+\item If $\operatorname{char}F$ is either $0$ or $p$ with $\gcd(n,p)=1$, then
+every derivation of $FD_{2n}$ is inner.
+\item If $\operatorname{char}F=p$ with $\gcd(n,p)\neq1$, then the inner
+derivations form a proper subspace of the space of all derivations of $FD_{2n}$.
+\end{enumerate}
+\end{corollary}
+
+The authors prove the two cases by counting both spaces
+\cite[Theorem~3.5, p.~10]{ManjuSharma2026}. Their count of the inner derivations
+of $FD_{2n}$ is $3\lfloor (n-1)/2\rfloor$ over any field
+\cite[Theorem~3.5, p.~10]{ManjuSharma2026}. Their count of all derivations of
+$FD_{2n}$ equals it exactly when $\operatorname{char}F$ is $0$ or a prime not
+dividing $n$ \cite[Theorem~3.3, p.~7]{ManjuSharma2026}. A prime dividing the
+group order therefore leaves room for outer derivations on a finite group
+algebra \cite[Corollary~3.6, p.~10]{ManjuSharma2026}.
+
+The derivation algebra itself carries a grading. Arutyunov and Zhiltsov
+identify a derivation with a character of the groupoid of the adjoint
+action \cite[p.~1]{ArutyunovZhiltsov2023}. Fix a normal subgroup $N$ of $G$
+with $G/N$ abelian. Then the derivations split into pieces indexed by the
+cosets of $N$ \cite[p.~1]{ArutyunovZhiltsov2023}.
+
+\begin{theorem}[{\cite[Theorem~1, pp.~1, 8]{ArutyunovZhiltsov2023}}]\label{thm:group-hopf:grading}
+Let $G$ be a group and let $N$ be a normal subgroup of $G$ with $G/N$
+abelian and $|G/N|>1$. Then the derivation algebra of the group algebra is
+graded by $G/N$:
+\[
+\operatorname{Der}=\bigoplus_{k\in G/N}\operatorname{Der}_{k},
+\qquad
+[\operatorname{Der}_{k},\operatorname{Der}_{l}]\subset\operatorname{Der}_{kl}
+\quad\text{for all }k,l\in G/N .
+\]
+\end{theorem}
+
+The piece $\operatorname{Der}_{k}$ collects the derivations whose character
+is supported on the coset $k$ \cite[p.~1]{ArutyunovZhiltsov2023}. Every
+group that is not perfect has a nontrivial grading, because such a group has
+a proper normal subgroup with abelian quotient
+\cite[p.~1]{ArutyunovZhiltsov2023}.
+
+Arutyunov and Naianzin carry the derivation problem to a family of groups
+that they call BC-groups \cite[p.~2]{ArutyunovNaianzin2023}. The defining
+condition bounds the diameter of the conjugate of any finite set
+\cite[p.~2]{ArutyunovNaianzin2023}. For such a group every bounded
+derivation from the group ring into an $\ell^{q}$ space is inner
+\cite[Theorem~2, p.~2]{ArutyunovNaianzin2023}. This extends the case of
+Johnson, who settled the derivations of $\ell^{1}(G)$ for a discrete group
+\cite[p.~2]{ArutyunovNaianzin2023}.
+
+The question has a block form for finite groups. Let $kG$ be a group algebra
+over a field $k$ of characteristic $p$, and let $B$ be a block of $kG$ with
+defect group $P$ \cite[p.~2]{AntrobusBriggsRubioDegrassi2026}. Linckelmann
+made the conjecture that the first Hochschild cohomology of $B$ is nonzero
+whenever $P$ is nontrivial \cite[Conjecture, p.~2]{AntrobusBriggsRubioDegrassi2026}.
+Antrobus, Briggs and Rubio y Degrassi prove many cases of it
+\cite[Theorem~B, p.~2]{AntrobusBriggsRubioDegrassi2026}.
+
+\begin{theorem}[{\cite[Theorem~A, p.~2]{AntrobusBriggsRubioDegrassi2026}}]\label{thm:group-hopf:block-dimension}
+Let $B$ be a block of $kG$ with defect group $P$. Then the dimension of
+$HH^{1}(B)$ is at least the number of conjugacy classes of extra-strong
+non-Schur elements of $G$ relative to $P$.
+\end{theorem}
+
+The cases include the principal blocks with abelian defect group, and all
+blocks of the symmetric and alternating groups. They include the blocks of
+finite groups of Lie type in defining characteristic, and the blocks of
+general linear groups in any characteristic
+\cite[Theorem~B, p.~2]{AntrobusBriggsRubioDegrassi2026}.
+When $p>5$ the conjecture holds for all blocks of maximal defect
+\cite[Theorem~C, p.~3]{AntrobusBriggsRubioDegrassi2026}.
+
+\section{Harmonic analysis: derivations on group rings}\label{sec:group-hopf:harmonic-analysis}
+
+Fox built the harmonic analysis of a group ring in 1953 \cite{Fox1953}. The
+classical theory begins with a definition of derivation that is the Leibniz
+rule on the group itself
+\cite[equations (1.1)--(1.2), p.~549]{Fox1953}.
+
+\begin{definition}[{\cite[equations (1.1)--(1.2), p.~549]{Fox1953}}]\label{def:group-hopf:fox-derivation}
+Let $JG$ be the group ring of a group $G$ over a commutative ring $J$ with
+unit. By a \emph{derivation} in $JG$ is meant any mapping $D$ of $JG$ into
+itself which satisfies
+\[
+D(u+v)=Du+Dv,\qquad D(u\ast v)=Du\cdot v^{0}+u\ast Dv\quad\text{for }u,v\in JG,
+\]
+where $v^{0}\in J$ is the coefficient sum of $v$.
+\end{definition}
+
+For elements of the group itself, the second law takes the simpler form
+$D(gh)=Dg+g\,Dh$ \cite[(1.2)', p.~549]{Fox1953}, which is the Leibniz rule for
+the group multiplication. Fox shows the set of derivations in $JG$ forms a
+right $JG$-module, with $(D\cdot v)(u)=Du\,v$ \cite[p.~549]{Fox1953}. On the
+free group ring, the structure is fully described by \cite[Theorem, equations (2.1) and (2.2), p.~550]{Fox1953}.
+
+\begin{theorem}[{\cite[Theorem, equations (2.1) and (2.2), p.~550]{Fox1953}}]\label{thm:group-hopf:fox-free-derivatives}
+Let $X$ be a free group with generators $(x)=(x_1,x_2,\dots)$ and let $JX$ be
+its group ring. To each generator $x_j$ of $X$ there corresponds a derivation
+$f(x)\mapsto D_j f(x)=f_{x_j}(x)=\partial f(x)/\partial x_j$, called the
+\emph{derivative with respect to} $x_j$ \cite[p.~550]{Fox1953}, which has the property
+$\partial x_k/\partial x_j=\delta_{jk}$. Furthermore, there is one and only one
+derivation $f(x)\mapsto f'(x)$ mapping $x_1,x_2,\ldots$ into prescribed
+elements $h_1(x),h_2(x),\ldots$ of $JX$; it is given by
+$f'(x)=\sum_j f_{x_j}(x)\cdot h_j(x)$.
+\end{theorem}
+
+On the continuous side, the same rule governs the operator algebras of
+Chapter~\ref{ch:banach-operator}, where each derivation of a von Neumann
+algebra is inner \cite[Theorem~15, p.~290]{Kadison1966}.
+
+Section~\ref{sec:group-hopf:hopf} moves from the group ring to a Hopf algebra,
+where the coproduct itself asks a derivation to respect a second operation.

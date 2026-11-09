@@ -1,0 +1,95 @@
+% STATUS: written 2026-11-04 (Kharchenko and Popov 1991, De Filippis and Fosner 2012, De Filippis and Rehman 2010, Chou and Liu 2009 read in full)
+% STATUS: extended 2026-11-06 (Jiang, Kang and Lu 2026 read in full from the library PDF)
+% Sources read in full: Kharchenko and Popov 1991 (pp. 1045--1051); De Filippis and Fosner 2012 (pp. 885--898); De Filippis and Rehman 2010 (pp. 841--850); Chou and Liu 2009 (pp. 259--270); Jiang, Kang and Lu 2026 (pp. 4--5, 13, 18--19).
+\section{$\alpha$-derivations and their characterizations}\label{sec:generalized-twisted:alpha-derivations}
+
+For a fixed automorphism the $(\alpha,\beta)$-derivations collapse to a
+single twist. The theory of these maps was built in the Siberian school,
+where they were called directional derivatives, for the study of identities
+with automorphisms \cite[p.~1045]{KharchenkoPopov1991}.
+
+\begin{definition}[{\cite[p.~1045]{KharchenkoPopov1991}}]\label{def:gen:s-derivative}
+Suppose $s$ is an automorphism of a ring $R$. The map
+$\delta\colon R\to R$ will be called an \emph{$s$-derivative} if
+$\delta(xy)=\delta(x)y+s(x)\delta(y)$ for all $x,y\in R$. If $s$ is fixed or
+is not defined, $\delta$ is called a directional derivative. The
+automorphism $s$ is said to be fundamental for $\delta$.
+\end{definition}
+
+The $s$-derivatives with a skew structure are the $\alpha$-derivations of the
+later literature \cite[p.~885]{DeFilippisFosner2012}.
+
+The $s$-derivatives of Definition~\ref{def:gen:s-derivative} are the
+$\alpha$-derivations of Definition~\ref{def:gen:alpha}, up to the side on
+which the twist acts \cite[p.~885]{DeFilippisFosner2012}. An element of the
+ring supplies one, in the same way that it supplies an inner derivation
+\cite[p.~1045]{KharchenkoPopov1991}.
+
+\begin{remark}[{\cite[Lemma~6, p.~1045]{KharchenkoPopov1991}}]\label{rem:gen:inner-s}
+Suppose $s$ is an automorphism of the ring $Q$ and $a\in Q$. Then the map
+$\operatorname{ad}_{s}a\colon x\mapsto ax-s(x)a$ is an $s$-derivative. A
+directional derivative of this form is called inner.
+\end{remark}
+
+The inner form is one of three basic examples of the twist
+\cite[p.~885]{DeFilippisFosner2012}.
+
+\begin{remark}[{\cite[p.~885]{DeFilippisFosner2012}}]\label{rem:gen:alpha-examples}
+Basic examples of $\alpha$-derivations are usual derivations and the map
+$\alpha-1$, where $1$ denotes the identity map.
+Let $R$ be a ring and fix an element $b$ of the right Martindale quotient
+ring $Q$.
+The map $D\colon R\to R$ defined by $D(x)=bx-\alpha(x)b$ is an
+$\alpha$-derivation, called an
+\emph{inner $\alpha$-derivation} (an inner skew derivation) defined by $b$.
+\end{remark}
+
+The Siberian line tied these maps to the theory of polynomial identities
+\cite[p.~1045]{KharchenkoPopov1991}. An essential identity with
+automorphisms and directional derivatives forces the ring to be a PI-ring:
+
+\begin{theorem}[{\cite[Theorem~3, p.~1050]{KharchenkoPopov1991}}]\label{thm:gen:kharchenko-essential}
+Suppose a semiprime ring with unity $R$ satisfies an essential polylinear
+identity possessing automorphisms and directional derivatives. Then $R$ will
+be a PI-ring if all the automorphisms corresponding to the directional
+derivatives occur in the notation for this identity and commute with the
+directional derivatives of this identity.
+\end{theorem}
+
+Chou and Liu extended the Engel condition of Lanski to a $\sigma$-derivation
+(Theorem~\ref{thm:gen:chouliu-engel}), and De Filippis and Fosner described
+when a power identity forces one to be ordinary
+(Theorem~\ref{thm:gen:defilippis-fosner}). The generalized form of the
+twist enters a skew-commutator version
+\cite[p.~843]{DeFilippisRehman2010}.
+
+\begin{theorem}[{\cite[Theorem~1.3, p.~843]{DeFilippisRehman2010}}]\label{thm:gen:defilippis-rehman-skewcomm}
+Let $R$ be a prime ring of characteristic different from $2$ with extended
+centroid $C$, $F$ a non-zero generalized derivation of $R$, and
+$f(x_{1},\dots,x_{n})$ a polynomial over $C$. If $F(u)\circ F(v)=0$ for any
+$u,v\in f(R)$, then $f(x_{1},\dots,x_{n})$ is central valued on $R$.
+\end{theorem}
+
+For $\alpha$ the identity, the result reduces to the commutativity theorems
+of Section~\ref{sec:generalized-twisted:generalized} \cite[p.~1148]{Hvala1998}.
+The multiplicative special case of the $\alpha$-derivation is older still.
+The map $\delta=\alpha-1$ is an $\alpha$-derivation, so every endomorphism
+supplies one \cite[p.~885]{DeFilippisFosner2012}.
+
+The twist has a Lie form, and it enters the enveloping algebra of a Hom-Lie
+algebra \cite[p.~4]{JiangKangLu2026}. There a map $d$ is an $\alpha$-derivation
+when it commutes with the twisting map $\alpha$ and satisfies
+$d([x,y])=[d(x),\alpha(y)]+[\alpha(x),d(y)]$ \cite[Definition~2.3, p.~4]{JiangKangLu2026}.
+The same rule serves Hom-associative algebras, where
+$D(ab)=D(a)\alpha(b)+\alpha(a)D(b)$ \cite[Definition~2.9, p.~5]{JiangKangLu2026}.
+A prescribed $\alpha$-derivation extends to the universal enveloping algebra of
+the Hom-Lie algebra, and the pair formed by the algebra and the derivation has
+the expected universal property \cite[Theorem~3.11, p.~13]{JiangKangLu2026}.
+When the twisting map is bijective, the enveloping algebra is isomorphic, with
+the derivations, to the twist of the enveloping algebra of the untwisted Lie
+algebra \cite[Theorem~4.8, p.~18]{JiangKangLu2026}. The Poincar\'e--Birkhoff--Witt
+filtration survives the twist \cite[Theorem~4.10, p.~19]{JiangKangLu2026}.
+
+The next section builds
+the skew polynomial rings where $\sigma$-derivations are the coefficient
+maps, the Ore extensions.

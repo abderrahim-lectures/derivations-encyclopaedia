@@ -1,0 +1,105 @@
+% STATUS: written 2026-11-05 (Liu--Zhang 2017, He--Li--An--Huang 2018 and
+% Yang--Fang 2019 read in full; excerpts in excerpts/. Miers 1973 is named
+% through these later papers and recorded in the atlas as pending.
+% The definition of a local Lie derivation is on p. 209 of Liu--Zhang 2017.)
+\section{Local and 2-local Lie derivations}\label{sec:local-characterizations:local-lie-jordan}
+
+The local condition of Section~\ref{sec:local-characterizations:local} has
+a Lie form. A linear map $\varphi$ of an algebra is a \emph{local Lie
+derivation}~\cite[p.~209]{LiuZhang2017LocalLie} when for each $A$ there is a Lie derivation $\varphi_A$,
+depending on $A$, with $\varphi(A)=\varphi_A(A)$. A Lie derivation here means a linear
+map $\varphi$ with $\varphi([A,B])=[\varphi(A),B]+[A,\varphi(B)]$
+\cite[p.~209]{LiuZhang2017LocalLie}. Liu and Zhang settled the local Lie
+question on the classical ground of
+Section~\ref{sec:local-characterizations:local}, von Neumann algebras.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~209]{LiuZhang2017LocalLie}}]\label{thm:local:liuzhang}
+Let $A$ be a factor von Neumann algebra acting on a complex Hilbert space
+$H$ with $\dim(A)\geq 2$. Then each local Lie derivation $\varphi$ from
+$A$ into itself is a Lie derivation.
+\end{theorem}
+
+A Lie derivation of a von Neumann algebra splits as a derivation plus a
+linear map into the center that vanishes on each commutator, after Miers
+1973 as reported at \cite[p.~209]{LiuZhang2017LocalLie}. A Lie derivation
+with such a splitting is called \emph{standard}, and each Lie derivation
+on a $C^*$-algebra is standard, after Mathieu and Villena as reported at
+\cite[p.~725]{HeLiAnHuang2018}. He, Li, An and Huang used these two facts
+to build a transferable pattern \cite[p.~727]{HeLiAnHuang2018}. Its four
+hypotheses are simple. The first three ask that each local derivation be a
+derivation. They also ask that each derivation be inner and that each Lie
+derivation be standard. The fourth says that no nonzero central element is
+a sum of commutators \cite[p.~727]{HeLiAnHuang2018}.
+
+\begin{theorem}[{\cite[Theorem~3.1, p.~727]{HeLiAnHuang2018}}]\label{thm:local:hlah31}
+Let $B$ be an algebra over $C$ satisfying the conditions: (1) every Lie
+derivation on $B$ is standard; (2) every derivation on $B$ is inner;
+(3) each local derivation on $B$ is a derivation; (4) every nonzero
+element in $Z(B)$, the center of $B$, cannot be written as
+$\sum_{i=1}^{n}[A_i,B_i]$, where $A_i,B_i\in B$. Then each local Lie
+derivation $\varphi$ on $B$ is a Lie derivation.
+\end{theorem}
+
+The four conditions hold widely \cite[pp.~727--728]{HeLiAnHuang2018}. Each
+local Lie derivation on a factor von Neumann algebra is a Lie derivation,
+which recovers Theorem~\ref{thm:local:liuzhang} with different hypotheses
+\cite[Corollary~3.2, p.~727]{HeLiAnHuang2018}. Condition (4) alone follows
+from the existence of a center-valued trace, so the statement covers every
+finite von Neumann algebra
+\cite[Theorem~3.4 and Corollary~3.5, p.~728]{HeLiAnHuang2018}. The
+properly infinite case is simpler: every element is already a sum of
+commutators, so every Lie derivation is a derivation
+\cite[Remark~3.6, p.~728]{HeLiAnHuang2018}. The same paper records the
+conclusion on UHF $C^*$-algebras and on the Jiang--Su algebra
+\cite[Corollaries~3.7 and~3.8, p.~728]{HeLiAnHuang2018}.
+
+The 2-local form of the question extends the construction of
+Section~\ref{sec:local-characterizations:two-local} to Lie derivations. A
+map $\delta$ on a
+Banach algebra, not assumed linear, is a \emph{2-local Lie derivation}
+when $\delta$ agrees at each pair of points with a Lie derivation chosen
+for that pair \cite[p.~243]{YangFang2019}. The condition is
+that for every $A$ and $B$ there is a Lie derivation
+$\delta_{A,B}$, depending on $A$ and $B$, with
+$\delta(A)=\delta_{A,B}(A)$ and $\delta(B)=\delta_{A,B}(B)$
+\cite[p.~243]{YangFang2019}.
+
+\begin{theorem}[{\cite[Theorem~3.9, pp.~728--729]{HeLiAnHuang2018}}]\label{thm:local:hlah39}
+Let $B$ be an algebra over $C$ satisfying the conditions: (1) every Lie
+derivation on $B$ is standard; (2) every derivation on $B$ is inner;
+(3) each 2-local derivation on $B$ is a derivation; (4) $Z(B)=CI$, where
+$Z(B)$ is the center of $B$; (5) every element in $B$ can be written as
+$\lambda I+\sum_{i=1}^{n}[A_i,B_i]$, where $\lambda\in C$ and
+$A_i,B_i\in B$. Then each 2-local Lie derivation $\varphi$ on $B$ is a Lie
+derivation.
+\end{theorem}
+
+Factor von Neumann algebras, UHF $C^*$-algebras and the Jiang--Su algebra
+meet the conditions of Theorem~\ref{thm:local:hlah39}, so each 2-local Lie
+derivation on them is a Lie derivation
+\cite[Corollaries~3.10 to~3.12, p.~729]{HeLiAnHuang2018}. Linearity saves
+the general finite case up to a defect, as Theorem~\ref{thm:local:yangfang}
+will show \cite[p.~244]{YangFang2019}. On a finite von
+Neumann algebra which is not a factor there is a 2-local Lie derivation,
+which is not linear, and which is no Lie derivation
+\cite[Example~3.13, p.~729]{HeLiAnHuang2018}.
+
+Yang and Fang closed the remaining case by describing the defect exactly
+\cite[p.~244]{YangFang2019}.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~244]{YangFang2019}}]\label{thm:local:yangfang}
+Let $M$ be a finite von Neumann algebra without central summands of type
+$I_1$. Then every 2-local Lie derivation $\delta\colon M\to M$ can be
+written in the form $\delta(A)=AE-EA+h(A)$ for all $A$ in $M$, where $E$
+is an element in $M$ and $h\colon M\to Z(M)$ is a homogenous mapping which
+annihilates each commutator of $M$.
+\end{theorem}
+
+Every linear 2-local Lie derivation on a finite von Neumann algebra
+without central summands of type $I_1$ is then a Lie derivation
+\cite[Corollary~2.6, p.~250]{YangFang2019}. On a properly infinite von
+Neumann algebra, every element is a finite sum of commutators after
+Sunouchi 1956 as reported at \cite[p.~244]{YangFang2019}. There every
+2-local Lie derivation is a 2-local derivation, and a 2-local derivation
+is a derivation by Theorem~\ref{thm:local:twolocvN}
+\cite[p.~244]{YangFang2019}.

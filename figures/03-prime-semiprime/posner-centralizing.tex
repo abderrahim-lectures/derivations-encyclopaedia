@@ -1,0 +1,13 @@
+% The second theorem of Posner (Posner 1957, p. 1093 and Theorem 2, p. 1097):
+% on a prime ring, a nonzero derivation whose values commute with their
+% arguments forces the ring to be commutative. Two boxes, the hypothesis on
+% the left, the conclusion on the right.
+\begin{tikzpicture}[font=\small]
+  \node[hbnode,text width=44mm,align=center] (hyp) at (0,0)
+    {$R$ prime, $d\neq0$ a derivation,\\
+     $a\,d(a)-d(a)\,a\in Z(R)$\\
+     for all $a\in R$};
+  \node[hbkey,text width=26mm,align=center] (con) at (66mm,0)
+    {$R$ commutative};
+  \draw[hbimplies] (hyp.east) -- (con.west);
+\end{tikzpicture}

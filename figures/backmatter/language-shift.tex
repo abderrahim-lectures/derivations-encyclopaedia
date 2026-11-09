@@ -1,0 +1,18 @@
+% Language by decade, from atlas-census.py. Before 1940 the collection is
+% mostly German and Latin; from 1940 it is English except for two French works.
+\begin{tikzpicture}[font=\footnotesize, x=0.52cm, y=0.055cm]
+  \draw[->] (0,0) -- (16.4,0) node[right] {decade};
+  \draw[->] (0,0) -- (0,125) node[above] {works};
+  % German and Latin: the older stratum
+  \foreach \i/\v in {1/0, 2/1, 3/1, 4/2, 5/2, 6/2, 7/0, 8/0, 9/0, 10/1}
+    \fill[hbgold!80] (\i-0.32,0) rectangle (\i+0.32,\v);
+  % English: the later stratum, stacked above
+  \foreach \i/\g/\e in {1/0/0, 2/1/0, 3/1/0, 4/2/0, 5/2/1, 6/2/3, 7/0/6,
+                        8/0/7, 9/0/12, 10/1/26, 11/0/25, 12/0/50,
+                        13/0/59, 14/0/114, 15/0/105}
+    \fill[hbblue!70] (\i-0.32,\g) rectangle (\i+0.32,\g+\e);
+  \foreach \i/\d in {1/1680, 6/1930, 10/1970, 15/2020}
+    \node[below, rotate=45, anchor=east, font=\scriptsize] at (\i,-2) {\d};
+  \node[right, font=\scriptsize, hbgold!60!black] at (3.4,7) {German, Latin};
+  \node[right, font=\scriptsize, hbblue] at (11.2,40) {English};
+\end{tikzpicture}

@@ -1,0 +1,8 @@
+% The Weyl algebra acting on k[x]: x raises degree, d/dx lowers it, [d/dx, x] = 1.
+\begin{tikzpicture}[font=\small]
+  \foreach \n in {0,...,4} \node[hbnode] (p\n) at (2.1*\n,0) {$x^{\n}$};
+  \node at (2.1*5-0.6,0) {$\cdots$};
+  \foreach \n [evaluate=\n as \m using int(\n+1)] in {0,...,3} {
+    \draw[hbarrow,bend left=35] (p\n) to node[above,font=\footnotesize] {$x$} (p\m);
+    \draw[-{Stealth},thick,hbgold!80!black,bend left=35] (p\m) to node[below,font=\footnotesize] {$\partial$: $\times\m$} (p\n);}
+\end{tikzpicture}

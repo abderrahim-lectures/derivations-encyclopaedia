@@ -1,0 +1,44 @@
+% Chapter introduction: why the topic arose, who first asked, what it answers.
+% STATUS: rewritten 2026-10-08 (issue #678); every claim is cited in its section.
+
+Chapter~\ref{ch:origins} followed the product rule from Leibniz to Hochschild.
+By 1945 the rule was a definition on abstract algebras. This chapter asks what
+one can do with that definition. Three groups of mathematicians gave answers,
+and each group studied a different object.
+
+The first group studied differential equations. Ritt wanted a field that comes
+with a derivative, so that the algebra of such fields could be built like the
+algebra of ordinary fields \cite[p.~1]{Ritt1950}. His main object was the set
+of elements with zero derivative, called the constants.
+Section~\ref{sec:basic-theory:constants-kernels} returns to them.
+
+The second group studied Lie algebras. Jacobson saw that the derivations of an
+algebra are closed under the commutator, so they form a Lie algebra
+\cite[p.~207]{Jacobson1937}. Hochschild then showed what this Lie algebra
+measures. It is the tangent space at the identity of the group of
+automorphisms \cite[pp.~677--678]{Hochschild1942}.
+Sections~\ref{sec:basic-theory:der-as-lie-algebra}
+and~\ref{sec:basic-theory:exponential} tell this part of the story.
+
+The third group studied rings. For them the answer depends on the algebra.
+In a matrix algebra over a field, every derivation is a commutator with a fixed
+matrix \cite[Corollary~6.2]{BresarHanselkaKlepVolcic2018}. In the Weyl algebra
+this can fail, and it depends on the characteristic of the field
+\cite[p.~48]{BenkartLopesOndrus2015}. Kharchenko built a theory around such
+differences \cite{Kharchenko1991}. Sections~\ref{sec:basic-theory:inner-outer}
+and~\ref{sec:basic-theory:extension} follow this theory.
+
+The chapter asks one question: what does the set of all derivations tell us
+about the algebra? We go step by step. First comes the definition. Then we
+collect all derivations into one object and ask which come from a fixed
+element. Next we link derivations to automorphisms. After that we study the
+elements that a derivation sends to zero, and we ask when a derivation extends
+to a larger algebra.
+
+The last sections look back. We name the close relatives of a derivation and
+list the questions that the book asks about each one. The chapter ends with examples from the sources, on
+matrices and polynomials.
+Each field where these notions apply is reported in the chapter that owns its
+notions.
+
+\hbfigure{02-basic-theory/exponential-flow}{The derivation $D = x\,\partial/\partial y - y\,\partial/\partial x$ viewed as a vector field on the plane. On smooth functions, $\exp(tD)$ is the rotation by the angle $t$. On polynomials the series $\exp(tD)$ does not stop, so it is not defined there. Section~\ref{sec:basic-theory:exponential} explains why.}{fig:basic:exp}

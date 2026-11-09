@@ -1,0 +1,33 @@
+% Dedication.
+% STATUS: written 2026-11-06 on the owner's instruction: the dedication is
+% the Arabic phrase "إلى المستقبل" (to the future), and the words are the
+% owner's, not the machine's. Corrected the same day: the first render had the
+% two words in the wrong order, see below.
+%
+% The book is typeset with pdfLaTeX, which cannot set Arabic. ArabTeX is
+% installed but sets its transliteration font with \it, which memoir rejects,
+% and it does not take Unicode input. Rather than change the engine of a
+% 392-page book for one line, the phrase is set once by XeLaTeX with the Amiri
+% font and stored as figures/dedication-arabic.png.
+%
+% The bidi package matters here. XeLaTeX with fontspec alone shapes the Arabic
+% letters correctly but lays the run out left to right, so the words came out
+% in reverse order: the file was unreadable to an Arabic reader while looking
+% plausible to anyone checking only the glyph shapes. The page must be
+% typeset inside an Arabic environment from polyglossia (or with bidi), which
+% is what orders the words right to left.
+%
+% Regenerate it with:
+%   article class, geometry paper 120mm x 30mm margin 0, polyglossia with
+%   \setmainlanguage{english} and \setotherlanguage{arabic},
+%   \newfontfamily\arabicfont[Script=Arabic]{Amiri}, and in a centred body:
+%     {\fontsize{40}{48}\selectfont\arabicfont
+%      \begin{Arabic}إلى المستقبل\end{Arabic}}
+%   xelatex, then pdftoppm -png -r 300, then trim the white margin and save
+%   as figures/dedication-arabic.png.
+\thispagestyle{empty}
+\vspace*{0.28\textheight}
+\begin{center}
+  \includegraphics[width=0.34\textwidth]{dedication-arabic.png}
+\end{center}
+\cleardoublepage

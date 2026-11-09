@@ -1,0 +1,227 @@
+# Encyclopaedia of Derivations of Rings and Algebras: structure manifest.
+# One line per part (P), chapter (C) or section (S). Fields are separated by "|".
+#   P|<roman numeral>|<part title>
+#   C|<NN>|<slug>|<chapter title>|<MSC codes to harvest, space separated>|<assignment rule>
+#     The rule files a paper under the chapter for the monthly update and the
+#     atlas: a case-insensitive regex on the title, or @pre1950 (published
+#     before 1950), or @msc:<prefixes> (a primary MSC code with that prefix).
+#     Empty rule: the chapter gets no papers automatically.
+#   S|<NN>|<slug>|<section title>
+#   Q|<zbMATH search string>
+#     A narrow topic inside a broad MSC code, harvested with the codes:
+#     "cc:16Y30 & ti:deriv*" takes the derivation papers of the near-ring
+#     code and nothing else. The papers are filed by the chapter rules.
+# tools/scripts/encyclopaedia/build-tree.sh turns this file into chapters/NN-slug/
+# (one .tex per section) and chapters/index.tex. It never overwrites a section
+# file that already exists, so written text is safe; a new line adds a stub.
+# Chapter numbers are stable: renumbering breaks cross-references and the
+# monthly update map, so add new chapters at the end of their part.
+
+P|I|Foundations and history
+C|01|origins|Origins of the notion, from Leibniz to Hochschild|12H05 13N15 16E40 17B40 20J06|@pre1950
+S|01|leibniz-rule|The Leibniz rule: Leibniz 1684
+S|02|function-fields|Differentiation in number and function fields: Dedekind, Weber, Hensel, Hilbert
+S|03|fields-and-separability|Derivations of fields and separability: Steinitz, Teichmüller, Jacobson
+S|07|higher-derivations|Higher derivations in characteristic $p$: Hasse and Schmidt 1937
+S|04|differential-algebra|Differential rings and fields: Ritt and the New York school
+S|10|physics|Derivations in quantum mechanics: Born, Jordan, Dirac 1925
+S|06|ore-and-twists|Skew polynomials and twisted derivations: Ore 1933
+S|05|lie-theory|Derivations and Lie algebras: Jacobson 1937 and the structure theory
+S|08|crossed-homomorphisms|Crossed homomorphisms and principal derivations: Hilbert, Speiser, Brauer, Noether, Eilenberg, Mac~Lane
+S|09|cohomology|Derivations as one-cocycles: Hochschild 1945
+C|02|basic-theory|Basic theory and the family of derivations|16W25 17A36|
+S|01|definitions|Definitions, first identities and the Leibniz formula
+S|02|der-as-lie-algebra|Der(A) as a Lie algebra and as a module
+S|03|inner-outer|Inner, principal and outer derivations; crossed homomorphisms
+S|04|exponential|Derivations and automorphisms: the exponential and one-parameter groups
+S|05|constants-kernels|Constants, kernels and images
+S|06|extension|Extending derivations
+S|07|family-tree|The family tree of derivation-like maps
+S|08|question-families|The question families of the encyclopaedia
+S|09|open-problems-by-class|Open problems by class of algebra
+
+P|II|Derivations of associative rings
+C|03|prime-semiprime|Derivations of prime and semiprime rings|16W25 16N60|prime ring|semiprime|primitive ring|posner|x-inner|differential identit|engel|involution|\*-derivation|lie ideal|jordan ideal
+S|01|posner|The theorems of Posner
+S|02|herstein-school|The school of Herstein and the commutativity theorems
+S|03|quotient-rings|Martindale quotients and the extended centroid
+S|04|kharchenko|The theory of Kharchenko: differential identities and inner derivations
+S|05|engel-nilpotent|Engel conditions, nilpotent and algebraic derivations
+S|06|ideals-lie-ideals|Derivations acting on ideals and Lie ideals
+S|07|involution|Rings with involution and *-derivations
+S|08|jordan-ideals|Jordan ideals and the Jordan structure of a prime ring
+C|04|jordan-type|Jordan derivations and Jordan-type maps|16W25 16W10|jordan[ -]?(\*-)?derivation|jordan triple|jordan[ -]n-derivation|jordan left|left jordan|jordan \*-
+S|01|herstein-theorem|The theorem of Herstein and its proofs
+S|02|semiprime|Cusack, Brešar and the semiprime case
+S|03|triple-and-generalized|Jordan triple, generalized Jordan and Jordan n-derivations
+S|04|jordan-on-algebras|Jordan derivations of specific algebras
+S|05|jordan-homomorphisms|Relation with Jordan homomorphisms
+S|06|star-left|Jordan *-derivations and Jordan left derivations
+C|05|lie-type|Lie derivations and Lie-type maps|16W25 16W10|lie (triple |n-)?derivation|lie-type|lie triple
+S|01|martindale|The problem of Martindale and the standard form
+S|02|bresar|The solution of Brešar through functional identities
+S|03|triple-and-n|Lie triple and Lie n-derivations
+S|04|nonlinear|Nonlinear and nonadditive Lie-type maps
+S|05|lie-on-algebras|Lie derivations of specific algebras
+P|III|Enlarged classes and local maps
+C|06|generalized-twisted|Generalized, skew and twisted derivations|16W25 16S36|generalized (jordan |lie |skew )?derivation|skew[ -]derivation|σ-derivation|sigma-derivation|\(σ|α-derivation|twisted derivation|semi-?derivation|left derivation|reverse derivation|multiplicative .{0,30}derivation
+S|01|generalized|Generalized derivations
+S|02|sigma-tau|$(\sigma,\tau)$-derivations and skew derivations
+S|03|alpha-derivations|$\alpha$-derivations and their characterizations
+S|04|ore-extensions|Derivations and Ore extensions
+S|05|differential-identities|Generalized and skew differential identities
+S|06|semi-left-reverse|Semiderivations, left derivations, reverse and multiplicative derivations
+S|07|f-derivations|$f$-derivations: three meanings of $f$ in rings, modules and triangular algebras
+C|07|higher-multi|Higher, bi- and n-derivations|16W25 13N15|higher derivation|hasse|biderivation|n-derivation|multiderivation|permuting|tri-?derivation|generali[sz]ed bi
+S|01|hasse-schmidt|Higher derivations and Hasse–Schmidt sequences
+S|02|biderivations|Biderivations
+S|03|n-derivations|n-derivations, permuting maps and multiderivations
+S|04|symmetric-maps|Symmetric biadditive maps and their traces
+S|05|tri-generalized|Tri-derivations, generalized biderivations and Jordan biderivations
+C|08|local-characterizations|Local maps and characterizations through products|16W25 47B47 47B49|local derivation|2-local|zero product|zero-product|derivable|preserv|local (lie|jordan|generali[sz]ed|automorphism)
+S|01|local|Local derivations: Kadison, Larson–Sourour
+S|02|two-local|2-local derivations: Šemrl and after
+S|03|zero-products|Derivations through zero products and derivable maps
+S|04|preservers|Derivations among preserver problems
+S|05|local-lie-jordan|Local Lie, Jordan and automorphism-type maps
+C|09|functional-identities|Functional identities and commuting maps|16R60 16W25|commuting|centraliz|functional identit
+S|01|commuting-maps|Commuting and centralizing maps
+S|02|fi-theory|The theory of functional identities
+S|03|d-free|d-free sets and applications
+S|04|applications-to-derivations|Applications to derivation problems
+S|05|centralizers-multipliers|Centralizers, multipliers and Lie centralizers
+
+P|IV|Concrete classes of associative algebras
+C|10|matrix-triangular|Matrix, triangular and generalized matrix algebras|16W25 15A86 16S50|triangular|matrix|matrices|nest algebra|reflexive
+S|01|matrix|Full matrix algebras
+S|02|triangular|Triangular algebras
+S|03|generalized-matrix|Generalized matrix algebras
+S|04|nest-algebraic|Nest and reflexive algebras, the algebraic side
+C|11|path-incidence|Path, incidence, trivial extension and Leavitt path algebras|16W25 16G20 16S50|incidence|path algebra|quiver|trivial extension|leavitt
+S|01|path|Path algebras of quivers
+S|02|incidence|Incidence algebras of posets
+S|03|trivial-extension|Trivial extensions
+S|04|leavitt|Leavitt path algebras
+C|12|polynomial-weyl|Polynomial, Weyl and differential operator algebras|16S32 13N10 16W25|polynomial|weyl|differential operator|ore extension
+S|01|polynomial|Derivations of polynomial algebras
+S|02|weyl|The Weyl algebra and the problems of Dixmier
+S|03|differential-operators|Rings of differential operators
+S|04|ore-differential|Differential polynomial rings
+C|13|group-hopf|Group algebras, Hopf algebras and quantum groups|16S34 16T05 17B37|group algebra|group ring|hopf|quantum
+S|01|group-algebras|Group algebras and group rings
+S|02|hopf|Hopf algebras and coderivations
+S|03|quantum|Quantum groups and quantum algebras
+S|04|crossed-products|Crossed products, crossed homomorphisms and Galois descent
+
+P|V|Nonassociative algebras
+C|14|lie-algebras|Derivations of Lie algebras|17B40 17B66|lie algebra|vector field
+S|01|jacobson|The theorem of Jacobson and nilpotent Lie algebras
+S|02|characteristically-nilpotent|Characteristically nilpotent Lie algebras
+S|03|simple|Derivations of simple and semisimple Lie algebras
+S|04|vector-fields|Lie algebras of vector fields
+S|05|infinite-dimensional|Infinite-dimensional Lie algebras
+C|15|nonassociative|Jordan, alternative, Leibniz algebras and superalgebras|17A36 17C 17B 17D|jordan algebra|alternative|malcev|leibniz algebra|superalgebra|nonassociative|δ-derivation|quasi-derivation|anti-?derivation|poisson|\bhom-|conformal|n-lie|n-ary|lie triple system|ternary
+S|01|jordan-algebras|Derivations of Jordan algebras
+S|02|alternative|Alternative and Malcev algebras
+S|03|leibniz|Leibniz and other nonassociative algebras
+S|04|superalgebras|Superalgebras and colour algebras
+S|05|delta-quasi-anti|$\delta$-derivations, quasi-derivations and anti-derivations
+S|06|poisson|Poisson and transposed Poisson algebras
+S|07|hom-conformal|Hom-Lie algebras and Lie conformal algebras
+S|08|n-ary|n-Lie algebras, Lie triple systems and ternary algebras
+C|22|other-systems|Derivations of near-rings, semirings, Gamma-rings and lattices||near-?ring|semi-?ring|gamma[- ]ring|\bhyper-?ring|lattice|\bbc[ik]|\bbck|mv-algebra|boolean
+S|01|near-rings|Near-rings and prime near-rings with derivation
+S|02|gamma-rings|Gamma-rings
+S|03|semirings|Semirings and hyperrings
+S|04|lattices|Lattices and Boolean algebras
+S|05|bci-mv|BCK, BCI and MV-algebras
+S|06|subtraction-algebras|Subtraction algebras, $f$-derivations and $(f,g)$-derivations of lattices
+
+P|VI|Commutative and differential algebra
+C|16|commutative|Derivations in commutative algebra and geometry|13N15 14R10 13N05|kähler|kahler|differential module|locally nilpotent|jacobian|zariski|affine
+S|01|kahler|Kähler differentials and the universal derivation
+S|02|zariski-lipman|The Zariski–Lipman conjecture
+S|03|locally-nilpotent|Locally nilpotent derivations
+S|04|jacobian|The Jacobian conjecture
+S|05|vector-fields-geometry|Derivations as vector fields
+C|17|differential-algebra|Differential algebra and differential Galois theory|12H05|differential field|differential galois|picard|differential algebra|differential ideal|differential ring|ritt|kolchin|difference
+S|01|ritt-kolchin|The Ritt–Kolchin theory
+S|02|differential-galois|Picard–Vessiot and differential Galois theory
+S|03|model-theory|Differential fields in model theory
+S|04|difference|Difference and differential-difference algebra
+
+P|VII|Analysis and cohomology
+C|18|banach-operator|Derivations of Banach and operator algebras|46H40 46L57 47B47 47L35|banach|c\*-algebra|von neumann|operator algebra|unbounded|automatic continuity|bounded derivation|commutator|approximate derivation|hyers|ulam|stability of|superstab
+S|01|singer-wermer|Singer–Wermer and commutative Banach algebras
+S|02|kadison-sakai|Kadison–Sakai: derivations of von Neumann algebras
+S|03|automatic-continuity|Automatic continuity
+S|04|unbounded|Unbounded derivations and dynamics
+S|05|operator-derivations|Derivations on operator spaces and nest algebras
+S|06|commutator-ranges|Ranges of derivations and commutators
+S|07|stability|Approximate derivations and the stability of functional equations
+
+C|19|cohomology|Hochschild cohomology and deformations|16E40 46M20 20J06|hochschild|cohomolog|deformation|crossed homomorphism|principal derivation
+S|01|first-cohomology|The first Hochschild cohomology group
+S|02|computations|Computations for classes of algebras
+S|03|gerstenhaber|Gerstenhaber structure and deformations
+S|04|bounded-cohomology|Kadison–Ringrose and bounded cohomology
+S|05|group-cohomology|Derivations of groups and the first cohomology of groups
+S|06|algebraic-topology|Algebraic topology: Hochschild and cyclic homology
+S|07|noncommutative-geometry|Noncommutative geometry and differential calculi
+
+
+# Narrow harvests (Q lines): the derivation papers inside broad codes.
+Q|cc:16Y30 & ti:derivation*
+Q|cc:16Y60 & ti:derivation*
+Q|ti:"gamma ring*" & ti:derivation*
+Q|cc:17B63 & ti:derivation*
+Q|cc:17B61 & ti:derivation*
+Q|cc:17B69 & ti:derivation*
+Q|cc:17A32 & ti:derivation*
+Q|cc:17A42 & ti:derivation*
+Q|cc:39B82 & ti:derivation*
+Q|cc:06 & ti:derivation*
+Q|ti:semiderivation*
+Q|ti:"left derivation*"
+Q|ti:"reverse derivation*"
+Q|ti:"multiplicative derivation*"
+Q|ti:triderivation* | ti:"tri-derivation*"
+Q|ti:"jordan left derivation*"
+
+# Fallback: a paper that meets no chapter rule is filed by its primary MSC
+# code, longest matching prefix first.
+#   F|<MSC prefix>|<chapter NN>
+F|16W25|02
+F|16W|02
+F|16Y|22
+F|06|22
+F|16R60|09
+F|16N|03
+F|16S32|12
+F|16S36|06
+F|16S|12
+F|16E40|19
+F|16E|19
+F|16G|11
+F|16T|13
+F|16|02
+F|15A|10
+F|17B40|14
+F|17B66|14
+F|17B|14
+F|17A|15
+F|17C|15
+F|17D|15
+F|17|15
+F|12H|17
+F|13N10|12
+F|13N|16
+F|13|16
+F|14R|16
+F|14|16
+F|46L|18
+F|46H|18
+F|46|18
+F|47|18
+F|1|02
+F|4|18

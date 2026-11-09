@@ -1,0 +1,208 @@
+% STATUS: rewritten 2026-11-05
+% STATUS: extended 2026-11-07 (Rakhimov and Al-Hossain 2012, Kurdachenko,
+% Semko and Yashchuk 2024, Kurbanbaev 2025, Di Bartolo, Di Fatta and La Rosa
+% 2025 and Kurdachenko and Semko 2025 read in full)
+% Sources read in full: Loday and Pirashvili 1993 (Definition (1.1), p. 141),
+% Ayupov and Omirov 1998 (p. 2), Biyogmam and Tcheka 2021 (Definition 3.3,
+% Proposition 3.5, pp. 2192--2193), Kurdachenko--Pypka--Semko 2026 (pp. 1--2);
+% Rakhimov and Al-Hossain 2012 (pp. 1--9); Kurdachenko, Semko and Yashchuk
+% 2024 (pp. 819--822); Kurbanbaev 2025 (pp. 1525--1531); Di Bartolo, Di Fatta
+% and La Rosa 2025 (pp. 1--9); Kurdachenko and Semko 2025 (pp. 110--114).
+% Sources: LodayPirashvili1993, AyupovOmirov1998Engel,
+% BiyogmamTcheka2021Outer, KurdachenkoPypkaSemko2026.
+\section{Leibniz algebras}\label{sec:nonassociative:leibniz}
+
+The previous sections asked for the Jordan or Malcev identities. % claim-ok: own summary of the chapter so far, links to Loday below
+This section keeps only one Leibniz rule on the bracket. Loday introduced
+the class in 1993, while he studied a noncommutative form of the
+Chevalley--Eilenberg complex \cite[Introduction, p.~139]{LodayPirashvili1993}.
+
+\begin{definition}[{\cite[Definition~(1.1),
+p.~141]{LodayPirashvili1993}}]
+\label{def:nonassociative:leibniz}
+A \emph{Leibniz algebra} $\mathfrak{g}$ over a commutative ring $k$ is a
+$k$-module with a bilinear bracket $[-,-]\colon\mathfrak{g}\times
+\mathfrak{g}\to\mathfrak{g}$ satisfying the Leibniz identity
+\[
+[x,[y,z]]\;=\;[[x,y],z]-[[x,z],y]
+\qquad\text{for all }x,y,z\in\mathfrak{g}.
+\]
+\end{definition}
+
+This is the right-Leibniz convention, in which identity~(1.1) controls the
+right factor. The left-Leibniz convention swaps the two factors
+\cite[Definition~(1.1), p.~141]{LodayPirashvili1993}. A Leibniz algebra with
+$[x,x]=0$ for every $x$ is a Lie algebra, since the Leibniz identity then
+becomes the Jacobi identity \cite[Definition~(1.1),
+p.~141]{LodayPirashvili1993}. Ayupov and Omirov note that the right
+multiplications of a Leibniz algebra act like the inner derivations of a Lie
+algebra \cite[p.~2]{AyupovOmirov1998Engel}.
+
+\begin{proposition}[{\cite[p.~2]{AyupovOmirov1998Engel}}]
+\label{prop:nonassociative:leibniz-right}
+Let $L$ be a Leibniz algebra over a field $F$, and for $x\in L$ write
+$R_x(z)=[z,x]$ for right multiplication by $x$. Then the set
+$R(L)=\{R_x:x\in L\}$ with the commutator product is a Lie algebra, and
+$R_xR_y-R_yR_x=R_{[y,x]}$ holds in $R(L)$.
+\end{proposition}
+
+Biyogmam and Tcheka measure the gap from the Lie case by one ideal
+\cite[p.~2191]{BiyogmamTcheka2021Outer}.
+
+\begin{definition}[{\cite[p.~2191]{BiyogmamTcheka2021Outer}}]
+\label{def:nonassociative:leibniz-kernel}
+For a Leibniz algebra $\mathfrak{g}$, Biyogmam and Tcheka write
+$\mathrm{Leib}(\mathfrak{g})$ for the subspace spanned by all elements
+$[x,x]$ with $x\in\mathfrak{g}$. It is a two-sided ideal of
+$\mathfrak{g}$, called the \emph{Leibniz kernel}, and the quotient
+$\mathfrak{g}_{\mathrm{Lie}}=\mathfrak{g}/\mathrm{Leib}(\mathfrak{g})$
+is a Lie algebra.
+\end{definition}
+
+This kernel brings innerness and completeness to Leibniz algebras
+\cite[Definition~2.4 and Definition~3.3,
+p.~2192]{BiyogmamTcheka2021Outer}.
+
+\begin{definition}[{\cite[Definition~2.4,
+p.~2192]{BiyogmamTcheka2021Outer}}]
+\label{def:nonassociative:leibniz-inner}
+A derivation $d\colon\mathfrak{g}\to\mathfrak{g}$ of a Leibniz algebra
+$\mathfrak{g}$ is an \emph{inner derivation} if
+$d(\mathfrak{g})\subseteq R_x(\mathfrak{g})+
+\mathrm{Leib}(\mathfrak{g})$ for some $x\in\mathfrak{g}$.
+\end{definition}
+
+A derivation that is not inner is an \emph{outer derivation}
+\cite[Definition~3.3, p.~2192]{BiyogmamTcheka2021Outer}. Biyogmam and Tcheka
+call $\mathfrak{g}$ \emph{complete} when
+$Z(\mathfrak{g}/\mathrm{Leib}(\mathfrak{g}))=0$ and $\mathfrak{g}$ has no
+outer derivation \cite[Definition~3.3, p.~2192]{BiyogmamTcheka2021Outer}.
+Every semisimple Leibniz algebra in characteristic zero is complete. The
+derivations themselves can be written down: on a simple complex Leibniz algebra
+$L=G\dotplus I$, every derivation is $R_{a}+\alpha+\varphi$ with $a\in G$, a
+map $\alpha$ on the ideal that respects the bracket, and a map $\varphi$ from
+$G$ into that ideal \cite[Theorem~3.2]{RakhimovMasutovaOmirov2017}. Rakhimov,
+Masutova and Omirov give the same description for a subclass of the semisimple
+algebras \cite[Abstract, p.~1]{RakhimovMasutovaOmirov2017}.
+
+\begin{proposition}[{\cite[Proposition~3.5,
+p.~2193]{BiyogmamTcheka2021Outer}}]
+\label{prop:nonassociative:leibniz-no-outer}
+Let $\mathfrak{g}$ be a semisimple Leibniz algebra over a field of
+characteristic zero. Then $\mathfrak{g}$ admits no outer derivations.
+More precisely, each derivation $d$ of $\mathfrak{g}$ can be written as
+$d=R_z+a$ for some $z\in\mathfrak{g}$ and some derivation
+$a\colon\mathfrak{g}\to \mathrm{Leib}(\mathfrak{g})$ that vanishes on
+the Levi subalgebra of $\mathfrak{g}$.
+\end{proposition}
+
+At dimension three the description is complete. Kurdachenko, Pypka and Semko
+take the non-Lie left Leibniz algebras of dimension three over any field
+\cite[p.~1]{KurdachenkoPypkaSemko2026}. Earlier work split them into sixteen
+types, and the authors list the derivations of each type by direct calculation
+\cite[p.~1]{KurdachenkoPypkaSemko2026}.
+
+\begin{theorem}[{\cite[Theorem~1.1, p.~2]{KurdachenkoPypkaSemko2026}}]\label{thm:nonassociative:leibniz-dim3}
+Let $L$ be a three-dimensional non-Lie left Leibniz algebra over an
+arbitrary field $F$. Then its derivation algebra $\operatorname{Der}(L)$ is
+the subspace of $M_{3}(F)$ given by the formulas proved or quoted in the
+cited paper and collected in its Table~2. The table covers every parameter
+family and every case of characteristic two in the sixteen-type list.
+\end{theorem}
+
+The table shows that one derivation algebra grows in characteristic two. In
+that characteristic several types gain derivations
+\cite[p.~1]{KurdachenkoPypkaSemko2026}. So the dimension can change along a
+family. The authors also record how the resulting Lie algebras split into
+ideals and subalgebras \cite[p.~1]{KurdachenkoPypkaSemko2026}.
+
+Nilpotent Leibniz algebras of class three also have an explicit answer at
+dimension three. Kurdachenko, Semko and Yashchuk take the algebras of dimension
+three whose class is three, and those whose centre has dimension two
+\cite[p.~819]{KurdachenkoSemkoYashchuk2024}. Take the first algebra. Its
+derivation algebra is a semidirect sum. The ideal is abelian. The complement is
+generated by one derivation, which scales the three basis vectors by $1$, $2$
+and $3$ \cite[Theorem~3.1, pp.~821--822]{KurdachenkoSemkoYashchuk2024}.
+
+The derivation algebra also has a matrix shape. It is isomorphic to the Lie
+algebra of matrices
+\[
+\begin{pmatrix}\alpha_1&0&0\\ \alpha_2&2\alpha_1&0\\ \alpha_3&\alpha_2&3\alpha_1\end{pmatrix},
+\qquad \alpha_1,\alpha_2,\alpha_3\in F,
+\]
+so it is three-dimensional
+\cite[Theorem~3.1, pp.~821--822]{KurdachenkoSemkoYashchuk2024}. The second algebra
+of the paper has a derivation algebra of another shape
+\cite[Theorem~3.2, p.~825]{KurdachenkoSemkoYashchuk2024}.
+
+The filiform families have a dimension count that depends on the structure
+constants. Rakhimov and Al-Hossain take three naturally graded complex filiform
+algebras. They also take two further families that come from them
+\cite[Theorem~1, p.~3]{RakhimovAlHossain2012}. They compute the dimension of
+the derivation algebra in each family
+\cite[Theorems~3--5, pp.~4, 8 and~12]{RakhimovAlHossain2012}.
+
+\begin{theorem}[{\cite[Theorems~3--5, pp.~4, 8 and~12]{RakhimovAlHossain2012}}]\label{thm:nonassociative:filiform-dim}
+Let $n\geq2$. The derivation algebras of $NGF_1$, $NGF_2$ and $NGF_3$ have
+dimensions $n+1$, $n+2$ and $2n-1$. For $L$ in $FL_b^n$ the dimension lies
+between $n-1$ and $n+1$, and for $L$ in $SL_b^n$ it lies between $n-1$ and
+$n+2$.
+\end{theorem}
+
+So the dimension is not fixed by the filiform class. The structure constants
+of each family decide it \cite[pp.~8--12]{RakhimovAlHossain2012}.
+
+Almost inner derivations ask for less than innerness. A derivation $D$ of a
+Leibniz algebra $L$ is almost inner when every $x\in L$ has some $a_x\in L$
+with $D(x)=[x,a_x]$ \cite[Definition~2.4, p.~1527]{Kurbanbaev2025}. Every inner
+derivation is almost inner. The question is whether the two spaces agree
+\cite[p.~1527]{Kurbanbaev2025}. On a simple Leibniz algebra the answer depends
+on the shape of the algebra.
+
+\begin{theorem}[{\cite[Theorems~4.1--4.2, pp.~1530--1531]{Kurbanbaev2025}}]\label{thm:nonassociative:almost-inner}
+Let $L=\mathfrak{g}\ltimes I$ be a simple Leibniz algebra over $\mathbb{C}$.
+\begin{enumerate}
+\item If $\mathfrak{g}$ and $I$ are isomorphic as $\mathfrak{g}$-modules, then
+every almost inner derivation of $L$ is inner.
+\item If they are not isomorphic, then every almost inner derivation of $L$ is
+inner when $\mathfrak{g}\cong\mathfrak{sl}_2$, and there is an almost inner
+derivation that is not inner otherwise.
+\end{enumerate}
+\end{theorem}
+
+The proof tells the two cases apart by one strongly regular element of a
+Cartan subalgebra \cite[p.~1530]{Kurbanbaev2025}. So the exceptional case
+belongs to the smallest simple Lie algebra.
+
+Complete Leibniz algebras settle the bilinear form of the same question. The
+literature has two definitions of completeness, and they differ
+\cite[Definitions~2.6--2.7, p.~6]{DiBartoloDiFattaLaRosa2025Leibniz}. Under the
+first, $L$ is complete when $Z(L/\mathrm{Leib}(L))=0$ and every derivation is
+inner up to an element of $\mathrm{Leib}(L)$
+\cite[Definition~2.6, p.~6]{DiBartoloDiFattaLaRosa2025Leibniz}. Under the
+second, $L$ is complete when $Z(L)=0$ and every derivation of $L$ is inner
+\cite[Definition~2.7, p.~6]{DiBartoloDiFattaLaRosa2025Leibniz}.
+
+\begin{theorem}[{\cite[Theorems~3.1--3.2, pp.~7--8]{DiBartoloDiFattaLaRosa2025Leibniz}}]\label{thm:nonassociative:complete-biderivation}
+Let $L$ be a complete Leibniz algebra. Then a bilinear map $f\colon L\times
+L\to L$ is a biderivation of $L$ if and only if there are linear maps
+$\varphi,\psi\colon L\to L$ with $f(x,y)=[\varphi(x),y]=[\psi(y),x]$ for all
+$x,y\in L$, in the sense of Definition~2.7. In the sense of Definition~2.6 the
+same holds up to a right and a left biderivation with values in
+$\mathrm{Leib}(L)$.
+\end{theorem}
+
+The two versions differ exactly in the Leibniz kernel
+\cite[pp.~7--8]{DiBartoloDiFattaLaRosa2025Leibniz}. One example is complete in
+one sense and not in the other \cite[Example~2.7.1, p.~6]{DiBartoloDiFattaLaRosa2025Leibniz}.
+So the two statements are not interchangeable.
+
+The non-nilpotent side has a calculation of its own. Kurdachenko, Semko and
+Subbotin take some non-nilpotent Leibniz algebras of low dimension and list the
+derivations of each \cite[Theorems~1--3, pp.~120--126]{KurdachenkoSemkoSubbotin2025}.
+A second paper does the same for further families
+\cite[Theorems~1--2, pp.~209--211]{KurdachenkoSemkoSubbotin2025b}.
+
+The next section separates the even and odd parts of an algebra: % claim-ok: own signpost to the superalgebra section
+it treats derivations that respect a grading by
+$\mathbb{Z}/2\mathbb{Z}$.

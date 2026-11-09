@@ -1,0 +1,258 @@
+% STATUS: written 2026-11-05 (Bresar 1993 read at its first page, which
+% carries the level definitions and Theorem A in full; Lee 1997 read in
+% full; excerpts in excerpts/. Posner 1957 and Mayne are named through these
+% later papers.)
+% STATUS: extended 2026-11-06 (Franca and Louza 2024 read in full from the
+% published PDF; the bars on P and E in Theorem 5.1 checked by word height).
+% Additions of 2026-11-07 moved from chapter 20: Aczel 1981 (pp. 191--200) read in full.
+% STATUS: extended 2026-11-06 (Tang 2016 (both papers), Fan, Su and Xu 2016, Pandey 2024 read in full)
+\section{Commuting and centralizing maps}\label{sec:functional-identities:commuting-maps}
+
+A map $F$ of a ring $R$ into itself is \emph{commuting} on a subset $S$
+\cite[p.~333]{LeeTK1997Centralizing} when $[s,F(s)]=0$ for all $s$ in $S$.
+The map is \emph{centralizing} on $S$
+\cite[p.~333]{LeeTK1997Centralizing} when $[s,F(s)]$ lies in the center
+$Z$ of $R$.
+The line began with a result of Posner from 1957: the existence of a
+nonzero centralizing derivation on a prime ring forces the ring to be
+commutative \cite[p.~385]{Bresar1993}. Mayne proved the
+analogous statement for centralizing automorphisms
+\cite[p.~385]{Bresar1993}. The
+following years brought extensions of these two theorems in several
+directions \cite[p.~385]{Bresar1993}.
+
+Bre\v{s}ar asked for the structure of an arbitrary additive centralizing
+map, and gave a complete answer in the prime case
+\cite[p.~385]{Bresar1993}.
+
+\begin{theorem}[{\cite[Theorem~A, p.~385]{Bresar1993}}]\label{thm:fi:bresarA}
+Let $R$ be a prime ring. Suppose an additive mapping $F$ of $R$ into
+itself is centralizing on $R$. If either $R$ has a characteristic
+different from $2$ or $F$ is commuting on $R$, then $F$ is of the form
+$F(x)=\lambda x+\zeta(x)$ for all $x\in R$, where $\lambda$ is an element
+from the extended centroid $C$ of $R$ and $\zeta$ is an additive mapping
+of $R$ into $C$.
+\end{theorem}
+
+Theorem~\ref{thm:fi:bresarA} says that a centralizing additive map on a
+prime ring is, up to a central remainder, multiplication by a central
+element \cite[p.~385]{Bresar1993}. Bre\v{s}ar later obtained the same
+conclusion in the semiprime case, and based on these studies he initiated
+the study of functional identities \cite[p.~333]{LeeTK1997Centralizing}.
+For a right ideal the same form forces a restriction: every commuting
+additive map $f\colon\rho\to R$ has the form $f(x)=\lambda x+\mu(x)$
+unless $[\rho,\rho]\rho=0$ \cite[p.~333]{LeeTK1997Centralizing}.
+
+The derivations between two centralizing maps are also controlled, at the
+cost of restricting the ring \cite[p.~334]{LeeTK1997Centralizing}. A ring
+is \emph{$S_4$-free} when it does not
+satisfy the standard identity $S_4$ of degree $4$. Lee proved a result on
+pairs of derivations \cite[Theorem~1, p.~334]{LeeTK1997Centralizing}.
+Let $\delta$ and $d$ be nonzero derivations of a prime $S_4$-free ring with
+$\delta\notin Cd$, and let $[\delta(x),d(x)]$ be central on a right ideal
+$\rho$. Then $d$ and $\delta$ are inner on $\rho$ through two elements of
+the Martindale quotient ring
+\cite[Theorem~1, p.~334]{LeeTK1997Centralizing}.
+The clean form of the centralizing theorem itself holds on one-sided
+ideals \cite[Theorem~2, p.~335]{LeeTK1997Centralizing}. It moves
+Theorem~\ref{thm:fi:bresarA} from the whole prime ring to a right ideal
+\cite[p.~335]{LeeTK1997Centralizing}.
+
+\begin{theorem}[{\cite[Theorem~2, p.~335]{LeeTK1997Centralizing}}]\label{thm:fi:leetheorem2}
+Let $R$ be a prime ring and $\rho$ a nonzero right ideal of $R$. Then
+every centralizing additive mapping $f\colon\rho\to U$ is of the form
+$f(x)=\lambda x+\mu(x)$ for all $x\in\rho$, where $\lambda\in C$ and
+$\mu\colon\rho\to C$, unless $[\rho,\rho]\rho=0$.
+\end{theorem}
+
+Here $U$ is the right Utumi quotient ring of $R$
+\cite[p.~334]{LeeTK1997Centralizing}. Two earlier theorems sit behind
+Theorem~\ref{thm:fi:leetheorem2} \cite[p.~334]{LeeTK1997Centralizing}.
+An additive map $f$ of a prime ring with $[f(x),x]_n=0$ for a
+fixed $n$ is already commuting, provided the characteristic is $0$ or
+greater than $n$ \cite[Theorem~B, p.~334]{LeeTK1997Centralizing}. For a
+derivation $d$ of a semiprime ring with $[d(x^n),x^n]_k=0$ on a right
+ideal, the conclusion is $[\rho,R]d(R)=0$
+\cite[Theorem~L, p.~334]{LeeTK1997Centralizing}. The general conjecture
+that a positive-power condition $[f(x),x]_n=0$ already gives the form
+$f(x)=\lambda x+\mu(x)$ remained open
+\cite[p.~334]{LeeTK1997Centralizing}.
+
+That conjecture is open, and this section states it as a problem. % claim-ok: own signpost introducing the moved problem, which carries its own citation
+
+\begin{problem}[{\cite[p.~334]{LeeTK1997Centralizing}}]\label{prob:open:commuting}
+Let $R$ be a semiprime ring and let $f\colon R\to R$ be an additive map with
+$[f(x),x]_n=0$ for one fixed positive power $n$.
+Must $f$ be of the form $f(x)=\lambda x+\mu(x)$, with $\lambda$ in the extended
+centroid and $\mu$ a map into the extended centroid?
+\end{problem}
+
+Lee proves the statement for $n=1$ and for several restricted conditions on the
+ring \cite[Theorem~L, p.~334]{LeeTK1997Centralizing}, and he records the
+general power as open \cite[p.~334]{LeeTK1997Centralizing}.
+
+So far the sets were a whole ring or a right ideal. Franca and Louza moved the
+question to subsets of a matrix algebra studied in linear preserver problems, and
+those subsets are not closed under addition \cite[p.~2540]{FrancaLouza2024}.
+
+Throughout their paper $F$ is a field whose characteristic is $0$ or at least $5$, and
+$M_n$ is the algebra of all $n\times n$ matrices over $F$ with $n\ge3$
+\cite[p.~2541]{FrancaLouza2024}. Here $L$ is the prime field of $F$
+\cite[p.~2541]{FrancaLouza2024}. The set $E$ consists of the idempotent matrices, and
+$V$ consists of the scalar multiples $\alpha E_{ii}$ of the matrix units
+\cite[p.~2541]{FrancaLouza2024}. Their sets are the union
+$\overline{E}=E\cup V$, the set $S$ of matrices whose minimal polynomial has degree
+$2$, and $P=\{X\in M_n\mid\operatorname{tr}(X)\in L\}$ with
+$\overline{P}=P\cup V$ \cite[p.~2541]{FrancaLouza2024}.
+
+An additive map $G$ on $M_n$ has the \emph{standard form} when
+$G(X)=\lambda X+\mu(X)$ for all $X\in M_n$, where $\lambda$ is a scalar and $\mu$ is
+an additive map into the scalar matrices \cite[p.~2540]{FrancaLouza2024}. In the
+matrix algebra this is the conclusion of Theorem~\ref{thm:fi:bresarA}.
+
+The first of the two answers goes to $S$ \cite[p.~2550]{FrancaLouza2024}.
+
+\begin{theorem}[{\cite[Theorem~6.6, p.~2550]{FrancaLouza2024}}]\label{thm:fi:franca-louza-S}
+Let $F$ be a field whose characteristic is $0$ or at least $5$, let $n\ge3$, and let
+$G\colon M_n\to M_n$ be an additive map which is commuting on $S$. Then $G$ has the
+standard form.
+\end{theorem}
+
+So the condition on the matrices of minimal polynomial of degree $2$ is as strong as
+the condition on the whole algebra. The idempotents behave in another way, and the
+authors tie them to the trace condition \cite[p.~2547]{FrancaLouza2024}.
+
+\begin{theorem}[{\cite[Theorem~5.1, p.~2547]{FrancaLouza2024}}]\label{thm:fi:franca-louza-E}
+Let $F$ be a field whose characteristic is $0$ or at least $5$, let $n\ge3$, and let
+$G\colon M_n\to M_n$ be an additive map. Then $G$ is commuting on $\overline{P}$ if
+and only if $G$ is commuting on $\overline{E}$.
+\end{theorem}
+
+Theorem~\ref{thm:fi:franca-louza-E} says that the condition on the idempotents already
+decides it on the larger set $\overline{P}$, which is still not the whole algebra
+\cite[p.~2547]{FrancaLouza2024}. It does not force the standard form, and the authors
+build a map that shows this \cite[Example~7.1, pp.~2550--2553]{FrancaLouza2024}.
+
+\begin{example}[{\cite[Example~7.1, pp.~2550--2553]{FrancaLouza2024}}]\label{ex:fi:franca-louza}
+Let $F$ be a field with $[F:L]\ge7$ and let $n=3$. Then there is an additive map
+$G\colon M_3\to M_3$ which is commuting on $\overline{E}$ and does not have the
+standard form. That map is not commuting on the set $R_1$ of rank-one matrices.
+\end{example}
+
+So $\overline{E}$ admits commuting maps outside the standard form, and $S$ does not
+\cite[p.~2553]{FrancaLouza2024}. The authors compare the three classical sets in their
+closing commentary: among $R_1$, $E$ and $S$ only $S$ has all its commuting maps of
+the standard form \cite[p.~2553]{FrancaLouza2024}.
+
+\section{Functional equations and information measures}\label{sec:functional-identities:information-functions}
+
+A functional equation can carry a derivation inside its solutions
+\cite[p.~195]{Aczel1981}. The presence of the derivation is what makes those
+solutions surprising~\cite[p.~195]{Aczel1981}. Aczel studies one real function
+of one variable, written $f$~\cite[p.~191]{Aczel1981}. The variable runs over
+the open unit interval, and the function comes from a measure of
+information~\cite[p.~191]{Aczel1981}. The measure of uncertainty behind it
+satisfies a recursion~\cite[pp.~192--193]{Aczel1981}. Once the measure is
+symmetric, the recursion becomes an equation on $f$ alone
+\[
+  f(x) + (1-x)\,f\!\left(\frac{y}{1-x}\right)
+  = f(y) + (1-y)\,f\!\left(\frac{x}{1-y}\right),
+\]
+and $x$ and $y$ are positive with $x + y < 1$~\cite[pp.~192--193]{Aczel1981}.
+Aczel calls the solutions the \emph{symmetric information
+functions}~\cite[p.~192]{Aczel1981}.
+
+The general solution of that equation involves a
+derivation~\cite[p.~195]{Aczel1981}. Aczel writes the solution through two
+auxiliary functions~\cite[p.~195]{Aczel1981}. The first one, written $e$, is
+any solution of the product equation
+\[
+  e(xy) = x\,e(y) + y\,e(x), \qquad x, y \in {]0,1[} .
+\]
+The second one, written $d$, is any real derivation
+\cite[pp.~191 and 194]{Aczel1981}:
+\[
+  d(x+y) = d(x) + d(y), \qquad d(xy) = x\,d(y) + y\,d(x).
+\]
+With those two in hand, the general solution reads
+\[
+  f(x) = e(x) + e(1-x) + ax
+\]
+for a constant $a$~\cite[p.~195]{Aczel1981}.
+
+The point Aczel makes is about a regularity
+assumption~\cite[p.~195]{Aczel1981}. The formula above is
+correct~\cite[p.~195]{Aczel1981}. What fails is the claim that a regular $f$
+forces $e$ to be regular in the same
+class~\cite[p.~195]{Aczel1981}. The derivation is the
+reason~\cite[p.~195]{Aczel1981}. If $e$ solves the two equations, then so does
+$e + d$~\cite[p.~195]{Aczel1981}. A derivation satisfies both by definition,
+and $d(1-x) = -d(x)$ follows from them~\cite[p.~195]{Aczel1981}. So a very
+regular $f$ can hide a very irregular $e$~\cite[p.~195]{Aczel1981}.
+
+\begin{theorem}[{\cite[p.~195]{Aczel1981}}]\label{thm:fi:aczel-general-solution}
+Let $e_0$ be one particular solution of the two equations above for a given
+$f$ and $a$. Then their general solution is $e = e_0 + d$, where $d$ is an
+arbitrary real derivation, whether zero or not, restricted to ${]0,1[}$.
+\end{theorem}
+
+Aczel gives the converse argument too~\cite[p.~195]{Aczel1981}. Take two
+solutions of the pair of equations~\cite[p.~195]{Aczel1981}. Their difference
+satisfies both halves of the Leibniz
+rule~\cite[p.~195]{Aczel1981}. So the difference is a
+derivation~\cite[p.~195]{Aczel1981}.
+
+The same effect appears again one degree
+higher~\cite[p.~199]{Aczel1981}. Aczel also treats information functions of
+degree $\alpha$~\cite[p.~199]{Aczel1981}. With no regularity assumption their
+general solution is
+\[
+  f(x) = b\,[x^\alpha + (1-x)^\alpha - 1], \qquad \alpha \neq 1,
+\]
+so the case $\alpha = 2$ looked like the
+rest~\cite[pp.~198--199]{Aczel1981}. The expectation was that the same
+implication holds at $\alpha = 2$~\cite[p.~199]{Aczel1981}. Aczel reports a
+counterexample instead~\cite[p.~199]{Aczel1981}.
+
+\begin{example}[{\cite[p.~199]{Aczel1981}}]\label{ex:fi:aczel-alpha-two}
+Let $d$ be a not identically zero real derivation and $b$ a constant. Then
+\[
+  f(x) = b\,[x^2 + (1-x)^2 - 1] + d(x), \qquad x \in {]0,1[},
+\]
+is a solution of the equation for degree $2$. It satisfies neither the
+symmetry $f(x) = f(1-x)$ nor the equation for a degree other than $2$.
+\end{example}
+
+The derivation is what breaks the symmetry
+here~\cite[p.~199]{Aczel1981}. A derivation changes sign under $x \mapsto
+1-x$~\cite[p.~199]{Aczel1981}. The square bracket does not change sign under
+that map~\cite[p.~199]{Aczel1981}. So the sum of the two cannot be symmetric.
+Aczel adds a second observation~\cite[p.~199]{Aczel1981}. If an $f$ of this
+shape is measurable, then the derivation in it is
+zero~\cite[p.~199]{Aczel1981}. That is why the measurable solutions never
+showed the effect~\cite[p.~199]{Aczel1981}.
+
+So the derivations of this book are not always
+constructive~\cite[p.~191]{Aczel1981}. Here they are the hidden term. They
+separate the algebraic solutions of a functional equation from the regular
+ones~\cite[p.~199]{Aczel1981}. That separation is what the two surprises in
+the title of Aczel count~\cite[p.~191]{Aczel1981}.
+The same question has an answer on infinite-dimensional Lie algebras
+\cite[p.~1]{Tang2016W22}. On the Virasoro algebra every linear commuting map is $x\mapsto\lambda x+\sigma(x)c$,
+with $\lambda$ a complex number and $\sigma$ a linear functional
+\cite[Theorem~4.2, p.~9]{Tang2016W22}. On the $W$-algebra $W(2,2)$ a second term
+appears, built from the map $\omega$ that replaces each generator $L_m$ by
+$H_m$ \cite[Theorem~4.1, p.~9]{Tang2016W22}. The same two algebras carry no
+non-trivial commutative post-Lie structure \cite[Theorem~4.6, p.~9]{Tang2016W22}.
+On the deformed Schr\"odinger--Virasoro algebra the commuting maps have four
+possible forms, according to the two parameters
+\cite[Theorem~4.3, p.~11]{FanSuXu2016}. Each form is read from the
+skew-symmetric biderivations of the algebra
+\cite[Theorem~3.2, p.~4]{FanSuXu2016}.
+For a Hom-Lie superalgebra the commuting condition carries graded signs, and a
+linear super-commuting map on a centerless algebra equal to its derived algebra
+lies in the centroid \cite[Theorem~4.2, p.~11]{Pandey2024Superbiderivations}.
+The same paper describes the super-biderivations of that algebra
+\cite[Theorem~3.8, p.~7]{Pandey2024Superbiderivations}. So on these algebras the
+commuting maps, the biderivations and the centroid are three views of one
+object \cite[p.~1]{Pandey2024Superbiderivations}.

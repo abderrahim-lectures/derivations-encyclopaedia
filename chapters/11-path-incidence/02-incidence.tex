@@ -1,0 +1,142 @@
+% STATUS: written 2026-11-05 (Baclawski 1972, Xiao 2015, Ortega 2006 read in full)
+% STATUS: extended 2026-11-06 (Ferreira, Pierin and Ferreira 2018 and Guan and Zhang 2024 read in full)
+% Sources read in full: Baclawski 1972 (pp. 351--356); Xiao 2015 (pp. 1357--1368);
+% Ortega 2006 (section 1, pp. 225--232); Ferreira, Pierin and Ferreira 2018 (pp. 1--2, 6);
+% Guan and Zhang 2024 (pp. 1--4, 13).
+% Origins: the incidence algebra and its additive functions, Baclawski 1972 (pp. 351--352);
+% the transitive mapping and its first source, Nowicki, recorded by Xiao 2015 (Remark 2.4, p. 1362);
+% the general pre-ordered case over a ring, Xiao 2015 (Theorem 2.2 p. 1360, Proposition 2.5 p. 1362).
+\section{Incidence algebras of posets}\label{sec:path-incidence:incidence}
+
+The path algebra of Section~\ref{sec:path-incidence:path} counts paths. An incidence
+algebra counts the intervals of a poset, and it is the same algebra written with
+less data \cite[p.~232]{Ortega2006}. Rota and Stanley made it the base of counting
+and of the theory of arithmetic functions, and Baclawski asked for its derivations
+\cite[p.~1358]{Xiao2015}. This section gives his answer, then the answer for a
+pre-ordered set over an arbitrary ring.
+
+The elements of the algebra are functions on the intervals of a pre-ordered set
+\cite[p.~230]{Ortega2006}. The product adds over the points between the two ends
+\cite[p.~230]{Ortega2006}.
+
+\begin{definition}[{\cite[Definition~1.10, p.~230]{Ortega2006}}]\label{def:incidence:algebra}
+Let $X$ be a finite pre-ordered set and $F$ a commutative ring with unit. The
+\emph{incidence algebra} of $X$ over $F$ is
+\begin{equation*}
+I(X,F)=\{\,f\colon X\times X\to F\mid f(x,y)=0\text{ if }x\not\le y\,\},
+\end{equation*}
+with
+\begin{equation*}
+(f+g)(x,y)=f(x,y)+g(x,y),\qquad
+(f\cdot g)(x,y)=\sum_{x\le z\le y}f(x,z)\,g(z,y),\qquad
+(\lambda f)(x,y)=\lambda f(x,y)
+\end{equation*}
+for all $f,g\in I(X,F)$, $\lambda\in F$ and $x,y,z\in X$.
+\end{definition}
+
+Baclawski works over a locally finite ordered set and a field
+\cite[p.~351]{Baclawski1972}. He calls an element $a$ of $I(P)$ \emph{additive} when
+$a(x,z)=a(x,y)+a(y,z)$ for $x\le y\le z$, and attaches to it the derivation
+$L_{a}(f)=af$ \cite[p.~352]{Baclawski1972}. The inner derivations are the maps
+$d_{f}(g)=fg-gf$ \cite[p.~352]{Baclawski1972}. His first result measures how many
+connected components the poset has \cite[p.~352]{Baclawski1972}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~352]{Baclawski1972}}]\label{thm:incidence:components}
+Let $P$ be a locally finite ordered set having $c$ connected components:
+$P_{1},\dots,P_{c}$. Then there is a short exact sequence of $K$-homomorphisms
+\begin{equation*}
+0\longrightarrow K^{c}\longrightarrow I(P)\longrightarrow
+\mathcal D(I(P))\longrightarrow 0,
+\end{equation*}
+where $\mathcal D(I(P))$ is the space of inner derivations of $I(P)$.
+\end{theorem}
+
+The second result gives the decomposition \cite[p.~352]{Baclawski1972}. Every
+derivation is an inner derivation plus one that comes from an additive function
+\cite[p.~352]{Baclawski1972}.
+
+\begin{theorem}[{\cite[Theorem~2, p.~352]{Baclawski1972}}]\label{thm:incidence:decomposition}
+If $P$ is a locally finite ordered set, then
+\begin{equation*}
+\mathrm{Der}(I(P))=\mathrm{Inn}(I(P))+\mathcal M(I(P)),
+\end{equation*}
+where $\mathrm{Inn}(I(P))$ is the space of inner derivations and
+$\mathcal M(I(P))$ is the space of derivations $L_{a}$ attached to additive
+elements $a$.
+\end{theorem}
+
+When the poset has a smallest or a largest element, the additive part is inner as
+well \cite[p.~354]{Baclawski1972}. Then every derivation of the incidence algebra is
+inner \cite[p.~354]{Baclawski1972}.
+
+Xiao states the same decomposition for a pre-ordered set over a commutative ring
+\cite[p.~1362]{Xiao2015}. The additive rule becomes the \emph{transitive} rule, and
+the derivation attached to it sends each matrix unit to a scalar multiple of itself
+\cite[p.~1362]{Xiao2015}. Xiao records that the definition of a transitive mapping
+first appeared in the paper of Nowicki on finite incidence algebras
+\cite[Remark~2.4, p.~1362]{Xiao2015}.
+
+\begin{definition}[{\cite[p.~1362]{Xiao2015}}]\label{def:incidence:transitive}
+A mapping $f\colon{\le}\to R$ is \emph{transitive} if
+$f(i,j)+f(j,k)=f(i,k)$ for all $i,j,k\in X$ with $i\le j$ and $j\le k$. Every
+mapping $\sigma\colon X\to R$ determines a transitive mapping
+$(i,j)\mapsto\sigma(i)-\sigma(j)$; such a mapping is called trivial. For a
+transitive $f$, the map $\Delta_{f}$ is defined on the matrix units by
+$\Delta_{f}(e_{ij})=f(i,j)e_{ij}$.
+\end{definition}
+
+A transitive map of this kind gives a derivation, and the derivation is inner only
+in the trivial case \cite[p.~1362]{Xiao2015}.
+
+\begin{lemma}[{\cite[Lemma~2.3, p.~1362]{Xiao2015}}]\label{lem:incidence:transitive}
+With the notation above, $\Delta_{f}$ is a derivation. Moreover, $\Delta_{f}$ is
+inner if and only if $f$ is trivial.
+\end{lemma}
+
+Every derivation of the algebra splits into these two pieces
+\cite[p.~1362]{Xiao2015}.
+
+\begin{proposition}[{\cite[Proposition~2.5, p.~1362]{Xiao2015}}]\label{prop:incidence:split}
+Let $D$ be a derivation of $I(X,R)$. Then there exist an element $g\in I(X,R)$ and a
+transitive mapping $f$ such that
+\begin{equation*}
+D=\mathrm{Inn}_{g}+\Delta_{f}.
+\end{equation*}
+\end{proposition}
+
+The decomposition decides innerness for the whole algebra
+\cite[p.~1363]{Xiao2015}.
+
+\begin{corollary}[{\cite[Corollary~2.6, p.~1363]{Xiao2015}}]\label{cor:incidence:inner}
+Every derivation of $I(X,R)$ is inner if and only if every transitive mapping is
+trivial.
+\end{corollary}
+
+The same description settles Jordan derivations \cite[p.~1364]{Xiao2015}. A Jordan
+derivation satisfies $D(x^{2})=D(x)x+xD(x)$ \cite[p.~1357]{Xiao2015}. Xiao proves
+that on a 2-torsion free ring no such map is new \cite[p.~1366]{Xiao2015}.
+
+\begin{theorem}[{\cite[Theorem~3.3, p.~1366]{Xiao2015}}]\label{thm:incidence:jordan}
+Let $R$ be a 2-torsion free commutative ring with identity. Then every Jordan
+derivation of the incidence algebra $I(X,R)$ is a derivation.
+\end{theorem}
+
+The generalized Jordan form of the same question has the same answer
+\cite[p.~6]{FerreiraPierinFerreira2018}. A generalized Jordan derivation is a
+map $d$ with $d(a^{2})=d(a)a+a\tau(a)$ for a Jordan derivation $\tau$
+\cite[p.~1]{FerreiraPierinFerreira2018}. On an incidence algebra over a
+2-torsion free commutative ring each such map is a generalized derivation
+\cite[Theorem~2.1, p.~6]{FerreiraPierinFerreira2018}. The theorem is a direct
+consequence of the Jordan result of
+Theorem~\ref{thm:incidence:jordan} \cite[p.~1]{FerreiraPierinFerreira2018}.
+
+The biderivations of the same algebra split in the same two ways
+\cite[p.~13]{GuanZhang2024}. The decomposition into inner and extremal pieces,
+which Section~\ref{sec:higher-multi:tri-generalized} meets on a triangular
+ring, holds here under a condition on the maximal chains
+\cite[Theorem~4.10, p.~13]{GuanZhang2024}.
+
+By Proposition~\ref{prop:incidence:split}, the derivations of an incidence algebra
+split into an inner part and a part read from an additive function. A trivial
+extension is a second construction that puts two algebras together, and
+Section~\ref{sec:path-incidence:trivial-extension} treats it.

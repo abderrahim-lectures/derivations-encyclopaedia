@@ -1,0 +1,27 @@
+% The differential Galois correspondence (Kolchin 1948, section 19, Theorem,
+% p. 32; Cassidy--Singer 2007, Theorem 2.1, pp. 5--6). The Picard--Vessiot
+% extension G over F sits on the left, its differential Galois group on the
+% right. Below them the intermediate differential fields face the algebraic
+% subgroups, and the two maps between those sets run in opposite directions.
+\begin{tikzpicture}[font=\small]
+  % the extension and its group, one on each side
+  \node[hbkey,text width=37mm,align=center] (PV) at (0,0)
+    {Picard--Vessiot\\ extension $G$ of $F$};
+  \node[hbkey,text width=37mm,align=center] (GR) at (80mm,0)
+    {$\operatorname{Gal}(G/F)$};
+  % the two sets the correspondence joins
+  \node[hbnode,text width=37mm,align=center] (F1) at (0,-26mm)
+    {intermediate\\ differential fields $F_1$};
+  \node[hbnode,text width=37mm,align=center] (H) at (80mm,-26mm)
+    {algebraic subgroups\\ $H\le\operatorname{Gal}(G/F)$};
+  \draw[hbblue!45] (PV.south) -- (F1.north);
+  \draw[hbblue!45] (GR.south) -- (H.north);
+  % fields to groups, drawn above the line
+  \draw[hbarrow] ([yshift=5mm]F1.east) -- node[above,font=\footnotesize]
+    {$F_1\mapsto\operatorname{Gal}(G/F_1)$} ([yshift=5mm]H.west);
+  % groups to fields, drawn below the line, pointing the other way
+  \draw[hbarrow] ([yshift=-5mm]H.west) -- node[below,font=\footnotesize]
+    {$H\mapsto G^{H}$} ([yshift=-5mm]F1.east);
+  \node[font=\footnotesize,anchor=north,align=center] at (40mm,-35mm)
+    {the two maps are inverse bijections};
+\end{tikzpicture}

@@ -1,0 +1,17 @@
+% Poset a<b<d, a<c<d: its Hasse diagram is a quiver; the incidence algebra is
+% the path algebra modulo the commutativity relation (path via b = path via c).
+\begin{tikzpicture}[font=\small,scale=1.1]
+  \begin{scope}
+    \node (a) at (0,0) {$a$}; \node (b) at (-1,1) {$b$}; \node (c) at (1,1) {$c$}; \node (d) at (0,2) {$d$};
+    \draw (a) -- (b) -- (d) -- (c) -- (a);
+    \node at (0,-0.7) {Hasse diagram};
+  \end{scope}
+  \begin{scope}[xshift=4.2cm]
+    \node (a) at (0,0) {$a$}; \node (b) at (-1,1) {$b$}; \node (c) at (1,1) {$c$}; \node (d) at (0,2) {$d$};
+    \draw[hbarrow] (a) -- node[left,font=\footnotesize] {$\alpha$} (b);
+    \draw[hbarrow] (b) -- node[left,font=\footnotesize] {$\beta$} (d);
+    \draw[hbarrow] (a) -- node[right,font=\footnotesize] {$\gamma$} (c);
+    \draw[hbarrow] (c) -- node[right,font=\footnotesize] {$\delta$} (d);
+    \node[align=center] at (0,-0.85) {quiver, relation $\beta\alpha=\delta\gamma$};
+  \end{scope}
+\end{tikzpicture}

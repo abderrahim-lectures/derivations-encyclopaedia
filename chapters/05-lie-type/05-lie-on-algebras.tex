@@ -1,0 +1,118 @@
+% STATUS: written 2026-11-04 (Lu and Jing 2010 read in full, pp. 89--99; Benkovic 2015 read in full, pp. 141--165)
+% STATUS: extended 2026-11-06 (Zhang and Wei 2017 read in full from the library PDF)
+% Sources read in full: Lu and Jing 2010; Benkovic 2015; Zhang and Wei 2017 (pp. 1--3, 6).
+\section{Lie derivations of specific algebras}\label{sec:lie-type:lie-on-algebras}
+
+The sections so far moved through general classes of rings and algebras. On a
+concrete algebra the question has a concrete answer: does the standard form
+hold there, with what remainder, and what does the remainder look like. The two
+answers this section records are the algebra of bounded operators on a Banach
+space and the algebras built around an idempotent.
+
+Lu and Jing settle the question of Martindale for $B(X)$, the algebra of all
+bounded linear operators on a complex Banach space $X$ of dimension greater
+than $2$ \cite[p.~91]{LuJing2010}. An additive map $\tau\colon B(X)\to B(X)$
+is called \emph{centralized} when $\tau([A,B])\in\mathbb{C}I$ for all
+$A,B\in B(X)$ \cite[p.~91]{LuJing2010}.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~92]{LuJing2010}}]\label{thm:lie:lujing-bx}
+Let $X$ be a Banach space with $\dim X>2$, and $\delta$ be a Lie derivation on
+$B(X)$. Then there exists an operator $T\in B(X)$, and a linear map
+$\tau\colon B(X)\to\mathbb{C}I$ vanishing on each commutator, such that
+$\delta(A)=AT-TA+\tau(A)$ for all $A\in B(X)$.
+\end{theorem}
+
+Two points mark the answer.
+Every Lie derivation of $B(X)$ is inner up to the
+scalar remainder, and the remainder is finer than the general theory asks.
+It need not be given by a linear functional $A\mapsto f(A)I$ on the subspace
+spanned by the commutators \cite[p.~91]{LuJing2010}.
+With the second point Lu and Jing answer in the negative a question of Brešar
+\cite[p.~92]{LuJing2010}.
+
+Benkovič gives the idempotent answer for linear maps over a commutative ring
+$R$. The algebra $A$ is unital, $2$-torsion free, with an idempotent $e\ne0,1$
+such that $exe\cdot eA(1-e)=\{0\}=(1-e)Ae\cdot exe$ implies $exe=0$ and
+$eA(1-e)\cdot(1-e)x(1-e)=\{0\}=(1-e)x(1-e)\cdot(1-e)Ae$ implies
+$(1-e)x(1-e)=0$ \cite[p.~141]{Benkovic2015}. A Jordan derivation
+$\delta\colon A\to A$ is called \emph{singular} for the Peirce decomposition
+when $\delta(eAe+(1-e)A(1-e))=0$, $\delta(eA(1-e))\subseteq(1-e)Ae$ and
+$\delta((1-e)Ae)\subseteq eA(1-e)$ \cite[p.~144]{Benkovic2015}. Such a map is
+a Lie triple derivation that no derivation plus central map can produce, so it
+enters the final form \cite[p.~144]{Benkovic2015}.
+
+\begin{theorem}[{\cite[Theorem~5.1, p.~159]{Benkovic2015}}]\label{thm:lie:benkovic-triple}
+Let $A$ be a unital $2$-torsion free algebra with a nontrivial idempotent $e$
+satisfying the annihilation condition above. Assume one of the conditions
+\textup{(A)}, \textup{(B)}, \textup{(C)}, \textup{(D)}, on the corners $eAe$
+and $(1-e)A(1-e)$: generation by idempotents and commutators, or the equality
+of the corner centers with $Z(A)e$ and $Z(A)(1-e)$, and assume one of the
+conditions \textup{(1)} to \textup{(4)}, the absence of central ideals in a
+corner or a prescribed form of $Z(A)$. Then any Lie triple derivation
+$D\colon A\to A$ is of the form $D=d+\delta+\gamma$, where $d\colon A\to A$
+is a derivation, $\delta\colon A\to A$ is a singular Jordan derivation and
+$\gamma\colon A\to Z(A)$ is a linear map that vanishes on $[[A,A],A]$
+\cite[p.~159]{Benkovic2015}.
+\end{theorem}
+
+For Lie derivations the singular part disappears.
+
+\begin{theorem}[{\cite[Theorem~5.3, p.~160]{Benkovic2015}}]\label{thm:lie:benkovic-lie}
+Under the analogous hypotheses, a Lie derivation $D\colon A\to A$ is of the
+form $D=d+\gamma$, where $d\colon A\to A$ is a derivation and
+$\gamma\colon A\to Z(A)$ is a linear map that vanishes on $[A,A]$
+\cite[p.~160]{Benkovic2015}.
+\end{theorem}
+
+The applications cover the standard families \cite[pp.~161--163]{Benkovic2015}.
+
+\begin{corollary}[{\cite[Corollary~5.5, p.~161]{Benkovic2015}}]\label{cor:lie:benkovic-matrix}
+Let $A=M_{n}(A)$, $n\ge3$, be a matrix algebra over a $2$-torsion free unital
+algebra $A$. Then every Lie triple derivation $D\colon A\to A$ is of the form
+$D=d+\gamma$, where $d$ is a derivation and $\gamma\colon A\to Z(A)$ vanishes
+on $[[A,A],A]$.
+\end{corollary}
+
+The second family is the nest algebras.
+
+\begin{corollary}[{\cite[Corollary~5.12, p.~163]{Benkovic2015}}]\label{cor:lie:benkovic-nest}
+Let $\mathcal{N}$ be a nest of a complex Hilbert space $H$, $\dim H\ge2$. Then
+every Lie triple derivation $D$ of the nest algebra $\mathcal{T}(\mathcal{N})$
+is of the form $D=d+\gamma$, where $d$ is a derivation and
+$\gamma\colon\mathcal{T}(\mathcal{N})\to\mathbb{C}I$ vanishes on
+$[[\mathcal{A},\mathcal{A}],\mathcal{A}]$. In particular, every Lie derivation
+of a nest algebra has the standard form.
+\end{corollary}
+
+The dimension $2$ case can fail.
+Benkovič recalls an example from his earlier
+work with Eremita of a triangular algebra $\mathcal{T}_{2}(A)$ over a
+$\mathbb{Z}_{2}$-graded algebra.
+On it, a Lie triple derivation is not the
+sum of a derivation and a central linear mapping vanishing on the second
+commutator \cite[p.~163]{Benkovic2015}. On the same algebra every Lie
+derivation is still of the standard form \cite[p.~164]{Benkovic2015}.
+
+On a nest algebra of a Banach space the same conclusion holds for every
+Lie-type derivation, with no dimension bound
+\cite[Theorem~3.1, p.~6]{ZhangWei2017Nest}. Zhang and Wei work with the
+$(n-1)$-th commutator $p_n(x_1,\dots,x_n)=[\cdots[[x_1,x_2],x_3],\dots,x_n]$ and
+call a linear map $L$ a Lie $n$-derivation when the Leibniz rule holds for
+$p_n$ \cite[p.~2]{ZhangWei2017Nest}. Their theorem reads as follows
+\cite[Theorem~3.1, p.~6]{ZhangWei2017Nest}.
+
+\begin{theorem}[{\cite[Theorem~3.1, p.~6]{ZhangWei2017Nest}}]\label{thm:lie:zhang-wei-nest}
+Let $X$ be a Banach space, $\mathcal{N}$ a non-trivial nest on $X$ and
+$\operatorname{Alg}\mathcal{N}$ the nest algebra associated with $\mathcal{N}$.
+Then $L\colon\operatorname{Alg}\mathcal{N}\to B(X)$ is a Lie $n$-derivation if
+and only if there exist a derivation $D\colon\operatorname{Alg}\mathcal{N}\to B(X)$
+and a linear map $H\colon\operatorname{Alg}\mathcal{N}\to\mathbb{C}I$ that
+vanishes on each $(n-1)$-th commutator, such that $L=D+H$. If $L$ is continuous,
+then $D$ and $H$ are continuous as well.
+\end{theorem}
+
+So every Lie-type derivation of a nest algebra on a Banach space has the
+standard form \cite[p.~3]{ZhangWei2017Nest}. The authors prove the theorem for
+the algebra itself and for subalgebras that meet six conditions on their
+rank-one operators \cite[pp.~6--7]{ZhangWei2017Nest}. The nest algebra meets
+them \cite[p.~7]{ZhangWei2017Nest}.

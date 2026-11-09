@@ -1,0 +1,124 @@
+% STATUS: written 2026-11-06 (English gate clean; sources read in full as recorded below).
+% Sources read in full: Weibel 1994 (sections 9.1, 9.2, 9.4, 9.5),
+% Atesli--Esen--Sutlu 2021 (pp. 1--3, 25--26), Xu--Liu 2021 (pp. 1--3),
+% Das 2025 (pp. 1--3, 6--7, 19--20).
+% Sources: Weibel1994, AtesliEsenSutlu2021, XuLiu2021ThreeLieDer, Das2025Nijenhuis.
+\section{Computations for classes of algebras}\label{sec:cohomology:computations}
+
+The theory is computable on the standard classes, and Weibel collects the
+answers~\cite[\S 9]{Weibel1994}.
+
+The tensor algebra is the first class, and its Hochschild homology vanishes
+above dimension one
+\cite[Proposition~9.1.6, pp.~303--304]{Weibel1994}.
+
+\begin{proposition}[{\cite[Proposition 9.1.6, pp.~303--304]{Weibel1994}}]\label{prop:cohomology:tensor}
+Let $T = T(V)$ be the tensor algebra of a $k$-module $V$, and let $M$ be a
+$T$-$T$ bimodule. Then $H_i(T, M) = 0$ for $i \neq 0, 1$, and there is an exact
+sequence
+\[
+0 \longrightarrow H_1(T, M) \longrightarrow M \otimes V \xrightarrow{\;b\;} M
+\longrightarrow H_0(T, M) \longrightarrow 0,
+\]
+where $b$ is the map $b(m \otimes v) = mv - vm$.
+\end{proposition}
+
+Polynomial rings sit inside this class~\cite[Exercise~9.1.3, p.~304]{Weibel1994}.
+For $R = k[x_1, \dots, x_n]$ one has $H_i(R, M) = 0$ for $i > 0$ over a
+field~\cite[Exercise~9.1.3, p.~304]{Weibel1994}. Weibel marks this as a special
+case of Theorem~\ref{thm:cohomology:hkr} below.
+
+For a commutative algebra the first group is built from the differentials of
+Section~\ref{sec:commutative:kahler}.
+
+\begin{proposition}[{\cite[Proposition 9.2.2, pp.~306--307]{Weibel1994}}]\label{prop:cohomology:comm-h1}
+Let $R$ be a commutative $k$-algebra, and let $M$ be a right $R$-module made into
+an $R$-$R$ bimodule by $rm = mr$. Then $H_0(R, M) \cong M$ and
+$H_1(R, M) \cong M \otimes_R \Omega_{R/k}$.
+\end{proposition}
+
+The Hochschild--Kostant--Rosenberg theorem computes the whole graded theory for
+a smooth commutative algebra~\cite[Theorem~9.4.7, pp.~322--323]{Weibel1994}. Its
+Hochschild homology is then the exterior algebra on the Kähler differentials.
+
+\begin{theorem}[{Hochschild--Kostant--Rosenberg, \cite[Theorem 9.4.7, pp.~322--323]{Weibel1994}}]\label{thm:cohomology:hkr}
+Let $R$ be a commutative algebra, essentially of finite type over a field $k$. If
+$R$ is smooth over $k$, then $\psi$ is an isomorphism of graded $R$-algebras
+$H_*(R, R) \cong \Lambda^* \Omega_{R/k}$.
+\end{theorem}
+
+The degree one case of Theorem~\ref{thm:cohomology:hkr} gives
+$H_1(R, R) \cong \Omega_{R/k}$~\cite[Theorem~9.4.7, p.~322]{Weibel1994}. That
+is Proposition~\ref{prop:cohomology:comm-h1} read on $M = R$, and it feeds the
+de Rham comparison of
+Section~\ref{sec:cohomology:algebraic-topology}
+\cite[Theorem~9.8.13, p.~351]{Weibel1994}. The derivation side of the same
+degree is the universal derivation of
+Section~\ref{sec:commutative:kahler}. % claim-ok: cross-reference sentence, the module is built there
+
+Morita equivalence leaves the theory
+unchanged~\cite[Theorem~9.5.6, p.~325]{Weibel1994}. A theorem of R.~K.~Dennis
+says that this unchanged value holds across the
+equivalence~\cite[Theorem~9.5.6, p.~325]{Weibel1994}, and it comes next.
+
+\begin{theorem}[{R.~K.~Dennis, \cite[Theorem 9.5.6, p.~325]{Weibel1994}}]\label{thm:cohomology:morita}
+Hochschild homology is Morita invariant: if $R$ and $S$ are Morita equivalent
+rings and $M$ is an $R$-$R$ bimodule, then
+$H_*(R, M) \cong H_*(S, Q \otimes_R M \otimes_R P)$.
+\end{theorem}
+
+So the Hochschild theory of a matrix ring agrees with that of the ring
+itself~\cite[Theorem~9.5.6, p.~325]{Weibel1994}.
+
+The theory also runs for an algebra together with a derivation, and the
+derivation then enters the complex. Ate\c{s}li, Esen and S\"utl\"u build such
+a cohomology for an $n$-Lie algebra together with a representation
+\cite[p.~2]{AtesliEsenSutlu2021}. Their complex carries the generalized
+derivation extensions, and for $n=3$ it agrees with the known cohomology of
+$3$-Lie algebras \cite[p.~1]{AtesliEsenSutlu2021}.
+
+\begin{theorem}[{\cite[Proposition~2.13, pp.~25--26]{AtesliEsenSutlu2021}}]\label{thm:cohomology:n-lie-derivation}
+Let $L$ be an $n$-Lie algebra and let $D\colon L^{n-1}\to L$ satisfy the
+generalized derivation identity (2.10) of the cited paper, with
+$D^{\sharp}\colon L^{n-2}\to\mathfrak{gl}(L)$ the map assigned to it. Then
+$D^{\sharp}$ is a $1$-cocycle of $L$ with coefficients in
+$\mathfrak{gl}(L)$.
+\end{theorem}
+
+So a generalized derivation is a cocycle in degree one, which is the
+statement the paper aims at \cite[p.~2]{AtesliEsenSutlu2021}. The abelian
+extensions and the infinitesimal deformations are read from the usual
+cohomology of $n$-Lie algebras \cite[p.~1]{AtesliEsenSutlu2021}. The paper
+also carries the Hochschild--Serre spectral sequence to $n$-Lie algebras
+\cite[p.~1]{AtesliEsenSutlu2021}.
+
+For $3$-Lie algebras Xu and Liu build the same theory from a $3$-LieDer pair,
+a $3$-Lie algebra with a distinguished derivation
+\cite[p.~1]{XuLiu2021ThreeLieDer}. Their complex controls the deformations
+and the abelian extensions of the pair
+\cite[p.~1]{XuLiu2021ThreeLieDer}. The degree $-1$ bracket on the complex
+makes it a graded Lie algebra, and its Maurer--Cartan elements are exactly
+the $3$-LieDer pairs \cite[p.~2]{XuLiu2021ThreeLieDer}.
+
+A non-abelian cohomology also exists for such pairs. Das works with a
+Nijenhuis Lie algebra, a Lie algebra with an operator $N$ that satisfies
+$[N(x),N(y)]=N([N(x),y]+[x,N(y)]-N[x,y])$
+\cite[Definition~2.1, p.~3]{Das2025Nijenhuis}. The non-abelian second group
+of one such algebra with values in another classifies the non-abelian
+extensions \cite[p.~2]{Das2025Nijenhuis}.
+
+\begin{theorem}[{\cite[Theorem~3.4, p.~6]{Das2025Nijenhuis}}]\label{thm:cohomology:nijenhuis-nonabelian}
+Let $(\mathfrak{g},N)$ and $(\mathfrak{h},S)$ be two Nijenhuis Lie algebras.
+Then there is a bijection between the equivalence classes of non-abelian
+extensions of $(\mathfrak{g},N)$ by $(\mathfrak{h},S)$ and the non-abelian
+cohomology group $H^{2}_{\mathrm{nab}}((\mathfrak{g},N);(\mathfrak{h},S))$.
+\end{theorem}
+
+With abelian values the statement specializes to the usual second group
+\cite[Theorem~3.7, p.~7]{Das2025Nijenhuis}. Das then turns to derivations.
+Given an abelian extension of a Nijenhuis Lie algebra, a pair of Nijenhuis
+Lie algebra derivations can be lifted exactly when it is compatible and its
+Wells map vanishes \cite[Theorem~5.4, p.~19]{Das2025Nijenhuis}. The Wells map
+here fits a short exact sequence \cite[Theorem~5.5, p.~20]{Das2025Nijenhuis}.
+
+% Moved from chapters/20-applications/08-algebraic-topology.tex (source read in full: Weibel 1994, chapter 9).

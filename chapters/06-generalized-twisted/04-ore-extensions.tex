@@ -1,0 +1,143 @@
+% STATUS: written 2026-11-04 (Ore 1933, Chuang--Lee--Liu--Tsai 2010, Chuang 2017 read in full)
+% Sources read in full: Ore 1933 (pp. 480--508); Chuang, Lee, Liu and Tsai 2010 (pp. 157--178); Chuang 2017 (pp. 2837--2847).
+\section{Derivations and Ore extensions}\label{sec:generalized-twisted:ore-extensions}
+
+The $\sigma$-derivations of the previous sections are the coefficient maps of
+the skew polynomial ring \cite[p.~2838]{Chuang2017Auto}. The construction goes
+back to Ore \cite[p.~480]{Ore1933}. He built polynomials over a division ring
+whose multiplication keeps the degree of a product equal to the sum of the
+degrees of the factors.
+
+\begin{definition}[{\cite[p.~481]{Ore1933}}]\label{def:gen:ore-product}
+Let $K$ be a division ring, commutative or not. The product of two polynomials
+is associative and distributive, and the degree of a product is the sum of the
+degrees of the factors. It then suffices to define the product $xa$ for
+$a\in K$, and the degree postulate forces
+\begin{equation*}
+x a \;=\; \bar{a}\, x + a',
+\end{equation*}
+where $\bar a$ and $a'$ lie in $K$. The element $\bar a$ is the conjugate and
+$a'$ the derivative of $a$.
+\end{definition}
+
+The two operations satisfy fixed rules
+\cite[p.~482]{Ore1933}. Ore stated them as follows \cite[(4)--(5), p.~482]{Ore1933}.
+
+\begin{remark}[{\cite[(4)--(5), p.~482]{Ore1933}}]\label{rem:gen:ore-rules}
+The conjugate and the derivative obey
+\begin{equation*}
+\overline{a+b}=\bar a+\bar b,\qquad \overline{ab}=\bar a\,\bar b,
+\qquad (a+b)'=a'+b',\qquad (ab)'=a\,b'+a'\,\bar b .
+\end{equation*}
+\end{remark}
+
+The conjugation is an automorphism of $K$, and the derivative is then an
+operator of derivation type \cite[p.~482]{Ore1933}. This is the content of the
+first result of the paper \cite[Theorem~1, p.~482]{Ore1933}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~482]{Ore1933}}]\label{thm:gen:ore-conjugate}
+Through the correspondence $a\mapsto\bar a$ one obtains a homeomorphism in
+$K$; the elements $\bar a$ form a subfield $\bar K$ of $K$.
+\end{theorem}
+
+Two classical theories are the special cases in which the rule is fixed
+\cite[p.~482]{Ore1933}. The choice $\bar a=a$ gives the differential case, and
+$a'=0$ the difference case.
+
+\begin{remark}[{\cite[p.~482]{Ore1933}}]\label{rem:gen:ore-two-cases}
+In the theory of linear differential equations $K$ is commutative and
+$\bar a=a$, so the derivative has the ordinary properties of a derivative. In
+the theory of difference equations one puts $a'=0$, though $\bar a$ is usually
+different from $a$ \cite[p.~482]{Ore1933}.
+\end{remark}
+
+The elements that commute with the new variable form a subfield
+\cite[p.~483]{Ore1933}.
+
+\begin{theorem}[{\cite[Theorem~3, p.~483]{Ore1933}}]\label{thm:gen:ore-central}
+The elements permutable with $x$ form a field which is the greatest common
+subfield of the invariant field and the constant field.
+\end{theorem}
+
+Ore also introduced the division theory of the ring
+\cite[p.~484]{Ore1933}. The Euclidean algorithm
+for right-hand division runs over any $K$ \cite[p.~484]{Ore1933}. Left-hand
+division is stronger and needs the conjugate map to be surjective
+\cite[Theorem~6, p.~480]{Ore1933}.
+
+\begin{theorem}[{\cite[Theorem~6, p.~480]{Ore1933}}]\label{thm:gen:ore-left}
+In general, left-hand division can be performed in $K$ only when the
+conjugate map is an automorphism of $K$.
+\end{theorem}
+
+The recent literature gives the earlier construction its current form
+\cite[p.~2838]{Chuang2017Auto}. The variable is written $t$ and the two maps
+are named \cite[p.~2838]{Chuang2017Auto}.
+
+\begin{definition}[{\cite[p.~2838]{Chuang2017Auto}}]\label{def:gen:ore-extension}
+Let $R$ be a prime ring, $\sigma$ an automorphism and $\delta$ a
+$\sigma$-derivation of $R$. The Ore extension $R[t;\sigma,\delta]$ is the ring
+of finite sums $\sum_i a_i t^i$, with componentwise addition and the
+multiplication subjected to the rule
+\begin{equation*}
+t a \;=\; \sigma(a)\, t + \delta(a) \qquad\text{for } a\in R.
+\end{equation*}
+It is also called the skew polynomial ring over $R$ twisted by $\delta$.
+\end{definition}
+
+The two classical cases of Remark~\ref{rem:gen:ore-two-cases} are the two
+types named by Chuang \cite[p.~2838]{Chuang2017Auto}.
+
+\begin{remark}[{\cite[p.~2838]{Chuang2017Auto}}]\label{rem:gen:ore-two-types}
+A $\sigma$-derivation with $\sigma$ the identity gives $R[t;\delta]$, the Ore
+extension of derivation type. A $\sigma$-derivation with $\delta(R)=0$ gives
+$R[t;\sigma]$, the Ore extension of automorphism type. These two types have
+been most extensively studied \cite[p.~2838]{Chuang2017Auto}.
+\end{remark}
+
+The skew polynomial ring is the home of the divided powers of
+differentiation \cite[p.~158]{ChuangLee2010Higher}. Chuang, Lee, Liu and Tsai
+built these into higher derivations
+and used them to describe the endomorphisms of the Ore extension
+\cite[p.~158]{ChuangLee2010Higher}.
+
+\begin{definition}[{\cite[p.~161]{ChuangLee2010Higher}}]\label{def:gen:higher-derivation}
+By a higher derivation of order $n\ge1$ of a ring $R$ one means a map
+$\delta\colon R\to R$ such that, for each $0<i<n$, there exist higher
+derivations $\delta_i$ and $\delta_i'$ of orders $i$ and $n-i$ with
+\begin{equation*}
+\delta(a+b)=\delta(a)+\delta(b),\qquad
+\delta(ab)=\delta(a)b+\sum_{i=1}^{n-1}\delta_i(a)\,\delta_i'(b)+a\,\delta(b)
+\end{equation*}
+for $a,b\in R$. Higher derivations of order one are ordinary derivations.
+\end{definition}
+
+The description of the bimodule endomorphisms is the main application
+\cite[p.~174]{ChuangLee2010Higher}. Each one is a series in the divided powers
+\cite[Theorem~12, p.~174]{ChuangLee2010Higher}.
+
+\begin{theorem}[{\cite[Theorem~12, p.~174]{ChuangLee2010Higher}}]\label{thm:gen:ore-endomorphism}
+Let $R$ be a prime ring and $\delta$ a derivation of $R$. Any
+$(R,R)$-bimodule endomorphism $\theta$ of $Q[x;\delta]$ can be written
+uniquely in the form
+\begin{equation*}
+\theta(f)=\sum_{n=0}^{\infty}\zeta_n D_n(f)\qquad\text{for } f\in Q[x;\delta],
+\end{equation*}
+where $\zeta_n\in C_S(R)$ and $D_n=\frac{1}{n!}\frac{d^n}{dx^n}$.
+\end{theorem}
+
+The same framework settles the differential identities of the next section
+\cite[p.~172]{ChuangLee2010Higher}.
+
+\begin{theorem}[{\cite[Theorem~11, p.~172]{ChuangLee2010Higher}}]\label{thm:gen:ore-identity}
+For $f_i,g_i\in Q[x;\delta]$, one has $\sum_{i=1}^n f_i\, r\, g_i=0$ for all
+$r\in R$ if and only if $\sum_{i=1}^n f_i\otimes g_i=0$ in
+$Q[x;\delta]\otimes_{C_S(R)}Q[x;\delta]$.
+\end{theorem}
+
+The Ore extension is where the $\sigma$-derivation of
+Definition~\ref{def:gen:alpha} becomes the coefficient map $\delta$ in the
+relation $ta=\sigma(a)t+\delta(a)$ \cite[p.~2838]{Chuang2017Auto}. The next
+section turns to the
+differential identities that Theorem~\ref{thm:gen:ore-identity} begins to
+describe.

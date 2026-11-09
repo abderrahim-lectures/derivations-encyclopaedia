@@ -1,0 +1,86 @@
+% Chapter introduction: why the topic arose, who first asked, what it answers.
+% STATUS: rewritten 2026-11-05
+% Sources read in full: Filippov 2000 (pp. 354--358), McCrimmon 2004 (pp. 52,
+% 160, 185), Davenport 1972 (p. 565), Loday and Pirashvili 1993 (pp. 139--141),
+% Ayupov, Kudaybergenov, Omirov and Zhao 2019 (pp. 3, 11), Biyogmam and
+% Tcheka 2021 (p. 2193), Musson 2012 (pp. 2--3), Kac 1977 (p. 1375),
+% Hartwig, Larsson and Silvestrov 2006 (p. 18), Jin and Li 2008 (pp. 1399--1400),
+% Li 2018 (pp. 657--659), Ferreira, Kaygorodov and Lopatkin 2021 (pp. 1, 4--5),
+% Fan, Hong and Su 2019 (pp. 2--3), Jiménez-Gestal and Pérez-Izquierdo 2003,
+% Kaygorodov 2014 (Theorem 4), Baez 2002 (pp. 148, 159).
+The chapters so far stayed inside associative rings, Lie algebras, and
+operator algebras. The derivation algebra of a Lie algebra is again a Lie
+algebra, and many classical results about derivations use associativity of
+the underlying product. In this chapter we ask what survives when the
+product is no longer associative nor antisymmetric. The classes include
+the Jordan product of hermitian matrices, the octonionic product, the
+Leibniz identity that Loday isolated in 1993, and the brackets of
+superalgebras. They also include the twisted Jacobi rules of Hom-Lie
+algebras and Lie conformal algebras.
+
+Some of these questions are older than the pages below may suggest.
+Jacobson realised in the 1950s that the exceptional Lie algebras of types
+$G_2$ and $F_4$ arise as derivation algebras of the octonions and of the
+Albert algebra \cite[p.~52]{McCrimmon2004Taste}. Loday introduced Leibniz
+algebras in 1993 to explain why a certain chain complex in cyclic homology
+is closed \cite[p.~139]{LodayPirashvili1993}. Hartwig, Larsson and
+Silvestrov isolated a twisted Jacobi identity in 2003 to describe
+deformations of the Witt algebra
+\cite[p.~1]{HartwigLarssonSilvestrov2006}. Each line has its own reason
+for existing and its own derivative-like linear maps.
+
+What we collect below is the literature on derivations in these wider
+classes, with one result from each. We ask in every section: what is a
+derivation here, does the analogue of ``every derivation of a simple
+finite-dimensional algebra is inner'' hold, and what does the derivation
+algebra compute?
+
+Section~\ref{sec:nonassociative:jordan-algebras} works with Jordan
+algebras proper. The inner derivations of a Jordan algebra are the maps
+$D_{x,y}=4[L_x,L_y]=[V_x,V_y]$. They span a Lie ideal of $\mathrm{Der}(J)$
+\cite[Problem~3.6, p.~185]{McCrimmon2004Taste}. The $27$-dimensional
+Albert algebra of hermitian octonionic $3\times 3$ matrices has derivation
+algebra $F_4$ \cite[p.~52]{McCrimmon2004Taste}.
+Section~\ref{sec:nonassociative:alternative} records the definition of Artin
+of an alternative algebra and the theorem of Davenport that derivations of a
+semisimple Malcev algebra in characteristic $\neq 2,3$ are inner
+\cite[p.~148]{Baez2002Octonions}, \cite[p.~565]{Davenport1972Malcev}.
+Section~\ref{sec:nonassociative:leibniz} opens the definition of Loday and
+gives the derivation structure of complex semisimple Leibniz algebras
+\cite[Definition~(1.1), p.~141]{LodayPirashvili1993},
+\cite[Theorem~4.5]{AyupovKudaybergenovOmirovZhao2019},
+\cite[Proposition~3.5, p.~2193]{BiyogmamTcheka2021Outer}. At dimension
+three the description of the derivation algebras is complete
+\cite[Theorem~1.1, p.~2]{KurdachenkoPypkaSemko2026}.
+Section~\ref{sec:nonassociative:superalgebras} states the definition of Musson
+of a superderivation and ties it to the classification of Kac of simple
+Lie superalgebras \cite[Lemma~1.1.2, p.~2]{Musson2012},
+\cite[p.~1375]{Kac1977Classification}. It records that a two-step nilpotent
+Lie superalgebra carries local superderivations that are not
+superderivations \cite[Theorems~3.2 and 3.5, pp.~7, 12]{ChiZhangMengTang2026}.
+Section~\ref{sec:nonassociative:delta-quasi-anti} treats the
+$\delta$-derivations of alternative and Malcev algebras (Filippov 2000)
+and of simple Jordan superalgebras (Kaygorodov 2007). It also treats the
+related $\tfrac{1}{2}$-derivations on Lie algebras that encode right
+multiplication in transposed Poisson algebras
+\cite[Theorems~2 and~3, pp.~356--358]{Filippov2000DeltaAlternative},
+\cite[Theorems~2.5 and~4.4]{KacKaygorodov2007Delta},
+\cite[Definition~5, p.~4]{FerreiraKaygorodovLopatkin21}.
+Section~\ref{sec:nonassociative:poisson} gives the definition of Li of a
+Poisson derivation and the theorem that every Poisson derivation of the
+symplectic Poisson algebra $S_n$ is inner
+\cite[Definitions, p.~658]{AlbertiArestiLi2018Poisson},
+\cite[Theorem~2.1, pp.~658--659]{AlbertiArestiLi2018Poisson}.
+Section~\ref{sec:nonassociative:hom-conformal} compares two results: the
+Hom-Lie algebras of Hartwig, Larsson and Silvestrov, and the triviality
+of such structures on simple Lie algebras proved by Jin and Li
+\cite[Definition~4, p.~18]{HartwigLarssonSilvestrov2006},
+\cite[Proposition~2.2, p.~1400]{JinLi2008HomLie}. It closes with the
+definition of a conformal derivation of a Lie conformal algebra of Fan,
+Hong and Su \cite[Definitions~2.1 and~2.7, pp.~2--3]{FanHongSu2019}.
+Section~\ref{sec:nonassociative:n-ary} closes the chapter with the
+derivations of the ternary Malcev algebra $M_8$ and with the
+$(n+1)$-ary derivations of simple Mal'tsev algebras
+\cite[Theorem~2.3, p.~3598]{PojidaevSarahva2006},
+\cite[Theorem~5, p.~582]{Kaygorodov2014n1aryMaltsev}.
+\hbfigure{15-nonassociative/constructions}{From associative to Lie and Jordan algebras, and from alternative to Malcev algebras. A derivation of $A$ is also a derivation of $A^{-}$ and of $A^{+}$.}{fig:nonassoc:constructions}

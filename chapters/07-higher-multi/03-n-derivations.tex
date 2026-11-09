@@ -1,0 +1,134 @@
+% STATUS: written 2026-11-05 (Yazarli 2017 and Prajapati 2021 read in full)
+% STATUS: extended 2026-11-06 (Park 2020 read in full from the library PDF)
+% Sources read in full: Yazarli 2017 (pp. 489--497); Prajapati 2021 (pp. 399--414); Park 2020 (pp. 1, 7).
+% The origin-paper owner's "n-derivations, permuting maps and multiderivations" plan is
+% served by the recursive jump from the biderivation of Section 02 to the permuting
+% triderivation and to the n-fold map, and by the Posner second-theorem line run along
+% higher derivations. Ozturk 1999 is recorded atlas-pending; Posner's second 1957 paper
+% (Bull. AMS) is atlas-pending P0004 and the theorem is quoted from Prajapati 2021 p. 4.
+\section{n-derivations, permuting maps and multiderivations}\label{sec:higher-multi:n-derivations}
+
+Section~\ref{sec:higher-multi:biderivations} gave the derivation two
+arguments. This section gives it three, and then $n$
+\cite[p.~490]{Yazarli2017Trideriv}. Öztürk introduced the permuting
+triderivation \cite[reference~10]{Ozturk1999Trideriv}, and Yazarlı develops
+its commutativity theorems \cite[p.~489]{Yazarli2017Trideriv}.
+
+A map $D\colon R\times R\times R\to R$ is \emph{permuting} when
+$D(x,y,z)=D(x,z,y)=D(z,x,y)=D(z,y,x)=D(y,z,x)=D(y,x,z)$ for all $x,y,z\in R$
+\cite[p.~490]{Yazarli2017Trideriv}. Its \emph{trace} is the map $d\colon
+R\to R$ given by $d(x)=D(x,x,x)$ \cite[p.~490]{Yazarli2017Trideriv}. For a
+triadditive permuting $D$ the trace satisfies the identity $d(x+y) =
+d(x)+d(y)+3\,D(x,x,y)+3\,D(x,y,y)$ \cite[p.~490]{Yazarli2017Trideriv}.
+
+\begin{definition}[{\cite[p.~490]{Yazarli2017Trideriv}}]\label{def:higher:trideriv}
+Let $R$ be a ring. A \emph{permuting triderivation} of $R$ is a permuting
+triadditive map $D\colon R\times R\times R\to R$ such that
+$D(xw,y,z)=D(x,y,z)\,w+x\,D(w,y,z)$ for all $x,y,z,w\in R$.
+\end{definition}
+
+The triderivation lands back on the maps of the two earlier sections
+\cite[p.~490]{Yazarli2017Trideriv}. For a fixed $a\in R$ the map
+$D_1(x,y)=D(a,x,y)$ is a symmetric biderivation, so a permuting
+$2$-derivation is a symmetric biderivation
+\cite[p.~490]{Yazarli2017Trideriv}. The map $d_2(x)=D(a,a,x)$ is a
+derivation \cite[p.~490]{Yazarli2017Trideriv}.
+
+The commutativity theorems follow the pattern of
+Section~\ref{sec:higher-multi:biderivations} \cite[p.~490]{Yazarli2017Trideriv}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~490]{Yazarli2017Trideriv}}]\label{thm:higher:trideriv}
+Let $R$ be a $2$, $3$-torsion free prime ring and $I$ a nonzero ideal of
+$R$. If $D$ is a permuting triderivation with trace $d$ such that
+$D(d(x),x,x)=0$ for all $x\in I$, then either $D=0$ or $R$ is commutative.
+\end{theorem}
+
+A product of two traces cannot vanish on a noncommutative ring
+\cite[p.~492]{Yazarli2017Trideriv}.
+
+\begin{theorem}[{\cite[Theorem~2, p.~492]{Yazarli2017Trideriv}}]\label{thm:higher:trideriv-prod}
+Let $R$ be a $2$, $3$, $5$-torsion free prime ring and $I$ be an ideal of
+$R$. If $D_1,D_2$ are permuting triderivations of $R$ with traces $d_1,d_2$
+such that $d_1(x)\,d_2(x)=0$ for all $x\in I$, then either $D_1=0$ or
+$D_2=0$ unless $R$ is commutative.
+\end{theorem}
+
+The same triderivation statements hold with a permuting generalized
+triderivation $G$ in front, and Yazarlı adds the commuting conclusion on
+the trace \cite[p.~494]{Yazarli2017Trideriv}.
+
+\begin{theorem}[{\cite[Theorem~3, p.~494]{Yazarli2017Trideriv}}]\label{thm:higher:gentrideriv}
+Let $R$ be a $2$, $3$-torsion free prime ring and $I$ a nonzero ideal of
+$R$. If $G$ is a permuting generalized triderivation associated with the
+permuting triderivation $D$ of $R$ with trace $d$ such that
+$G(d(x),x,x)=0$ for all $x\in I$, then the following hold:
+\begin{enumerate}
+\item $D=0$,
+\item $R$ is commutative,
+\item $d$ is commuting on $I$.
+\end{enumerate}
+\end{theorem}
+
+The same second theorem of Posner runs along the higher derivations of
+Section~\ref{sec:higher-multi:hasse-schmidt}
+\cite[p.~4]{Prajapati2021}. Prajapati quotes the result of Posner and Brešar
+Theorem B \cite[p.~4]{Prajapati2021}.
+
+\begin{theorem}[{\cite[Theorem~1.1 (Theorem~B of Bre\v{s}ar), p.~4]{Prajapati2021}}]\label{thm:higher:bresarB-brief}
+Let $R$ be a prime ring and $I$ a nonzero left ideal of $R$. Suppose
+derivations $d$ and $g$ satisfy $d(x)\,x-x\,g(x)\in Z(R)$ for all $x\in I$.
+If $d\neq 0$ then $R$ is commutative.
+\end{theorem}
+
+Prajapati runs the condition along two higher derivations
+\cite[p.~9]{Prajapati2021}.
+
+\begin{theorem}[{\cite[Theorem~3.3, p.~9]{Prajapati2021}}]\label{thm:higher:hsposner}
+Let $R$ be a semiprime ring and $I$ an ideal of $R$. Let $(d_i)_{i\in
+\mathbb{N}}$ and $(\delta_j)_{j\in\mathbb{N}}$ be higher derivations of
+orders $m$ and $n$ on $R$ such that $d_m(x)\,x-x\,\delta_n(x)\in Z(R)$ for
+all $x\in I$. Then either $R$ is commutative or some linear combination of
+$(\delta_j)$ sends $Z(R)$ to zero.
+\end{theorem}
+
+The one-derivative case is a corollary
+\cite[p.~9]{Prajapati2021}. A derivation $d$ of a semiprime ring $R$ with
+$[d(x),x]\in Z(R)$ for all $x$ in an ideal $I$ has either $d(Z(R))=0$ or
+$R$ commutative \cite[p.~9]{Prajapati2021}.
+
+The number of arguments can grow further, to $n$ of them
+\cite[p.~1]{AshrafAnsariAkhter2022}. Ashraf, Ansari and Akhter ask when a
+multiplicative generalized Jordan $n$-derivation of a unital ring with a nontrivial
+idempotent is additive \cite[p.~1]{AshrafAnsariAkhter2022}. Their hypothesis on the
+ring is a pair of conditions on the Peirce components of the idempotent
+\cite[p.~3]{AshrafAnsariAkhter2022}.
+
+\begin{theorem}[{\cite[Theorem~3.1, p.~5]{AshrafAnsariAkhter2022}}]\label{thm:higher:multi-jordan-n}
+Let $A$ be a $2$-torsion free unital ring with a nontrivial idempotent satisfying
+the stated condition on its Peirce components. Then every multiplicative
+generalized Jordan $n$-derivation $\Delta\colon A\to A$ is additive, and
+$\Delta(t)=\mu t+\delta(t)$ for all $t\in A$, where $\mu$ lies in the center of $A$
+and $\delta$ is a Jordan $n$-derivation.
+\end{theorem}
+
+The authors apply the theorem to triangular rings, matrix rings, prime rings, nest
+algebras, standard operator algebras and von Neumann algebras
+\cite[p.~1]{AshrafAnsariAkhter2022}.
+
+The permuting triderivation has a stability theory of its own
+\cite[p.~7]{Park2020Trideriv}. Park states a tri-additive inequality, one that
+compares a three-variable map with its own averages
+\cite[Theorem~4.3, p.~7]{Park2020Trideriv}. Every map that satisfies it is
+close to a unique tri-additive map, with the bound written in the norm of the
+three arguments \cite[Theorem~4.3, p.~7]{Park2020Trideriv}. If the same map also
+satisfies the Leibniz rule and the permuting condition within the same bound,
+then that tri-additive map is a permuting triderivation
+\cite[Theorem~4.3, p.~7]{Park2020Trideriv}. So the class of
+Definition~\ref{def:higher:trideriv} is stable under small changes of the map
+\cite[p.~1]{Park2020Trideriv}.
+
+The two threads of the chapter join here
+\cite[p.~2323]{FerreroHaetinger2002}. A higher derivation is a sequence of
+maps of one argument \cite[p.~2323]{FerreroHaetinger2002}. A triderivation
+is one map of three arguments \cite[p.~490]{Yazarli2017Trideriv}. The same
+Posner statement holds on both sides \cite[p.~4]{Prajapati2021}.

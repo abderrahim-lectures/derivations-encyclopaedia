@@ -1,0 +1,268 @@
+% STATUS: written 2026-11-04 (Bresar 1991, Hvala 1998, Huang 2007 read in full)
+% STATUS: extended 2026-11-06 (Hosseini and Park 2023, Hosseini 2025, Zhou and Fan 2016, Atesli, Esen and Sutlu 2021 read in full)
+% STATUS: extended 2026-11-07 (Wei 2004, Dhara 2010, Hosseini, Peralta and Su
+% 2025 and Chen, Ma and Ni 2013 read in full from the library PDFs)
+% Sources read in full: Bresar 1991 (pp. 89--93); Hvala 1998 (pp. 1147--1166); Huang 2007 (pp. 1--6);
+% Hosseini and Park 2023 (pp. 1--3, 6); Hosseini 2025 (pp. 1--2, 5); Zhou and Fan 2016 (pp. 1--2, 6, 15);
+% Atesli, Esen and Sutlu 2021 (pp. 1--3, 7, 15, 27);
+% Wei 2004 (pp. 453--462); Dhara 2010 (pp. 1--6); Hosseini, Peralta and Su 2025
+% (pp. 1--19 of the arXiv version, Theorem 2.8 p. 10 and Theorem 3.1 p. 13);
+% Chen, Ma and Ni 2013 (pp. 923--936).
+\section{Generalized derivations}\label{sec:generalized-twisted:generalized}
+
+A classical theorem of Posner concerns rings of characteristic not $2$.
+In a prime ring, the composition of two derivations is again a derivation only
+if one of the factors is zero \cite[Theorem~2]{Posner1957}.
+Estimating how close such a composition lies to a bigger class of maps made
+Brešar name that class in 1991 \cite[p.~89]{Bresar1991Glasgow}.
+
+\begin{definition}[{\cite[p.~89]{Bresar1991Glasgow}}]\label{def:gen:giderivation}
+Let $A$ be a ring. An additive mapping $\delta\colon A\to A$ will be called a
+\emph{generalized derivation} if there exists a derivation $h$ of $A$ such
+that $\delta(xy)=\delta(x)y+xh(y)$ for all $x,y\in A$.
+\end{definition}
+
+A generalized derivation with $h=0$ is a left multiplier, an additive map
+with $f(xy)=f(x)y$ \cite[p.~1148]{Hvala1998}. The two-sided special case
+comes from operator theory \cite[p.~1147]{Hvala1998}.
+
+\begin{definition}[{\cite[p.~1147]{Hvala1998}}]\label{def:gen:inner}
+Let $A$ be an algebra. A map of the form $x\mapsto ax+xb$, where $a$ and $b$
+are fixed elements of $A$, is called a \emph{generalized inner derivation}
+(or inner generalized derivation).
+\end{definition}
+
+Such maps extend the inner derivations $x\mapsto ax-xa$, and in operator
+algebras they form a class of elementary operators \cite[p.~1147]{Hvala1998}.
+Every generalized inner derivation is a generalized derivation: for
+$f(x)=ax+xb$ one has $f(xy)=f(x)y+xh(y)$ with the inner derivation
+$h(y)=yb-by$ \cite[p.~1147]{Hvala1998}. The concept thus covers derivations
+and generalized inner derivations at once \cite[p.~1148]{Hvala1998}.
+
+On a semiprime ring the map $h$ of the definition is forced to be a
+derivation, and on a unital ring it is forced by the value at $1$
+\cite[Remarks~1 and~2, p.~90]{Bresar1991Glasgow}.
+
+\begin{remark}[{\cite[Remark~1, p.~90]{Bresar1991Glasgow}}]\label{rem:gen:h-is-derivation}
+Let $A$ be a ring, $h\colon A\to A$ be any function, and
+$\delta\colon A\to A$ be an additive mapping satisfying
+$\delta(xy)=\delta(x)y+xh(y)$ for all $x,y\in A$. Computing $\delta(xyz)$ in
+two ways gives $x(h(yz)-h(y)z-yh(z))=0$ for all $x,y,z\in A$, and computing
+$\delta(x(y+z))$ in two ways gives $x(h(y+z)-h(y)-h(z))=0$. Thus, if $A$ has
+the property that $Aa=0$ implies $a=0$, in particular if $A$ is semiprime,
+then $h$ is a derivation.
+\end{remark}
+
+The unital case gives the relation between all generalized derivations and
+the inner ones \cite[p.~90]{Bresar1991Glasgow}.
+
+\begin{remark}[{\cite[Remark~2, p.~90]{Bresar1991Glasgow}}]\label{rem:gen:unital}
+Suppose a ring $A$ has a unit element $1$ and take $x=1$ in the identity.
+Then $\delta(y)=\delta(1)y+h(y)$ for all $y\in A$. Hence every generalized
+derivation of $A$ is an inner generalized derivation if and only if every
+derivation of $A$ is inner.
+\end{remark}
+
+The theorem of Posner survives the enlargement of the class, in a form Brešar
+noted in the same paper \cite[Remark~3, pp.~90--91]{Bresar1991Glasgow}.
+If $A$ is a prime ring of characteristic not $2$, and the composition $d_{1}d_{2}$
+of two derivations is a generalized derivation of $A$, then $d_{1}=0$ or
+$d_{2}=0$.
+The question when a product of two generalized derivations
+is again one is the first main result of the study of Hvala.
+He set out to begin the algebraic study of these maps
+\cite[p.~1147]{Hvala1998}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~1149]{Hvala1998}}]\label{thm:gen:hvala-product}
+Let $R$ be a prime ring, $\operatorname{char}R\neq 2$, and let
+$f_{1},f_{2}\colon R\to R$ be generalized derivations. The product
+$f_{3}=f_{1}f_{2}$ is again a generalized derivation if and only if one of
+the following possibilities holds:
+\begin{enumerate}
+\item[(i)] there exists $\gamma\in C$ such that either $f_{1}(x)=\gamma x$ or
+$f_{2}(x)=\gamma x$;
+\item[(ii)] there exist $a,b\in Q_{r}(R_{c})$ such that $f_{1}(x)=xa$ and
+$f_{2}(x)=xb$;
+\item[(iii)] there exist $a,b\in Q_{r}(R_{c})$ such that $f_{1}(x)=ax$ and
+$f_{2}(x)=bx$;
+\item[(iv)] there exist $a,b\in Q_{r}(R_{c})$ and $\lambda,\mu\in C$ such
+that $f_{1}(x)=ax+xb$ and $f_{2}(x)=\lambda x+\mu(ax-xb)$.
+\end{enumerate}
+\end{theorem}
+
+Here $C$ is the extended centroid of $R$, $R_{c}=RC$ the central closure,
+and $Q_{r}(R_{c})$ its right Martindale ring of quotients
+\cite[p.~1148]{Hvala1998}. Applied to $f_{1}=f_{2}$, the theorem leaves only
+a one-sided multiplication \cite[Corollary~5, p.~1151]{Hvala1998}.
+
+\begin{corollary}[{\cite[Corollary~5, p.~1151]{Hvala1998}}]\label{cor:gen:hvala-square}
+Let $f\colon R\to R$ be a generalized derivation of a prime ring $R$ with
+$\operatorname{char}R\neq 2$. Then $f^{2}$ is a generalized derivation if and
+only if there exists $a\in Q_{r}(R_{c})$ such that either $f(x)=ax$ for all
+$x\in R$, or $f(x)=xa$ for all $x\in R$. Moreover, $f^{2}=0$ if and only if
+$f$ is of this form and $a^{2}=0$.
+\end{corollary}
+
+Two more results of the same paper extend theorems known for derivations to
+the larger class \cite[pp.~1148, 1153, 1159]{Hvala1998}. The theorem of
+Lanski that derivations commuting pointwise are dependent moves to
+generalized derivations \cite[p.~1148]{Hvala1998}.
+
+\begin{theorem}[{\cite[Theorem~2, p.~1153]{Hvala1998}}]\label{thm:gen:hvala-dependent}
+Let $R$ be a noncommutative ring, $\operatorname{char}R\neq 2$, and let
+$f_{1},f_{2}\colon R\to R$ be nonzero generalized derivations satisfying
+$[f_{1}(x),f_{2}(x)]=0$ for all $x\in R$. Then there exists $\lambda\in C$
+such that $f_{1}(x)=\lambda f_{2}(x)$ for all $x\in R$.
+\end{theorem}
+
+Giambruno and Herstein proved that a derivation with $d(x)^{n}=0$ everywhere
+is zero \cite{GiambrunoHerstein1981}. Hvala extended this to generalized
+derivations \cite[p.~1148]{Hvala1998}.
+
+\begin{theorem}[{\cite[Theorem~3, p.~1159]{Hvala1998}}]\label{thm:gen:hvala-nilpotent}
+Let $n>1$ be a fixed integer and $R$ a prime ring of characteristic not
+equal to $2,\dots,n-1$. If $f\colon R\to R$ is a generalized derivation such
+that $f(x)^{n}=0$ for all $x\in R$, then $f=0$.
+\end{theorem}
+
+Wei carried the same identity from a prime ring to a semiprime one
+\cite[p.~453]{Wei2004}. He also removed the restriction on the characteristic and
+put the condition on an essential ideal \cite[p.~453]{Wei2004}. The route runs
+through the left Martindale quotient ring, to which every generalized derivation
+of an essential ideal extends \cite[Theorem~2, p.~455]{Wei2004}. On a prime ring
+the nilpotent values still force the map to vanish
+\cite[Theorem~5, p.~457]{Wei2004}.
+
+\begin{theorem}[{\cite[Theorem~12, p.~460]{Wei2004}}]\label{thm:gen:wei-nilpotent}
+Let $R$ be a semiprime ring and $\mu$ a generalized derivation on an essential
+ideal $I$ of $R$. Suppose that $\mu(x)^{n}=0$ for all $x\in I$, where $n$ is a fixed
+positive integer. Then $\mu=0$.
+\end{theorem}
+
+The proof extends $\mu$ to the quotient ring and then reads the values in the stalks
+of a sheaf, each of which is a prime ring \cite[p.~460]{Wei2004}. Theorem~5 then
+applies in each stalk \cite[p.~460]{Wei2004}.
+
+After the structural theory, a second line asks commutativity questions
+\cite[pp.~1--2]{Huang2007}.
+Ashraf, Ali and Rani studied a prime ring with a generalized derivation $F$
+whose associated derivation $d$ satisfies identities such as
+$d(x)\circ F(y)=0$ on a nonzero ideal \cite[p.~1]{Huang2007}; Huang then
+carried these conditions from an ideal to a Lie ideal
+\cite[p.~2]{Huang2007}.
+
+\begin{theorem}[{\cite[Theorem~3.1, p.~3]{Huang2007}}]\label{thm:gen:huang-anticommutator}
+Let $R$ be a prime ring with $\operatorname{char}R\neq 2$, $U$ a Lie ideal
+such that $u^{2}\in U$ for all $u\in U$, and $F$ a generalized derivation
+associated with $d\neq 0$. If $d(x)\circ F(y)=0$ for all $x,y\in U$, then
+$U\subseteq Z(R)$.
+\end{theorem}
+
+The same conclusion holds when the mixed anticommutator is replaced by a
+commutator that matches the bracket on $U$ \cite[p.~5]{Huang2007}.
+
+\begin{theorem}[{\cite[Theorem~3.8, p.~5]{Huang2007}}]\label{thm:gen:huang-commutator}
+Let $R$ be a prime ring with $\operatorname{char}R\neq 2$, $U$ a Lie ideal
+such that $u^{2}\in U$ for all $u\in U$, and $F$ a generalized derivation
+associated with $d\neq 0$. If $[d(x),F(y)]=[x,y]$ for all $x,y\in U$, then
+$U\subseteq Z(R)$.
+\end{theorem}
+
+Dhara carried the same identities to a semiprime ring and weakened the position
+of the central values \cite[p.~1]{Dhara2010Remarks}. Over a semiprime ring with a
+nonzero ideal $I$, he proves that a nonzero generalized derivation with
+$F([x,y])=\pm[x,y]$ on $I$ forces a nonzero central ideal
+\cite[Theorem~2.4, p.~2]{Dhara2010Remarks}. Over a prime ring the ring itself has to
+commute \cite[Corollary~2.5, p.~3]{Dhara2010Remarks}.
+
+\begin{theorem}[{\cite[Theorem~2.4, p.~2]{Dhara2010Remarks}}]\label{thm:gen:dhara-semiprime}
+Let $R$ be a semiprime ring, $I$ a nonzero ideal of $R$, and $F$ a generalized
+derivation of $R$ associated with a derivation $d$ with $d(I)\neq 0$. If
+$F([x,y])=\pm[x,y]$ for all $x,y\in I$, then $R$ contains a nonzero central ideal.
+\end{theorem}
+
+The anticommutator gives the same result
+\cite[Theorem~2.6, p.~3]{Dhara2010Remarks}. The two cases in which the difference
+$F([x,y])\pm[x,y]$ lies in the center rather than vanishing are kept apart, because
+they give a weaker conclusion
+\cite[Theorem~2.8, p.~4]{Dhara2010Remarks}.
+
+The pattern of the section is the one the whole encyclopaedia follows.
+A bigger class of maps is named when a derivation question needs more than
+derivations, and each classical theorem about derivations is then asked again
+inside it.
+The twists of the next sections extend in a different direction.
+The two notions of the class can share one map, and the shared map raises a
+continuity question \cite[p.~1]{HosseiniPark2023}. Hosseini and Park
+call a linear map a
+strongly generalized derivation of order $n$ when its value on a product is a
+sum of $n$ terms $E_k(a)F_k(b)+G_k(a)H_k(b)$
+\cite[Definition~2.1, p.~3]{HosseiniPark2023}. The class contains the
+derivations, the generalized derivations, the ternary derivations and the
+generalized $(\sigma,\tau)$-derivations \cite[p.~2]{Hosseini2025Strongly}. On
+a unital $C^{*}$-algebra a strongly generalized derivation of order one is
+automatically continuous under conditions on the four maps and on the star
+\cite[Theorem~2.9, p.~6]{HosseiniPark2023}. Hosseini later proves the
+same conclusion from a condition on the products of the two pairs
+\cite[Theorem~2.1, p.~5]{Hosseini2025Strongly}.
+
+The same tower of classes exists for $n$-ary algebras, where the maps take
+$n-1$ arguments \cite[p.~15]{ZhouFan2016nHom}. For a multiplicative $n$-Hom
+Lie superalgebra the classes form a chain, from the centre derivations to the
+quasiderivations to the generalized derivations
+\cite[Proposition~3.1, p.~6]{ZhouFan2016nHom}. Each of these spaces is a
+subalgebra of the algebra of endomorphisms, and the centre derivations form an
+ideal of the derivations \cite[Proposition~3.1, p.~6]{ZhouFan2016nHom}. When
+the centre of the algebra is zero, every derivation of the larger algebra built
+from it splits as a quasiderivation plus a centre derivation
+\cite[Proposition~4.3, p.~15]{ZhouFan2016nHom}.
+
+For a Lie colour algebra the space of generalized derivations splits into two
+pieces, and Chen, Ma and Ni give the split \cite[p.~923]{ChenMaNi2013}. The
+quasiderivations are the maps for which the defining identity holds with the same
+map on both sides \cite[Definition~1.5, p.~925]{ChenMaNi2013}. The quasicentroid
+is the set of maps that commute with the bracket up to the colour sign
+\cite[Definition~1.7, p.~925]{ChenMaNi2013}.
+
+\begin{theorem}[{\cite[Theorem~2.3, p.~928]{ChenMaNi2013}}]\label{thm:gen:lie-color-split}
+Let $L$ be a Lie colour algebra. Then the space of generalized derivations of $L$
+is the sum of the quasiderivations and the quasicentroid:
+$\mathrm{GDer}(L)=\mathrm{QDer}(L)+\mathrm{QC}(L)$.
+\end{theorem}
+
+The authors also show that the generalized derivations, the quasiderivations and
+the centroid are Lie colour subalgebras, and that the centre derivations form an
+ideal of the derivations \cite[Proposition~2.1, p.~926]{ChenMaNi2013}. When the
+centre of $L$ is zero, the centroid is the intersection of the quasiderivations and
+the quasicentroid \cite[Theorem~2.6, p.~929]{ChenMaNi2013}.
+
+The cohomological side of the same notion is worked out for $n$-Lie algebras
+\cite[p.~1]{AtesliEsenSutlu2021}. A generalized derivation there is a linear
+map of $n-1$ arguments that obeys three identities
+\cite[p.~7]{AtesliEsenSutlu2021}. The authors realise it as a one-cocycle in a
+cohomology theory of the algebra, and the inner generalized derivations are the
+one-coboundaries \cite[p.~3]{AtesliEsenSutlu2021}. The cohomology of the
+extension by such a derivation then equals the cohomology of the algebra itself
+\cite[Corollary~3.2, p.~27]{AtesliEsenSutlu2021}.
+
+On a $C^{*}$-algebra the name carried three meanings at once, and
+Hosseini, Peralta and Su show that they agree
+\cite[p.~1]{HosseiniPeraltaSu2025}. The first meaning is the class of
+Definition~\ref{def:gen:giderivation}, with the derivation taking values in the
+double dual of the bimodule \cite[p.~1]{HosseiniPeraltaSu2025}. The second reads
+$F(ab)=F(a)b+aF(b)-a\xi b$, with $\xi$ in the double dual
+\cite[p.~2]{HosseiniPeraltaSu2025}. The third allows two further maps, neither of
+them linear, one on each side of the product
+\cite[Definition~1.1, p.~3]{HosseiniPeraltaSu2025}.
+
+\begin{theorem}[{\cite[Theorem~2.8, p.~10]{HosseiniPeraltaSu2025}}]\label{thm:gen:hps-equivalence}
+Let $A$ be a $C^{*}$-algebra and $M$ a Banach $A$-bimodule. Suppose that
+$F\colon A\to M$ is a generalized derivation of the third type. Then $F$ is
+continuous, and it is a generalized derivation of the second type.
+\end{theorem}
+
+The same paper shows that a generalized Jordan derivation of the third type on a
+$C^{*}$-algebra is continuous \cite[Theorem~3.1, p.~13]{HosseiniPeraltaSu2025}.
+Together the two theorems make the three meanings of the name one class for such
+algebras \cite[p.~1]{HosseiniPeraltaSu2025}.
+

@@ -1,0 +1,137 @@
+% STATUS: written 2026-11-04 (Bell and Daif 1994, Bresar and Miers 1994, Qi and Hou 2010, Bai and Du 2014 read in full)
+% Sources read in full: Bell and Daif 1994 (pp. 443--447); Bresar and Miers 1994 (pp. 457--460); Qi and Hou 2010 (pp. 2790--2796); Bai and Du 2014 (pp. 733--742).
+\section{Nonlinear and nonadditive Lie-type maps}\label{sec:lie-type:nonlinear}
+
+The maps of Sections~\ref{sec:lie-type:martindale} to
+\ref{sec:lie-type:triple-and-n} are additive or linear. The next step drops
+even additivity. % claim-ok: section road-map, the plan of the book
+Bell and Daif began this line with a definition and with two
+commutativity theorems \cite[p.~443]{BellDaif1994}: a map $f\colon R\to R$ is
+\emph{strong commutativity preserving} on a subset $S$ when
+$[f(x),f(y)]=[x,y]$ for all $x,y\in S$.
+
+\begin{theorem}[{\cite[Theorem~1, p.~444]{BellDaif1994}}]\label{thm:lie:belldaif-derivation}
+Let $R$ be a semiprime ring and $U$ a nonzero right ideal. If $R$ admits a
+derivation $D$ which is strong commutativity preserving on $U$, then $U$ is
+contained in the center of $R$.
+\end{theorem}
+
+The second theorem of the pair keeps the map and replaces the derivation by
+an endomorphism \cite[p.~446]{BellDaif1994}.
+
+\begin{theorem}[{\cite[Theorem~2, p.~446]{BellDaif1994}}]\label{thm:lie:belldaif-endo}
+Let $R$ be a prime ring and $U$ an essential right ideal of $R$. If $R$
+admits a nonidentity endomorphism $T$ which is strong commutativity
+preserving on $U$, then $R$ is commutative.
+\end{theorem}
+
+Once such a map is allowed to be only additive on the whole ring, and
+involves the extended centroid, the answers stop being commutativity
+theorems and become form theorems. % claim-ok: section road-map, the plan of the book
+Brešar and Miers gave the first one
+\cite[p.~457]{BresarMiers1994}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~458]{BresarMiers1994}}]\label{thm:lie:bresar-miers}
+Let $R$ be a semiprime ring with extended centroid $C$. Suppose that an
+additive map $f\colon R\to R$ satisfies $[f(x),f(y)]=[x,y]$ for all
+$x,y\in R$. Then $f$ is of the form $f(x)=\lambda x+\xi(x)$, where
+$\lambda\in C$, $\lambda^{2}=1$, and $\xi$ is an additive map of $R$ into
+$C$.
+\end{theorem}
+
+For prime rings with a nontrivial idempotent and surjective maps, no
+additivity is needed: Qi and Hou obtained the same form with
+$\lambda=\pm1$ \cite[p.~2791]{QiHou2010}.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~2791]{QiHou2010}}]\label{thm:lie:qihou}
+Let $R$ be a unital prime ring containing a nontrivial idempotent. Assume
+that $\varPhi\colon R\to R$ is a surjective map. Then $\varPhi$ is strong
+commutativity preserving if and only if there exist a map $f\colon R\to Z(R)$
+and an element $\lambda\in\{1,-1\}$ such that $\varPhi(A)=\lambda A+f(A)$
+for all $A\in R$.
+\end{theorem}
+
+The factor von Neumann algebra case of their theorem is the scalar special
+case, with $Z(R)$ replaced by the scalar operators \cite[p.~2795]{QiHou2010}.
+Bai and Du then removed the prime hypothesis, at the price of asking the
+idempotent to control the ring on both sides \cite[p.~733]{BaiDu2014}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~733]{BaiDu2014}}]\label{thm:lie:baidu-general}
+Let $R$ be a unital ring having an idempotent element $e$ which satisfies
+\begin{enumerate}
+\item[(i)] $aRe=0$ implies $a=0$,
+\item[(ii)] $aR(1-e)=0$ implies $a=0$.
+\end{enumerate}
+Assume that $f\colon R\to R$ is a surjective map. Then $f$ satisfies
+$[f(x),f(y)]=[x,y]$ for all $x,y\in R$ if and only if $f$ is of the form
+$f(x)=\alpha x+\xi(x)$ for all $x\in R$, where $\alpha\in Z(R)$,
+$\alpha^{2}=1$, and $\xi$ is a map from $R$ into $Z(R)$.
+\end{theorem}
+
+The power of the idempotent hypothesis is visible in the operator case
+\cite[p.~741]{BaiDu2014}. A von Neumann algebra with no central summands of type $I_{1}$ carries a
+core-free projection, and that projection plays the role of the idempotent
+of Theorem~\ref{thm:lie:baidu-general} \cite[p.~741]{BaiDu2014}.
+
+\begin{corollary}[{\cite[Corollary~2, pp.~734--735]{BaiDu2014}}]\label{cor:lie:baidu-vna}
+Let $M$ be a von Neumann algebra with no central summands of type $I_{1}$.
+Assume that $f\colon M\to M$ is a surjective map. Then $f$ satisfies
+$[f(x),f(y)]=[x,y]$ for all $x,y\in M$ if and only if $f$ is of the form
+$f(x)=\alpha x+\xi(x)$ for all $x\in M$, where $\alpha\in Z(M)$,
+$\alpha^{2}=I$, and $\xi$ is a map from $M$ into $Z(M)$.
+\end{corollary}
+
+The pattern of the first four sections survives the loss of additivity:
+again $f$ equals a scalar multiple, here $\alpha x$ with $\alpha^{2}=1$,
+plus a central remainder $\xi(x)$ \cite[p.~733]{BaiDu2014}. The line runs
+from a commutativity theorem to the same standard form that
+Chapter~\ref{ch:jordan-type} and
+Section~\ref{sec:lie-type:martindale} met for additive maps.
+
+A $*$-algebra carries one more product of this kind, and the maps of this
+section have an analogue for it \cite[p.~127]{AliAliTasleem2026}.
+
+\begin{definition}[{\cite[p.~127]{AliAliTasleem2026}}]\label{def:lie:bi-skew-product}
+Let $E$ be a $*$-algebra over the complex field $\mathbb{C}$. For $U,V\in E$
+the \emph{left bi-skew Lie product} is $U\diamond V=U^{*}V-V^{*}U$. The product
+of three elements is read as the left product applied twice, and the proof of
+Lemma~11 records the identity
+$U^{*}\diamond V\diamond\tfrac{I}{2}=-UV+V^{*}U^{*}$ for all $U,V\in E$
+\cite[p.~136]{AliAliTasleem2026}.
+\end{definition}
+
+A family of maps that obeys the product rule of a higher derivation along this
+product is a bi-skew Lie triple higher derivation
+\cite[p.~128]{AliAliTasleem2026}. The sequence of
+Definition~\ref{def:higher:hd} is the model for the name
+\cite[p.~128]{AliAliTasleem2026}. Ali, Ali and Tasleem prove that no additivity
+has to be assumed on a prime $*$-algebra that has a nontrivial projection
+\cite[Main Theorem, p.~128]{AliAliTasleem2026}.
+
+\begin{theorem}[{\cite[Main Theorem, p.~128]{AliAliTasleem2026}}]\label{thm:lie:ali-bi-skew-triple}
+Let $E$ be a prime $*$-algebra with unity $I$ and a nontrivial projection $P$.
+Let $\Delta=\{\zeta_{n}\}_{n\in\mathbb{N}}$ be a family of maps
+$\zeta_{n}\colon E\to E$, not necessarily linear, with
+$\zeta_{0}=\mathrm{id}_{E}$, such that
+\[
+\zeta_{n}(U\diamond V\diamond W)
+=\sum_{p+q+r=n}\zeta_{p}(U)\diamond\zeta_{q}(V)\diamond\zeta_{r}(W)
+\]
+for all $U,V,W\in E$ and all $n\in\mathbb{N}$. Then $\Delta$ is an additive
+$*$-higher derivation of $E$, provided $\zeta_{n}(\beta I/2)$ is self-adjoint
+for $\beta\in\{1,i\}$ and every $n$.
+\end{theorem}
+
+The conclusion in full is the last lemma of the paper \cite[p.~136]{AliAliTasleem2026}.
+
+\begin{lemma}[{\cite[Lemma~11, p.~136]{AliAliTasleem2026}}]\label{lem:lie:ali-bi-skew-additive}
+Under the hypotheses of Theorem~\ref{thm:lie:ali-bi-skew-triple}, each
+$\zeta_{n}$ is additive, and
+$\zeta_{n}(UV)=\sum_{p+q=n}\zeta_{p}(U)\zeta_{q}(V)$ and
+$\zeta_{n}(U^{*})=\zeta_{n}(U)^{*}$ hold for all $U,V\in E$ and all $n\in\mathbb{N}$.
+\end{lemma}
+
+So a map that respects the triple bi-skew product at every order is additive and
+multiplicative at every order \cite[p.~136]{AliAliTasleem2026}. The sequence of
+maps and its own product rule are the subject of
+Section~\ref{sec:higher-multi:hasse-schmidt}.

@@ -1,0 +1,92 @@
+% STATUS: written 2026-11-05 (Lee 2001 read in full from the text layer;
+% excerpt in excerpts/LeeTK2001SigmaCommuting.txt. Beidar--Chebotar and
+% Posner 1957 are named through Lee 2001.)
+\section{The $\sigma$-commuting form}\label{sec:functional-identities:centralizers-multipliers}
+
+The centralizing maps of
+Section~\ref{sec:functional-identities:commuting-maps} have a twisted
+version, where the map is asked to commute with an endomorphism instead of
+with the identity. Lee carried the characterization of
+Section~\ref{sec:functional-identities:commuting-maps} over to this
+setting and recorded it for semiprime rings
+\cite[p.~2946]{LeeTK2001SigmaCommuting}. Throughout, $R$ is a semiprime
+ring and $\sigma$ is an endomorphism of $R$
+\cite[p.~2946]{LeeTK2001SigmaCommuting}. As in
+Section~\ref{sec:functional-identities:commuting-maps}, $Z(R)$ is the
+center, $C$ the extended centroid, $U$ the right Utumi quotient ring and
+$Q$ the two-sided Utumi quotient ring of $R$
+\cite[p.~2946]{LeeTK2001SigmaCommuting}.
+
+A map $f$ of a subring $S$ of $R$ into $U$ is \emph{$\sigma$-commuting}
+\cite[p.~2946]{LeeTK2001SigmaCommuting} when $[f(x),\sigma(x)]=0$ for all
+$x$ in $S$. It is \emph{additive modulo $C$}
+\cite[p.~2946]{LeeTK2001SigmaCommuting} when $f(x+y)-f(x)-f(y)$ lies in
+$C$ for all $x,y$ in $S$. A right ideal of $R$ with zero left annihilator
+is called \emph{large} \cite[p.~2946]{LeeTK2001SigmaCommuting}. The main
+result generalizes the commuting-form Theorem~\ref{thm:fi:leetheorem2} to
+the twisted case.
+
+\begin{theorem}[{\cite[Theorem~2, p.~2948]{LeeTK2001SigmaCommuting}}]\label{thm:fi:leesigmamain}
+Let $R$ be a semiprime ring, $I$ a subring of $R$ and $\sigma$ an
+endomorphism of the ring $R$ such that $\sigma(I)$ contains a large ideal
+of $R$. Then every $\sigma$-commuting map $f\colon I\to U$, which is
+additive modulo $C$, must be of the form $f(x)=\lambda\sigma(x)+\zeta(x)$
+for all $x\in I$, where $\lambda\in C$ and $\zeta\colon I\to C$.
+\end{theorem}
+
+Under the weaker hypothesis that $\sigma(I)$ contains only a large right
+ideal, the same form holds with values in the two-sided quotient $Q$
+\cite[Theorem~1, p.~2947]{LeeTK2001SigmaCommuting}. When $\sigma$ is an
+epimorphism the hypothesis is automatic on the whole ring, so every
+$\sigma$-commuting map of $R$ that is additive modulo $C$ has the form
+$f(x)=\lambda\sigma(x)+\zeta(x)$
+\cite[Corollary~1, p.~2948]{LeeTK2001SigmaCommuting}. The proof of
+Theorem~\ref{thm:fi:leesigmamain} rests on a biderivation identity that is
+itself a functional identity.
+
+\begin{lemma}[{\cite[Lemma~1, p.~2947]{LeeTK2001SigmaCommuting}}]\label{thm:fi:leesigmalemma}
+Let $R$ be a semiprime ring with an endomorphism $\sigma$ and let
+$D\colon S\times S\to U$ be a $(\sigma,\sigma)$-biderivation, where $S$ is
+a subring of $R$. Then $[\sigma(x),\sigma(y)]D(u,v)=D(x,y)[\sigma(u),\sigma(v)]$
+for all $x,y,u,v$ in $S$.
+\end{lemma}
+
+The $\sigma$-commuting form forces a Posner-type conclusion for twisted
+derivations \cite[Theorem~3, p.~2948]{LeeTK2001SigmaCommuting}. Let
+$\sigma$ and $\tau$ be endomorphisms of $R$; a
+$(\sigma,\tau)$-derivation is an additive map $d$ with
+$d(xy)=d(x)\sigma(y)+\tau(x)d(y)$
+\cite[p.~2948]{LeeTK2001SigmaCommuting}.
+
+\begin{theorem}[{\cite[Theorem~3, p.~2948]{LeeTK2001SigmaCommuting}}]\label{thm:fi:leesigmat3}
+Let $R$ be a semiprime ring with $d$ a $(\sigma,\tau)$-derivation of $R$.
+Suppose that $I$ is a subring (right ideal) of $R$ such that both
+$\sigma(I)$ and $\tau(I)$ contain some large right ideals of $R$. Suppose
+that $[d(x),\sigma(x)]=0$ for all $x\in I$. Then $d(I)$, and likewise $d(R)$, is
+contained in a central ideal of $R$.
+\end{theorem}
+
+For a prime ring the conclusion of Theorem~\ref{thm:fi:leesigmat3}
+becomes commutativity, since a nonzero $(\sigma,\tau)$-derivation with
+$[d(x),\sigma(x)]=0$ on a right ideal forces $R$ to be commutative
+\cite[Corollary~4, p.~2950]{LeeTK2001SigmaCommuting}. This is the
+semiprime and prime form of the theorem of Posner for twisted derivations, and
+it recovers the classical statement of 1957 on specializing
+$\sigma=\tau=\mathrm{id}$ \cite[p.~2946]{LeeTK2001SigmaCommuting}. On a
+noncentral Lie ideal the $\sigma$-centralizing form still holds, with two
+low-rank exceptions, as Theorem~\ref{thm:fi:leesigmat4} states.
+
+\begin{theorem}[{\cite[Theorem~4, p.~2950]{LeeTK2001SigmaCommuting}}]\label{thm:fi:leesigmat4}
+Let $R$ be a prime ring, $L$ a noncentral Lie ideal of $R$ and $\sigma$ an
+epimorphism of $R$ with $\sigma(L)$ not contained in $Z(R)$. Then every
+$\sigma$-centralizing map $f\colon L\to U$, which is additive modulo $C$,
+must be of the form $f(x)=\lambda\sigma(x)+\zeta(x)$ for all $x\in L$,
+where $\lambda\in C$ and $\zeta\colon L\to C$ unless $\dim_C RC=4$ or $9$.
+\end{theorem}
+
+Lee quotes Theorem~\ref{thm:fi:leesigmat4} as an immediate consequence of
+a general functional-identities result of Beidar and Chebotar
+\cite[p.~2950]{LeeTK2001SigmaCommuting}. This last statement is the point
+where the twisted commuting theory meets the $d$-free method of
+Section~\ref{sec:functional-identities:d-free}
+\cite[p.~2950]{LeeTK2001SigmaCommuting}.

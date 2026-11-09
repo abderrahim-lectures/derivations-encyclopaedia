@@ -1,0 +1,8 @@
+\begin{tikzpicture}[font=\small,node distance=7mm and 6mm]
+  \node[hbkey] (c) {a derivation-like map\\ on an algebra $A$};
+  \node[hbnode,above left=of c] (q1) {Is it inner?\\ ($H^1=0$?)};
+  \node[hbnode,above right=of c] (q2) {Is it a derivation?\\ (Jordan, Lie, local)};
+  \node[hbnode,below left=of c] (q3) {Is it continuous?\\ (Banach algebras)};
+  \node[hbnode,below right=of c] (q4) {What does it force on $A$?\\ (commutativity, structure)};
+  \foreach \q in {q1,q2,q3,q4} \draw[hbarrow] (c) -- (\q);
+\end{tikzpicture}

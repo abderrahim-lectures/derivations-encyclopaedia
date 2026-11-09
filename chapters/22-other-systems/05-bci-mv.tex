@@ -1,0 +1,131 @@
+% STATUS: rewritten 2026-11-05; every claim is cited.
+\section{BCK, BCI and MV-algebras}\label{sec:other-systems:bci-mv}
+
+Here a BCI or BCK algebra keeps only an operation.
+This operation behaves like the difference
+$x - y$ of a group or the implication $y \to x$ of a logic
+\cite[p.~167]{JunXin2004}. Jun and Xin
+introduced derivations on BCI-algebras in 2004
+\cite[p.~167]{JunXin2004}.
+
+\begin{definition}[{\cite[p.~168]{JunXin2004}}]\label{def:other:bci}
+A nonempty set $X$ with a constant $0$ and a binary operation, written by
+juxtaposition, is a \emph{BCI-algebra} if, for all $x, y, z \in X$,
+\textup{(I)} $((xy)(xz))(zy) = 0$,
+\textup{(II)} $(x(xy))y = 0$,
+\textup{(III)} $xx = 0$, and
+\textup{(IV)} $xy = 0$ and $yx = 0$ imply $x = y$.
+A BCI-algebra $X$ with $0 \le x$ for all $x \in X$, where $x \le y$ means
+$xy = 0$, is a \emph{BCK-algebra} \cite[p.~168]{JunXin2004}.
+\end{definition}
+
+The next definition states the derivations on a BCI-algebra.
+
+\begin{definition}[{\cite[Definition~3.5, p.~170]{JunXin2004}}]\label{def:other:lr-derivation}
+Let $X$ be a BCI-algebra and write $x \wedge y = y(yx)$. A self-map $d$
+of $X$ is a \emph{left-right derivation} (an \emph{$(l, r)$-derivation})
+of $X$ if
+\[
+d(xy) = d(x)y \wedge x\,d(y) \qquad (x, y \in X),
+\]
+and a \emph{right-left derivation} (an \emph{$(r, l)$-derivation}) if
+$d(xy) = x\,d(y) \wedge d(x)y$ for all $x, y \in X$.
+\end{definition}
+
+A derivation $d$ on a BCI-algebra is \emph{regular} if $d(0) = 0$
+\cite[Definition~3.12, p.~173]{JunXin2004}. Regular derivations detect
+the p-semisimple BCI-algebras
+\cite[Theorem~3.17, p.~174]{JunXin2004}.
+
+\begin{theorem}[{\cite[Theorem~3.17, p.~174]{JunXin2004}}]\label{thm:other:jun-xin-317}
+Let $X$ be a BCI-algebra. Then the following are equivalent:
+\textup{(i)} $X$ is p-semisimple; \textup{(ii)} if $X$ has a regular
+derivation, then it is trivial; \textup{(iii)} $d^{-1}(0) = \{0\}$ for
+every regular derivation $d$ of $X$.
+\end{theorem}
+
+The next theorem gives an ideal-theoretic test for regularity.
+
+\begin{theorem}[{\cite[Theorem~3.22, p.~176]{JunXin2004}}]\label{thm:other:jun-xin-322}
+Let $d$ be a derivation of a BCI-algebra $X$. Then $d$ is regular if and
+only if every ideal of $X$ is $d$-invariant.
+\end{theorem}
+
+Ciungu widened the class to the pseudo-BCK algebras, where the single
+arrow splits into two
+\cite[Definition~2.1, p.~177]{Ciungu2021}.
+
+\begin{definition}[{\cite[Definition~2.1, p.~177]{Ciungu2021}}]\label{def:other:pseudo-bck}
+A \emph{pseudo-BCK algebra} is a structure $(A, \le, \to, \rightsquigarrow, 1)$
+where $\le$ is a binary relation on $A$, $\to$ and $\rightsquigarrow$ are
+binary operations on $A$ and $1 \in A$, satisfying, for all $x, y, z \in A$:
+$x \to y \le (y \to z) \rightsquigarrow (x \to z)$ and
+$x \rightsquigarrow y \le (y \rightsquigarrow z) \to (x \rightsquigarrow z)$;
+$x \le (x \to y) \rightsquigarrow y$ and
+$x \le (x \rightsquigarrow y) \to y$; $x \le x$; $x \le 1$; if $x \le y$
+and $y \le x$ then $x = y$; and $x \le y$ if and only if $x \to y = 1$ if
+and only if $x \rightsquigarrow y = 1$.
+\end{definition}
+
+The next definition states the implicative derivations on this algebra.
+
+\begin{definition}[{\cite[pp.~178--179]{Ciungu2021}}]\label{def:other:implicative-derivation}
+Let $(A, \to, \rightsquigarrow, 1)$ be a pseudo-BCK algebra. A map
+$d \colon A \to A$ is a \emph{type I implicative derivation} on $A$ if,
+for all $x, y \in A$,
+\[
+d(x \to y) = (x \to d(y)) \vee_1 (d(x) \to y),
+\qquad
+d(x \rightsquigarrow y) = (x \rightsquigarrow d(y)) \vee_2 (d(x) \rightsquigarrow y),
+\]
+and a \emph{type II implicative derivation} if the two identities hold
+with the summands on the right interchanged, where $\vee_1$ and
+$\vee_2$ are the two joins of the algebra.
+\end{definition}
+
+An MV-algebra is the model of Łukasiewicz logic that carries both an
+addition and a logical not \cite[p.~261]{WangSheQian2019}.
+
+\begin{definition}[{\cite[p.~261]{WangSheQian2019}}]\label{def:other:mv-algebra}
+An \emph{MV-algebra} is an algebra $L = (L, \oplus, {}^{*}, 0)$
+satisfying, for all $x, y \in L$:
+\textup{(MV1)} $(L, \oplus, 0)$ is a commutative monoid;
+\textup{(MV2)} $(x^{*})^{*} = x$;
+\textup{(MV3)} $0^{*} \oplus x = 0^{*}$;
+\textup{(MV4)} $(x^{*} \oplus y)^{*} \oplus y = (y^{*} \oplus x)^{*} \oplus x$.
+Write $1 = 0^{*}$ and $x \to y = x^{*} \oplus y$.
+\end{definition}
+
+The next definition states the derivations that respect the implication.
+
+\begin{definition}[{\cite[Definition~3.1, p.~262]{WangSheQian2019}}]\label{def:other:mv-implicative}
+Let $L$ be an MV-algebra. A mapping $g \colon L \to L$ is an
+\emph{implicative derivation} on $L$ if, for all $x, y \in L$,
+\[
+g(x \to y) = (g(x) \to y) \vee (x \to g(y)).
+\]
+The set of all implicative derivations of $L$ is denoted $I(L)$.
+\end{definition}
+
+On a Boolean algebra, the set $I(L)$ is itself a Boolean algebra, and the
+original algebra appears as its algebra of implicative derivations
+\cite[Theorem~3.10, p.~267]{WangSheQian2019}.
+
+\begin{theorem}[{\cite[Theorem~3.10, p.~267]{WangSheQian2019}}]\label{thm:other:wang-310}
+Let $(L, \wedge, \vee, {}^{*}, 0, 1)$ be a Boolean algebra. Then
+$(I(L), \cap, \cup, \neg, g_{1}, 1_{g})$, with $g_{1}(x) = x$ and
+$1_{g}(x) = 1$, is a Boolean algebra.
+\end{theorem}
+
+The next theorem recovers the original algebra from its derivations.
+
+\begin{theorem}[{\cite[Theorem~3.11, p.~268]{WangSheQian2019}}]\label{thm:other:wang-311}
+Let $(L, \wedge, \vee, {}^{*}, 0, 1)$ be a Boolean algebra. Then $L$ is
+isomorphic to the Boolean algebra $(I(L), \cap, \cup, \neg, g_{1}, 1_{g})$
+of all implicative derivations on $L$, by the map $a \mapsto \varphi(a)$,
+where $\varphi(a)(x) = a \vee x$.
+\end{theorem}
+
+The next section takes up the last family of the chapter, the subtraction
+algebras, where the meet rule takes the place of the product rule once
+more \cite[Definition~3.1, p.~511]{OzturkCeven2009}.

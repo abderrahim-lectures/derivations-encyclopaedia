@@ -1,0 +1,102 @@
+% STATUS: written 2026-10-21, recalled results as is (one environment each, source kind and whole statement)
+% Sources read in full: Bresar and Zelmanov 2025 (pp. 203--230, Sections 1, 4, 5 and 11).
+\section{Relation with Jordan homomorphisms}\label{sec:jordan-type:jordan-homomorphisms}
+
+The Jordan derivations of Section~\ref{sec:jordan-type:semiprime} have a twin among the maps
+between algebras. Brešar and Zelmanov survey the history of this twin
+\cite[Abstract, p.~203]{BresarZelmanov2025}. They assume that algebras are defined over a field $F$
+with $\operatorname{char}(F)\neq2$ unless stated otherwise \cite[Section~1, p.~203]{BresarZelmanov2025}.
+
+\begin{definition}[{\cite[Section~1, p.~203]{BresarZelmanov2025}}]\label{def:jordan:jordan-hom}
+Let $A$ and $B$ be associative algebras. A linear map $\varphi\colon A\to B$ is called a Jordan
+homomorphism if $\varphi(x^{2})=\varphi(x)^{2}$ for every $x\in A$.
+\end{definition}
+
+Homomorphisms and antihomomorphisms are examples \cite[p.~204]{BresarZelmanov2025}. An
+antihomomorphism is a linear map $\varphi$ with $\varphi(xy)=\varphi(y)\varphi(x)$ for all
+$x,y\in A$ \cite[p.~204]{BresarZelmanov2025}. The classical problem asks whether Jordan
+homomorphisms can be expressed by homomorphisms and antihomomorphisms
+\cite[p.~204]{BresarZelmanov2025}. Jordan homomorphisms satisfy the rules in the next
+proposition \cite[p.~209]{BresarZelmanov2025}.
+
+\begin{proposition}[{\cite[Proposition~4.1, p.~209]{BresarZelmanov2025}}]\label{prop:jordan:jordan-hom-rules}
+Every Jordan homomorphism $\varphi$ defined on a special Jordan algebra $J$ satisfies
+(a) $\varphi(xy+yx)=\varphi(x)\varphi(y)+\varphi(y)\varphi(x)$,
+(b) $\varphi(x^{n})=\varphi(x)^{n}$, $n\in\mathbb{N}$,
+(c) $\varphi(xyx)=\varphi(x)\varphi(y)\varphi(x)$,
+(d) $\varphi(xyz+zyx)=\varphi(x)\varphi(y)\varphi(z)+\varphi(z)\varphi(y)\varphi(x)$,
+(e) $\varphi([[x,y],z])=[[\varphi(x),\varphi(y)],\varphi(z)]$,
+(f) $\varphi([x,y]^{2})=[\varphi(x),\varphi(y)]^{2}$
+for all $x,y,z\in J$.
+\end{proposition}
+
+Ancochea first studied these maps, under the name semiautomorphisms
+\cite[p.~211]{BresarZelmanov2025}. His second paper is devoted to the first theorem
+\cite[p.~211]{BresarZelmanov2025}.
+
+\begin{theorem}[{\cite[Theorem~5.1, p.~211]{BresarZelmanov2025}}]\label{thm:jordan:ancochea}
+A Jordan automorphism of a finite-dimensional simple algebra $A$ is either an automorphism or an
+antiautomorphism.
+\end{theorem}
+
+Hua proved the case of division algebras in 1949 \cite[p.~211]{BresarZelmanov2025}.
+
+\begin{theorem}[{\cite[Theorem~5.2, p.~211]{BresarZelmanov2025}}]\label{thm:jordan:hua}
+A Jordan homomorphism from a division algebra $D$ to itself is either a homomorphism or an
+antihomomorphism.
+\end{theorem}
+
+Jacobson and Rickart gave the name Jordan homomorphism and improved these results
+\cite[p.~211]{BresarZelmanov2025}. Their first theorem extends the theorem of Hua to domains
+\cite[p.~211]{BresarZelmanov2025}.
+
+\begin{theorem}[{\cite[Theorem~5.3, p.~211]{BresarZelmanov2025}}]\label{thm:jordan:jacobson-rickart-domain}
+A Jordan homomorphism from any algebra $A$ to a domain $B$ is either a homomorphism or an
+antihomomorphism.
+\end{theorem}
+
+Their second theorem puts conditions on the domain algebra instead of the target
+\cite[p.~211]{BresarZelmanov2025}.
+
+\begin{theorem}[{\cite[Theorem~5.4, pp.~211--212]{BresarZelmanov2025}}]\label{thm:jordan:jacobson-rickart-matrix}
+Let $S$ be a unital associative algebra, let $A=M_{n}(S)$ with $n\geq2$, and let $B$ be any
+associative algebra. For every Jordan homomorphism $\varphi\colon A\to B$ there exists a central
+idempotent $e\in\langle\varphi(A)\rangle$ such that $x\mapsto e\varphi(x)$ is a homomorphism and
+$x\mapsto(1-e)\varphi(x)$ is an antihomomorphism.
+\end{theorem}
+
+Herstein proved the case of a surjective map onto a prime algebra \cite[p.~212]{BresarZelmanov2025}.
+He needed a condition on the characteristic, which Smiley later removed
+\cite[p.~212]{BresarZelmanov2025}.
+
+\begin{theorem}[{\cite[Theorem~5.6, p.~212]{BresarZelmanov2025}}]\label{thm:jordan:herstein-hom}
+A surjective Jordan homomorphism from any algebra $A$ onto a prime algebra $B$ is either a
+homomorphism or an antihomomorphism.
+\end{theorem}
+
+The prime hypothesis of Theorem~\ref{thm:jordan:herstein-hom} is the setting of
+Chapter~\ref{ch:prime-semiprime}. The theorem answers the homomorphism form of
+the problem of Martindale of Section~\ref{sec:lie-type:martindale}: the two kinds of
+map named there return here as the homomorphism and the antihomomorphism cases. % claim-ok: the recalled theorems just above state the two cases
+
+A Jordan derivation $\delta\colon A\to A$ gives the
+Jordan homomorphism $\varphi\colon A\to M_{2}(A)$ with $\varphi(x)=\begin{pmatrix}x&\delta(x)\\0&x\end{pmatrix}$
+\cite[Section~11, p.~224]{BresarZelmanov2025}. Results on Jordan homomorphisms can sometimes give
+results on Jordan derivations in this way \cite[p.~224]{BresarZelmanov2025}. Herstein proved that Jordan
+derivations of prime algebras are derivations, in parallel with Theorem~\ref{thm:jordan:herstein-hom}
+\cite[p.~224]{BresarZelmanov2025}. The semiprime case reads as follows \cite[p.~225]{BresarZelmanov2025}.
+
+\begin{theorem}[{\cite[Theorem~11.1, p.~225]{BresarZelmanov2025}}]\label{thm:jordan:survey-semiprime}
+A Jordan derivation of a semiprime algebra is a derivation.
+\end{theorem}
+
+Brešar and Zelmanov credit this theorem to Cusack, and say that it was later proved again
+and extended by Brešar \cite[p.~225]{BresarZelmanov2025}. These are the results of
+Section~\ref{sec:jordan-type:semiprime}. The survey adds a second theorem of this kind, which
+is a special case of the main result of Brešar \cite[p.~225]{BresarZelmanov2025}.
+
+\begin{theorem}[{\cite[Theorem~11.2, p.~225]{BresarZelmanov2025}}]\label{thm:jordan:survey-ideal}
+Let $A$ be an associative algebra and let $U$ be the ideal of $A$ generated by
+$[[A,A],[A,A]]$ and $[[[A,A],[A,A]],[[A,A],[A,A]]]$. Every Jordan derivation $\delta\colon A\to A$
+satisfies $\delta(ux)=\delta(u)x+u\delta(x)$ for all $u\in U$ and $x\in A$.
+\end{theorem}

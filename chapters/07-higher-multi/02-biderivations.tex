@@ -1,0 +1,157 @@
+% STATUS: written 2026-11-05 (Vukman 1989 and Hongan-Komatsu 2000 read in full)
+% STATUS: extended 2026-11-06 (Tang 2016 (both papers) and Pandey 2024 read in full from the library PDFs)
+% STATUS: extended 2026-11-07 (Tang 2017 and Liang, Ren and Wei 2020 read in
+% full from the library PDFs)
+% Sources read in full: Vukman 1989 (pp. 245--254); Hongan--Komatsu 2000 (pp. 669--692, introduction);
+% Tang 2016 W(2,2) (pp. 1--2, 7); Tang 2016 Schr\"odinger (pp. 1--2, 9--10); Pandey 2024 (pp. 1--2, 7, 11);
+% Tang 2017 (pp. 1--12 of the PDF); Liang, Ren and Wei 2020 (pp. 1--14 of the
+% arXiv version).
+% The notion comes from Maksa (Vukman attributes it, p. 246, references 5 and 6). The
+% prime-ring form of an arbitrary biderivation is recalled from Hongan--Komatsu 2000
+% (p. 669), who cite it to Bresar--Martindale--Miers 1993 (J. Algebra 161).
+\section{Biderivations}\label{sec:higher-multi:biderivations}
+
+Section~\ref{sec:higher-multi:hasse-schmidt} replaced one derivation by a
+sequence of maps of one argument. The notion of this section keeps one map
+and gives it two arguments. A \emph{biderivation} is an additive map of two
+variables that is a derivation in each argument when the other is fixed
+\cite[p.~245]{Vukman1989Bid}.
+
+Maksa introduced the symmetric case
+\cite[references~5 and~6]{Vukman1989Bid}. Vukman records the notion and gives
+it its ring-theory start \cite[p.~245]{Vukman1989Bid}.
+
+\begin{definition}[{\cite[p.~245]{Vukman1989Bid}}]\label{def:higher:bid}
+Let $R$ be a ring. A \emph{symmetric bi-derivation} of $R$ is a biadditive
+symmetric mapping $D\colon R\times R\to R$ such that, for every fixed $y\in
+R$, the mapping $x\mapsto D(x,y)$ is a derivation of $R$. The \emph{trace}
+of $D$ is the map $d\colon R\to R$ given by $d(x)=D(x,x)$.
+\end{definition}
+
+The question for a prime ring is the now familiar one: when does the new map
+force the ring to commute \cite[p.~245]{Vukman1989Bid}. The answer uses the
+trace of Definition~\ref{def:higher:bid}. A map $f\colon R\to R$ is
+\emph{commuting} on $R$ when $[f(x),x]=0$ for all $x\in R$
+\cite[p.~246]{Vukman1989Bid}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~246]{Vukman1989Bid}}]\label{thm:higher:bid-commuting}
+Let $R$ be a noncommutative prime ring of characteristic not two. Let
+$D\colon R\times R\to R$ be a symmetric bi-derivation and $d$ its trace.
+Suppose that $d$ is commuting on $R$. Then $D=0$.
+\end{theorem}
+
+the abstract of Vukman states the same result the other way round
+\cite[p.~245]{Vukman1989Bid}. A prime ring of characteristic not two with a
+nonzero symmetric bi-derivation whose trace satisfies $D(x,x)\,x=x\,D(x,x)$
+for all $x$ is commutative \cite[p.~245]{Vukman1989Bid}.
+
+The hypothesis can be weakened from commuting to centralizing, at the price
+of one more excluded characteristic \cite[p.~249]{Vukman1989Bid}.
+
+\begin{corollary}[{\cite[Theorem~2, p.~249]{Vukman1989Bid}}]\label{cor:higher:bid-centralizing}
+Let $R$ be a noncommutative prime ring of characteristic not two and three.
+Let $D\colon R\times R\to R$ be a symmetric bi-derivation and $d$ its trace.
+Suppose that $d$ is centralizing on $R$. Then $D=0$.
+\end{corollary}
+
+Vukman proves it by reducing it to Theorem~\ref{thm:higher:bid-commuting}:
+the centralizing hypothesis gives $[d(x),x]=0$ for $x$ outside the center,
+and Theorem~\ref{thm:higher:bid-commuting} then applies
+\cite[p.~250]{Vukman1989Bid}. He asks whether the exclusion of
+characteristic three is necessary \cite[p.~250]{Vukman1989Bid}.
+
+The symmetric case is the whole of the prime case for an arbitrary
+biderivation, symmetric or not \cite[p.~669]{HonganKomatsu2000}. Brešar,
+Martindale and Miers described the biderivations of a noncommutative prime
+ring $R$: each one is of the form $\lambda[x,y]$ with $\lambda$ in the
+extended centroid of $R$ \cite[reference~1]{BresarMartindaleMiers1993}. In
+particular, a noncommutative prime ring has no nonzero symmetric biderivation
+\cite[p.~669]{HonganKomatsu2000}. On a commutative ring, by contrast, any
+sum $\Delta(x,y)=\sum_{i} d_i(x)\,d_i(y)$ of products of derivations is a
+symmetric biderivation \cite[p.~669]{HonganKomatsu2000}.
+
+Hongan and Komatsu then build the universal home of the notion
+\cite[p.~670]{HonganKomatsu2000}. They construct the module of
+differentials of an algebra extension for left, right and central
+derivations \cite[p.~670]{HonganKomatsu2000}. With it they show that
+$R\otimes R$ is a universal representing object for the biderivations of
+$R\times R$ of each kind \cite[p.~671]{HonganKomatsu2000}. They also
+characterize symmetric biderivations of a 2-torsion free semiprime algebra,
+where every symmetric biderivation is central \cite[p.~671]{HonganKomatsu2000}.
+
+A biderivation is the first mirror-image of a higher derivation
+\cite[p.~2323]{FerreroHaetinger2002}. The higher derivation spreads the
+Leibniz rule along a sequence of maps of one argument; the biderivation
+splits the one map into two arguments, each obeying the same rule.
+Then $n$-derivations keep the split and let the number of arguments grow.
+
+On a Lie algebra the earlier literature asked the biderivation to be
+skew-symmetric \cite[p.~1]{Tang2016W22}. Tang drops that condition and finds
+maps that the condition excludes \cite[p.~1]{Tang2016W22}. For the Virasoro
+algebra every biderivation is a scalar multiple of the bracket
+\cite[Theorem~3.1, p.~7]{Tang2016W22}. For the $W$-algebra $W(2,2)$ a second
+term appears, built from a linear map $\omega$ that sends each generator $L_m$
+to $H_m$ \cite[Theorem~2.6, p.~7]{Tang2016W22}.
+The map $\omega$ satisfies $[\omega(x),y]=[x,\omega(y)]$ for all $x$ and $y$
+\cite[p.~6]{Tang2016W22}. So the scalar multiples of the bracket are not the
+whole space on that algebra.
+
+The deformed Schr\"odinger--Virasoro algebra shows the same phenomenon
+\cite[p.~1]{FanSuXu2016}. Its skew-symmetric biderivations take one of three
+forms, and the two parameters decide which
+\cite[Theorem~3.2, p.~4]{FanSuXu2016}. The commuting maps on the same algebra
+then take one of four forms, again decided by the parameters
+\cite[Theorem~4.3, p.~11]{FanSuXu2016}. Each form is read from the
+skew-symmetric biderivations \cite[p.~1]{FanSuXu2016}.
+
+For a Lie superalgebra the graded signs enter every definition, and Pandey
+proves a structure theorem for the super-commuting maps and the
+super-biderivations of a Hom-Lie superalgebra \cite[p.~1]{Pandey2024Superbiderivations}.
+On a centerless Hom-Lie superalgebra equal to its own derived algebra, every
+super-biderivation is a twisted bracket with an element of the centroid
+\cite[Theorem~3.8, p.~7]{Pandey2024Superbiderivations}. Every linear
+super-commuting map of such an algebra lies in the centroid
+\cite[Theorem~4.2, p.~11]{Pandey2024Superbiderivations}.
+
+Tang settled the simple case for Lie algebras \cite[p.~1]{Tang2017Biderivations}. He
+drops the skew-symmetric condition here as well, and the biderivations do not
+grow.
+
+\begin{theorem}[{\cite[Theorem~2.4, p.~8]{Tang2017Biderivations}}]\label{thm:higher:tang-simple}
+Let $L$ be a finite-dimensional complex simple Lie algebra. Then a bilinear map
+$f\colon L\times L\to L$ is a biderivation of $L$ if and only if it is inner, that
+is, $f(x,y)=\lambda[x,y]$ for all $x,y\in L$ and some complex number $\lambda$.
+\end{theorem}
+
+For the general linear Lie algebra a second term appears, built from the trace
+\cite[Theorem~3.2, p.~8]{Tang2017Biderivations}. It produces a non-inner and non-skew-symmetric
+biderivation \cite[p.~1]{Tang2017Biderivations}. The linear commuting maps of both algebras
+then take a fixed form \cite[Theorems~3.4 and~3.5, p.~9]{Tang2017Biderivations}.
+
+On a triangular algebra the biderivations do not have one form either. Liang, Ren
+and Wei describe the Lie biderivations of a triangular algebra
+\cite[p.~1]{LiangRenWei2020}. A Lie biderivation is a bilinear map that is a Lie
+derivation in each argument \cite[p.~1]{LiangRenWei2020}.
+
+\begin{theorem}[{\cite[Theorem~3.2, p.~7]{LiangRenWei2020}}]\label{thm:higher:lie-bid-triangular}
+Let $T$ be a triangular algebra over a commutative ring $R$ and $\varphi$ a Lie
+biderivation of $T$. Suppose that the projections of the center of $T$ are the
+centers of the two corner algebras, that one corner algebra is noncommutative,
+that every bimodule endomorphism of the off-diagonal bimodule has the standard
+form, and that $\alpha a=0$ with $\alpha$ central and $a$ nonzero forces
+$\alpha=0$. Then
+\[
+\varphi(x,y)=\lambda_{0}[x,y]+[x,[y,\varphi(e,e)]]+\mu(x,y)
+\]
+for all $x,y\in T$, where $\lambda_{0}$ lies in the center of $T$ and $\mu$ is a
+central bilinear map.
+\end{theorem}
+
+So a Lie biderivation is the sum of an inner one, an extremal one and a central
+one \cite[p.~1]{LiangRenWei2020}. The result applies to block upper triangular
+matrix algebras and to nest algebras
+\cite[Corollaries~3.8 and~3.9, p.~14]{LiangRenWei2020}.
+
+Di Bartolo and La Rosa put a Lie bracket on the space of right biderivations
+of a semiprime algebra, so that the biderivations themselves form a Lie algebra
+\cite[Abstract, p.~1]{DiBartoloLaRosa2026}.

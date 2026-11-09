@@ -1,0 +1,299 @@
+% STATUS: written 2026-11-05 (Kadison 1966 and Sakai 1966 read in full;
+% excerpts in excerpts/Kadison1966.txt and excerpts/Sakai1966.txt).
+% Additions of 2026-11-06 from Ayupov--Arzikulov 2011 (pp. 1--7),
+% Ayupov--Kudaybergenov 2014 (pp. 1--2, 11), Hadwin--Li--Li--Ma 2013 (pp. 1--3),
+% Albeverio--Ayupov--Kudaybergenov 2007 (pp. 1, 5, 11) and
+% Albeverio--Ayupov--Kudaybergenov--Kalandarov 2008 (pp. 1, 5, 10).
+% Additions of 2026-11-07 from Kadison--Liu 2014 (pp. 2087--2091) and
+% Yu--Zhang 2012 (pp. 1979--1980, 1990--1991).
+% Sources: Kadison1966, Sakai1966, Sakai1960Kaplansky, Liu2025TwoLocal,
+% AyupovArzikulov2011TwoLocal, AyupovKudaybergenov2014Matrix,
+% HadwinLiLiMa2013, AlbeverioAyupovKudaybergenov2007,
+% AlbeverioAyupovKudaybergenovKalandarov2008, HaoChen2026Local,
+% KadisonLiu2014Murray, YuZhang2012StarLie.
+\section{Kadison--Sakai: derivations of von Neumann algebras}\label{sec:banach-operator:kadison-sakai}
+
+Section~\ref{sec:banach-operator:singer-wermer} ended with the commutative
+$C^*$-algebras: a derivation of a commutative $C^*$-algebra is zero
+\cite[p.~280]{Kadison1966}. On that basis Kaplansky proved that every
+derivation of a type I von Neumann algebra is inner
+\cite[p.~280]{Kadison1966}. He proposed
+that every derivation of a $C^*$-algebra is continuous
+\cite[p.~280]{Kadison1966}. Sakai proved the continuity in 1960
+\cite[p.~31]{Sakai1960Kaplansky}. Miles then noted that each derivation of
+a $C^*$-algebra is induced by an operator in the weak closure of some
+faithful representation \cite[pp.~273--274]{Sakai1966}. The remaining
+question was whether a von Neumann algebra can have an outer derivation at
+all \cite[p.~273]{Sakai1966}. The vocabulary is that of Sakai
+\cite[pp.~273--274]{Sakai1966}.
+
+\begin{definition}[{\cite[pp.~273--274]{Sakai1966}}]\label{def:banach:inner}
+Let $A$ be a $C^*$-algebra and $D$ a derivation of $A$. The derivation $D$
+is an \emph{inner derivation} if there is an element $a$ in $A$ such that
+$D(x)=[a,x]=ax-xa$ for $x$ in $A$. Otherwise it is an \emph{outer
+derivation}.
+\end{definition}
+
+A derivation of $A$ is \emph{spatial} when a bounded operator $B$ on $H$
+implements it, so that $\delta(A)=BA-AB$ for each $A$ in
+$A$~\cite[p.~281]{Kadison1966}. Kadison began with the centre~\cite[Theorem~2, p.~281]{Kadison1966}. The first step
+controls how a derivation behaves
+ there~\cite[Theorem~2, p.~281]{Kadison1966}.
+
+\begin{theorem}[{\cite[Theorem~2, p.~281]{Kadison1966}}]\label{thm:banach:center}
+Each derivation of a $C^*$-algebra annihilates its center.
+\end{theorem}
+
+Two facts drive the proof~\cite[p.~281]{Kadison1966}. A pure state is
+multiplicative on the centre, and a derivation kills every element on which a
+definite state vanishes to second order~\cite[p.~281]{Kadison1966}. With the centre out of the way,
+extension to the weak closure gives the spatial
+theorem~\cite[p.~281]{Kadison1966}.
+
+\begin{theorem}[{\cite[Theorem~4, p.~283]{Kadison1966}}]\label{thm:banach:spatial}
+Each derivation $\delta$ of a $C^*$-algebra $A$ acting on the Hilbert space
+$H$ is spatial. We may choose $B$ commuting with an assigned maximal
+abelian subalgebra of $A'$ or with an assigned mixing von Neumann
+subalgebra of $A'$ so that $\operatorname{ad} B\,\vert\,A=\delta$.
+\end{theorem}
+
+For hyperfinite von Neumann algebras the implementing operator already lies
+in the algebra.
+
+\begin{theorem}[{\cite[Theorem~7, p.~285]{Kadison1966}}]\label{thm:banach:hyperfinite}
+Each derivation of a mixing von Neumann algebra is inner. In particular,
+each derivation of a hyperfinite von Neumann algebra is inner.
+\end{theorem}
+
+Sakai then closed the question~\cite[p.~274]{Sakai1966}. The argument takes a least element of a
+convex set in the double commutant~\cite[p.~290]{Kadison1966}. The paper of
+Kadison presents that step as the completion of its own
+program~\cite[p.~290]{Kadison1966}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~274]{Sakai1966}}]\label{thm:banach:sakaiinner}
+Every derivation of a $W^*$-algebra is inner.
+\end{theorem}
+
+Theorem~\ref{thm:banach:sakaiinner} answers the conjecture of Kadison in the
+affirmative~\cite[p.~274]{Sakai1966}. Kadison states the same result in the
+language of von Neumann algebras, and attributes it to Sakai, who completed
+the arguments of his paper~\cite[Theorem~15, p.~290]{Kadison1966}.
+
+\begin{theorem}[{\cite[Theorem~15, p.~290]{Kadison1966}}]\label{thm:banach:kadison-inner}
+Each derivation of a von Neumann algebra is inner.
+\end{theorem}
+
+A von Neumann algebra is a $W^*$-algebra~\cite[p.~2]{Sakai1991Dynamical}, so
+the statement of Theorem~\ref{thm:banach:kadison-inner} and the statement of
+Theorem~\ref{thm:banach:sakaiinner} agree. Kadison also records the
+consequences for quantum physics
+\cite[p.~291]{Kadison1966}. Take a strongly continuous one-parameter unitary
+group whose spectrum is bounded below. If it induces automorphisms of a von
+Neumann algebra, the automorphisms are inner \cite[p.~291]{Kadison1966}. In
+physical language, energy and momentum are observable without the assumption
+of a vacuum state \cite[p.~291]{Kadison1966}.
+
+The $C^*$-algebra form places the
+implementing element in the weak closure
+\cite[Theorem~2, p.~274]{Sakai1966}.
+
+\begin{theorem}[{\cite[Theorem~2, p.~274]{Sakai1966}}]\label{thm:banach:sakaiclosure}
+Let $A$ be a $C^*$-algebra on a Hilbert space $H$, $D$ a derivation on $A$,
+$A^-$ the weak closure of $A$ on $H$. Then there is a bounded operator $b$
+belonging to $A^-$ such that $D(x)=[b,x]$ for all $x$ in $A$.
+\end{theorem}
+
+The theorems of this section lean on the automatic continuity of Sakai from
+1960 \cite[p.~283]{Kadison1966}. The proof of Kadison for Theorem~\ref{thm:banach:spatial} opens by
+citing it for boundedness \cite[p.~283]{Kadison1966}. Continuity has a story of its own,
+told in Section~\ref{sec:banach-operator:automatic-continuity}.
+
+A recent line of work drops the assumption that the map is linear at
+all~\cite[p.~909]{Liu2025TwoLocal}. The
+definition is due to Šemrl and is recalled by Liu in the form that
+follows~\cite[Definition~1.2, p.~909]{Liu2025TwoLocal}.
+
+\begin{definition}[{\cite[Definition~1.2, p.~909]{Liu2025TwoLocal}}]\label{def:banach:two-local}
+Let $A$ be an algebra. A map $\delta\colon A \to A$, not assumed linear, is a
+\emph{2-local derivation} when for all $A, B \in A$ there is a linear
+derivation $\delta_{A,B}\colon A \to A$, depending on the two elements, with
+\[
+  \delta(A)\,B + A\,\delta(B) = \delta_{A,B}(AB).
+\]
+\end{definition}
+
+This definition generalizes the earlier one, in which only
+$\delta(A) = \delta_{A,B}(A)$ and $\delta(B) = \delta_{A,B}(B)$ are asked for
+\cite[p.~909]{Liu2025TwoLocal}. Molnár proved that every 2-local derivation of
+a standard operator algebra into the bounded operators is a linear
+derivation~\cite[p.~910]{Liu2025TwoLocal}. He then asked whether the same
+holds on an arbitrary von Neumann
+algebra~\cite[p.~910]{Liu2025TwoLocal}. Liu answers the question on the
+semi-finite factors~\cite[Theorem~2.1, p.~910]{Liu2025TwoLocal}.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~910]{Liu2025TwoLocal}}]\label{thm:banach:two-local}
+Let $A$ be a semi-finite factor von Neumann algebra, and let
+$\delta\colon A \to A$ be a map such that for all $A, B \in A$ there is a
+linear derivation $\delta_{A,B}\colon A \to A$ with
+$\delta(A)B + A\delta(B) = \delta_{A,B}(AB)$. Then $\delta$ is a linear
+derivation.
+\end{theorem}
+
+The proof uses the trace~\cite[p.~910]{Liu2025TwoLocal}. Every linear
+derivation of such an algebra is inner~\cite[p.~910]{Liu2025TwoLocal}, which
+is the theorem of Sakai stated below as
+Theorem~\ref{thm:banach:sakaiclosure}. Take a trace-class element $M$. The
+inner form makes $\delta(A)M + A\delta(M)$ have trace
+zero~\cite[p.~910]{Liu2025TwoLocal}. Linearity then follows because the trace
+is faithful~\cite[p.~910]{Liu2025TwoLocal}.
+
+On von Neumann algebras the answer is now complete. Ayupov and Arzikulov
+work with the original notion of \v{S}emrl, where the two values alone are
+matched \cite[p.~1]{AyupovArzikulov2011TwoLocal}. For a von Neumann algebra
+every derivation is inner, so the condition reads as follows
+\cite[p.~2]{AyupovArzikulov2011TwoLocal}. For each pair $x,y$ of elements
+there is an element $a$ of the algebra with $\Delta(x)=ax-xa$ and
+$\Delta(y)=ay-ya$ \cite[p.~2]{AyupovArzikulov2011TwoLocal}.
+
+\begin{theorem}[{\cite[Theorem~5, p.~7]{AyupovArzikulov2011TwoLocal}}]\label{thm:banach:two-local-typeI}
+Let $M$ be a von Neumann algebra of type I and let $\Delta\colon M\to M$ be
+a 2-local derivation. Then $\Delta$ is a derivation.
+\end{theorem}
+
+The proof splits the algebra into its homogeneous summands, each of the form
+$C(X)\otimes M_n(\mathbb{C})$ \cite[p.~7]{AyupovArzikulov2011TwoLocal}. On
+one summand the additivity follows from the matrix units
+\cite[Theorem~1, p.~3]{AyupovArzikulov2011TwoLocal}. A Jordan derivation on
+a semiprime algebra is a derivation, so additivity is enough
+\cite[p.~3]{AyupovArzikulov2011TwoLocal}.
+
+The same authors carry the result to matrix algebras over a semiprime Banach
+algebra \cite[p.~1]{AyupovKudaybergenov2014Matrix}. An algebra has the
+inner derivation property when every derivation of it is inner
+\cite[p.~2]{AyupovKudaybergenov2014Matrix}.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~2]{AyupovKudaybergenov2014Matrix}}]\label{thm:banach:two-local-matrix}
+Let $A$ be a unital semiprime Banach algebra with the inner derivation
+property and let $M_{2^n}(A)$ be the algebra of $2^n\times 2^n$ matrices
+over $A$, with $n\geq 2$. Then every 2-local derivation of $M_{2^n}(A)$ is
+a derivation.
+\end{theorem}
+
+The matrix case passes to $\mathrm{AW}^*$-algebras
+\cite[p.~11]{AyupovKudaybergenov2014Matrix}. Every
+$\mathrm{AW}^*$-algebra has a central decomposition into summands that are
+matrix algebras over abelian ones, and the theorem applies to each summand
+\cite[p.~11]{AyupovKudaybergenov2014Matrix}. So every 2-local derivation
+of an $\mathrm{AW}^*$-algebra is a derivation
+\cite[Theorem~3.1, p.~11]{AyupovKudaybergenov2014Matrix}. Together with
+Theorem~\ref{thm:banach:two-local-typeI} this settles the question of
+Moln\'ar for von Neumann algebras
+\cite[p.~2]{AyupovKudaybergenov2014Matrix}.
+
+The local version, where each single value is matched by a derivation, was
+settled for von Neumann algebras earlier. Hadwin, Li, Li and Ma answer a
+question of Kadison on the algebra of measurable operators
+\cite[p.~1]{HadwinLiLiMa2013}.
+
+\begin{theorem}[{\cite[Theorem~1, p.~2]{HadwinLiLiMa2013}}]\label{thm:banach:local-measurable}
+Let $M$ be a von Neumann algebra on a Hilbert space $H$. If the abelian
+summand $M_1$ of $M$ is discrete, then every local derivation on the algebra
+of closed densely defined operators affiliated with $M$ is a derivation.
+\end{theorem}
+
+The proof uses a separating family of central idempotents
+\cite[Lemma~2, p.~2]{HadwinLiLiMa2013}. A local derivation that is a
+derivation on each piece is a derivation on the whole
+\cite[p.~2]{HadwinLiLiMa2013}. On a minimal projection $Q$ of a discrete
+abelian summand the algebra $QM$ is one-dimensional, so the condition holds
+there \cite[p.~3]{HadwinLiLiMa2013}.
+
+The local derivations of an algebra need not be derivations one by one, but
+as a set they again form a Lie algebra. Hao and Chen prove this for every
+algebra over a field \cite[p.~1]{HaoChen2026Local}.
+
+\begin{theorem}[{\cite[Theorem~2.8, p.~4]{HaoChen2026Local}}]\label{thm:banach:local-lie}
+Let $A$ be an algebra over a field. Then the set $\operatorname{LocDer}(A)$
+of local derivations of $A$ is a Lie algebra under the commutator bracket.
+\end{theorem}
+
+The proof passes through a reflexive hull, a single object that covers the
+local derivations and the almost inner ones \cite[p.~1]{HaoChen2026Local}. The
+same argument works for a family of multilinear operations, so the statement
+is not tied to the associative product \cite[p.~5]{HaoChen2026Local}. The
+authors also prove the structural conjecture of Ayupov, Elduque and
+Kudaybergenov on local derivations \cite[p.~1]{HaoChen2026Local}.
+
+A parallel line drops boundedness instead of linearity. For a type I von
+Neumann algebra $M$ with center $Z$, let $LS(M)$ be the algebra of locally
+measurable operators affiliated with $M$
+\cite[p.~1]{AlbeverioAyupovKudaybergenov2007}. Albeverio, Ayupov and
+Kudaybergenov ask for the derivations of $LS(M)$ that are linear over $Z$
+\cite[p.~1]{AlbeverioAyupovKudaybergenov2007}.
+
+\begin{theorem}[{\cite[Theorem~3.9, p.~11]{AlbeverioAyupovKudaybergenov2007}}]\label{thm:banach:zlinear-derivation}
+Let $M$ be a type I von Neumann algebra with center $Z$, and let $A$ be a
+subalgebra of $LS(M)$ that contains $M$. Then every $Z$-linear derivation on
+$A$ is spatial and implemented by an element of $LS(M)$.
+\end{theorem}
+
+The measurable operators and the totally measurable ones are such
+subalgebras, so their $Z$-linear derivations are spatial too
+\cite[Corollary~3.10, p.~11]{AlbeverioAyupovKudaybergenov2007}. When the
+lattice of projections of $M$ is atomic, every derivation of the
+$\tau$-measurable operators is spatial, hence continuous in the measure
+topology \cite[Corollary~3.11, p.~11]{AlbeverioAyupovKudaybergenov2007}.
+
+For the $\tau$-compact operators the same authors give the full description
+\cite[p.~1]{AlbeverioAyupovKudaybergenovKalandarov2008}. Let $S_{0}(M,\tau)$
+be that algebra.
+
+\begin{theorem}[{\cite[Theorem~3.7, p.~10]{AlbeverioAyupovKudaybergenovKalandarov2008}}]\label{thm:banach:tau-compact}
+Let $M$ be a type $\mathrm{I}_\infty$ von Neumann algebra with a faithful
+normal semi-finite trace $\tau$. Then every derivation of $S_{0}(M,\tau)$ is
+spatial and implemented by an element of $S(M,\tau)$.
+\end{theorem}
+
+Outside type $\mathrm{I}_\infty$ the centre of $S_{0}(M,\tau)$ can be
+trivial, and the methods of the earlier papers do not apply
+\cite[p.~10]{AlbeverioAyupovKudaybergenovKalandarov2008}.
+
+The same circle of ideas returns for finite von Neumann algebras, where the
+algebras of affiliated operators carry the quantum-mechanical picture that
+opened this chapter \cite[p.~2087]{KadisonLiu2014Murray}. Kadison and Liu work with a finite von Neumann algebra
+$R$ and its Murray--von Neumann algebra $A_f(R)$ of affiliated operators
+\cite[p.~2089]{KadisonLiu2014Murray}. They study the derivations of
+$A_f(R)$ that map $R$ into $R$ \cite[p.~2089]{KadisonLiu2014Murray}.
+
+\begin{theorem}[{\cite[Theorem~5, p.~2090]{KadisonLiu2014Murray}}]\label{thm:banach:kadison-liu}
+Let $\delta$ be an extended derivation of $A_f(R)$. Then there is an operator
+$B$ in $R$ such that $\delta(A)=A\cdot B-B\cdot A$ for every $A$ in $A_f(R)$.
+\end{theorem}
+
+The proof restricts $\delta$ to $R$, applies
+Theorem~\ref{thm:banach:sakaiinner} to obtain $B$, and then shows that
+$\delta-\operatorname{ad}B$ kills all of $A_f(R)$
+\cite[p.~2090]{KadisonLiu2014Murray}. For a factor of type $\mathrm{II}_1$ the
+paper goes further: the only derivation of $A_f(M)$ with values in $M$ is zero
+\cite[Theorem~12, p.~2091]{KadisonLiu2014Murray}. Kadison and Liu record that
+the full statement, that every derivation of $A_f(R)$ is inner, is still open
+\cite[p.~2090]{KadisonLiu2014Murray}.
+
+Nonlinear maps on a factor von Neumann algebra give another extension of the
+same theorem \cite[p.~1979]{YuZhang2012StarLie}. Yu and Zhang drop linearity and the involution is twisted in the
+rule \cite[p.~1979]{YuZhang2012StarLie}.
+
+\begin{theorem}[{\cite[Theorem~2.1, p.~1980]{YuZhang2012StarLie}}]\label{thm:banach:yu-zhang}
+Let $M$ be a factor von Neumann algebra on a complex Hilbert space $H$ with
+$\dim H\geq2$. Suppose that $\varphi\colon M\to M$ is a nonlinear $*$-Lie
+derivation, that is,
+$\varphi([A,B]^*)=[\varphi(A),B]^*+[A,\varphi(B)]^*$ for all $A,B$ in $M$,
+where $[A,B]^*=AB-BA^*$. Then $\varphi$ is an additive $*$-derivation.
+\end{theorem}
+
+The proof splits each element over the two Peirce spaces of a projection and
+checks the derivation rule on the four blocks, then uses
+Theorem~\ref{thm:banach:sakaiinner} for the inner form
+\cite[pp.~1990--1991]{YuZhang2012StarLie}.
+
+\hbfigure{18-banach-operator/derivation-containment}{The derivation spaces of a $C^*$-algebra $A$ on a Hilbert space $H$. An inner derivation $x\mapsto ax-xa$ has $a$ in $A$, so it is spatial, and a spatial derivation is a derivation \cite[pp.~273--274]{Sakai1966}. Kadison proves that every derivation of a $C^*$-algebra on $H$ is spatial \cite[Theorem~4, p.~283]{Kadison1966}, and Sakai that every derivation of a von Neumann algebra is inner \cite[Theorem~1, p.~274]{Sakai1966}, so on a von Neumann algebra all three spaces agree \cite[Theorem~15, p.~290]{Kadison1966}.}{fig:banach:derivation-containment}

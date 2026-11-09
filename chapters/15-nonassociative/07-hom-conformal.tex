@@ -1,0 +1,129 @@
+% STATUS: rewritten 2026-11-05
+% STATUS: extended 2026-11-07 (Zhao, Yuan and Chen 2018 and Asif and Yao 2023
+% read in full)
+% Sources read in full: Hartwig, Larsson and Silvestrov 2006 (Definition 4,
+% p. 18), Jin and Li 2008 (Proposition 2.2, p. 1400), Fan, Hong and Su 2019
+% (Definitions 2.1 and 2.7, pp. 2--3); Zhao, Yuan and Chen 2018 (pp. 1--2,
+% 17--19); Asif and Yao 2023 (pp. 1--8).
+\section{Hom-Lie algebras and Lie conformal algebras}\label{sec:nonassociative:hom-conformal}
+
+The Poisson algebras of the previous section carry a Lie bracket as one of
+their two operations. The two classes that follow deform that bracket
+itself. % claim-ok: own summary linking the two sections
+
+\begin{definition}[{\cite[Definition~4, p.~18]{HartwigLarssonSilvestrov2006}}]
+\label{def:nonassociative:hom-lie}
+A \emph{hom-Lie algebra} $(L,\varsigma)$ is a non-associative algebra $L$
+together with an algebra homomorphism $\varsigma\colon L\to L$ such that
+\[
+[x,y]_L=-[y,x]_L
+\]
+and
+\[
+[(\mathrm{id}+\varsigma)(x),[y,z]_L]_L
++[(\mathrm{id}+\varsigma)(y),[z,x]_L]_L
++[(\mathrm{id}+\varsigma)(z),[x,y]_L]_L=0
+\]
+for all $x,y,z\in L$, where $[\cdot,\cdot]_L$ denotes the product in $L$.
+\end{definition}
+
+If $L$ is a Lie algebra, it is a hom-Lie algebra with $\varsigma$ the
+identity map \cite[p.~18]{HartwigLarssonSilvestrov2006}. A hom-Lie algebra
+structure on a Lie algebra amounts to a Lie algebra automorphism
+\cite[Section~2, pp.~1399--1400]{JinLi2008HomLie}, and on a simple Lie
+algebra only the identity one works.
+
+\begin{proposition}[{\cite[Proposition~2.2, p.~1400]{JinLi2008HomLie}}]
+\label{prop:nonassociative:jin-li}
+Let $L$ be a finite-dimensional simple Lie algebra. If $(L,\sigma)$ is a
+hom-Lie algebra, then $\sigma=\mathrm{id}$. In other words, hom-Lie algebra
+structures on simple Lie algebras are trivial.
+\end{proposition}
+
+The second class replaces the one bracket by a family of brackets indexed by
+a formal parameter. % claim-ok: own linking sentence
+
+\begin{definition}[{\cite[Definition~2.1, p.~2]{FanHongSu2019}}]
+\label{def:nonassociative:lie-conformal}
+A \emph{Lie conformal algebra} $R$ is a $\mathbb{C}[\partial]$-module
+endowed with a $\mathbb{C}$-bilinear map
+\[
+R\otimes R\to R[\lambda],\qquad a\otimes b\mapsto [a_\lambda b],
+\]
+that satisfies, for all $a,b,c\in R$, the three axioms of conformal
+sesquilinearity
+\[
+[\partial a_\lambda b]=-\lambda[a_\lambda b],\qquad
+[a_\lambda\partial b]=(\partial+\lambda)[a_\lambda b],
+\]
+skew-symmetry
+\[
+[a_\lambda b]=-[b_{-\lambda-\partial}a],
+\]
+and the Jacobi identity
+\[
+[a_\lambda[b_\mu c]]=[[a_\lambda b]_{\lambda+\mu}c]
++[b_\mu[a_\lambda c]].
+\]
+\end{definition}
+
+Fan, Hong and Su define the derivations of such an algebra among the
+conformal linear maps. % claim-ok: own linking sentence
+
+\begin{definition}[{\cite[Definition~2.7, pp.~2--3]{FanHongSu2019}}]
+\label{def:nonassociative:conformal-derivation}
+Let $R$ be a Lie conformal algebra. A conformal linear map
+$D_\lambda\colon R\to R[\lambda]$ is a \emph{conformal derivation} if
+\[
+D_\lambda([a_\mu b])\;=\;[(D_\lambda a)_{\lambda+\mu}b]
++[a_\mu(D_\lambda b)]
+\qquad\text{for all }a,b\in R.
+\]
+\end{definition}
+
+For any $a\in R$ the map $(\operatorname{ad} a)_\lambda$ given by
+$(\operatorname{ad} a)_\lambda b=[a_\lambda b]$ is a conformal derivation.
+Those of this form are the inner conformal derivations. They form a
+conformal subalgebra of the algebra of all conformal derivations
+\cite[Definition~2.7, p.~3]{FanHongSu2019}.
+
+The generalized families of derivations carry over to the twisted case. A
+Hom-Lie conformal algebra $(R,\alpha)$ is multiplicative when $\alpha$ is an
+algebra endomorphism \cite[p.~3]{ZhaoYuanChen2018}. Zhao, Yuan and Chen define
+the $\alpha^{k}$-derivations, quasiderivations, centroids and quasicentroids of
+$R$ by the same identities as in the untwisted case, with $\alpha^{k}$ inserted
+in each argument \cite[p.~16]{ZhaoYuanChen2018}.
+
+\begin{theorem}[{\cite[Theorem~5.4, p.~18]{ZhaoYuanChen2018}}]\label{thm:nonassociative:hom-conformal-gder}
+Let $(R,\alpha)$ be a multiplicative Hom-Lie conformal algebra. Then
+$\mathrm{GDer}(R)=\mathrm{QDer}(R)+\mathrm{QC}(R)$, the sum of the
+quasiderivations and the quasicentroids of $R$.
+\end{theorem}
+
+The same paper shows that $\mathrm{ZDer}(R)$ is an ideal of
+$\mathrm{Der}(R)$, and that the generalized derivations, quasiderivations and
+centroids are subalgebras \cite[Proposition~5.2, p.~17]{ZhaoYuanChen2018}. The
+quasicentroid is again a Hom-Lie conformal algebra exactly when it coincides with
+the centroid \cite[Proposition~5.6, p.~19]{ZhaoYuanChen2018}.
+
+The conformal version of a biderivation has the centroid shape as well. A
+conformal super-biderivation of a Lie conformal superalgebra is a
+$\mathbb{C}$-bilinear map of two arguments that is a conformal derivation in each
+\cite[Definition~2.2, p.~2]{AsifYao2023}. Asif and Yao treat the current algebra
+$L\otimes A$ built from a Lie conformal superalgebra $L$ and a commutative
+associative algebra $A$ \cite[p.~1]{AsifYao2023}.
+
+\begin{theorem}[{\cite[Theorem~2.9, p.~3]{AsifYao2023}}]\label{thm:nonassociative:conformal-biderivation}
+Every skew-symmetric biderivation of a centerless perfect Lie conformal
+superalgebra $L$ has the form $\phi_\lambda(x,y)=\alpha_\mu([x_\lambda y])$ for
+a conformal linear map $\alpha_\mu$ of $L$.
+\end{theorem}
+
+The same shape passes to the current algebra: if every super-biderivation of $L$
+has the centroid form, then every one of $L\otimes A$ does
+\cite[Theorem~3.3, p.~7]{AsifYao2023}. The conformal super-commuting maps of
+$L\otimes A$ belong to the centroid under the same hypothesis
+\cite[Theorem~4.4, p.~8]{AsifYao2023}.
+
+The last section of the chapter
+moves from binary brackets to $n$-ary ones. % claim-ok: own closing link to Section 8

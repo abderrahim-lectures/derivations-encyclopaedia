@@ -1,0 +1,100 @@
+% STATUS: written 2026-11-06 (English gate clean; sources read in full as recorded below).
+% Sources read in full: Steinitz 1910 (J. reine angew. Math. 137, 167--309; Sections 9 and 13 in the text layer; the definition of elements and extensions of the first kind in Section 13, p. 231), Teichmueller 1936 (J. reine angew. Math. 175, 89--99; introduction), Jacobson 1944 (Amer. J. Math. 66, 645--648).
+\section[Derivations of fields and separability: Steinitz, Teichm\"uller, Jacobson][Fields and separability]{Derivations of fields and separability: Steinitz, Teichm\"uller, Jacobson}\label{sec:origins:fields-and-separability}
+
+The fields of the last section have characteristic zero. In characteristic $p > 0$ a nonzero polynomial can have zero derivative. For
+example, $x^p$ has zero derivative, because the polynomials with zero
+derivative are exactly the polynomials in $x^p$
+\cite[\S 9, p.~213]{Steinitz1910}. This fact first made
+derivations of fields necessary. This section goes from the formal derivative
+of Steinitz to the Galois theory of derivations of Jacobson.
+
+The story starts in 1910. The memoir \emph{Algebraische Theorie der K\"orper}~\cite{Steinitz1910}
+founded the abstract theory of fields. It is written in German. We follow it
+in our translation. Section~9 is called \emph{Differenzierung}. Let
+$f(x) = a_0 + a_1x + \cdots + a_nx^n$ be a polynomial over any field.
+Steinitz defines its derivative \emph{rein formal} (purely formally):
+\[
+  f'(x) = a_1 + 2a_2x + \cdots + na_nx^{n-1}.
+\]
+From this formal definition Steinitz derives the sum rule and the product
+rule for derivatives~\cite[\S 9, pp.~209--210]{Steinitz1910}. He then shows the following.
+In characteristic $p$, we have $f'(x) = 0$ exactly when $f$ is a polynomial
+in $x^p$~\cite[\S 9, p.~213]{Steinitz1910}.
+
+Steinitz puts this fact to work at once. His Section~13 uses the derivative to separate two kinds of algebraic extension.
+An irreducible polynomial is \emph{of the first kind} if it has only simple
+roots~\cite[\S 13, p.~231]{Steinitz1910}. An algebraic extension is of the first kind if all its elements are.
+Over a perfect field every extension is of the first kind. In particular,
+this holds in characteristic $0$. Now let $g$ be irreducible over a field of
+characteristic $p$. Suppose that $g$ is not a polynomial in $x^p$. Then
+$g'(x) \neq 0$. So $g'$ and $g$ have no common factor. Hence $g$ has only
+simple roots~\cite[\S 13, pp.~231--232]{Steinitz1910}:
+\begin{originalquote}{German}{Hat zweitens der Exponent $f$ seinen kleinsten Wert $0$, so ist $g(x)$ nicht mehr ganze rationale Funktion von $x^p$, die Ableitung $g'(x)$ verschwindet nicht, kann also mit $g(x)$ keinen gemeinsamen Faktor haben, somit hat die Funktion $g(x)$ lauter einfache Nullstellen, sie ist von erster Art.}
+If, secondly, the exponent $f$ has its least value $0$, then $g(x)$ is no
+longer an integral rational function of $x^p$, the derivative $g'(x)$ does not
+vanish, and so it can have no common factor with $g(x)$; hence the function
+$g(x)$ has only simple roots, it is of the first kind.
+\end{originalquote}
+\noindent\cite[\S 13, p.~232]{Steinitz1910}. In present terms: an
+irreducible polynomial is separable if and only if its derivative is nonzero.
+The first kind of Steinitz is our separable kind.
+
+The next step came in the 1930s. Hasse had built higher derivatives in algebraic function fields of
+characteristic $p$. He used the formulas of analysis for implicit functions
+(Section~\ref{sec:origins:higher-derivations}). Teichm\"uller avoids these
+formulas. His paper~\cite{Teichmueller1936} is written in German, and we
+follow it in our translation. He views the function field as an inseparable
+extension of a well chosen subfield. From this point of view he introduces
+all the higher differential quotients. He needs no power series at the
+primes. He notes that this gives \translated{a theory of differentiation for
+the simplest inseparable extensions of arbitrary fields of prime
+characteristic on a purely algebraic basis}{eine Differentiationstheorie
+f\"ur die einfachsten inseparablen Oberk\"orper beliebiger K\"orper von
+Primzahlcharakteristik auf rein algebraischer Grundlage}{German}. He meant it
+as a tool for his planned work on $p$-algebras~\cite[p.~89]{Teichmueller1936}.
+
+The last step in this line is due to Jacobson, in 1944. A purely inseparable extension has no nontrivial automorphisms. So ordinary
+Galois theory says nothing about it. Jacobson replaced the automorphisms by
+derivations~\cite{Jacobson1944}. Let $K$ be a field of characteristic $p$.
+A finite extension $K/k$ is \emph{purely inseparable of exponent one} when
+$x^p \in k$ for every $x \in K$. Write $\operatorname{Der}_k(K)$ for the
+derivations of $K$ that vanish on $k$.
+
+We use the terms of Jacobson \cite[Theorem~1, p.~207]{Jacobson1937}. A set of derivations of $K$ is a
+\emph{restricted $K$-Lie ring} if it has three properties. It is a vector
+space over $K$. It is closed under commutators. It is closed under $p$-th
+powers. It is \emph{finite} if its dimension over $K$ is finite. By
+Section~\ref{sec:origins:lie-theory}, $\operatorname{Der}_k(K)$ is a
+restricted $K$-Lie ring.
+
+\begin{theorem}[{\cite[p.~645]{Jacobson1944}}]\label{thm:origins:jacobson-galois}
+Let $K/k$ be a finite, purely inseparable extension of exponent one in
+characteristic $p > 0$. Then the only elements of $K$ killed by every
+derivation in $\operatorname{Der}_k(K)$ are the elements of $k$. Moreover,
+let $\Delta$ be a finite restricted $K$-Lie ring of derivations of a field
+$K$ of characteristic $p$, and let $k$ be its field of constants. Then $K/k$
+is finite and purely inseparable of exponent one, and
+$\Delta = \operatorname{Der}_k(K)$.
+\end{theorem}
+
+What does the theorem say? Jacobson calls the result an order anti-isomorphism~\cite[p.~645]{Jacobson1944}.
+It matches two kinds of objects. On one side are certain subfields $k$ of
+$K$. On the other side are certain sets of derivations of $K$. A field $k$
+goes to the set $\operatorname{Der}_k(K)$. A set of derivations goes back to
+its field of constants. A larger field gives a smaller set of derivations.
+
+The theorem has a history in the work of Jacobson himself. He already had a weaker result in his paper of 1937
+(Section~\ref{sec:origins:lie-theory}). There he matched the fields between
+$k$ and $K$ with the restricted Lie rings inside
+$\operatorname{Der}_k(K)$~\cite[p.~220]{Jacobson1937}. In 1944 he can start
+from either side: from the derivations, or from the base field. He compares
+this step with the work of Artin and Baer in ordinary Galois
+theory~\cite[p.~645]{Jacobson1944}.
+
+So derivations now play the part of automorphisms. In ordinary Galois theory
+a group of automorphisms has a fixed field. Here a set of derivations has a
+field of constants.
+
+Characteristic $p$ caused one more problem, this time for higher derivatives.
+The next section tells how Hasse and Schmidt solved it.

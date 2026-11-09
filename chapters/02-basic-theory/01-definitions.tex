@@ -1,0 +1,108 @@
+% STATUS: rewritten 2026-10-08
+% Sources read in full: Ritt 1950 (p. 1), Jacobson 1937 (pp. 206--207), Hochschild 1942 (pp. 677, 688--689), Kharchenko 1991 (pp. 6--8), Freudenburg 2017 (pp. 2, 13).
+% Additions of 2026-11-07 moved from chapter 20: Dirac 1925 (pp. 648, 651) read in full.
+\section{Definitions, first identities and the Leibniz formula}\label{sec:basic-theory:definitions}
+
+We start from the product rule of calculus. The polynomial ring has the
+derivative $d/dx$, and Section~\ref{sec:basic-theory:der-as-lie-algebra} gives its
+derivations.
+Matrix rings have no derivative that is obvious, and
+Section~\ref{sec:basic-theory:inner-outer} shows where their derivations come
+from. So the first task was to say which maps deserve the name, and to find out
+what follows from the rule alone.
+
+Ritt took the first step for fields \cite[p.~1]{Ritt1950}. He worked in
+characteristic zero and asked for an operation $a \mapsto a'$ with
+$(a+b)' = a'+b'$ and $(ab)' = ba' + ab'$. He saw at once that $0' = 0$ and
+$1' = 0$. He named the elements with zero derivative: ``An element with zero
+for derivative is called a constant'' \cite[p.~1]{Ritt1950}.
+
+Jacobson took a wider view in 1937 \cite[p.~206]{Jacobson1937}. He wanted to study ``the set of operations
+mapping an algebra on itself and having the formal character of derivation in
+the field of analytic functions'' \cite[p.~206]{Jacobson1937}. His algebras
+could be over any field. They did not have to be associative or finite
+dimensional. So the definition could use only the product rule.
+
+\begin{definition}[{\cite[p.~206]{Jacobson1937}}]\label{def:basic:derivation}
+Let $A$ be an algebra over a field $k$. A \emph{derivation} of $A$ is a
+$k$-linear map $D\colon A \to A$ with
+\[
+D(xy) = D(x)\,y + x\,D(y) \qquad (x, y \in A).
+\]
+\end{definition}
+
+We list two changes that other authors made to this definition. Kharchenko
+works with rings and writes maps on the right \cite[p.~7]{Kharchenko1991}.
+Hochschild lets the values lie in a larger algebra $B$ that contains $A$ \cite[p.~688]{Hochschild1942}. A linear map
+$D\colon A \to B$ with the same rule is then a derivation of $A$ into $B$
+\cite[Definition~3.1, p.~688]{Hochschild1942}. We use the wider setting when
+we say so.
+
+We ask next what follows from the definition alone. Jacobson answers with the
+Leibniz formula, which gives the $k$-th power of a derivation on a product
+\cite[formula~(7), p.~207]{Jacobson1937}:
+\[
+D^k(xy) = \sum_{i=0}^{k} \binom{k}{i}\, D^{k-i}(x)\, D^{i}(y).
+\]
+For commutative rings, Freudenburg adds two more rules.
+
+\begin{proposition}[{\cite[Proposition~1.6(b),(c), p.~13]{Freudenburg2017}}]\label{prop:basic:rules}
+Let $B$ be a commutative ring and $D \in \mathrm{Der}(B)$. For $t \in B$ and $n \ge 1$,
+$D(t^n) = n\,t^{n-1}D(t)$. If $f, g \in B$ and $g$ is invertible, then
+$D(f g^{-1}) = g^{-2}\bigl(g\,D(f) - f\,D(g)\bigr)$.
+\end{proposition}
+
+We call them the power rule and the quotient rule.
+
+We turn to prime characteristic, where the formula takes a special form. Let the field have characteristic $p$. Then the middle binomial coefficients vanish, so
+$D^p(xy) = D^p(x)\,y + x\,D^p(y)$. Jacobson states this as the fact that $D^p$
+is a derivation \cite[formula~(8), p.~207]{Jacobson1937}. In characteristic $0$ the powers need not be derivations: for $D = d/dx$ on $k[x]$ we get $D^2(x^2) = 2$, while $D^2(x)\,x + x\,D^2(x) = 0$.
+
+We now have a definition and a rule for repeated application.
+Section~\ref{sec:basic-theory:der-as-lie-algebra} asks how the derivations of
+one algebra fit together, and Jacobson answered it in his Theorem~1
+\cite[p.~207]{Jacobson1937}.
+
+\section{Physics: Poisson brackets and quantum derivations}\label{sec:basic-theory:physics}
+
+The oldest application of the product rule is in physics. % claim-ok: own signpost connecting the moved section to this chapter
+Dirac posed the
+question in 1925, in the same paper in which he replaced the
+Heisenberg matrix commutation by a Poisson bracket
+\cite{Dirac1925}. He first writes the two laws that the classical Poisson
+bracket obeys.
+
+\begin{definition}[{\cite[equation after (10), p.~648]{Dirac1925}}]\label{def:basic:dirac-poisson}
+Let $[x,y]$ be the Poisson bracket of classical mechanics. The two laws
+IA and IIa of Dirac read
+\[
+[x+y,z]=[x,z]+[y,z],\qquad [xy,z]=x[y,z]+[y,z]x .
+\]
+\end{definition}
+
+The second law is the product rule, so with $x$ fixed the map
+$y\mapsto[x,y]$ is a derivation on the algebra of classical observables.
+Dirac then declares that the same algebraic law holds for quantum
+observables \cite[p.~648]{Dirac1925}.
+
+\begin{theorem}[{\cite[equation (11), p.~648]{Dirac1925}}]\label{thm:basic:dirac-correspondence}
+For any two quantum variables $x$ and $y$,
+\[
+xy-yx = \frac{ih}{2\pi}\,[x,y],
+\]
+where $h$ denotes the Planck constant and $[x,y]$ on the right is the Poisson
+bracket of the corresponding classical quantities.
+\end{theorem}
+
+In particular the commutator $x\mapsto xy-yx$ is a scalar multiple of the
+Poisson bracket, so it is again a derivation. With $H$ the Hamiltonian
+function of the system, equation (14) of Dirac reads $\dot x=[x,H]$
+\cite[equation (14), p.~651]{Dirac1925}: time evolution is an inner
+derivation of the algebra of observables. The question of which derivations
+of an operator algebra are inner is taken up in
+Section~\ref{sec:banach-operator:kadison-sakai}. % claim-ok: own signpost to the chapter that now holds Kadison 1966
+
+\hbfigure{02-basic-theory/dirac-correspondence}{The correspondence principle of Dirac. The classical bracket obeys laws IA and IIa \cite[equation after (10), p.~648]{Dirac1925}, so with $x$ fixed the map $y\mapsto[x,y]$ is a derivation. Equation (11) \cite[equation (11), p.~648]{Dirac1925} makes the quantum commutator a scalar multiple of that bracket, so it is a derivation too.}{fig:basic:dirac}
+
+The Leibniz rule itself can be obtained rather than assumed. Hosseini derives
+it in its most general form \cite[Abstract, p.~1]{Hosseini2022LeibnizRule}.

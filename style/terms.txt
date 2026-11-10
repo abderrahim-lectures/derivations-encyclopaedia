@@ -20,6 +20,7 @@ annihilator
 anti-derivations
 anti-isomorphism
 antiautomorphism
+antibiderivation
 anticommutator
 antiderivation
 antiderivations
@@ -58,6 +59,7 @@ calculi
 calculus
 cancellative
 cancellativity
+categorical
 cayley
 centerless
 centraliser
@@ -152,6 +154,7 @@ elliptic
 embeddings
 embeds
 encode
+encyclopaedia
 endomorphism
 endomorphisms
 enlarges

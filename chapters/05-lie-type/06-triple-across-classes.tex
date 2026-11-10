@@ -1,0 +1,77 @@
+% STATUS: written 2026-11-09; verified against the full text 2026-11-09 (issue #1325).
+% Sources read in full, not at the abstract:
+%   Benkovic 2011, Theorem 2.4 (p. 823) and the abstract (p. 819);
+%   Lu 2007, Theorem 1.1 (p. 882);
+%   Li and Fang 2013, the abstract (p. 653);
+%   Ji and Wang 2005, the abstract (p. 399) and section 1 (p. 399).
+% Correction 2026-11-09: the TUHF paper was filed in the bibliography as
+% "Zhu, Jun, Proc. Amer. Math. Soc. 133 (2005)". The paper is by Ji and Wang,
+% Linear Algebra Appl. 403 (2005) 399--408, doi 10.1016/j.laa.2005.02.004, and the
+% key is now JiWang2005TUHF.
+% Correction 2026-11-09: Benkovic Theorem 2.4 has three terms, not two. The
+% earlier text said "a standard Lie derivation plus an antiderivation" and
+% dropped the central term.
+\section{Lie triple derivations across the classes of algebras}\label{sec:lie-type:triple-across-classes}
+
+A Lie triple derivation satisfies the triple rule and need not be a Lie
+derivation, because the two differ by a map into the centre that vanishes on
+brackets.
+Section~\ref{sec:lie-type:triple-and-n} stated the rule and gave the
+decomposition on von Neumann algebras.
+This section carries the same question to the concrete classes, where the answer
+has one shape: an inner or standard part plus a central defect. What changes
+between the classes is which derivation counts as standard and whether the defect
+can be written down.
+
+Take the algebra $T_{n}(C)$ of upper triangular matrices over a commutative
+unital ring, with a $2$-torsion free unital bimodule $M$.
+Every Lie triple derivation $d$ of $T_{n}(C)$ into $M$ is a sum of three terms,
+\begin{equation*}
+  d = \Delta + \delta + \tau .
+\end{equation*}
+Here $\Delta$ is a derivation and $\delta$ is an antiderivation that vanishes on
+the diagonal matrices. The third term $\tau$ carries $T_{n}(C)$ into the centre
+of $M$ and sends every commutator to zero
+\cite[Theorem~2.4, p.~823]{Benkovic2011TripleTriangular}.
+The three terms are visible separately in the abstract, which names the standard
+Lie derivation and the antiderivation and leaves the central term to the theorem.
+The antiderivation appears because the algebra is triangular.
+
+The nest algebra case is known in both directions. Take a nest $N$ of projections
+on a complex Hilbert space and a weak$^{\ast}$ closed algebra $B$ containing the
+nest algebra $T(N)$.
+A linear map $\delta$ of $T(N)$ into $B$ is a Lie triple derivation if and only if
+\begin{equation*}
+  \delta(A) = [S,A] + f(A)I \qquad \text{for all } A \in T(N),
+\end{equation*}
+where $S \in B$ and $f$ is a linear functional that vanishes on every second
+commutator $[[X,Y],Z]$ \cite[Theorem~1.1, p.~882]{Lu2007LieTripleNest}.
+The if-and-only-if is the content: the inner part plus that functional is the
+whole class rather than one description among several.
+
+The same algebras were treated without linearity. Write $\operatorname{Alg}N$ for
+the nest algebra of a nest on a Banach space, and suppose that a nontrivial
+element of the nest is complemented. Let $\Phi$ be a Lie triple derivable map of
+$\operatorname{Alg}N$ into $B(X)$. Then for all $A,B$ in the algebra there is a
+scalar $\lambda_{A,B}$ with
+$\Phi(A+B)=\Phi(A)+\Phi(B)+\lambda_{A,B}I$. Moreover $\Phi = D + \tau$, where $D$
+is an additive derivation. The map $\tau$ carries the algebra into the scalar
+multiples of the identity, has the same additive defect, and vanishes on second
+commutators \cite[Abstract, p.~653]{LiFang2013LieTripleNest}.
+On the same algebra a Jordan derivable map is an additive derivation, with no
+defect at all \cite[Abstract, p.~653]{LiFang2013LieTripleNest}.
+The two derivable conditions therefore differ on nest algebras. On rings the
+Jordan condition is the weaker one, so this is the case worth naming.
+
+A TUHF algebra is a triangular algebra of Hilbert-space operators. For a
+continuous Lie triple derivation $L$ of one there is an associative derivation $D$
+with $L = D + \lambda$.
+The map $\lambda$ carries the algebra into its centre and sends every bracket of
+operators to zero \cite[Abstract, p.~399]{JiWang2005TUHF}.
+That is the triangular shape again, restricted to the continuous maps.
+
+Three of the four results say the same thing. Each is a standard derivation
+together with a map into the centre that vanishes on brackets.
+The fourth says the two derivable conditions differ.
+The section exists so that a reader who meets the triple rule in one class can
+see what it becomes in the others.

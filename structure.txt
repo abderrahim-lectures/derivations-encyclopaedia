@@ -63,6 +63,7 @@ S|02|bresar|The solution of Brešar through functional identities
 S|03|triple-and-n|Lie triple and Lie n-derivations
 S|04|nonlinear|Nonlinear and nonadditive Lie-type maps
 S|05|lie-on-algebras|Lie derivations of specific algebras
+S|06|triple-across-classes|Lie triple derivations across the classes of algebras
 P|III|Enlarged classes and local maps
 C|06|generalized-twisted|Generalized, skew and twisted derivations|16W25 16S36|generalized (jordan |lie |skew )?derivation|skew[ -]derivation|σ-derivation|sigma-derivation|\(σ|α-derivation|twisted derivation|semi-?derivation|left derivation|reverse derivation|multiplicative .{0,30}derivation
 S|01|generalized|Generalized derivations

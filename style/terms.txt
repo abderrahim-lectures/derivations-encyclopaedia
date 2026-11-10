@@ -131,6 +131,8 @@ derivation
 derivational
 derivations
 diagonalizable
+dialgebra
+dialgebras
 diffeomorphic
 diffeomorphism
 differentia

@@ -3,17 +3,17 @@
 % derivation may change with a. Three points, three witnesses. The question
 % the section then answers is whether one derivation serves every point.
 \begin{tikzpicture}[font=\small]
-  \foreach \y/\i in {15mm/1, 0mm/2, -15mm/3} {
-    \node[hbnode,text width=12mm,align=center] (a\i) at (0,\y) {$a_{\i}$};
-    \node[hbkey,text width=17mm,align=center] (v\i) at (58mm,\y)
-      {$\alpha(a_{\i})$};
-    \draw[hbarrow] (a\i.east) -- node[above,font=\footnotesize]
-      {$\delta_{\i}$} (v\i.west);
+  \foreach \y/\idx in {15mm/1, 0mm/2, -15mm/3} {
+    \node[hbnode,text width=12mm,align=center] (a\idx) at (0,\y) {$a_{\idx}$};
+    \node[hbkey,text width=17mm,align=center] (v\idx) at (58mm,\y)
+      {$\alpha(a_{\idx})$};
+    \draw[hbarrow] (a\idx.east) -- node[above,font=\footnotesize]
+      {$\delta_{\idx}$} (v\idx.west);
   }
   \node[font=\footnotesize,anchor=south] at (0,22mm) {elements of $R$};
   \node[font=\footnotesize,anchor=south] at (58mm,22mm) {values in $M$};
   % the three witnesses are not one map: the question of the section
   \node[font=\footnotesize,anchor=north,align=center,text width=72mm] at (29mm,-21mm)
-    {each $\delta_{\i}$ is a derivation of $R$ into $M$, and it need not be the
+    {each $\delta_{i}$ is a derivation of $R$ into $M$, and it need not be the
      same for two points};
 \end{tikzpicture}

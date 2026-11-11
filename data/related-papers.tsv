@@ -1227,7 +1227,7 @@ overlap	source	title	path_or_id	status	decision
 7	atlas	Weakly closed Jordan modules of nest algebras on Banach spaces	6129803	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 7	atlas	Weakly closed Jordan ideals in nest algebras on Banach spaces	5532498	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 7	atlas	Weak boundedness for commutators of \(n\)-dimensional Hardy-type operators on mixed Herz spaces	8227168	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
-7	atlas	Universal derivations in spaces of functions with values in non- commutative banach algebeas	949626		
+7	atlas	Universal derivations in spaces of functions with values in non- commutative banach algebeas	949626	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 7	atlas	Unital and multiplicatively spectrum-preserving surjections between semi-simple commutative Banach algebras are linear and multiplicative	5083565	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 7	atlas	Uniqueness of the norm topology for Banach algebras with finite-dimensional radical	1032190	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 7	atlas	Two problems in the Galois theory of differential fields for the field of formal power series	3689520		
@@ -1266,7 +1266,7 @@ overlap	source	title	path_or_id	status	decision
 7	atlas	The automorphism groups of complete Lie algebras with commutative nilpotent radical	1419983	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 7	atlas	The Outer Derivation Algebras of Finite-Dimensional Cartan-Type Modular Lie Superalgebras	2198690	cited	downloaded and read 2026-11-11, batch twenty-one
 7	atlas	The Lie structure on the first Hochschild cohomology groups of Beilinson algebras of graded down-up algebras with weights \((n, m)\)	8207412	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
-7	atlas	The Lie algebraic structure of differential operators admitting invariant spaces of polynomials	1221688		
+7	atlas	The Lie algebraic structure of differential operators admitting invariant spaces of polynomials	1221688	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 7	atlas	The Lie algebra structure on the first Hochschild cohomology group of a monomial algebra.	5045335	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 7	atlas	The Lie algebra of skew-symmetric elements and its application in the theory of Jordan algebras	5816265	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 7	atlas	The Hochschild cohomology of the algebra of differential operators tangent to a central arrangement of lines	7549431	cited	cited (bibliography holds this work; status inherited from the atlas)
@@ -1279,7 +1279,7 @@ overlap	source	title	path_or_id	status	decision
 7	atlas	Systems of second-order ODEs invariant with respect to low-dimensional Lie algebras	5290280	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 7	atlas	Systems of first order ordinary differential equations allowing a given 3-dimensional Lie group as a subgroup of their symmetry group	8046028	cited	downloaded and read 2026-11-11, batch twenty-one
 7	atlas	System of additive functional equations in ternary Banach algebras	8248425	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
-7	atlas	Symmetries of differential behaviors and finite group actions on free modules over a polynomial ring	618216		
+7	atlas	Symmetries of differential behaviors and finite group actions on free modules over a polynomial ring	618216	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 7	atlas	Symmetric polynomials in Leibniz algebras and their inner automorphisms	7576705	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 7	atlas	Symmetric Martindale Quotient Rings of Ore Extensions with More than One Indeterminate	6472146	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 7	atlas	Symmetric Bessmertnyĭ Realizations and Field Extension Problems in Characteristic 2- A Differential Algebra Approach	903032586		
@@ -1355,14 +1355,14 @@ overlap	source	title	path_or_id	status	decision
 7	atlas	Quadratic functionals on modules over complex Banach \(*\)-algebras with an approximate identity	2242868	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 7	atlas	QHWM of the orthogonal and symplectic types Lie subalgebras of the Lie algebra of the matrix quantum pseudo differential operators	7107442	cited	downloaded and read 2026-11-11, batch twenty-one
 7	atlas	Pseudo-differential operators \(( ψ D O)\) algebra and certain infinite-dimensional Lie algebras	1629293	cited	cited (bibliography holds this work; status inherited from the atlas)
-7	atlas	Pseudo-Differential Operator Rings with Armendariz-Like Condition	6027604		
+7	atlas	Pseudo-Differential Operator Rings with Armendariz-Like Condition	6027604	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 7	atlas	Product of commutators with b-generalized skew derivations on Lie ideals	8067469	cited	cited (bibliography holds this work; status inherited from the atlas)
 7	atlas	Prime rings with generalized derivations on right ideals.	6333249	cited	cited (bibliography holds this work; status inherited from the atlas)
 7	atlas	Prime ideals and generalized derivations with central values on rings	7424501	cited	cited (bibliography holds this work; status inherited from the atlas)
 7	atlas	Prime and semiprime rings with symmetric skew \(n\)-derivations.	6285562	cited	cited (bibliography holds this work; status inherited from the atlas)
 7	atlas	Prime and semiprime rings with symmetric skew 3-derivations.	6309436	cited	cited (bibliography holds this work; status inherited from the atlas)
 7	atlas	Prime and semiprime rings involving multiplicative (generalized)-skew derivations	7550572	cited	cited (bibliography holds this work; status inherited from the atlas)
-7	atlas	Prime Ideals in Skew Polynomial Rings of Derivation Type	4168874		
+7	atlas	Prime Ideals in Skew Polynomial Rings of Derivation Type	4168874	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 7	atlas	Primary decomposable subspaces of k[t] and Right ideals of the first Weyl algebra A_ 1 (k) in characteristic zero	900087330	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 7	atlas	Preserving mixed skew Lie-Jordan-\(n\)-product on von Neumann algebra	8263978	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 7	atlas	Power values of generalized skew derivations preserving Jordan product on Lie ideals	7517758	cited	cited (bibliography holds this work; status inherited from the atlas)
@@ -1414,10 +1414,10 @@ overlap	source	title	path_or_id	status	decision
 7	atlas	On general extension fields for the classical groups in differential Galois theory	8165407	cited	downloaded and read 2026-11-11, batch twenty-one
 7	atlas	On functional equations related to generalized Jordan derivations in rings	7264165	cited	cited (bibliography holds this work; status inherited from the atlas)
 7	atlas	On differential identities in \( σ \)-prime rings with a pair of derivations	8175109	cited	cited (bibliography holds this work; status inherited from the atlas)
-7	atlas	On derivations with respect to finite sets of smooth functions	6865416		
+7	atlas	On derivations with respect to finite sets of smooth functions	6865416	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 7	atlas	On derivations and cohomology of the graded Lie algebra of vector valued differential forms related to a smooth manifold	4112830		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
 7	atlas	On derivations and biderivations of trivial extensions and triangular matrix rings	7006341	cited	cited (bibliography holds this work; status inherited from the atlas)
-7	atlas	On cyclic essential extensions of simple modules over differential operator rings	7076192		
+7	atlas	On cyclic essential extensions of simple modules over differential operator rings	7076192	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 7	atlas	On continuous linear generalized derivation in rings and Banach algebras	7337306	cited	downloaded and read 2026-11-11, batch twenty-one
 7	atlas	On commutativity of rings and Banach algebras with generalized derivations	7074111	cited	cited (bibliography holds this work; status inherited from the atlas)
 7	atlas	On commutativity of prime rings with left generalized derivations	7158089	cited	cited (bibliography holds this work; status inherited from the atlas)
@@ -1433,8 +1433,8 @@ overlap	source	title	path_or_id	status	decision
 7	atlas	On an analytic realization of operators commuting with the operator of generalized differentiation	3973661	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 7	atlas	On algebraic solutions of linear differential equations with primitive unimodular Galois group	177897		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
 7	atlas	On a theorem of Posner for 3-prime near-rings with \(( σ, τ )\)-derivation.	5234440		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
-7	atlas	On a classification of polynomial differential operators with respect to the type of first integrals	6517062		
-7	atlas	On a class of numbers generated by differential equations related with algebraic groups	561255		
+7	atlas	On a classification of polynomial differential operators with respect to the type of first integrals	6517062	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
+7	atlas	On a class of numbers generated by differential equations related with algebraic groups	561255	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 7	atlas	On a Functional Equation Related to Jordan Triple Derivations in Prime Rings	6930058	cited	cited (bibliography holds this work; status inherited from the atlas)
 7	atlas	On \( λ \)-\(k\)-skew Lie product involving commuting additive maps on prime \( \)-algebras	7888141	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 7	atlas	On Ramis's solution of the local inverse problem of differential Galois theory	896571	cited	downloaded and read 2026-11-11, batch twenty-one
@@ -1451,7 +1451,7 @@ overlap	source	title	path_or_id	status	decision
 7	atlas	On Galois polynomials of degree \(p\) in skew polynomial rings of derivation type.	6311218		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
 7	atlas	Notes on the Kernels of Locally Finite Higher Derivations in Polynomial Rings	6598103	cited	cited (bibliography holds this work; status inherited from the atlas)
 7	atlas	Notes on generalized Jordan \(( σ, τ )^*\)-derivations of semiprime rings with involution	7007907	cited	cited (bibliography holds this work; status inherited from the atlas)
-7	atlas	Note on algebraic solutions of differential equations with known finite Galois group	2232201		
+7	atlas	Note on algebraic solutions of differential equations with known finite Galois group	2232201	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 7	atlas	Norm inequalities for elementary operators and other inner product type integral transformers with the spectra contained in the unit disc	7380049	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 7	atlas	Nonlinear strong *-commutativity preserving maps on prime *-rings	6041068	cited	cited (bibliography holds this work; status inherited from the atlas)
 7	atlas	Nonlinear skew Lie type higher derivations on some operator algebras	8022893	cited	cited (bibliography holds this work; status inherited from the atlas)
@@ -1472,7 +1472,7 @@ overlap	source	title	path_or_id	status	decision
 7	atlas	Nonlinear Lie triple derivations on parabolic subalgebras of finite-dimensional simple Lie algebras	6052709	cited	cited (bibliography holds this work; status inherited from the atlas)
 7	atlas	Nonlinear Jordan triple higher derivable mappings of triangular algebras	7029195	cited	cited (bibliography holds this work; status inherited from the atlas)
 7	atlas	Nonexistence of nonzero derivations on some classes of zero-symmetric 3-prime near-rings.	6413957	cited	cited (bibliography holds this work; status inherited from the atlas)
-7	atlas	Noncommutative differentials and Galois theory for differential or difference equations	1736649		
+7	atlas	Noncommutative differentials and Galois theory for differential or difference equations	1736649	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 7	atlas	Noncommutative differential calculus structure on secondary Hochschild (co)homology	7517759	cited	downloaded and read 2026-11-11, batch twenty-one
 7	atlas	Non-standard higher-order \(G\)-strand partial differential equations on matrix Lie algebra	7430703		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
 7	atlas	Non-reflexivity of the derivation space from Banach algebras of analytic functions	5144269	cited	cited (bibliography holds this work; status inherited from the atlas)
@@ -1820,7 +1820,7 @@ overlap	source	title	path_or_id	status	decision
 7	atlas	A criterion for the conjugate operators of the product of an unbounded operator and an \(n\)-normal operator in Banach spaces	7970224	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 7	atlas	A class of non-global higher derivable nonlinear maps on triangular algebras	7366351		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
 7	atlas	A class of local derivable nonlinear maps on triangular algebras	6795636		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
-7	atlas	A bound for the order of characteristic set elements of an ordinary prime differential ideal and some applications	1441264		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
+7	atlas	A bound for the order of characteristic set elements of an ordinary prime differential ideal and some applications	1441264	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 7	atlas	A basis theorem for rings with commuting operators in characteristic zero	8146210	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 7	atlas	A basic functional identity with applications to Jordanσ-biderivations	6715291	cited	downloaded, read and cited 2026-11-11 (batch twenty-three)
 7	atlas	A Hilbert-Schmidt norm equality associated with the Fuglede-Putnam- Rosenblum's type theorem for generalized multipliers	706748	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
@@ -3280,7 +3280,7 @@ overlap	source	title	path_or_id	status	decision
 6	atlas	Vanishing and commuting generalized derivations on multiliear polynomials in prime rings	6875195	cited	cited (bibliography holds this work; status inherited from the atlas)
 6	atlas	Vanishing Derivations and Co-Centralizing Generalized Derivations on Multilinear Polynomials in Prime Rings	6598102	cited	cited (bibliography holds this work; status inherited from the atlas)
 6	atlas	Universal problem for Kähler differentials in \( A\)-modules: non-commutative and commutative cases	6552023	cited	downloaded, read and cited 2026-11-11 (batch twenty-three)
-6	atlas	Universal characteristic decomposition of radical differential ideals	5261828		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
+6	atlas	Universal characteristic decomposition of radical differential ideals	5261828	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 6	atlas	Universal Central Extensions of the Matrix Leibniz Superalgebras 𝔰𝔩(m,n, 𝒜)	5187105	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Uniqueness of algebras of Weyl group invariant differential operators	1372741		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
 6	atlas	Uniqueness of algebra norm on quotients of the algebra of bounded operators on a Banach space	7895009	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
@@ -3403,7 +3403,7 @@ overlap	source	title	path_or_id	status	decision
 6	atlas	Strong \(k\)-skew commutativity preserving maps on \(C^*\)-algebras	7589112	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Strong 3-commutativity preserving maps on prime rings	6840331	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Strong (skew) ξ-Lie commutativity preserving maps on algebras	6597846	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
-6	atlas	Standard bases for local rings of branches and their modules of differentials	5203518		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
+6	atlas	Standard bases for local rings of branches and their modules of differentials	5203518	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 6	atlas	Standard and alternative algebras with completely reducible derivation algebras	3455439	cited	downloaded, read and cited 2026-11-11 (batch twenty-three)
 6	atlas	Stability of ternary antiderivation in ternary Banach algebras via fixed point theorem	7733401	cited	downloaded, read and cited 2026-11-11 (batch twenty-three)
 6	atlas	Stability of ternary Jordan homomorphisms and derivations associated to the generalized Jensen equation	900067169		
@@ -3423,7 +3423,7 @@ overlap	source	title	path_or_id	status	decision
 6	atlas	Some remarks on polynomial vector fields, Jordan algebras and the automorphisms of Siegel domains	3368867	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Some remarks on derivations in semiprime rings and standard operator algebras	5919367		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
 6	atlas	Some properties of point differentiations and automorphisms on algebras of generalized analytic functions	4026133	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
-6	atlas	Some open problems on locally finite or locally nilpotent derivations and \( E\)-derivations	6880258		
+6	atlas	Some open problems on locally finite or locally nilpotent derivations and \( E\)-derivations	6880258	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 6	atlas	Some irreducible components of the variety of complex \((n + 1)\)-dimensional Leibniz algebras	6783243	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Some infinite-dimensional simple Lie algebras in characteristic \(0\) related to those of Block	1308164	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Some identities involving multiplicative (generalized) \(( α, 1)\)-derivations in semiprime rings	7547558	cited	cited (bibliography holds this work; status inherited from the atlas)
@@ -3437,7 +3437,7 @@ overlap	source	title	path_or_id	status	decision
 6	atlas	Some commutativity theorems for \(*\)-prime rings with \(( σ, τ )\)-derivation	6798112	cited	cited (bibliography holds this work; status inherited from the atlas)
 6	atlas	Some commutativity theorems concerning additive mappings and derivations on semiprime rings.	6344133	cited	cited (bibliography holds this work; status inherited from the atlas)
 6	atlas	Some automatic continuity theorems for operator algebras and centralizers of Pedersen's ideal	6657307	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
-6	atlas	Some algebras with trivial rings of differential operators	8103278		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
+6	atlas	Some algebras with trivial rings of differential operators	8103278	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 6	atlas	Some algebraic operations on the set of differential operators on a \(k\)-algebra of finite type	7121565		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
 6	atlas	Solutions in the general solution of second order algebraic differential equations	3970869		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
 6	atlas	Smooth solutions for first order differential systems with Lipschitz continuous coefficients	1774250		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
@@ -3446,16 +3446,16 @@ overlap	source	title	path_or_id	status	decision
 6	atlas	Simple weith modules over twisted generalized weyl algebras	1309827	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Simple weight modules over weak generalized Weyl algebras.	6430534	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Simple left-symmetric algebras with¶solvable Lie algebra	1143115	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
-6	atlas	Simple derivations of differentiably simple Noetherian commutative rings in prime characteristic	5308754		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
+6	atlas	Simple derivations of differentiably simple Noetherian commutative rings in prime characteristic	5308754	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 6	atlas	Simple Virasoro modules which are locally finite over a positive part	6324062	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Simple Schrödinger modules which are locally finite over the positive part	6409602	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Simple Modules Over Generalized Weyl Algebras and Their Associated Primes	6117624	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Separating linear maps of continuous fields of Banach spaces	5635974	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Semisimple algebraic Nijenhuis operators and three-dimensional Lie groups as Nijenhuis manifolds	8159704	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Semisimple Leibniz algebras, their derivations and automorphisms	7273647	cited	cited (bibliography holds this work; status inherited from the atlas)
-6	atlas	Semiprime rings and orthogonality of two \( θ \)-reverse derivations on ring, ideal, or one sided ideal	8032119		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
+6	atlas	Semiprime rings and orthogonality of two \( θ \)-reverse derivations on ring, ideal, or one sided ideal	8032119	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 6	atlas	Semigroup ideals with semiderivations in 3-prime near-rings.	6636703	cited	cited (bibliography holds this work; status inherited from the atlas)
-6	atlas	Semigroup ideals and permuting 3-derivations in prime near rings.	6504879		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
+6	atlas	Semigroup ideals and permuting 3-derivations in prime near rings.	6504879	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 6	atlas	Semigroup ideals and generalized semiderivations of prime near rings	7011446	cited	cited (bibliography holds this work; status inherited from the atlas)
 6	atlas	Semiderivations satisfying certain algebraic identities on prime near-rings.	6239130	cited	cited (bibliography holds this work; status inherited from the atlas)
 6	atlas	Semi-centralizing maps and \(k\)-commuting maps of module extension algebras	6656515	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
@@ -3470,9 +3470,9 @@ overlap	source	title	path_or_id	status	decision
 6	atlas	Rings of nilpotent elements of monomial derivations on polynomial rings	7841623	cited	cited (bibliography holds this work; status inherited from the atlas)
 6	atlas	Rings of invariant differential operators on homogeneous cones and Capelli-type identities	7464626		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
 6	atlas	Rings of differential operators on singular generalized multi-cusp algebras	7990001		
-6	atlas	Rings and fields of constants for derivations in characteristic zero	681825		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
+6	atlas	Rings and fields of constants for derivations in characteristic zero	681825	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 6	atlas	Rigid dualizing complex for quantum enveloping algebras and algebras of generalized differential operators	2105405		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
-6	atlas	Results on various derivations and Posner's theorem in prime ideals of rings	7805682		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
+6	atlas	Results on various derivations and Posner's theorem in prime ideals of rings	7805682	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 6	atlas	Results on generalized derivations in prime rings with involution	7924162	cited	cited (bibliography holds this work; status inherited from the atlas)
 6	atlas	Results on 3-prime near-rings with generalized derivations.	6643492	cited	cited (bibliography holds this work; status inherited from the atlas)
 6	atlas	Results concerning symmetric generalized biderivations of prime and semiprime rings	6694567	cited	cited (bibliography holds this work; status inherited from the atlas)
@@ -3500,16 +3500,16 @@ overlap	source	title	path_or_id	status	decision
 6	atlas	Projections on right and left ideals of endomorphism semiring which are derivations	7272757		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
 6	atlas	Products of pairs of commuting \(d\)-tuples of Banach space operators satisfying an \(m\)-isometric property	7797024	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Products of generalized semiderivations of prime near rings	6684874	cited	cited (bibliography holds this work; status inherited from the atlas)
-6	atlas	Products of derivations which act as Lie derivations on commutators of right ideals.	5188489		
+6	atlas	Products of derivations which act as Lie derivations on commutators of right ideals.	5188489	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 6	atlas	Products in Hochschild cohomology and Grothendieck rings of group crossed products.	2081964	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Products and sums of bounded and unbounded normal operators: Fuglede-Putnam versus Embry	6117122	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Product zero derivations on strictly upper triangular matrix Lie algebras	6263596		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
 6	atlas	Product of generalized derivations with commuting values on a Lie ideal	7391795		
 6	atlas	Product identities and \(L^ p\)-estimates for resolvents of higher order differential operators	4192443		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
 6	atlas	Product and commuting generalized derivations in prime rings	7670401	cited	cited (bibliography holds this work; status inherited from the atlas)
-6	atlas	Pro-algebraic groups and the Galois theory of differential fields	3432399		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
+6	atlas	Pro-algebraic groups and the Galois theory of differential fields	3432399	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 6	atlas	Prime rings with generalized derivations and power values on Lie ideals	7737775	cited	cited (bibliography holds this work; status inherited from the atlas)
-6	atlas	Prime model extensions for differential fields of characteristic \(p 0\)	3485782		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
+6	atlas	Prime model extensions for differential fields of characteristic \(p 0\)	3485782	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 6	atlas	Previato, E.; Rueda, S. L.; Zurro, M.-A., Commuting Ordinary Differential Operators and the Dixmier Test. Symmetry, Integrability and Geometry: Methods and Applications, 2019	7170318		
 6	atlas	Power-commuting generalized skew derivations in prime rings.	6547111	cited	cited (bibliography holds this work; status inherited from the atlas)
 6	atlas	Power values of quadratic polynomials with generalized skew derivations on Lie ideals	7432855	cited	cited (bibliography holds this work; status inherited from the atlas)
@@ -3519,9 +3519,9 @@ overlap	source	title	path_or_id	status	decision
 6	atlas	Power Values of Generalized Derivations with Annihilator Conditions in Prime Rings	6606850	cited	cited (bibliography holds this work; status inherited from the atlas)
 6	atlas	Power Values of Derivations with Annihilator Conditions on Lie Ideals in Prime Rings	5586217	cited	cited (bibliography holds this work; status inherited from the atlas)
 6	atlas	Power Towers: Purely Inseparable Galois Theory and Foliations in Positive Characteristic	902851667	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
-6	atlas	Possibility-theoretic extension of derivation operators in formal concept analysis over fuzzy lattices	6119975		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
+6	atlas	Possibility-theoretic extension of derivation operators in formal concept analysis over fuzzy lattices	6119975	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 6	atlas	Posner's second theorem and some related annihilating conditions on Lie ideals	7462768	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
-6	atlas	Positive derivations on partially ordered linear algebra with an order unit	3624215		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
+6	atlas	Positive derivations on partially ordered linear algebra with an order unit	3624215	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 6	atlas	Posets, their incidence algebras and relative operads, and the cohomology comparison theorem	8048360	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Polynomial differential operators associated with Hermitian symmetric spaces	5068929		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
 6	atlas	Polynomial automorphisms over finite fields: Mimicking tame maps by the Derksen group	6102853	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
@@ -3531,7 +3531,7 @@ overlap	source	title	path_or_id	status	decision
 6	atlas	Poisson and Jacobi structures. Essential extensions of Lie algebras of their infinitesimal automorphisms	440627	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Poisson Lie algebra structures associated with three-dimensional Lie algebras	490586	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Point derivations on algebraic extension of Banach algebra	1566943		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
-6	atlas	Point derivations and ideals in Banach algebras of differentiable functions	4063823		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
+6	atlas	Point derivations and ideals in Banach algebras of differentiable functions	4063823	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 6	atlas	Poincaré-Birkhoff-Witt deformations of smash product algebras from Hopf actions on Koszul algebras	6361767	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	Picard-Vessiot theory of differentially simple rings	6335792		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
 6	atlas	Picard-Vessiot extensions with specified Galois group	5632304	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
@@ -3550,7 +3550,7 @@ overlap	source	title	path_or_id	status	decision
 6	atlas	Order of Liouvillian elements satisfying an algebraic differential equation of the first order	3672421		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
 6	atlas	Operator commutation relations. Commutation relations for operators, semigroups, and resolvents with applications to mathematical physics and representations of Lie groups	3849916	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	On weight modules of algebras of twisted differential operators on the projective space	6562404		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
-6	atlas	On unbounded derivations commuting with a compact group of *- automorphisms	3804219		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
+6	atlas	On unbounded derivations commuting with a compact group of *- automorphisms	3804219	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 6	atlas	On traces of permuting \(n\)-derivations and permuting generalized \(n\)-derivations on Jordan ideals	6637230		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
 6	atlas	On trace of symmetric bi-gamma-derivations in gamma-near-rings.	5170263		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
 6	atlas	On the structure of the algebra of derivations of cyclic Leibniz algebras	7524294	cited	cited (bibliography holds this work; status inherited from the atlas)
@@ -3560,7 +3560,7 @@ overlap	source	title	path_or_id	status	decision
 6	atlas	On the structure of differential polynomials and on their theory of ideals	3105491		
 6	atlas	On the structure of closed subgroups of group of the polynomial transformation affine space which contain \( SL _n\).	2169079	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	On the stability of module left derivations in Banach algebras	5568315		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
-6	atlas	On the order of algebraic differential equations satisfied by Schanuel functions	801004		the atlas files this work under the book's vocabulary but no copy is in the library, so it is a lead until the file is fetched
+6	atlas	On the order of algebraic differential equations satisfied by Schanuel functions	801004	cited	downloaded, read and cited 2026-11-11 (batch twenty-four)
 6	atlas	On the open Dicke-type model generated by an infinite-component vector spin	7434878	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	On the norm of Jordan elementary operators in standard operator algebras	957404	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry
 6	atlas	On the nilpotency class of Lie rings with fixed-point-free automorphisms	2163188	excluded	the title shares the book's vocabulary but names no derivation-like map, so it is a neighbour and not a reference the book must carry

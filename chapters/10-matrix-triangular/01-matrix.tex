@@ -23,7 +23,7 @@ vector matrices
 \]
 with the multiplication displayed on the first page of the paper, is a flexible
 algebra over $\Phi$ \cite[p.~255]{Suh1969}. Suh asks which alternative algebras
-arise this way and answers completely \cite[p.~255]{Suh1969}.
+arise this way and answers completely (Theorem~\ref{thm:matrix:suh}) \cite[p.~255]{Suh1969}.
 
 \begin{theorem}[{\cite[Theorem~1, p.~257]{Suh1969}}]\label{thm:matrix:suh}
 Let $L$ be a finite dimensional Lie algebra over a field $\Phi$ of
@@ -56,10 +56,8 @@ $A\in T_n(R)$ such that $d=\overline{\delta}+d_A$.
 Here $\overline{\delta}$ sends $(x_{ij})$ to $(\delta(x_{ij}))$, and $d_A$ is
 the inner derivation $X\mapsto AX-XA$ \cite[p.~263]{CoelhoMilies1993}. The
 authors compute $A$ from the values of $d$ on the matrix units and then recover
-$\delta$ from $d$, so the description is effective
-\cite[p.~264]{CoelhoMilies1993}.
-
-\begin{proposition}[{\cite[p.~266]{CoelhoMilies1993}}]\label{prop:matrix:coelho-unique}
+$\delta$ from $d$, so the description is effective (Proposition~\ref{prop:matrix:coelho-unique})
+\cite[p.~264]{CoelhoMilies1993}.\begin{proposition}[{\cite[p.~266]{CoelhoMilies1993}}]\label{prop:matrix:coelho-unique}
 Let $d\colon T_n(R)\to T_n(R)$ be a derivation, and let $A,\delta$ be as in
 Theorem~\ref{thm:matrix:coelho}. If $A'\in T_n(R)$ and
 $\delta'\colon R\to R$ are such that $d=d_{A'}+\overline{\delta'}$, then there
@@ -68,10 +66,8 @@ $A'=A+aI$.
 \end{proposition}
 
 Jøndrup re-proves the same description for $M_n(A)$ and $T_n(A)$ with a short
-induction, and adds the corresponding automorphism theorems
-\cite[p.~205]{Jondrup1995}.
-
-\begin{theorem}[{\cite[Theorem~2, p.~209]{Jondrup1995}}]\label{thm:matrix:jondrup}
+induction, and adds the corresponding automorphism theorems (Theorem~\ref{thm:matrix:jondrup})
+\cite[p.~205]{Jondrup1995}.\begin{theorem}[{\cite[Theorem~2, p.~209]{Jondrup1995}}]\label{thm:matrix:jondrup}
 Let $A$ be a $C$-algebra. Every $C$-derivation of $\operatorname{Mat}_n(A)$ or
 $T_n(A)$ is the sum of an inner derivation and a derivation induced from a
 $C$-derivation of $A$.
@@ -88,7 +84,7 @@ entry vanishes whenever $(i,j)\notin\rho$ \cite[p.~281]{Nowicki1983}. This $P$
 is a subring of $M_n(R)$, called a special subring
 \cite[p.~281]{Nowicki1983}. An $R$-derivation is a derivation of $P$ that
 vanishes on the scalar matrices \cite[p.~284]{Nowicki1983}. Nowicki describes
-all of them \cite[p.~287]{Nowicki1983}.
+all of them (Theorem~\ref{thm:matrix:nowicki}) \cite[p.~287]{Nowicki1983}.
 
 \begin{theorem}[{\cite[Theorem~3.7, p.~287]{Nowicki1983}}]\label{thm:matrix:nowicki}
 Let $P$ be a special subring of $M_n(R)$ with the relation $\rho$. Every
@@ -104,10 +100,8 @@ $[A,-]$ is inner \cite[p.~287]{Nowicki1983}. The term $\Delta_f$ moves each entr
 by the value of the transitive mapping $f$ \cite[p.~287]{Nowicki1983}. The term
 $\Theta_\delta$ applies a derivation of $R$ to the entries, one derivation for
 each equivalence class of $\rho$ \cite[p.~287]{Nowicki1983}. The question of
-when every derivation is inner then becomes a question about $\rho$
-\cite[p.~289]{Nowicki1983}.
-
-\begin{corollary}[{\cite[Corollary~4.4, p.~289]{Nowicki1983}}]\label{cor:matrix:nowicki-inner}
+when every derivation is inner then becomes a question about $\rho$ (Corollary~\ref{cor:matrix:nowicki-inner})
+\cite[p.~289]{Nowicki1983}.\begin{corollary}[{\cite[Corollary~4.4, p.~289]{Nowicki1983}}]\label{cor:matrix:nowicki-inner}
 The following conditions are equivalent: every $R$-derivation of $P$ is inner,
 and the relation $\rho$ is regular over $Z(R)$.
 \end{corollary}
@@ -124,7 +118,7 @@ The last question for full matrix algebras is the Jordan one
 Rickart showed that a full matrix ring over a $2$-torsion free unital ring has
 no proper Jordan derivation, through their theorems on Jordan homomorphisms
 \cite[p.~574]{Alizadeh2009}. Alizadeh gives a direct proof for matrices over a
-ring, with values in a bimodule.
+ring, with values in a bimodule (Theorem~\ref{thm:matrix:alizadeh}).
 
 \begin{theorem}[{\cite[Theorem~3.1, p.~575]{Alizadeh2009}}]\label{thm:matrix:alizadeh}
 Let $A$ be a unital associative ring and $M$ a $2$-torsion free $A$-bimodule.
@@ -138,17 +132,15 @@ extends the classical result to values in a module \cite[p.~575]{Alizadeh2009}.
 
 The torsion hypothesis can be dropped for the full matrix algebra over a
 commutative ring \cite[p.~2]{GhoshPrakash2018}. Ghosh and Prakash prove the
-Jordan statement without it, and add the inner form of the derivations
-\cite[Theorem~3.2, p.~8]{GhoshPrakash2018}.
-
-\begin{theorem}[{\cite[Theorem~3.1, p.~5]{GhoshPrakash2018}}]\label{thm:matrix:ghosh-jordan}
+Jordan statement without it, and add the inner form of the derivations (Theorem~\ref{thm:matrix:ghosh-jordan})
+\cite[Theorem~3.2, p.~8]{GhoshPrakash2018}.\begin{theorem}[{\cite[Theorem~3.1, p.~5]{GhoshPrakash2018}}]\label{thm:matrix:ghosh-jordan}
 Let $C$ be a commutative ring with unity and $M_n(C)$ the full matrix algebra
 over $C$, with $n\geq2$. Then every Jordan derivation of $M_n(C)$ into itself
 is a derivation.
 \end{theorem}
 
 The same two authors then turn from the Jordan law to the derivations
-themselves \cite[p.~5]{GhoshPrakash2018}.
+themselves (Theorem~\ref{thm:matrix:ghosh-inner}) \cite[p.~5]{GhoshPrakash2018}.
 
 \begin{theorem}[{\cite[Theorem~3.2, p.~8]{GhoshPrakash2018}}]\label{thm:matrix:ghosh-inner}
 Let $C$ be a commutative ring with unity and $M_n(C)$ the algebra of all
@@ -186,7 +178,7 @@ matrices over $R$ \cite[p.~378]{OuWangYao2007}. Ou, Wang and Yao build five
 families of derivations: the inner ones, the diagonal ones, the central ones,
 and two families of extremal ones \cite[pp.~379--380]{OuWangYao2007}. The
 diagonal family uses a diagonal matrix, and the central family uses a vector
-of $n-3$ ring elements \cite[pp.~379--380]{OuWangYao2007}.
+of $n-3$ ring elements (Theorem~\ref{thm:matrix:strict-upper}) \cite[pp.~379--380]{OuWangYao2007}.
 
 \begin{theorem}[{\cite[Theorem~3.2, pp.~380--381]{OuWangYao2007}}]\label{thm:matrix:strict-upper}
 Let $R$ be a commutative ring with identity and let $n>2$.
@@ -213,7 +205,7 @@ map $\mu$ from a ring $R$ into a left $R$-module $V$ is a module left derivation
 when $\mu(xy)=x\mu(y)+y\mu(x)$ \cite[p.~753]{XuZhang2010Left}. A module Jordan
 left derivation satisfies the weaker law $\mu(x^{2})=2x\mu(x)$
 \cite[p.~754]{XuZhang2010Left}. Xu and Zhang settle both questions for full
-matrix rings \cite[pp.~755--757]{XuZhang2010Left}.
+matrix rings (Proposition~\ref{prop:matrix:left-zero}) \cite[pp.~755--757]{XuZhang2010Left}.
 
 \begin{proposition}[{\cite[Proposition~2.1, p.~755]{XuZhang2010Left}}]\label{prop:matrix:left-zero}
 For $n\geq2$, a module left derivation $\mu\colon M_n(R)\to M_n(V)$ must be
@@ -221,7 +213,7 @@ zero.
 \end{proposition}
 
 The Jordan law gives a nonzero answer on the same ring, and the trace controls
-it.
+it (Theorem~\ref{thm:matrix:jordan-left}).
 
 \begin{theorem}[{\cite[Theorem~2.6, pp.~756--757]{XuZhang2010Left}}]\label{thm:matrix:jordan-left}
 For $n\geq2$, a map $\mu\colon M_n(R)\to M_n(V)$ is a module Jordan left
@@ -239,10 +231,8 @@ entry map, and the entries only distribute the values
 The question also has a nonlinear form. A 2-local derivation matches its value at
 any two points by one derivation, and it need not be additive
 \cite[p.~1]{AyupovArzikulov2013}. Ayupov and Arzikulov take inner witnesses on
-a matrix ring over a commutative ring
-\cite[Theorem~2.1, p.~2]{AyupovArzikulov2013}.
-
-\begin{theorem}[{\cite[Theorem~2.1, p.~2]{AyupovArzikulov2013}}]\label{thm:matrix:two-local-inner}
+a matrix ring over a commutative ring (Theorem~\ref{thm:matrix:two-local-inner})
+\cite[Theorem~2.1, p.~2]{AyupovArzikulov2013}.\begin{theorem}[{\cite[Theorem~2.1, p.~2]{AyupovArzikulov2013}}]\label{thm:matrix:two-local-inner}
 Let $\Re$ be a commutative associative ring with identity and let $M_n(\Re)$ be
 the matrix ring of $n\times n$ matrices over $\Re$, with $n>1$. Then every inner
 2-local derivation on $M_n(\Re)$ is an inner derivation.

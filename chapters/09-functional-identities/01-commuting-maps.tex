@@ -8,6 +8,13 @@
 % STATUS: extended 2026-11-06 (Tang 2016 (both papers), Fan, Su and Xu 2016, Pandey 2024 read in full)
 \section{Commuting and centralizing maps}\label{sec:functional-identities:commuting-maps}
 
+The question of this chapter is what a map must be when it behaves like a
+derivation on products. A derivation obeys $d(xy)=d(x)y+xd(y)$, and the
+commuting condition $[x,d(x)]=0$ is the special case that asks when a
+derivation can agree with the element it acts on. This section treats maps
+whose commutator with each element is central or zero, without assuming
+additivity or a Leibniz rule.
+
 A map $F$ of a ring $R$ into itself is \emph{commuting} on a subset $S$
 \cite[p.~333]{LeeTK1997Centralizing} when $[s,F(s)]=0$ for all $s$ in $S$.
 The map is \emph{centralizing} on $S$
@@ -110,7 +117,7 @@ $G(X)=\lambda X+\mu(X)$ for all $X\in M_n$, where $\lambda$ is a scalar and $\mu
 an additive map into the scalar matrices \cite[p.~2540]{FrancaLouza2024}. In the
 matrix algebra this is the conclusion of Theorem~\ref{thm:fi:bresarA}.
 
-The first of the two answers goes to $S$ \cite[p.~2550]{FrancaLouza2024}.
+The first of the two answers goes to $S$ (Theorem~\ref{thm:fi:franca-louza-S}) \cite[p.~2550]{FrancaLouza2024}.
 
 \begin{theorem}[{\cite[Theorem~6.6, p.~2550]{FrancaLouza2024}}]\label{thm:fi:franca-louza-S}
 Let $F$ be a field whose characteristic is $0$ or at least $5$, let $n\ge3$, and let
@@ -188,7 +195,7 @@ class~\cite[p.~195]{Aczel1981}. The derivation is the
 reason~\cite[p.~195]{Aczel1981}. If $e$ solves the two equations, then so does
 $e + d$~\cite[p.~195]{Aczel1981}. A derivation satisfies both by definition,
 and $d(1-x) = -d(x)$ follows from them~\cite[p.~195]{Aczel1981}. So a very
-regular $f$ can hide a very irregular $e$~\cite[p.~195]{Aczel1981}.
+regular $f$ can hide a very irregular $e$~ (Theorem~\ref{thm:fi:aczel-general-solution})\cite[p.~195]{Aczel1981}.
 
 \begin{theorem}[{\cite[p.~195]{Aczel1981}}]\label{thm:fi:aczel-general-solution}
 Let $e_0$ be one particular solution of the two equations above for a given

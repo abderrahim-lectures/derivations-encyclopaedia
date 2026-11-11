@@ -16,7 +16,7 @@ Kaplansky first raised the idea of a Jordan derivation in conversation
 
 The obvious rival is a map $*$ with $(ab)^*=b^*a+ba^*$, which Herstein calls a
 \emph{reverse derivation} \cite[pp.~1104--1105]{Herstein1957}. Such a map would
-be a Jordan derivation. Herstein first shows that it hardly ever occurs.
+be a Jordan derivation. Herstein first shows that it hardly ever occurs (Theorem~\ref{thm:jordan:herstein-reverse}).
 
 \begin{theorem}[{\cite[Theorem~2.1, p.~1105]{Herstein1957}}]\label{thm:jordan:herstein-reverse}
 Let $A$ be a prime ring and suppose that $*$ is a nonzero reverse derivation of $A$.
@@ -52,7 +52,7 @@ Lemma~\ref{lem:jordan:herstein-aba} and in the commutative case
 \cite[p.~1110]{Herstein1957}. So he changes the definition of a Jordan derivation.
 He asks that $(a+b)'=a'+b'$, $(a^{2})'=aa'+a'a$ and $(aba)'=a'ba+ab'a+aba'$. For
 characteristic different from $2$ the third condition follows from the first two
-\cite[p.~1110]{Herstein1957}. With this definition he treats characteristic~$2$.
+\cite[p.~1110]{Herstein1957}. With this definition he treats characteristic~$2$ (Theorem~\ref{thm:jordan:herstein-char-two}).
 
 \begin{theorem}[{\cite[Theorem~4.1, p.~1110]{Herstein1957}}]\label{thm:jordan:herstein-char-two}
 Let $A$ be a prime ring of characteristic $2$. Then, if $A$ is not a commutative integral
@@ -64,22 +64,20 @@ in a ring $R$ in which $2x=0$ implies $x=0$, and he wants to enlarge the class o
 rings for which the converse holds \cite[p.~321]{Cusack1975}. For a Jordan derivation
 $D$ he sets $d(a,b)=D(ab)-aDb-(Da)b$ \cite[p.~321]{Cusack1975}. His main step is that
 $[a,b]\circ d(a,b)$ and $[[a,b],r,d(a,b)]$ vanish \cite[Lemma~2, p.~322]{Cusack1975}.
-He gets this from the same identities for Jordan homomorphisms
-\cite[Lemma~1, p.~322]{Cusack1975}.
-
-\begin{theorem}[{\cite[Theorem~4, pp.~322--323]{Cusack1975}}]\label{thm:jordan:cusack-radical}
+He gets this from the same identities for Jordan homomorphisms (Theorem~\ref{thm:jordan:cusack-radical})
+\cite[Lemma~1, p.~322]{Cusack1975}.\begin{theorem}[{\cite[Theorem~4, pp.~322--323]{Cusack1975}}]\label{thm:jordan:cusack-radical}
 Let $D$ be a Jordan derivation on a ring $R$ in which $2x=0$ implies $x=0$. Then for
 all $a$ and $b$ in $R$, $D(ab)-aDb-(Da)b$ is in $L$, the Baer lower radical of $R$.
 \end{theorem}
 
 A ring is semiprime when its lower radical is zero \cite[p.~322]{Cusack1975}. Cusack
-states two consequences, the first in his setting.
+states two consequences, the first in his setting (Corollary~\ref{cor:jordan:cusack-semiprime}).
 
 \begin{corollary}[{\cite[Corollary~5, p.~323]{Cusack1975}}]\label{cor:jordan:cusack-semiprime}
 If $R$ is semiprime, then $D$ is a derivation.
 \end{corollary}
 
-The next theorem states the second consequence, for a ring with a commutator that is not a zero divisor.
+The next theorem states the second consequence, for a ring with a commutator that is not a zero divisor (Theorem~\ref{thm:jordan:cusack-commutator}).
 
 \begin{theorem}[{\cite[Theorem~6, p.~323]{Cusack1975}}]\label{thm:jordan:cusack-commutator}
 Let $R$ be a ring where $2x=0$ implies $x=0$ and which has a commutator which is not a
@@ -97,7 +95,7 @@ every additive map is a Jordan derivation, and the identity map is not a derivat
 Finally, a short proof of Theorem~\ref{thm:jordan:herstein} appeared in 1988. Brešar and
 Vukman write $a^{b}$ for $D(ab)-D(a)b-aD(b)$ \cite[p.~321]{BresarVukman1988}. For a
 Jordan derivation $D$, they note that $b^{a}=-a^{b}$ \cite[p.~321]{BresarVukman1988}.
-Their key identity follows.
+Their key identity follows (Theorem~\ref{thm:jordan:bresar-vukman}).
 
 \begin{theorem}[{\cite[Theorem~3, p.~322]{BresarVukman1988}}]\label{thm:jordan:bresar-vukman}
 Let $R$ be a ring of characteristic not two, and let $D\colon R\to R$ be a Jordan

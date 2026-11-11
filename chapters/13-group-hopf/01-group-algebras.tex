@@ -23,7 +23,7 @@ $D(xy)=D(x)y+xD(y)$ for all $x,y\in G$. Then $D$ extends to a derivation of $RG$
 Spiegel proves the extension formula by linearity: write an element of $RG$ as a
 finite sum $\sum r_g g$ and send it to $\sum r_g D(g)$ \cite[p.~2956]{Spiegel1994}.
 He then asks which derivations of the integral group ring $\mathbb{Z}G$ occur, first
-for a finite group \cite[p.~2955]{Spiegel1994}.
+for a finite group (Theorem~\ref{thm:group-hopf:spiegel}) \cite[p.~2955]{Spiegel1994}.
 
 \begin{theorem}[{\cite[Theorem~1, p.~2956]{Spiegel1994}}]\label{thm:group-hopf:spiegel}
 Let $\mathbb{Z}G$ be the integral group ring of the finite group $G$. Every
@@ -73,7 +73,7 @@ $d\colon RG\to RG$ an $R$-derivation when $d(R)=0$ \cite[p.~434]{FerreroGiambrun
 They also record a decomposition \cite[p.~434]{FerreroGiambrunoPolcinoMilies1995}:
 a derivation $d$ of $RG$ with $d(R)\subseteq R$ writes as $d=d_1+d_2$. Here $d_1$
 is a derivation of $R$ extended by $d_1(G)=0$, and $d_2$ is an $R$-derivation of
-$RG$. Their main theorem puts a finiteness condition on the centre.
+$RG$. Their main theorem puts a finiteness condition on the centre (Theorem~\ref{thm:group-hopf:fgp}).
 
 \begin{theorem}[{\cite[Theorem~1.1, p.~434]{FerreroGiambrunoPolcinoMilies1995}}]\label{thm:group-hopf:fgp}
 Let $R$ be a semiprime ring and $G$ a torsion group such that $[G:Z(G)]<\infty$,
@@ -128,7 +128,7 @@ the count out
 for three families and asks when every derivation is inner
 \cite[Corollary~3.6, p.~10]{ManjuSharma2026}. The dihedral group is
 $D_{2n}=\langle a,b\mid a^n=1,\ b^2=1,\ (ab)^2=1\rangle$ of order $2n$, with
-$n\ge3$ \cite[p.~6]{ManjuSharma2026}.
+$n\ge3$ (Corollary~\ref{cor:group-hopf:manju-sharma-dihedral}) \cite[p.~6]{ManjuSharma2026}.
 
 \begin{corollary}[{\cite[Corollary~3.6, p.~10]{ManjuSharma2026}}]\label{cor:group-hopf:manju-sharma-dihedral}
 Let $F$ be an algebraic extension of a prime field and $p$ an odd rational
@@ -154,7 +154,7 @@ The derivation algebra itself carries a grading. Arutyunov and Zhiltsov
 identify a derivation with a character of the groupoid of the adjoint
 action \cite[p.~1]{ArutyunovZhiltsov2023}. Fix a normal subgroup $N$ of $G$
 with $G/N$ abelian. Then the derivations split into pieces indexed by the
-cosets of $N$ \cite[p.~1]{ArutyunovZhiltsov2023}.
+cosets of $N$ (Theorem~\ref{thm:group-hopf:grading}) \cite[p.~1]{ArutyunovZhiltsov2023}.
 
 \begin{theorem}[{\cite[Theorem~1, pp.~1, 8]{ArutyunovZhiltsov2023}}]\label{thm:group-hopf:grading}
 Let $G$ be a group and let $N$ be a normal subgroup of $G$ with $G/N$
@@ -188,10 +188,8 @@ over a field $k$ of characteristic $p$, and let $B$ be a block of $kG$ with
 defect group $P$ \cite[p.~2]{AntrobusBriggsRubioDegrassi2026}. Linckelmann
 made the conjecture that the first Hochschild cohomology of $B$ is nonzero
 whenever $P$ is nontrivial \cite[Conjecture, p.~2]{AntrobusBriggsRubioDegrassi2026}.
-Antrobus, Briggs and Rubio y Degrassi prove many cases of it
-\cite[Theorem~B, p.~2]{AntrobusBriggsRubioDegrassi2026}.
-
-\begin{theorem}[{\cite[Theorem~A, p.~2]{AntrobusBriggsRubioDegrassi2026}}]\label{thm:group-hopf:block-dimension}
+Antrobus, Briggs and Rubio y Degrassi prove many cases of it (Theorem~\ref{thm:group-hopf:block-dimension})
+\cite[Theorem~B, p.~2]{AntrobusBriggsRubioDegrassi2026}.\begin{theorem}[{\cite[Theorem~A, p.~2]{AntrobusBriggsRubioDegrassi2026}}]\label{thm:group-hopf:block-dimension}
 Let $B$ be a block of $kG$ with defect group $P$. Then the dimension of
 $HH^{1}(B)$ is at least the number of conjugacy classes of extra-strong
 non-Schur elements of $G$ relative to $P$.
@@ -226,7 +224,7 @@ For elements of the group itself, the second law takes the simpler form
 $D(gh)=Dg+g\,Dh$ \cite[(1.2)', p.~549]{Fox1953}, which is the Leibniz rule for
 the group multiplication. Fox shows the set of derivations in $JG$ forms a
 right $JG$-module, with $(D\cdot v)(u)=Du\,v$ \cite[p.~549]{Fox1953}. On the
-free group ring, the structure is fully described by \cite[Theorem, equations (2.1) and (2.2), p.~550]{Fox1953}.
+free group ring, the structure is fully described by (Theorem~\ref{thm:group-hopf:fox-free-derivatives}) \cite[Theorem, equations (2.1) and (2.2), p.~550]{Fox1953}.
 
 \begin{theorem}[{\cite[Theorem, equations (2.1) and (2.2), p.~550]{Fox1953}}]\label{thm:group-hopf:fox-free-derivatives}
 Let $X$ be a free group with generators $(x)=(x_1,x_2,\dots)$ and let $JX$ be

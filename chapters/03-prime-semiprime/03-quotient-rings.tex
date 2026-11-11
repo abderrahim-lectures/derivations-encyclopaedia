@@ -7,6 +7,13 @@ and~\ref{sec:prime-semiprime:herstein-school} ended with an element $\lambda$
 of the extended centroid \cite[p.~577]{Martindale1969}, which is not in the ring.
 This section tells where that field comes from.
 
+The field matters because a derivation of a prime ring often lands outside the
+ring. The commuting theorem of Posner and the standard form of a derivation at
+a point both conclude with a coefficient in the extended centroid, and no proof
+of either can be completed without the ring of quotients that holds it. This
+section supplies that ring, which the later chapters use whenever a derivation
+of a prime ring is determined by an element of a larger algebra.
+
 Martindale built it in 1969 \cite{Martindale1969}. He wanted one proof for a theorem of Posner on prime
 rings with a polynomial identity and a theorem of Amitsur on primitive rings
 \cite[p.~576]{Martindale1969}. For this he constructs, for any prime ring $R$, a
@@ -27,7 +34,7 @@ Martindale shows that the center $C$ of $Q$ is a field
 $R$, and he calls $S=RC$ the \emph{central closure} of $R$
 \cite[p.~577]{Martindale1969}.
 
-We state the tool that the previous sections used.
+We state the tool that the previous sections used (Theorem~\ref{thm:prime:martindale-dependent}).
 
 \begin{theorem}[{\cite[Theorem~1, p.~577]{Martindale1969}}]\label{thm:prime:martindale-dependent}
 Let $R$ be a prime ring with extended centroid $C$ and central closure $S$.
@@ -45,7 +52,7 @@ Kharchenko defines the Martindale ring of quotients of a semiprime ring
 
 Let $F$ be the set of ideals of $R$ with zero annihilator. The classes of
 homomorphisms from ideals in $F$ into $R$ form the left Martindale ring of
-quotients $R_F$ \cite[1.4.8, p.~21]{Kharchenko1991}.
+quotients $R_F$ (Theorem~\ref{thm:prime:kharchenko-quotients}) \cite[1.4.8, p.~21]{Kharchenko1991}.
 
 \begin{theorem}[{\cite[Theorem~1.4.9, p.~22]{Kharchenko1991}}]\label{thm:prime:kharchenko-quotients}
 Let $R$ be a semiprime ring. The ring $R_F$ has the following properties.
@@ -74,3 +81,5 @@ So a derivation of $R$ can be studied inside $Q$, where the extended centroid
 $C$ is a field. The question that Section~\ref{sec:prime-semiprime:kharchenko}
 asks is which derivations are inner in $Q$, and what identities the values of
 a derivation can satisfy.
+
+The extension of a derivation from a ring to its right ring of quotients and to its symmetric ring of quotients is characterised, which is the extension question for the quotient rings of the chapter~\cite{WlExtendingRingDerivationsToRigh2020}.

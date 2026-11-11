@@ -62,7 +62,7 @@ for all $m\in M$ and $a\in A$.
 
 Innerness of the whole map is decided by its four parts
 \cite[p.~14]{BennisFahid2017}. One part must vanish, and the two parts on the module
-must be inner \cite[p.~14]{BennisFahid2017}.
+must be inner (Theorem~\ref{thm:trivial:inner}) \cite[p.~14]{BennisFahid2017}.
 
 \begin{theorem}[{\cite[Theorem~3.12, p.~14]{BennisFahid2017}}]\label{thm:trivial:inner}
 Consider a derivation $D\colon A\ltimes M\to A\ltimes M$ of the form
@@ -104,7 +104,8 @@ for every $r\in R$ and $m\in M$.
 
 Their innerness test lists four conditions, one for each part
 \cite[p.~463]{BoudineZerra2024}. The list matches Corollary~\ref{cor:trivial:self} in
-the case $M=R$.
+the case $M=R$, and both are the case $R=M$ of
+Theorem~\ref{thm:trivial:inner-ring}.
 
 \begin{theorem}[{\cite[Theorem~2.3, p.~463]{BoudineZerra2024}}]\label{thm:trivial:inner-ring}
 With the notation above, the derivation $d$ is the inner derivation on
@@ -120,7 +121,7 @@ statements hold:
 
 Over a prime ring the classical theorems of Herstein, Posner and Bell carry over to
 the extension \cite[p.~467]{BoudineZerra2024}. The first one kills the part of the
-derivation that stays on $R$ \cite[p.~467]{BoudineZerra2024}.
+derivation that stays on $R$ (Theorem~\ref{thm:trivial:herstein}) \cite[p.~467]{BoudineZerra2024}.
 
 \begin{theorem}[{\cite[Theorem~3.5, p.~467]{BoudineZerra2024}}]\label{thm:trivial:herstein}
 Let $R$ be a noncommutative prime ring with $\mathrm{char}(R)\neq 2$, $M$ an
@@ -130,10 +131,8 @@ then $d_{1}\circ i_{1}=0$ and $s_{1}\in\mathrm{End}_{R}(M)$. Furthermore, for ev
 $m,m'\in M$, $[s_{2}(m),d_{1}((0,m'))]=[d_{1}((0,m)),s_{2}(m')]$.
 \end{theorem}
 
-The centralizing form gives the corresponding statement for the theorem of Posner
-\cite[p.~468]{BoudineZerra2024}.
-
-\begin{proposition}[{\cite[Proposition~3.6, p.~468]{BoudineZerra2024}}]\label{prop:trivial:posner}
+The centralizing form gives the corresponding statement for the theorem of Posner (Proposition~\ref{prop:trivial:posner})
+\cite[p.~468]{BoudineZerra2024}.\begin{proposition}[{\cite[Proposition~3.6, p.~468]{BoudineZerra2024}}]\label{prop:trivial:posner}
 Let $R$ be a noncommutative prime ring, $M$ an $R$-bimodule such that
 $Z_{M}(R)=M$, and $d$ a derivation on $R\propto M$. Then $d$ is centralizing if and
 only if, for every $(r,m)\in R\propto M$, the following statements hold:

@@ -38,7 +38,7 @@ A derivation of $A$ is \emph{spatial} when a bounded operator $B$ on $H$
 implements it, so that $\delta(A)=BA-AB$ for each $A$ in
 $A$~\cite[p.~281]{Kadison1966}. Kadison began with the centre~\cite[Theorem~2, p.~281]{Kadison1966}. The first step
 controls how a derivation behaves
- there~\cite[Theorem~2, p.~281]{Kadison1966}.
+ there~ (Theorem~\ref{thm:banach:center})\cite[Theorem~2, p.~281]{Kadison1966}.
 
 \begin{theorem}[{\cite[Theorem~2, p.~281]{Kadison1966}}]\label{thm:banach:center}
 Each derivation of a $C^*$-algebra annihilates its center.
@@ -58,7 +58,7 @@ subalgebra of $A'$ so that $\operatorname{ad} B\,\vert\,A=\delta$.
 \end{theorem}
 
 For hyperfinite von Neumann algebras the implementing operator already lies
-in the algebra.
+in the algebra (Theorem~\ref{thm:banach:hyperfinite}).
 
 \begin{theorem}[{\cite[Theorem~7, p.~285]{Kadison1966}}]\label{thm:banach:hyperfinite}
 Each derivation of a mixing von Neumann algebra is inner. In particular,
@@ -129,7 +129,7 @@ a standard operator algebra into the bounded operators is a linear
 derivation~\cite[p.~910]{Liu2025TwoLocal}. He then asked whether the same
 holds on an arbitrary von Neumann
 algebra~\cite[p.~910]{Liu2025TwoLocal}. Liu answers the question on the
-semi-finite factors~\cite[Theorem~2.1, p.~910]{Liu2025TwoLocal}.
+semi-finite factors~ (Theorem~\ref{thm:banach:two-local})\cite[Theorem~2.1, p.~910]{Liu2025TwoLocal}.
 
 \begin{theorem}[{\cite[Theorem~2.1, p.~910]{Liu2025TwoLocal}}]\label{thm:banach:two-local}
 Let $A$ be a semi-finite factor von Neumann algebra, and let
@@ -169,10 +169,8 @@ a semiprime algebra is a derivation, so additivity is enough
 
 The same authors carry the result to matrix algebras over a semiprime Banach
 algebra \cite[p.~1]{AyupovKudaybergenov2014Matrix}. An algebra has the
-inner derivation property when every derivation of it is inner
-\cite[p.~2]{AyupovKudaybergenov2014Matrix}.
-
-\begin{theorem}[{\cite[Theorem~2.1, p.~2]{AyupovKudaybergenov2014Matrix}}]\label{thm:banach:two-local-matrix}
+inner derivation property when every derivation of it is inner (Theorem~\ref{thm:banach:two-local-matrix})
+\cite[p.~2]{AyupovKudaybergenov2014Matrix}.\begin{theorem}[{\cite[Theorem~2.1, p.~2]{AyupovKudaybergenov2014Matrix}}]\label{thm:banach:two-local-matrix}
 Let $A$ be a unital semiprime Banach algebra with the inner derivation
 property and let $M_{2^n}(A)$ be the algebra of $2^n\times 2^n$ matrices
 over $A$, with $n\geq 2$. Then every 2-local derivation of $M_{2^n}(A)$ is
@@ -192,10 +190,8 @@ Moln\'ar for von Neumann algebras
 
 The local version, where each single value is matched by a derivation, was
 settled for von Neumann algebras earlier. Hadwin, Li, Li and Ma answer a
-question of Kadison on the algebra of measurable operators
-\cite[p.~1]{HadwinLiLiMa2013}.
-
-\begin{theorem}[{\cite[Theorem~1, p.~2]{HadwinLiLiMa2013}}]\label{thm:banach:local-measurable}
+question of Kadison on the algebra of measurable operators (Theorem~\ref{thm:banach:local-measurable})
+\cite[p.~1]{HadwinLiLiMa2013}.\begin{theorem}[{\cite[Theorem~1, p.~2]{HadwinLiLiMa2013}}]\label{thm:banach:local-measurable}
 Let $M$ be a von Neumann algebra on a Hilbert space $H$. If the abelian
 summand $M_1$ of $M$ is discrete, then every local derivation on the algebra
 of closed densely defined operators affiliated with $M$ is a derivation.
@@ -210,7 +206,7 @@ there \cite[p.~3]{HadwinLiLiMa2013}.
 
 The local derivations of an algebra need not be derivations one by one, but
 as a set they again form a Lie algebra. Hao and Chen prove this for every
-algebra over a field \cite[p.~1]{HaoChen2026Local}.
+algebra over a field (Theorem~\ref{thm:banach:local-lie}) \cite[p.~1]{HaoChen2026Local}.
 
 \begin{theorem}[{\cite[Theorem~2.8, p.~4]{HaoChen2026Local}}]\label{thm:banach:local-lie}
 Let $A$ be an algebra over a field. Then the set $\operatorname{LocDer}(A)$
@@ -228,10 +224,8 @@ A parallel line drops boundedness instead of linearity. For a type I von
 Neumann algebra $M$ with center $Z$, let $LS(M)$ be the algebra of locally
 measurable operators affiliated with $M$
 \cite[p.~1]{AlbeverioAyupovKudaybergenov2007}. Albeverio, Ayupov and
-Kudaybergenov ask for the derivations of $LS(M)$ that are linear over $Z$
-\cite[p.~1]{AlbeverioAyupovKudaybergenov2007}.
-
-\begin{theorem}[{\cite[Theorem~3.9, p.~11]{AlbeverioAyupovKudaybergenov2007}}]\label{thm:banach:zlinear-derivation}
+Kudaybergenov ask for the derivations of $LS(M)$ that are linear over $Z$ (Theorem~\ref{thm:banach:zlinear-derivation})
+\cite[p.~1]{AlbeverioAyupovKudaybergenov2007}.\begin{theorem}[{\cite[Theorem~3.9, p.~11]{AlbeverioAyupovKudaybergenov2007}}]\label{thm:banach:zlinear-derivation}
 Let $M$ be a type I von Neumann algebra with center $Z$, and let $A$ be a
 subalgebra of $LS(M)$ that contains $M$. Then every $Z$-linear derivation on
 $A$ is spatial and implemented by an element of $LS(M)$.
@@ -246,7 +240,7 @@ topology \cite[Corollary~3.11, p.~11]{AlbeverioAyupovKudaybergenov2007}.
 
 For the $\tau$-compact operators the same authors give the full description
 \cite[p.~1]{AlbeverioAyupovKudaybergenovKalandarov2008}. Let $S_{0}(M,\tau)$
-be that algebra.
+be that algebra (Theorem~\ref{thm:banach:tau-compact}).
 
 \begin{theorem}[{\cite[Theorem~3.7, p.~10]{AlbeverioAyupovKudaybergenovKalandarov2008}}]\label{thm:banach:tau-compact}
 Let $M$ be a type $\mathrm{I}_\infty$ von Neumann algebra with a faithful
@@ -263,7 +257,7 @@ algebras of affiliated operators carry the quantum-mechanical picture that
 opened this chapter \cite[p.~2087]{KadisonLiu2014Murray}. Kadison and Liu work with a finite von Neumann algebra
 $R$ and its Murray--von Neumann algebra $A_f(R)$ of affiliated operators
 \cite[p.~2089]{KadisonLiu2014Murray}. They study the derivations of
-$A_f(R)$ that map $R$ into $R$ \cite[p.~2089]{KadisonLiu2014Murray}.
+$A_f(R)$ that map $R$ into $R$ (Theorem~\ref{thm:banach:kadison-liu}) \cite[p.~2089]{KadisonLiu2014Murray}.
 
 \begin{theorem}[{\cite[Theorem~5, p.~2090]{KadisonLiu2014Murray}}]\label{thm:banach:kadison-liu}
 Let $\delta$ be an extended derivation of $A_f(R)$. Then there is an operator
@@ -281,7 +275,7 @@ the full statement, that every derivation of $A_f(R)$ is inner, is still open
 
 Nonlinear maps on a factor von Neumann algebra give another extension of the
 same theorem \cite[p.~1979]{YuZhang2012StarLie}. Yu and Zhang drop linearity and the involution is twisted in the
-rule \cite[p.~1979]{YuZhang2012StarLie}.
+rule (Theorem~\ref{thm:banach:yu-zhang}) \cite[p.~1979]{YuZhang2012StarLie}.
 
 \begin{theorem}[{\cite[Theorem~2.1, p.~1980]{YuZhang2012StarLie}}]\label{thm:banach:yu-zhang}
 Let $M$ be a factor von Neumann algebra on a complex Hilbert space $H$ with

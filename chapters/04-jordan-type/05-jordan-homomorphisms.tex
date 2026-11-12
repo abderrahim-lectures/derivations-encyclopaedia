@@ -7,6 +7,8 @@ between algebras. Brešar and Zelmanov survey the history of this twin
 \cite[Abstract, p.~203]{BresarZelmanov2025}. They assume that algebras are defined over a field $F$
 with $\operatorname{char}(F)\neq2$ unless stated otherwise \cite[Section~1, p.~203]{BresarZelmanov2025}.
 
+Every result of this section bears on derivations through one correspondence: a derivation is the infinitesimal form of a homomorphism, so the rule $D(x^2)=D(x)x+xD(x)$ differentiates $h(x^2)=h(x)^2$. Classifying the homomorphisms therefore decides which Jordan derivations exist.
+
 \begin{definition}[{\cite[Section~1, p.~203]{BresarZelmanov2025}}]\label{def:jordan:jordan-hom}
 Let $A$ and $B$ be associative algebras. A linear map $\varphi\colon A\to B$ is called a Jordan
 homomorphism if $\varphi(x^{2})=\varphi(x)^{2}$ for every $x\in A$.
@@ -38,6 +40,13 @@ antiautomorphism.
 \end{theorem}
 
 Hua proved the case of division algebras in 1949 (Theorem~\ref{thm:jordan:hua}) \cite[p.~211]{BresarZelmanov2025}.
+
+The result bears on derivations because a derivation is the infinitesimal form
+of a Jordan homomorphism: the rule $D(x^2)=D(x)x+xD(x)$ is what
+$h(x^2)=h(x)^2$ becomes under differentiation. Hua's theorem says a Jordan
+homomorphism of a division algebra is a homomorphism or an antihomomorphism and
+nothing else, which is what makes the corresponding Jordan derivations of a
+division algebra rigid.
 
 \begin{theorem}[{\cite[Theorem~5.2, p.~211]{BresarZelmanov2025}}]\label{thm:jordan:hua}
 A Jordan homomorphism from a division algebra $D$ to itself is either a homomorphism or an

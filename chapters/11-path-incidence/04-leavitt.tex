@@ -14,6 +14,8 @@ edge for every arrow, and the presentation lists the reverse edges as new genera
 graph \cite[p.~59]{Lopatkin2019}. This section gives his description, the generating
 set, and the dimension of the outer derivations.
 
+The derivations below act on a Leavitt path algebra, the graded algebra the path and incidence cases of this part lead to.
+
 A row-finite graph has finitely many edges with each source
 \cite[p.~60]{Lopatkin2019}. The algebra has a vertex for each point of the graph, an
 edge for each arrow, and a reverse edge for each arrow \cite[p.~61]{Lopatkin2019}.
@@ -61,6 +63,11 @@ The algebra has a basis in normal form \cite[p.~63]{Lopatkin2019}. A word in the
 basis is a path, a reverse path, or a pair of paths of equal length that end at the
 same vertex \cite[p.~63]{Lopatkin2019}. The last pair must not both end in the same
 special edge (Theorem~\ref{thm:leavitt:basis}) \cite[p.~63]{Lopatkin2019}.
+
+The basis is what makes a derivation of $L_K(\Gamma)$ computable: a derivation is
+determined by its values on a set of algebra generators, and the normal form
+below reduces the product rule to a finite check on the words listed. Every
+derivation statement in this section is read against that basis.
 
 \begin{theorem}[{\cite[Theorem~1.6, p.~63]{Lopatkin2019}}]\label{thm:leavitt:basis}
 Let $\Gamma$ be a row-finite graph and $K$ a commutative ring. Then the following

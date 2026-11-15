@@ -1,7 +1,7 @@
 # 
 
 Author: Abderrahim Adrabi, Mohammed V University in Rabat.  
-Current version: **v0**.
+Current version: **v0.19**.
 
 ## The idea of the paper
 

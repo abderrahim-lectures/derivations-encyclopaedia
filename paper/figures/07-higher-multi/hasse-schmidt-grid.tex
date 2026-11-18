@@ -1,0 +1,12 @@
+% Terms D_i(x) D_j(y) of D_n(xy) lie on the antidiagonal i + j = n.
+\begin{tikzpicture}[scale=0.8,font=\footnotesize]
+  \foreach \i in {0,...,4} \foreach \j in {0,...,4} {
+    \pgfmathtruncatemacro{\n}{\i+\j}
+    \ifnum\n=3 \fill[hbgold!40] (\i-0.4,\j-0.4) rectangle (\i+0.4,\j+0.4); \fi
+    \fill[hbblue] (\i,\j) circle (1.5pt);}
+  \draw[-{Stealth}] (-0.6,-0.6) -- (4.8,-0.6) node[right] {$i$ in $D_i(x)$};
+  \draw[-{Stealth}] (-0.6,-0.6) -- (-0.6,4.8) node[above] {$j$ in $D_j(y)$};
+  \foreach \k in {0,...,4} {\node[below] at (\k,-0.6) {$\k$}; \node[left] at (-0.6,\k) {$\k$};}
+  \draw[hbgold!80!black,thick] (-0.3,3.3) -- (3.3,-0.3) node[below right] {$i+j=3$};
+  \node[anchor=west] at (5.2,2.2) {$D_3(xy)=\displaystyle\sum_{i+j=3}D_i(x)\,D_j(y)$};
+\end{tikzpicture}

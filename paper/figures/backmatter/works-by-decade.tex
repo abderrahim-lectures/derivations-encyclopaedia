@@ -1,0 +1,36 @@
+% Works per decade, from atlas-census.py.
+%
+% Redrawn 2026-11-18. The first version set y=0.0625cm against a bar height of
+% 400, so the axis was 25 cm tall in a text block of about 20 cm: rendered, the
+% axis filled the page, the decade labels never printed, and the caption was
+% cut off below the text block. It also printed every decade's number, which
+% table A.1 beside it already does.
+%
+% This version is a SHAPE, not a second copy of the table: three lines of height
+% that fit the measure, the decade labels flat instead of rotated, and only the
+% two bars the caption argues about labelled. A reader who wants the numbers
+% reads the table.
+\begin{tikzpicture}[font=\footnotesize, x=0.62cm, y=0.011cm]
+  % The axis: 400 works over 4.4 cm, so the whole figure is under 5 cm tall.
+  \draw[->] (0,0) -- (16.2,0) node[right] {decade};
+  \draw[->] (0,0) -- (0,400) node[above] {works};
+  \foreach \y in {0, 100, 200, 300, 400} {
+    \draw[gray!35] (0,\y) -- (15.4,\y);
+    \node[left, font=\scriptsize] at (0,\y) {\y};
+  }
+  % Bars up to 40 works are invisible at this scale, so they are ticked instead:
+  % the point is when the literature starts to grow, and the axis says so.
+  \foreach \i/\d/\v in {1/1680/1, 2/1880/1, 3/1890/1, 4/1910/2, 5/1920/3,
+                        6/1930/5, 7/1940/6, 8/1950/6, 9/1960/17, 10/1970/37,
+                        11/1980/39, 12/1990/76, 13/2000/115, 14/2010/309,
+                        15/2020/356} {
+    \fill[hbblue!70] (\i-0.30,0) rectangle (\i+0.30,\v);
+  }
+  % Every other decade labelled, so no two labels touch.
+  \foreach \i/\d in {1/1680, 3/1890, 5/1920, 7/1940, 9/1960, 11/1980, 13/2000, 15/2020}
+    \node[below, font=\scriptsize] at (\i,-14) {\d};
+  % "Leibniz" named above its bar, not on the axis: at 1 work the bar is
+  % invisible at this scale, and a label at y=1 printed across the axis line.
+  \node[above, font=\scriptsize] at (1,40) {Leibniz};
+  \node[above, font=\scriptsize] at (15,356) {356};
+\end{tikzpicture}

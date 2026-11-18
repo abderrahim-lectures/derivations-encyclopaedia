@@ -1,0 +1,33 @@
+% Language by decade, from atlas-census.py.
+%
+% Redrawn 2026-11-18. The first version shared the height defect of
+% works-by-decade.tex: y=0.0625cm against a bar height of 400 put a 25 cm axis
+% in a 20 cm text block, so the axis filled the page and the decade labels and
+% caption fell off it. It also restated table A.2 row by row.
+%
+% This version shows the one thing the table cannot: where the later literature
+% is English and the older is German and Latin, in a figure under 6 cm tall.
+\begin{tikzpicture}[font=\footnotesize, x=0.62cm, y=0.011cm]
+  \draw[->] (0,0) -- (16.2,0) node[right] {decade};
+  \draw[->] (0,0) -- (0,400) node[above] {works};
+  \foreach \y in {0, 100, 200, 300, 400} {
+    \draw[gray!35] (0,\y) -- (15.4,\y);
+    \node[left, font=\scriptsize] at (0,\y) {\y};
+  }
+  % The older stratum, German and Latin: a gold base at the foot of each bar.
+  \foreach \i/\v in {1/1, 2/1, 3/1, 4/2, 5/2, 6/2, 10/1}
+    \fill[hbgold!85] (\i-0.30,0) rectangle (\i+0.30,\v);
+  % The later stratum, English and French, stacked above the gold base.
+  \foreach \i/\g/\e in {1/1/0, 2/1/0, 3/1/0, 4/2/0, 5/2/1, 6/2/3, 7/0/6,
+                        8/0/6, 9/0/17, 10/1/36, 11/0/39, 12/0/76,
+                        13/0/115, 14/0/309, 15/0/356}
+    \fill[hbblue!70] (\i-0.30,\g) rectangle (\i+0.30,\g+\e);
+  % Every other decade, flat, so no two labels touch.
+  \foreach \i/\d in {1/1680, 3/1890, 5/1920, 7/1940, 9/1960, 11/1980, 13/2000, 15/2020}
+    \node[below, font=\scriptsize] at (\i,-14) {\d};
+  % A key, because the colours carry the argument.
+  \fill[hbgold!85] (1.2,360) rectangle (1.6,390);
+  \node[right, font=\scriptsize] at (1.7,375) {German and Latin};
+  \fill[hbblue!70] (6.0,360) rectangle (6.4,390);
+  \node[right, font=\scriptsize] at (6.5,375) {English and French};
+\end{tikzpicture}

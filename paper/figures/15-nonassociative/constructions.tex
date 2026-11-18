@@ -1,0 +1,9 @@
+\begin{tikzpicture}[font=\small]
+  \node[hbkey] (A) at (0,0) {associative algebra $A$};
+  \node[hbnode] (L) at (-2.3,-1.9) {Lie algebra $A^{-}$\\ $[x,y]=xy-yx$};
+  \node[hbnode] (J) at (2.3,-1.9) {Jordan algebra $A^{+}$\\ $x\circ y=\tfrac12(xy+yx)$};
+  \draw[hbarrow] (A) -- (L); \draw[hbarrow] (A) -- (J);
+  \node[hbnode] (Alt) at (6.6,0) {alternative algebra};
+  \node[hbnode] (M) at (6.6,-1.9) {Malcev algebra};
+  \draw[hbarrow] (Alt) -- node[right,font=\footnotesize] {$[x,y]$} (M);
+\end{tikzpicture}

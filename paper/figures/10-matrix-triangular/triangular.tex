@@ -1,0 +1,7 @@
+\begin{tikzpicture}[font=\small]
+  \matrix (m) [matrix of math nodes,left delimiter={[},right delimiter={]},
+    nodes={minimum width=10mm,minimum height=8mm}] {A & M\\ 0 & B\\};
+  \node[left=4mm of m] {$\operatorname{Tri}(A,M,B) =$};
+  \draw[hbarrow] (m-1-1.north) to[bend left=50] node[above,font=\footnotesize] {$A$ acts on $M$} (m-1-2.north);
+  \draw[hbarrow] (m-2-2.south east) to[bend right=50] node[right,font=\footnotesize] {$B$ acts on $M$} (m-1-2.east);
+\end{tikzpicture}

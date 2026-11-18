@@ -1,0 +1,32 @@
+% Dirac (1925), p. 648: laws IA and IIa of the Poisson bracket (equation after
+% (10)) and equation (11), xy - yx = (ih/2pi)[x,y]. Law IIa is the product
+% rule, so with x fixed y -> [x,y] is a derivation; (11) makes the commutator
+% a scalar multiple of that bracket, hence a derivation too.
+\begin{tikzpicture}[font=\small]
+  \def\colw{50mm}
+  % column headings
+  \node[font=\footnotesize\itshape] at (-34mm,7mm) {classical observables};
+  \node[font=\footnotesize\itshape] at ( 34mm,7mm) {quantum variables};
+  % the two algebras and their laws
+  \node[hbnode, text width=\colw, minimum height=22mm, align=left, anchor=north]
+    (L) at (-34mm,0)
+    {Poisson bracket $[x,y]$\\[4pt]
+     {\footnotesize IA\quad $[x+y,z]=[x,z]+[y,z]$}\\[2pt]
+     {\footnotesize IIa\quad $[xy,z]=x[y,z]+[y,z]x$}};
+  \node[hbnode, text width=\colw, minimum height=22mm, anchor=north]
+    (R) at (34mm,0)
+    {commutator $xy-yx$\\[4pt]
+     {\footnotesize $xy-yx=\dfrac{ih}{2\pi}\,[x,y]$}};
+  % what each law gives, one row directly under each algebra
+  \node[hbkey, text width=\colw, anchor=north] (LD) at (-34mm,-46mm)
+    {{\footnotesize with $x$ fixed}\\[2pt] $y\mapsto[x,y]$ is a derivation};
+  \node[hbkey, text width=\colw, anchor=north] (RD) at (34mm,-46mm)
+    {{\footnotesize a scalar multiple of the left map}\\[2pt]
+     $x\mapsto xy-yx$ is a derivation};
+  \draw[hbarrow] (L.south) -- node[left=1pt,font=\footnotesize] {} (LD.north);
+  \draw[hbarrow] (R.south) -- (RD.north);
+  % the two laws are the two sides of one correspondence
+  \draw[hbarrow,<->] (L.east) -- (R.west)
+    node[midway, above=1pt, font=\footnotesize, fill=white, inner sep=1.5pt]
+    {Dirac (11)};
+\end{tikzpicture}

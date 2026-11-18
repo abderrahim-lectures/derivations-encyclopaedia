@@ -1,0 +1,295 @@
+% Encyclopaedia of Derivation-like Maps: book style.
+% The one place for layout, fonts, headings, theorem styles and notation.
+% Loaded by derivations-encyclopaedia.tex and by every single-chapter build
+% (tools/scripts/encyclopaedia/build-chapter.sh), so a chapter looks the same alone
+% and in the book.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{style/encyclopaedia}[2026/10/01 v0.2 Encyclopaedia of Derivation-like Maps]
+
+% ---- encoding and fonts ----------------------------------------------------
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
+\RequirePackage[final]{microtype}
+
+% ---- page layout (memoir) --------------------------------------------------
+% B5-like trim, 170 x 240 mm, a common size for mathematics encyclopaedias.
+\setstocksize{240mm}{170mm}
+\settrimmedsize{\stockheight}{\stockwidth}{*}
+% The measure is bounded by the trim, not chosen freely.
+%
+% On 2026-11-18 I widened this from 125mm to 140mm to fit 31 displays that were
+% overflowing, and did not check what the trim could hold: 170mm of page less
+% 140mm of measure leaves 30mm for BOTH margins, and \setlrmargins{*}{*}{1.3}
+% gives the outer about 5mm. Rendered, the text ran to within 14.5pt of the
+% trim edge -- the owner's "I still see issues on the PDF".
+%
+% 118mm leaves 52mm for the margins and still fits what 125mm could not: the
+% two worst displays were rewritten to break over two lines at the source.
+\settypeblocksize{190mm}{118mm}{*}
+\setlrmargins{*}{*}{1.15}
+\setulmargins{20mm}{*}{*}
+% A long inline formula cannot break, and TeX's default tolerance makes it run
+% past the measure rather than loosen the line above it. emergencystretch lets
+% the paragraph absorb the slack instead, which is the standard cure for a
+% bibliography and a theorem line alike (2026-11-18: the page audit showed
+% "H^1(R,M) = Der_k(R,M)/PDer_k(R,M)" drawn beyond the trim edge).
+\setlength{\emergencystretch}{2.5em}
+% Two lines of head, because \hbheadtitle below is a \parbox and a long chapter
+% title breaks rather than running off the page (2026-11-18).
+\setheadfoot{2\onelineskip}{2\onelineskip}
+\setheaderspaces{*}{2\onelineskip}{*}
+\checkandfixthelayout
+
+% ---- chapter, section and page styles --------------------------------------
+% The chapter opening is built here rather than taken from memoir's set,
+% because the stock styles each fail on this book's long titles: madsen
+% right-aligns the title, so "Derivations of near-rings, semirings, Gamma-rings
+% and lattices" left its last word alone at the right margin, and veelo pushes
+% the whole block sideways and puts the number past the trim edge (both seen on
+% 2026-11-18). This prints the label and number, a rule, then the title flush
+% left, which is what every other heading in the book does.
+\makechapterstyle{encyclopaedia}{%
+  \renewcommand{\printchaptername}{\chapnamefont\chaptername}%
+  \renewcommand{\printchapternum}{\chapnumfont\thechapter}%
+  % The number needs a line of its own: with no gap after it the title ran on
+  % as "CHAPTER 16Derivations of near-rings" (2026-11-18).
+  \renewcommand{\afterchapternum}{\par\nobreak\vskip 6pt}%
+  \renewcommand{\printchaptertitle}[1]{%
+    \chaptitlefont\raggedright##1}%
+  \renewcommand{\chaptitlefont}{\normalfont\Large\bfseries}%
+  \renewcommand{\chapnamefont}{\normalfont\Large\scshape}%
+  \renewcommand{\chapnumfont}{\normalfont\Huge\bfseries}%
+  \renewcommand{\printchapternonum}{}%
+  % memoir drops the chapter opening 50pt below the top of the text block by
+  % default. On a short opening page that reads as a large blank band under the
+  % running head: "Origins of the notion, from Leibniz to Hochschild" began
+  % 130pt down a 680pt page, a fifth of the type area empty above it (owner,
+  % 2026-11-18). 12pt keeps the head clear of the rule without the hole.
+  \setlength{\beforechapskip}{12pt}%
+  \setlength{\afterchapskip}{24pt}%
+}
+\chapterstyle{encyclopaedia}
+\setsecheadstyle{\Large\bfseries\raggedright}
+\setsubsecheadstyle{\large\bfseries\raggedright}
+\makepagestyle{encyclopaedia}
+% The folio and the running head are set in fixed-width cells and the chapter
+% title is TRUNCATED to the width left for it. memoir's three-cell head prints
+% the middle cell at its natural width, so a long chapter title (\leftmark is
+% written at the header's size) overflowed its cell and printed ON TOP of the
+% page number: page 360 printed "360CHAPTER 19. DERIVATIONS OF BANACH AND
+% OPERATOR ALGEBRAS" overlapping itself (2026-11-18).
+%
+% The width available to the head is \textwidth minus the folio cell. The title
+% is put in a box that cannot exceed it, so an over-long title is cut rather
+% than drawn over the number.
+\newlength{\hbheadnumwidth}
+\setlength{\hbheadnumwidth}{3.2em}
+% memoir sets the head's first cell flush left, the third flush right, and the
+% middle cell between them. The title's cell therefore has \textwidth minus TWO
+% folio cells, not one: with one, "CHAPTER 13. GROUP ALGEBRAS, HOPF ALGEBRAS AND
+% QUANTUM GROUPS" still ran to the trim edge.
+%
+% The box is a \parbox, not a \makebox: a \makebox does not wrap, so an over-long
+% chapter title simply overflowed the box and off the page. A \parbox at the
+% same width breaks the title instead, and the second line sits inside the head
+% because \setheadfoot leaves room for it.
+\newcommand{\hbheadtitle}[1]{%
+  \parbox[b]{\dimexpr\textwidth-2\hbheadnumwidth\relax}{\raggedright\small\itshape #1}}
+\makeevenhead{encyclopaedia}%
+  {\makebox[\hbheadnumwidth][l]{\small\thepage}}{}{\hbheadtitle{\leftmark}}
+\makeoddhead{encyclopaedia}%
+  {\hbheadtitle{\rightmark}}{}{\makebox[\hbheadnumwidth][r]{\small\thepage}}
+\makeheadrule{encyclopaedia}{\textwidth}{0.3pt}
+% The marks are built as text here, not left to \createmark's shownumber form:
+% that form printed the number with no separator ("20.5DERIVATIONS OF GROUPS
+% AND THE FIRST COHOMOLOGY OF GROUPS", page 407) and it carried the section
+% number on a page whose own heading is the section, so the head and the
+% heading below it both read "20.5". The chapter mark is "CHAPTER n. TITLE" and
+% the section mark is the section title alone.
+\newcommand{\hbchapmark}{%
+  \ifnum\value{chapter}>0 \chaptername\ \thechapter.\ \fi\leftmark}
+\newcommand*{\hbsectionmark}{\rightmark}
+\makeevenhead{encyclopaedia}%
+  {\makebox[\hbheadnumwidth][l]{\small\thepage}}{}{\hbheadtitle{\hbchapmark}}
+\makeoddhead{encyclopaedia}%
+  {\hbheadtitle{\hbsectionmark}}{}{\makebox[\hbheadnumwidth][r]{\small\thepage}}
+\makepsmarks{encyclopaedia}{%
+  \createmark{chapter}{left}{nonumber}{}{}
+  \createmark{section}{right}{nonumber}{}{}}
+\pagestyle{encyclopaedia}
+\aliaspagestyle{chapter}{plain}
+\setsecnumdepth{subsection}
+\maxtocdepth{section}
+
+% ---- mathematics -----------------------------------------------------------
+\RequirePackage{amsmath,amssymb,mathtools}
+\RequirePackage{amsthm}
+
+% The space around displays (owner, 2026-11-18: "a lot of white spaces between
+% equations"). With the class defaults every display carried 12pt of stretch
+% above and below, and \abovedisplayskip applies even when the display opens the
+% paragraph, so a run of short displays left half-empty pages. Tightened and
+% made rigid, so the gap is the same on every page and the page breaker is not
+% free to enlarge one to fill the measure.
+\setlength{\abovedisplayskip}{6pt plus 2pt minus 2pt}
+\setlength{\belowdisplayskip}{6pt plus 2pt minus 2pt}
+\setlength{\abovedisplayshortskip}{3pt plus 1pt}
+\setlength{\belowdisplayshortskip}{3pt plus 1pt}
+\setlength{\jot}{3pt}
+
+% ---- tables, figures, colour -----------------------------------------------
+\RequirePackage{booktabs,longtable}
+\RequirePackage{graphicx}
+\graphicspath{{figures/}}
+\RequirePackage{xcolor}
+\definecolor{hbblue}{RGB}{31,58,96}
+\definecolor{hbgold}{RGB}{176,141,62}
+% Cover palette: warm paper, deep indigo ink, one terracotta accent.
+\definecolor{covercream}{RGB}{247,243,234}
+\definecolor{coverindigo}{RGB}{28,42,74}
+\definecolor{coveraccent}{RGB}{196,92,44}
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,cd,decorations.pathreplacing,shapes.geometric,fit,matrix}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.18}
+% Concept figures live in figures/NN-slug/<name>.tex, one tikzpicture each,
+% and are placed with \hbfigure{NN-slug/<name>}{<caption>}{<label>}.
+\tikzset{
+  hbnode/.style={draw=hbblue, rounded corners=2pt, fill=hbblue!6, inner sep=4pt,
+    align=center, font=\small},
+  hbkey/.style={hbnode, fill=hbgold!20, draw=hbgold!80!black},
+  hbarrow/.style={-{Stealth[length=2mm]}, thick, hbblue},
+  hbimplies/.style={-{Implies}, double, double distance=1.2pt, hbblue},
+}
+% [H]: the figure stays exactly where it is written, next to its text.
+\RequirePackage{float}
+% Twelve lists in this book are written \begin{enumerate}[label=(\roman*)] and
+% the package that understands that option was never loaded, so LaTeX typeset
+% the option as literal text: page 216 printed "lbbel=(ii)" before the item it
+% labels (2026-11-18, found by rendering the page). enumitem makes the option
+% mean what it says.
+\RequirePackage{enumitem}
+\newcommand{\hbfigure}[3]{%
+  \begin{figure}[H]\centering\input{figures/#1}\caption{#2}\label{#3}\end{figure}}
+
+% ---- index -----------------------------------------------------------------
+\RequirePackage{imakeidx}
+\makeindex[intoc,columns=2,title=Index]
+
+% ---- bibliography ----------------------------------------------------------
+% Grouped by year, alphabetical within a year. Every entry is cited as
+% [YEAR-n]: the label and the sort key come from build/bib-labels.tex,
+% written by tools/scripts/encyclopaedia/bib-labels.sh before each build.
+% All authors are printed (no "et al.").
+\RequirePackage[backend=biber, style=numeric, sorting=nyt,
+  maxnames=999, minnames=999, giveninits=false]{biblatex}
+\addbibresource{bib/encyclopaedia.bib}
+\InputIfFileExists{build/bib-labels.tex}{}{%
+  \PackageWarning{encyclopaedia}{build/bib-labels.tex missing: run bib-labels.sh}}
+\AtEveryBibitem{\clearlist{language}}
+\DeclareFieldFormat{shorthandwidth}{\mkbibbrackets{#1}}
+\renewbibmacro*{cite}{\printtext[bibhyperref]{\printfield{shorthand}}}
+\defbibenvironment{bibliography}
+  {\list{\printfield[shorthandwidth]{shorthand}}
+     {\setlength{\labelwidth}{\shorthandwidth}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \addtolength{\leftmargin}{\labelsep}}%
+   \renewcommand*{\makelabel}[1]{##1\hss}}
+  {\endlist}
+  {\item}
+
+% ---- links (last) ----------------------------------------------------------
+% The PDF's own metadata, because the PDF is what a reader downloads and what
+% a search or a repository index reads. pdfinfo reported Title, Author,
+% Subject and Keywords all empty until 2026-11-18: hyperref writes them only
+% when they are set, and a LaTeX book titles itself on its own title page, so
+% nothing had ever set them. \hbtitle is defined below, so these are set after
+% the metadata block at the end of this file.
+\RequirePackage[hidelinks,bookmarksnumbered]{hyperref}
+% A DOI or an arXiv identifier has no break point, so 50 bibliography lines ran
+% past the measure -- the page audit showed them drawn beyond the trim edge
+% (2026-11-18). xurl lets a URL break at any character, which is what a printed
+% bibliography needs.
+\RequirePackage{xurl}
+\RequirePackage[capitalise]{cleveref}
+
+% ---- theorem styles --------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% ---- notation (only here) --------------------------------------------------
+\newcommand{\Der}{\operatorname{Der}}
+\newcommand{\Inn}{\operatorname{Inn}}
+\newcommand{\JDer}{\operatorname{JDer}}
+\newcommand{\LDer}{\operatorname{LDer}}
+\newcommand{\HH}{\operatorname{HH}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\End}{\operatorname{End}}
+
+% ---- encyclopaedia metadata (used by the cover, title and imprint) --------------
+\newcommand{\hbtitle}{Encyclopaedia of Derivations}
+% The cover prints the title as two lines; this is the second of them.
+% Keeping it beside \hbtitle means a rename is one edit, not three.
+\newcommand{\hbwordone}{Encyclopaedia}
+\newcommand{\hbtitleshort}{of Derivations}
+\newcommand{\hbsubtitle}{Origins and Development, with Applications and Worked Examples}
+\newcommand{\hbauthor}{Abderrahim Adrabi}
+\newcommand{\hbaffil}{Faculty of Sciences and Faculty of Educational Sciences,\\
+  Mohammed V University in Rabat, Morocco}
+\newcommand{\hbversion}{v0.21}
+\newcommand{\hbedition}{Living edition, updated monthly}
+% The compile date is pinned to a fixed day and bumped with the version, so
+% that rebuilding the same version tomorrow gives the same PDF. A \today here
+% made a rebuilt v84 of braided-sym-deriv differ from the released v84 by one
+% line (2026-11-14), and the same line sat in this book's imprint and title
+% page until the release gate read the flattened body and found it (2026-11-17).
+\newcommand{\hbreleasedate}{18 November 2026}
+
+% ---- translations (owner rule, 2026-10-02: state every translation) --------
+% Owner rule, 2026-10-03: the original comes first, quoted, then the
+% translation.
+% \translated{<our English>}{<original wording>}{<language>}
+%   inline: ``original'' (Language; our translation: ``English'').
+% \begin{originalquote}{<language>}{<original paragraph>} <our English> \end{originalquote}
+%   display: the original paragraph quoted in italics, then our translation.
+% Every paraphrase of a source not in English carries at least one
+% originalquote or \translated with the sentence it rests on.
+\newcommand{\translated}[3]{``\emph{#2}'' (#3; our translation: ``#1'')}
+\newenvironment{originalquote}[2]
+  {\begin{quote}\small``\emph{#2}''\par\smallskip\noindent Our translation
+   from #1: ``\ignorespaces}
+  {\unskip''\end{quote}}
+% \translatedtitle{<language>} after a citation of a work whose title the text
+% gives in English although the work is in another language.
+\newcommand{\translatedtitle}[1]{\footnote{Title translated from #1.}}
+
+% ---- the PDF's metadata (2026-11-18) ----------------------------------------
+% Set last, so every macro below is already defined. A search engine indexes
+% the PDF by these four fields, and pdfinfo reported all four empty.
+% \texorpdfstring keeps the package hyperref-happy: the PDF string has no maths.
+\hypersetup{
+  pdftitle={\hbtitle: \hbsubtitle},
+  pdfauthor={\hbauthor},
+  pdfsubject={Derivations of rings and algebras, their kinds, and their
+    cohomology: generalized, skew, Jordan, Lie, higher, local and approximate
+    derivations, and the maps that measure them},
+  pdfkeywords={derivation, generalized derivation, Lie derivation,
+    Jordan derivation, skew derivation, higher derivation, local derivation,
+    Hochschild cohomology, Gerstenhaber algebra, derivation-like maps,
+    noncommutative algebra, ring theory},
+  pdfcreator={LaTeX with hyperref},
+  pdfproducer={pdfTeX},
+}
+

@@ -1,0 +1,14 @@
+% Timeline of Chapter 1. Not to scale before 1880.
+\begin{tikzpicture}[font=\scriptsize]
+  \draw[thick,hbblue] (0,0) -- (0.8,0); \draw[thick,hbblue,dashed] (0.8,0) -- (1.3,0);
+  \draw[thick,hbblue,-{Stealth}] (1.3,0) -- (12.2,0);
+  \foreach \x/\h/\y/\t in {0.3/0.4/1684/Leibniz, 1.8/-0.4/1882/{Dedekind,\\ Weber}, 3.0/0.4/1897/Hilbert,
+     4.1/-0.4/1910/Steinitz, 5.1/0.4/1919/Speiser, 6.2/-0.4/1925/{Born, Jordan,\\ Dirac},
+     7.3/0.4/1933/Ore, 7.9/-1.4/1934/Raudenbush, 8.5/1.4/1936/Teichm\"uller,
+     9.1/-0.4/1937/{Jacobson;\\ Hasse, Schmidt}, 10.2/1.4/1944/Jacobson, 10.8/-1.4/1945/Hochschild,
+     11.6/0.4/1947/{Eilenberg,\\ Mac~Lane}}{
+    \fill[hbgold!80!black] (\x,0) circle (1.5pt); \draw[gray] (\x,0) -- (\x,\h);
+    \pgfmathparse{\h>0 ? 1 : 0}
+    \ifnum\pgfmathresult=1 \node[above,align=center] at (\x,\h) {\textbf{\y}\\ \t};
+    \else \node[below,align=center] at (\x,\h) {\textbf{\y}\\ \t}; \fi}
+\end{tikzpicture}

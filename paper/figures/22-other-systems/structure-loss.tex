@@ -1,0 +1,42 @@
+% What each system in this chapter keeps, drawn from the introduction's own
+% list: a near-ring drops one distributive law, a semiring drops additive
+% inverses, a Gamma-ring replaces one product by a family, a lattice keeps only
+% the order, and a BCI, MV or subtraction algebra keeps only a difference.
+%
+% Redrawn 2026-11-18, third attempt, and the first one measured. The measure is
+% 118mm = 335pt, and this figure may not exceed it. The two earlier versions
+% put the boxes closer together than their own text, so they either ran off the
+% page or printed on top of one another; the owner saw both. Every box below is
+% given a text width narrow enough that three of them fit across with gaps, and
+% the labels sit under their arrow rather than on it.
+\begin{tikzpicture}[font=\small,
+    box/.style={draw, rounded corners, align=center, inner sep=3pt, font=\scriptsize},
+    lab/.style={font=\scriptsize, align=center}]
+  % Three columns, 105pt apart: 3 x 96pt of box + 2 x 9pt of gap = 306pt.
+  \node[box, fill=hbblue!12, text width=27mm] (ring) at (0,0)
+    {Ring\\$+,-,\cdot$, both distributivities};
+  \node[box, fill=hbblue!6, text width=27mm] (nr) at (-3.75,-2.1)
+    {Near-ring\\one distributivity dropped};
+  \node[box, fill=hbblue!6, text width=27mm] (sr) at (0,-2.1)
+    {Semiring\\additive inverses dropped};
+  \node[box, fill=hbblue!6, text width=27mm] (gr) at (3.75,-2.1)
+    {$\Gamma$-ring\\one product becomes a family};
+  % ORTHOGONAL arrows, and the labels above them. A diagonal from the ring to a
+  % child crosses exactly the band where its label has to sit, which is why four
+  % placements all printed a label on its own line (2026-11-18). Turning down,
+  % across, then down leaves the top of the band empty for the labels.
+  \draw[hbarrow] (ring.south) -- ++(0,-0.85) -| (nr.north);
+  \draw[hbarrow] (ring.south) -- (sr.north);
+  \draw[hbarrow] (ring.south) -- ++(0,-0.85) -| (gr.north);
+  \node[lab] at (-3.75,-0.60) {drops\\$x(y+z)=xy+xz$};
+  \node[lab] at (1.15,-0.60) {drops $-x$};
+  \node[lab] at (3.75,-0.60) {drops one\\product};
+  % The weaker row.
+  \node[box, fill=hbgold!12, text width=30mm] (lat) at (0,-4.3)
+    {Lattice, residuated lattice\\only the order kept};
+  \node[box, fill=hbgold!12, text width=30mm] (bci) at (3.75,-4.3)
+    {BCI, MV, subtraction algebra\\only a difference kept};
+  \draw[hbarrow] (sr.south) -- (lat.north);
+  \node[lab, right=3pt] at (0.1,-3.3) {drops addition};
+  \draw[hbarrow] (lat.east) -- (bci.west);
+\end{tikzpicture}

@@ -1,0 +1,5 @@
+% Bibliography: one section per year, alphabetical within each year, labels
+% YEAR-n. The year sections are generated in build/bib-years.tex by
+% tools/scripts/encyclopaedia/bib-labels.sh.
+\printbibheading[heading=bibintoc, title={Bibliography}]
+\InputIfFileExists{build/bib-years.tex}{}{\printbibliography[heading=none]}

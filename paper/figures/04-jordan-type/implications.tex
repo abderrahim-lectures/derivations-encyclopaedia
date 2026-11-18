@@ -1,0 +1,11 @@
+\begin{tikzpicture}[font=\small]
+  \node[hbkey] (d) at (0,0) {derivation};
+  \node[hbnode] (j) at (0,-2.2) {Jordan derivation\\ $d(x^2)=d(x)x+xd(x)$};
+  \node[hbnode] (t) at (0,-4.4) {Jordan triple derivation\\ $d(xyx)=d(x)yx+xd(y)x+xyd(x)$};
+  \draw[hbimplies] ([xshift=-6mm]d.south) -- ([xshift=-6mm]j.north);
+  \draw[hbimplies] ([xshift=-6mm]j.south) -- ([xshift=-6mm]t.north);
+  \draw[hbimplies,dashed] ([xshift=6mm]j.north) -- ([xshift=6mm]d.south)
+    node[midway,right=2pt,align=left,font=\footnotesize] {prime, char $\neq 2$ (Herstein)};
+  \draw[hbimplies,dashed] ([xshift=6mm]t.north) -- ([xshift=6mm]j.south)
+    node[midway,right=2pt,align=left,font=\footnotesize] {semiprime, 2-torsion free};
+\end{tikzpicture}

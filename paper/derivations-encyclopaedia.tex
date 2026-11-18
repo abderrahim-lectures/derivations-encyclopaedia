@@ -1,0 +1,45 @@
+% Encyclopaedia of Derivation-like Maps.
+% Version: v0.21 (2026-11-18) — the audit that v0.20 left open: every gate passes, 959 of 976 references in the zip, 980 citation rows classified and recorded
+% says why it cannot; four defects the citation judge led to were corrected, and the
+% path-algebra derivations of Adrabi, Bennis and Fahid were added. v0.17 (2026-11-07) — the parts rebalanced: two parts that held a
+% single chapter are folded into their neighbours, and the seven-chapter part
+% is split at the natural boundary. No part now holds fewer than two.
+\documentclass[11pt,openright,twoside]{memoir}
+\usepackage{style/encyclopaedia}
+
+\begin{document}
+\frontmatter
+\input{book/cover}
+\input{book/half-title}
+\input{book/title-page}
+\input{book/imprint}
+\input{book/dedication}
+\input{book/contents}
+\input{frontmatter/index-of-kinds}
+\input{frontmatter/preface}
+% The question tables open the book rather than closing it (owner, 2026-11-18).
+% They state the eight families of question the chapters answer, so they are the
+% book's motivation: a reader meets "which kind of derivation implies which"
+% before Chapter 1, not on page 425 as Appendix B.
+\input{backmatter/question-tables}
+\input{frontmatter/how-to-use}
+\input{frontmatter/notation}
+
+\mainmatter
+\input{chapters/index}
+
+% The appendices are their own part. Without this \part, LaTeX files them
+% under the last chapter part, so Appendix A appeared inside "Cohomology and
+% deformation" (owner, 2026-11-07).
+\part{Appendices}
+\appendix
+\input{backmatter/atlas}
+
+% The bibliography is back matter, not an appendix item (owner, 2026-11-18: it
+% was "hidden in appendix"). In \backmatter it becomes a top-level division of
+% its own, so it appears in the contents by name and a reader finds the
+% references from the contents page.
+\backmatter
+\input{backmatter/bibliography}
+\input{book/index}
+\end{document}

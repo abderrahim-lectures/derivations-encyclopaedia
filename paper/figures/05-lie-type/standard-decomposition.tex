@@ -1,0 +1,18 @@
+% Martindale's standard form (Martindale 1964, Theorem 2, p. 187): every Lie
+% derivation d of A is d'+tau, where d' is an ordinary derivation of A* and
+% tau is an additive map of A into the center of A* that sends commutators to
+% zero. Drawn as a decomposition: one bar cut into its two parts.
+\begin{tikzpicture}[font=\small]
+  % the two parts of the bar
+  \fill[hbblue!10,draw=hbblue,thick,rounded corners=2pt] (0,0) rectangle (44mm,9mm);
+  \fill[hbgold!25,draw=hbgold!80!black,thick,rounded corners=2pt] (44mm,0) rectangle (72mm,9mm);
+  \node[font=\small] at (22mm,4.5mm) {derivation $d'$};
+  \node[font=\small] at (58mm,4.5mm) {$\tau$};
+  % the whole the parts make up
+  \node[font=\small,anchor=south] at (36mm,10mm) {$d=d'+\tau$};
+  % what each part is, and the property that defines tau
+  \node[font=\footnotesize,anchor=north,align=center,text width=42mm] at (22mm,-1.5mm)
+    {ordinary derivation of $A^{\ast}$};
+  \node[font=\footnotesize,anchor=north,align=center,text width=32mm] at (58mm,-1.5mm)
+    {additive $A\to Z(A^{\ast})$,\\ $\tau[a,b]=0$};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+% On C[0,2pi] with the sup norm, ||sin(nx)|| = 1 but ||(sin(nx))'|| = n: d/dx is unbounded.
+%
+% Redrawn 2026-11-18. `axis lines=middle` drew the x-axis through y=0, where the
+% ticks for 1, -1, pi and 2pi also sit, so the tick labels printed on top of the
+% axis and of the curves (the owner saw the overlap). The axis now sits at the
+% foot, the ticks are the four the argument uses, and the figure is drawn at
+% text width so it does not float half-empty across the measure.
+\begin{tikzpicture}
+\begin{axis}[width=\textwidth,height=5.2cm,xmin=0,xmax=6.6,ymin=-5,ymax=5,
+  axis lines=left, xlabel={$x$}, ylabel={},
+  xtick={1.5708,3.1416,4.7124,6.2832},
+  xticklabels={$\frac{\pi}{2}$,$\pi$,$\frac{3\pi}{2}$,$2\pi$},
+  ytick={-4,-1,1,4}, yticklabels={$-4$,$-1$,$1$,$4$},
+  tick label style={font=\scriptsize}, label style={font=\scriptsize},
+  legend style={font=\footnotesize,at={(0.5,-0.22)},anchor=north,
+    legend columns=2,draw=none}, legend cell align=left]
+  \addlegendimage{hbblue,thick}
+  \addlegendentry{$\sin 4x$, norm $1$}
+  \addlegendimage{hbgold!80!black,thick}
+  \addlegendentry{$4\cos 4x$, norm $4$}
+  \addplot[hbblue,thick,domain=0:6.2832,samples=300] {sin(deg(4*x))};
+  \addplot[hbgold!80!black,thick,domain=0:6.2832,samples=300] {4*cos(deg(4*x))};
+\end{axis}
+\end{tikzpicture}

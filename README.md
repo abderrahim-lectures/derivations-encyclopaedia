@@ -6,11 +6,51 @@ Author: Abderrahim Adrabi, Mohammed V University in Rabat.
 Current version: **v0.21**.  
 PDF: [`pdf/derivations-encyclopaedia-v0.21.pdf`](pdf/derivations-encyclopaedia-v0.21.pdf)
 
-**Contents:** [Foundations and history](#foundations-and-history) · [Derivations of associative rings](#derivations-of-associative-rings) · [Enlarged classes and local maps](#enlarged-classes-and-local-maps) · [Concrete classes of associative algebras](#concrete-classes-of-associative-algebras) · [Nonassociative algebras](#nonassociative-algebras) · [Commutative and differential algebra](#commutative-and-differential-algebra) · [Analysis and cohomology](#analysis-and-cohomology) · [Appendices](#appendices) · [All 173 kinds](#all-173-kinds-of-derivation-like-map) · [Citing this book](#citing-this-book)
+**Contents:** [Foundations and history](#foundations-and-history) · [Derivations of associative rings](#derivations-of-associative-rings) · [Enlarged classes and local maps](#enlarged-classes-and-local-maps) · [Concrete classes of associative algebras](#concrete-classes-of-associative-algebras) · [Nonassociative algebras](#nonassociative-algebras) · [Commutative and differential algebra](#commutative-and-differential-algebra) · [Analysis and cohomology](#analysis-and-cohomology) · [Appendices](#appendices) · [Exploring the literature](#exploring-the-literature) · [All 173 kinds](#all-173-kinds-of-derivation-like-map) · [Citing this book](#citing-this-book)
 
 ## The idea of the book
 
 A derivation obeys the product rule: an additive map d with d(xy)=d(x)y+xd(y). Leibniz wrote that rule in 1684 for the calculus, and three centuries later the same equation defines a map on any ring. This book follows the equation from the calculus to the present, class by class. The classes begin with commutative rings, and continue with the prime and semiprime rings and the Jordan, Lie, Leibniz, alternative, Malcev, Poisson, super and n-ary algebras. They continue with path, incidence and Leavitt path algebras; matrix, triangular, polynomial and Weyl algebras; Banach and operator algebras; group and Hopf algebras; and differential fields with their Galois theory. The book follows the equation into the maps that weaken it as well, which are higher derivations, biderivations and other multiadditive maps. They are the local and 2-local derivations, the generalized and twisted derivations, and the commuting and centralizing maps that a derivation must be. The book follows it too into the groups that measure it. These are the Hochschild cohomology of an algebra and the Gerstenhaber bracket on it, whose first cohomology group is the derivations modulo the inner ones. For each class it states the definitions with their located sources, records the theorems that settle which derivations are inner, and reports the questions still open. Every statement belongs to a source read in full from the page, and the book states no result of its own.
+
+## Exploring the literature
+
+The bibliography holds **975 works**, 1684 to 2026, with a median year of 2016. The shape below is computed from those records, not estimated: a work's decade comes from its year and its kind from its title.
+
+The collection is young. **780 of 975 works (80%) appeared after 2000**, and 665 since 2010. The most productive *complete* decade is the 2010s with 309; the 2020s already hold 356, and that decade is not over.
+
+### Works per decade
+
+| Decade | Works | | Decade | Works |
+|---|---|---|---|---|
+| 1680s | 1 | | 1960s | 17 |
+| 1880s | 1 | | 1970s | 37 |
+| 1890s | 1 | | 1980s | 39 |
+| 1910s | 2 | | 1990s | 76 |
+| 1920s | 3 | | 2000s | 115 |
+| 1930s | 5 | | 2010s | 309 |
+| 1940s | 6 | | 2020s | 356 |
+| 1950s | 6 | | | |
+
+### Language
+
+**English carries 99%** of the collection (963 works); the rest is German 9, French 2, Latin 1. The German and Latin works are the older stratum, which the Atlas in Appendix A shows decade by decade.
+
+### What the field studies
+
+Titles name **173 kinds** of derivation-like map (out of 200 rows the kind census holds, the rest being fragments of the mining method), and the study of them is concentrated: the single most named kind accounts for 33% of all kind mentions, and the top three for 53%. The 8 leaders are below; the full list of the kinds the book defines follows.
+
+| Kind | Works naming it |
+|---|---|
+| generalized derivation | 592 |
+| skew derivation | 179 |
+| higher derivation | 145 |
+| jordan derivation | 135 |
+| lie derivation | 107 |
+| triple derivation | 98 |
+| nilpotent derivation | 85 |
+| `*-derivation` | 82 |
+
+All of these figures come from `tools/scripts/handbook/atlas-census.py`, the script that also prints the Atlas in the book's Appendix A, so the two cannot disagree. The works themselves are not part of this repository.
 
 ## All 173 kinds of derivation-like map
 

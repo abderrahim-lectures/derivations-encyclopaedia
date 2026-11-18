@@ -1,4 +1,14 @@
 % Contents, list of figures, list of tables.
+% A five-letter roman folio (xxxvii) is wider than memoir's page-number box
+% (\@pnumwidth = 1.55em), so LaTeX reported "Overfull \hbox (12pt too wide)"
+% on every front-matter contents line and the numeral printed over the title,
+% which the owner saw (2026-11-18). memoir's own \setpnumwidth widens the box,
+% and it is set BEFORE the first list, since each list reads the value as it
+% typesets.
+% Measured, not guessed: \settowidth on "xxxviii" in \bfseries at 10.95pt is
+% 37.08pt, and 2.9em (31.8pt) was still too narrow. 4em leaves a whisker of
+% slack, so no folio of this book can overflow its box.
+\setpnumwidth{4em}
 \tableofcontents*
 \cleardoublepage
 \listoffigures*

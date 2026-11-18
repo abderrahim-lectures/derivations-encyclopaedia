@@ -17,6 +17,11 @@
 \input{book/contents}
 \input{frontmatter/index-of-kinds}
 \input{frontmatter/preface}
+% The question tables open the book rather than closing it (owner, 2026-11-18).
+% They state the eight families of question the chapters answer, so they are the
+% book's motivation: a reader meets "which kind of derivation implies which"
+% before Chapter 1, not on page 425 as Appendix B.
+\input{backmatter/question-tables}
 \input{frontmatter/how-to-use}
 \input{frontmatter/notation}
 
@@ -29,8 +34,11 @@
 \part{Appendices}
 \appendix
 \input{backmatter/atlas}
-\input{backmatter/question-tables}
 
+% The bibliography is back matter, not an appendix item (owner, 2026-11-18: it
+% was "hidden in appendix"). In \backmatter it becomes a top-level division of
+% its own, so it appears in the contents by name and a reader finds the
+% references from the contents page.
 \backmatter
 \input{backmatter/bibliography}
 \input{book/index}

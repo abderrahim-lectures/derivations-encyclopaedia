@@ -16,10 +16,17 @@
 % B5-like trim, 170 x 240 mm, a common size for mathematics encyclopaedias.
 \setstocksize{240mm}{170mm}
 \settrimmedsize{\stockheight}{\stockwidth}{*}
-\settypeblocksize{190mm}{125mm}{*}
+% 125mm of measure on A4 is narrower than a mathematics book needs, and 31
+% displays in this book overflowed it by more than 20pt (the worst by 114pt, a
+% double sum over two subscripts in chapter 11). 140mm keeps the generous
+% margin this book is set with and gives those displays the room
+% (2026-11-18).
+\settypeblocksize{190mm}{140mm}{*}
 \setlrmargins{*}{*}{1.3}
 \setulmargins{24mm}{*}{*}
-\setheadfoot{\onelineskip}{2\onelineskip}
+% Two lines of head, because \hbheadtitle below is a \parbox and a long chapter
+% title breaks rather than running off the page (2026-11-18).
+\setheadfoot{2\onelineskip}{2\onelineskip}
 \setheaderspaces{*}{2\onelineskip}{*}
 \checkandfixthelayout
 
@@ -28,12 +35,50 @@
 \setsecheadstyle{\Large\bfseries\raggedright}
 \setsubsecheadstyle{\large\bfseries\raggedright}
 \makepagestyle{encyclopaedia}
-\makeevenhead{encyclopaedia}{\small\thepage}{}{\small\itshape\leftmark}
-\makeoddhead{encyclopaedia}{\small\itshape\rightmark}{}{\small\thepage}
+% The folio and the running head are set in fixed-width cells and the chapter
+% title is TRUNCATED to the width left for it. memoir's three-cell head prints
+% the middle cell at its natural width, so a long chapter title (\leftmark is
+% written at the header's size) overflowed its cell and printed ON TOP of the
+% page number: page 360 printed "360CHAPTER 19. DERIVATIONS OF BANACH AND
+% OPERATOR ALGEBRAS" overlapping itself (2026-11-18).
+%
+% The width available to the head is \textwidth minus the folio cell. The title
+% is put in a box that cannot exceed it, so an over-long title is cut rather
+% than drawn over the number.
+\newlength{\hbheadnumwidth}
+\setlength{\hbheadnumwidth}{3.2em}
+% memoir sets the head's first cell flush left, the third flush right, and the
+% middle cell between them. The title's cell therefore has \textwidth minus TWO
+% folio cells, not one: with one, "CHAPTER 13. GROUP ALGEBRAS, HOPF ALGEBRAS AND
+% QUANTUM GROUPS" still ran to the trim edge.
+%
+% The box is a \parbox, not a \makebox: a \makebox does not wrap, so an over-long
+% chapter title simply overflowed the box and off the page. A \parbox at the
+% same width breaks the title instead, and the second line sits inside the head
+% because \setheadfoot leaves room for it.
+\newcommand{\hbheadtitle}[1]{%
+  \parbox[b]{\dimexpr\textwidth-2\hbheadnumwidth\relax}{\raggedright\small\itshape #1}}
+\makeevenhead{encyclopaedia}%
+  {\makebox[\hbheadnumwidth][l]{\small\thepage}}{}{\hbheadtitle{\leftmark}}
+\makeoddhead{encyclopaedia}%
+  {\hbheadtitle{\rightmark}}{}{\makebox[\hbheadnumwidth][r]{\small\thepage}}
 \makeheadrule{encyclopaedia}{\textwidth}{0.3pt}
+% The marks are built as text here, not left to \createmark's shownumber form:
+% that form printed the number with no separator ("20.5DERIVATIONS OF GROUPS
+% AND THE FIRST COHOMOLOGY OF GROUPS", page 407) and it carried the section
+% number on a page whose own heading is the section, so the head and the
+% heading below it both read "20.5". The chapter mark is "CHAPTER n. TITLE" and
+% the section mark is the section title alone.
+\newcommand{\hbchapmark}{%
+  \ifnum\value{chapter}>0 \chaptername\ \thechapter.\ \fi\leftmark}
+\newcommand*{\hbsectionmark}{\rightmark}
+\makeevenhead{encyclopaedia}%
+  {\makebox[\hbheadnumwidth][l]{\small\thepage}}{}{\hbheadtitle{\hbchapmark}}
+\makeoddhead{encyclopaedia}%
+  {\hbheadtitle{\hbsectionmark}}{}{\makebox[\hbheadnumwidth][r]{\small\thepage}}
 \makepsmarks{encyclopaedia}{%
-  \createmark{chapter}{left}{shownumber}{\chaptername\ }{.\ }
-  \createmark{section}{right}{shownumber}{}{.\ }}
+  \createmark{chapter}{left}{nonumber}{}{}
+  \createmark{section}{right}{nonumber}{}{}}
 \pagestyle{encyclopaedia}
 \aliaspagestyle{chapter}{plain}
 \setsecnumdepth{subsection}
@@ -42,6 +87,18 @@
 % ---- mathematics -----------------------------------------------------------
 \RequirePackage{amsmath,amssymb,mathtools}
 \RequirePackage{amsthm}
+
+% The space around displays (owner, 2026-11-18: "a lot of white spaces between
+% equations"). With the class defaults every display carried 12pt of stretch
+% above and below, and \abovedisplayskip applies even when the display opens the
+% paragraph, so a run of short displays left half-empty pages. Tightened and
+% made rigid, so the gap is the same on every page and the page breaker is not
+% free to enlarge one to fill the measure.
+\setlength{\abovedisplayskip}{6pt plus 2pt minus 2pt}
+\setlength{\belowdisplayskip}{6pt plus 2pt minus 2pt}
+\setlength{\abovedisplayshortskip}{3pt plus 1pt}
+\setlength{\belowdisplayshortskip}{3pt plus 1pt}
+\setlength{\jot}{3pt}
 
 % ---- tables, figures, colour -----------------------------------------------
 \RequirePackage{booktabs,longtable}
@@ -69,6 +126,12 @@
 }
 % [H]: the figure stays exactly where it is written, next to its text.
 \RequirePackage{float}
+% Twelve lists in this book are written \begin{enumerate}[label=(\roman*)] and
+% the package that understands that option was never loaded, so LaTeX typeset
+% the option as literal text: page 216 printed "lbbel=(ii)" before the item it
+% labels (2026-11-18, found by rendering the page). enumitem makes the option
+% mean what it says.
+\RequirePackage{enumitem}
 \newcommand{\hbfigure}[3]{%
   \begin{figure}[H]\centering\input{figures/#1}\caption{#2}\label{#3}\end{figure}}
 
@@ -99,6 +162,12 @@
   {\item}
 
 % ---- links (last) ----------------------------------------------------------
+% The PDF's own metadata, because the PDF is what a reader downloads and what
+% a search or a repository index reads. pdfinfo reported Title, Author,
+% Subject and Keywords all empty until 2026-11-18: hyperref writes them only
+% when they are set, and a LaTeX book titles itself on its own title page, so
+% nothing had ever set them. \hbtitle is defined below, so these are set after
+% the metadata block at the end of this file.
 \RequirePackage[hidelinks,bookmarksnumbered]{hyperref}
 \RequirePackage[capitalise]{cleveref}
 
@@ -162,3 +231,22 @@
 % \translatedtitle{<language>} after a citation of a work whose title the text
 % gives in English although the work is in another language.
 \newcommand{\translatedtitle}[1]{\footnote{Title translated from #1.}}
+
+% ---- the PDF's metadata (2026-11-18) ----------------------------------------
+% Set last, so every macro below is already defined. A search engine indexes
+% the PDF by these four fields, and pdfinfo reported all four empty.
+% \texorpdfstring keeps the package hyperref-happy: the PDF string has no maths.
+\hypersetup{
+  pdftitle={\hbtitle: \hbsubtitle},
+  pdfauthor={\hbauthor},
+  pdfsubject={Derivations of rings and algebras, their kinds, and their
+    cohomology: generalized, skew, Jordan, Lie, higher, local and approximate
+    derivations, and the maps that measure them},
+  pdfkeywords={derivation, generalized derivation, Lie derivation,
+    Jordan derivation, skew derivation, higher derivation, local derivation,
+    Hochschild cohomology, Gerstenhaber algebra, derivation-like maps,
+    noncommutative algebra, ring theory},
+  pdfcreator={LaTeX with hyperref},
+  pdfproducer={pdfTeX},
+}
+

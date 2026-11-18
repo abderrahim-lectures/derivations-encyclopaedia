@@ -26,11 +26,13 @@ Let $X$ be a finite pre-ordered set and $F$ a commutative ring with unit. The
 I(X,F)=\{\,f\colon X\times X\to F\mid f(x,y)=0\text{ if }x\not\le y\,\},
 \end{equation*}
 with
-\begin{equation*}
+% Three definitions on one line overflowed the measure by 95pt (2026-11-18),
+% and the page audit reported the third drawn past the right margin. Two lines.
+\begin{gather*}
 (f+g)(x,y)=f(x,y)+g(x,y),\qquad
-(f\cdot g)(x,y)=\sum_{x\le z\le y}f(x,z)\,g(z,y),\qquad
-(\lambda f)(x,y)=\lambda f(x,y)
-\end{equation*}
+(\lambda f)(x,y)=\lambda f(x,y)\\
+(f\cdot g)(x,y)=\sum_{x\le z\le y}f(x,z)\,g(z,y)
+\end{gather*}
 for all $f,g\in I(X,F)$, $\lambda\in F$ and $x,y,z\in X$.
 \end{definition}
 

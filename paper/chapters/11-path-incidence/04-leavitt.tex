@@ -161,10 +161,13 @@ $|\{e\in E\colon r(e)=s(w)\}|<\infty$;
 \item if the edge $e$ is special, $s(e)=r(e)$,
 $\mathrm{supp}_{e}(s(e))\cap\mathrm{supp}_{e}(r(e))=\varnothing$, and both supports
 are finite, then
-\begin{equation*}
-D_{ee^{*}}=\alpha\!\!\sum_{\substack{f,g\in E\setminus\vartheta(V)\\ r(g)\in\mathrm{supp}_{e}(s(e)),\ s(f)\in\mathrm{supp}_{e}(s(e))}}\!\!(D_{gg^{*}}-D_{f\!f^{*}})
+% Broken over two lines (2026-11-18): as one line this display overflowed the
+% measure by 114pt, the worst in the book, and the page audit reported its tail
+% drawn past the right margin.
+\begin{multline*}
+D_{ee^{*}}=\alpha\!\!\sum_{\substack{f,g\in E\setminus\vartheta(V)\\ r(g)\in\mathrm{supp}_{e}(s(e)),\ s(f)\in\mathrm{supp}_{e}(s(e))}}\!\!(D_{gg^{*}}-D_{f\!f^{*}})\\
 +\beta\!\!\sum_{\substack{f,g\in E\setminus\vartheta(V)\\ r(g)\in\mathrm{supp}_{e}(r(e)),\ s(f)\in\mathrm{supp}_{e}(r(e))}}\!\!(D_{gg^{*}}-D_{f\!f^{*}}),
-\end{equation*}
+\end{multline*}
 with $\alpha,\beta\in K$ and $\alpha-\beta=1$;
 \item $D_{c}=D_{\zeta^{k}c}-\sum_{e\in E}D_{\zeta^{k}cee^{*}}$ whenever
 $\delta_{c_{0},\vartheta}\cdots\delta_{c_{k-1},\vartheta}=0$,

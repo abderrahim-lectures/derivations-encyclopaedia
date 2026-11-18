@@ -12,7 +12,7 @@
 % sections or definitions. A title naming three kinds counts once under each of the three,
 % so the numbers do not add up to a number of works. The list was cut at two works: a name
 % on a single title in the whole atlas is not yet a kind the literature uses.
-\chapter*{Index of the \textbf{173} kinds of derivation-like map}\label{page:index-of-kinds}
+\chapter*{Index of the \textbf{173} kinds of derivation-like map the literature names, and the \textbf{38} more this book defines}
 The titles of the works in the atlas name \textbf{173} kinds of derivation-like map, % claim-ok: a count of this book's own atlas
 out of the 200 rows the kind census holds. The 27 rows that are not kinds are % claim-ok: the book's own census
 fragments of the mining method, and they are listed with their reason in the
@@ -206,3 +206,87 @@ order within a group of equal counts carries no meaning.
 \item \allowbreak bracket derivation \hfill(2).
 \item \allowbreak *-reverse derivation \hfill(2).
 \end{enumerate}
+
+% ---- the kinds this book defines that no title names (2026-11-18) ----
+% The owner asked where generalized Lie derivations were: defined in chapter 10
+% with a located citation and a theorem, and absent from the list above, because
+% that list is mined from TITLES and no title uses the name. A reader looking the
+% notion up found nothing. This second list is the book's own definitions: every
+% \emph{...derivation} that names a kind, checked against the list above and
+% added here with the chapter that defines it. The two lists answer two
+% questions, and the text says which is which.
+\section*{Kinds this book defines that no title names}
+
+The list above is mined from the titles of the works in the atlas. A kind
+enters it only when at least two titles name it, so a kind this book defines,
+proves theorems about and cites a source for can still be absent: no title in
+the literature surveyed happens to use its name. \emph{Generalized Lie
+derivation} is one, and a reader who looked it up in this index found nothing
+while the definition sat in Chapter 10.
+
+The names below are the book's own: each is defined with a located citation in
+the chapter given after it, and most have a theorem of their own. They are
+listed by chapter so a reader can go straight to the definition. A name that
+also appears above is not repeated.
+
+\begin{description}
+  \item[Prime and semiprime rings] \emph{weak Jordan derivation}.
+  \item[Jordan-type maps] \emph{Jordan left derivation}.
+  \item[Basic theory] \emph{principal derivation}.
+  \item[Generalized, skew and twisted derivations]
+    \emph{$(\alpha,\beta)$-derivation}, \emph{$\alpha$-derivation},
+    \emph{$b$-generalized skew derivation},
+    \emph{generalized $(\alpha,\beta)$-derivation},
+    \emph{inner $\alpha$-derivation}, \emph{$l$-generalized reverse derivation},
+    \emph{$r$-generalized reverse derivation},
+    \emph{generalized inner derivation}.
+  \item[Higher, bi- and $n$-derivations]
+    \emph{$(p,\Delta)$-variate Hasse--Schmidt derivation}, \emph{biderivation},
+    \emph{permuting triderivation}.
+  \item[Local maps] \emph{2-local Lie derivation}, \emph{local Lie derivation},
+    \emph{weak 2-local derivation}.
+  \item[Matrix and triangular algebras]
+    \emph{left theta-derivation}: the derivation twisted by an
+    endomorphism written $\theta$, defined in the section on triangular
+    algebras.
+  \item[Polynomial and Weyl algebras] \emph{Jouanolou derivation}.
+  \item[Lie algebras] \emph{Lie triple derivation}.
+  \item[Nonassociative algebras] \emph{$(n+1)$-ary derivation},
+    \emph{left superderivation}.
+  \item[Banach and operator algebras] \emph{Lie $n$-derivation},
+    \emph{approximate ring derivation}, \emph{bounded point derivation}.
+  \item[Cohomology] \emph{secondary derivation}.
+  \item[Other systems] \emph{$(l,r)$-derivation}, \emph{$(r,l)$-derivation},
+    \emph{Jordan generalized derivation}, \emph{ideal derivation},
+    \emph{implicative derivation}, \emph{left-right derivation},
+    \emph{right-left derivation}, \emph{type I implicative derivation},
+    \emph{type II implicative derivation}.
+\end{description}
+
+\section*{Identities that determine a derivation from the structure of the ring}
+
+A second line of work asks not what a derivation \emph{is} but what an
+equation about it \emph{forces} the ring to be. The equation is a
+\emph{functional identity}: it holds for all values of its variables, and the
+derivation and the ring's elements are the unknowns. A single identity can then
+force a map to be a derivation, an inner one, or a centralizing one, and it can
+force the ring to be prime, semiprime or commutative. Chapter~\ref{ch:functional-identities}
+follows this line, and the notions it uses are these.
+
+\begin{description}
+  \item[Functional identity] an equation holding for all values of its
+    variables, with functions as unknowns \cite[p.~9]{BresarMartindaleChebotar2007FI}.
+  \item[$d$-free set] the set of functions that never meet the derivation $d$
+    in the identity, which decides whether the identity says anything about $d$
+    at all \cite[p.~9]{BresarMartindaleChebotar2007FI}.
+  \item[Commuting map] a map $f$ with $[f(x),x]=0$ for all $x$; on a prime ring
+    it is a centralizer, and a derivation that is a commuting map is inner
+    modulo the centre \cite[p.~385]{Bresar1993}.
+  \item[Centralizing map] a map with $[f(x),x]\in Z(A)$ for all $x$, the weaker
+    form that still forces structure.
+  \item[Centralizer and multiplier] the maps an identity can force a derivation
+    to be, treated in their own right.
+\end{description}
+
+The authors of this line are Bresar, Chebotar, Martindale and Beidar, whose
+book is the reference the chapter follows.

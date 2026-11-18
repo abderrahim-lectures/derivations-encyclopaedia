@@ -61,6 +61,13 @@
   \renewcommand{\chapnamefont}{\normalfont\Large\scshape}%
   \renewcommand{\chapnumfont}{\normalfont\Huge\bfseries}%
   \renewcommand{\printchapternonum}{}%
+  % memoir drops the chapter opening 50pt below the top of the text block by
+  % default. On a short opening page that reads as a large blank band under the
+  % running head: "Origins of the notion, from Leibniz to Hochschild" began
+  % 130pt down a 680pt page, a fifth of the type area empty above it (owner,
+  % 2026-11-18). 12pt keeps the head clear of the rule without the hole.
+  \setlength{\beforechapskip}{12pt}%
+  \setlength{\afterchapskip}{24pt}%
 }
 \chapterstyle{encyclopaedia}
 \setsecheadstyle{\Large\bfseries\raggedright}

@@ -37,12 +37,14 @@ structure.
 \label{def:nonassociative:poisson-derivation}
 Let $B$ be a Poisson algebra. A linear map $D$ on $B$ is a \emph{Poisson
 derivation} if
-\[
+% Two lines: on one line the "for all x,y in B" ran off the 118mm measure and
+% the page audit showed it cut at the trim edge (2026-11-18).
+\begin{gather*}
 D(xy)\;=\;D(x)y+xD(y)
 \quad\text{and}\quad
-D(\{x,y\})\;=\;\{D(x),y\}+\{x,D(y)\}
-\qquad\text{for all }x,y\in B.
-\]
+D(\{x,y\})\;=\;\{D(x),y\}+\{x,D(y)\}\\
+\text{for all }x,y\in B.
+\end{gather*}
 \end{definition}
 
 The basic example is built on a polynomial algebra.

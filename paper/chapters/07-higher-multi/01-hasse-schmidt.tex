@@ -209,10 +209,12 @@ a set of variables and $\Delta\subset\mathbb{N}^p$ a non-empty co-ideal. A
 \emph{$(p,\Delta)$-variate Hasse--Schmidt derivation} of $A$ over $k$ is a
 family $D=(D_\alpha)_{\alpha\in\Delta}$ of $k$-linear maps $D_\alpha\colon A\to A$
 satisfying
-\[
-D_0=\mathrm{Id}_A,\qquad D_\alpha(xy)=\sum_{\beta+\gamma=\alpha}D_\beta(x)D_\gamma(y)
-\quad\text{for every }x,y\in A\text{ and every }\alpha\in\Delta.
-\]
+% Two lines: on one line this ran 57pt past the measure, and the page audit
+% showed its tail beyond the trim edge (2026-11-18).
+\begin{gather*}
+D_0=\mathrm{Id}_A,\qquad D_\alpha(xy)=\sum_{\beta+\gamma=\alpha}D_\beta(x)D_\gamma(y)\\
+\text{for every }x,y\in A\text{ and every }\alpha\in\Delta.
+\end{gather*}
 For $p=1$ and $\Delta=\{q\in\mathbb{N}\mid q\leq m\}$, $D$ is a
 \emph{Hasse--Schmidt derivation of length $m$}, also called a higher derivation.
 \end{definition}

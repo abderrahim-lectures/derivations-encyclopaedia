@@ -78,11 +78,11 @@ The next definition states the implicative derivations on this algebra.
 Let $(A, \to, \rightsquigarrow, 1)$ be a pseudo-BCK algebra. A map
 $d \colon A \to A$ is a \emph{type I implicative derivation} on $A$ if,
 for all $x, y \in A$,
-\[
-d(x \to y) = (x \to d(y)) \vee_1 (d(x) \to y),
-\qquad
+% Two lines: the second identity ran 41pt past the measure (2026-11-18).
+\begin{gather*}
+d(x \to y) = (x \to d(y)) \vee_1 (d(x) \to y),\\
 d(x \rightsquigarrow y) = (x \rightsquigarrow d(y)) \vee_2 (d(x) \rightsquigarrow y),
-\]
+\end{gather*}
 and a \emph{type II implicative derivation} if the two identities hold
 with the summands on the right interchanged, where $\vee_1$ and
 $\vee_2$ are the two joins of the algebra.

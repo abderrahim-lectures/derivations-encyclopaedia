@@ -16,14 +16,25 @@
 % B5-like trim, 170 x 240 mm, a common size for mathematics encyclopaedias.
 \setstocksize{240mm}{170mm}
 \settrimmedsize{\stockheight}{\stockwidth}{*}
-% 125mm of measure on A4 is narrower than a mathematics book needs, and 31
-% displays in this book overflowed it by more than 20pt (the worst by 114pt, a
-% double sum over two subscripts in chapter 11). 140mm keeps the generous
-% margin this book is set with and gives those displays the room
-% (2026-11-18).
-\settypeblocksize{190mm}{140mm}{*}
-\setlrmargins{*}{*}{1.3}
-\setulmargins{24mm}{*}{*}
+% The measure is bounded by the trim, not chosen freely.
+%
+% On 2026-11-18 I widened this from 125mm to 140mm to fit 31 displays that were
+% overflowing, and did not check what the trim could hold: 170mm of page less
+% 140mm of measure leaves 30mm for BOTH margins, and \setlrmargins{*}{*}{1.3}
+% gives the outer about 5mm. Rendered, the text ran to within 14.5pt of the
+% trim edge -- the owner's "I still see issues on the PDF".
+%
+% 118mm leaves 52mm for the margins and still fits what 125mm could not: the
+% two worst displays were rewritten to break over two lines at the source.
+\settypeblocksize{190mm}{118mm}{*}
+\setlrmargins{*}{*}{1.15}
+\setulmargins{20mm}{*}{*}
+% A long inline formula cannot break, and TeX's default tolerance makes it run
+% past the measure rather than loosen the line above it. emergencystretch lets
+% the paragraph absorb the slack instead, which is the standard cure for a
+% bibliography and a theorem line alike (2026-11-18: the page audit showed
+% "H^1(R,M) = Der_k(R,M)/PDer_k(R,M)" drawn beyond the trim edge).
+\setlength{\emergencystretch}{2.5em}
 % Two lines of head, because \hbheadtitle below is a \parbox and a long chapter
 % title breaks rather than running off the page (2026-11-18).
 \setheadfoot{2\onelineskip}{2\onelineskip}
@@ -31,7 +42,27 @@
 \checkandfixthelayout
 
 % ---- chapter, section and page styles --------------------------------------
-\chapterstyle{madsen}
+% The chapter opening is built here rather than taken from memoir's set,
+% because the stock styles each fail on this book's long titles: madsen
+% right-aligns the title, so "Derivations of near-rings, semirings, Gamma-rings
+% and lattices" left its last word alone at the right margin, and veelo pushes
+% the whole block sideways and puts the number past the trim edge (both seen on
+% 2026-11-18). This prints the label and number, a rule, then the title flush
+% left, which is what every other heading in the book does.
+\makechapterstyle{encyclopaedia}{%
+  \renewcommand{\printchaptername}{\chapnamefont\chaptername}%
+  \renewcommand{\printchapternum}{\chapnumfont\thechapter}%
+  % The number needs a line of its own: with no gap after it the title ran on
+  % as "CHAPTER 16Derivations of near-rings" (2026-11-18).
+  \renewcommand{\afterchapternum}{\par\nobreak\vskip 6pt}%
+  \renewcommand{\printchaptertitle}[1]{%
+    \chaptitlefont\raggedright##1}%
+  \renewcommand{\chaptitlefont}{\normalfont\Large\bfseries}%
+  \renewcommand{\chapnamefont}{\normalfont\Large\scshape}%
+  \renewcommand{\chapnumfont}{\normalfont\Huge\bfseries}%
+  \renewcommand{\printchapternonum}{}%
+}
+\chapterstyle{encyclopaedia}
 \setsecheadstyle{\Large\bfseries\raggedright}
 \setsubsecheadstyle{\large\bfseries\raggedright}
 \makepagestyle{encyclopaedia}
@@ -169,6 +200,11 @@
 % nothing had ever set them. \hbtitle is defined below, so these are set after
 % the metadata block at the end of this file.
 \RequirePackage[hidelinks,bookmarksnumbered]{hyperref}
+% A DOI or an arXiv identifier has no break point, so 50 bibliography lines ran
+% past the measure -- the page audit showed them drawn beyond the trim edge
+% (2026-11-18). xurl lets a URL break at any character, which is what a printed
+% bibliography needs.
+\RequirePackage{xurl}
 \RequirePackage[capitalise]{cleveref}
 
 % ---- theorem styles --------------------------------------------------------

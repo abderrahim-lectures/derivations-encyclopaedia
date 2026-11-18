@@ -60,11 +60,13 @@ $\psi(a,b)=\operatorname{Res}\big(\frac{da}{dt}|b\big)_{t}$.  Let
 $\hat{L}(\mathfrak{g})$ be the Lie algebra
 $\mathbb{C}[t,t^{-1}]\otimes\mathfrak{g}+\mathbb{C}c+\mathbb{C}d$
 with bracket
-\[
-[t^{k}\!\otimes\!x+\lambda c+\mu d,\;t^{k_{1}}\!\otimes\!y+\lambda_{1}c+\mu_{1}d]
-=(t^{k+k_{1}}\!\otimes\![x,y]+\mu k_{1}t^{k_{1}}\!\otimes\!y-\mu_{1}k t^{k}\!\otimes\!x)
+% Three lines: on one line this ran 63pt past the measure and the page audit
+% showed it drawn beyond the trim edge (2026-11-18).
+\begin{multline*}
+[t^{k}\!\otimes\!x+\lambda c+\mu d,\;t^{k_{1}}\!\otimes\!y+\lambda_{1}c+\mu_{1}d]\\
+=t^{k+k_{1}}\!\otimes\![x,y]+\mu k_{1}t^{k_{1}}\!\otimes\!y-\mu_{1}k t^{k}\!\otimes\!x\\
 +k\delta_{k,-k_{1}}(x\mid y)c.
-\]
+\end{multline*}
 Then $\hat{L}(\mathfrak{g})$ is an affine Kac--Moody algebra associated
 to the affine matrix $A$ of type $X^{(1)}$.
 \end{theorem}

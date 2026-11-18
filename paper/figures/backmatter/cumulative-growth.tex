@@ -1,0 +1,15 @@
+% The collection accumulated, from atlas-census.py. The curve is flat for two
+% centuries and then steep: half of everything was read in the last decade.
+\begin{tikzpicture}[font=\footnotesize, x=0.52cm, y=0.0625cm]
+  \draw[->] (0,0) -- (16.4,0) node[right] {decade};
+  \draw[->] (0,0) -- (0,1000) node[above] {works to date};
+  \foreach \y in {0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000} {
+    \draw[gray!40] (0,\y) -- (15,\y);
+    \node[left] at (0,\y) {\y};
+  }
+  \draw[hbgold, very thick] plot coordinates {(1,1) (2,2) (3,3) (4,5) (5,8) (6,13) (7,19) (8,25) (9,42) (10,79) (11,118) (12,194) (13,309) (14,618) (15,975)};
+  \foreach \i/\d/\v in {1/1680/1, 5/1920/8, 10/1970/79, 12/1990/194, 15/2020/975} {
+    \fill[hbgold] (\i,\v) circle (2pt);
+    \node[above right, font=\scriptsize] at (\i,\v) {\v};
+  }
+\end{tikzpicture}

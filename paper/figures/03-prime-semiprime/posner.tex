@@ -1,0 +1,8 @@
+\begin{tikzpicture}[font=\small]
+  \node[hbnode,text width=5.2cm] (h1) {$R$ prime, $\operatorname{char} R\neq 2$;\\ $d_1,d_2$ derivations and $d_1d_2$ a derivation};
+  \node[hbkey,right=12mm of h1,text width=2.6cm] (c1) {$d_1=0$ or $d_2=0$};
+  \draw[hbimplies] (h1) -- (c1);
+  \node[hbnode,below=8mm of h1,text width=5.2cm] (h2) {$R$ prime, $d\neq 0$ a derivation,\\ $d(x)x-xd(x)$ central for all $x$};
+  \node[hbkey,right=12mm of h2,text width=2.6cm] (c2) {$R$ commutative};
+  \draw[hbimplies] (h2) -- (c2);
+\end{tikzpicture}

@@ -1,0 +1,10 @@
+% Group algebra k[Z] = k[t,t^{-1}]; the additive character n -> n gives D = t d/dt.
+\begin{tikzpicture}[font=\small,xscale=1.2]
+  \draw[-{Stealth}] (-3.6,0) -- (3.6,0) node[right] {$n$};
+  \foreach \n in {-3,...,3} {
+    \fill[hbblue!60] (\n-0.15,0) rectangle (\n+0.15,{0.35*\n});
+    \node[font=\footnotesize] at (\n,-1.45) {$t^{\n}$};}
+  \node[font=\footnotesize,anchor=east] at (-3.7,-1.45) {basis:};
+  \node[font=\footnotesize,anchor=east] at (-3.7,0.5) {coefficient $n$:};
+  \node[align=left,anchor=west,font=\footnotesize] at (3.9,0.4) {$D(t^{n}) = n\,t^{n}$,\\ $D = t\,\dfrac{d}{dt}$};
+\end{tikzpicture}

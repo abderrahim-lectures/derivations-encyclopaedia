@@ -1,0 +1,10 @@
+% D = d/dx + x d/dy: field (1,x); orbits y = x^2/2 + c.
+\begin{tikzpicture}[scale=1.1,font=\small]
+  \draw[-{Stealth}] (-2.3,0) -- (2.4,0) node[right] {$x$};
+  \draw[-{Stealth}] (0,-1.6) -- (0,3.1) node[above] {$y$};
+  \foreach \x in {-2,-1.5,...,2} \foreach \y in {-1.5,-1,...,2.5} {
+    \pgfmathsetmacro{\u}{1}\pgfmathsetmacro{\v}{\x}
+    \pgfmathsetmacro{\n}{max(sqrt(\u*\u+\v*\v),0.001)}
+    \draw[hbblue!55,-{Stealth[length=1.3mm]}] (\x,\y) -- ++({0.26*\u/\n},{0.26*\v/\n});}
+  \foreach \c in {-1.2,-0.4,0.4,1.2} \draw[hbgold!80!black,thick,domain=-2.1:2.1,samples=40] plot (\x,{min(\x*\x/2+\c,3)});
+\end{tikzpicture}

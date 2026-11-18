@@ -1,0 +1,7 @@
+\begin{tikzpicture}[font=\small]
+  \node (A) at (0,0) {$A$}; \node (O) at (3,0) {$\Omega_{A/k}$}; \node (M) at (3,-2) {$M$};
+  \draw[hbarrow] (A) -- node[above] {$d$} (O);
+  \draw[hbarrow] (A) -- node[below left] {$D$} (M);
+  \draw[hbarrow,dashed] (O) -- node[right] {$\exists!\ \varphi$} (M);
+  \node[anchor=west,font=\footnotesize,align=left] at (4.2,-1) {every $k$-derivation $D\colon A\to M$\\ factors as $D=\varphi\circ d$\\ with $\varphi$ $A$-linear};
+\end{tikzpicture}

@@ -1,0 +1,7 @@
+\begin{tikzpicture}[font=\small]
+  \node[hbnode] (K) at (0,0) {$K=\mathbb{C}(x)$, $\partial=d/dx$};
+  \node[hbkey] (L) at (0,2) {$L=K(e^{x})$};
+  \draw[hbarrow] (K) -- node[left,font=\footnotesize,align=right] {Picard--Vessiot\\ extension for $y'=y$} (L);
+  \node[hbnode] (G) at (5,1) {$\operatorname{Gal}(L/K)\cong\mathbb{C}^{\times}$\\ $e^{x}\mapsto c\,e^{x}$};
+  \draw[hbarrow,dashed] (0.9,1) -- (G);
+\end{tikzpicture}

@@ -1,0 +1,9 @@
+\begin{tikzpicture}[font=\small]
+  \node[hbnode] (st) {$(\sigma,\tau)$-derivation\\ $\delta(xy)=\sigma(x)\delta(y)+\delta(x)\tau(y)$};
+  \node[hbnode,below=9mm of st] (s) {$\sigma$-derivation (Ore)\\ $\delta(xy)=\sigma(x)\delta(y)+\delta(x)y$};
+  \node[hbkey,below=9mm of s] (d) {derivation};
+  \node[hbnode,right=14mm of s] (in) {inner $(\sigma,\tau)$-derivation\\ $\delta(x)=a\tau(x)-\sigma(x)a$};
+  \draw[hbarrow] (st) -- node[right,font=\footnotesize] {$\tau=\mathrm{id}$} (s);
+  \draw[hbarrow] (s) -- node[right,font=\footnotesize] {$\sigma=\mathrm{id}$} (d);
+  \draw[hbarrow] (st.east) -| (in.north);
+\end{tikzpicture}

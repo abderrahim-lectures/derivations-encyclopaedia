@@ -1,0 +1,84 @@
+\chapter*{Notation and conventions}
+\addcontentsline{toc}{chapter}{Notation and conventions}
+% STATUS: written 2026-11-06 (records the notations the chapters actually use;
+% each symbol is defined in its chapter, and this list is the index to them.
+% Operators come from style/encyclopaedia.sty; no new notation is introduced here.)
+\label{page:notation}
+
+The book keeps one notation throughout. % claim-ok: this page defines this book's notation
+A symbol is defined where it first appears, and the chapters reuse it without % claim-ok: this page defines this book's notation
+giving it a second meaning. % claim-ok: this page defines this book's notation
+This page lists the symbols a reader meets most often, so that a chapter can be % claim-ok: this page defines this book's notation
+opened at any point. % claim-ok: this page defines this book's notation
+
+\section*{Rings and algebras}
+
+$R$ and $A$ are a ring and an algebra; the book says which when the distinction % claim-ok: this page defines this book's notation
+matters. $\mathbb{F}$ is a field, and $k$ is a field when the work is % claim-ok: this page defines this book's notation
+geometric. $\operatorname{char}R$ is the characteristic of $R$, and $Z(R)$ is % claim-ok: this page defines this book's notation
+its centre. % claim-ok: this page defines this book's notation
+An algebra is associative and unital unless a chapter says otherwise; % claim-ok: this page defines this book's notation
+Chapter~\ref{ch:nonassociative} drops associativity and says so at each step. % claim-ok: this page defines this book's notation
+
+$M_n(R)$ is the ring of $n\times n$ matrices over $R$. % claim-ok: this page defines this book's notation
+A triangular algebra is written $A=\operatorname{Tri}(A_1,A_2,M)$ with $M$ the % claim-ok: this page defines this book's notation
+bimodule between the two parts. % claim-ok: this page defines this book's notation
+$R[x]$ and $R[x_1,\dots,x_n]$ are polynomial rings, and $k(x)$ is the field of % claim-ok: this page defines this book's notation
+fractions when $k$ is a domain. % claim-ok: this page defines this book's notation
+
+\section*{Derivations and their relatives}
+
+$\operatorname{Der}(A)$ is the set of derivations of $A$, an additive group and % claim-ok: this page defines this book's notation
+a Lie algebra under the commutator. % claim-ok: this page defines this book's notation
+$\operatorname{Inn}(A)$ is the set of inner derivations, those of the form % claim-ok: this page defines this book's notation
+$x\mapsto[\,a,x\,]$, so that % claim-ok: this page defines this book's notation
+$\operatorname{HH}^{1}(A,A)\cong\operatorname{Der}(A)/\operatorname{Inn}(A)$ for % claim-ok: this page defines this book's notation
+the classes where that identification holds. % claim-ok: this page defines this book's notation
+
+$\operatorname{JDer}(A)$ and $\operatorname{LDer}(A)$ are the Jordan and the Lie % claim-ok: this page defines this book's notation
+derivations. $\operatorname{ad}_a$ is the inner derivation $x\mapsto[a,x]$. % claim-ok: this page defines this book's notation
+A derivation is \emph{locally nilpotent} when some power of it kills each % claim-ok: this page defines this book's notation
+element, and the set of these is written $\operatorname{LND}(A)$. % ours: notation-page term, defined in Chapter 16 % claim-ok: this page defines this book's notation
+
+$\operatorname{HH}^{\bullet}(A,M)$ is the Hochschild cohomology of $A$ with % claim-ok: this page defines this book's notation
+coefficients in the bimodule $M$, and $\operatorname{HH}^{\bullet}(A)$ is the % claim-ok: this page defines this book's notation
+case $M=A$. % claim-ok: this page defines this book's notation
+Low degrees are written out where they are used: the first cohomology group is % claim-ok: this page defines this book's notation
+the derivations modulo the inner ones. % claim-ok: this page defines this book's notation
+
+\section*{Maps and products}
+
+$[x,y]=xy-yx$ is the commutator and $x\circ y=xy+yx$ is the anti-commutator. % claim-ok: this page defines this book's notation
+A map is \emph{additive} when it respects addition, with no linearity assumed % claim-ok: this page defines this book's notation
+over a ring; the book states linearity separately wherever a theorem needs it. % ours: notation-page convention % claim-ok: this page defines this book's notation
+
+For maps with a parameter, $\sigma$ and $\tau$ are endomorphisms of the algebra, % claim-ok: this page defines this book's notation
+and $\alpha$, $\beta$ are scalars or endomorphisms as the chapter says. % claim-ok: this page defines this book's notation
+A $\sigma$-derivation satisfies $d(xy)=d(x)y+\sigma(x)d(y)$, and the book gives % claim-ok: this page defines this book's notation
+the defining identity for each twisted kind at the point where it is named. % claim-ok: this page defines this book's notation
+
+\section*{Continuity and operators}
+
+For a Banach algebra, $\lVert\cdot\rVert$ is the norm, and a derivation is % claim-ok: this page defines this book's notation
+\emph{bounded} when it is bounded as a linear map. % ours: notation-page term, defined in Chapter 18
+The book asks, for each class, whether continuity has to be assumed or comes for % claim-ok: this page defines this book's notation
+free; the question is fixed in % claim-ok: this page defines this book's notation
+Section~\ref{sec:basic-theory:question-families} and answered by class in the % claim-ok: this page defines this book's notation
+chapters. % claim-ok: this page defines this book's notation
+
+$\mathcal{B}(H)$ is the algebra of bounded operators on a Hilbert space $H$, and % claim-ok: this page defines this book's notation
+$\mathcal{K}(H)$ is the ideal of compact operators. % claim-ok: this page defines this book's notation
+A von Neumann algebra is written $M$. % claim-ok: this page defines this book's notation
+
+\section*{Conventions}
+
+A theorem recalled from a source carries the source in its header, with the page % claim-ok: this page defines this book's notation
+or the numbered item. % claim-ok: this page defines this book's notation
+A result proved in this book is marked as one of its own. % claim-ok: this page defines this book's notation
+A citation after a sentence gives the page on which the cited source says what % claim-ok: this page defines this book's notation
+the sentence attributes to it. % claim-ok: this page defines this book's notation
+
+The book uses British spelling in the text and keeps the spelling of a quoted % claim-ok: this page defines this book's notation
+title. % claim-ok: this page defines this book's notation
+Section and theorem numbers are stable within an edition; a later edition may % claim-ok: this page defines this book's notation
+add a section at the end of a chapter, which leaves earlier numbers alone. % claim-ok: this page defines this book's notation

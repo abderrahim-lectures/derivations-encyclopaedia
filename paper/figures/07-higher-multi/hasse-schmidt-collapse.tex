@@ -1,0 +1,42 @@
+% The exponential e^{t delta} = sum_alpha delta^alpha/alpha! t^alpha of a
+% derivation. In characteristic 0 every coefficient 1/alpha! exists, so the
+% series gives a Hasse-Schmidt derivation of infinite length. In positive
+% characteristic alpha! = 0 for alpha >= p, so 1/p! does not exist and the
+% series stops at alpha = p. (Narvaez Macarro 2020, p. 2)
+\begin{tikzpicture}[font=\small]
+  \def\pitch{15mm}
+  \def\cw{13mm}
+  \def\chh{7mm}
+  % what the cells are the coefficients of
+  \node[font=\small,anchor=south] at ({2.5*\pitch+6.5mm},23mm)
+    {$e^{t\delta}=\displaystyle\sum_{\alpha\ge0}\frac{\delta^{\alpha}}{\alpha!}\,t^{\alpha}$};
+  % row labels
+  \node[font=\footnotesize,anchor=east] at (-1mm,17.5mm) {char $0$};
+  \node[font=\footnotesize,anchor=east] at (-1mm,3.5mm)  {char $p$};
+  % characteristic 0: every coefficient exists, including 1/p!
+  \foreach \i/\coef in {0/1,1/1,2/\frac{1}{2},3/\frac{1}{6}}{
+    \fill[hbblue!8] ({\i*\pitch},14mm) rectangle ++(\cw,\chh);
+    \draw[hbblue!55] ({\i*\pitch},14mm) rectangle ++(\cw,\chh);
+    \node[font=\footnotesize] at ({\i*\pitch+6.5mm},17.5mm) {$\coef$};}
+  \node[font=\footnotesize] at ({4*\pitch+6.5mm},17.5mm) {$\cdots$};
+  \fill[hbblue!8] ({5*\pitch},14mm) rectangle ++(\cw,\chh);
+  \draw[hbblue!55] ({5*\pitch},14mm) rectangle ++(\cw,\chh);
+  \node[font=\footnotesize] at ({5*\pitch+6.5mm},17.5mm) {$\frac{1}{p!}$};
+  % positive characteristic: the coefficient 1/p! is missing
+  \foreach \i/\coef in {0/1,1/1,2/\frac{1}{2},3/\frac{1}{6}}{
+    \fill[hbblue!8] ({\i*\pitch},0mm) rectangle ++(\cw,\chh);
+    \draw[hbblue!55] ({\i*\pitch},0mm) rectangle ++(\cw,\chh);
+    \node[font=\footnotesize] at ({\i*\pitch+6.5mm},3.5mm) {$\coef$};}
+  \node[font=\footnotesize] at ({4*\pitch+6.5mm},3.5mm) {$\cdots$};
+  \fill[gray!18] ({5*\pitch},0mm) rectangle ++(\cw,\chh);
+  \draw[gray!65,dashed] ({5*\pitch},0mm) rectangle ++(\cw,\chh);
+  \node[font=\large,gray!55!black] at ({5*\pitch+6.5mm},3.5mm) {$\times$};
+  % the index alpha under each column
+  \foreach \i/\a in {0/0,1/1,2/2,3/3}{\node[font=\footnotesize,anchor=north]
+      at ({\i*\pitch+6.5mm},-1mm) {$\a$};}
+  \node[font=\footnotesize,anchor=north] at ({4*\pitch+6.5mm},-1mm) {$\alpha$};
+  \node[font=\footnotesize,anchor=north] at ({5*\pitch+6.5mm},-1mm) {$p$};
+  % why that coefficient is missing
+  \node[font=\footnotesize,anchor=north,align=center,text width=26mm]
+    at ({5*\pitch+6.5mm},-7mm) {$p!=0$ in characteristic $p$};
+\end{tikzpicture}
